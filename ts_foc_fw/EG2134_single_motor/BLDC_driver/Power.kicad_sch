@@ -249,6 +249,161 @@
 				)
 			)
 		)
+		(symbol "BLDC_Drive_Tsfoc:cap"
+			(pin_numbers hide)
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at -3.556 1.016 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "cap"
+				(at 2.54 1.524 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "kicad_lceda:C0603"
+				(at 0.254 -1.524 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 -5.588 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "SuppliersPartNumber" "C519502"
+				(at -0.508 -1.778 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "uuid" "std:d9d631d6bca44a2d934773ff44c148cf"
+				(at -0.508 -1.778 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "cap_1_1"
+				(polyline
+					(pts
+						(xy -0.508 -2.032) (xy -0.508 2.032)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.508 0) (xy -2.54 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.508 2.032) (xy 0.508 -2.032)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 0.508 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin input line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "BLDC_Drive_Tsfoc:res"
 			(pin_numbers hide)
 			(pin_names
@@ -476,32 +631,32 @@
 		)
 	)
 	(symbol
-		(lib_id "BLDC_Drive_Tsfoc:res")
-		(at 87.63 73.66 0)
+		(lib_id "BLDC_Drive_Tsfoc:cap")
+		(at 96.52 83.82 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "f93882f7-5a5c-47f1-89a4-05030844b1b2")
-		(property "Reference" "R1"
-			(at 86.36 71.628 0)
+		(uuid "a33a9788-273d-49fa-912d-3e7d23454194")
+		(property "Reference" "C1"
+			(at 99.06 82.804 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "10k"
-			(at 87.884 73.66 0)
+		(property "Value" "100nf"
+			(at 93.218 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "kicad_lceda:R0603"
-			(at 87.63 75.184 0)
+		(property "Footprint" "BLDC_Drive_Tsfoc:C0603"
+			(at 96.774 85.344 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -509,8 +664,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.szlcsc.com/product/details_26547.html"
-			(at 88.138 76.454 0)
+		(property "Datasheet" ""
+			(at 96.52 89.408 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -519,7 +674,92 @@
 			)
 		)
 		(property "Description" ""
-			(at 87.63 73.66 0)
+			(at 96.52 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "SuppliersPartNumber" "C519502"
+			(at 96.012 85.598 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "uuid" "std:d9d631d6bca44a2d934773ff44c148cf"
+			(at 96.012 85.598 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "309606fc-35ac-4c17-ab1b-c00114e63c28")
+		)
+		(pin "2"
+			(uuid "ec6c123a-86ec-4e68-9fec-ada776d10903")
+		)
+		(instances
+			(project ""
+				(path "/3c13b5e1-57fa-4740-a1aa-c7a3ab53fab1/d172ac3e-1e62-4007-bb2b-f5b25040ec25"
+					(reference "C1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "BLDC_Drive_Tsfoc:res")
+		(at 96.52 76.2 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f93882f7-5a5c-47f1-89a4-05030844b1b2")
+		(property "Reference" "R1"
+			(at 95.25 74.168 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 96.774 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "BLDC_Drive_Tsfoc:R0603"
+			(at 96.52 77.724 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.szlcsc.com/product/details_26547.html"
+			(at 97.028 78.994 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 96.52 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -528,7 +768,7 @@
 			)
 		)
 		(property "SuppliersPartNumber" "C25804"
-			(at 87.63 73.914 0)
+			(at 96.52 76.454 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -537,7 +777,7 @@
 			)
 		)
 		(property "uuid" "std:b210af5a1436310a86e8b108e2e5a90b"
-			(at 87.122 75.946 0)
+			(at 96.012 78.486 0)
 			(effects
 				(font
 					(size 1.27 1.27)

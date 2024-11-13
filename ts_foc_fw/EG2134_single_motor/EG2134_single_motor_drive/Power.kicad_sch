@@ -1519,6 +1519,12 @@
 		(uuid "67b0bf51-8f8b-45ad-a887-9530af86860b")
 	)
 	(junction
+		(at 222.25 105.41)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6d5f3704-6638-4493-aae5-a4bc5cbc4bd1")
+	)
+	(junction
 		(at 187.96 95.25)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1688,7 +1694,7 @@
 	)
 	(wire
 		(pts
-			(xy 214.63 105.41) (xy 209.55 105.41)
+			(xy 226.06 105.41) (xy 222.25 105.41)
 		)
 		(stroke
 			(width 0)
@@ -1878,6 +1884,16 @@
 	)
 	(wire
 		(pts
+			(xy 222.25 105.41) (xy 209.55 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c933df08-d97f-4dd9-8350-f70f9418cf4c")
+	)
+	(wire
+		(pts
 			(xy 107.95 105.41) (xy 110.49 105.41)
 		)
 		(stroke
@@ -2056,7 +2072,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "0f9100ad-cfc6-45c7-9cb5-ee6ddf941bbe")
-		(property "Reference" "C1"
+		(property "Reference" "C15"
 			(at 204.47 103.886 0)
 			(effects
 				(font
@@ -2128,7 +2144,7 @@
 		(instances
 			(project "EG2134_single_motor_drive"
 				(path "/a69a3027-f6f2-4dc7-8446-d1a07c691b27/c784a5b9-792f-4178-b63e-bae01c34cf3b"
-					(reference "C1")
+					(reference "C15")
 					(unit 1)
 				)
 			)
@@ -2144,7 +2160,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "121d1a83-9ab3-4b45-8e99-a9894d07dbe7")
-		(property "Reference" "U1"
+		(property "Reference" "U2"
 			(at 171.45 95.25 0)
 			(effects
 				(font
@@ -2235,7 +2251,7 @@
 		(instances
 			(project ""
 				(path "/a69a3027-f6f2-4dc7-8446-d1a07c691b27/c784a5b9-792f-4178-b63e-bae01c34cf3b"
-					(reference "U1")
+					(reference "U2")
 					(unit 1)
 				)
 			)
@@ -2251,7 +2267,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "449561c8-948f-4727-b1be-d86e06078031")
-		(property "Reference" "R1"
+		(property "Reference" "R16"
 			(at 212.09 99.0599 90)
 			(effects
 				(font
@@ -2323,7 +2339,7 @@
 		(instances
 			(project ""
 				(path "/a69a3027-f6f2-4dc7-8446-d1a07c691b27/c784a5b9-792f-4178-b63e-bae01c34cf3b"
-					(reference "R1")
+					(reference "R16")
 					(unit 1)
 				)
 			)
@@ -2338,7 +2354,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5013dd73-6368-4043-b7b9-a891f5c6cc14")
-		(property "Reference" "#PWR04"
+		(property "Reference" "#PWR016"
 			(at 156.21 127 0)
 			(effects
 				(font
@@ -2389,7 +2405,7 @@
 		(instances
 			(project "EG2134_single_motor_drive"
 				(path "/a69a3027-f6f2-4dc7-8446-d1a07c691b27/c784a5b9-792f-4178-b63e-bae01c34cf3b"
-					(reference "#PWR04")
+					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -2404,7 +2420,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "51399a8c-b0f7-4084-8aaa-263e77c2970b")
-		(property "Reference" "#PWR05"
+		(property "Reference" "#PWR015"
 			(at 129.54 135.89 0)
 			(effects
 				(font
@@ -2455,7 +2471,7 @@
 		(instances
 			(project "EG2134_single_motor_drive"
 				(path "/a69a3027-f6f2-4dc7-8446-d1a07c691b27/c784a5b9-792f-4178-b63e-bae01c34cf3b"
-					(reference "#PWR05")
+					(reference "#PWR015")
 					(unit 1)
 				)
 			)
@@ -2471,7 +2487,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5af900e2-073b-4773-99b7-738df4574e03")
-		(property "Reference" "R2"
+		(property "Reference" "R14"
 			(at 132.08 109.2199 90)
 			(effects
 				(font
@@ -2543,7 +2559,7 @@
 		(instances
 			(project "EG2134_single_motor_drive"
 				(path "/a69a3027-f6f2-4dc7-8446-d1a07c691b27/c784a5b9-792f-4178-b63e-bae01c34cf3b"
-					(reference "R2")
+					(reference "R14")
 					(unit 1)
 				)
 			)
@@ -2558,7 +2574,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5c72589e-12a3-4806-8c3e-279e1191f678")
-		(property "Reference" "#PWR08"
+		(property "Reference" "#PWR012"
 			(at 83.82 113.03 0)
 			(effects
 				(font
@@ -2609,7 +2625,7 @@
 		(instances
 			(project "EG2134_single_motor_drive"
 				(path "/a69a3027-f6f2-4dc7-8446-d1a07c691b27/c784a5b9-792f-4178-b63e-bae01c34cf3b"
-					(reference "#PWR08")
+					(reference "#PWR012")
 					(unit 1)
 				)
 			)
@@ -2703,7 +2719,7 @@
 	)
 	(symbol
 		(lib_id "power:VCC")
-		(at 214.63 105.41 270)
+		(at 226.06 105.41 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2711,8 +2727,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6396878b-82e4-4cc2-ada5-799bbe754f7f")
-		(property "Reference" "#PWR01"
-			(at 210.82 105.41 0)
+		(property "Reference" "#PWR019"
+			(at 222.25 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2721,7 +2737,7 @@
 			)
 		)
 		(property "Value" "VCC"
-			(at 218.44 105.4099 90)
+			(at 229.87 105.4099 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2730,7 +2746,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 214.63 105.41 0)
+			(at 226.06 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2739,7 +2755,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 214.63 105.41 0)
+			(at 226.06 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2748,7 +2764,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 214.63 105.41 0)
+			(at 226.06 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2762,7 +2778,7 @@
 		(instances
 			(project "EG2134_single_motor_drive"
 				(path "/a69a3027-f6f2-4dc7-8446-d1a07c691b27/c784a5b9-792f-4178-b63e-bae01c34cf3b"
-					(reference "#PWR01")
+					(reference "#PWR019")
 					(unit 1)
 				)
 			)
@@ -2777,7 +2793,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "6866c88f-c629-430c-a4fa-31d676a0d0c2")
-		(property "Reference" "C9"
+		(property "Reference" "C7"
 			(at 114.3 114.046 0)
 			(effects
 				(font
@@ -2849,7 +2865,7 @@
 		(instances
 			(project "EG2134_single_motor_drive"
 				(path "/a69a3027-f6f2-4dc7-8446-d1a07c691b27/c784a5b9-792f-4178-b63e-bae01c34cf3b"
-					(reference "C9")
+					(reference "C7")
 					(unit 1)
 				)
 			)
@@ -2865,7 +2881,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "718f7e24-b1bf-41e3-8cb0-0132f3c77910")
-		(property "Reference" "R3"
+		(property "Reference" "R15"
 			(at 132.08 123.1899 90)
 			(effects
 				(font
@@ -2937,7 +2953,7 @@
 		(instances
 			(project "EG2134_single_motor_drive"
 				(path "/a69a3027-f6f2-4dc7-8446-d1a07c691b27/c784a5b9-792f-4178-b63e-bae01c34cf3b"
-					(reference "R3")
+					(reference "R15")
 					(unit 1)
 				)
 			)
@@ -3039,7 +3055,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "7bd83a32-8b19-4689-bf46-e114ae08aef9")
-		(property "Reference" "C6"
+		(property "Reference" "C10"
 			(at 157.226 101.6 0)
 			(effects
 				(font
@@ -3111,7 +3127,7 @@
 		(instances
 			(project "EG2134_single_motor_drive"
 				(path "/a69a3027-f6f2-4dc7-8446-d1a07c691b27/c784a5b9-792f-4178-b63e-bae01c34cf3b"
-					(reference "C6")
+					(reference "C10")
 					(unit 1)
 				)
 			)
@@ -3127,7 +3143,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7c65c1ba-bc9e-40c7-a61f-46290dd76825")
-		(property "Reference" "#PWR02"
+		(property "Reference" "#PWR018"
 			(at 204.47 110.49 0)
 			(effects
 				(font
@@ -3178,7 +3194,7 @@
 		(instances
 			(project "EG2134_single_motor_drive"
 				(path "/a69a3027-f6f2-4dc7-8446-d1a07c691b27/c784a5b9-792f-4178-b63e-bae01c34cf3b"
-					(reference "#PWR02")
+					(reference "#PWR018")
 					(unit 1)
 				)
 			)
@@ -3278,7 +3294,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "8159f67c-7e6c-4b5e-b051-ad4e89b137d0")
-		(property "Reference" "C5"
+		(property "Reference" "C11"
 			(at 157.48 119.126 0)
 			(effects
 				(font
@@ -3350,7 +3366,7 @@
 		(instances
 			(project "EG2134_single_motor_drive"
 				(path "/a69a3027-f6f2-4dc7-8446-d1a07c691b27/c784a5b9-792f-4178-b63e-bae01c34cf3b"
-					(reference "C5")
+					(reference "C11")
 					(unit 1)
 				)
 			)
@@ -3365,7 +3381,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "81b5d1a7-2a71-4884-93ea-e29f776d7c80")
-		(property "Reference" "TP1"
+		(property "Reference" "TP1_3V1"
 			(at 109.728 100.076 0)
 			(effects
 				(font
@@ -3416,7 +3432,7 @@
 		(instances
 			(project ""
 				(path "/a69a3027-f6f2-4dc7-8446-d1a07c691b27/c784a5b9-792f-4178-b63e-bae01c34cf3b"
-					(reference "TP1")
+					(reference "TP1_3V1")
 					(unit 1)
 				)
 			)
@@ -3432,7 +3448,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "85e159dc-98ba-42e7-b9ce-9685921cda3c")
-		(property "Reference" "#PWR03"
+		(property "Reference" "#PWR017"
 			(at 187.96 85.09 0)
 			(effects
 				(font
@@ -3482,7 +3498,7 @@
 		(instances
 			(project "EG2134_single_motor_drive"
 				(path "/a69a3027-f6f2-4dc7-8446-d1a07c691b27/c784a5b9-792f-4178-b63e-bae01c34cf3b"
-					(reference "#PWR03")
+					(reference "#PWR017")
 					(unit 1)
 				)
 			)
@@ -3497,7 +3513,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "9a917798-16d5-42fa-acd9-43db16102011")
-		(property "Reference" "C4"
+		(property "Reference" "C12"
 			(at 194.056 109.22 0)
 			(effects
 				(font
@@ -3569,7 +3585,7 @@
 		(instances
 			(project "EG2134_single_motor_drive"
 				(path "/a69a3027-f6f2-4dc7-8446-d1a07c691b27/c784a5b9-792f-4178-b63e-bae01c34cf3b"
-					(reference "C4")
+					(reference "C12")
 					(unit 1)
 				)
 			)
@@ -3585,7 +3601,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ad0ab6da-4638-4edf-8e1d-6dd0cab62b00")
-		(property "Reference" "R4"
+		(property "Reference" "R13"
 			(at 99.06 99.06 0)
 			(effects
 				(font
@@ -3655,7 +3671,7 @@
 		(instances
 			(project "EG2134_single_motor_drive"
 				(path "/a69a3027-f6f2-4dc7-8446-d1a07c691b27/c784a5b9-792f-4178-b63e-bae01c34cf3b"
-					(reference "R4")
+					(reference "R13")
 					(unit 1)
 				)
 			)
@@ -3671,7 +3687,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bda0d232-6a9b-4073-aaee-38818749c310")
-		(property "Reference" "#PWR07"
+		(property "Reference" "#PWR014"
 			(at 107.95 104.14 0)
 			(effects
 				(font
@@ -3721,7 +3737,7 @@
 		(instances
 			(project ""
 				(path "/a69a3027-f6f2-4dc7-8446-d1a07c691b27/c784a5b9-792f-4178-b63e-bae01c34cf3b"
-					(reference "#PWR07")
+					(reference "#PWR014")
 					(unit 1)
 				)
 			)
@@ -3736,7 +3752,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c5686ae7-0659-46e9-98d2-7442f2c08f62")
-		(property "Reference" "C10"
+		(property "Reference" "C6"
 			(at 109.22 114.046 0)
 			(effects
 				(font
@@ -3808,7 +3824,73 @@
 		(instances
 			(project "EG2134_single_motor_drive"
 				(path "/a69a3027-f6f2-4dc7-8446-d1a07c691b27/c784a5b9-792f-4178-b63e-bae01c34cf3b"
-					(reference "C10")
+					(reference "C6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 222.25 105.41 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c8462d9d-66fc-44fe-81de-52bb8814023c")
+		(property "Reference" "TP2_VCC1"
+			(at 223.012 110.744 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "VCC"
+			(at 221.234 108.458 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
+			(at 217.17 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 217.17 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 222.25 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "df5bcfc7-489d-4dc9-9b86-6984eed77276")
+		)
+		(instances
+			(project "EG2134_single_motor_drive"
+				(path "/a69a3027-f6f2-4dc7-8446-d1a07c691b27/c784a5b9-792f-4178-b63e-bae01c34cf3b"
+					(reference "TP2_VCC1")
 					(unit 1)
 				)
 			)
@@ -3823,7 +3905,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "eb9b32b4-2987-43cb-99ab-d496e83da7d3")
-		(property "Reference" "C7"
+		(property "Reference" "C9"
 			(at 125.73 114.046 0)
 			(effects
 				(font
@@ -3895,7 +3977,7 @@
 		(instances
 			(project "EG2134_single_motor_drive"
 				(path "/a69a3027-f6f2-4dc7-8446-d1a07c691b27/c784a5b9-792f-4178-b63e-bae01c34cf3b"
-					(reference "C7")
+					(reference "C9")
 					(unit 1)
 				)
 			)
@@ -3910,7 +3992,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ef4e2826-9718-4016-a675-9a7ada72e04a")
-		(property "Reference" "C2"
+		(property "Reference" "C14"
 			(at 199.39 103.886 0)
 			(effects
 				(font
@@ -3982,7 +4064,7 @@
 		(instances
 			(project "EG2134_single_motor_drive"
 				(path "/a69a3027-f6f2-4dc7-8446-d1a07c691b27/c784a5b9-792f-4178-b63e-bae01c34cf3b"
-					(reference "C2")
+					(reference "C14")
 					(unit 1)
 				)
 			)
@@ -3997,7 +4079,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f565dc5b-4674-4ddc-9fad-868ef811d0b1")
-		(property "Reference" "#PWR06"
+		(property "Reference" "#PWR013"
 			(at 90.17 115.57 0)
 			(effects
 				(font
@@ -4048,7 +4130,7 @@
 		(instances
 			(project "EG2134_single_motor_drive"
 				(path "/a69a3027-f6f2-4dc7-8446-d1a07c691b27/c784a5b9-792f-4178-b63e-bae01c34cf3b"
-					(reference "#PWR06")
+					(reference "#PWR013")
 					(unit 1)
 				)
 			)
@@ -4063,7 +4145,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f5ac736a-0321-4efc-a16e-7759f69efe84")
-		(property "Reference" "C3"
+		(property "Reference" "C13"
 			(at 194.31 103.886 0)
 			(effects
 				(font
@@ -4135,7 +4217,7 @@
 		(instances
 			(project "EG2134_single_motor_drive"
 				(path "/a69a3027-f6f2-4dc7-8446-d1a07c691b27/c784a5b9-792f-4178-b63e-bae01c34cf3b"
-					(reference "C3")
+					(reference "C13")
 					(unit 1)
 				)
 			)

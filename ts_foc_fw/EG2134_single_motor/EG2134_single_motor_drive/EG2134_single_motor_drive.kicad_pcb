@@ -9,6 +9,8 @@
 	(paper "A4")
 	(layers
 		(0 "F.Cu" signal)
+		(1 "In1.Cu" signal)
+		(2 "In2.Cu" signal)
 		(31 "B.Cu" signal)
 		(32 "B.Adhes" user "B.Adhesive")
 		(33 "F.Adhes" user "F.Adhesive")
@@ -39,6 +41,67 @@
 		(58 "User.9" user)
 	)
 	(setup
+		(stackup
+			(layer "F.SilkS"
+				(type "Top Silk Screen")
+			)
+			(layer "F.Paste"
+				(type "Top Solder Paste")
+			)
+			(layer "F.Mask"
+				(type "Top Solder Mask")
+				(thickness 0.01)
+			)
+			(layer "F.Cu"
+				(type "copper")
+				(thickness 0.035)
+			)
+			(layer "dielectric 1"
+				(type "prepreg")
+				(thickness 0.1)
+				(material "FR4")
+				(epsilon_r 4.5)
+				(loss_tangent 0.02)
+			)
+			(layer "In1.Cu"
+				(type "copper")
+				(thickness 0.035)
+			)
+			(layer "dielectric 2"
+				(type "core")
+				(thickness 1.24)
+				(material "FR4")
+				(epsilon_r 4.5)
+				(loss_tangent 0.02)
+			)
+			(layer "In2.Cu"
+				(type "copper")
+				(thickness 0.035)
+			)
+			(layer "dielectric 3"
+				(type "prepreg")
+				(thickness 0.1)
+				(material "FR4")
+				(epsilon_r 4.5)
+				(loss_tangent 0.02)
+			)
+			(layer "B.Cu"
+				(type "copper")
+				(thickness 0.035)
+			)
+			(layer "B.Mask"
+				(type "Bottom Solder Mask")
+				(thickness 0.01)
+			)
+			(layer "B.Paste"
+				(type "Bottom Solder Paste")
+			)
+			(layer "B.SilkS"
+				(type "Bottom Silk Screen")
+			)
+			(copper_finish "None")
+			(dielectric_constraints no)
+		)
 		(pad_to_mask_clearance 0)
 		(allow_soldermask_bridges_in_footprints no)
 		(aux_axis_origin 12 74.75)
@@ -714,7 +777,7 @@
 		(uuid "20de1a10-a362-42e2-8d9d-a8edf180ab06")
 		(at 34.5455 68.1)
 		(property "Reference" "D8"
-			(at -0.9 0 360)
+			(at -0.9 0 0)
 			(layer "F.SilkS")
 			(uuid "6f65e4b5-eb95-494f-949a-df27b4f3a90a")
 			(effects
@@ -726,7 +789,7 @@
 			)
 		)
 		(property "Value" "1N4148W"
-			(at -2.286 1.524 360)
+			(at -2.286 1.524 0)
 			(layer "F.Fab")
 			(uuid "de610592-de49-4da4-bfd6-d264e39c5c74")
 			(effects
@@ -738,7 +801,7 @@
 			)
 		)
 		(property "Footprint" "EG2134_single_motor_drive:1N4148W"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "723edbe9-c85e-4402-8b36-1bbe1c82b9ac")
@@ -750,7 +813,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.szlcsc.com/product/details_2456.html"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "0482f852-3534-4c41-b4dd-a09d59e1ac8f")
@@ -762,7 +825,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "61bddafb-9276-418f-94fc-68f00bccd086")
@@ -1100,7 +1163,7 @@
 		(uuid "233ff002-2ee1-4c05-a829-c6b852038206")
 		(at 30.0785 68.135 180)
 		(property "Reference" "D6"
-			(at -0.9 0.04 360)
+			(at -0.9 0.04 0)
 			(layer "F.SilkS")
 			(uuid "9bc96eb5-57e1-42d8-b514-82eaa6e4cc08")
 			(effects
@@ -1112,7 +1175,7 @@
 			)
 		)
 		(property "Value" "1N4148W"
-			(at -2.286 1.524 360)
+			(at -2.286 1.524 0)
 			(layer "F.Fab")
 			(uuid "02dc7e54-ee0d-4c62-8e34-905257e21970")
 			(effects
@@ -1124,7 +1187,7 @@
 			)
 		)
 		(property "Footprint" "EG2134_single_motor_drive:1N4148W"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f15195c7-4b58-432b-a56a-2d5299800f69")
@@ -1136,7 +1199,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.szlcsc.com/product/details_2456.html"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "dc2f382e-5030-4660-b118-d94dae6b84bf")
@@ -1148,7 +1211,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "26517fb6-acfa-42af-96d3-ba486b7fa1d8")
@@ -1756,7 +1819,7 @@
 		(uuid "28697161-6edd-4328-82d6-2b259cd38437")
 		(at 29.5035 60.9 180)
 		(property "Reference" "D3"
-			(at -1 0 360)
+			(at -1 0 0)
 			(layer "F.SilkS")
 			(uuid "01ccf1ea-8551-4aff-a079-905c8f00e245")
 			(effects
@@ -1768,7 +1831,7 @@
 			)
 		)
 		(property "Value" "1N4148W"
-			(at -2.286 1.524 360)
+			(at -2.286 1.524 0)
 			(layer "F.Fab")
 			(uuid "57186cc5-9fa4-4d06-b40a-850b7901d399")
 			(effects
@@ -1780,7 +1843,7 @@
 			)
 		)
 		(property "Footprint" "EG2134_single_motor_drive:1N4148W"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "621b0064-bd0b-4c1a-b3c9-1bb46bfb5eab")
@@ -1792,7 +1855,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.szlcsc.com/product/details_2456.html"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "893b2f83-74bb-476c-9724-18de666daaed")
@@ -1804,7 +1867,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "383b024b-91e4-4e78-8913-7361db21cc5e")
@@ -2142,7 +2205,7 @@
 		(uuid "360de543-70fa-4d67-86ab-2e8761eb2413")
 		(at 31.2395 53.6575 180)
 		(property "Reference" "D1"
-			(at -0.8 0 360)
+			(at -0.8 0 0)
 			(layer "F.SilkS")
 			(uuid "71e64c19-9d5a-4ebc-8b77-cef040d11df1")
 			(effects
@@ -2154,7 +2217,7 @@
 			)
 		)
 		(property "Value" "1N4148W"
-			(at -2.286 1.524 360)
+			(at -2.286 1.524 0)
 			(layer "F.Fab")
 			(uuid "bb9138cf-a1b0-467a-8f44-770eb1bfcc87")
 			(effects
@@ -2166,7 +2229,7 @@
 			)
 		)
 		(property "Footprint" "EG2134_single_motor_drive:1N4148W"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c24e66bb-81fb-403b-b45b-f15686d8339d")
@@ -2178,7 +2241,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.szlcsc.com/product/details_2456.html"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "520a9b89-ccdc-4011-b33d-2467afd42679")
@@ -2190,7 +2253,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "eadc2b3b-7e1f-43e5-a90d-1caf7fae34e4")
@@ -2528,7 +2591,7 @@
 		(uuid "5d7971a7-a5e8-4335-bec0-c599e6ee306e")
 		(at 52.9045 65.73)
 		(property "Reference" "D7"
-			(at 2.7 -0.1 360)
+			(at 2.7 -0.1 0)
 			(layer "F.SilkS")
 			(uuid "16c159a3-4278-4204-b589-3f7ccd935dc1")
 			(effects
@@ -2540,7 +2603,7 @@
 			)
 		)
 		(property "Value" "DSK34"
-			(at -2.54 1.524 360)
+			(at -2.54 1.524 0)
 			(layer "F.Fab")
 			(uuid "017790a5-fa2c-4a52-b5cf-bb5d1d7b567f")
 			(effects
@@ -2552,7 +2615,7 @@
 			)
 		)
 		(property "Footprint" "EG2134_single_motor_drive:DSK34"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "227e4a67-a75e-47b2-a8c1-591f612ae5bc")
@@ -2564,7 +2627,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.szlcsc.com/product/details_774181.html"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ec0802e7-b9c7-4592-bc84-ca6e50725283")
@@ -2576,7 +2639,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d096bc1b-0e55-4c1f-8e09-b314b243a80c")
@@ -2848,7 +2911,7 @@
 		(uuid "5f50f4f7-fb80-4dec-8cea-e542ce140067")
 		(at 44.9115 58.1)
 		(property "Reference" "C6"
-			(at 1.6 -1.8 360)
+			(at 1.6 -1.8 0)
 			(layer "F.SilkS")
 			(uuid "e800bd09-fe21-4940-8206-ef30ebcbe9fa")
 			(effects
@@ -2860,7 +2923,7 @@
 			)
 		)
 		(property "Value" "22uf"
-			(at -1.524 1.27 360)
+			(at -1.524 1.27 0)
 			(layer "F.Fab")
 			(uuid "d524ce81-aa38-4433-a724-254d3ed93d50")
 			(effects
@@ -2872,7 +2935,7 @@
 			)
 		)
 		(property "Footprint" "EG2134_single_motor_drive:C0603"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "366b6cd8-dc81-415f-ab99-cfc68248e4b5")
@@ -2884,7 +2947,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.szlcsc.com/product/details_16532.html"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "193ed1d3-df47-49db-965b-621495c6b05a")
@@ -2896,7 +2959,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "023182f3-e1a9-4bef-9255-67854d91c677")
@@ -3160,9 +3223,9 @@
 	(footprint "EG2134_single_motor_drive:TP181A1-CR"
 		(layer "F.Cu")
 		(uuid "5fe771bd-279b-4c99-9459-ccc119238fc9")
-		(at 47.5565 71.5 180)
+		(at 47.5565 72.734 180)
 		(property "Reference" "U4"
-			(at -0.699242 0.05 360)
+			(at -0.699242 0.05 0)
 			(layer "F.SilkS")
 			(uuid "52410ab5-4b8f-4050-8a0a-249387e62dfd")
 			(effects
@@ -3174,7 +3237,7 @@
 			)
 		)
 		(property "Value" "TP181A1-CR"
-			(at -1.016 2.032 360)
+			(at -1.016 2.032 0)
 			(layer "F.Fab")
 			(uuid "cf4ea87c-e141-4f12-8064-5dd8f2d7f538")
 			(effects
@@ -3186,7 +3249,7 @@
 			)
 		)
 		(property "Footprint" "EG2134_single_motor_drive:TP181A1-CR"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "36abc659-735f-4768-9b9a-973e35b72973")
@@ -3198,7 +3261,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e78cc33a-f09f-4a4b-9f4f-38c1f8eb6821")
@@ -3210,7 +3273,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "37ce3bd3-e48e-4198-b78a-7e475759f29a")
@@ -4438,7 +4501,7 @@
 			)
 		)
 		(property "Value" "EG2134_N"
-			(at -4.064 4.318 360)
+			(at -4.064 4.318 0)
 			(layer "F.Fab")
 			(uuid "28379862-cad4-4047-b70c-2bfa20c94a8c")
 			(effects
@@ -4450,7 +4513,7 @@
 			)
 		)
 		(property "Footprint" "EG2134_single_motor_drive:EG2134-N"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3c0bdf81-61d0-43ed-991d-9a9f9733481a")
@@ -4462,7 +4525,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "4cb1f2a1-1ba3-4083-af46-ec9681f25b67")
@@ -4474,7 +4537,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d8460d65-2888-41aa-ae69-a709d76d134e")
@@ -5887,7 +5950,7 @@
 		(uuid "75a3d116-7078-4e4a-8555-892e08e570bb")
 		(at 36.1065 53.6575)
 		(property "Reference" "D2"
-			(at -1 0.076 360)
+			(at -1 0.076 0)
 			(layer "F.SilkS")
 			(uuid "f8e35cc0-d53b-4519-86e8-7fe064711e57")
 			(effects
@@ -5899,7 +5962,7 @@
 			)
 		)
 		(property "Value" "1N4148W"
-			(at -2.286 1.524 360)
+			(at -2.286 1.524 0)
 			(layer "F.Fab")
 			(uuid "fa039adf-9811-4e6e-a5c2-2a5d7cb6c7fd")
 			(effects
@@ -5911,7 +5974,7 @@
 			)
 		)
 		(property "Footprint" "EG2134_single_motor_drive:1N4148W"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "1fac9ba9-1c2f-440c-8994-46616cfeb0c1")
@@ -5923,7 +5986,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.szlcsc.com/product/details_2456.html"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "09b8f3e8-fd4d-4281-bfa2-7e3653c64866")
@@ -5935,7 +5998,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2836c345-4405-4589-ac04-8680faff0c11")
@@ -7621,7 +7684,7 @@
 		(descr "SMD pad as test Point, diameter 1.5mm")
 		(tags "test point SMD pad")
 		(property "Reference" "TP1_3V1"
-			(at -3.3 -0.1 360)
+			(at -3.3 -0.1 0)
 			(layer "F.SilkS")
 			(uuid "b052ca4a-320b-47cd-b2c7-926141394697")
 			(effects
@@ -7632,7 +7695,7 @@
 			)
 		)
 		(property "Value" "3v3"
-			(at 0 1.75 360)
+			(at 0 1.75 0)
 			(layer "F.Fab")
 			(uuid "393dbe94-487d-469e-9473-3093e52182ff")
 			(effects
@@ -7709,7 +7772,7 @@
 			(uuid "f2cc1c59-ea99-486f-8c59-3a32d7075a10")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 -1.65 360)
+			(at 0 -1.65 0)
 			(layer "F.Fab")
 			(uuid "5ff863cc-4cab-46ed-991f-d0ad8617d171")
 			(effects
@@ -7732,9 +7795,9 @@
 	(footprint "EG2134_single_motor_drive:TP181A1-CR"
 		(layer "F.Cu")
 		(uuid "97e239a3-71a5-42bf-9655-9d6bd00a1d1a")
-		(at 44.971742 71.55 180)
+		(at 44.971742 72.784 180)
 		(property "Reference" "U3"
-			(at -0.679758 0 360)
+			(at -0.679758 0 0)
 			(layer "F.SilkS")
 			(uuid "cfbeed0f-5679-43d9-9496-f1c9055cdc0b")
 			(effects
@@ -7746,7 +7809,7 @@
 			)
 		)
 		(property "Value" "TP181A1-CR"
-			(at -1.016 2.032 360)
+			(at -1.016 2.032 0)
 			(layer "F.Fab")
 			(uuid "f50fdce2-eede-4d09-b173-f505e02a6c7f")
 			(effects
@@ -7758,7 +7821,7 @@
 			)
 		)
 		(property "Footprint" "EG2134_single_motor_drive:TP181A1-CR"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "31c1998a-28a8-4fb3-bac0-787927e43118")
@@ -7770,7 +7833,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7fb4e093-26c9-416a-8407-2c86f02e177a")
@@ -7782,7 +7845,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "72718a39-dd5d-4556-bcc1-722433355dde")
@@ -8925,7 +8988,7 @@
 		(uuid "9f3a3d50-4a8f-4f78-ab08-401793d52a71")
 		(at 34.3115 60.9)
 		(property "Reference" "D4"
-			(at -0.908 0 360)
+			(at -0.908 0 0)
 			(layer "F.SilkS")
 			(uuid "9d633b85-bd11-4ac6-8108-805f9ee5c7b9")
 			(effects
@@ -8937,7 +9000,7 @@
 			)
 		)
 		(property "Value" "1N4148W"
-			(at -2.286 1.524 360)
+			(at -2.286 1.524 0)
 			(layer "F.Fab")
 			(uuid "57e4839a-cb08-412e-9c56-9bc5f73c6269")
 			(effects
@@ -8949,7 +9012,7 @@
 			)
 		)
 		(property "Footprint" "EG2134_single_motor_drive:1N4148W"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7cd27bc6-561b-4e6a-ba24-32a3aeaf8d6e")
@@ -8961,7 +9024,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.szlcsc.com/product/details_2456.html"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "0d31301c-a52b-4ecc-978e-2f75b4cb276c")
@@ -8973,7 +9036,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b1d7c111-e4e4-45f6-ba5d-05b20485276f")
@@ -11283,7 +11346,7 @@
 		(uuid "c112c9f9-0ff5-425d-a335-ca12e913712e")
 		(at 52.9115 63.6)
 		(property "Reference" "D5"
-			(at 2.6 -0.06 360)
+			(at 2.6 -0.06 0)
 			(layer "F.SilkS")
 			(uuid "3b34d73e-2760-4aa6-a7a0-8445de70a73c")
 			(effects
@@ -11295,7 +11358,7 @@
 			)
 		)
 		(property "Value" "DSK34"
-			(at -2.54 1.524 360)
+			(at -2.54 1.524 0)
 			(layer "F.Fab")
 			(uuid "c2b43f01-cbb0-4144-a7da-ecb37272c2e3")
 			(effects
@@ -11307,7 +11370,7 @@
 			)
 		)
 		(property "Footprint" "EG2134_single_motor_drive:DSK34"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "1e8fef35-b7f4-4bf7-93ac-8233b0a5ab1b")
@@ -11319,7 +11382,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.szlcsc.com/product/details_774181.html"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7d578fa1-bbd9-42a5-828f-9905bc9f383b")
@@ -11331,7 +11394,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2fd17d3a-13fa-47a9-a69a-942aa748b040")
@@ -12187,7 +12250,7 @@
 		(uuid "ff6d421b-4b73-4c37-bc84-d9249bd0b546")
 		(at 44.9115 56.4)
 		(property "Reference" "C7"
-			(at 1.6 1.4 360)
+			(at 1.6 1.4 0)
 			(layer "F.SilkS")
 			(uuid "b933fb30-7458-4b57-90c2-dde285a73bb5")
 			(effects
@@ -12199,7 +12262,7 @@
 			)
 		)
 		(property "Value" "22uf"
-			(at -1.524 1.27 360)
+			(at -1.524 1.27 0)
 			(layer "F.Fab")
 			(uuid "3961261f-d64f-41b5-ad42-e175adae8d10")
 			(effects
@@ -12211,7 +12274,7 @@
 			)
 		)
 		(property "Footprint" "EG2134_single_motor_drive:C0603"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6e042a8b-ed76-4937-a78a-03c3d4807083")
@@ -12223,7 +12286,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.szlcsc.com/product/details_16532.html"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "997012f7-ac4c-467e-b59a-3784aa5a4f93")
@@ -12235,7 +12298,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3aadd23a-8bed-4603-b6c8-2db52e01b14e")
@@ -12499,7 +12562,7 @@
 	(footprint "EG2134_single_motor_drive:C0603"
 		(layer "B.Cu")
 		(uuid "162fdaaa-c885-4bab-8612-bbb94a773ccd")
-		(at 48.3115 67)
+		(at 48.4 64.7)
 		(property "Reference" "C3"
 			(at 1.4 0.3 0)
 			(layer "B.SilkS")
@@ -12513,7 +12576,7 @@
 			)
 		)
 		(property "Value" "100nf"
-			(at -1.524 -1.27 360)
+			(at -1.524 -1.27 0)
 			(layer "B.Fab")
 			(uuid "efec79be-d843-49cb-832d-b0ebc176319e")
 			(effects
@@ -12525,7 +12588,7 @@
 			)
 		)
 		(property "Footprint" "EG2134_single_motor_drive:C0603"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "82904a65-069b-41a8-9c03-a653e9b9eedb")
@@ -12538,7 +12601,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.szlcsc.com/product/details_16532.html"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "e7bd018b-f3e7-4a16-9791-6882b8e5d6d2")
@@ -12551,7 +12614,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "cf378afb-ceb6-4718-b163-ab9a52a17309")
@@ -13121,7 +13184,7 @@
 		(uuid "2267adb9-fe72-4ee1-8f9f-b1f89f136c8b")
 		(at 47.9955 54.1 180)
 		(property "Reference" "LED1"
-			(at -1.316 1.6 360)
+			(at -1.316 1.6 0)
 			(layer "B.SilkS")
 			(uuid "23736afc-4818-40ce-bcfc-8a03a34ca145")
 			(effects
@@ -13133,7 +13196,7 @@
 			)
 		)
 		(property "Value" "电源指示灯"
-			(at -2.54 -1.778 360)
+			(at -2.54 -1.778 0)
 			(layer "B.Fab")
 			(uuid "bd17c54a-5d2e-4715-97a7-e2fbf6ea33e4")
 			(effects
@@ -13145,7 +13208,7 @@
 			)
 		)
 		(property "Footprint" "EG2134_single_motor_drive:NCD0805R1"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "17a87f4d-d947-421b-90a2-0c008c035ad6")
@@ -13158,7 +13221,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.szlcsc.com/product/details_85425.html"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "5b9cf2b3-9c60-454c-b7b2-fb32ca1d75af")
@@ -13171,7 +13234,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "d20eab77-22a8-4915-8c4f-5cee78c140c7")
@@ -13502,7 +13565,7 @@
 		(uuid "321d910b-2625-4d6c-b43b-52d51075774e")
 		(at 34.3115 60.9 180)
 		(property "Reference" "R6"
-			(at 0.6 1 360)
+			(at 0.6 1 0)
 			(layer "B.SilkS")
 			(uuid "4a6443fc-a8b5-4206-b0b0-7e8d3b765aed")
 			(effects
@@ -13514,7 +13577,7 @@
 			)
 		)
 		(property "Value" "20r"
-			(at -1.016 -1.27 360)
+			(at -1.016 -1.27 0)
 			(layer "B.Fab")
 			(uuid "7182b7ef-949b-4902-b1d7-c14844540acc")
 			(effects
@@ -13526,7 +13589,7 @@
 			)
 		)
 		(property "Footprint" "EG2134_single_motor_drive:R0402"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "ab39488f-9f92-43cf-a6bd-3c6ea36af0c2")
@@ -13539,7 +13602,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.szlcsc.com/product/details_26547.html"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "5d3b5bcc-452f-4094-9d6c-04e9cb7eee54")
@@ -13552,7 +13615,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "eff0b449-bdb5-4e54-95ac-2f80fb127aa5")
@@ -14805,7 +14868,7 @@
 	(footprint "EG2134_single_motor_drive:C0603"
 		(layer "B.Cu")
 		(uuid "3888c6a9-a0f5-45db-954e-b7144d6b46cb")
-		(at 46.5115 68.7)
+		(at 46.4 65.9)
 		(property "Reference" "C4"
 			(at -0.2 -0.8 90)
 			(layer "B.SilkS")
@@ -14819,7 +14882,7 @@
 			)
 		)
 		(property "Value" "100nf"
-			(at -1.524 -1.27 360)
+			(at -1.524 -1.27 0)
 			(layer "B.Fab")
 			(uuid "0b2cb3fe-e3b6-4c60-8d77-6754b8db10e7")
 			(effects
@@ -14831,7 +14894,7 @@
 			)
 		)
 		(property "Footprint" "EG2134_single_motor_drive:C0603"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "a544ffcb-1653-46ad-a8db-afbf03466580")
@@ -14844,7 +14907,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.szlcsc.com/product/details_16532.html"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "f2e1f75d-4598-4c6b-8ef7-e067f29883d2")
@@ -14857,7 +14920,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "81f5fd1f-fa39-41c3-a882-c92f3f915427")
@@ -15126,7 +15189,7 @@
 		(uuid "475d4879-6e60-4842-bff2-896cba0c8d73")
 		(at 36.2395 53.6575)
 		(property "Reference" "R2"
-			(at 0.867 0.1 360)
+			(at 0.867 0.1 0)
 			(layer "B.SilkS")
 			(uuid "a21afcdf-b591-41ac-b67b-50bd1c0ce8c2")
 			(effects
@@ -15138,7 +15201,7 @@
 			)
 		)
 		(property "Value" "20r"
-			(at -1.016 -1.27 360)
+			(at -1.016 -1.27 0)
 			(layer "B.Fab")
 			(uuid "0d0a5474-ac64-4496-997e-3876feaa6327")
 			(effects
@@ -15150,7 +15213,7 @@
 			)
 		)
 		(property "Footprint" "EG2134_single_motor_drive:R0402"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "0ae42693-c0a8-4811-ad9d-5fd954ae06b9")
@@ -15163,7 +15226,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.szlcsc.com/product/details_26547.html"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "44b3b921-d94f-413f-89dd-fe0dd8ec11d1")
@@ -15176,7 +15239,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "da4dfebe-3e56-4b08-8bdd-3b096520d8a9")
@@ -16006,7 +16069,7 @@
 		(uuid "4c670371-9e69-4b49-86f1-d57f30f257f9")
 		(at 52.9045 65.73)
 		(property "Reference" "D9"
-			(at 2.507 -0.01 360)
+			(at 2.507 -0.01 0)
 			(layer "B.SilkS")
 			(uuid "2c19e4a2-9413-4c1b-9ba4-42584b34baea")
 			(effects
@@ -16018,7 +16081,7 @@
 			)
 		)
 		(property "Value" "DSK34"
-			(at -2.54 -1.524 360)
+			(at -2.54 -1.524 0)
 			(layer "B.Fab")
 			(uuid "69ff214f-50ad-4578-9a6a-87b85da6160e")
 			(effects
@@ -16030,7 +16093,7 @@
 			)
 		)
 		(property "Footprint" "EG2134_single_motor_drive:DSK34"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "74ec9c66-f026-48b3-903f-61aa48e8b4b7")
@@ -16043,7 +16106,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.szlcsc.com/product/details_774181.html"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "f70d6075-5949-4a7f-96ff-5559d2129092")
@@ -16056,7 +16119,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "e7fa743a-e3e8-4d82-9b5c-df24cf75916b")
@@ -16951,7 +17014,7 @@
 		(uuid "57387cce-adea-4d5d-b6d5-fbe436966f11")
 		(at 44.7785 54.1 180)
 		(property "Reference" "R13"
-			(at -1.133 1 360)
+			(at -1.133 1 0)
 			(layer "B.SilkS")
 			(uuid "819de857-e5ff-4174-b09a-beb9f2123ff2")
 			(effects
@@ -16963,7 +17026,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at -1.016 -1.27 360)
+			(at -1.016 -1.27 0)
 			(layer "B.Fab")
 			(uuid "c391bb7a-f9a7-43a4-8f9f-b094249a9c9f")
 			(effects
@@ -16975,7 +17038,7 @@
 			)
 		)
 		(property "Footprint" "EG2134_single_motor_drive:R0402"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "f9e0ac3f-f69f-4a4e-adc2-1aa8dd0e323d")
@@ -16988,7 +17051,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.szlcsc.com/product/details_26547.html"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "94ca6fec-81e2-43c2-9c9d-a6027dd82aee")
@@ -17001,7 +17064,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "0f93b5aa-7018-473f-8e7a-fd23f0448d74")
@@ -18132,7 +18195,7 @@
 		(uuid "6805cec2-541a-4ec4-ad3a-2ec86ea05db5")
 		(at 29.5035 60.9 180)
 		(property "Reference" "R5"
-			(at -0.6 1 360)
+			(at -0.6 1 0)
 			(layer "B.SilkS")
 			(uuid "4290ac89-97ac-4b47-a4f4-5b96bb78f50f")
 			(effects
@@ -18144,7 +18207,7 @@
 			)
 		)
 		(property "Value" "20r"
-			(at -1.016 -1.27 360)
+			(at -1.016 -1.27 0)
 			(layer "B.Fab")
 			(uuid "6707f17d-8204-4d8f-bb48-be3229ccbd63")
 			(effects
@@ -18156,7 +18219,7 @@
 			)
 		)
 		(property "Footprint" "EG2134_single_motor_drive:R0402"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "a0ac2060-eae6-4c3d-b2c5-08ea0edc19b8")
@@ -18169,7 +18232,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.szlcsc.com/product/details_26547.html"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "49c1a164-528c-4b24-82a2-ba1a31c85aea")
@@ -18182,7 +18245,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "911fcb86-b9ec-4e84-b2a4-208c433ea944")
@@ -19053,7 +19116,7 @@
 		(uuid "8c1b7855-039f-430c-adb1-75446bfc2501")
 		(at 34.5455 68.1)
 		(property "Reference" "R12"
-			(at 1.1 0.035 360)
+			(at 1.1 0.035 0)
 			(layer "B.SilkS")
 			(uuid "dbb08390-a807-4731-a219-4e0c4f743fa8")
 			(effects
@@ -19065,7 +19128,7 @@
 			)
 		)
 		(property "Value" "20r"
-			(at -1.016 -1.27 360)
+			(at -1.016 -1.27 0)
 			(layer "B.Fab")
 			(uuid "05696766-705c-4817-9138-c3729257a6ef")
 			(effects
@@ -19077,7 +19140,7 @@
 			)
 		)
 		(property "Footprint" "EG2134_single_motor_drive:R0402"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "9de122e7-78f6-45fd-8240-1abe01434458")
@@ -19090,7 +19153,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.szlcsc.com/product/details_26547.html"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "6b650d31-fdec-41a9-a007-db0e885a1200")
@@ -19103,7 +19166,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "58ace722-6782-4e9d-a96e-6a4b8a4addd7")
@@ -19352,9 +19415,9 @@
 	(footprint "EG2134_single_motor_drive:C0603"
 		(layer "B.Cu")
 		(uuid "95a71f84-c4b5-4ac6-b0e1-7a335c4ad229")
-		(at 44.3115 65.3)
+		(at 46.7 62.4 180)
 		(property "Reference" "C1"
-			(at -3.1 0 0)
+			(at -3.1 0 360)
 			(layer "B.SilkS")
 			(uuid "c9048edd-9ec8-42e8-8f97-7a3e44d1b429")
 			(effects
@@ -19362,7 +19425,7 @@
 					(size 0.7 0.7)
 					(thickness 0.15)
 				)
-				(justify right mirror)
+				(justify left mirror)
 			)
 		)
 		(property "Value" "1uf"
@@ -19374,7 +19437,7 @@
 					(size 1 1)
 					(thickness 0.15)
 				)
-				(justify right mirror)
+				(justify left mirror)
 			)
 		)
 		(property "Footprint" "EG2134_single_motor_drive:C0603"
@@ -19417,7 +19480,7 @@
 			)
 		)
 		(property "SuppliersPartNumber" "C15850"
-			(at 0 0 180)
+			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
@@ -19431,7 +19494,7 @@
 			)
 		)
 		(property "uuid" "std:7a0c79967d0e7ae293044fb82790899a"
-			(at 0 0 180)
+			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
@@ -19449,44 +19512,14 @@
 		(sheetfile "EG2134.kicad_sch")
 		(attr through_hole)
 		(fp_line
-			(start -1.405 -0.394)
-			(end -1.405 0.406)
+			(start 1.39 -0.4)
+			(end 1.39 0.4)
 			(stroke
 				(width 0.254)
 				(type solid)
 			)
 			(layer "B.SilkS")
-			(uuid "95bc6a56-36dc-42a2-9f30-ccdcba3e74b9")
-		)
-		(fp_line
-			(start -1.096 -0.704)
-			(end -0.296 -0.704)
-			(stroke
-				(width 0.254)
-				(type solid)
-			)
-			(layer "B.SilkS")
-			(uuid "4d2b607e-a487-4d63-b932-14586d1e1575")
-		)
-		(fp_line
-			(start -1.096 0.715)
-			(end -0.296 0.715)
-			(stroke
-				(width 0.254)
-				(type solid)
-			)
-			(layer "B.SilkS")
-			(uuid "6a94ca74-c5f0-481e-914e-e42152e2026f")
-		)
-		(fp_line
-			(start 1.08 -0.71)
-			(end 0.28 -0.71)
-			(stroke
-				(width 0.254)
-				(type solid)
-			)
-			(layer "B.SilkS")
-			(uuid "6e695136-845d-480d-80fb-5dc758412fff")
+			(uuid "9294188e-7f22-4730-935a-be975394cc0d")
 		)
 		(fp_line
 			(start 1.08 0.71)
@@ -19499,36 +19532,55 @@
 			(uuid "6ef5a2bd-715e-4f28-ad8d-025a1382908d")
 		)
 		(fp_line
-			(start 1.39 -0.4)
-			(end 1.39 0.4)
+			(start 1.08 -0.71)
+			(end 0.28 -0.71)
 			(stroke
 				(width 0.254)
 				(type solid)
 			)
 			(layer "B.SilkS")
-			(uuid "9294188e-7f22-4730-935a-be975394cc0d")
+			(uuid "6e695136-845d-480d-80fb-5dc758412fff")
 		)
-		(fp_arc
-			(start -1.406 -0.394)
-			(mid -1.315194 -0.613212)
-			(end -1.095975 -0.704)
-			(stroke
-				(width 0.254)
-				(type solid)
-			)
-			(layer "B.SilkS")
-			(uuid "200a3f12-b9c2-45f2-bd62-17c303fa526d")
-		)
-		(fp_arc
+		(fp_line
 			(start -1.096 0.715)
-			(mid -1.314496 0.624496)
+			(end -0.296 0.715)
+			(stroke
+				(width 0.254)
+				(type solid)
+			)
+			(layer "B.SilkS")
+			(uuid "6a94ca74-c5f0-481e-914e-e42152e2026f")
+		)
+		(fp_line
+			(start -1.096 -0.704)
+			(end -0.296 -0.704)
+			(stroke
+				(width 0.254)
+				(type solid)
+			)
+			(layer "B.SilkS")
+			(uuid "4d2b607e-a487-4d63-b932-14586d1e1575")
+		)
+		(fp_line
+			(start -1.405 -0.394)
 			(end -1.405 0.406)
 			(stroke
 				(width 0.254)
 				(type solid)
 			)
 			(layer "B.SilkS")
-			(uuid "5d199a69-4b41-4076-919d-f5d085ac08a5")
+			(uuid "95bc6a56-36dc-42a2-9f30-ccdcba3e74b9")
+		)
+		(fp_arc
+			(start 1.39 0.4)
+			(mid 1.299194 0.619212)
+			(end 1.079975 0.71)
+			(stroke
+				(width 0.254)
+				(type solid)
+			)
+			(layer "B.SilkS")
+			(uuid "1429b451-e108-4011-ad38-10b6ea71422d")
 		)
 		(fp_arc
 			(start 1.08 -0.71)
@@ -19542,15 +19594,26 @@
 			(uuid "3409b68b-f1c4-422c-a112-3394424ec237")
 		)
 		(fp_arc
-			(start 1.39 0.4)
-			(mid 1.299194 0.619212)
-			(end 1.079975 0.71)
+			(start -1.096 0.715)
+			(mid -1.314496 0.624496)
+			(end -1.405 0.406)
 			(stroke
 				(width 0.254)
 				(type solid)
 			)
 			(layer "B.SilkS")
-			(uuid "1429b451-e108-4011-ad38-10b6ea71422d")
+			(uuid "5d199a69-4b41-4076-919d-f5d085ac08a5")
+		)
+		(fp_arc
+			(start -1.406 -0.394)
+			(mid -1.315194 -0.613212)
+			(end -1.095975 -0.704)
+			(stroke
+				(width 0.254)
+				(type solid)
+			)
+			(layer "B.SilkS")
+			(uuid "200a3f12-b9c2-45f2-bd62-17c303fa526d")
 		)
 		(fp_circle
 			(center -0.8 -0.4)
@@ -19565,18 +19628,6 @@
 		)
 		(fp_poly
 			(pts
-				(xy -0.8 -0.4) (xy -0.8 0.4) (xy -0.5 0.4) (xy -0.5 -0.4)
-			)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(fill solid)
-			(layer "Eco2.User")
-			(uuid "43775581-5d8d-45b2-b22a-02f330433dea")
-		)
-		(fp_poly
-			(pts
 				(xy 0.8 -0.4) (xy 0.8 0.4) (xy 0.5 0.4) (xy 0.5 -0.4)
 			)
 			(stroke
@@ -19587,25 +19638,27 @@
 			(layer "Eco2.User")
 			(uuid "022dc8ee-e09c-4231-835a-e50e4c4d0dc0")
 		)
-		(fp_line
-			(start -0.8 -0.4)
-			(end 0.8 -0.4)
+		(fp_poly
+			(pts
+				(xy -0.8 -0.4) (xy -0.8 0.4) (xy -0.5 0.4) (xy -0.5 -0.4)
+			)
 			(stroke
 				(width 0.12)
 				(type solid)
 			)
-			(layer "B.CrtYd")
-			(uuid "ac805258-cc07-4890-bd23-1cf2ad1d05a4")
+			(fill solid)
+			(layer "Eco2.User")
+			(uuid "43775581-5d8d-45b2-b22a-02f330433dea")
 		)
 		(fp_line
-			(start -0.8 0.4)
-			(end -0.8 -0.4)
+			(start 0.8 0.4)
+			(end -0.8 0.4)
 			(stroke
 				(width 0.12)
 				(type solid)
 			)
 			(layer "B.CrtYd")
-			(uuid "a60b87d9-35df-4126-9d1b-7f950ce1a2ca")
+			(uuid "93cb4a2d-9af0-4f12-88d7-09d4a23318ba")
 		)
 		(fp_line
 			(start 0.8 -0.4)
@@ -19618,17 +19671,27 @@
 			(uuid "e6812390-8117-46dd-8b34-5cbb53cb06ec")
 		)
 		(fp_line
-			(start 0.8 0.4)
-			(end -0.8 0.4)
+			(start -0.8 0.4)
+			(end -0.8 -0.4)
 			(stroke
 				(width 0.12)
 				(type solid)
 			)
 			(layer "B.CrtYd")
-			(uuid "93cb4a2d-9af0-4f12-88d7-09d4a23318ba")
+			(uuid "a60b87d9-35df-4126-9d1b-7f950ce1a2ca")
+		)
+		(fp_line
+			(start -0.8 -0.4)
+			(end 0.8 -0.4)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "B.CrtYd")
+			(uuid "ac805258-cc07-4890-bd23-1cf2ad1d05a4")
 		)
 		(pad "1" smd rect
-			(at -0.7 0)
+			(at -0.7 0 180)
 			(size 0.8 0.9)
 			(layers "B.Cu" "B.Paste" "B.Mask")
 			(net 32 "GND")
@@ -19637,7 +19700,7 @@
 			(uuid "94543fa5-66d6-40a0-94c3-2ea871ad5ee1")
 		)
 		(pad "2" smd rect
-			(at 0.7 0)
+			(at 0.7 0 180)
 			(size 0.8 0.9)
 			(layers "B.Cu" "B.Paste" "B.Mask")
 			(net 1 "VCC")
@@ -19673,7 +19736,7 @@
 		(uuid "9d00ef5c-1301-46da-ace4-862c6ef3ec95")
 		(at 31.1725 53.6575 180)
 		(property "Reference" "R1"
-			(at 0.933 0 360)
+			(at 0.933 0 0)
 			(layer "B.SilkS")
 			(uuid "1da03c82-3104-4b6f-ae56-7748c7f06568")
 			(effects
@@ -19685,7 +19748,7 @@
 			)
 		)
 		(property "Value" "20r"
-			(at -1.016 -1.27 360)
+			(at -1.016 -1.27 0)
 			(layer "B.Fab")
 			(uuid "3f04c7a4-31a1-42d6-8b27-f7063aeb5644")
 			(effects
@@ -19697,7 +19760,7 @@
 			)
 		)
 		(property "Footprint" "EG2134_single_motor_drive:R0402"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "237bd6b8-e1df-4141-baae-ec78db985a09")
@@ -19710,7 +19773,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.szlcsc.com/product/details_26547.html"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "b705b3a5-08ff-484f-8eb8-edec6b9ac487")
@@ -19723,7 +19786,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "a137ea54-633a-4427-8fe9-06ee96ef7d25")
@@ -19974,7 +20037,7 @@
 		(uuid "a7df6ebe-34c7-4d10-8a00-0a5d6b7cc8e2")
 		(at 30.0785 68.1 180)
 		(property "Reference" "R11"
-			(at 0.933 -0.035 360)
+			(at 0.933 -0.035 0)
 			(layer "B.SilkS")
 			(uuid "ae5fd9e0-5b4c-49ab-8c82-2739768bc26e")
 			(effects
@@ -19986,7 +20049,7 @@
 			)
 		)
 		(property "Value" "20r"
-			(at -1.016 -1.27 360)
+			(at -1.016 -1.27 0)
 			(layer "B.Fab")
 			(uuid "264ac24a-96fc-4f55-80f5-989290308851")
 			(effects
@@ -19998,7 +20061,7 @@
 			)
 		)
 		(property "Footprint" "EG2134_single_motor_drive:R0402"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "859661ad-96a5-4c8f-ad64-a5568eab7969")
@@ -20011,7 +20074,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.szlcsc.com/product/details_26547.html"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "cc5df99a-eec2-4aff-87b7-cb9ed1fc2852")
@@ -20024,7 +20087,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "97133d2b-b027-44a4-b9c6-d26da99792a6")
@@ -20273,9 +20336,9 @@
 	(footprint "EG2134_single_motor_drive:C0402"
 		(layer "B.Cu")
 		(uuid "a8c7d099-9775-4ca0-b98f-5553020cc35b")
-		(at 47.5565 71.6 180)
+		(at 47.5565 72.834 180)
 		(property "Reference" "C17"
-			(at -0.999242 -0.85 360)
+			(at -0.999242 -0.85 0)
 			(layer "B.SilkS")
 			(uuid "9238cf67-ba37-414a-ab4e-bba546119921")
 			(effects
@@ -20287,7 +20350,7 @@
 			)
 		)
 		(property "Value" "100nf"
-			(at -1.27 -1.016 360)
+			(at -1.27 -1.016 0)
 			(layer "B.Fab")
 			(uuid "d69d8d9b-e523-4c04-84dc-4c57e475156e")
 			(effects
@@ -20299,7 +20362,7 @@
 			)
 		)
 		(property "Footprint" "EG2134_single_motor_drive:C0402"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "46544f49-3415-40df-8e57-b880501509e0")
@@ -20312,7 +20375,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.szlcsc.com/product/details_16532.html"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "70acad5a-b47e-4dc8-aeaa-f0a052660f73")
@@ -20325,7 +20388,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "f8b053af-120b-43ea-9083-3fa043386812")
@@ -21197,9 +21260,9 @@
 	(footprint "EG2134_single_motor_drive:C0402"
 		(layer "B.Cu")
 		(uuid "ac29abae-bb68-4507-98fd-274d5f68009d")
-		(at 45.0065 71.55 180)
+		(at 45.0065 72.784 180)
 		(property "Reference" "C16"
-			(at -1.045 -1.1 360)
+			(at -1.045 -1.1 0)
 			(layer "B.SilkS")
 			(uuid "71ebd356-e1c2-46bd-8454-b385f0486769")
 			(effects
@@ -21211,7 +21274,7 @@
 			)
 		)
 		(property "Value" "100nf"
-			(at -1.27 -1.016 360)
+			(at -1.27 -1.016 0)
 			(layer "B.Fab")
 			(uuid "a4afe669-63da-463b-bd07-ec74e5ba986e")
 			(effects
@@ -21223,7 +21286,7 @@
 			)
 		)
 		(property "Footprint" "EG2134_single_motor_drive:C0402"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "025d80a6-2210-4f3a-9432-fab63375a615")
@@ -21236,7 +21299,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.szlcsc.com/product/details_16532.html"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "4dc590a6-bf9a-4b4f-a69b-5d101389c55f")
@@ -21249,7 +21312,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "f47df0ac-f3d0-4734-a760-85b6cbf7f6eb")
@@ -21843,9 +21906,9 @@
 	(footprint "EG2134_single_motor_drive:R0402"
 		(layer "B.Cu")
 		(uuid "bb4fa2e7-e1d7-4947-ae81-5840ba8a8b75")
-		(at 43.1115 70.433 90)
+		(at 43.067 71.6)
 		(property "Reference" "R17"
-			(at -1.067 -1 90)
+			(at -1.067 -1 360)
 			(layer "B.SilkS")
 			(uuid "01536375-339e-4af5-afd9-91789dcf7dd4")
 			(effects
@@ -21857,7 +21920,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at -1.016 -1.27 90)
+			(at -1.016 -1.27 360)
 			(layer "B.Fab")
 			(uuid "1ef29c03-208a-4d1c-93c8-542af1057cbc")
 			(effects
@@ -21869,7 +21932,7 @@
 			)
 		)
 		(property "Footprint" "EG2134_single_motor_drive:R0402"
-			(at 0 0 90)
+			(at 0 0 360)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "18052fe7-3a45-400c-9513-13fe98f9dc7b")
@@ -21882,7 +21945,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.szlcsc.com/product/details_26547.html"
-			(at 0 0 90)
+			(at 0 0 360)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "61a4d0e8-d004-44e7-8319-8617de9da4cb")
@@ -21895,7 +21958,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 90)
+			(at 0 0 360)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "90de9634-69aa-4cc5-a07a-6ea3bea59fbf")
@@ -21908,7 +21971,7 @@
 			)
 		)
 		(property "SuppliersPartNumber" "C25804"
-			(at 0 0 -90)
+			(at 0 0 180)
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
@@ -21922,7 +21985,7 @@
 			)
 		)
 		(property "uuid" "std:b210af5a1436310a86e8b108e2e5a90b"
-			(at 0 0 -90)
+			(at 0 0 180)
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
@@ -21941,19 +22004,6 @@
 		(attr through_hole)
 		(fp_poly
 			(pts
-				(xy 0.135 -0.23) (xy 0.135 0.23) (xy 0.175 0.27) (xy 0.676 0.27) (xy 0.716 0.23) (xy 0.716 -0.23)
-				(xy 0.676 -0.27) (xy 0.175 -0.27)
-			)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(fill solid)
-			(layer "B.Paste")
-			(uuid "c81ca8b1-ba42-4855-9b52-31ac5eb627de")
-		)
-		(fp_poly
-			(pts
 				(xy -0.135 -0.23) (xy -0.135 0.23) (xy -0.175 0.27) (xy -0.676 0.27) (xy -0.716 0.23) (xy -0.716 -0.23)
 				(xy -0.676 -0.27) (xy -0.175 -0.27)
 			)
@@ -21965,15 +22015,18 @@
 			(layer "B.Paste")
 			(uuid "00be9cac-f996-4fe0-b8c6-fa9f3a94e697")
 		)
-		(fp_line
-			(start 0.944 -0.499)
-			(end 0.226 -0.499)
+		(fp_poly
+			(pts
+				(xy 0.135 -0.23) (xy 0.135 0.23) (xy 0.175 0.27) (xy 0.676 0.27) (xy 0.716 0.23) (xy 0.716 -0.23)
+				(xy 0.676 -0.27) (xy 0.175 -0.27)
+			)
 			(stroke
-				(width 0.152)
+				(width 0.12)
 				(type solid)
 			)
-			(layer "B.SilkS")
-			(uuid "d34bc370-69f8-49ba-ba01-04f7452c1889")
+			(fill solid)
+			(layer "B.Paste")
+			(uuid "c81ca8b1-ba42-4855-9b52-31ac5eb627de")
 		)
 		(fp_line
 			(start -0.944 -0.499)
@@ -21986,24 +22039,14 @@
 			(uuid "8ba1acdd-a72d-4939-a907-6d24d08650a6")
 		)
 		(fp_line
-			(start 0.944 0.499)
-			(end 0.944 -0.499)
+			(start -0.944 0.499)
+			(end -0.944 -0.499)
 			(stroke
 				(width 0.152)
 				(type solid)
 			)
 			(layer "B.SilkS")
-			(uuid "2158bb27-02c1-486f-bb1e-861eb8aabafc")
-		)
-		(fp_line
-			(start 0.226 0.499)
-			(end 0.944 0.499)
-			(stroke
-				(width 0.152)
-				(type solid)
-			)
-			(layer "B.SilkS")
-			(uuid "a3e3a9f5-c959-4500-8146-0c0be038b44f")
+			(uuid "f0de8189-37dd-49d6-8d9b-6f0c6d5e180f")
 		)
 		(fp_line
 			(start -0.226 0.499)
@@ -22016,14 +22059,34 @@
 			(uuid "d974473e-f962-4089-bd48-c30d1216cdd3")
 		)
 		(fp_line
-			(start -0.944 0.499)
-			(end -0.944 -0.499)
+			(start 0.226 0.499)
+			(end 0.944 0.499)
 			(stroke
 				(width 0.152)
 				(type solid)
 			)
 			(layer "B.SilkS")
-			(uuid "f0de8189-37dd-49d6-8d9b-6f0c6d5e180f")
+			(uuid "a3e3a9f5-c959-4500-8146-0c0be038b44f")
+		)
+		(fp_line
+			(start 0.944 -0.499)
+			(end 0.226 -0.499)
+			(stroke
+				(width 0.152)
+				(type solid)
+			)
+			(layer "B.SilkS")
+			(uuid "d34bc370-69f8-49ba-ba01-04f7452c1889")
+		)
+		(fp_line
+			(start 0.944 0.499)
+			(end 0.944 -0.499)
+			(stroke
+				(width 0.152)
+				(type solid)
+			)
+			(layer "B.SilkS")
+			(uuid "2158bb27-02c1-486f-bb1e-861eb8aabafc")
 		)
 		(fp_circle
 			(center -0.5 -0.25)
@@ -22038,18 +22101,6 @@
 		)
 		(fp_poly
 			(pts
-				(xy 0.251 -0.25) (xy 0.251 0.25) (xy 0.501 0.25) (xy 0.501 -0.25)
-			)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(fill solid)
-			(layer "Eco2.User")
-			(uuid "a264bb92-5964-4ed6-bed0-2e50d6d1e063")
-		)
-		(fp_poly
-			(pts
 				(xy -0.249 0.25) (xy -0.249 -0.25) (xy -0.499 -0.25) (xy -0.499 0.25)
 			)
 			(stroke
@@ -22060,15 +22111,17 @@
 			(layer "Eco2.User")
 			(uuid "94ef101c-6841-4aac-b6ca-4cb8d9c7a9d3")
 		)
-		(fp_line
-			(start 0.5 -0.25)
-			(end 0.5 0.25)
+		(fp_poly
+			(pts
+				(xy 0.251 -0.25) (xy 0.251 0.25) (xy 0.501 0.25) (xy 0.501 -0.25)
+			)
 			(stroke
 				(width 0.12)
 				(type solid)
 			)
-			(layer "B.CrtYd")
-			(uuid "d38f2497-9213-4902-9f01-eb7d38d933e8")
+			(fill solid)
+			(layer "Eco2.User")
+			(uuid "a264bb92-5964-4ed6-bed0-2e50d6d1e063")
 		)
 		(fp_line
 			(start -0.5 -0.25)
@@ -22081,16 +22134,6 @@
 			(uuid "86405be1-df47-4ec0-82cc-a66a51928038")
 		)
 		(fp_line
-			(start 0.5 0.25)
-			(end -0.5 0.25)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "B.CrtYd")
-			(uuid "119c87cf-683b-48a3-a3a0-1301625e8a8f")
-		)
-		(fp_line
 			(start -0.5 0.25)
 			(end -0.5 -0.25)
 			(stroke
@@ -22100,8 +22143,28 @@
 			(layer "B.CrtYd")
 			(uuid "7eb8fe9d-56e5-4fa4-9253-38866b67c9d7")
 		)
+		(fp_line
+			(start 0.5 -0.25)
+			(end 0.5 0.25)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "B.CrtYd")
+			(uuid "d38f2497-9213-4902-9f01-eb7d38d933e8")
+		)
+		(fp_line
+			(start 0.5 0.25)
+			(end -0.5 0.25)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "B.CrtYd")
+			(uuid "119c87cf-683b-48a3-a3a0-1301625e8a8f")
+		)
 		(pad "1" smd rect
-			(at -0.433 0 90)
+			(at -0.433 0)
 			(size 0.566 0.54)
 			(layers "B.Cu" "B.Paste" "B.Mask")
 			(net 33 "VREF")
@@ -22110,7 +22173,7 @@
 			(uuid "28d54fdc-b430-431a-bf08-5c4f51c2b468")
 		)
 		(pad "2" smd rect
-			(at 0.433 0 90)
+			(at 0.433 0)
 			(size 0.566 0.54)
 			(layers "B.Cu" "B.Paste" "B.Mask")
 			(net 2 "+3V3")
@@ -22463,7 +22526,7 @@
 	(footprint "TestPoint:TestPoint_Pad_D1.5mm"
 		(layer "B.Cu")
 		(uuid "c5e4b4fe-ccb6-404c-8713-7e75f54d4d45")
-		(at 63.3115 59.4 180)
+		(at 60.4 56.3 180)
 		(descr "SMD pad as test Point, diameter 1.5mm")
 		(tags "test point SMD pad")
 		(property "Reference" "TP2_VCC1"
@@ -22598,7 +22661,7 @@
 			)
 		)
 		(property "Value" "6.8uh"
-			(at -4.064 -3.556 360)
+			(at -4.064 -3.556 0)
 			(layer "B.Fab")
 			(uuid "ab3a9d81-b06a-4230-b336-229b45980365")
 			(effects
@@ -22610,7 +22673,7 @@
 			)
 		)
 		(property "Footprint" "EG2134_single_motor_drive:FNR6045S6R8MT"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "d95c1f4f-8f84-4081-b65d-67313f466ec0")
@@ -22623,7 +22686,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.szlcsc.com/product/details_179455.html"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "77c825e8-48e5-441c-b25f-fb5773af6293")
@@ -22636,7 +22699,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "41a7d7eb-d7e5-4ecf-9bad-ca50aa59c289")
@@ -23138,7 +23201,7 @@
 	(footprint "EG2134_single_motor_drive:C0603"
 		(layer "B.Cu")
 		(uuid "e541a656-ff4e-48e4-83ec-a57e1e3fce12")
-		(at 44.3115 67)
+		(at 44.4 64.5)
 		(property "Reference" "C5"
 			(at -3 0 0)
 			(layer "B.SilkS")
@@ -23152,7 +23215,7 @@
 			)
 		)
 		(property "Value" "100nf"
-			(at -1.524 -1.27 360)
+			(at -1.524 -1.27 0)
 			(layer "B.Fab")
 			(uuid "3de3115e-8be6-4fea-b77b-810a4f4b0a32")
 			(effects
@@ -23164,7 +23227,7 @@
 			)
 		)
 		(property "Footprint" "EG2134_single_motor_drive:C0603"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "982af117-c65b-438e-bcaf-887ecfbd79ec")
@@ -23177,7 +23240,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.szlcsc.com/product/details_16532.html"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "38e0eb9d-7dc5-4f18-b1ef-40e32816366e")
@@ -23190,7 +23253,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "1d1b7721-8a60-4d71-a063-7c374daf491d")
@@ -24095,7 +24158,7 @@
 	(footprint "EG2134_single_motor_drive:C0603"
 		(layer "B.Cu")
 		(uuid "f01c2853-da9b-480c-821f-c9585f27318a")
-		(at 44.3115 63.6)
+		(at 44.1 62.4)
 		(property "Reference" "C2"
 			(at -3 0.1 0)
 			(layer "B.SilkS")
@@ -24109,7 +24172,7 @@
 			)
 		)
 		(property "Value" "100nf"
-			(at -1.524 -1.27 360)
+			(at -1.524 -1.27 0)
 			(layer "B.Fab")
 			(uuid "a6a14a94-3f2c-4535-b409-58e1f2db7f32")
 			(effects
@@ -24121,7 +24184,7 @@
 			)
 		)
 		(property "Footprint" "EG2134_single_motor_drive:C0603"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "59787862-9928-485a-86c4-f2f1c2094e39")
@@ -24134,7 +24197,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.szlcsc.com/product/details_16532.html"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "7f18438f-cf11-4f4e-bfcd-5efc266047c4")
@@ -24147,7 +24210,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "2d6f50f7-d3e9-486c-ab67-f412375db89d")
@@ -24416,7 +24479,7 @@
 		(uuid "f51437ff-7adc-4fba-9787-5009292f6b8a")
 		(at 40.2115 53.8)
 		(property "Reference" "R4"
-			(at -0.7 1.1 360)
+			(at -0.7 1.1 0)
 			(layer "B.SilkS")
 			(uuid "57ea8ed3-8e1a-4048-8c74-327b07cb966a")
 			(effects
@@ -24428,7 +24491,7 @@
 			)
 		)
 		(property "Value" "0r"
-			(at -1.524 -1.524 360)
+			(at -1.524 -1.524 0)
 			(layer "B.Fab")
 			(uuid "d4c30e40-9a52-4b6c-98b6-e1a07d922784")
 			(effects
@@ -24440,7 +24503,7 @@
 			)
 		)
 		(property "Footprint" "EG2134_single_motor_drive:R0603"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "d4d3639a-7985-45d3-8719-c4162f9b76b4")
@@ -24453,7 +24516,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.szlcsc.com/product/details_26547.html"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "bdfab38f-9656-4956-af32-287a64e799ca")
@@ -24466,7 +24529,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "0ff49e6f-c811-4c46-bf3b-1dad70001541")
@@ -24715,7 +24778,7 @@
 	(footprint "EG2134_single_motor_drive:R0402"
 		(layer "B.Cu")
 		(uuid "fbf3a197-d6d8-4f52-bf71-69f7f7b43a2d")
-		(at 43.1115 72.433 90)
+		(at 42.6 73.033 90)
 		(property "Reference" "R18"
 			(at -1.1 -1 90)
 			(layer "B.SilkS")
@@ -25089,5 +25152,419 @@
 			(text_position_mode 0)
 			(extension_height 0.58642)
 			(extension_offset 0.5) keep_text_aligned)
+	)
+	(segment
+		(start 59 61.6)
+		(end 59 60.7)
+		(width 0.2)
+		(layer "F.Cu")
+		(net 1)
+		(uuid "3c52bda2-684b-4898-9322-8984b1e36a9f")
+	)
+	(segment
+		(start 54.6465 65.723)
+		(end 54.6395 65.73)
+		(width 0.2)
+		(layer "F.Cu")
+		(net 1)
+		(uuid "494f92c0-545f-428c-ab1a-69270b473d0d")
+	)
+	(segment
+		(start 57 63.6)
+		(end 58.4 62.2)
+		(width 0.2)
+		(layer "F.Cu")
+		(net 1)
+		(uuid "89a5145b-9498-4403-9a47-09321f3ff474")
+	)
+	(segment
+		(start 60.063 59.265)
+		(end 60.198 59.4)
+		(width 0.2)
+		(layer "F.Cu")
+		(net 1)
+		(uuid "8b37d97b-1ae5-4d6e-9a3e-4e9cb8a8a728")
+	)
+	(segment
+		(start 54.6465 63.6)
+		(end 54.6465 65.723)
+		(width 0.2)
+		(layer "F.Cu")
+		(net 1)
+		(uuid "b99dbec3-c9b9-4ec2-b897-b600f15366c1")
+	)
+	(segment
+		(start 54.6465 63.6)
+		(end 57 63.6)
+		(width 0.2)
+		(layer "F.Cu")
+		(net 1)
+		(uuid "d70ae23c-a070-4be3-a358-5a6be3fd22ef")
+	)
+	(segment
+		(start 58.4 62.2)
+		(end 59 61.6)
+		(width 0.2)
+		(layer "F.Cu")
+		(net 1)
+		(uuid "f9a77f98-cb27-40d3-bc0b-4b8ccd460460")
+	)
+	(via
+		(at 55 56.3)
+		(size 0.6)
+		(drill 0.3)
+		(layers "F.Cu" "B.Cu")
+		(net 1)
+		(uuid "1bbac0b3-7510-4ba6-955d-4c7dd5fa75a3")
+	)
+	(via
+		(at 54.9 57.9)
+		(size 0.6)
+		(drill 0.3)
+		(layers "F.Cu" "B.Cu")
+		(net 1)
+		(uuid "86868376-ea34-4280-8301-e68b79dcbe25")
+	)
+	(segment
+		(start 60.198 56.502)
+		(end 60.4 56.3)
+		(width 0.2)
+		(layer "B.Cu")
+		(net 1)
+		(uuid "860461d5-19b4-48b0-a3a8-c9f4cdec5d2c")
+	)
+	(segment
+		(start 60.198 59.4)
+		(end 60.198 56.502)
+		(width 0.2)
+		(layer "B.Cu")
+		(net 1)
+		(uuid "ad32d5e2-380c-42fb-83c2-9b9d19fcf1da")
+	)
+	(segment
+		(start 54.9115 57.9115)
+		(end 54.9 57.9)
+		(width 0.2)
+		(layer "B.Cu")
+		(net 1)
+		(uuid "af10825b-6289-4b91-b6b2-31caef14085f")
+	)
+	(segment
+		(start 54.9115 58)
+		(end 54.9115 57.9115)
+		(width 0.2)
+		(layer "B.Cu")
+		(net 1)
+		(uuid "bc64b983-d98a-41f5-9069-804c8faade43")
+	)
+	(segment
+		(start 55.0115 56.3)
+		(end 55 56.3)
+		(width 0.2)
+		(layer "B.Cu")
+		(net 1)
+		(uuid "e5f610b9-0020-4e31-b03f-9ef848f62009")
+	)
+	(segment
+		(start 56.2805 61.805)
+		(end 55.9005 61.805)
+		(width 0.2)
+		(layer "F.Cu")
+		(net 3)
+		(uuid "9f49478d-57b0-48c7-b63a-3b057ba5b469")
+	)
+	(segment
+		(start 55.9005 61.805)
+		(end 55.8115 61.894)
+		(width 0.2)
+		(layer "F.Cu")
+		(net 3)
+		(uuid "d885ddac-1046-415a-b65e-33b76e7a39bd")
+	)
+	(via
+		(at 55.8115 61.894)
+		(size 0.6)
+		(drill 0.3)
+		(layers "F.Cu" "B.Cu")
+		(net 3)
+		(uuid "0ec3da5f-4f39-4f9a-afa2-f31c1c533fbb")
+	)
+	(segment
+		(start 54.3115 61.894)
+		(end 55.8115 61.894)
+		(width 0.2)
+		(layer "B.Cu")
+		(net 3)
+		(uuid "0a54fbc8-3f0c-4b35-a342-f581eb4fa716")
+	)
+	(segment
+		(start 55.8115 61.894)
+		(end 57.3055 61.894)
+		(width 0.2)
+		(layer "B.Cu")
+		(net 3)
+		(uuid "311b223a-9e31-401a-95d8-299bb0c21b30")
+	)
+	(segment
+		(start 57.3055 61.894)
+		(end 57.4115 62)
+		(width 0.2)
+		(layer "B.Cu")
+		(net 3)
+		(uuid "8d7f3d50-9f03-4cd5-a472-d3f165fa882b")
+	)
+	(segment
+		(start 55.8115 60.3)
+		(end 55.9 60.3)
+		(width 0.2)
+		(layer "F.Cu")
+		(net 39)
+		(uuid "1ef058d1-ac7e-4af7-a53b-3487b8123918")
+	)
+	(via
+		(at 55.8115 60.3)
+		(size 0.6)
+		(drill 0.3)
+		(layers "F.Cu" "B.Cu")
+		(net 39)
+		(uuid "0ed02717-57dc-4271-8006-ca040283b56c")
+	)
+	(zone
+		(net 1)
+		(net_name "VCC")
+		(layer "F.Cu")
+		(uuid "7f2cd836-22b8-4361-9d06-7d5a165b3edc")
+		(hatch edge 0.5)
+		(connect_pads yes
+			(clearance 0.5)
+		)
+		(min_thickness 0.25)
+		(filled_areas_thickness no)
+		(fill yes
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+		)
+		(polygon
+			(pts
+				(xy 58.7 61) (xy 62.2 61) (xy 62.2 57.4) (xy 58.6 57.4) (xy 58.6 55.3) (xy 54.5 55.3) (xy 54.5 58.4)
+				(xy 55.3 58.4) (xy 55.3 59.7) (xy 58 59.7)
+			)
+		)
+		(filled_polygon
+			(layer "F.Cu")
+			(pts
+				(xy 58.543039 55.319685) (xy 58.588794 55.372489) (xy 58.6 55.424) (xy 58.6 57.4) (xy 62.076 57.4)
+				(xy 62.143039 57.419685) (xy 62.188794 57.472489) (xy 62.2 57.524) (xy 62.2 60.876) (xy 62.180315 60.943039)
+				(xy 62.127511 60.988794) (xy 62.076 61) (xy 58.774064 61) (xy 58.707025 60.980315) (xy 58.664886 60.934788)
+				(xy 58.000001 59.7) (xy 58 59.7) (xy 56.394539 59.7) (xy 56.3275 59.680315) (xy 56.317224 59.672945)
+				(xy 56.313763 59.670185) (xy 56.313762 59.670184) (xy 56.256996 59.634515) (xy 56.161023 59.574211)
+				(xy 55.990754 59.514631) (xy 55.990749 59.51463) (xy 55.811504 59.494435) (xy 55.811496 59.494435)
+				(xy 55.63225 59.51463) (xy 55.632242 59.514632) (xy 55.464954 59.573169) (xy 55.395176 59.57673)
+				(xy 55.334548 59.542001) (xy 55.302321 59.480008) (xy 55.3 59.456127) (xy 55.3 58.4) (xy 54.624 58.4)
+				(xy 54.556961 58.380315) (xy 54.511206 58.327511) (xy 54.5 58.276) (xy 54.5 55.424) (xy 54.519685 55.356961)
+				(xy 54.572489 55.311206) (xy 54.624 55.3) (xy 58.476 55.3)
+			)
+		)
+	)
+	(zone
+		(net 15)
+		(net_name "U")
+		(layer "B.Cu")
+		(uuid "06bca7ab-0c7d-4407-b26a-a89bed9c9d2f")
+		(hatch edge 0.5)
+		(priority 2)
+		(connect_pads yes
+			(clearance 0)
+		)
+		(min_thickness 0.25)
+		(filled_areas_thickness no)
+		(fill yes
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+		)
+		(polygon
+			(pts
+				(xy 30.9 56) (xy 30.9 59.7) (xy 26.9 59.7) (xy 26.9 62.5) (xy 23 62.5) (xy 23 56)
+			)
+		)
+		(filled_polygon
+			(layer "B.Cu")
+			(pts
+				(xy 30.843039 56.019685) (xy 30.888794 56.072489) (xy 30.9 56.124) (xy 30.9 59.576) (xy 30.880315 59.643039)
+				(xy 30.827511 59.688794) (xy 30.776 59.7) (xy 26.9 59.7) (xy 26.9 62.376) (xy 26.880315 62.443039)
+				(xy 26.827511 62.488794) (xy 26.776 62.5) (xy 23.124 62.5) (xy 23.056961 62.480315) (xy 23.011206 62.427511)
+				(xy 23 62.376) (xy 23 56.124) (xy 23.019685 56.056961) (xy 23.072489 56.011206) (xy 23.124 56) (xy 30.776 56)
+			)
+		)
+	)
+	(zone
+		(net 1)
+		(net_name "VCC")
+		(layer "B.Cu")
+		(uuid "6e455443-6e4a-4739-8de9-0710fa87259f")
+		(hatch edge 0.5)
+		(priority 1)
+		(connect_pads yes
+			(clearance 0)
+		)
+		(min_thickness 0.25)
+		(filled_areas_thickness no)
+		(fill yes
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+		)
+		(polygon
+			(pts
+				(xy 58.6 61.1) (xy 58.6 57.3) (xy 66.1 57.3) (xy 66.1 70.9) (xy 37.9 71) (xy 37.9 74.2) (xy 31.7 74.2)
+				(xy 31.7 55) (xy 41.4 55.2) (xy 41.4 66.8) (xy 62 66.7) (xy 62.1 61.1)
+			)
+		)
+		(filled_polygon
+			(layer "B.Cu")
+			(pts
+				(xy 41.278556 55.197496) (xy 41.345176 55.218559) (xy 41.389832 55.272295) (xy 41.4 55.32147) (xy 41.4 66.799999)
+				(xy 41.4 66.8) (xy 62 66.7) (xy 62.1 61.1) (xy 58.724 61.1) (xy 58.656961 61.080315) (xy 58.611206 61.027511)
+				(xy 58.6 60.976) (xy 58.6 57.424) (xy 58.619685 57.356961) (xy 58.672489 57.311206) (xy 58.724 57.3)
+				(xy 65.976 57.3) (xy 66.043039 57.319685) (xy 66.088794 57.372489) (xy 66.1 57.424) (xy 66.1 70.776439)
+				(xy 66.080315 70.843478) (xy 66.027511 70.889233) (xy 65.97644 70.900438) (xy 37.900001 70.999999)
+				(xy 37.9 71) (xy 37.9 74.076) (xy 37.880315 74.143039) (xy 37.827511 74.188794) (xy 37.776 74.2)
+				(xy 31.824 74.2) (xy 31.756961 74.180315) (xy 31.711206 74.127511) (xy 31.7 74.076) (xy 31.7 67.810247)
+				(xy 33.629 67.810247) (xy 33.629 68.389752) (xy 33.640631 68.448229) (xy 33.640632 68.44823) (xy 33.684947 68.514552)
+				(xy 33.751269 68.558867) (xy 33.75127 68.558868) (xy 33.809747 68.570499) (xy 33.80975 68.5705)
+				(xy 33.809752 68.5705) (xy 34.41525 68.5705) (xy 34.415251 68.570499) (xy 34.430068 68.567552) (xy 34.473729 68.558868)
+				(xy 34.473731 68.558867) (xy 34.476608 68.556945) (xy 34.483835 68.554681) (xy 34.485013 68.554194)
+				(xy 34.485056 68.554299) (xy 34.543285 68.536066) (xy 34.610665 68.55455) (xy 34.614392 68.556945)
+				(xy 34.617268 68.558867) (xy 34.61727 68.558868) (xy 34.675747 68.570499) (xy 34.67575 68.5705)
+				(xy 34.675752 68.5705) (xy 35.28125 68.5705) (xy 35.281251 68.570499) (xy 35.296068 68.567552) (xy 35.339729 68.558868)
+				(xy 35.339729 68.558867) (xy 35.339731 68.558867) (xy 35.406052 68.514552) (xy 35.450367 68.448231)
+				(xy 35.450367 68.448229) (xy 35.450368 68.448229) (xy 35.461999 68.389752) (xy 35.462 68.38975)
+				(xy 35.462 67.810249) (xy 35.461999 67.810247) (xy 35.450368 67.75177) (xy 35.450367 67.751769)
+				(xy 35.406052 67.685447) (xy 35.33973 67.641132) (xy 35.339729 67.641131) (xy 35.281252 67.6295)
+				(xy 35.281248 67.6295) (xy 34.675752 67.6295) (xy 34.675747 67.6295) (xy 34.61727 67.641131) (xy 34.617268 67.641132)
+				(xy 34.614387 67.643058) (xy 34.607155 67.645322) (xy 34.605987 67.645806) (xy 34.605943 67.645701)
+				(xy 34.547709 67.663933) (xy 34.480329 67.645446) (xy 34.476613 67.643058) (xy 34.473731 67.641132)
+				(xy 34.473729 67.641131) (xy 34.415252 67.6295) (xy 34.415248 67.6295) (xy 33.809752 67.6295) (xy 33.809747 67.6295)
+				(xy 33.75127 67.641131) (xy 33.751269 67.641132) (xy 33.684947 67.685447) (xy 33.640632 67.751769)
+				(xy 33.640631 67.75177) (xy 33.629 67.810247) (xy 31.7 67.810247) (xy 31.7 60.610247) (xy 33.395 60.610247)
+				(xy 33.395 61.189752) (xy 33.406631 61.248229) (xy 33.406632 61.24823) (xy 33.450947 61.314552)
+				(xy 33.517269 61.358867) (xy 33.51727 61.358868) (xy 33.575747 61.370499) (xy 33.57575 61.3705)
+				(xy 33.575752 61.3705) (xy 34.18125 61.3705) (xy 34.181251 61.370499) (xy 34.196068 61.367552) (xy 34.239729 61.358868)
+				(xy 34.239731 61.358867) (xy 34.242608 61.356945) (xy 34.249835 61.354681) (xy 34.251013 61.354194)
+				(xy 34.251056 61.354299) (xy 34.309285 61.336066) (xy 34.376665 61.35455) (xy 34.380392 61.356945)
+				(xy 34.383268 61.358867) (xy 34.38327 61.358868) (xy 34.441747 61.370499) (xy 34.44175 61.3705)
+				(xy 34.441752 61.3705) (xy 35.04725 61.3705) (xy 35.047251 61.370499) (xy 35.062068 61.367552) (xy 35.105729 61.358868)
+				(xy 35.105729 61.358867) (xy 35.105731 61.358867) (xy 35.172052 61.314552) (xy 35.216367 61.248231)
+				(xy 35.216367 61.248229) (xy 35.216368 61.248229) (xy 35.227999 61.189752) (xy 35.228 61.18975)
+				(xy 35.228 60.610249) (xy 35.227999 60.610247) (xy 35.216368 60.55177) (xy 35.216367 60.551769)
+				(xy 35.172052 60.485447) (xy 35.10573 60.441132) (xy 35.105729 60.441131) (xy 35.047252 60.4295)
+				(xy 35.047248 60.4295) (xy 34.441752 60.4295) (xy 34.441747 60.4295) (xy 34.38327 60.441131) (xy 34.383268 60.441132)
+				(xy 34.380387 60.443058) (xy 34.373155 60.445322) (xy 34.371987 60.445806) (xy 34.371943 60.445701)
+				(xy 34.313709 60.463933) (xy 34.246329 60.445446) (xy 34.242613 60.443058) (xy 34.239731 60.441132)
+				(xy 34.239729 60.441131) (xy 34.181252 60.4295) (xy 34.181248 60.4295) (xy 33.575752 60.4295) (xy 33.575747 60.4295)
+				(xy 33.51727 60.441131) (xy 33.517269 60.441132) (xy 33.450947 60.485447) (xy 33.406632 60.551769)
+				(xy 33.406631 60.55177) (xy 33.395 60.610247) (xy 31.7 60.610247) (xy 31.7 55.126583) (xy 31.719685 55.059544)
+				(xy 31.772489 55.013789) (xy 31.826554 55.002609)
+			)
+		)
+	)
+	(zone
+		(net 0)
+		(net_name "")
+		(layer "B.Mask")
+		(uuid "0190d72e-9214-4170-bf67-c348c8efbeee")
+		(hatch edge 0.5)
+		(connect_pads yes
+			(clearance 0)
+		)
+		(min_thickness 0.25)
+		(filled_areas_thickness no)
+		(fill yes
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+		)
+		(polygon
+			(pts
+				(xy 58.6 61.1) (xy 58.6 57.3) (xy 66.1 57.3) (xy 66.1 70.9) (xy 37.9 71) (xy 37.9 74.2) (xy 31.7 74.2)
+				(xy 31.7 55) (xy 41.4 55.2) (xy 41.4 66.8) (xy 62 66.7) (xy 62.1 61.1)
+			)
+		)
+		(filled_polygon
+			(layer "B.Mask")
+			(island)
+			(pts
+				(xy 41.278556 55.197496) (xy 41.345176 55.218559) (xy 41.389832 55.272295) (xy 41.4 55.32147) (xy 41.4 66.799999)
+				(xy 62 66.699999) (xy 62.1 61.1) (xy 58.724 61.1) (xy 58.656961 61.080315) (xy 58.611206 61.027511)
+				(xy 58.6 60.976) (xy 58.6 57.424) (xy 58.619685 57.356961) (xy 58.672489 57.311206) (xy 58.724 57.3)
+				(xy 65.976 57.3) (xy 66.043039 57.319685) (xy 66.088794 57.372489) (xy 66.1 57.424) (xy 66.1 70.776439)
+				(xy 66.080315 70.843478) (xy 66.027511 70.889233) (xy 65.97644 70.900438) (xy 37.900001 70.999999)
+				(xy 37.9 71) (xy 37.9 74.076) (xy 37.880315 74.143039) (xy 37.827511 74.188794) (xy 37.776 74.2)
+				(xy 31.824 74.2) (xy 31.756961 74.180315) (xy 31.711206 74.127511) (xy 31.7 74.076) (xy 31.7 55.126583)
+				(xy 31.719685 55.059544) (xy 31.772489 55.013789) (xy 31.826556 55.002609)
+			)
+		)
+	)
+	(zone
+		(net 0)
+		(net_name "")
+		(layer "B.Mask")
+		(uuid "0abcaa5e-6fd1-469c-956a-5b550a346884")
+		(hatch edge 0.5)
+		(connect_pads yes
+			(clearance 0)
+		)
+		(min_thickness 0.25)
+		(filled_areas_thickness no)
+		(fill yes
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+		)
+		(polygon
+			(pts
+				(xy 30.9 59.7) (xy 26.9 59.7) (xy 26.9 62.5) (xy 23 62.5) (xy 23 56) (xy 30.9 56)
+			)
+		)
+		(filled_polygon
+			(layer "B.Mask")
+			(island)
+			(pts
+				(xy 30.843039 56.019685) (xy 30.888794 56.072489) (xy 30.9 56.124) (xy 30.9 59.576) (xy 30.880315 59.643039)
+				(xy 30.827511 59.688794) (xy 30.776 59.7) (xy 26.9 59.7) (xy 26.9 62.376) (xy 26.880315 62.443039)
+				(xy 26.827511 62.488794) (xy 26.776 62.5) (xy 23.124 62.5) (xy 23.056961 62.480315) (xy 23.011206 62.427511)
+				(xy 23 62.376) (xy 23 56.124) (xy 23.019685 56.056961) (xy 23.072489 56.011206) (xy 23.124 56) (xy 30.776 56)
+			)
+		)
+	)
+	(zone
+		(net 0)
+		(net_name "")
+		(layer "B.Mask")
+		(uuid "8cb19dc5-abda-469d-9ce7-be1f08be97a1")
+		(hatch edge 0.5)
+		(connect_pads yes
+			(clearance 0)
+		)
+		(min_thickness 0.25)
+		(filled_areas_thickness no)
+		(fill yes
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+		)
+		(polygon
+			(pts
+				(xy 23 62.8) (xy 28.9 62.8) (xy 28.9 63.3) (xy 31 63.3) (xy 31 66.9) (xy 28 66.9) (xy 26.9 66) (xy 23 65.9)
+			)
+		)
+		(filled_polygon
+			(layer "B.Mask")
+			(island)
+			(pts
+				(xy 28.843039 62.819685) (xy 28.888794 62.872489) (xy 28.9 62.924) (xy 28.9 63.3) (xy 30.876 63.3)
+				(xy 30.943039 63.319685) (xy 30.988794 63.372489) (xy 31 63.424) (xy 31 66.776) (xy 30.980315 66.843039)
+				(xy 30.927511 66.888794) (xy 30.876 66.9) (xy 28.044263 66.9) (xy 27.977224 66.880315) (xy 27.965741 66.871971)
+				(xy 26.899999 65.999999) (xy 23.120822 65.903097) (xy 23.054309 65.881701) (xy 23.009922 65.827741)
+				(xy 23 65.779138) (xy 23 62.924) (xy 23.019685 62.856961) (xy 23.072489 62.811206) (xy 23.124 62.8)
+				(xy 28.776 62.8)
+			)
+		)
 	)
 )

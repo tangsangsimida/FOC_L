@@ -22,6 +22,11 @@
 
 /* USER CODE BEGIN 0 */
 
+char Uart_DeBug_Buffer[256];      //串口发送缓冲区
+UART_HandleTypeDef *Uart_DeBug = &huart1;
+
+
+
 /* USER CODE END 0 */
 
 UART_HandleTypeDef huart1;

@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccQioqKT.s 			page 1
+ARM GAS  /tmp/ccqKAZUS.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,7 +19,7 @@ ARM GAS  /tmp/ccQioqKT.s 			page 1
   16              		.cfi_sections	.debug_frame
   17              		.global	__aeabi_i2d
   18              		.global	__aeabi_dmul
-  19              		.global	__aeabi_d2f
+  19              		.global	__aeabi_d2uiz
   20              		.section	.text.Read_AS5600_Angle,"ax",%progbits
   21              		.align	1
   22              		.global	Read_AS5600_Angle
@@ -38,8 +38,8 @@ ARM GAS  /tmp/ccQioqKT.s 			page 1
    5:usr/main_usr.c **** #define AS5600_ADDRESS 0x36 << 1
    6:usr/main_usr.c **** #define ANGLE_REGISTER 0x0C
    7:usr/main_usr.c **** 
-   8:usr/main_usr.c **** float Read_AS5600_Angle(void) {
-  32              		.loc 1 8 31 view -0
+   8:usr/main_usr.c **** uint16_t Read_AS5600_Angle(void) {
+  32              		.loc 1 8 34 view -0
   33              		.cfi_startproc
   34              		@ args = 0, pretend = 0, frame = 8
   35              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccQioqKT.s 			page 1
   10:usr/main_usr.c ****     HAL_I2C_Mem_Read(&hi2c1, AS5600_ADDRESS, ANGLE_REGISTER, I2C_MEMADD_SIZE_8BIT, data, 2, HAL_MAX
   47              		.loc 1 10 5 is_stmt 1 view .LVU3
   48 000a 4FF0FF33 		mov	r3, #-1
-ARM GAS  /tmp/ccQioqKT.s 			page 2
+ARM GAS  /tmp/ccqKAZUS.s 			page 2
 
 
   49 000e 0293     		str	r3, [sp, #8]
@@ -69,7 +69,7 @@ ARM GAS  /tmp/ccQioqKT.s 			page 1
   54 0018 0123     		movs	r3, #1
   55 001a 0C22     		movs	r2, #12
   56 001c 6C21     		movs	r1, #108
-  57 001e 0D48     		ldr	r0, .L3
+  57 001e 0C48     		ldr	r0, .L3
   58 0020 FFF7FEFF 		bl	HAL_I2C_Mem_Read
   59              	.LVL0:
   11:usr/main_usr.c ****     uint16_t angle = (data[0] << 8) | data[1];
@@ -90,35 +90,35 @@ ARM GAS  /tmp/ccQioqKT.s 			page 1
   72              	.LVL3:
   73              		.loc 1 13 19 view .LVU10
   74 0034 0022     		movs	r2, #0
-  75 0036 084B     		ldr	r3, .L3+4
+  75 0036 074B     		ldr	r3, .L3+4
   76 0038 FFF7FEFF 		bl	__aeabi_dmul
   77              	.LVL4:
   78              		.loc 1 13 28 view .LVU11
   79 003c 0022     		movs	r2, #0
-  80 003e 074B     		ldr	r3, .L3+8
+  80 003e 064B     		ldr	r3, .L3+8
   81 0040 FFF7FEFF 		bl	__aeabi_dmul
   82              	.LVL5:
-  83 0044 FFF7FEFF 		bl	__aeabi_d2f
+  83 0044 FFF7FEFF 		bl	__aeabi_d2uiz
   84              	.LVL6:
   14:usr/main_usr.c **** }
   85              		.loc 1 14 1 view .LVU12
-  86 0048 00EE100A 		vmov	s0, r0
-  87 004c 07B0     		add	sp, sp, #28
+  86 0048 80B2     		uxth	r0, r0
+  87 004a 07B0     		add	sp, sp, #28
   88              	.LCFI2:
   89              		.cfi_def_cfa_offset 4
   90              		@ sp needed
-  91 004e 5DF804FB 		ldr	pc, [sp], #4
+  91 004c 5DF804FB 		ldr	pc, [sp], #4
   92              	.L4:
-  93 0052 00BF     		.align	2
+  93              		.align	2
   94              	.L3:
-  95 0054 00000000 		.word	hi2c1
-  96 0058 00807640 		.word	1081507840
-  97 005c 0000303F 		.word	1060110336
+  95 0050 00000000 		.word	hi2c1
+  96 0054 00807640 		.word	1081507840
+  97 0058 0000303F 		.word	1060110336
   98              		.cfi_endproc
   99              	.LFE134:
  101              		.text
  102              	.Letext0:
-ARM GAS  /tmp/ccQioqKT.s 			page 3
+ARM GAS  /tmp/ccqKAZUS.s 			page 3
 
 
  103              		.file 2 "/usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h"
@@ -127,18 +127,18 @@ ARM GAS  /tmp/ccQioqKT.s 			page 1
  106              		.file 5 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
  107              		.file 6 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h"
  108              		.file 7 "Core/Inc/i2c.h"
-ARM GAS  /tmp/ccQioqKT.s 			page 4
+ARM GAS  /tmp/ccqKAZUS.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 main_usr.c
-     /tmp/ccQioqKT.s:21     .text.Read_AS5600_Angle:0000000000000000 $t
-     /tmp/ccQioqKT.s:29     .text.Read_AS5600_Angle:0000000000000000 Read_AS5600_Angle
-     /tmp/ccQioqKT.s:95     .text.Read_AS5600_Angle:0000000000000054 $d
+     /tmp/ccqKAZUS.s:21     .text.Read_AS5600_Angle:0000000000000000 $t
+     /tmp/ccqKAZUS.s:29     .text.Read_AS5600_Angle:0000000000000000 Read_AS5600_Angle
+     /tmp/ccqKAZUS.s:95     .text.Read_AS5600_Angle:0000000000000050 $d
 
 UNDEFINED SYMBOLS
 __aeabi_i2d
 __aeabi_dmul
-__aeabi_d2f
+__aeabi_d2uiz
 HAL_I2C_Mem_Read
 hi2c1

@@ -65,7 +65,12 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c \
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c \
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c \
 Core/Src/system_stm32f4xx.c  \
-usr/main_usr.c \
+usr/as5600.c \
+usr/pid.c \
+usr/ts_foc.c \
+usr/lowpass_filter.c \
+usr/inlinecurrent.c \
+
 
 # ASM sources
 ASM_SOURCES =  \

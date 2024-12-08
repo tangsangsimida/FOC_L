@@ -26,9 +26,13 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "main_usr.h"
-#include <stdio.h>
-#include <string.h>
+
+
+#include "as5600.h"
+#include "ts_foc.h"
+#include "lowpass_filter.h"
+#include "pid.h"
+#include "inlinecurrent.h"
 
 /* USER CODE END Includes */
 
@@ -117,13 +121,10 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    HAL_Delay(50);
+    HAL_Delay(10);
     HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
-    float angle_in_degrees = Read_AS5600_Angle();
+    // Read_AS5600_Angle();   // Read the angle of the AS5600 sensor
 
-    char tx_buffer[100];
-    sprintf(tx_buffer, "Angle: %d\r\n", (int)angle_in_degrees);
-    HAL_UART_Transmit(&huart1, (uint8_t*)tx_buffer, strlen(tx_buffer), 100);
 
 
 

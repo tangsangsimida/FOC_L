@@ -30,12 +30,16 @@ extern "C" {
 
 /* USER CODE BEGIN Includes */
 
+#include <stdio.h>
+#include <string.h>
+
 /* USER CODE END Includes */
 
 extern UART_HandleTypeDef huart1;
+extern UART_HandleTypeDef * Uart_DeBug;
 
 /* USER CODE BEGIN Private defines */
-
+extern char Uart_DeBug_Buffer[256];      //串口发送缓冲区
 /* USER CODE END Private defines */
 
 void MX_USART1_UART_Init(void);

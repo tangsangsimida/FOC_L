@@ -2,7 +2,10 @@
 
 
 
-uint16_t Samp_volts[4]; // 定义数组存储 DMA 传输后的 ADC 数据
+uint16_t adc_buffer[6]; // 定义数组存储 DMA 传输后的 ADC 数据
+
+
+
 
 float _shunt_resistor = 0.01;
 float amp_gain = 50;
@@ -15,8 +18,8 @@ void DriftOffsets(Inlinecurrent_Typedef *Sensor)
 	uint16_t detect_rounds = 1000;
 	for(int i = 0; i < detect_rounds; i++)
 	{
-		Sensor->offset_ia += Samp_volts[Sensor->A]*_ADC_CONV;
-		Sensor->offset_ib += Samp_volts[Sensor->B]*_ADC_CONV;
+		Sensor->offset_ia += adc_buffer[Sensor->A]*_ADC_CONV;
+		Sensor->offset_ib += adc_buffer[Sensor->B]*_ADC_CONV;
 	}
 	
 	Sensor->offset_ia = Sensor->offset_ia / detect_rounds;
@@ -44,8 +47,8 @@ void CurrSense_Init(Inlinecurrent_Typedef *Sensor)
 /// @param Sensor 
 void Current_Update(Inlinecurrent_Typedef *Sensor)
 {
-	float tran_vol_a = (float)Samp_volts[Sensor->A]*_ADC_CONV;
-	float tran_vol_b = (float)Samp_volts[Sensor->B]*_ADC_CONV;
+	float tran_vol_a = (float)adc_buffer[Sensor->A]*_ADC_CONV;
+	float tran_vol_b = (float)adc_buffer[Sensor->B]*_ADC_CONV;
 	
 	Sensor->I_a = (tran_vol_a - Sensor->offset_ia)*Sensor->gain_a;
 	Sensor->I_b = (tran_vol_b - Sensor->offset_ib)*Sensor->gain_b;

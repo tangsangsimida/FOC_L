@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccFmsnCE.s 			page 1
+ARM GAS  /tmp/ccVugFCH.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -27,7 +27,7 @@ ARM GAS  /tmp/ccFmsnCE.s 			page 1
   24              		.fpu fpv4-sp-d16
   26              	HAL_InitTick:
   27              	.LVL0:
-  28              	.LFB134:
+  28              	.LFB220:
   29              		.file 1 "Core/Src/stm32f4xx_hal_timebase_tim.c"
    1:Core/Src/stm32f4xx_hal_timebase_tim.c **** /* USER CODE BEGIN Header */
    2:Core/Src/stm32f4xx_hal_timebase_tim.c **** /**
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccFmsnCE.s 			page 1
   27:Core/Src/stm32f4xx_hal_timebase_tim.c **** /* Private variables ---------------------------------------------------------*/
   28:Core/Src/stm32f4xx_hal_timebase_tim.c **** TIM_HandleTypeDef        htim11;
   29:Core/Src/stm32f4xx_hal_timebase_tim.c **** /* Private function prototypes -----------------------------------------------*/
-ARM GAS  /tmp/ccFmsnCE.s 			page 2
+ARM GAS  /tmp/ccVugFCH.s 			page 2
 
 
   30:Core/Src/stm32f4xx_hal_timebase_tim.c **** /* Private functions ---------------------------------------------------------*/
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccFmsnCE.s 			page 1
   62 0014 5B6C     		ldr	r3, [r3, #68]
   63 0016 03F48023 		and	r3, r3, #262144
   64 001a 0193     		str	r3, [sp, #4]
-ARM GAS  /tmp/ccFmsnCE.s 			page 3
+ARM GAS  /tmp/ccVugFCH.s 			page 3
 
 
   65              		.loc 1 51 3 view .LVU11
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccFmsnCE.s 			page 1
   72:Core/Src/stm32f4xx_hal_timebase_tim.c ****   htim11.Init.Period = (1000000U / 1000U) - 1U;
   99              		.loc 1 72 3 is_stmt 1 view .LVU24
  100              		.loc 1 72 22 is_stmt 0 view .LVU25
-ARM GAS  /tmp/ccFmsnCE.s 			page 4
+ARM GAS  /tmp/ccVugFCH.s 			page 4
 
 
  101 003c 40F2E732 		movw	r2, #999
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccFmsnCE.s 			page 1
  125              		.loc 1 102 3 is_stmt 1 view .LVU38
  103:Core/Src/stm32f4xx_hal_timebase_tim.c **** }
  126              		.loc 1 103 1 is_stmt 0 view .LVU39
-ARM GAS  /tmp/ccFmsnCE.s 			page 5
+ARM GAS  /tmp/ccVugFCH.s 			page 5
 
 
  127 0052 2046     		mov	r0, r4
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccFmsnCE.s 			page 1
   92:Core/Src/stm32f4xx_hal_timebase_tim.c ****       }
  170              		.loc 1 92 9 view .LVU51
   92:Core/Src/stm32f4xx_hal_timebase_tim.c ****       }
-ARM GAS  /tmp/ccFmsnCE.s 			page 6
+ARM GAS  /tmp/ccVugFCH.s 			page 6
 
 
  171              		.loc 1 92 20 is_stmt 0 view .LVU52
@@ -314,7 +314,7 @@ ARM GAS  /tmp/ccFmsnCE.s 			page 1
  181 0090 00480140 		.word	1073825792
  182 0094 00000000 		.word	uwTickPrio
  183              		.cfi_endproc
- 184              	.LFE134:
+ 184              	.LFE220:
  186              		.section	.text.HAL_SuspendTick,"ax",%progbits
  187              		.align	1
  188              		.global	HAL_SuspendTick
@@ -323,7 +323,7 @@ ARM GAS  /tmp/ccFmsnCE.s 			page 1
  191              		.thumb_func
  192              		.fpu fpv4-sp-d16
  194              	HAL_SuspendTick:
- 195              	.LFB135:
+ 195              	.LFB221:
  104:Core/Src/stm32f4xx_hal_timebase_tim.c **** 
  105:Core/Src/stm32f4xx_hal_timebase_tim.c **** /**
  106:Core/Src/stm32f4xx_hal_timebase_tim.c ****   * @brief  Suspend Tick increment.
@@ -354,11 +354,11 @@ ARM GAS  /tmp/ccFmsnCE.s 			page 1
  211              	.L10:
  212 0010 00000000 		.word	.LANCHOR0
  213              		.cfi_endproc
- 214              	.LFE135:
+ 214              	.LFE221:
  216              		.section	.text.HAL_ResumeTick,"ax",%progbits
  217              		.align	1
  218              		.global	HAL_ResumeTick
-ARM GAS  /tmp/ccFmsnCE.s 			page 7
+ARM GAS  /tmp/ccVugFCH.s 			page 7
 
 
  219              		.syntax unified
@@ -366,7 +366,7 @@ ARM GAS  /tmp/ccFmsnCE.s 			page 1
  221              		.thumb_func
  222              		.fpu fpv4-sp-d16
  224              	HAL_ResumeTick:
- 225              	.LFB136:
+ 225              	.LFB222:
  116:Core/Src/stm32f4xx_hal_timebase_tim.c **** 
  117:Core/Src/stm32f4xx_hal_timebase_tim.c **** /**
  118:Core/Src/stm32f4xx_hal_timebase_tim.c ****   * @brief  Resume Tick increment.
@@ -397,7 +397,7 @@ ARM GAS  /tmp/ccFmsnCE.s 			page 1
  241              	.L13:
  242 0010 00000000 		.word	.LANCHOR0
  243              		.cfi_endproc
- 244              	.LFE136:
+ 244              	.LFE222:
  246              		.global	htim11
  247              		.section	.bss.htim11,"aw",%nobits
  248              		.align	2
@@ -418,25 +418,25 @@ ARM GAS  /tmp/ccFmsnCE.s 			page 1
  261              		.file 7 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h"
  262              		.file 8 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
  263              		.file 9 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h"
-ARM GAS  /tmp/ccFmsnCE.s 			page 8
+ARM GAS  /tmp/ccVugFCH.s 			page 8
 
 
-ARM GAS  /tmp/ccFmsnCE.s 			page 9
+ARM GAS  /tmp/ccVugFCH.s 			page 9
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f4xx_hal_timebase_tim.c
-     /tmp/ccFmsnCE.s:18     .text.HAL_InitTick:0000000000000000 $t
-     /tmp/ccFmsnCE.s:26     .text.HAL_InitTick:0000000000000000 HAL_InitTick
-     /tmp/ccFmsnCE.s:178    .text.HAL_InitTick:0000000000000084 $d
-     /tmp/ccFmsnCE.s:187    .text.HAL_SuspendTick:0000000000000000 $t
-     /tmp/ccFmsnCE.s:194    .text.HAL_SuspendTick:0000000000000000 HAL_SuspendTick
-     /tmp/ccFmsnCE.s:212    .text.HAL_SuspendTick:0000000000000010 $d
-     /tmp/ccFmsnCE.s:217    .text.HAL_ResumeTick:0000000000000000 $t
-     /tmp/ccFmsnCE.s:224    .text.HAL_ResumeTick:0000000000000000 HAL_ResumeTick
-     /tmp/ccFmsnCE.s:242    .text.HAL_ResumeTick:0000000000000010 $d
-     /tmp/ccFmsnCE.s:252    .bss.htim11:0000000000000000 htim11
-     /tmp/ccFmsnCE.s:248    .bss.htim11:0000000000000000 $d
+     /tmp/ccVugFCH.s:18     .text.HAL_InitTick:0000000000000000 $t
+     /tmp/ccVugFCH.s:26     .text.HAL_InitTick:0000000000000000 HAL_InitTick
+     /tmp/ccVugFCH.s:178    .text.HAL_InitTick:0000000000000084 $d
+     /tmp/ccVugFCH.s:187    .text.HAL_SuspendTick:0000000000000000 $t
+     /tmp/ccVugFCH.s:194    .text.HAL_SuspendTick:0000000000000000 HAL_SuspendTick
+     /tmp/ccVugFCH.s:212    .text.HAL_SuspendTick:0000000000000010 $d
+     /tmp/ccVugFCH.s:217    .text.HAL_ResumeTick:0000000000000000 $t
+     /tmp/ccVugFCH.s:224    .text.HAL_ResumeTick:0000000000000000 HAL_ResumeTick
+     /tmp/ccVugFCH.s:242    .text.HAL_ResumeTick:0000000000000010 $d
+     /tmp/ccVugFCH.s:252    .bss.htim11:0000000000000000 htim11
+     /tmp/ccVugFCH.s:248    .bss.htim11:0000000000000000 $d
 
 UNDEFINED SYMBOLS
 HAL_RCC_GetClockConfig

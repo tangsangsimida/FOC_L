@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccoxxn7K.s 			page 1
+ARM GAS  /tmp/ccQLyI44.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -33,106 +33,109 @@ ARM GAS  /tmp/ccoxxn7K.s 			page 1
    2:usr/inlinecurrent.c **** 
    3:usr/inlinecurrent.c **** 
    4:usr/inlinecurrent.c **** 
-   5:usr/inlinecurrent.c **** uint16_t Samp_volts[4]; // 定义数组存储 DMA 传输后的 ADC 数据
+   5:usr/inlinecurrent.c **** uint16_t adc_buffer[6]; // 定义数组存储 DMA 传输后的 ADC 数据
    6:usr/inlinecurrent.c **** 
-   7:usr/inlinecurrent.c **** float _shunt_resistor = 0.01;
-   8:usr/inlinecurrent.c **** float amp_gain = 50;
-   9:usr/inlinecurrent.c **** float vlots_to_amps=0;
-  10:usr/inlinecurrent.c **** 
-  11:usr/inlinecurrent.c **** /// @brief 零飘检测
-  12:usr/inlinecurrent.c **** /// @param Sensor 
-  13:usr/inlinecurrent.c **** void DriftOffsets(Inlinecurrent_Typedef *Sensor)
-  14:usr/inlinecurrent.c **** {
-  30              		.loc 1 14 1 view -0
+   7:usr/inlinecurrent.c **** 
+   8:usr/inlinecurrent.c **** 
+   9:usr/inlinecurrent.c **** 
+  10:usr/inlinecurrent.c **** float _shunt_resistor = 0.01;
+  11:usr/inlinecurrent.c **** float amp_gain = 50;
+  12:usr/inlinecurrent.c **** float vlots_to_amps=0;
+  13:usr/inlinecurrent.c **** 
+  14:usr/inlinecurrent.c **** /// @brief 零飘检测
+  15:usr/inlinecurrent.c **** /// @param Sensor 
+  16:usr/inlinecurrent.c **** void DriftOffsets(Inlinecurrent_Typedef *Sensor)
+  17:usr/inlinecurrent.c **** {
+  30              		.loc 1 17 1 view -0
   31              		.cfi_startproc
   32              		@ args = 0, pretend = 0, frame = 0
   33              		@ frame_needed = 0, uses_anonymous_args = 0
   34              		@ link register save eliminated.
-  15:usr/inlinecurrent.c **** 	uint16_t detect_rounds = 1000;
-  35              		.loc 1 15 2 view .LVU1
-  16:usr/inlinecurrent.c **** 	for(int i = 0; i < detect_rounds; i++)
-  36              		.loc 1 16 2 view .LVU2
+  18:usr/inlinecurrent.c **** 	uint16_t detect_rounds = 1000;
+  35              		.loc 1 18 2 view .LVU1
+  19:usr/inlinecurrent.c **** 	for(int i = 0; i < detect_rounds; i++)
+  36              		.loc 1 19 2 view .LVU2
   37              	.LBB2:
-  38              		.loc 1 16 6 view .LVU3
-  39              		.loc 1 16 10 is_stmt 0 view .LVU4
+  38              		.loc 1 19 6 view .LVU3
+  39              		.loc 1 19 10 is_stmt 0 view .LVU4
+ARM GAS  /tmp/ccQLyI44.s 			page 2
+
+
   40 0000 0023     		movs	r3, #0
-  41              		.loc 1 16 2 view .LVU5
+  41              		.loc 1 19 2 view .LVU5
   42 0002 21E0     		b	.L2
-ARM GAS  /tmp/ccoxxn7K.s 			page 2
-
-
   43              	.LVL1:
   44              	.L3:
-  17:usr/inlinecurrent.c **** 	{
-  18:usr/inlinecurrent.c **** 		Sensor->offset_ia += Samp_volts[Sensor->A]*_ADC_CONV;
-  45              		.loc 1 18 3 is_stmt 1 discriminator 3 view .LVU6
-  46              		.loc 1 18 41 is_stmt 0 discriminator 3 view .LVU7
+  20:usr/inlinecurrent.c **** 	{
+  21:usr/inlinecurrent.c **** 		Sensor->offset_ia += adc_buffer[Sensor->A]*_ADC_CONV;
+  45              		.loc 1 21 3 is_stmt 1 discriminator 3 view .LVU6
+  46              		.loc 1 21 41 is_stmt 0 discriminator 3 view .LVU7
   47 0004 0168     		ldr	r1, [r0]
-  48              		.loc 1 18 34 discriminator 3 view .LVU8
+  48              		.loc 1 21 34 discriminator 3 view .LVU8
   49 0006 194A     		ldr	r2, .L4
   50 0008 32F81110 		ldrh	r1, [r2, r1, lsl #1]
   51 000c 07EE101A 		vmov	s14, r1	@ int
-  52              		.loc 1 18 45 discriminator 3 view .LVU9
+  52              		.loc 1 21 45 discriminator 3 view .LVU9
   53 0010 B8EEC77A 		vcvt.f32.s32	s14, s14
   54 0014 9FED166A 		vldr.32	s12, .L4+4
   55 0018 27EE067A 		vmul.f32	s14, s14, s12
-  56              		.loc 1 18 21 discriminator 3 view .LVU10
+  56              		.loc 1 21 21 discriminator 3 view .LVU10
   57 001c D0ED046A 		vldr.32	s13, [r0, #16]
   58 0020 36EE877A 		vadd.f32	s14, s13, s14
   59 0024 80ED047A 		vstr.32	s14, [r0, #16]
-  19:usr/inlinecurrent.c **** 		Sensor->offset_ib += Samp_volts[Sensor->B]*_ADC_CONV;
-  60              		.loc 1 19 3 is_stmt 1 discriminator 3 view .LVU11
-  61              		.loc 1 19 41 is_stmt 0 discriminator 3 view .LVU12
+  22:usr/inlinecurrent.c **** 		Sensor->offset_ib += adc_buffer[Sensor->B]*_ADC_CONV;
+  60              		.loc 1 22 3 is_stmt 1 discriminator 3 view .LVU11
+  61              		.loc 1 22 41 is_stmt 0 discriminator 3 view .LVU12
   62 0028 4168     		ldr	r1, [r0, #4]
-  63              		.loc 1 19 34 discriminator 3 view .LVU13
+  63              		.loc 1 22 34 discriminator 3 view .LVU13
   64 002a 32F81120 		ldrh	r2, [r2, r1, lsl #1]
   65 002e 07EE902A 		vmov	s15, r2	@ int
-  66              		.loc 1 19 45 discriminator 3 view .LVU14
+  66              		.loc 1 22 45 discriminator 3 view .LVU14
   67 0032 F8EEE77A 		vcvt.f32.s32	s15, s15
   68 0036 67EE867A 		vmul.f32	s15, s15, s12
-  69              		.loc 1 19 21 discriminator 3 view .LVU15
+  69              		.loc 1 22 21 discriminator 3 view .LVU15
   70 003a 90ED057A 		vldr.32	s14, [r0, #20]
   71 003e 77EE277A 		vadd.f32	s15, s14, s15
   72 0042 C0ED057A 		vstr.32	s15, [r0, #20]
-  16:usr/inlinecurrent.c **** 	for(int i = 0; i < detect_rounds; i++)
-  73              		.loc 1 16 36 is_stmt 1 discriminator 3 view .LVU16
-  16:usr/inlinecurrent.c **** 	for(int i = 0; i < detect_rounds; i++)
-  74              		.loc 1 16 37 is_stmt 0 discriminator 3 view .LVU17
+  19:usr/inlinecurrent.c **** 	for(int i = 0; i < detect_rounds; i++)
+  73              		.loc 1 19 36 is_stmt 1 discriminator 3 view .LVU16
+  19:usr/inlinecurrent.c **** 	for(int i = 0; i < detect_rounds; i++)
+  74              		.loc 1 19 37 is_stmt 0 discriminator 3 view .LVU17
   75 0046 0133     		adds	r3, r3, #1
   76              	.LVL2:
   77              	.L2:
-  16:usr/inlinecurrent.c **** 	for(int i = 0; i < detect_rounds; i++)
-  78              		.loc 1 16 17 is_stmt 1 discriminator 1 view .LVU18
-  16:usr/inlinecurrent.c **** 	for(int i = 0; i < detect_rounds; i++)
-  79              		.loc 1 16 2 is_stmt 0 discriminator 1 view .LVU19
+  19:usr/inlinecurrent.c **** 	for(int i = 0; i < detect_rounds; i++)
+  78              		.loc 1 19 17 is_stmt 1 discriminator 1 view .LVU18
+  19:usr/inlinecurrent.c **** 	for(int i = 0; i < detect_rounds; i++)
+  79              		.loc 1 19 2 is_stmt 0 discriminator 1 view .LVU19
   80 0048 B3F57A7F 		cmp	r3, #1000
   81 004c DADB     		blt	.L3
   82              	.LBE2:
-  20:usr/inlinecurrent.c **** 	}
-  21:usr/inlinecurrent.c **** 	
-  22:usr/inlinecurrent.c **** 	Sensor->offset_ia = Sensor->offset_ia / detect_rounds;
-  83              		.loc 1 22 2 is_stmt 1 view .LVU20
-  84              		.loc 1 22 28 is_stmt 0 view .LVU21
+  23:usr/inlinecurrent.c **** 	}
+  24:usr/inlinecurrent.c **** 	
+  25:usr/inlinecurrent.c **** 	Sensor->offset_ia = Sensor->offset_ia / detect_rounds;
+  83              		.loc 1 25 2 is_stmt 1 view .LVU20
+  84              		.loc 1 25 28 is_stmt 0 view .LVU21
   85 004e D0ED046A 		vldr.32	s13, [r0, #16]
-  86              		.loc 1 22 40 view .LVU22
+  86              		.loc 1 25 40 view .LVU22
+ARM GAS  /tmp/ccQLyI44.s 			page 3
+
+
   87 0052 DFED087A 		vldr.32	s15, .L4+8
   88 0056 86EEA77A 		vdiv.f32	s14, s13, s15
-  89              		.loc 1 22 20 view .LVU23
-ARM GAS  /tmp/ccoxxn7K.s 			page 3
-
-
+  89              		.loc 1 25 20 view .LVU23
   90 005a 80ED047A 		vstr.32	s14, [r0, #16]
-  23:usr/inlinecurrent.c **** 	Sensor->offset_ib = Sensor->offset_ib / detect_rounds;
-  91              		.loc 1 23 2 is_stmt 1 view .LVU24
-  92              		.loc 1 23 28 is_stmt 0 view .LVU25
+  26:usr/inlinecurrent.c **** 	Sensor->offset_ib = Sensor->offset_ib / detect_rounds;
+  91              		.loc 1 26 2 is_stmt 1 view .LVU24
+  92              		.loc 1 26 28 is_stmt 0 view .LVU25
   93 005e D0ED056A 		vldr.32	s13, [r0, #20]
-  94              		.loc 1 23 40 view .LVU26
+  94              		.loc 1 26 40 view .LVU26
   95 0062 86EEA77A 		vdiv.f32	s14, s13, s15
-  96              		.loc 1 23 20 view .LVU27
+  96              		.loc 1 26 20 view .LVU27
   97 0066 80ED057A 		vstr.32	s14, [r0, #20]
-  24:usr/inlinecurrent.c **** 
-  25:usr/inlinecurrent.c **** }
-  98              		.loc 1 25 1 view .LVU28
+  27:usr/inlinecurrent.c **** 
+  28:usr/inlinecurrent.c **** }
+  98              		.loc 1 28 1 view .LVU28
   99 006a 7047     		bx	lr
  100              	.L5:
  101              		.align	2
@@ -152,69 +155,69 @@ ARM GAS  /tmp/ccoxxn7K.s 			page 1
  117              	CurrSense_Init:
  118              	.LVL3:
  119              	.LFB4:
-  26:usr/inlinecurrent.c **** 
-  27:usr/inlinecurrent.c **** /// @brief 初始化电流传感器
-  28:usr/inlinecurrent.c **** /// @param Sensor 
-  29:usr/inlinecurrent.c **** void CurrSense_Init(Inlinecurrent_Typedef *Sensor)
-  30:usr/inlinecurrent.c **** {
- 120              		.loc 1 30 1 is_stmt 1 view -0
+  29:usr/inlinecurrent.c **** 
+  30:usr/inlinecurrent.c **** /// @brief 初始化电流传感器
+  31:usr/inlinecurrent.c **** /// @param Sensor 
+  32:usr/inlinecurrent.c **** void CurrSense_Init(Inlinecurrent_Typedef *Sensor)
+  33:usr/inlinecurrent.c **** {
+ 120              		.loc 1 33 1 is_stmt 1 view -0
  121              		.cfi_startproc
  122              		@ args = 0, pretend = 0, frame = 0
  123              		@ frame_needed = 0, uses_anonymous_args = 0
- 124              		.loc 1 30 1 is_stmt 0 view .LVU30
+ 124              		.loc 1 33 1 is_stmt 0 view .LVU30
  125 0000 10B5     		push	{r4, lr}
  126              	.LCFI0:
  127              		.cfi_def_cfa_offset 8
  128              		.cfi_offset 4, -8
  129              		.cfi_offset 14, -4
  130 0002 0446     		mov	r4, r0
-  31:usr/inlinecurrent.c **** 	DriftOffsets(Sensor);
- 131              		.loc 1 31 2 is_stmt 1 view .LVU31
+  34:usr/inlinecurrent.c **** 	DriftOffsets(Sensor);
+ 131              		.loc 1 34 2 is_stmt 1 view .LVU31
  132 0004 FFF7FEFF 		bl	DriftOffsets
  133              	.LVL4:
-  32:usr/inlinecurrent.c **** 	
-  33:usr/inlinecurrent.c **** 	_shunt_resistor = 0.01; 
- 134              		.loc 1 33 2 view .LVU32
- 135              		.loc 1 33 18 is_stmt 0 view .LVU33
+  35:usr/inlinecurrent.c **** 	
+  36:usr/inlinecurrent.c **** 	_shunt_resistor = 0.01; 
+ 134              		.loc 1 36 2 view .LVU32
+ARM GAS  /tmp/ccQLyI44.s 			page 4
+
+
+ 135              		.loc 1 36 18 is_stmt 0 view .LVU33
  136 0008 074B     		ldr	r3, .L8
  137 000a 084A     		ldr	r2, .L8+4
-ARM GAS  /tmp/ccoxxn7K.s 			page 4
-
-
  138 000c 1A60     		str	r2, [r3]	@ float
-  34:usr/inlinecurrent.c **** 	amp_gain = 50; 
- 139              		.loc 1 34 2 is_stmt 1 view .LVU34
- 140              		.loc 1 34 11 is_stmt 0 view .LVU35
+  37:usr/inlinecurrent.c **** 	amp_gain = 50; 
+ 139              		.loc 1 37 2 is_stmt 1 view .LVU34
+ 140              		.loc 1 37 11 is_stmt 0 view .LVU35
  141 000e 084B     		ldr	r3, .L8+8
  142 0010 084A     		ldr	r2, .L8+12
  143 0012 1A60     		str	r2, [r3]	@ float
-  35:usr/inlinecurrent.c **** 	
-  36:usr/inlinecurrent.c **** 	vlots_to_amps = 1.0f / _shunt_resistor / amp_gain;
- 144              		.loc 1 36 2 is_stmt 1 view .LVU36
- 145              		.loc 1 36 16 is_stmt 0 view .LVU37
+  38:usr/inlinecurrent.c **** 	
+  39:usr/inlinecurrent.c **** 	vlots_to_amps = 1.0f / _shunt_resistor / amp_gain;
+ 144              		.loc 1 39 2 is_stmt 1 view .LVU36
+ 145              		.loc 1 39 16 is_stmt 0 view .LVU37
  146 0014 4FF08043 		mov	r3, #1073741824
  147 0018 074A     		ldr	r2, .L8+16
  148 001a 1360     		str	r3, [r2]	@ float
-  37:usr/inlinecurrent.c **** 	
-  38:usr/inlinecurrent.c **** 	Sensor->gain_a = vlots_to_amps * -1;
- 149              		.loc 1 38 2 is_stmt 1 view .LVU38
- 150              		.loc 1 38 17 is_stmt 0 view .LVU39
+  40:usr/inlinecurrent.c **** 	
+  41:usr/inlinecurrent.c **** 	Sensor->gain_a = vlots_to_amps * -1;
+ 149              		.loc 1 41 2 is_stmt 1 view .LVU38
+ 150              		.loc 1 41 17 is_stmt 0 view .LVU39
  151 001c 4FF04042 		mov	r2, #-1073741824
  152 0020 A261     		str	r2, [r4, #24]	@ float
-  39:usr/inlinecurrent.c **** 	Sensor->gain_b = vlots_to_amps * -1;
- 153              		.loc 1 39 2 is_stmt 1 view .LVU40
- 154              		.loc 1 39 17 is_stmt 0 view .LVU41
+  42:usr/inlinecurrent.c **** 	Sensor->gain_b = vlots_to_amps * -1;
+ 153              		.loc 1 42 2 is_stmt 1 view .LVU40
+ 154              		.loc 1 42 17 is_stmt 0 view .LVU41
  155 0022 E261     		str	r2, [r4, #28]	@ float
-  40:usr/inlinecurrent.c **** 	Sensor->gain_c = vlots_to_amps;
- 156              		.loc 1 40 2 is_stmt 1 view .LVU42
- 157              		.loc 1 40 17 is_stmt 0 view .LVU43
+  43:usr/inlinecurrent.c **** 	Sensor->gain_c = vlots_to_amps;
+ 156              		.loc 1 43 2 is_stmt 1 view .LVU42
+ 157              		.loc 1 43 17 is_stmt 0 view .LVU43
  158 0024 2362     		str	r3, [r4, #32]	@ float
-  41:usr/inlinecurrent.c **** }
- 159              		.loc 1 41 1 view .LVU44
+  44:usr/inlinecurrent.c **** }
+ 159              		.loc 1 44 1 view .LVU44
  160 0026 10BD     		pop	{r4, pc}
  161              	.LVL5:
  162              	.L9:
- 163              		.loc 1 41 1 view .LVU45
+ 163              		.loc 1 44 1 view .LVU45
  164              		.align	2
  165              	.L8:
  166 0028 00000000 		.word	.LANCHOR1
@@ -234,77 +237,77 @@ ARM GAS  /tmp/ccoxxn7K.s 			page 1
  182              	Current_Update:
  183              	.LVL6:
  184              	.LFB5:
-  42:usr/inlinecurrent.c **** 
-  43:usr/inlinecurrent.c **** /// @brief 更新电流数值
-  44:usr/inlinecurrent.c **** /// @param Sensor 
-  45:usr/inlinecurrent.c **** void Current_Update(Inlinecurrent_Typedef *Sensor)
-ARM GAS  /tmp/ccoxxn7K.s 			page 5
+  45:usr/inlinecurrent.c **** 
+ARM GAS  /tmp/ccQLyI44.s 			page 5
 
 
-  46:usr/inlinecurrent.c **** {
- 185              		.loc 1 46 1 is_stmt 1 view -0
+  46:usr/inlinecurrent.c **** /// @brief 更新电流数值
+  47:usr/inlinecurrent.c **** /// @param Sensor 
+  48:usr/inlinecurrent.c **** void Current_Update(Inlinecurrent_Typedef *Sensor)
+  49:usr/inlinecurrent.c **** {
+ 185              		.loc 1 49 1 is_stmt 1 view -0
  186              		.cfi_startproc
  187              		@ args = 0, pretend = 0, frame = 0
  188              		@ frame_needed = 0, uses_anonymous_args = 0
  189              		@ link register save eliminated.
-  47:usr/inlinecurrent.c **** 	float tran_vol_a = (float)Samp_volts[Sensor->A]*_ADC_CONV;
- 190              		.loc 1 47 2 view .LVU47
- 191              		.loc 1 47 45 is_stmt 0 view .LVU48
+  50:usr/inlinecurrent.c **** 	float tran_vol_a = (float)adc_buffer[Sensor->A]*_ADC_CONV;
+ 190              		.loc 1 50 2 view .LVU47
+ 191              		.loc 1 50 45 is_stmt 0 view .LVU48
  192 0000 0268     		ldr	r2, [r0]
- 193              		.loc 1 47 38 view .LVU49
+ 193              		.loc 1 50 38 view .LVU49
  194 0002 144B     		ldr	r3, .L11
  195 0004 33F81220 		ldrh	r2, [r3, r2, lsl #1]
  196 0008 07EE102A 		vmov	s14, r2	@ int
- 197              		.loc 1 47 21 view .LVU50
+ 197              		.loc 1 50 21 view .LVU50
  198 000c B8EE477A 		vcvt.f32.u32	s14, s14
- 199              		.loc 1 47 8 view .LVU51
+ 199              		.loc 1 50 8 view .LVU51
  200 0010 DFED116A 		vldr.32	s13, .L11+4
  201 0014 27EE267A 		vmul.f32	s14, s14, s13
  202              	.LVL7:
-  48:usr/inlinecurrent.c **** 	float tran_vol_b = (float)Samp_volts[Sensor->B]*_ADC_CONV;
- 203              		.loc 1 48 2 is_stmt 1 view .LVU52
- 204              		.loc 1 48 45 is_stmt 0 view .LVU53
+  51:usr/inlinecurrent.c **** 	float tran_vol_b = (float)adc_buffer[Sensor->B]*_ADC_CONV;
+ 203              		.loc 1 51 2 is_stmt 1 view .LVU52
+ 204              		.loc 1 51 45 is_stmt 0 view .LVU53
  205 0018 4268     		ldr	r2, [r0, #4]
- 206              		.loc 1 48 38 view .LVU54
+ 206              		.loc 1 51 38 view .LVU54
  207 001a 33F81230 		ldrh	r3, [r3, r2, lsl #1]
  208 001e 07EE903A 		vmov	s15, r3	@ int
- 209              		.loc 1 48 21 view .LVU55
+ 209              		.loc 1 51 21 view .LVU55
  210 0022 F8EE677A 		vcvt.f32.u32	s15, s15
- 211              		.loc 1 48 8 view .LVU56
+ 211              		.loc 1 51 8 view .LVU56
  212 0026 67EEA67A 		vmul.f32	s15, s15, s13
  213              	.LVL8:
-  49:usr/inlinecurrent.c **** 	
-  50:usr/inlinecurrent.c **** 	Sensor->I_a = (tran_vol_a - Sensor->offset_ia)*Sensor->gain_a;
- 214              		.loc 1 50 2 is_stmt 1 view .LVU57
- 215              		.loc 1 50 36 is_stmt 0 view .LVU58
+  52:usr/inlinecurrent.c **** 	
+  53:usr/inlinecurrent.c **** 	Sensor->I_a = (tran_vol_a - Sensor->offset_ia)*Sensor->gain_a;
+ 214              		.loc 1 53 2 is_stmt 1 view .LVU57
+ 215              		.loc 1 53 36 is_stmt 0 view .LVU58
  216 002a D0ED046A 		vldr.32	s13, [r0, #16]
- 217              		.loc 1 50 28 view .LVU59
+ 217              		.loc 1 53 28 view .LVU59
  218 002e 37EE667A 		vsub.f32	s14, s14, s13
  219              	.LVL9:
- 220              		.loc 1 50 55 view .LVU60
+ 220              		.loc 1 53 55 view .LVU60
  221 0032 D0ED066A 		vldr.32	s13, [r0, #24]
- 222              		.loc 1 50 48 view .LVU61
+ 222              		.loc 1 53 48 view .LVU61
  223 0036 27EE267A 		vmul.f32	s14, s14, s13
- 224              		.loc 1 50 14 view .LVU62
+ 224              		.loc 1 53 14 view .LVU62
  225 003a 80ED027A 		vstr.32	s14, [r0, #8]
-  51:usr/inlinecurrent.c **** 	Sensor->I_b = (tran_vol_b - Sensor->offset_ib)*Sensor->gain_b;
- 226              		.loc 1 51 2 is_stmt 1 view .LVU63
- 227              		.loc 1 51 36 is_stmt 0 view .LVU64
+  54:usr/inlinecurrent.c **** 	Sensor->I_b = (tran_vol_b - Sensor->offset_ib)*Sensor->gain_b;
+ 226              		.loc 1 54 2 is_stmt 1 view .LVU63
+ 227              		.loc 1 54 36 is_stmt 0 view .LVU64
  228 003e 90ED057A 		vldr.32	s14, [r0, #20]
- 229              		.loc 1 51 28 view .LVU65
+ 229              		.loc 1 54 28 view .LVU65
  230 0042 77EEC77A 		vsub.f32	s15, s15, s14
  231              	.LVL10:
- 232              		.loc 1 51 55 view .LVU66
+ 232              		.loc 1 54 55 view .LVU66
+ARM GAS  /tmp/ccQLyI44.s 			page 6
+
+
  233 0046 90ED077A 		vldr.32	s14, [r0, #28]
- 234              		.loc 1 51 48 view .LVU67
+ 234              		.loc 1 54 48 view .LVU67
  235 004a 67EE877A 		vmul.f32	s15, s15, s14
-ARM GAS  /tmp/ccoxxn7K.s 			page 6
-
-
- 236              		.loc 1 51 14 view .LVU68
+ 236              		.loc 1 54 14 view .LVU68
  237 004e C0ED037A 		vstr.32	s15, [r0, #12]
-  52:usr/inlinecurrent.c **** }
- 238              		.loc 1 52 1 view .LVU69
+  55:usr/inlinecurrent.c **** }
+ 238              		.loc 1 55 1 view .LVU69
  239 0052 7047     		bx	lr
  240              	.L12:
  241              		.align	2
@@ -316,12 +319,13 @@ ARM GAS  /tmp/ccoxxn7K.s 			page 1
  248              		.global	vlots_to_amps
  249              		.global	amp_gain
  250              		.global	_shunt_resistor
- 251              		.global	Samp_volts
- 252              		.section	.bss.Samp_volts,"aw",%nobits
+ 251              		.global	adc_buffer
+ 252              		.section	.bss.adc_buffer,"aw",%nobits
  253              		.align	2
  254              		.set	.LANCHOR0,. + 0
- 257              	Samp_volts:
- 258 0000 00000000 		.space	8
+ 257              	adc_buffer:
+ 258 0000 00000000 		.space	12
+ 258      00000000 
  258      00000000 
  259              		.section	.bss.vlots_to_amps,"aw",%nobits
  260              		.align	2
@@ -342,27 +346,27 @@ ARM GAS  /tmp/ccoxxn7K.s 			page 1
  281              	.Letext0:
  282              		.file 2 "usr/inlinecurrent.h"
  283              		.file 3 "/usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h"
-ARM GAS  /tmp/ccoxxn7K.s 			page 7
+ARM GAS  /tmp/ccQLyI44.s 			page 7
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 inlinecurrent.c
-     /tmp/ccoxxn7K.s:18     .text.DriftOffsets:0000000000000000 $t
-     /tmp/ccoxxn7K.s:26     .text.DriftOffsets:0000000000000000 DriftOffsets
-     /tmp/ccoxxn7K.s:103    .text.DriftOffsets:000000000000006c $d
-     /tmp/ccoxxn7K.s:110    .text.CurrSense_Init:0000000000000000 $t
-     /tmp/ccoxxn7K.s:117    .text.CurrSense_Init:0000000000000000 CurrSense_Init
-     /tmp/ccoxxn7K.s:166    .text.CurrSense_Init:0000000000000028 $d
-     /tmp/ccoxxn7K.s:175    .text.Current_Update:0000000000000000 $t
-     /tmp/ccoxxn7K.s:182    .text.Current_Update:0000000000000000 Current_Update
-     /tmp/ccoxxn7K.s:243    .text.Current_Update:0000000000000054 $d
-     /tmp/ccoxxn7K.s:264    .bss.vlots_to_amps:0000000000000000 vlots_to_amps
-     /tmp/ccoxxn7K.s:278    .data.amp_gain:0000000000000000 amp_gain
-     /tmp/ccoxxn7K.s:271    .data._shunt_resistor:0000000000000000 _shunt_resistor
-     /tmp/ccoxxn7K.s:257    .bss.Samp_volts:0000000000000000 Samp_volts
-     /tmp/ccoxxn7K.s:253    .bss.Samp_volts:0000000000000000 $d
-     /tmp/ccoxxn7K.s:260    .bss.vlots_to_amps:0000000000000000 $d
-     /tmp/ccoxxn7K.s:267    .data._shunt_resistor:0000000000000000 $d
-     /tmp/ccoxxn7K.s:274    .data.amp_gain:0000000000000000 $d
+     /tmp/ccQLyI44.s:18     .text.DriftOffsets:0000000000000000 $t
+     /tmp/ccQLyI44.s:26     .text.DriftOffsets:0000000000000000 DriftOffsets
+     /tmp/ccQLyI44.s:103    .text.DriftOffsets:000000000000006c $d
+     /tmp/ccQLyI44.s:110    .text.CurrSense_Init:0000000000000000 $t
+     /tmp/ccQLyI44.s:117    .text.CurrSense_Init:0000000000000000 CurrSense_Init
+     /tmp/ccQLyI44.s:166    .text.CurrSense_Init:0000000000000028 $d
+     /tmp/ccQLyI44.s:175    .text.Current_Update:0000000000000000 $t
+     /tmp/ccQLyI44.s:182    .text.Current_Update:0000000000000000 Current_Update
+     /tmp/ccQLyI44.s:243    .text.Current_Update:0000000000000054 $d
+     /tmp/ccQLyI44.s:264    .bss.vlots_to_amps:0000000000000000 vlots_to_amps
+     /tmp/ccQLyI44.s:278    .data.amp_gain:0000000000000000 amp_gain
+     /tmp/ccQLyI44.s:271    .data._shunt_resistor:0000000000000000 _shunt_resistor
+     /tmp/ccQLyI44.s:257    .bss.adc_buffer:0000000000000000 adc_buffer
+     /tmp/ccQLyI44.s:253    .bss.adc_buffer:0000000000000000 $d
+     /tmp/ccQLyI44.s:260    .bss.vlots_to_amps:0000000000000000 $d
+     /tmp/ccQLyI44.s:267    .data._shunt_resistor:0000000000000000 $d
+     /tmp/ccQLyI44.s:274    .data.amp_gain:0000000000000000 $d
 
 NO UNDEFINED SYMBOLS

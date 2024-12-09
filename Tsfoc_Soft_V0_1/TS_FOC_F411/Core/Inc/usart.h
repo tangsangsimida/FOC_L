@@ -36,7 +36,6 @@ extern "C" {
 /* USER CODE END Includes */
 
 extern UART_HandleTypeDef huart1;
-extern UART_HandleTypeDef * Uart_DeBug;
 
 /* USER CODE BEGIN Private defines */
 extern char Uart_DeBug_Buffer[256];      //串口发送缓冲区

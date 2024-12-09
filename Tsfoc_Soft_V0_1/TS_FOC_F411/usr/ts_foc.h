@@ -7,7 +7,7 @@
 #include "pid.h"
 #include "lowpass_filter.h"
 #include "inlinecurrent.h"
-
+#include "tim.h"
 
 
 //需要配置的参数：

@@ -20,7 +20,10 @@ typedef struct INLINECURRENT
 
 }Inlinecurrent_Typedef;
 
-extern uint16_t Samp_volts[4]; // 存储 DMA 传输后的 ADC 数据
+
+
+
+extern uint16_t adc_buffer[6]; // 存储 DMA 传输后的 ADC 数据
 
 
 

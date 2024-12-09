@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccTrbNEn.s 			page 1
+ARM GAS  /tmp/ccE4E6td.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -17,11 +17,264 @@ ARM GAS  /tmp/ccTrbNEn.s 			page 1
   14              		.text
   15              	.Ltext0:
   16              		.cfi_sections	.debug_frame
-  17              	.Letext0:
-ARM GAS  /tmp/ccTrbNEn.s 			page 2
+  17              		.section	.text.Motor1_Set_Compare1,"ax",%progbits
+  18              		.align	1
+  19              		.weak	Motor1_Set_Compare1
+  20              		.arch armv7e-m
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  24              		.fpu fpv4-sp-d16
+  26              	Motor1_Set_Compare1:
+  27              	.LVL0:
+  28              	.LFB223:
+  29              		.file 1 "usr/ts_foc.c"
+   1:usr/ts_foc.c  **** #include "ts_foc.h"
+   2:usr/ts_foc.c  **** 
+   3:usr/ts_foc.c  **** 
+   4:usr/ts_foc.c  **** 
+   5:usr/ts_foc.c  **** 
+   6:usr/ts_foc.c  **** 
+   7:usr/ts_foc.c  **** 
+   8:usr/ts_foc.c  **** 
+   9:usr/ts_foc.c  **** 
+  10:usr/ts_foc.c  **** /// @brief 设置电机1通道1pwm输出占空比
+  11:usr/ts_foc.c  **** /// @param compare 占空比值
+  12:usr/ts_foc.c  **** void __attribute__((weak)) Motor1_Set_Compare1(uint32_t compare) 
+  13:usr/ts_foc.c  **** {
+  30              		.loc 1 13 1 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		@ link register save eliminated.
+  14:usr/ts_foc.c  ****     __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_1, compare);
+  35              		.loc 1 14 5 view .LVU1
+  36 0000 014B     		ldr	r3, .L2
+  37 0002 1B68     		ldr	r3, [r3]
+  38 0004 5863     		str	r0, [r3, #52]
+  15:usr/ts_foc.c  **** }
+  39              		.loc 1 15 1 is_stmt 0 view .LVU2
+  40 0006 7047     		bx	lr
+  41              	.L3:
+  42              		.align	2
+  43              	.L2:
+ARM GAS  /tmp/ccE4E6td.s 			page 2
+
+
+  44 0008 00000000 		.word	htim2
+  45              		.cfi_endproc
+  46              	.LFE223:
+  48              		.section	.text.Motor1_Set_Compare2,"ax",%progbits
+  49              		.align	1
+  50              		.weak	Motor1_Set_Compare2
+  51              		.syntax unified
+  52              		.thumb
+  53              		.thumb_func
+  54              		.fpu fpv4-sp-d16
+  56              	Motor1_Set_Compare2:
+  57              	.LVL1:
+  58              	.LFB224:
+  16:usr/ts_foc.c  **** 
+  17:usr/ts_foc.c  **** /// @brief 设置电机1通道2pwm输出占空比
+  18:usr/ts_foc.c  **** /// @param compare 占空比值
+  19:usr/ts_foc.c  **** void __attribute__((weak)) Motor1_Set_Compare2(uint32_t compare) 
+  20:usr/ts_foc.c  **** {
+  59              		.loc 1 20 1 is_stmt 1 view -0
+  60              		.cfi_startproc
+  61              		@ args = 0, pretend = 0, frame = 0
+  62              		@ frame_needed = 0, uses_anonymous_args = 0
+  63              		@ link register save eliminated.
+  21:usr/ts_foc.c  ****     __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_3, compare);
+  64              		.loc 1 21 5 view .LVU4
+  65 0000 014B     		ldr	r3, .L5
+  66 0002 1B68     		ldr	r3, [r3]
+  67 0004 D863     		str	r0, [r3, #60]
+  22:usr/ts_foc.c  **** }
+  68              		.loc 1 22 1 is_stmt 0 view .LVU5
+  69 0006 7047     		bx	lr
+  70              	.L6:
+  71              		.align	2
+  72              	.L5:
+  73 0008 00000000 		.word	htim2
+  74              		.cfi_endproc
+  75              	.LFE224:
+  77              		.section	.text.Motor1_Set_Compare3,"ax",%progbits
+  78              		.align	1
+  79              		.weak	Motor1_Set_Compare3
+  80              		.syntax unified
+  81              		.thumb
+  82              		.thumb_func
+  83              		.fpu fpv4-sp-d16
+  85              	Motor1_Set_Compare3:
+  86              	.LVL2:
+  87              	.LFB225:
+  23:usr/ts_foc.c  **** 
+  24:usr/ts_foc.c  **** /// @brief 设置电机1通道3pwm输出占空比
+  25:usr/ts_foc.c  **** /// @param compare 占空比值
+  26:usr/ts_foc.c  **** void __attribute__((weak)) Motor1_Set_Compare3(uint32_t compare) 
+  27:usr/ts_foc.c  **** {
+  88              		.loc 1 27 1 is_stmt 1 view -0
+  89              		.cfi_startproc
+  90              		@ args = 0, pretend = 0, frame = 0
+  91              		@ frame_needed = 0, uses_anonymous_args = 0
+  92              		@ link register save eliminated.
+ARM GAS  /tmp/ccE4E6td.s 			page 3
+
+
+  28:usr/ts_foc.c  ****     __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_1, compare);
+  93              		.loc 1 28 5 view .LVU7
+  94 0000 014B     		ldr	r3, .L8
+  95 0002 1B68     		ldr	r3, [r3]
+  96 0004 5863     		str	r0, [r3, #52]
+  29:usr/ts_foc.c  **** }
+  97              		.loc 1 29 1 is_stmt 0 view .LVU8
+  98 0006 7047     		bx	lr
+  99              	.L9:
+ 100              		.align	2
+ 101              	.L8:
+ 102 0008 00000000 		.word	htim3
+ 103              		.cfi_endproc
+ 104              	.LFE225:
+ 106              		.section	.text.Motor2_Set_Compare1,"ax",%progbits
+ 107              		.align	1
+ 108              		.weak	Motor2_Set_Compare1
+ 109              		.syntax unified
+ 110              		.thumb
+ 111              		.thumb_func
+ 112              		.fpu fpv4-sp-d16
+ 114              	Motor2_Set_Compare1:
+ 115              	.LVL3:
+ 116              	.LFB226:
+  30:usr/ts_foc.c  **** 
+  31:usr/ts_foc.c  **** /// @brief 设置电机2通道1pwm输出占空比
+  32:usr/ts_foc.c  **** /// @param compare 占空比值
+  33:usr/ts_foc.c  **** void __attribute__((weak)) Motor2_Set_Compare1(uint32_t compare) 
+  34:usr/ts_foc.c  **** {
+ 117              		.loc 1 34 1 is_stmt 1 view -0
+ 118              		.cfi_startproc
+ 119              		@ args = 0, pretend = 0, frame = 0
+ 120              		@ frame_needed = 0, uses_anonymous_args = 0
+ 121              		@ link register save eliminated.
+  35:usr/ts_foc.c  ****     __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_2, compare);
+ 122              		.loc 1 35 5 view .LVU10
+ 123 0000 014B     		ldr	r3, .L11
+ 124 0002 1B68     		ldr	r3, [r3]
+ 125 0004 9863     		str	r0, [r3, #56]
+  36:usr/ts_foc.c  **** }
+ 126              		.loc 1 36 1 is_stmt 0 view .LVU11
+ 127 0006 7047     		bx	lr
+ 128              	.L12:
+ 129              		.align	2
+ 130              	.L11:
+ 131 0008 00000000 		.word	htim3
+ 132              		.cfi_endproc
+ 133              	.LFE226:
+ 135              		.section	.text.Motor2_Set_Compare2,"ax",%progbits
+ 136              		.align	1
+ 137              		.weak	Motor2_Set_Compare2
+ 138              		.syntax unified
+ 139              		.thumb
+ 140              		.thumb_func
+ 141              		.fpu fpv4-sp-d16
+ 143              	Motor2_Set_Compare2:
+ 144              	.LVL4:
+ARM GAS  /tmp/ccE4E6td.s 			page 4
+
+
+ 145              	.LFB227:
+  37:usr/ts_foc.c  **** 
+  38:usr/ts_foc.c  **** /// @brief 设置电机2通道2pwm输出占空比
+  39:usr/ts_foc.c  **** /// @param compare 占空比值
+  40:usr/ts_foc.c  **** void __attribute__((weak)) Motor2_Set_Compare2(uint32_t compare) 
+  41:usr/ts_foc.c  **** {
+ 146              		.loc 1 41 1 is_stmt 1 view -0
+ 147              		.cfi_startproc
+ 148              		@ args = 0, pretend = 0, frame = 0
+ 149              		@ frame_needed = 0, uses_anonymous_args = 0
+ 150              		@ link register save eliminated.
+  42:usr/ts_foc.c  ****     __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_3, compare);
+ 151              		.loc 1 42 5 view .LVU13
+ 152 0000 014B     		ldr	r3, .L14
+ 153 0002 1B68     		ldr	r3, [r3]
+ 154 0004 D863     		str	r0, [r3, #60]
+  43:usr/ts_foc.c  **** }
+ 155              		.loc 1 43 1 is_stmt 0 view .LVU14
+ 156 0006 7047     		bx	lr
+ 157              	.L15:
+ 158              		.align	2
+ 159              	.L14:
+ 160 0008 00000000 		.word	htim3
+ 161              		.cfi_endproc
+ 162              	.LFE227:
+ 164              		.section	.text.Motor2_Set_Compare3,"ax",%progbits
+ 165              		.align	1
+ 166              		.weak	Motor2_Set_Compare3
+ 167              		.syntax unified
+ 168              		.thumb
+ 169              		.thumb_func
+ 170              		.fpu fpv4-sp-d16
+ 172              	Motor2_Set_Compare3:
+ 173              	.LVL5:
+ 174              	.LFB228:
+  44:usr/ts_foc.c  **** 
+  45:usr/ts_foc.c  **** /// @brief 设置电机2通道3pwm输出占空比
+  46:usr/ts_foc.c  **** /// @param compare 占空比值
+  47:usr/ts_foc.c  **** void __attribute__((weak)) Motor2_Set_Compare3(uint32_t compare) 
+  48:usr/ts_foc.c  **** {
+ 175              		.loc 1 48 1 is_stmt 1 view -0
+ 176              		.cfi_startproc
+ 177              		@ args = 0, pretend = 0, frame = 0
+ 178              		@ frame_needed = 0, uses_anonymous_args = 0
+ 179              		@ link register save eliminated.
+  49:usr/ts_foc.c  ****     __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_4, compare);
+ 180              		.loc 1 49 5 view .LVU16
+ 181 0000 014B     		ldr	r3, .L17
+ 182 0002 1B68     		ldr	r3, [r3]
+ 183 0004 1864     		str	r0, [r3, #64]
+  50:usr/ts_foc.c  **** }
+ 184              		.loc 1 50 1 is_stmt 0 view .LVU17
+ 185 0006 7047     		bx	lr
+ 186              	.L18:
+ 187              		.align	2
+ 188              	.L17:
+ 189 0008 00000000 		.word	htim3
+ARM GAS  /tmp/ccE4E6td.s 			page 5
+
+
+ 190              		.cfi_endproc
+ 191              	.LFE228:
+ 193              		.text
+ 194              	.Letext0:
+ 195              		.file 2 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h"
+ 196              		.file 3 "/usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h"
+ 197              		.file 4 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
+ 198              		.file 5 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
+ 199              		.file 6 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h"
+ 200              		.file 7 "Core/Inc/tim.h"
+ARM GAS  /tmp/ccE4E6td.s 			page 6
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 ts_foc.c
+     /tmp/ccE4E6td.s:18     .text.Motor1_Set_Compare1:0000000000000000 $t
+     /tmp/ccE4E6td.s:26     .text.Motor1_Set_Compare1:0000000000000000 Motor1_Set_Compare1
+     /tmp/ccE4E6td.s:44     .text.Motor1_Set_Compare1:0000000000000008 $d
+     /tmp/ccE4E6td.s:49     .text.Motor1_Set_Compare2:0000000000000000 $t
+     /tmp/ccE4E6td.s:56     .text.Motor1_Set_Compare2:0000000000000000 Motor1_Set_Compare2
+     /tmp/ccE4E6td.s:73     .text.Motor1_Set_Compare2:0000000000000008 $d
+     /tmp/ccE4E6td.s:78     .text.Motor1_Set_Compare3:0000000000000000 $t
+     /tmp/ccE4E6td.s:85     .text.Motor1_Set_Compare3:0000000000000000 Motor1_Set_Compare3
+     /tmp/ccE4E6td.s:102    .text.Motor1_Set_Compare3:0000000000000008 $d
+     /tmp/ccE4E6td.s:107    .text.Motor2_Set_Compare1:0000000000000000 $t
+     /tmp/ccE4E6td.s:114    .text.Motor2_Set_Compare1:0000000000000000 Motor2_Set_Compare1
+     /tmp/ccE4E6td.s:131    .text.Motor2_Set_Compare1:0000000000000008 $d
+     /tmp/ccE4E6td.s:136    .text.Motor2_Set_Compare2:0000000000000000 $t
+     /tmp/ccE4E6td.s:143    .text.Motor2_Set_Compare2:0000000000000000 Motor2_Set_Compare2
+     /tmp/ccE4E6td.s:160    .text.Motor2_Set_Compare2:0000000000000008 $d
+     /tmp/ccE4E6td.s:165    .text.Motor2_Set_Compare3:0000000000000000 $t
+     /tmp/ccE4E6td.s:172    .text.Motor2_Set_Compare3:0000000000000000 Motor2_Set_Compare3
+     /tmp/ccE4E6td.s:189    .text.Motor2_Set_Compare3:0000000000000008 $d
 
-NO UNDEFINED SYMBOLS
+UNDEFINED SYMBOLS
+htim2
+htim3

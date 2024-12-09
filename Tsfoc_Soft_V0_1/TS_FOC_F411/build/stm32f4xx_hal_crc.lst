@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccZ53ngN.s 			page 1
+ARM GAS  /tmp/ccjwirXg.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -27,7 +27,7 @@ ARM GAS  /tmp/ccZ53ngN.s 			page 1
   24              		.fpu fpv4-sp-d16
   26              	HAL_CRC_MspInit:
   27              	.LVL0:
-  28              	.LFB136:
+  28              	.LFB222:
   29              		.file 1 "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c"
    1:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c **** /**
    2:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c ****   ******************************************************************************
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccZ53ngN.s 			page 1
   27:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c ****     [..]
   28:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c ****          (+) Enable CRC AHB clock using __HAL_RCC_CRC_CLK_ENABLE();
   29:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c ****          (+) Initialize CRC calculator
-ARM GAS  /tmp/ccZ53ngN.s 			page 2
+ARM GAS  /tmp/ccjwirXg.s 			page 2
 
 
   30:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c ****              (++) specify generating polynomial (peripheral default or non-default one)
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccZ53ngN.s 			page 1
   84:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c **** 
   85:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c **** @endverbatim
   86:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c ****   * @{
-ARM GAS  /tmp/ccZ53ngN.s 			page 3
+ARM GAS  /tmp/ccjwirXg.s 			page 3
 
 
   87:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c ****   */
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccZ53ngN.s 			page 1
  141:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c ****   }
  142:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c **** 
  143:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c ****   /* Change CRC peripheral state */
-ARM GAS  /tmp/ccZ53ngN.s 			page 4
+ARM GAS  /tmp/ccjwirXg.s 			page 4
 
 
  144:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c ****   hcrc->State = HAL_CRC_STATE_BUSY;
@@ -225,7 +225,7 @@ ARM GAS  /tmp/ccZ53ngN.s 			page 1
   36              		.loc 1 178 1 is_stmt 0 view .LVU2
   37 0000 7047     		bx	lr
   38              		.cfi_endproc
-  39              	.LFE136:
+  39              	.LFE222:
   41              		.section	.text.HAL_CRC_Init,"ax",%progbits
   42              		.align	1
   43              		.global	HAL_CRC_Init
@@ -235,10 +235,10 @@ ARM GAS  /tmp/ccZ53ngN.s 			page 1
   47              		.fpu fpv4-sp-d16
   49              	HAL_CRC_Init:
   50              	.LVL1:
-  51              	.LFB134:
+  51              	.LFB220:
   96:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c ****   /* Check the CRC handle allocation */
   52              		.loc 1 96 1 is_stmt 1 view -0
-ARM GAS  /tmp/ccZ53ngN.s 			page 5
+ARM GAS  /tmp/ccjwirXg.s 			page 5
 
 
   53              		.cfi_startproc
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccZ53ngN.s 			page 1
   91              		.loc 1 111 5 is_stmt 0 view .LVU19
   92 0018 F7E7     		b	.L4
   93              	.LVL5:
-ARM GAS  /tmp/ccZ53ngN.s 			page 6
+ARM GAS  /tmp/ccjwirXg.s 			page 6
 
 
   94              	.L5:
@@ -314,7 +314,7 @@ ARM GAS  /tmp/ccZ53ngN.s 			page 1
  102              		.loc 1 119 1 view .LVU21
  103 001c 7047     		bx	lr
  104              		.cfi_endproc
- 105              	.LFE134:
+ 105              	.LFE220:
  107              		.section	.text.HAL_CRC_MspDeInit,"ax",%progbits
  108              		.align	1
  109              		.weak	HAL_CRC_MspDeInit
@@ -324,7 +324,7 @@ ARM GAS  /tmp/ccZ53ngN.s 			page 1
  113              		.fpu fpv4-sp-d16
  115              	HAL_CRC_MspDeInit:
  116              	.LVL7:
- 117              	.LFB137:
+ 117              	.LFB223:
  179:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c **** 
  180:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c **** /**
  181:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c ****   * @brief  DeInitialize the CRC MSP.
@@ -349,7 +349,7 @@ ARM GAS  /tmp/ccZ53ngN.s 			page 1
  124              		.loc 1 193 1 is_stmt 0 view .LVU24
  125 0000 7047     		bx	lr
  126              		.cfi_endproc
- 127              	.LFE137:
+ 127              	.LFE223:
  129              		.section	.text.HAL_CRC_DeInit,"ax",%progbits
  130              		.align	1
  131              		.global	HAL_CRC_DeInit
@@ -358,11 +358,11 @@ ARM GAS  /tmp/ccZ53ngN.s 			page 1
  134              		.thumb_func
  135              		.fpu fpv4-sp-d16
  137              	HAL_CRC_DeInit:
-ARM GAS  /tmp/ccZ53ngN.s 			page 7
+ARM GAS  /tmp/ccjwirXg.s 			page 7
 
 
  138              	.LVL8:
- 139              	.LFB135:
+ 139              	.LFB221:
  127:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c ****   /* Check the CRC handle allocation */
  140              		.loc 1 127 1 is_stmt 1 view -0
  141              		.cfi_startproc
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccZ53ngN.s 			page 1
  153:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c **** 
  179              		.loc 1 153 3 view .LVU38
  180 0022 2846     		mov	r0, r5
-ARM GAS  /tmp/ccZ53ngN.s 			page 8
+ARM GAS  /tmp/ccjwirXg.s 			page 8
 
 
  181 0024 FFF7FEFF 		bl	HAL_CRC_MspDeInit
@@ -460,7 +460,7 @@ ARM GAS  /tmp/ccZ53ngN.s 			page 1
  207              		.loc 1 163 1 view .LVU48
  208 0032 7047     		bx	lr
  209              		.cfi_endproc
- 210              	.LFE135:
+ 210              	.LFE221:
  212              		.section	.text.HAL_CRC_Accumulate,"ax",%progbits
  213              		.align	1
  214              		.global	HAL_CRC_Accumulate
@@ -470,7 +470,7 @@ ARM GAS  /tmp/ccZ53ngN.s 			page 1
  218              		.fpu fpv4-sp-d16
  220              	HAL_CRC_Accumulate:
  221              	.LVL13:
- 222              	.LFB138:
+ 222              	.LFB224:
  194:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c **** 
  195:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c **** /**
  196:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c ****   * @}
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccZ53ngN.s 			page 1
  198:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c **** 
  199:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c **** /** @defgroup CRC_Exported_Functions_Group2 Peripheral Control functions
  200:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c ****   *  @brief    management functions.
-ARM GAS  /tmp/ccZ53ngN.s 			page 9
+ARM GAS  /tmp/ccjwirXg.s 			page 9
 
 
  201:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c ****   *
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccZ53ngN.s 			page 1
  241              	.LVL16:
  242              		.loc 1 236 20 is_stmt 1 view .LVU57
  243              		.loc 1 236 3 is_stmt 0 view .LVU58
-ARM GAS  /tmp/ccZ53ngN.s 			page 10
+ARM GAS  /tmp/ccjwirXg.s 			page 10
 
 
  244 0008 9342     		cmp	r3, r2
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccZ53ngN.s 			page 1
  282              		.cfi_def_cfa_offset 0
  283 002e 7047     		bx	lr
  284              	.LVL21:
-ARM GAS  /tmp/ccZ53ngN.s 			page 11
+ARM GAS  /tmp/ccjwirXg.s 			page 11
 
 
  285              	.L26:
@@ -623,7 +623,7 @@ ARM GAS  /tmp/ccZ53ngN.s 			page 1
  298              		.loc 1 247 1 is_stmt 0 view .LVU79
  299 003a 7047     		bx	lr
  300              		.cfi_endproc
- 301              	.LFE138:
+ 301              	.LFE224:
  303              		.section	.text.HAL_CRC_Calculate,"ax",%progbits
  304              		.align	1
  305              		.global	HAL_CRC_Calculate
@@ -633,7 +633,7 @@ ARM GAS  /tmp/ccZ53ngN.s 			page 1
  309              		.fpu fpv4-sp-d16
  311              	HAL_CRC_Calculate:
  312              	.LVL24:
- 313              	.LFB139:
+ 313              	.LFB225:
  248:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c **** 
  249:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c **** /**
  250:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c ****   * @brief  Compute the 32-bit CRC value of a 32-bit data buffer
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccZ53ngN.s 			page 1
  322              		.loc 1 260 3 view .LVU83
  323              	.LVL25:
  261:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c **** 
-ARM GAS  /tmp/ccZ53ngN.s 			page 12
+ARM GAS  /tmp/ccjwirXg.s 			page 12
 
 
  262:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c ****   /* Change CRC peripheral state */
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccZ53ngN.s 			page 1
  362 0026 F7D3     		bcc	.L29
  273:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c ****   }
  274:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c ****   temp = hcrc->Instance->DR;
-ARM GAS  /tmp/ccZ53ngN.s 			page 13
+ARM GAS  /tmp/ccjwirXg.s 			page 13
 
 
  363              		.loc 1 274 3 is_stmt 1 view .LVU99
@@ -769,7 +769,7 @@ ARM GAS  /tmp/ccZ53ngN.s 			page 1
  395              		.loc 1 281 1 is_stmt 0 view .LVU112
  396 0046 7047     		bx	lr
  397              		.cfi_endproc
- 398              	.LFE139:
+ 398              	.LFE225:
  400              		.section	.text.HAL_CRC_GetState,"ax",%progbits
  401              		.align	1
  402              		.global	HAL_CRC_GetState
@@ -778,11 +778,11 @@ ARM GAS  /tmp/ccZ53ngN.s 			page 1
  405              		.thumb_func
  406              		.fpu fpv4-sp-d16
  408              	HAL_CRC_GetState:
-ARM GAS  /tmp/ccZ53ngN.s 			page 14
+ARM GAS  /tmp/ccjwirXg.s 			page 14
 
 
  409              	.LVL35:
- 410              	.LFB140:
+ 410              	.LFB226:
  282:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c **** 
  283:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c **** /**
  284:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c ****   * @}
@@ -824,31 +824,31 @@ ARM GAS  /tmp/ccZ53ngN.s 			page 1
  420              		.loc 1 310 1 view .LVU116
  421 0002 7047     		bx	lr
  422              		.cfi_endproc
- 423              	.LFE140:
+ 423              	.LFE226:
  425              		.text
  426              	.Letext0:
  427              		.file 2 "/usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h"
  428              		.file 3 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h"
  429              		.file 4 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
  430              		.file 5 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h"
-ARM GAS  /tmp/ccZ53ngN.s 			page 15
+ARM GAS  /tmp/ccjwirXg.s 			page 15
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f4xx_hal_crc.c
-     /tmp/ccZ53ngN.s:18     .text.HAL_CRC_MspInit:0000000000000000 $t
-     /tmp/ccZ53ngN.s:26     .text.HAL_CRC_MspInit:0000000000000000 HAL_CRC_MspInit
-     /tmp/ccZ53ngN.s:42     .text.HAL_CRC_Init:0000000000000000 $t
-     /tmp/ccZ53ngN.s:49     .text.HAL_CRC_Init:0000000000000000 HAL_CRC_Init
-     /tmp/ccZ53ngN.s:108    .text.HAL_CRC_MspDeInit:0000000000000000 $t
-     /tmp/ccZ53ngN.s:115    .text.HAL_CRC_MspDeInit:0000000000000000 HAL_CRC_MspDeInit
-     /tmp/ccZ53ngN.s:130    .text.HAL_CRC_DeInit:0000000000000000 $t
-     /tmp/ccZ53ngN.s:137    .text.HAL_CRC_DeInit:0000000000000000 HAL_CRC_DeInit
-     /tmp/ccZ53ngN.s:213    .text.HAL_CRC_Accumulate:0000000000000000 $t
-     /tmp/ccZ53ngN.s:220    .text.HAL_CRC_Accumulate:0000000000000000 HAL_CRC_Accumulate
-     /tmp/ccZ53ngN.s:304    .text.HAL_CRC_Calculate:0000000000000000 $t
-     /tmp/ccZ53ngN.s:311    .text.HAL_CRC_Calculate:0000000000000000 HAL_CRC_Calculate
-     /tmp/ccZ53ngN.s:401    .text.HAL_CRC_GetState:0000000000000000 $t
-     /tmp/ccZ53ngN.s:408    .text.HAL_CRC_GetState:0000000000000000 HAL_CRC_GetState
+     /tmp/ccjwirXg.s:18     .text.HAL_CRC_MspInit:0000000000000000 $t
+     /tmp/ccjwirXg.s:26     .text.HAL_CRC_MspInit:0000000000000000 HAL_CRC_MspInit
+     /tmp/ccjwirXg.s:42     .text.HAL_CRC_Init:0000000000000000 $t
+     /tmp/ccjwirXg.s:49     .text.HAL_CRC_Init:0000000000000000 HAL_CRC_Init
+     /tmp/ccjwirXg.s:108    .text.HAL_CRC_MspDeInit:0000000000000000 $t
+     /tmp/ccjwirXg.s:115    .text.HAL_CRC_MspDeInit:0000000000000000 HAL_CRC_MspDeInit
+     /tmp/ccjwirXg.s:130    .text.HAL_CRC_DeInit:0000000000000000 $t
+     /tmp/ccjwirXg.s:137    .text.HAL_CRC_DeInit:0000000000000000 HAL_CRC_DeInit
+     /tmp/ccjwirXg.s:213    .text.HAL_CRC_Accumulate:0000000000000000 $t
+     /tmp/ccjwirXg.s:220    .text.HAL_CRC_Accumulate:0000000000000000 HAL_CRC_Accumulate
+     /tmp/ccjwirXg.s:304    .text.HAL_CRC_Calculate:0000000000000000 $t
+     /tmp/ccjwirXg.s:311    .text.HAL_CRC_Calculate:0000000000000000 HAL_CRC_Calculate
+     /tmp/ccjwirXg.s:401    .text.HAL_CRC_GetState:0000000000000000 $t
+     /tmp/ccjwirXg.s:408    .text.HAL_CRC_GetState:0000000000000000 HAL_CRC_GetState
 
 NO UNDEFINED SYMBOLS

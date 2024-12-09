@@ -18,9 +18,11 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "adc.h"
 #include "crc.h"
 #include "dma.h"
 #include "i2c.h"
+#include "tim.h"
 #include "usart.h"
 #include "gpio.h"
 
@@ -111,9 +113,22 @@ int main(void)
   MX_DMA_Init();
   MX_CRC_Init();
   MX_I2C1_Init();
-  MX_I2C2_Init();
   MX_USART1_UART_Init();
+  MX_ADC1_Init();
+  MX_TIM3_Init();
+  MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
+
+  HAL_ADC_Start_DMA(&hadc1, (uint32_t*)&adc_buffer, 6); // Start ADC DMA
+  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1); // Start PWM timer
+  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_3); // Start PWM timer  
+  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1); // Start PWM timer
+  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2); // Start PWM timer
+  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_3); // Start PWM timer
+  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_4); // Start PWM timer
+
+
+
 
   /* USER CODE END 2 */
 
@@ -128,8 +143,7 @@ int main(void)
 
 
 
-
-    /* USER CODE END WHILE */ 
+    /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
   }

@@ -1,8 +1,8 @@
 #ifndef __LOWPASS_FILTER_H__
 #define __LOWPASS_FILTER_H__
 
-
-
+#include "user_api.h"
+#include "main.h"
 
 
 typedef struct LOWPASS_FILTER

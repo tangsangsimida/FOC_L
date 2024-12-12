@@ -10,6 +10,13 @@
 #include "tim.h"
 
 
+
+
+
+
+
+
+
 //需要配置的参数：
 //1. PWM定时器与通道
 //2. 电机：电源电压，极对数，方向，设置PWM函数接口，传感器对象各个参数
@@ -19,7 +26,7 @@ typedef struct MOTOR
     uint8_t Motor_ID;
     int PP,DIR;                                 //极对数,旋转方向
     float voltage_power_supply;                 //电源电压
-    float zero_electric_angle;                  //零角度
+    int zero_electric_angle;                  //零角度
     float Ualpha,Ubeta,Ua,Ub,Uc;
 
     As5600_Sensor_Typedef * As5600_Sensor;      //角度传感器对象
@@ -42,8 +49,11 @@ typedef struct MOTOR
 
 }Motor;
 
-
-
+float _normalizeRadian(float angle);
+float _normalizeAngle(float angle);
+float _electricalAngle(Motor* motor);
+void setPwm(Motor* motor, float Ua, float Ub, float Uc);
+void setTorque(Motor* motor,float Uq,float angle_el);
 
 
 

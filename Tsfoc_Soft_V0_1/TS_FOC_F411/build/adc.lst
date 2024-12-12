@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccyfw4Y0.s 			page 1
+ARM GAS  /tmp/ccHzBTJC.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccyfw4Y0.s 			page 1
   28:Core/Src/adc.c **** DMA_HandleTypeDef hdma_adc1;
   29:Core/Src/adc.c **** 
   30:Core/Src/adc.c **** /* ADC1 init function */
-ARM GAS  /tmp/ccyfw4Y0.s 			page 2
+ARM GAS  /tmp/ccHzBTJC.s 			page 2
 
 
   31:Core/Src/adc.c **** void MX_ADC1_Init(void)
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccyfw4Y0.s 			page 1
   63              		.loc 1 50 3 is_stmt 1 view .LVU11
   64              		.loc 1 50 33 is_stmt 0 view .LVU12
   65 0020 0276     		strb	r2, [r0, #24]
-ARM GAS  /tmp/ccyfw4Y0.s 			page 3
+ARM GAS  /tmp/ccHzBTJC.s 			page 3
 
 
   51:Core/Src/adc.c ****   hadc1.Init.DiscontinuousConvMode = DISABLE;
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccyfw4Y0.s 			page 1
  104 0046 0193     		str	r3, [sp, #4]
   67:Core/Src/adc.c ****   sConfig.SamplingTime = ADC_SAMPLETIME_15CYCLES;
  105              		.loc 1 67 3 is_stmt 1 view .LVU34
-ARM GAS  /tmp/ccyfw4Y0.s 			page 4
+ARM GAS  /tmp/ccHzBTJC.s 			page 4
 
 
  106              		.loc 1 67 24 is_stmt 0 view .LVU35
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccyfw4Y0.s 			page 1
  142 006e 0193     		str	r3, [sp, #4]
   86:Core/Src/adc.c ****   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
  143              		.loc 1 86 3 is_stmt 1 view .LVU50
-ARM GAS  /tmp/ccyfw4Y0.s 			page 5
+ARM GAS  /tmp/ccHzBTJC.s 			page 5
 
 
  144              		.loc 1 86 7 is_stmt 0 view .LVU51
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccyfw4Y0.s 			page 1
  180 0096 1248     		ldr	r0, .L17
  181 0098 FFF7FEFF 		bl	HAL_ADC_ConfigChannel
  182              	.LVL5:
-ARM GAS  /tmp/ccyfw4Y0.s 			page 6
+ARM GAS  /tmp/ccHzBTJC.s 			page 6
 
 
  183              		.loc 1 104 6 view .LVU66
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccyfw4Y0.s 			page 1
  218              		.loc 1 70 5 view .LVU76
  219 00bc FFF7FEFF 		bl	Error_Handler
  220              	.LVL8:
-ARM GAS  /tmp/ccyfw4Y0.s 			page 7
+ARM GAS  /tmp/ccHzBTJC.s 			page 7
 
 
  221 00c0 C9E7     		b	.L3
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccyfw4Y0.s 			page 1
  269              		.loc 1 124 1 is_stmt 1 view -0
  270              		.cfi_startproc
  271              		@ args = 0, pretend = 0, frame = 32
-ARM GAS  /tmp/ccyfw4Y0.s 			page 8
+ARM GAS  /tmp/ccHzBTJC.s 			page 8
 
 
  272              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -476,9 +476,9 @@ ARM GAS  /tmp/ccyfw4Y0.s 			page 1
  148:Core/Src/adc.c **** 
  149:Core/Src/adc.c ****     /* ADC1 DMA Init */
  150:Core/Src/adc.c ****     /* ADC1 Init */
- 151:Core/Src/adc.c ****     hdma_adc1.Instance = DMA2_Stream0;
+ 151:Core/Src/adc.c ****     hdma_adc1.Instance = DMA2_Stream4;
  152:Core/Src/adc.c ****     hdma_adc1.Init.Channel = DMA_CHANNEL_0;
-ARM GAS  /tmp/ccyfw4Y0.s 			page 9
+ARM GAS  /tmp/ccHzBTJC.s 			page 9
 
 
  153:Core/Src/adc.c ****     hdma_adc1.Init.Direction = DMA_PERIPH_TO_MEMORY;
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccyfw4Y0.s 			page 1
  133:Core/Src/adc.c **** 
  328              		.loc 1 133 5 view .LVU96
  329 003c 019A     		ldr	r2, [sp, #4]
-ARM GAS  /tmp/ccyfw4Y0.s 			page 10
+ARM GAS  /tmp/ccHzBTJC.s 			page 10
 
 
  330              	.LBE2:
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccyfw4Y0.s 			page 1
  368 0066 0360     		str	r3, [r0]
  152:Core/Src/adc.c ****     hdma_adc1.Init.Direction = DMA_PERIPH_TO_MEMORY;
  369              		.loc 1 152 5 is_stmt 1 view .LVU113
-ARM GAS  /tmp/ccyfw4Y0.s 			page 11
+ARM GAS  /tmp/ccHzBTJC.s 			page 11
 
 
  152:Core/Src/adc.c ****     hdma_adc1.Init.Direction = DMA_PERIPH_TO_MEMORY;
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccyfw4Y0.s 			page 1
  404              		.loc 1 161 8 view .LVU133
  405 008e 58B9     		cbnz	r0, .L24
  406              	.L21:
-ARM GAS  /tmp/ccyfw4Y0.s 			page 12
+ARM GAS  /tmp/ccHzBTJC.s 			page 12
 
 
  166:Core/Src/adc.c **** 
@@ -697,7 +697,7 @@ ARM GAS  /tmp/ccyfw4Y0.s 			page 1
  433              	.L25:
  434 00b0 00000240 		.word	1073872896
  435 00b4 00000000 		.word	.LANCHOR1
- 436 00b8 10640240 		.word	1073898512
+ 436 00b8 70640240 		.word	1073898608
  437              		.cfi_endproc
  438              	.LFE221:
  440              		.section	.text.HAL_ADC_MspDeInit,"ax",%progbits
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccyfw4Y0.s 			page 1
  453              		@ args = 0, pretend = 0, frame = 0
  454              		@ frame_needed = 0, uses_anonymous_args = 0
  179:Core/Src/adc.c **** 
-ARM GAS  /tmp/ccyfw4Y0.s 			page 13
+ARM GAS  /tmp/ccHzBTJC.s 			page 13
 
 
  180:Core/Src/adc.c ****   if(adcHandle->Instance==ADC1)
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccyfw4Y0.s 			page 1
  201:Core/Src/adc.c ****     /* ADC1 interrupt Deinit */
  202:Core/Src/adc.c ****     HAL_NVIC_DisableIRQ(ADC_IRQn);
  487              		.loc 1 202 5 view .LVU151
-ARM GAS  /tmp/ccyfw4Y0.s 			page 14
+ARM GAS  /tmp/ccHzBTJC.s 			page 14
 
 
  488 0026 1220     		movs	r0, #18
@@ -833,24 +833,24 @@ ARM GAS  /tmp/ccyfw4Y0.s 			page 1
  529              		.file 9 "Core/Inc/adc.h"
  530              		.file 10 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h"
  531              		.file 11 "Core/Inc/main.h"
-ARM GAS  /tmp/ccyfw4Y0.s 			page 15
+ARM GAS  /tmp/ccHzBTJC.s 			page 15
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 adc.c
-     /tmp/ccyfw4Y0.s:18     .text.MX_ADC1_Init:0000000000000000 $t
-     /tmp/ccyfw4Y0.s:26     .text.MX_ADC1_Init:0000000000000000 MX_ADC1_Init
-     /tmp/ccyfw4Y0.s:251    .text.MX_ADC1_Init:00000000000000e0 $d
-     /tmp/ccyfw4Y0.s:259    .text.HAL_ADC_MspInit:0000000000000000 $t
-     /tmp/ccyfw4Y0.s:266    .text.HAL_ADC_MspInit:0000000000000000 HAL_ADC_MspInit
-     /tmp/ccyfw4Y0.s:434    .text.HAL_ADC_MspInit:00000000000000b0 $d
-     /tmp/ccyfw4Y0.s:441    .text.HAL_ADC_MspDeInit:0000000000000000 $t
-     /tmp/ccyfw4Y0.s:448    .text.HAL_ADC_MspDeInit:0000000000000000 HAL_ADC_MspDeInit
-     /tmp/ccyfw4Y0.s:498    .text.HAL_ADC_MspDeInit:0000000000000030 $d
-     /tmp/ccyfw4Y0.s:518    .bss.hdma_adc1:0000000000000000 hdma_adc1
-     /tmp/ccyfw4Y0.s:511    .bss.hadc1:0000000000000000 hadc1
-     /tmp/ccyfw4Y0.s:507    .bss.hadc1:0000000000000000 $d
-     /tmp/ccyfw4Y0.s:514    .bss.hdma_adc1:0000000000000000 $d
+     /tmp/ccHzBTJC.s:18     .text.MX_ADC1_Init:0000000000000000 $t
+     /tmp/ccHzBTJC.s:26     .text.MX_ADC1_Init:0000000000000000 MX_ADC1_Init
+     /tmp/ccHzBTJC.s:251    .text.MX_ADC1_Init:00000000000000e0 $d
+     /tmp/ccHzBTJC.s:259    .text.HAL_ADC_MspInit:0000000000000000 $t
+     /tmp/ccHzBTJC.s:266    .text.HAL_ADC_MspInit:0000000000000000 HAL_ADC_MspInit
+     /tmp/ccHzBTJC.s:434    .text.HAL_ADC_MspInit:00000000000000b0 $d
+     /tmp/ccHzBTJC.s:441    .text.HAL_ADC_MspDeInit:0000000000000000 $t
+     /tmp/ccHzBTJC.s:448    .text.HAL_ADC_MspDeInit:0000000000000000 HAL_ADC_MspDeInit
+     /tmp/ccHzBTJC.s:498    .text.HAL_ADC_MspDeInit:0000000000000030 $d
+     /tmp/ccHzBTJC.s:518    .bss.hdma_adc1:0000000000000000 hdma_adc1
+     /tmp/ccHzBTJC.s:511    .bss.hadc1:0000000000000000 hadc1
+     /tmp/ccHzBTJC.s:507    .bss.hadc1:0000000000000000 $d
+     /tmp/ccHzBTJC.s:514    .bss.hdma_adc1:0000000000000000 $d
 
 UNDEFINED SYMBOLS
 HAL_ADC_Init

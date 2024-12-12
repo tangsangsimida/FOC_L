@@ -6,15 +6,15 @@
 #include "stdio.h"
 #include "stdlib.h"
 #include "stddef.h"
+#include "math.h"
 
 
-
-// //常用数学关键字定义
-// #define PI       3.14159265359f
-// #define _2PI     6.28318530718f
-// #define _3PI_2 4.71238898038f
-// #define _1_SQRT3 0.57735026919f
-// #define _2_SQRT3 1.15470053838f
+//常用数学关键字定义
+#define PI       3.14159265359f
+#define _2PI     6.28318530718f
+#define _3PI_2 4.71238898038f
+#define _1_SQRT3 0.57735026919f
+#define _2_SQRT3 1.15470053838f
 
 
 //高效宏函数

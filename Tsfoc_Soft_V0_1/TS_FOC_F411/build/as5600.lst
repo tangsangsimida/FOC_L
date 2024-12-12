@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cckiEKWH.s 			page 1
+ARM GAS  /tmp/ccPapHYJ.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,133 +19,210 @@ ARM GAS  /tmp/cckiEKWH.s 			page 1
   16              		.cfi_sections	.debug_frame
   17              		.global	__aeabi_i2d
   18              		.global	__aeabi_dmul
-  19              		.global	__aeabi_d2uiz
-  20              		.section	.text.Read_AS5600_Angle,"ax",%progbits
-  21              		.align	1
-  22              		.global	Read_AS5600_Angle
-  23              		.arch armv7e-m
-  24              		.syntax unified
-  25              		.thumb
-  26              		.thumb_func
-  27              		.fpu fpv4-sp-d16
-  29              	Read_AS5600_Angle:
-  30              	.LFB223:
-  31              		.file 1 "usr/as5600.c"
+  19              		.global	__aeabi_d2f
+  20              		.section	.rodata.Read_AS5600_Angle.str1.4,"aMS",%progbits,1
+  21              		.align	2
+  22              	.LC0:
+  23 0000 416E676C 		.ascii	"Angle: %d  \015\012\000"
+  23      653A2025 
+  23      6420200D 
+  23      0A00
+  24              		.section	.text.Read_AS5600_Angle,"ax",%progbits
+  25              		.align	1
+  26              		.global	Read_AS5600_Angle
+  27              		.arch armv7e-m
+  28              		.syntax unified
+  29              		.thumb
+  30              		.thumb_func
+  31              		.fpu fpv4-sp-d16
+  33              	Read_AS5600_Angle:
+  34              	.LVL0:
+  35              	.LFB223:
+  36              		.file 1 "usr/as5600.c"
    1:usr/as5600.c  **** #include "as5600.h"
    2:usr/as5600.c  **** 
    3:usr/as5600.c  **** 
    4:usr/as5600.c  **** 
    5:usr/as5600.c  **** 
-   6:usr/as5600.c  **** uint16_t Read_AS5600_Angle(void) {
-  32              		.loc 1 6 34 view -0
-  33              		.cfi_startproc
-  34              		@ args = 0, pretend = 0, frame = 8
-  35              		@ frame_needed = 0, uses_anonymous_args = 0
-  36 0000 00B5     		push	{lr}
-  37              	.LCFI0:
-  38              		.cfi_def_cfa_offset 4
-  39              		.cfi_offset 14, -4
-  40 0002 87B0     		sub	sp, sp, #28
-  41              	.LCFI1:
-  42              		.cfi_def_cfa_offset 32
-   7:usr/as5600.c  ****     uint8_t data[2] = {0, 0};
-  43              		.loc 1 7 5 view .LVU1
-  44              		.loc 1 7 13 is_stmt 0 view .LVU2
-  45 0004 0023     		movs	r3, #0
-  46 0006 ADF81430 		strh	r3, [sp, #20]	@ movhi
-   8:usr/as5600.c  ****     HAL_I2C_Mem_Read(&hi2c1, AS5600_ADDRESS, ANGLE_REGISTER, I2C_MEMADD_SIZE_8BIT, data, 2, HAL_MAX
-  47              		.loc 1 8 5 is_stmt 1 view .LVU3
-  48 000a 4FF0FF33 		mov	r3, #-1
-  49 000e 0293     		str	r3, [sp, #8]
-  50 0010 0223     		movs	r3, #2
-ARM GAS  /tmp/cckiEKWH.s 			page 2
+   6:usr/as5600.c  **** uint16_t Read_AS5600_Angle(As5600_Sensor_Typedef* as5600) 
+   7:usr/as5600.c  **** {
+  37              		.loc 1 7 1 view -0
+  38              		.cfi_startproc
+  39              		@ args = 0, pretend = 0, frame = 8
+  40              		@ frame_needed = 0, uses_anonymous_args = 0
+  41              		.loc 1 7 1 is_stmt 0 view .LVU1
+  42 0000 70B5     		push	{r4, r5, r6, lr}
+  43              	.LCFI0:
+  44              		.cfi_def_cfa_offset 16
+  45              		.cfi_offset 4, -16
+  46              		.cfi_offset 5, -12
+  47              		.cfi_offset 6, -8
+  48              		.cfi_offset 14, -4
+ARM GAS  /tmp/ccPapHYJ.s 			page 2
 
 
-  51 0012 0193     		str	r3, [sp, #4]
-  52 0014 05AB     		add	r3, sp, #20
-  53 0016 0093     		str	r3, [sp]
-  54 0018 0123     		movs	r3, #1
-  55 001a 0C22     		movs	r2, #12
-  56 001c 6C21     		movs	r1, #108
-  57 001e 0C48     		ldr	r0, .L3
-  58 0020 FFF7FEFF 		bl	HAL_I2C_Mem_Read
-  59              	.LVL0:
-   9:usr/as5600.c  ****     uint16_t angle = (data[0] << 8) | data[1];
-  60              		.loc 1 9 5 view .LVU4
-  61              		.loc 1 9 27 is_stmt 0 view .LVU5
-  62 0024 9DF81400 		ldrb	r0, [sp, #20]	@ zero_extendqisi2
-  63              		.loc 1 9 43 view .LVU6
-  64 0028 9DF81530 		ldrb	r3, [sp, #21]	@ zero_extendqisi2
-  65              	.LVL1:
-  10:usr/as5600.c  ****     angle = (angle * 360.0) / 4096.0;
-  66              		.loc 1 10 5 is_stmt 1 view .LVU7
-  67              		.loc 1 10 20 is_stmt 0 view .LVU8
-  68 002c 43EA0020 		orr	r0, r3, r0, lsl #8
-  69              	.LVL2:
-  70              		.loc 1 10 20 view .LVU9
-  71 0030 FFF7FEFF 		bl	__aeabi_i2d
-  72              	.LVL3:
-  73              		.loc 1 10 20 view .LVU10
-  74 0034 0022     		movs	r2, #0
-  75 0036 074B     		ldr	r3, .L3+4
-  76 0038 FFF7FEFF 		bl	__aeabi_dmul
-  77              	.LVL4:
-  78              		.loc 1 10 29 view .LVU11
-  79 003c 0022     		movs	r2, #0
-  80 003e 064B     		ldr	r3, .L3+8
-  81 0040 FFF7FEFF 		bl	__aeabi_dmul
-  82              	.LVL5:
-  83              		.loc 1 10 11 view .LVU12
-  84 0044 FFF7FEFF 		bl	__aeabi_d2uiz
-  85              	.LVL6:
-  11:usr/as5600.c  **** #ifdef AS5600_DEBUG
-  12:usr/as5600.c  ****     sprintf(Uart_DeBug_Buffer, "Angle: %d  \r\n", (int)angle);
-  13:usr/as5600.c  ****     HAL_UART_Transmit(Uart_DeBug, (uint8_t*)Uart_DeBug_Buffer, strlen(Uart_DeBug_Buffer), 100);
-  14:usr/as5600.c  ****     memset(Uart_DeBug_Buffer, 0, sizeof(Uart_DeBug_Buffer));
-  15:usr/as5600.c  **** #endif
-  16:usr/as5600.c  **** 
-  17:usr/as5600.c  ****     return angle;
-  86              		.loc 1 17 5 is_stmt 1 view .LVU13
-  18:usr/as5600.c  **** }
-  87              		.loc 1 18 1 is_stmt 0 view .LVU14
-  88 0048 80B2     		uxth	r0, r0
-  89              		.loc 1 18 1 view .LVU15
-  90 004a 07B0     		add	sp, sp, #28
-  91              	.LCFI2:
-  92              		.cfi_def_cfa_offset 4
-  93              		@ sp needed
-  94 004c 5DF804FB 		ldr	pc, [sp], #4
-  95              	.L4:
-  96              		.align	2
-  97              	.L3:
-ARM GAS  /tmp/cckiEKWH.s 			page 3
+  49 0002 86B0     		sub	sp, sp, #24
+  50              	.LCFI1:
+  51              		.cfi_def_cfa_offset 40
+  52 0004 0446     		mov	r4, r0
+   8:usr/as5600.c  ****     uint8_t data[2] = {0, 0};
+  53              		.loc 1 8 5 is_stmt 1 view .LVU2
+  54              		.loc 1 8 13 is_stmt 0 view .LVU3
+  55 0006 0026     		movs	r6, #0
+  56 0008 ADF81460 		strh	r6, [sp, #20]	@ movhi
+   9:usr/as5600.c  ****     HAL_I2C_Mem_Read(&hi2c1, AS5600_ADDRESS, ANGLE_REGISTER, I2C_MEMADD_SIZE_8BIT, data, 2, HAL_MAX
+  57              		.loc 1 9 5 is_stmt 1 view .LVU4
+  58 000c 4FF0FF33 		mov	r3, #-1
+  59 0010 0293     		str	r3, [sp, #8]
+  60 0012 0223     		movs	r3, #2
+  61 0014 0193     		str	r3, [sp, #4]
+  62 0016 05AB     		add	r3, sp, #20
+  63 0018 0093     		str	r3, [sp]
+  64 001a 0123     		movs	r3, #1
+  65 001c 0C22     		movs	r2, #12
+  66 001e 6C21     		movs	r1, #108
+  67 0020 1E48     		ldr	r0, .L3
+  68              	.LVL1:
+  69              		.loc 1 9 5 is_stmt 0 view .LVU5
+  70 0022 FFF7FEFF 		bl	HAL_I2C_Mem_Read
+  71              	.LVL2:
+  10:usr/as5600.c  ****     uint16_t angle = (data[0] << 8) | data[1];
+  72              		.loc 1 10 5 is_stmt 1 view .LVU6
+  73              		.loc 1 10 27 is_stmt 0 view .LVU7
+  74 0026 9DF81400 		ldrb	r0, [sp, #20]	@ zero_extendqisi2
+  75              		.loc 1 10 43 view .LVU8
+  76 002a 9DF81530 		ldrb	r3, [sp, #21]	@ zero_extendqisi2
+  77              	.LVL3:
+  11:usr/as5600.c  ****     as5600->Angle = (angle * 360.0) / 4096.0;
+  78              		.loc 1 11 5 is_stmt 1 view .LVU9
+  79              		.loc 1 11 28 is_stmt 0 view .LVU10
+  80 002e 43EA0020 		orr	r0, r3, r0, lsl #8
+  81              	.LVL4:
+  82              		.loc 1 11 28 view .LVU11
+  83 0032 FFF7FEFF 		bl	__aeabi_i2d
+  84              	.LVL5:
+  85              		.loc 1 11 28 view .LVU12
+  86 0036 0022     		movs	r2, #0
+  87 0038 194B     		ldr	r3, .L3+4
+  88 003a FFF7FEFF 		bl	__aeabi_dmul
+  89              	.LVL6:
+  90              		.loc 1 11 37 view .LVU13
+  91 003e 0022     		movs	r2, #0
+  92 0040 184B     		ldr	r3, .L3+8
+  93 0042 FFF7FEFF 		bl	__aeabi_dmul
+  94              	.LVL7:
+  95 0046 FFF7FEFF 		bl	__aeabi_d2f
+  96              	.LVL8:
+  97 004a 07EE900A 		vmov	s15, r0
+  98              		.loc 1 11 19 view .LVU14
+  99 004e 6060     		str	r0, [r4, #4]	@ float
+  12:usr/as5600.c  **** #ifdef AS5600_DEBUG
+  13:usr/as5600.c  ****     sprintf(Uart_DeBug_Buffer, "Angle: %d  \r\n", (int)as5600->Angle);
+ARM GAS  /tmp/ccPapHYJ.s 			page 3
 
 
-  98 0050 00000000 		.word	hi2c1
-  99 0054 00807640 		.word	1081507840
- 100 0058 0000303F 		.word	1060110336
- 101              		.cfi_endproc
- 102              	.LFE223:
- 104              		.text
- 105              	.Letext0:
- 106              		.file 2 "/usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h"
- 107              		.file 3 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h"
- 108              		.file 4 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
- 109              		.file 5 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
- 110              		.file 6 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h"
- 111              		.file 7 "Core/Inc/i2c.h"
-ARM GAS  /tmp/cckiEKWH.s 			page 4
+ 100              		.loc 1 13 5 is_stmt 1 view .LVU15
+ 101 0050 154D     		ldr	r5, .L3+12
+ 102 0052 FDEEE77A 		vcvt.s32.f32	s15, s15
+ 103 0056 17EE902A 		vmov	r2, s15	@ int
+ 104 005a 1449     		ldr	r1, .L3+16
+ 105 005c 2846     		mov	r0, r5
+ 106 005e FFF7FEFF 		bl	sprintf
+ 107              	.LVL9:
+  14:usr/as5600.c  ****     HAL_UART_Transmit(Uart_DeBug, (uint8_t*)Uart_DeBug_Buffer, strlen(Uart_DeBug_Buffer), 100);
+ 108              		.loc 1 14 5 view .LVU16
+ 109              		.loc 1 14 64 is_stmt 0 view .LVU17
+ 110 0062 2846     		mov	r0, r5
+ 111 0064 FFF7FEFF 		bl	strlen
+ 112              	.LVL10:
+ 113              		.loc 1 14 5 view .LVU18
+ 114 0068 6423     		movs	r3, #100
+ 115 006a 82B2     		uxth	r2, r0
+ 116 006c 2946     		mov	r1, r5
+ 117 006e 1048     		ldr	r0, .L3+20
+ 118 0070 0068     		ldr	r0, [r0]
+ 119 0072 FFF7FEFF 		bl	HAL_UART_Transmit
+ 120              	.LVL11:
+  15:usr/as5600.c  ****     memset(Uart_DeBug_Buffer, 0, sizeof(Uart_DeBug_Buffer));
+ 121              		.loc 1 15 5 is_stmt 1 view .LVU19
+ 122 0076 4FF48072 		mov	r2, #256
+ 123 007a 3146     		mov	r1, r6
+ 124 007c 2846     		mov	r0, r5
+ 125 007e FFF7FEFF 		bl	memset
+ 126              	.LVL12:
+  16:usr/as5600.c  **** #endif
+  17:usr/as5600.c  ****     as5600->angle_ts = HAL_GetTick();
+ 127              		.loc 1 17 5 view .LVU20
+ 128              		.loc 1 17 24 is_stmt 0 view .LVU21
+ 129 0082 FFF7FEFF 		bl	HAL_GetTick
+ 130              	.LVL13:
+ 131              		.loc 1 17 22 view .LVU22
+ 132 0086 A060     		str	r0, [r4, #8]
+  18:usr/as5600.c  ****     return as5600->Angle;
+ 133              		.loc 1 18 5 is_stmt 1 view .LVU23
+ 134              		.loc 1 18 18 is_stmt 0 view .LVU24
+ 135 0088 D4ED017A 		vldr.32	s15, [r4, #4]
+ 136 008c FCEEE77A 		vcvt.u32.f32	s15, s15
+  19:usr/as5600.c  **** }
+ 137              		.loc 1 19 1 view .LVU25
+ 138 0090 17EE903A 		vmov	r3, s15	@ int
+ 139 0094 98B2     		uxth	r0, r3
+ 140 0096 06B0     		add	sp, sp, #24
+ 141              	.LCFI2:
+ 142              		.cfi_def_cfa_offset 16
+ 143              		@ sp needed
+ 144 0098 70BD     		pop	{r4, r5, r6, pc}
+ 145              	.LVL14:
+ 146              	.L4:
+ 147              		.loc 1 19 1 view .LVU26
+ 148 009a 00BF     		.align	2
+ 149              	.L3:
+ 150 009c 00000000 		.word	hi2c1
+ARM GAS  /tmp/ccPapHYJ.s 			page 4
+
+
+ 151 00a0 00807640 		.word	1081507840
+ 152 00a4 0000303F 		.word	1060110336
+ 153 00a8 00000000 		.word	Uart_DeBug_Buffer
+ 154 00ac 00000000 		.word	.LC0
+ 155 00b0 00000000 		.word	Uart_DeBug
+ 156              		.cfi_endproc
+ 157              	.LFE223:
+ 159              		.text
+ 160              	.Letext0:
+ 161              		.file 2 "/usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h"
+ 162              		.file 3 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h"
+ 163              		.file 4 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
+ 164              		.file 5 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
+ 165              		.file 6 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h"
+ 166              		.file 7 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h"
+ 167              		.file 8 "Core/Inc/i2c.h"
+ 168              		.file 9 "Core/Inc/usart.h"
+ 169              		.file 10 "usr/as5600.h"
+ 170              		.file 11 "/usr/include/newlib/stdio.h"
+ 171              		.file 12 "/usr/include/newlib/string.h"
+ 172              		.file 13 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
+ 173              		.file 14 "<built-in>"
+ARM GAS  /tmp/ccPapHYJ.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 as5600.c
-     /tmp/cckiEKWH.s:21     .text.Read_AS5600_Angle:0000000000000000 $t
-     /tmp/cckiEKWH.s:29     .text.Read_AS5600_Angle:0000000000000000 Read_AS5600_Angle
-     /tmp/cckiEKWH.s:98     .text.Read_AS5600_Angle:0000000000000050 $d
+     /tmp/ccPapHYJ.s:21     .rodata.Read_AS5600_Angle.str1.4:0000000000000000 $d
+     /tmp/ccPapHYJ.s:25     .text.Read_AS5600_Angle:0000000000000000 $t
+     /tmp/ccPapHYJ.s:33     .text.Read_AS5600_Angle:0000000000000000 Read_AS5600_Angle
+     /tmp/ccPapHYJ.s:150    .text.Read_AS5600_Angle:000000000000009c $d
 
 UNDEFINED SYMBOLS
 __aeabi_i2d
 __aeabi_dmul
-__aeabi_d2uiz
+__aeabi_d2f
 HAL_I2C_Mem_Read
+sprintf
+strlen
+HAL_UART_Transmit
+memset
+HAL_GetTick
 hi2c1
+Uart_DeBug_Buffer
+Uart_DeBug

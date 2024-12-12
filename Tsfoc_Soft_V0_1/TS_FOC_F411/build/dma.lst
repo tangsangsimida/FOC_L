@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccs6cEJ2.s 			page 1
+ARM GAS  /tmp/ccmGV6kU.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccs6cEJ2.s 			page 1
   28:Core/Src/dma.c **** /*----------------------------------------------------------------------------*/
   29:Core/Src/dma.c **** /* Configure DMA                                                              */
   30:Core/Src/dma.c **** /*----------------------------------------------------------------------------*/
-ARM GAS  /tmp/ccs6cEJ2.s 			page 2
+ARM GAS  /tmp/ccmGV6kU.s 			page 2
 
 
   31:Core/Src/dma.c **** 
@@ -92,7 +92,7 @@ ARM GAS  /tmp/ccs6cEJ2.s 			page 1
   44 0004 0024     		movs	r4, #0
   45 0006 0094     		str	r4, [sp]
   46              		.loc 1 43 3 view .LVU3
-  47 0008 164B     		ldr	r3, .L3
+  47 0008 1A4B     		ldr	r3, .L3
   48 000a 1A6B     		ldr	r2, [r3, #48]
   49 000c 42F48002 		orr	r2, r2, #4194304
   50 0010 1A63     		str	r2, [r3, #48]
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccs6cEJ2.s 			page 1
   69 0028 03F40013 		and	r3, r3, #2097152
   70 002c 0193     		str	r3, [sp, #4]
   71              		.loc 1 44 3 view .LVU11
-ARM GAS  /tmp/ccs6cEJ2.s 			page 3
+ARM GAS  /tmp/ccmGV6kU.s 			page 3
 
 
   72 002e 019B     		ldr	r3, [sp, #4]
@@ -165,36 +165,49 @@ ARM GAS  /tmp/ccs6cEJ2.s 			page 1
  102 005a 3A20     		movs	r0, #58
  103 005c FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
  104              	.LVL5:
-  56:Core/Src/dma.c **** 
-  57:Core/Src/dma.c **** }
- 105              		.loc 1 57 1 is_stmt 0 view .LVU19
- 106 0060 02B0     		add	sp, sp, #8
- 107              	.LCFI2:
- 108              		.cfi_def_cfa_offset 8
- 109              		@ sp needed
- 110 0062 10BD     		pop	{r4, pc}
- 111              	.L4:
- 112              		.align	2
- 113              	.L3:
- 114 0064 00380240 		.word	1073887232
- 115              		.cfi_endproc
-ARM GAS  /tmp/ccs6cEJ2.s 			page 4
+  56:Core/Src/dma.c ****   /* DMA2_Stream4_IRQn interrupt configuration */
+  57:Core/Src/dma.c ****   HAL_NVIC_SetPriority(DMA2_Stream4_IRQn, 0, 0);
+ 105              		.loc 1 57 3 view .LVU19
+ 106 0060 2246     		mov	r2, r4
+ 107 0062 2146     		mov	r1, r4
+ 108 0064 3C20     		movs	r0, #60
+ 109 0066 FFF7FEFF 		bl	HAL_NVIC_SetPriority
+ 110              	.LVL6:
+  58:Core/Src/dma.c ****   HAL_NVIC_EnableIRQ(DMA2_Stream4_IRQn);
+ 111              		.loc 1 58 3 view .LVU20
+ 112 006a 3C20     		movs	r0, #60
+ 113 006c FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
+ 114              	.LVL7:
+ARM GAS  /tmp/ccmGV6kU.s 			page 4
 
 
- 116              	.LFE220:
- 118              		.text
- 119              	.Letext0:
- 120              		.file 2 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h"
- 121              		.file 3 "/usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h"
- 122              		.file 4 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h"
-ARM GAS  /tmp/ccs6cEJ2.s 			page 5
+  59:Core/Src/dma.c **** 
+  60:Core/Src/dma.c **** }
+ 115              		.loc 1 60 1 is_stmt 0 view .LVU21
+ 116 0070 02B0     		add	sp, sp, #8
+ 117              	.LCFI2:
+ 118              		.cfi_def_cfa_offset 8
+ 119              		@ sp needed
+ 120 0072 10BD     		pop	{r4, pc}
+ 121              	.L4:
+ 122              		.align	2
+ 123              	.L3:
+ 124 0074 00380240 		.word	1073887232
+ 125              		.cfi_endproc
+ 126              	.LFE220:
+ 128              		.text
+ 129              	.Letext0:
+ 130              		.file 2 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h"
+ 131              		.file 3 "/usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h"
+ 132              		.file 4 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h"
+ARM GAS  /tmp/ccmGV6kU.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 dma.c
-     /tmp/ccs6cEJ2.s:18     .text.MX_DMA_Init:0000000000000000 $t
-     /tmp/ccs6cEJ2.s:26     .text.MX_DMA_Init:0000000000000000 MX_DMA_Init
-     /tmp/ccs6cEJ2.s:114    .text.MX_DMA_Init:0000000000000064 $d
+     /tmp/ccmGV6kU.s:18     .text.MX_DMA_Init:0000000000000000 $t
+     /tmp/ccmGV6kU.s:26     .text.MX_DMA_Init:0000000000000000 MX_DMA_Init
+     /tmp/ccmGV6kU.s:124    .text.MX_DMA_Init:0000000000000074 $d
 
 UNDEFINED SYMBOLS
 HAL_NVIC_SetPriority

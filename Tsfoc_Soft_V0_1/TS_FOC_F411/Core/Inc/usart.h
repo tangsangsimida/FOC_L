@@ -39,6 +39,10 @@ extern UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN Private defines */
 extern char Uart_DeBug_Buffer[256];      //串口发送缓冲区
+extern UART_HandleTypeDef *Uart_DeBug;   //调试串口句柄
+
+
+
 /* USER CODE END Private defines */
 
 void MX_USART1_UART_Init(void);

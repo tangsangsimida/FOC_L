@@ -7,6 +7,7 @@
 #include "i2c.h"
 #include "usart.h"
 #include "gpio.h"
+#include "user_api.h"
 
 #define AS5600_ADDRESS 0x36 << 1
 #define ANGLE_REGISTER 0x0C

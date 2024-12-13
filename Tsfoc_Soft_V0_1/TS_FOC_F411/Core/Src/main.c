@@ -50,7 +50,7 @@
 #endif
 PUTCHAR_PROTOTYPE
 {
-    HAL_UART_Transmit_IT(&huart1 , (uint8_t *)&ch, 1);
+    HAL_UART_Transmit(&huart1 , (uint8_t *)&ch, 1,2000);
     //重定向到对应的串口即可
     return ch;
 }
@@ -151,7 +151,7 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-
+  Read_AS5600_Angle(motor1->As5600_Sensor);
   //计算0电角度->后续规整到电机初始化当中
   setTorque(motor1,2, _3PI_2);
   HAL_Delay(3000);
@@ -162,9 +162,6 @@ int main(void)
   HAL_Delay(2000);
   printf("init_ok\r\n");
 
-
-float Kp = 0.05;
-
   while (1)
   {
     // HAL_Delay(100);
@@ -172,8 +169,8 @@ float Kp = 0.05;
     HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
 
     Read_AS5600_Angle(motor1->As5600_Sensor);   // Read the angle of the AS5600 sensor
-
-    setTorque(motor1, 1.5, _electricalAngle(motor1));   //力矩闭环
+    // printf("Angle:%d\r\n",(int)Read_AS5600_Angle(motor1->As5600_Sensor));
+    setTorque(motor1, 5, _electricalAngle(motor1));   //力矩闭环
     // setTorque(motor1,Kp*(120-motor1->DIR*Read_AS5600_Angle(motor1->As5600_Sensor)),_electricalAngle(motor1));   //位置闭环
 
 

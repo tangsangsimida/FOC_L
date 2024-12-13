@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc1jypKt.s 			page 1
+ARM GAS  /tmp/ccCsV3BB.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc1jypKt.s 			page 1
   49 000e 41EC100B 		vmov	d0, r0, r1
   50 0012 FFF7FEFF 		bl	fmod
   51              	.LVL2:
-ARM GAS  /tmp/cc1jypKt.s 			page 2
+ARM GAS  /tmp/ccCsV3BB.s 			page 2
 
 
   52 0016 51EC100B 		vmov	r0, r1, d0
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc1jypKt.s 			page 1
   96 0000 08B5     		push	{r3, lr}
   97              	.LCFI1:
   98              		.cfi_def_cfa_offset 8
-ARM GAS  /tmp/cc1jypKt.s 			page 3
+ARM GAS  /tmp/ccCsV3BB.s 			page 3
 
 
   99              		.cfi_offset 3, -8
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cc1jypKt.s 			page 1
   23:usr/ts_foc.c  **** 
   24:usr/ts_foc.c  **** 
   25:usr/ts_foc.c  **** /// @brief 获取电角度
-ARM GAS  /tmp/cc1jypKt.s 			page 4
+ARM GAS  /tmp/ccCsV3BB.s 			page 4
 
 
   26:usr/ts_foc.c  **** /// @return float
@@ -194,32 +194,33 @@ ARM GAS  /tmp/cc1jypKt.s 			page 1
  157              		.cfi_def_cfa_offset 8
  158              		.cfi_offset 3, -8
  159              		.cfi_offset 14, -4
-  29:usr/ts_foc.c  ****     return  _normalizeAngle((float)(motor->DIR *  motor->PP) * motor->As5600_Sensor->Angle-motor->z
- 160              		.loc 1 29 5 is_stmt 1 view .LVU22
- 161              		.loc 1 29 42 is_stmt 0 view .LVU23
+  29:usr/ts_foc.c  ****     // return  _normalizeAngle((float)(motor->DIR *  motor->PP) * motor->As5600_Sensor->Angle-motor
+  30:usr/ts_foc.c  ****     return  _normalizeRadian((float)(motor->DIR *  motor->PP) * motor->As5600_Sensor->Angle-motor->
+ 160              		.loc 1 30 5 is_stmt 1 view .LVU22
+ 161              		.loc 1 30 43 is_stmt 0 view .LVU23
  162 0002 8368     		ldr	r3, [r0, #8]
- 163              		.loc 1 29 56 view .LVU24
+ 163              		.loc 1 30 57 view .LVU24
  164 0004 4268     		ldr	r2, [r0, #4]
- 165              		.loc 1 29 48 view .LVU25
+ 165              		.loc 1 30 49 view .LVU25
  166 0006 02FB03F3 		mul	r3, r2, r3
  167 000a 07EE903A 		vmov	s15, r3	@ int
- 168              		.loc 1 29 29 view .LVU26
+ 168              		.loc 1 30 30 view .LVU26
  169 000e F8EEE77A 		vcvt.f32.s32	s15, s15
- 170              		.loc 1 29 69 view .LVU27
+ 170              		.loc 1 30 70 view .LVU27
  171 0012 836A     		ldr	r3, [r0, #40]
- 172              		.loc 1 29 84 view .LVU28
+ 172              		.loc 1 30 85 view .LVU28
  173 0014 93ED010A 		vldr.32	s0, [r3, #4]
- 174              		.loc 1 29 62 view .LVU29
+ 174              		.loc 1 30 63 view .LVU29
  175 0018 67EE807A 		vmul.f32	s15, s15, s0
- 176              		.loc 1 29 97 view .LVU30
+ 176              		.loc 1 30 98 view .LVU30
  177 001c 90ED040A 		vldr.32	s0, [r0, #16]	@ int
- 178              		.loc 1 29 13 view .LVU31
+ 178              		.loc 1 30 13 view .LVU31
  179 0020 B8EEC00A 		vcvt.f32.s32	s0, s0
  180 0024 37EEC00A 		vsub.f32	s0, s15, s0
- 181 0028 FFF7FEFF 		bl	_normalizeAngle
+ 181 0028 FFF7FEFF 		bl	_normalizeRadian
  182              	.LVL11:
-  30:usr/ts_foc.c  **** }
- 183              		.loc 1 30 1 view .LVU32
+  31:usr/ts_foc.c  **** }
+ 183              		.loc 1 31 1 view .LVU32
  184 002c 08BD     		pop	{r3, pc}
  185              		.cfi_endproc
  186              	.LFE225:
@@ -233,23 +234,23 @@ ARM GAS  /tmp/cc1jypKt.s 			page 1
  196              	setPwm:
  197              	.LVL12:
  198              	.LFB226:
-  31:usr/ts_foc.c  **** 
   32:usr/ts_foc.c  **** 
-  33:usr/ts_foc.c  **** /// @brief 设置PWM到控制器输出
-  34:usr/ts_foc.c  **** /// @param motor 电机对象
-  35:usr/ts_foc.c  **** /// @param Ua 
-ARM GAS  /tmp/cc1jypKt.s 			page 5
+  33:usr/ts_foc.c  **** 
+  34:usr/ts_foc.c  **** /// @brief 设置PWM到控制器输出
+  35:usr/ts_foc.c  **** /// @param motor 电机对象
+ARM GAS  /tmp/ccCsV3BB.s 			page 5
 
 
-  36:usr/ts_foc.c  **** /// @param Ub 
-  37:usr/ts_foc.c  **** /// @param Uc 
-  38:usr/ts_foc.c  **** void setPwm(Motor* motor, float Ua, float Ub, float Uc) 
-  39:usr/ts_foc.c  **** {
- 199              		.loc 1 39 1 is_stmt 1 view -0
+  36:usr/ts_foc.c  **** /// @param Ua 
+  37:usr/ts_foc.c  **** /// @param Ub 
+  38:usr/ts_foc.c  **** /// @param Uc 
+  39:usr/ts_foc.c  **** void setPwm(Motor* motor, float Ua, float Ub, float Uc) 
+  40:usr/ts_foc.c  **** {
+ 199              		.loc 1 40 1 is_stmt 1 view -0
  200              		.cfi_startproc
  201              		@ args = 0, pretend = 0, frame = 0
  202              		@ frame_needed = 0, uses_anonymous_args = 0
- 203              		.loc 1 39 1 is_stmt 0 view .LVU34
+ 203              		.loc 1 40 1 is_stmt 0 view .LVU34
  204 0000 10B5     		push	{r4, lr}
  205              	.LCFI3:
  206              		.cfi_def_cfa_offset 8
@@ -263,184 +264,184 @@ ARM GAS  /tmp/cc1jypKt.s 			page 1
  214              		.cfi_offset 82, -16
  215              		.cfi_offset 83, -12
  216 0006 0446     		mov	r4, r0
-  40:usr/ts_foc.c  ****   // 限制上限
-  41:usr/ts_foc.c  ****   Ua = _constrain(Ua, 0.0f, motor->voltage_power_supply);
- 217              		.loc 1 41 3 is_stmt 1 view .LVU35
- 218              		.loc 1 41 8 is_stmt 0 view .LVU36
+  41:usr/ts_foc.c  ****   // 限制上限
+  42:usr/ts_foc.c  ****   Ua = _constrain(Ua, 0.0f, motor->voltage_power_supply);
+ 217              		.loc 1 42 3 is_stmt 1 view .LVU35
+ 218              		.loc 1 42 8 is_stmt 0 view .LVU36
  219 0008 B5EEC00A 		vcmpe.f32	s0, #0
  220 000c F1EE10FA 		vmrs	APSR_nzcv, FPSCR
  221 0010 09D4     		bmi	.L25
- 222              		.loc 1 41 8 discriminator 2 view .LVU37
+ 222              		.loc 1 42 8 discriminator 2 view .LVU37
  223 0012 D0ED035A 		vldr.32	s11, [r0, #12]
  224 0016 F4EEC05A 		vcmpe.f32	s11, s0
  225 001a F1EE10FA 		vmrs	APSR_nzcv, FPSCR
  226 001e 04D4     		bmi	.L16
- 227              		.loc 1 41 8 view .LVU38
+ 227              		.loc 1 42 8 view .LVU38
  228 0020 F0EE405A 		vmov.f32	s11, s0
  229 0024 01E0     		b	.L16
  230              	.L25:
- 231              		.loc 1 41 8 view .LVU39
+ 231              		.loc 1 42 8 view .LVU39
  232 0026 DFED3E5A 		vldr.32	s11, .L35
  233              	.L16:
  234              	.LVL13:
-  42:usr/ts_foc.c  ****   Ub = _constrain(Ub, 0.0f, motor->voltage_power_supply);
- 235              		.loc 1 42 3 is_stmt 1 discriminator 8 view .LVU40
- 236              		.loc 1 42 8 is_stmt 0 discriminator 8 view .LVU41
+  43:usr/ts_foc.c  ****   Ub = _constrain(Ub, 0.0f, motor->voltage_power_supply);
+ 235              		.loc 1 43 3 is_stmt 1 discriminator 8 view .LVU40
+ 236              		.loc 1 43 8 is_stmt 0 discriminator 8 view .LVU41
  237 002a F5EEC00A 		vcmpe.f32	s1, #0
  238 002e F1EE10FA 		vmrs	APSR_nzcv, FPSCR
  239 0032 09D4     		bmi	.L26
- 240              		.loc 1 42 8 discriminator 2 view .LVU42
+ 240              		.loc 1 43 8 discriminator 2 view .LVU42
  241 0034 94ED036A 		vldr.32	s12, [r4, #12]
  242 0038 B4EEE06A 		vcmpe.f32	s12, s1
  243 003c F1EE10FA 		vmrs	APSR_nzcv, FPSCR
  244 0040 04D4     		bmi	.L17
- 245              		.loc 1 42 8 view .LVU43
+ 245              		.loc 1 43 8 view .LVU43
  246 0042 B0EE606A 		vmov.f32	s12, s1
  247 0046 01E0     		b	.L17
+ARM GAS  /tmp/ccCsV3BB.s 			page 6
+
+
  248              	.L26:
-ARM GAS  /tmp/cc1jypKt.s 			page 6
-
-
- 249              		.loc 1 42 8 view .LVU44
+ 249              		.loc 1 43 8 view .LVU44
  250 0048 9FED356A 		vldr.32	s12, .L35
  251              	.L17:
  252              	.LVL14:
-  43:usr/ts_foc.c  ****   Uc = _constrain(Uc, 0.0f, motor->voltage_power_supply);
- 253              		.loc 1 43 3 is_stmt 1 discriminator 8 view .LVU45
- 254              		.loc 1 43 8 is_stmt 0 discriminator 8 view .LVU46
+  44:usr/ts_foc.c  ****   Uc = _constrain(Uc, 0.0f, motor->voltage_power_supply);
+ 253              		.loc 1 44 3 is_stmt 1 discriminator 8 view .LVU45
+ 254              		.loc 1 44 8 is_stmt 0 discriminator 8 view .LVU46
  255 004c B5EEC01A 		vcmpe.f32	s2, #0
  256 0050 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
  257 0054 09D4     		bmi	.L27
- 258              		.loc 1 43 8 discriminator 2 view .LVU47
+ 258              		.loc 1 44 8 discriminator 2 view .LVU47
  259 0056 D4ED036A 		vldr.32	s13, [r4, #12]
  260 005a F4EEC16A 		vcmpe.f32	s13, s2
  261 005e F1EE10FA 		vmrs	APSR_nzcv, FPSCR
  262 0062 04D4     		bmi	.L18
- 263              		.loc 1 43 8 view .LVU48
+ 263              		.loc 1 44 8 view .LVU48
  264 0064 F0EE416A 		vmov.f32	s13, s2
  265 0068 01E0     		b	.L18
  266              	.L27:
- 267              		.loc 1 43 8 view .LVU49
+ 267              		.loc 1 44 8 view .LVU49
  268 006a DFED2D6A 		vldr.32	s13, .L35
  269              	.L18:
  270              	.LVL15:
-  44:usr/ts_foc.c  ****   // 计算占空比
-  45:usr/ts_foc.c  ****   // 限制占空比从0到1
-  46:usr/ts_foc.c  ****   float dc_a = _constrain(Ua / motor->voltage_power_supply, 0.0f , 1.0f );
- 271              		.loc 1 46 3 is_stmt 1 discriminator 8 view .LVU50
- 272              		.loc 1 46 16 is_stmt 0 discriminator 8 view .LVU51
+  45:usr/ts_foc.c  ****   // 计算占空比
+  46:usr/ts_foc.c  ****   // 限制占空比从0到1
+  47:usr/ts_foc.c  ****   float dc_a = _constrain(Ua / motor->voltage_power_supply, 0.0f , 1.0f );
+ 271              		.loc 1 47 3 is_stmt 1 discriminator 8 view .LVU50
+ 272              		.loc 1 47 16 is_stmt 0 discriminator 8 view .LVU51
  273 006e 94ED037A 		vldr.32	s14, [r4, #12]
  274 0072 C5EE877A 		vdiv.f32	s15, s11, s14
  275 0076 F5EEC07A 		vcmpe.f32	s15, #0
  276 007a F1EE10FA 		vmrs	APSR_nzcv, FPSCR
  277 007e 09D4     		bmi	.L28
- 278              		.loc 1 46 16 discriminator 2 view .LVU52
+ 278              		.loc 1 47 16 discriminator 2 view .LVU52
  279 0080 F7EE005A 		vmov.f32	s11, #1.0e+0
  280              	.LVL16:
- 281              		.loc 1 46 16 discriminator 2 view .LVU53
+ 281              		.loc 1 47 16 discriminator 2 view .LVU53
  282 0084 F4EEE57A 		vcmpe.f32	s15, s11
  283 0088 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
  284 008c 04DD     		ble	.L19
- 285              		.loc 1 46 16 view .LVU54
+ 285              		.loc 1 47 16 view .LVU54
  286 008e F0EE657A 		vmov.f32	s15, s11
  287 0092 01E0     		b	.L19
  288              	.LVL17:
  289              	.L28:
- 290              		.loc 1 46 16 view .LVU55
+ 290              		.loc 1 47 16 view .LVU55
  291 0094 DFED227A 		vldr.32	s15, .L35
  292              	.LVL18:
  293              	.L19:
-  47:usr/ts_foc.c  ****   float dc_b = _constrain(Ub / motor->voltage_power_supply, 0.0f , 1.0f );
- 294              		.loc 1 47 3 is_stmt 1 discriminator 8 view .LVU56
- 295              		.loc 1 47 16 is_stmt 0 discriminator 8 view .LVU57
+  48:usr/ts_foc.c  ****   float dc_b = _constrain(Ub / motor->voltage_power_supply, 0.0f , 1.0f );
+ 294              		.loc 1 48 3 is_stmt 1 discriminator 8 view .LVU56
+ 295              		.loc 1 48 16 is_stmt 0 discriminator 8 view .LVU57
  296 0098 C6EE078A 		vdiv.f32	s17, s12, s14
  297 009c F5EEC08A 		vcmpe.f32	s17, #0
  298 00a0 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
  299 00a4 09D4     		bmi	.L29
- 300              		.loc 1 47 16 discriminator 2 view .LVU58
-ARM GAS  /tmp/cc1jypKt.s 			page 7
+ARM GAS  /tmp/ccCsV3BB.s 			page 7
 
 
+ 300              		.loc 1 48 16 discriminator 2 view .LVU58
  301 00a6 B7EE006A 		vmov.f32	s12, #1.0e+0
  302              	.LVL19:
- 303              		.loc 1 47 16 discriminator 2 view .LVU59
+ 303              		.loc 1 48 16 discriminator 2 view .LVU59
  304 00aa F4EEC68A 		vcmpe.f32	s17, s12
  305 00ae F1EE10FA 		vmrs	APSR_nzcv, FPSCR
  306 00b2 04DD     		ble	.L21
- 307              		.loc 1 47 16 view .LVU60
+ 307              		.loc 1 48 16 view .LVU60
  308 00b4 F0EE468A 		vmov.f32	s17, s12
  309 00b8 01E0     		b	.L21
  310              	.LVL20:
  311              	.L29:
- 312              		.loc 1 47 16 view .LVU61
+ 312              		.loc 1 48 16 view .LVU61
  313 00ba DFED198A 		vldr.32	s17, .L35
  314              	.LVL21:
  315              	.L21:
-  48:usr/ts_foc.c  ****   float dc_c = _constrain(Uc / motor->voltage_power_supply, 0.0f , 1.0f );
- 316              		.loc 1 48 3 is_stmt 1 discriminator 8 view .LVU62
- 317              		.loc 1 48 16 is_stmt 0 discriminator 8 view .LVU63
+  49:usr/ts_foc.c  ****   float dc_c = _constrain(Uc / motor->voltage_power_supply, 0.0f , 1.0f );
+ 316              		.loc 1 49 3 is_stmt 1 discriminator 8 view .LVU62
+ 317              		.loc 1 49 16 is_stmt 0 discriminator 8 view .LVU63
  318 00be 86EE878A 		vdiv.f32	s16, s13, s14
  319 00c2 B5EEC08A 		vcmpe.f32	s16, #0
  320 00c6 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
  321 00ca 09D4     		bmi	.L30
- 322              		.loc 1 48 16 discriminator 2 view .LVU64
+ 322              		.loc 1 49 16 discriminator 2 view .LVU64
  323 00cc B7EE007A 		vmov.f32	s14, #1.0e+0
  324 00d0 B4EEC78A 		vcmpe.f32	s16, s14
  325 00d4 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
  326 00d8 04DD     		ble	.L23
- 327              		.loc 1 48 16 view .LVU65
+ 327              		.loc 1 49 16 view .LVU65
  328 00da B0EE478A 		vmov.f32	s16, s14
  329 00de 01E0     		b	.L23
  330              	.L30:
  331 00e0 9FED0F8A 		vldr.32	s16, .L35
  332              	.L23:
  333              	.LVL22:
-  49:usr/ts_foc.c  **** 
-  50:usr/ts_foc.c  ****   //写入PWM
-  51:usr/ts_foc.c  ****   motor->Motor_Set_Compare1(dc_a*3300);
- 334              		.loc 1 51 3 is_stmt 1 discriminator 8 view .LVU66
- 335              		.loc 1 51 8 is_stmt 0 discriminator 8 view .LVU67
+  50:usr/ts_foc.c  **** 
+  51:usr/ts_foc.c  ****   //写入PWM
+  52:usr/ts_foc.c  ****   motor->Motor_Set_Compare1(dc_a*3300);
+ 334              		.loc 1 52 3 is_stmt 1 discriminator 8 view .LVU66
+ 335              		.loc 1 52 8 is_stmt 0 discriminator 8 view .LVU67
  336 00e4 636C     		ldr	r3, [r4, #68]
- 337              		.loc 1 51 33 discriminator 8 view .LVU68
+ 337              		.loc 1 52 33 discriminator 8 view .LVU68
  338 00e6 9FED0F9A 		vldr.32	s18, .L35+4
  339 00ea 67EE897A 		vmul.f32	s15, s15, s18
  340              	.LVL23:
- 341              		.loc 1 51 3 discriminator 8 view .LVU69
+ 341              		.loc 1 52 3 discriminator 8 view .LVU69
  342 00ee FCEEE77A 		vcvt.u32.f32	s15, s15
  343 00f2 17EE900A 		vmov	r0, s15	@ int
  344              	.LVL24:
- 345              		.loc 1 51 3 discriminator 8 view .LVU70
+ 345              		.loc 1 52 3 discriminator 8 view .LVU70
  346 00f6 9847     		blx	r3
  347              	.LVL25:
-  52:usr/ts_foc.c  ****   motor->Motor_Set_Compare2(dc_b*3300);
- 348              		.loc 1 52 3 is_stmt 1 discriminator 8 view .LVU71
- 349              		.loc 1 52 8 is_stmt 0 discriminator 8 view .LVU72
+  53:usr/ts_foc.c  ****   motor->Motor_Set_Compare2(dc_b*3300);
+ 348              		.loc 1 53 3 is_stmt 1 discriminator 8 view .LVU71
+ 349              		.loc 1 53 8 is_stmt 0 discriminator 8 view .LVU72
  350 00f8 A36C     		ldr	r3, [r4, #72]
- 351              		.loc 1 52 33 discriminator 8 view .LVU73
+ 351              		.loc 1 53 33 discriminator 8 view .LVU73
+ARM GAS  /tmp/ccCsV3BB.s 			page 8
+
+
  352 00fa 68EE898A 		vmul.f32	s17, s17, s18
-ARM GAS  /tmp/cc1jypKt.s 			page 8
-
-
  353              	.LVL26:
- 354              		.loc 1 52 3 discriminator 8 view .LVU74
+ 354              		.loc 1 53 3 discriminator 8 view .LVU74
  355 00fe FCEEE87A 		vcvt.u32.f32	s15, s17
  356 0102 17EE900A 		vmov	r0, s15	@ int
  357 0106 9847     		blx	r3
  358              	.LVL27:
-  53:usr/ts_foc.c  ****   motor->Motor_Set_Compare3(dc_c*3300);
- 359              		.loc 1 53 3 is_stmt 1 discriminator 8 view .LVU75
- 360              		.loc 1 53 8 is_stmt 0 discriminator 8 view .LVU76
+  54:usr/ts_foc.c  ****   motor->Motor_Set_Compare3(dc_c*3300);
+ 359              		.loc 1 54 3 is_stmt 1 discriminator 8 view .LVU75
+ 360              		.loc 1 54 8 is_stmt 0 discriminator 8 view .LVU76
  361 0108 E36C     		ldr	r3, [r4, #76]
- 362              		.loc 1 53 33 discriminator 8 view .LVU77
+ 362              		.loc 1 54 33 discriminator 8 view .LVU77
  363 010a 28EE098A 		vmul.f32	s16, s16, s18
  364              	.LVL28:
- 365              		.loc 1 53 3 discriminator 8 view .LVU78
+ 365              		.loc 1 54 3 discriminator 8 view .LVU78
  366 010e FCEEC87A 		vcvt.u32.f32	s15, s16
  367 0112 17EE900A 		vmov	r0, s15	@ int
  368 0116 9847     		blx	r3
  369              	.LVL29:
-  54:usr/ts_foc.c  **** }
- 370              		.loc 1 54 1 discriminator 8 view .LVU79
+  55:usr/ts_foc.c  **** }
+ 370              		.loc 1 55 1 discriminator 8 view .LVU79
  371 0118 BDEC048B 		vldm	sp!, {d8-d9}
  372              	.LCFI5:
  373              		.cfi_restore 82
@@ -451,7 +452,7 @@ ARM GAS  /tmp/cc1jypKt.s 			page 1
  378 011c 10BD     		pop	{r4, pc}
  379              	.LVL30:
  380              	.L36:
- 381              		.loc 1 54 1 discriminator 8 view .LVU80
+ 381              		.loc 1 55 1 discriminator 8 view .LVU80
  382 011e 00BF     		.align	2
  383              	.L35:
  384 0120 00000000 		.word	0
@@ -471,20 +472,20 @@ ARM GAS  /tmp/cc1jypKt.s 			page 1
  400              	setTorque:
  401              	.LVL31:
  402              	.LFB227:
-  55:usr/ts_foc.c  **** 
-  56:usr/ts_foc.c  **** /// @brief 设置力矩
-  57:usr/ts_foc.c  **** /// @param Uq 需求力矩
-  58:usr/ts_foc.c  **** /// @param angle_el 
-  59:usr/ts_foc.c  **** void setTorque(Motor* motor,float Uq,float angle_el)
-  60:usr/ts_foc.c  **** {
- 403              		.loc 1 60 1 is_stmt 1 view -0
-ARM GAS  /tmp/cc1jypKt.s 			page 9
+  56:usr/ts_foc.c  **** 
+  57:usr/ts_foc.c  **** /// @brief 设置力矩
+  58:usr/ts_foc.c  **** /// @param Uq 需求力矩
+  59:usr/ts_foc.c  **** /// @param angle_el 
+  60:usr/ts_foc.c  **** void setTorque(Motor* motor,float Uq,float angle_el)
+  61:usr/ts_foc.c  **** {
+ARM GAS  /tmp/ccCsV3BB.s 			page 9
 
 
+ 403              		.loc 1 61 1 is_stmt 1 view -0
  404              		.cfi_startproc
  405              		@ args = 0, pretend = 0, frame = 0
  406              		@ frame_needed = 0, uses_anonymous_args = 0
- 407              		.loc 1 60 1 is_stmt 0 view .LVU82
+ 407              		.loc 1 61 1 is_stmt 0 view .LVU82
  408 0000 2DE9F84F 		push	{r3, r4, r5, r6, r7, r8, r9, r10, fp, lr}
  409              	.LCFI6:
  410              		.cfi_def_cfa_offset 40
@@ -509,49 +510,49 @@ ARM GAS  /tmp/cc1jypKt.s 			page 1
  429 000a F0EE407A 		vmov.f32	s15, s0
  430 000e B0EE600A 		vmov.f32	s0, s1
  431              	.LVL32:
-  61:usr/ts_foc.c  **** //   AS5600_Sensor_update(motor->As5600_Sensor); //更新传感器数值
-  62:usr/ts_foc.c  ****   Uq=_constrain(Uq,-(motor->voltage_power_supply)/2,(motor->voltage_power_supply)/2);
- 432              		.loc 1 62 3 is_stmt 1 view .LVU83
- 433              		.loc 1 62 6 is_stmt 0 view .LVU84
+  62:usr/ts_foc.c  **** //   AS5600_Sensor_update(motor->As5600_Sensor); //更新传感器数值
+  63:usr/ts_foc.c  ****   Uq=_constrain(Uq,-(motor->voltage_power_supply)/2,(motor->voltage_power_supply)/2);
+ 432              		.loc 1 63 3 is_stmt 1 view .LVU83
+ 433              		.loc 1 63 6 is_stmt 0 view .LVU84
  434 0012 90ED037A 		vldr.32	s14, [r0, #12]
  435 0016 B6EE008A 		vmov.f32	s16, #5.0e-1
  436 001a 27EE488A 		vnmul.f32	s16, s14, s16
  437 001e B4EEE78A 		vcmpe.f32	s16, s15
  438 0022 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
  439 0026 0ADC     		bgt	.L38
- 440              		.loc 1 62 6 discriminator 2 view .LVU85
+ 440              		.loc 1 63 6 discriminator 2 view .LVU85
  441 0028 B6EE008A 		vmov.f32	s16, #5.0e-1
  442 002c 27EE088A 		vmul.f32	s16, s14, s16
  443 0030 B4EEE78A 		vcmpe.f32	s16, s15
  444 0034 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
  445 0038 01D4     		bmi	.L38
- 446              		.loc 1 62 6 view .LVU86
+ 446              		.loc 1 63 6 view .LVU86
  447 003a B0EE678A 		vmov.f32	s16, s15
  448              	.L38:
  449              	.LVL33:
-  63:usr/ts_foc.c  **** 
-  64:usr/ts_foc.c  ****   angle_el = _normalizeAngle(angle_el);
- 450              		.loc 1 64 3 is_stmt 1 discriminator 8 view .LVU87
- 451              		.loc 1 64 14 is_stmt 0 discriminator 8 view .LVU88
+  64:usr/ts_foc.c  **** 
+  65:usr/ts_foc.c  ****   angle_el = _normalizeAngle(angle_el);
+ 450              		.loc 1 65 3 is_stmt 1 discriminator 8 view .LVU87
+ 451              		.loc 1 65 14 is_stmt 0 discriminator 8 view .LVU88
  452 003e FFF7FEFF 		bl	_normalizeAngle
  453              	.LVL34:
- 454              		.loc 1 64 14 discriminator 8 view .LVU89
+ 454              		.loc 1 65 14 discriminator 8 view .LVU89
  455 0042 10EE106A 		vmov	r6, s0
+ARM GAS  /tmp/ccCsV3BB.s 			page 10
+
+
  456              	.LVL35:
-ARM GAS  /tmp/cc1jypKt.s 			page 10
-
-
-  65:usr/ts_foc.c  ****   // 帕克逆变换
-  66:usr/ts_foc.c  ****   motor->Ualpha =  -Uq*sin(angle_el);
- 457              		.loc 1 66 3 is_stmt 1 discriminator 8 view .LVU90
- 458              		.loc 1 66 20 is_stmt 0 discriminator 8 view .LVU91
+  66:usr/ts_foc.c  ****   // 帕克逆变换
+  67:usr/ts_foc.c  ****   motor->Ualpha =  -Uq*sin(angle_el);
+ 457              		.loc 1 67 3 is_stmt 1 discriminator 8 view .LVU90
+ 458              		.loc 1 67 20 is_stmt 0 discriminator 8 view .LVU91
  459 0046 F1EE487A 		vneg.f32	s15, s16
  460 004a 17EE900A 		vmov	r0, s15
  461 004e FFF7FEFF 		bl	__aeabi_f2d
  462              	.LVL36:
  463 0052 0446     		mov	r4, r0
  464 0054 0D46     		mov	r5, r1
- 465              		.loc 1 66 24 discriminator 8 view .LVU92
+ 465              		.loc 1 67 24 discriminator 8 view .LVU92
  466 0056 3046     		mov	r0, r6	@ float
  467 0058 FFF7FEFF 		bl	__aeabi_f2d
  468              	.LVL37:
@@ -560,7 +561,7 @@ ARM GAS  /tmp/cc1jypKt.s 			page 1
  471 0064 FFF7FEFF 		bl	sin
  472              	.LVL38:
  473 0068 53EC102B 		vmov	r2, r3, d0
- 474              		.loc 1 66 23 discriminator 8 view .LVU93
+ 474              		.loc 1 67 23 discriminator 8 view .LVU93
  475 006c 2046     		mov	r0, r4
  476 006e 2946     		mov	r1, r5
  477 0070 FFF7FEFF 		bl	__aeabi_dmul
@@ -568,17 +569,17 @@ ARM GAS  /tmp/cc1jypKt.s 			page 1
  479 0074 FFF7FEFF 		bl	__aeabi_d2f
  480              	.LVL40:
  481 0078 8346     		mov	fp, r0	@ float
- 482              		.loc 1 66 17 discriminator 8 view .LVU94
+ 482              		.loc 1 67 17 discriminator 8 view .LVU94
  483 007a CAF81400 		str	r0, [r10, #20]	@ float
-  67:usr/ts_foc.c  ****   motor->Ubeta =   Uq*cos(angle_el);
- 484              		.loc 1 67 3 is_stmt 1 discriminator 8 view .LVU95
- 485              		.loc 1 67 23 is_stmt 0 discriminator 8 view .LVU96
+  68:usr/ts_foc.c  ****   motor->Ubeta =   Uq*cos(angle_el);
+ 484              		.loc 1 68 3 is_stmt 1 discriminator 8 view .LVU95
+ 485              		.loc 1 68 23 is_stmt 0 discriminator 8 view .LVU96
  486 007e B0EE490A 		vmov.f32	s0, s18
  487 0082 F0EE690A 		vmov.f32	s1, s19
  488 0086 FFF7FEFF 		bl	cos
  489              	.LVL41:
  490 008a 55EC104B 		vmov	r4, r5, d0
- 491              		.loc 1 67 22 discriminator 8 view .LVU97
+ 491              		.loc 1 68 22 discriminator 8 view .LVU97
  492 008e 18EE100A 		vmov	r0, s16
  493 0092 FFF7FEFF 		bl	__aeabi_f2d
  494              	.LVL42:
@@ -588,65 +589,65 @@ ARM GAS  /tmp/cc1jypKt.s 			page 1
  498              	.LVL43:
  499 009e FFF7FEFF 		bl	__aeabi_d2f
  500              	.LVL44:
- 501              		.loc 1 67 16 discriminator 8 view .LVU98
+ 501              		.loc 1 68 16 discriminator 8 view .LVU98
  502 00a2 CAF81800 		str	r0, [r10, #24]	@ float
-  68:usr/ts_foc.c  **** 
-  69:usr/ts_foc.c  ****   // 克拉克逆变换
-  70:usr/ts_foc.c  ****   motor->Ua = motor->Ualpha + motor->voltage_power_supply/2;
- 503              		.loc 1 70 3 is_stmt 1 discriminator 8 view .LVU99
- 504              		.loc 1 70 36 is_stmt 0 discriminator 8 view .LVU100
+  69:usr/ts_foc.c  **** 
+  70:usr/ts_foc.c  ****   // 克拉克逆变换
+  71:usr/ts_foc.c  ****   motor->Ua = motor->Ualpha + motor->voltage_power_supply/2;
+ 503              		.loc 1 71 3 is_stmt 1 discriminator 8 view .LVU99
+ 504              		.loc 1 71 36 is_stmt 0 discriminator 8 view .LVU100
  505 00a6 9AED038A 		vldr.32	s16, [r10, #12]
  506              	.LVL45:
- 507              		.loc 1 70 58 discriminator 8 view .LVU101
-ARM GAS  /tmp/cc1jypKt.s 			page 11
+ARM GAS  /tmp/ccCsV3BB.s 			page 11
 
 
+ 507              		.loc 1 71 58 discriminator 8 view .LVU101
  508 00aa F6EE007A 		vmov.f32	s15, #5.0e-1
  509 00ae 28EE278A 		vmul.f32	s16, s16, s15
- 510              		.loc 1 70 29 discriminator 8 view .LVU102
+ 510              		.loc 1 71 29 discriminator 8 view .LVU102
  511 00b2 07EE90BA 		vmov	s15, fp
  512 00b6 37EE889A 		vadd.f32	s18, s15, s16
- 513              		.loc 1 70 13 discriminator 8 view .LVU103
+ 513              		.loc 1 71 13 discriminator 8 view .LVU103
  514 00ba 8AED079A 		vstr.32	s18, [r10, #28]
-  71:usr/ts_foc.c  ****   motor->Ub = (sqrt(3)*motor->Ubeta-motor->Ualpha)/2 + motor->voltage_power_supply/2;
- 515              		.loc 1 71 3 is_stmt 1 discriminator 8 view .LVU104
- 516              		.loc 1 71 29 is_stmt 0 discriminator 8 view .LVU105
+  72:usr/ts_foc.c  ****   motor->Ub = (sqrt(3)*motor->Ubeta-motor->Ualpha)/2 + motor->voltage_power_supply/2;
+ 515              		.loc 1 72 3 is_stmt 1 discriminator 8 view .LVU104
+ 516              		.loc 1 72 29 is_stmt 0 discriminator 8 view .LVU105
  517 00be FFF7FEFF 		bl	__aeabi_f2d
  518              	.LVL46:
- 519              		.loc 1 71 23 discriminator 8 view .LVU106
+ 519              		.loc 1 72 23 discriminator 8 view .LVU106
  520 00c2 26A3     		adr	r3, .L40+4
  521 00c4 D3E90023 		ldrd	r2, [r3]
  522 00c8 FFF7FEFF 		bl	__aeabi_dmul
  523              	.LVL47:
  524 00cc 0646     		mov	r6, r0
  525              	.LVL48:
- 526              		.loc 1 71 23 discriminator 8 view .LVU107
+ 526              		.loc 1 72 23 discriminator 8 view .LVU107
  527 00ce 0F46     		mov	r7, r1
- 528              		.loc 1 71 42 discriminator 8 view .LVU108
+ 528              		.loc 1 72 42 discriminator 8 view .LVU108
  529 00d0 5846     		mov	r0, fp	@ float
  530 00d2 FFF7FEFF 		bl	__aeabi_f2d
  531              	.LVL49:
  532 00d6 0246     		mov	r2, r0
  533 00d8 0B46     		mov	r3, r1
- 534              		.loc 1 71 36 discriminator 8 view .LVU109
+ 534              		.loc 1 72 36 discriminator 8 view .LVU109
  535 00da 3046     		mov	r0, r6
  536 00dc 3946     		mov	r1, r7
  537 00de FFF7FEFF 		bl	__aeabi_dsub
  538              	.LVL50:
- 539              		.loc 1 71 51 discriminator 8 view .LVU110
+ 539              		.loc 1 72 51 discriminator 8 view .LVU110
  540 00e2 0022     		movs	r2, #0
  541 00e4 1C4B     		ldr	r3, .L40
  542 00e6 FFF7FEFF 		bl	__aeabi_dmul
  543              	.LVL51:
  544 00ea 8046     		mov	r8, r0
  545 00ec 8946     		mov	r9, r1
- 546              		.loc 1 71 83 discriminator 8 view .LVU111
+ 546              		.loc 1 72 83 discriminator 8 view .LVU111
  547 00ee 18EE100A 		vmov	r0, s16
  548 00f2 FFF7FEFF 		bl	__aeabi_f2d
  549              	.LVL52:
  550 00f6 0446     		mov	r4, r0
  551 00f8 0D46     		mov	r5, r1
- 552              		.loc 1 71 54 discriminator 8 view .LVU112
+ 552              		.loc 1 72 54 discriminator 8 view .LVU112
  553 00fa 0246     		mov	r2, r0
  554 00fc 0B46     		mov	r3, r1
  555 00fe 4046     		mov	r0, r8
@@ -656,30 +657,30 @@ ARM GAS  /tmp/cc1jypKt.s 			page 1
  559 0106 FFF7FEFF 		bl	__aeabi_d2f
  560              	.LVL54:
  561 010a 08EE100A 		vmov	s16, r0
- 562              		.loc 1 71 13 discriminator 8 view .LVU113
+ 562              		.loc 1 72 13 discriminator 8 view .LVU113
+ARM GAS  /tmp/ccCsV3BB.s 			page 12
+
+
  563 010e CAF82000 		str	r0, [r10, #32]	@ float
-ARM GAS  /tmp/cc1jypKt.s 			page 12
-
-
-  72:usr/ts_foc.c  ****   motor->Uc = (-motor->Ualpha-sqrt(3)*motor->Ubeta)/2 + motor->voltage_power_supply/2;
- 564              		.loc 1 72 3 is_stmt 1 discriminator 8 view .LVU114
- 565              		.loc 1 72 16 is_stmt 0 discriminator 8 view .LVU115
+  73:usr/ts_foc.c  ****   motor->Uc = (-motor->Ualpha-sqrt(3)*motor->Ubeta)/2 + motor->voltage_power_supply/2;
+ 564              		.loc 1 73 3 is_stmt 1 discriminator 8 view .LVU114
+ 565              		.loc 1 73 16 is_stmt 0 discriminator 8 view .LVU115
  566 0112 8BF00040 		eor	r0, fp, #-2147483648
  567 0116 FFF7FEFF 		bl	__aeabi_f2d
  568              	.LVL55:
- 569              		.loc 1 72 30 discriminator 8 view .LVU116
+ 569              		.loc 1 73 30 discriminator 8 view .LVU116
  570 011a 3246     		mov	r2, r6
  571 011c 3B46     		mov	r3, r7
  572 011e FFF7FEFF 		bl	__aeabi_dsub
  573              	.LVL56:
- 574              		.loc 1 72 52 discriminator 8 view .LVU117
+ 574              		.loc 1 73 52 discriminator 8 view .LVU117
  575 0122 0022     		movs	r2, #0
  576 0124 0C4B     		ldr	r3, .L40
  577 0126 FFF7FEFF 		bl	__aeabi_dmul
  578              	.LVL57:
  579 012a 0246     		mov	r2, r0
  580 012c 0B46     		mov	r3, r1
- 581              		.loc 1 72 55 discriminator 8 view .LVU118
+ 581              		.loc 1 73 55 discriminator 8 view .LVU118
  582 012e 2046     		mov	r0, r4
  583 0130 2946     		mov	r1, r5
  584 0132 FFF7FEFF 		bl	__aeabi_dadd
@@ -687,17 +688,17 @@ ARM GAS  /tmp/cc1jypKt.s 			page 1
  586 0136 FFF7FEFF 		bl	__aeabi_d2f
  587              	.LVL59:
  588 013a 01EE100A 		vmov	s2, r0
- 589              		.loc 1 72 13 discriminator 8 view .LVU119
+ 589              		.loc 1 73 13 discriminator 8 view .LVU119
  590 013e CAF82400 		str	r0, [r10, #36]	@ float
-  73:usr/ts_foc.c  ****   setPwm(motor,motor->Ua,motor->Ub,motor->Uc);
- 591              		.loc 1 73 3 is_stmt 1 discriminator 8 view .LVU120
+  74:usr/ts_foc.c  ****   setPwm(motor,motor->Ua,motor->Ub,motor->Uc);
+ 591              		.loc 1 74 3 is_stmt 1 discriminator 8 view .LVU120
  592 0142 F0EE480A 		vmov.f32	s1, s16
  593 0146 B0EE490A 		vmov.f32	s0, s18
  594 014a 5046     		mov	r0, r10
  595 014c FFF7FEFF 		bl	setPwm
  596              	.LVL60:
-  74:usr/ts_foc.c  **** }
- 597              		.loc 1 74 1 is_stmt 0 discriminator 8 view .LVU121
+  75:usr/ts_foc.c  **** }
+ 597              		.loc 1 75 1 is_stmt 0 discriminator 8 view .LVU121
  598 0150 BDEC048B 		vldm	sp!, {d8-d9}
  599              	.LCFI8:
  600              		.cfi_restore 82
@@ -708,7 +709,7 @@ ARM GAS  /tmp/cc1jypKt.s 			page 1
  605 0154 BDE8F88F 		pop	{r3, r4, r5, r6, r7, r8, r9, r10, fp, pc}
  606              	.LVL61:
  607              	.L41:
- 608              		.loc 1 74 1 discriminator 8 view .LVU122
+ 608              		.loc 1 75 1 discriminator 8 view .LVU122
  609              		.align	3
  610              	.L40:
  611 0158 0000E03F 		.word	1071644672
@@ -717,10 +718,10 @@ ARM GAS  /tmp/cc1jypKt.s 			page 1
  614              		.cfi_endproc
  615              	.LFE227:
  617              		.section	.text.Motor1_Set_Compare1,"ax",%progbits
+ARM GAS  /tmp/ccCsV3BB.s 			page 13
+
+
  618              		.align	1
-ARM GAS  /tmp/cc1jypKt.s 			page 13
-
-
  619              		.weak	Motor1_Set_Compare1
  620              		.syntax unified
  621              		.thumb
@@ -729,7 +730,6 @@ ARM GAS  /tmp/cc1jypKt.s 			page 1
  625              	Motor1_Set_Compare1:
  626              	.LVL62:
  627              	.LFB228:
-  75:usr/ts_foc.c  **** 
   76:usr/ts_foc.c  **** 
   77:usr/ts_foc.c  **** 
   78:usr/ts_foc.c  **** 
@@ -744,22 +744,23 @@ ARM GAS  /tmp/cc1jypKt.s 			page 1
   87:usr/ts_foc.c  **** 
   88:usr/ts_foc.c  **** 
   89:usr/ts_foc.c  **** 
-  90:usr/ts_foc.c  **** /// @brief 设置电机1通道1pwm输出占空比
-  91:usr/ts_foc.c  **** /// @param compare 占空比值
-  92:usr/ts_foc.c  **** void __attribute__((weak)) Motor1_Set_Compare1(uint32_t compare) 
-  93:usr/ts_foc.c  **** {
- 628              		.loc 1 93 1 is_stmt 1 view -0
+  90:usr/ts_foc.c  **** 
+  91:usr/ts_foc.c  **** /// @brief 设置电机1通道1pwm输出占空比
+  92:usr/ts_foc.c  **** /// @param compare 占空比值
+  93:usr/ts_foc.c  **** void __attribute__((weak)) Motor1_Set_Compare1(uint32_t compare) 
+  94:usr/ts_foc.c  **** {
+ 628              		.loc 1 94 1 is_stmt 1 view -0
  629              		.cfi_startproc
  630              		@ args = 0, pretend = 0, frame = 0
  631              		@ frame_needed = 0, uses_anonymous_args = 0
  632              		@ link register save eliminated.
-  94:usr/ts_foc.c  ****     __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_1, compare);
- 633              		.loc 1 94 5 view .LVU124
+  95:usr/ts_foc.c  ****     __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_1, compare);
+ 633              		.loc 1 95 5 view .LVU124
  634 0000 014B     		ldr	r3, .L43
  635 0002 1B68     		ldr	r3, [r3]
  636 0004 5863     		str	r0, [r3, #52]
-  95:usr/ts_foc.c  **** }
- 637              		.loc 1 95 1 is_stmt 0 view .LVU125
+  96:usr/ts_foc.c  **** }
+ 637              		.loc 1 96 1 is_stmt 0 view .LVU125
  638 0006 7047     		bx	lr
  639              	.L44:
  640              		.align	2
@@ -777,26 +778,26 @@ ARM GAS  /tmp/cc1jypKt.s 			page 1
  654              	Motor1_Set_Compare2:
  655              	.LVL63:
  656              	.LFB229:
-  96:usr/ts_foc.c  **** 
-ARM GAS  /tmp/cc1jypKt.s 			page 14
+ARM GAS  /tmp/ccCsV3BB.s 			page 14
 
 
-  97:usr/ts_foc.c  **** /// @brief 设置电机1通道2pwm输出占空比
-  98:usr/ts_foc.c  **** /// @param compare 占空比值
-  99:usr/ts_foc.c  **** void __attribute__((weak)) Motor1_Set_Compare2(uint32_t compare) 
- 100:usr/ts_foc.c  **** {
- 657              		.loc 1 100 1 is_stmt 1 view -0
+  97:usr/ts_foc.c  **** 
+  98:usr/ts_foc.c  **** /// @brief 设置电机1通道2pwm输出占空比
+  99:usr/ts_foc.c  **** /// @param compare 占空比值
+ 100:usr/ts_foc.c  **** void __attribute__((weak)) Motor1_Set_Compare2(uint32_t compare) 
+ 101:usr/ts_foc.c  **** {
+ 657              		.loc 1 101 1 is_stmt 1 view -0
  658              		.cfi_startproc
  659              		@ args = 0, pretend = 0, frame = 0
  660              		@ frame_needed = 0, uses_anonymous_args = 0
  661              		@ link register save eliminated.
- 101:usr/ts_foc.c  ****     __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_3, compare);
- 662              		.loc 1 101 5 view .LVU127
+ 102:usr/ts_foc.c  ****     __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_3, compare);
+ 662              		.loc 1 102 5 view .LVU127
  663 0000 014B     		ldr	r3, .L46
  664 0002 1B68     		ldr	r3, [r3]
  665 0004 D863     		str	r0, [r3, #60]
- 102:usr/ts_foc.c  **** }
- 666              		.loc 1 102 1 is_stmt 0 view .LVU128
+ 103:usr/ts_foc.c  **** }
+ 666              		.loc 1 103 1 is_stmt 0 view .LVU128
  667 0006 7047     		bx	lr
  668              	.L47:
  669              		.align	2
@@ -814,33 +815,33 @@ ARM GAS  /tmp/cc1jypKt.s 			page 1
  683              	Motor1_Set_Compare3:
  684              	.LVL64:
  685              	.LFB230:
- 103:usr/ts_foc.c  **** 
- 104:usr/ts_foc.c  **** /// @brief 设置电机1通道3pwm输出占空比
- 105:usr/ts_foc.c  **** /// @param compare 占空比值
- 106:usr/ts_foc.c  **** void __attribute__((weak)) Motor1_Set_Compare3(uint32_t compare) 
- 107:usr/ts_foc.c  **** {
- 686              		.loc 1 107 1 is_stmt 1 view -0
+ 104:usr/ts_foc.c  **** 
+ 105:usr/ts_foc.c  **** /// @brief 设置电机1通道3pwm输出占空比
+ 106:usr/ts_foc.c  **** /// @param compare 占空比值
+ 107:usr/ts_foc.c  **** void __attribute__((weak)) Motor1_Set_Compare3(uint32_t compare) 
+ 108:usr/ts_foc.c  **** {
+ 686              		.loc 1 108 1 is_stmt 1 view -0
  687              		.cfi_startproc
  688              		@ args = 0, pretend = 0, frame = 0
  689              		@ frame_needed = 0, uses_anonymous_args = 0
  690              		@ link register save eliminated.
- 108:usr/ts_foc.c  ****     __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_1, compare);
- 691              		.loc 1 108 5 view .LVU130
+ 109:usr/ts_foc.c  ****     __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_1, compare);
+ 691              		.loc 1 109 5 view .LVU130
  692 0000 014B     		ldr	r3, .L49
  693 0002 1B68     		ldr	r3, [r3]
  694 0004 5863     		str	r0, [r3, #52]
- 109:usr/ts_foc.c  **** }
- 695              		.loc 1 109 1 is_stmt 0 view .LVU131
+ 110:usr/ts_foc.c  **** }
+ 695              		.loc 1 110 1 is_stmt 0 view .LVU131
  696 0006 7047     		bx	lr
  697              	.L50:
  698              		.align	2
  699              	.L49:
  700 0008 00000000 		.word	htim3
  701              		.cfi_endproc
+ARM GAS  /tmp/ccCsV3BB.s 			page 15
+
+
  702              	.LFE230:
-ARM GAS  /tmp/cc1jypKt.s 			page 15
-
-
  704              		.section	.text.Motor2_Set_Compare1,"ax",%progbits
  705              		.align	1
  706              		.weak	Motor2_Set_Compare1
@@ -851,23 +852,23 @@ ARM GAS  /tmp/cc1jypKt.s 			page 1
  712              	Motor2_Set_Compare1:
  713              	.LVL65:
  714              	.LFB231:
- 110:usr/ts_foc.c  **** 
- 111:usr/ts_foc.c  **** /// @brief 设置电机2通道1pwm输出占空比
- 112:usr/ts_foc.c  **** /// @param compare 占空比值
- 113:usr/ts_foc.c  **** void __attribute__((weak)) Motor2_Set_Compare1(uint32_t compare) 
- 114:usr/ts_foc.c  **** {
- 715              		.loc 1 114 1 is_stmt 1 view -0
+ 111:usr/ts_foc.c  **** 
+ 112:usr/ts_foc.c  **** /// @brief 设置电机2通道1pwm输出占空比
+ 113:usr/ts_foc.c  **** /// @param compare 占空比值
+ 114:usr/ts_foc.c  **** void __attribute__((weak)) Motor2_Set_Compare1(uint32_t compare) 
+ 115:usr/ts_foc.c  **** {
+ 715              		.loc 1 115 1 is_stmt 1 view -0
  716              		.cfi_startproc
  717              		@ args = 0, pretend = 0, frame = 0
  718              		@ frame_needed = 0, uses_anonymous_args = 0
  719              		@ link register save eliminated.
- 115:usr/ts_foc.c  ****     __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_2, compare);
- 720              		.loc 1 115 5 view .LVU133
+ 116:usr/ts_foc.c  ****     __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_2, compare);
+ 720              		.loc 1 116 5 view .LVU133
  721 0000 014B     		ldr	r3, .L52
  722 0002 1B68     		ldr	r3, [r3]
  723 0004 9863     		str	r0, [r3, #56]
- 116:usr/ts_foc.c  **** }
- 724              		.loc 1 116 1 is_stmt 0 view .LVU134
+ 117:usr/ts_foc.c  **** }
+ 724              		.loc 1 117 1 is_stmt 0 view .LVU134
  725 0006 7047     		bx	lr
  726              	.L53:
  727              		.align	2
@@ -885,26 +886,26 @@ ARM GAS  /tmp/cc1jypKt.s 			page 1
  741              	Motor2_Set_Compare2:
  742              	.LVL66:
  743              	.LFB232:
- 117:usr/ts_foc.c  **** 
- 118:usr/ts_foc.c  **** /// @brief 设置电机2通道2pwm输出占空比
- 119:usr/ts_foc.c  **** /// @param compare 占空比值
- 120:usr/ts_foc.c  **** void __attribute__((weak)) Motor2_Set_Compare2(uint32_t compare) 
- 121:usr/ts_foc.c  **** {
- 744              		.loc 1 121 1 is_stmt 1 view -0
+ 118:usr/ts_foc.c  **** 
+ 119:usr/ts_foc.c  **** /// @brief 设置电机2通道2pwm输出占空比
+ 120:usr/ts_foc.c  **** /// @param compare 占空比值
+ 121:usr/ts_foc.c  **** void __attribute__((weak)) Motor2_Set_Compare2(uint32_t compare) 
+ 122:usr/ts_foc.c  **** {
+ 744              		.loc 1 122 1 is_stmt 1 view -0
  745              		.cfi_startproc
  746              		@ args = 0, pretend = 0, frame = 0
  747              		@ frame_needed = 0, uses_anonymous_args = 0
  748              		@ link register save eliminated.
- 122:usr/ts_foc.c  ****     __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_3, compare);
- 749              		.loc 1 122 5 view .LVU136
+ 123:usr/ts_foc.c  ****     __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_3, compare);
+ 749              		.loc 1 123 5 view .LVU136
+ARM GAS  /tmp/ccCsV3BB.s 			page 16
+
+
  750 0000 014B     		ldr	r3, .L55
-ARM GAS  /tmp/cc1jypKt.s 			page 16
-
-
  751 0002 1B68     		ldr	r3, [r3]
  752 0004 D863     		str	r0, [r3, #60]
- 123:usr/ts_foc.c  **** }
- 753              		.loc 1 123 1 is_stmt 0 view .LVU137
+ 124:usr/ts_foc.c  **** }
+ 753              		.loc 1 124 1 is_stmt 0 view .LVU137
  754 0006 7047     		bx	lr
  755              	.L56:
  756              		.align	2
@@ -922,23 +923,23 @@ ARM GAS  /tmp/cc1jypKt.s 			page 1
  770              	Motor2_Set_Compare3:
  771              	.LVL67:
  772              	.LFB233:
- 124:usr/ts_foc.c  **** 
- 125:usr/ts_foc.c  **** /// @brief 设置电机2通道3pwm输出占空比
- 126:usr/ts_foc.c  **** /// @param compare 占空比值
- 127:usr/ts_foc.c  **** void __attribute__((weak)) Motor2_Set_Compare3(uint32_t compare) 
- 128:usr/ts_foc.c  **** {
- 773              		.loc 1 128 1 is_stmt 1 view -0
+ 125:usr/ts_foc.c  **** 
+ 126:usr/ts_foc.c  **** /// @brief 设置电机2通道3pwm输出占空比
+ 127:usr/ts_foc.c  **** /// @param compare 占空比值
+ 128:usr/ts_foc.c  **** void __attribute__((weak)) Motor2_Set_Compare3(uint32_t compare) 
+ 129:usr/ts_foc.c  **** {
+ 773              		.loc 1 129 1 is_stmt 1 view -0
  774              		.cfi_startproc
  775              		@ args = 0, pretend = 0, frame = 0
  776              		@ frame_needed = 0, uses_anonymous_args = 0
  777              		@ link register save eliminated.
- 129:usr/ts_foc.c  ****     __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_4, compare);
- 778              		.loc 1 129 5 view .LVU139
+ 130:usr/ts_foc.c  ****     __HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_4, compare);
+ 778              		.loc 1 130 5 view .LVU139
  779 0000 014B     		ldr	r3, .L58
  780 0002 1B68     		ldr	r3, [r3]
  781 0004 1864     		str	r0, [r3, #64]
- 130:usr/ts_foc.c  **** }
- 782              		.loc 1 130 1 is_stmt 0 view .LVU140
+ 131:usr/ts_foc.c  **** }
+ 782              		.loc 1 131 1 is_stmt 0 view .LVU140
  783 0006 7047     		bx	lr
  784              	.L59:
  785              		.align	2
@@ -957,49 +958,49 @@ ARM GAS  /tmp/cc1jypKt.s 			page 1
  799              		.file 8 "usr/pid.h"
  800              		.file 9 "usr/lowpass_filter.h"
  801              		.file 10 "usr/inlinecurrent.h"
+ARM GAS  /tmp/ccCsV3BB.s 			page 17
+
+
  802              		.file 11 "Core/Inc/tim.h"
-ARM GAS  /tmp/cc1jypKt.s 			page 17
-
-
  803              		.file 12 "usr/ts_foc.h"
  804              		.file 13 "/usr/include/newlib/math.h"
-ARM GAS  /tmp/cc1jypKt.s 			page 18
+ARM GAS  /tmp/ccCsV3BB.s 			page 18
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 ts_foc.c
-     /tmp/cc1jypKt.s:20     .text._normalizeRadian:0000000000000000 $t
-     /tmp/cc1jypKt.s:28     .text._normalizeRadian:0000000000000000 _normalizeRadian
-     /tmp/cc1jypKt.s:74     .text._normalizeRadian:0000000000000038 $d
-     /tmp/cc1jypKt.s:81     .text._normalizeAngle:0000000000000000 $t
-     /tmp/cc1jypKt.s:88     .text._normalizeAngle:0000000000000000 _normalizeAngle
-     /tmp/cc1jypKt.s:133    .text._normalizeAngle:0000000000000038 $d
-     /tmp/cc1jypKt.s:140    .text._electricalAngle:0000000000000000 $t
-     /tmp/cc1jypKt.s:147    .text._electricalAngle:0000000000000000 _electricalAngle
-     /tmp/cc1jypKt.s:189    .text.setPwm:0000000000000000 $t
-     /tmp/cc1jypKt.s:196    .text.setPwm:0000000000000000 setPwm
-     /tmp/cc1jypKt.s:384    .text.setPwm:0000000000000120 $d
-     /tmp/cc1jypKt.s:393    .text.setTorque:0000000000000000 $t
-     /tmp/cc1jypKt.s:400    .text.setTorque:0000000000000000 setTorque
-     /tmp/cc1jypKt.s:611    .text.setTorque:0000000000000158 $d
-     /tmp/cc1jypKt.s:618    .text.Motor1_Set_Compare1:0000000000000000 $t
-     /tmp/cc1jypKt.s:625    .text.Motor1_Set_Compare1:0000000000000000 Motor1_Set_Compare1
-     /tmp/cc1jypKt.s:642    .text.Motor1_Set_Compare1:0000000000000008 $d
-     /tmp/cc1jypKt.s:647    .text.Motor1_Set_Compare2:0000000000000000 $t
-     /tmp/cc1jypKt.s:654    .text.Motor1_Set_Compare2:0000000000000000 Motor1_Set_Compare2
-     /tmp/cc1jypKt.s:671    .text.Motor1_Set_Compare2:0000000000000008 $d
-     /tmp/cc1jypKt.s:676    .text.Motor1_Set_Compare3:0000000000000000 $t
-     /tmp/cc1jypKt.s:683    .text.Motor1_Set_Compare3:0000000000000000 Motor1_Set_Compare3
-     /tmp/cc1jypKt.s:700    .text.Motor1_Set_Compare3:0000000000000008 $d
-     /tmp/cc1jypKt.s:705    .text.Motor2_Set_Compare1:0000000000000000 $t
-     /tmp/cc1jypKt.s:712    .text.Motor2_Set_Compare1:0000000000000000 Motor2_Set_Compare1
-     /tmp/cc1jypKt.s:729    .text.Motor2_Set_Compare1:0000000000000008 $d
-     /tmp/cc1jypKt.s:734    .text.Motor2_Set_Compare2:0000000000000000 $t
-     /tmp/cc1jypKt.s:741    .text.Motor2_Set_Compare2:0000000000000000 Motor2_Set_Compare2
-     /tmp/cc1jypKt.s:758    .text.Motor2_Set_Compare2:0000000000000008 $d
-     /tmp/cc1jypKt.s:763    .text.Motor2_Set_Compare3:0000000000000000 $t
-     /tmp/cc1jypKt.s:770    .text.Motor2_Set_Compare3:0000000000000000 Motor2_Set_Compare3
-     /tmp/cc1jypKt.s:787    .text.Motor2_Set_Compare3:0000000000000008 $d
+     /tmp/ccCsV3BB.s:20     .text._normalizeRadian:0000000000000000 $t
+     /tmp/ccCsV3BB.s:28     .text._normalizeRadian:0000000000000000 _normalizeRadian
+     /tmp/ccCsV3BB.s:74     .text._normalizeRadian:0000000000000038 $d
+     /tmp/ccCsV3BB.s:81     .text._normalizeAngle:0000000000000000 $t
+     /tmp/ccCsV3BB.s:88     .text._normalizeAngle:0000000000000000 _normalizeAngle
+     /tmp/ccCsV3BB.s:133    .text._normalizeAngle:0000000000000038 $d
+     /tmp/ccCsV3BB.s:140    .text._electricalAngle:0000000000000000 $t
+     /tmp/ccCsV3BB.s:147    .text._electricalAngle:0000000000000000 _electricalAngle
+     /tmp/ccCsV3BB.s:189    .text.setPwm:0000000000000000 $t
+     /tmp/ccCsV3BB.s:196    .text.setPwm:0000000000000000 setPwm
+     /tmp/ccCsV3BB.s:384    .text.setPwm:0000000000000120 $d
+     /tmp/ccCsV3BB.s:393    .text.setTorque:0000000000000000 $t
+     /tmp/ccCsV3BB.s:400    .text.setTorque:0000000000000000 setTorque
+     /tmp/ccCsV3BB.s:611    .text.setTorque:0000000000000158 $d
+     /tmp/ccCsV3BB.s:618    .text.Motor1_Set_Compare1:0000000000000000 $t
+     /tmp/ccCsV3BB.s:625    .text.Motor1_Set_Compare1:0000000000000000 Motor1_Set_Compare1
+     /tmp/ccCsV3BB.s:642    .text.Motor1_Set_Compare1:0000000000000008 $d
+     /tmp/ccCsV3BB.s:647    .text.Motor1_Set_Compare2:0000000000000000 $t
+     /tmp/ccCsV3BB.s:654    .text.Motor1_Set_Compare2:0000000000000000 Motor1_Set_Compare2
+     /tmp/ccCsV3BB.s:671    .text.Motor1_Set_Compare2:0000000000000008 $d
+     /tmp/ccCsV3BB.s:676    .text.Motor1_Set_Compare3:0000000000000000 $t
+     /tmp/ccCsV3BB.s:683    .text.Motor1_Set_Compare3:0000000000000000 Motor1_Set_Compare3
+     /tmp/ccCsV3BB.s:700    .text.Motor1_Set_Compare3:0000000000000008 $d
+     /tmp/ccCsV3BB.s:705    .text.Motor2_Set_Compare1:0000000000000000 $t
+     /tmp/ccCsV3BB.s:712    .text.Motor2_Set_Compare1:0000000000000000 Motor2_Set_Compare1
+     /tmp/ccCsV3BB.s:729    .text.Motor2_Set_Compare1:0000000000000008 $d
+     /tmp/ccCsV3BB.s:734    .text.Motor2_Set_Compare2:0000000000000000 $t
+     /tmp/ccCsV3BB.s:741    .text.Motor2_Set_Compare2:0000000000000000 Motor2_Set_Compare2
+     /tmp/ccCsV3BB.s:758    .text.Motor2_Set_Compare2:0000000000000008 $d
+     /tmp/ccCsV3BB.s:763    .text.Motor2_Set_Compare3:0000000000000000 $t
+     /tmp/ccCsV3BB.s:770    .text.Motor2_Set_Compare3:0000000000000000 Motor2_Set_Compare3
+     /tmp/ccCsV3BB.s:787    .text.Motor2_Set_Compare3:0000000000000008 $d
 
 UNDEFINED SYMBOLS
 __aeabi_f2d

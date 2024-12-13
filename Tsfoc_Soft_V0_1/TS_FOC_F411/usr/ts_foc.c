@@ -26,7 +26,8 @@ float _normalizeAngle(float angle) {
 /// @return float
 float _electricalAngle(Motor* motor)
 {
-    return  _normalizeAngle((float)(motor->DIR *  motor->PP) * motor->As5600_Sensor->Angle-motor->zero_electric_angle);
+    // return  _normalizeAngle((float)(motor->DIR *  motor->PP) * motor->As5600_Sensor->Angle-motor->zero_electric_angle);
+    return  _normalizeRadian((float)(motor->DIR *  motor->PP) * motor->As5600_Sensor->Angle-motor->zero_electric_angle);
 }
 
 

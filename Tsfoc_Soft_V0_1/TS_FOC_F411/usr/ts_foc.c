@@ -60,7 +60,7 @@ void setPwm(Motor* motor, float Ua, float Ub, float Uc)
 void setTorque(Motor* motor,float Uq,float angle_el)
 {
 //   AS5600_Sensor_update(motor->As5600_Sensor); //更新传感器数值
-  Uq=_constrain(Uq,-(motor->voltage_power_supply)/2,(motor->voltage_power_supply)/2);
+  Uq=_constrain(Uq,-1,1);
 
   angle_el = _normalizeAngle(angle_el);
   // 帕克逆变换

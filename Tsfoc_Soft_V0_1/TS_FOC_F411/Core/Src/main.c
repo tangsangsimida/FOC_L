@@ -123,7 +123,9 @@ int main(void)
   MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
 
-  // HAL_ADC_Start_DMA(&hadc1, (uint32_t*)&adc_buffer, 6); // Start ADC DMA
+
+  // HAL_ADC_Start_DMA(&hadc1, (uint32_t*)&adc_buffer, 1); // Start ADC DMA
+
   HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1); // Start PWM timer
   HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_3); // Start PWM timer  
   HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1); // Start PWM timer
@@ -133,12 +135,14 @@ int main(void)
 
 
 
+
   Motor * motor1;
   motor1 = (Motor *)malloc(sizeof(Motor) * 1);
   motor1->Motor_ID = 1;
-  motor1->PP = 7;
+  motor1->PP = 7;  
   motor1->DIR = 1;
   motor1->As5600_Sensor = (As5600_Sensor_Typedef *)malloc(sizeof(As5600_Sensor_Typedef) * 1);
+  motor1->As5600_Sensor->Rotations = 0;
   Read_AS5600_Angle(motor1->As5600_Sensor);
   motor1->Motor_Set_Compare1 = Motor1_Set_Compare1;
   motor1->Motor_Set_Compare2 = Motor1_Set_Compare2;
@@ -154,14 +158,15 @@ int main(void)
   Read_AS5600_Angle(motor1->As5600_Sensor);
   //计算0电角度->后续规整到电机初始化当中
   setTorque(motor1,2, _3PI_2);
-  HAL_Delay(3000);
+  HAL_Delay(1000);  
+  Read_AS5600_Angle(motor1->As5600_Sensor);
   motor1->zero_electric_angle = _electricalAngle(motor1);
   setTorque(motor1,0, _3PI_2);
-  sprintf(Uart_DeBug_Buffer,"0电角度:%d\r\n",(int)motor1->zero_electric_angle);
-  HAL_UART_Transmit(Uart_DeBug, (uint8_t*)Uart_DeBug_Buffer, strlen(Uart_DeBug_Buffer), 100);
-  HAL_Delay(2000);
+  printf("0电角度:%d\r\n",(int)(motor1->zero_electric_angle*1000));
+  HAL_Delay(1000);
   printf("init_ok\r\n");
 
+  float Kp = 0.05; //位置环比例系数
   while (1)
   {
     // HAL_Delay(100);
@@ -169,9 +174,12 @@ int main(void)
     HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
 
     Read_AS5600_Angle(motor1->As5600_Sensor);   // Read the angle of the AS5600 sensor
-    // printf("Angle:%d\r\n",(int)Read_AS5600_Angle(motor1->As5600_Sensor));
-    setTorque(motor1, 5, _electricalAngle(motor1));   //力矩闭环
-    // setTorque(motor1,Kp*(120-motor1->DIR*Read_AS5600_Angle(motor1->As5600_Sensor)),_electricalAngle(motor1));   //位置闭环
+
+    printf("Angle:%d,圈数:%d\r\n",(int)(Get_AS5600_Angle(motor1->As5600_Sensor)*1000),(int)(motor1->As5600_Sensor->Rotations));
+
+
+    // setTorque(motor1, 1, _electricalAngle(motor1));   //力矩闭环
+    setTorque(motor1,Kp*(3.-motor1->DIR*Get_AS5600_Angle(motor1->As5600_Sensor))*180./PI,_electricalAngle(motor1));   //位置闭环
 
 
 

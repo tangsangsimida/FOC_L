@@ -37,6 +37,7 @@
 #include "pid.h"
 #include "inlinecurrent.h"
 #include "user_api.h"
+#include "get_cmd.h"
 
 /* USER CODE END Includes */
 
@@ -60,6 +61,8 @@ PUTCHAR_PROTOTYPE
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
 
+float target_angle = 0; //目标角度
+float target_torque = 0; //目标力矩
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -166,7 +169,8 @@ int main(void)
   HAL_Delay(1000);
   printf("init_ok\r\n");
 
-  float Kp = 0.05; //位置环比例系数
+  float Kp = 0.133; //位置环比例系数
+
   while (1)
   {
     // HAL_Delay(100);
@@ -175,11 +179,11 @@ int main(void)
 
     Read_AS5600_Angle(motor1->As5600_Sensor);   // Read the angle of the AS5600 sensor
 
-    printf("Angle:%d,圈数:%d\r\n",(int)(Get_AS5600_Angle(motor1->As5600_Sensor)*1000),(int)(motor1->As5600_Sensor->Rotations));
+    // printf("Angle:%d,圈数:%d\r\n",(int)(Get_AS5600_Angle(motor1->As5600_Sensor)*1000),(int)(motor1->As5600_Sensor->Rotations));
 
-
-    // setTorque(motor1, 1, _electricalAngle(motor1));   //力矩闭环
-    setTorque(motor1,Kp*(3.-motor1->DIR*Get_AS5600_Angle(motor1->As5600_Sensor))*180./PI,_electricalAngle(motor1));   //位置闭环
+    Get_Cmd(&huart1); //获取指令
+    // setTorque(motor1, target_torque, _electricalAngle(motor1));   //力矩闭环
+    setTorque(motor1,Kp*(target_angle-motor1->DIR*Get_AS5600_Angle(motor1->As5600_Sensor))*180./PI,_electricalAngle(motor1));   //位置闭环
 
 
 

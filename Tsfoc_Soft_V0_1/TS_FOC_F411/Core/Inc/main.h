@@ -41,7 +41,8 @@ extern "C" {
 
 /* Exported constants --------------------------------------------------------*/
 /* USER CODE BEGIN EC */
-
+extern float target_angle; //目标角度
+extern float target_torque; //目标力矩
 /* USER CODE END EC */
 
 /* Exported macro ------------------------------------------------------------*/

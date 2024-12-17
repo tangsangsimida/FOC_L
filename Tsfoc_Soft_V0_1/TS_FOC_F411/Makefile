@@ -70,6 +70,7 @@ usr/pid.c \
 usr/ts_foc.c \
 usr/lowpass_filter.c \
 usr/inlinecurrent.c \
+usr/get_cmd.c \
 Core/Src/adc.c \
 Core/Src/tim.c \
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c \

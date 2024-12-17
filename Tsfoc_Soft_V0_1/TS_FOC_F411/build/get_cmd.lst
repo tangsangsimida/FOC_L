@@ -1,0 +1,429 @@
+ARM GAS  /tmp/ccJ3XYuc.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 27, 1
+   3              		.eabi_attribute 28, 1
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"get_cmd.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.rodata.Get_Cmd.str1.4,"aMS",%progbits,1
+  18              		.align	2
+  19              	.LC0:
+  20 0000 7365745F 		.ascii	"set_angle:\000"
+  20      616E676C 
+  20      653A00
+  21 000b 00       		.align	2
+  22              	.LC1:
+  23 000c 25730D0A 		.ascii	"%s\015\012\000"
+  23      00
+  24              		.global	__aeabi_d2f
+  25 0011 000000   		.align	2
+  26              	.LC2:
+  27 0014 7365745F 		.ascii	"set_torque:\000"
+  27      746F7271 
+  27      75653A00 
+  28              		.section	.text.Get_Cmd,"ax",%progbits
+  29              		.align	1
+  30              		.global	Get_Cmd
+  31              		.arch armv7e-m
+  32              		.syntax unified
+  33              		.thumb
+  34              		.thumb_func
+  35              		.fpu fpv4-sp-d16
+  37              	Get_Cmd:
+  38              	.LVL0:
+  39              	.LFB223:
+  40              		.file 1 "usr/get_cmd.c"
+   1:usr/get_cmd.c **** #include "get_cmd.h"
+   2:usr/get_cmd.c **** 
+   3:usr/get_cmd.c **** struct UART_RECEIVE_IDLE_DataStructure
+   4:usr/get_cmd.c **** {
+   5:usr/get_cmd.c **** 	volatile uint8_t rxlen; 
+   6:usr/get_cmd.c **** 	volatile uint8_t rxok; 
+   7:usr/get_cmd.c **** 	uint8_t rxbuf[UART_RECEIVE_IDLE_RX_MAXLEN]; 
+   8:usr/get_cmd.c **** } Uart_Receive_Data ={ 0, 1 };
+   9:usr/get_cmd.c **** 
+  10:usr/get_cmd.c **** 
+  11:usr/get_cmd.c **** int8_t Get_Cmd(UART_HandleTypeDef *huart)
+  12:usr/get_cmd.c **** {
+  41              		.loc 1 12 1 view -0
+ARM GAS  /tmp/ccJ3XYuc.s 			page 2
+
+
+  42              		.cfi_startproc
+  43              		@ args = 0, pretend = 0, frame = 0
+  44              		@ frame_needed = 0, uses_anonymous_args = 0
+  45              		.loc 1 12 1 is_stmt 0 view .LVU1
+  46 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+  47              	.LCFI0:
+  48              		.cfi_def_cfa_offset 24
+  49              		.cfi_offset 3, -24
+  50              		.cfi_offset 4, -20
+  51              		.cfi_offset 5, -16
+  52              		.cfi_offset 6, -12
+  53              		.cfi_offset 7, -8
+  54              		.cfi_offset 14, -4
+  13:usr/get_cmd.c **** 
+  14:usr/get_cmd.c **** 	int8_t nret = 0;
+  55              		.loc 1 14 2 is_stmt 1 view .LVU2
+  56              	.LVL1:
+  15:usr/get_cmd.c **** 	if (Uart_Receive_Data.rxok == 0)
+  57              		.loc 1 15 2 view .LVU3
+  58              		.loc 1 15 23 is_stmt 0 view .LVU4
+  59 0002 234B     		ldr	r3, .L7
+  60 0004 5B78     		ldrb	r3, [r3, #1]	@ zero_extendqisi2
+  61              		.loc 1 15 5 view .LVU5
+  62 0006 002B     		cmp	r3, #0
+  63 0008 3FD0     		beq	.L5
+  64 000a 0646     		mov	r6, r0
+  16:usr/get_cmd.c **** 	{
+  17:usr/get_cmd.c **** 		nret = -1;
+  18:usr/get_cmd.c **** 	}
+  19:usr/get_cmd.c **** 	else
+  20:usr/get_cmd.c **** 	{
+  21:usr/get_cmd.c **** 		if (nret == 0)
+  65              		.loc 1 21 3 is_stmt 1 view .LVU6
+  66              	.LBB2:
+  22:usr/get_cmd.c **** 		{
+  23:usr/get_cmd.c ****             //数据接收成功
+  24:usr/get_cmd.c ****             char *command = (char *)Uart_Receive_Data.rxbuf; // 指向 cmd_data.data 的起始地�
+  67              		.loc 1 24 13 view .LVU7
+  68              	.LVL2:
+  25:usr/get_cmd.c ****             char *angle_str;
+  69              		.loc 1 25 13 view .LVU8
+  26:usr/get_cmd.c **** 			char *torque_str;
+  70              		.loc 1 26 4 view .LVU9
+  27:usr/get_cmd.c **** 
+  28:usr/get_cmd.c ****             angle_str = strstr(command, "set_angle:"); // 找到 "set_angle:" 的位置
+  71              		.loc 1 28 13 view .LVU10
+  72              		.loc 1 28 25 is_stmt 0 view .LVU11
+  73 000c 2149     		ldr	r1, .L7+4
+  74 000e 2248     		ldr	r0, .L7+8
+  75              	.LVL3:
+  76              		.loc 1 28 25 view .LVU12
+  77 0010 FFF7FEFF 		bl	strstr
+  78              	.LVL4:
+  29:usr/get_cmd.c ****             if (angle_str != NULL) {
+  79              		.loc 1 29 13 is_stmt 1 view .LVU13
+  80              		.loc 1 29 16 is_stmt 0 view .LVU14
+  81 0014 0446     		mov	r4, r0
+ARM GAS  /tmp/ccJ3XYuc.s 			page 3
+
+
+  82 0016 68B1     		cbz	r0, .L3
+  83              	.LBB3:
+  30:usr/get_cmd.c ****                 angle_str += strlen("set_angle:"); // 指向角度值的起始位置
+  84              		.loc 1 30 17 is_stmt 1 view .LVU15
+  85              		.loc 1 30 27 is_stmt 0 view .LVU16
+  86 0018 0A34     		adds	r4, r4, #10
+  87              	.LVL5:
+  31:usr/get_cmd.c ****                 printf("%s\r\n",angle_str);
+  88              		.loc 1 31 17 is_stmt 1 view .LVU17
+  89 001a 2146     		mov	r1, r4
+  90 001c 1F48     		ldr	r0, .L7+12
+  91 001e FFF7FEFF 		bl	printf
+  92              	.LVL6:
+  32:usr/get_cmd.c ****                 float angle = atof(angle_str); // 将字符串转换为浮点数
+  93              		.loc 1 32 17 view .LVU18
+  94              		.loc 1 32 31 is_stmt 0 view .LVU19
+  95 0022 2046     		mov	r0, r4
+  96 0024 FFF7FEFF 		bl	atof
+  97              	.LVL7:
+  98 0028 51EC100B 		vmov	r0, r1, d0
+  99              		.loc 1 32 23 view .LVU20
+ 100 002c FFF7FEFF 		bl	__aeabi_d2f
+ 101              	.LVL8:
+  33:usr/get_cmd.c ****                 // printf("设置角度为:%f\r\n",angle);
+  34:usr/get_cmd.c ****                 target_angle = angle;
+ 102              		.loc 1 34 17 is_stmt 1 view .LVU21
+ 103              		.loc 1 34 30 is_stmt 0 view .LVU22
+ 104 0030 1B4B     		ldr	r3, .L7+16
+ 105 0032 1860     		str	r0, [r3]	@ float
+ 106              	.LVL9:
+ 107              	.L3:
+ 108              		.loc 1 34 30 view .LVU23
+ 109              	.LBE3:
+  35:usr/get_cmd.c ****             }
+  36:usr/get_cmd.c **** 			torque_str = strstr(command, "set_torque:"); // 找到 "set_torque:" 的位置
+ 110              		.loc 1 36 4 is_stmt 1 view .LVU24
+ 111              		.loc 1 36 17 is_stmt 0 view .LVU25
+ 112 0034 1B49     		ldr	r1, .L7+20
+ 113 0036 1848     		ldr	r0, .L7+8
+ 114 0038 FFF7FEFF 		bl	strstr
+ 115              	.LVL10:
+  37:usr/get_cmd.c ****             if (torque_str != NULL) {
+ 116              		.loc 1 37 13 is_stmt 1 view .LVU26
+ 117              		.loc 1 37 16 is_stmt 0 view .LVU27
+ 118 003c 0446     		mov	r4, r0
+ 119              	.LVL11:
+ 120              		.loc 1 37 16 view .LVU28
+ 121 003e 68B1     		cbz	r0, .L4
+ 122              	.LBB4:
+  38:usr/get_cmd.c ****                 torque_str += strlen("set_torque:"); // 指向力矩值的起始位置
+ 123              		.loc 1 38 17 is_stmt 1 view .LVU29
+ 124              		.loc 1 38 28 is_stmt 0 view .LVU30
+ 125 0040 0B34     		adds	r4, r4, #11
+ 126              	.LVL12:
+  39:usr/get_cmd.c ****                 printf("%s\r\n",torque_str);
+ 127              		.loc 1 39 17 is_stmt 1 view .LVU31
+ 128 0042 2146     		mov	r1, r4
+ARM GAS  /tmp/ccJ3XYuc.s 			page 4
+
+
+ 129 0044 1548     		ldr	r0, .L7+12
+ 130 0046 FFF7FEFF 		bl	printf
+ 131              	.LVL13:
+  40:usr/get_cmd.c ****                 float torque = atof(torque_str); // 将字符串转换为浮点数
+ 132              		.loc 1 40 17 view .LVU32
+ 133              		.loc 1 40 32 is_stmt 0 view .LVU33
+ 134 004a 2046     		mov	r0, r4
+ 135 004c FFF7FEFF 		bl	atof
+ 136              	.LVL14:
+ 137 0050 51EC100B 		vmov	r0, r1, d0
+ 138              		.loc 1 40 23 view .LVU34
+ 139 0054 FFF7FEFF 		bl	__aeabi_d2f
+ 140              	.LVL15:
+  41:usr/get_cmd.c ****                 // printf("设置力矩为:%f\r\n",torque);
+  42:usr/get_cmd.c ****                 target_torque = torque;
+ 141              		.loc 1 42 17 is_stmt 1 view .LVU35
+ 142              		.loc 1 42 31 is_stmt 0 view .LVU36
+ 143 0058 134B     		ldr	r3, .L7+24
+ 144 005a 1860     		str	r0, [r3]	@ float
+ 145              	.LVL16:
+ 146              	.L4:
+ 147              		.loc 1 42 31 view .LVU37
+ 148              	.LBE4:
+ 149              	.LBE2:
+  43:usr/get_cmd.c ****             }
+  44:usr/get_cmd.c **** 
+  45:usr/get_cmd.c **** 
+  46:usr/get_cmd.c **** 		}
+  47:usr/get_cmd.c **** 		Uart_Receive_Data.rxok = 0;
+ 150              		.loc 1 47 3 is_stmt 1 view .LVU38
+ 151              		.loc 1 47 26 is_stmt 0 view .LVU39
+ 152 005c 0C4D     		ldr	r5, .L7
+ 153 005e 0024     		movs	r4, #0
+ 154              	.LVL17:
+ 155              		.loc 1 47 26 view .LVU40
+ 156 0060 6C70     		strb	r4, [r5, #1]
+  48:usr/get_cmd.c **** 		__HAL_UART_ENABLE_IT(huart, UART_IT_IDLE);
+ 157              		.loc 1 48 3 is_stmt 1 view .LVU41
+ 158 0062 3268     		ldr	r2, [r6]
+ 159 0064 D368     		ldr	r3, [r2, #12]
+ 160 0066 43F01003 		orr	r3, r3, #16
+ 161 006a D360     		str	r3, [r2, #12]
+  49:usr/get_cmd.c **** 		memset(Uart_Receive_Data.rxbuf, 0, UART_RECEIVE_IDLE_RX_MAXLEN);
+ 162              		.loc 1 49 3 view .LVU42
+ 163 006c 0235     		adds	r5, r5, #2
+ 164 006e 4FF48077 		mov	r7, #256
+ 165 0072 3A46     		mov	r2, r7
+ 166 0074 2146     		mov	r1, r4
+ 167 0076 2846     		mov	r0, r5
+ 168 0078 FFF7FEFF 		bl	memset
+ 169              	.LVL18:
+  50:usr/get_cmd.c **** 		HAL_UART_Receive_DMA(huart, Uart_Receive_Data.rxbuf, UART_RECEIVE_IDLE_RX_MAXLEN);
+ 170              		.loc 1 50 3 view .LVU43
+ 171 007c 3A46     		mov	r2, r7
+ 172 007e 2946     		mov	r1, r5
+ 173 0080 3046     		mov	r0, r6
+ 174 0082 FFF7FEFF 		bl	HAL_UART_Receive_DMA
+ARM GAS  /tmp/ccJ3XYuc.s 			page 5
+
+
+ 175              	.LVL19:
+  14:usr/get_cmd.c **** 	if (Uart_Receive_Data.rxok == 0)
+ 176              		.loc 1 14 9 is_stmt 0 view .LVU44
+ 177 0086 2046     		mov	r0, r4
+ 178              	.LVL20:
+ 179              	.L2:
+  51:usr/get_cmd.c **** 	}
+  52:usr/get_cmd.c **** 	return nret;
+ 180              		.loc 1 52 2 is_stmt 1 view .LVU45
+  53:usr/get_cmd.c **** }
+ 181              		.loc 1 53 1 is_stmt 0 view .LVU46
+ 182 0088 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 183              	.LVL21:
+ 184              	.L5:
+  17:usr/get_cmd.c **** 	}
+ 185              		.loc 1 17 8 view .LVU47
+ 186 008a 4FF0FF30 		mov	r0, #-1
+ 187              	.LVL22:
+  17:usr/get_cmd.c **** 	}
+ 188              		.loc 1 17 8 view .LVU48
+ 189 008e FBE7     		b	.L2
+ 190              	.L8:
+ 191              		.align	2
+ 192              	.L7:
+ 193 0090 00000000 		.word	.LANCHOR0
+ 194 0094 00000000 		.word	.LC0
+ 195 0098 02000000 		.word	.LANCHOR0+2
+ 196 009c 0C000000 		.word	.LC1
+ 197 00a0 00000000 		.word	target_angle
+ 198 00a4 14000000 		.word	.LC2
+ 199 00a8 00000000 		.word	target_torque
+ 200              		.cfi_endproc
+ 201              	.LFE223:
+ 203              		.section	.text.BSP_UART_IDLE_CallBack,"ax",%progbits
+ 204              		.align	1
+ 205              		.global	BSP_UART_IDLE_CallBack
+ 206              		.syntax unified
+ 207              		.thumb
+ 208              		.thumb_func
+ 209              		.fpu fpv4-sp-d16
+ 211              	BSP_UART_IDLE_CallBack:
+ 212              	.LVL23:
+ 213              	.LFB224:
+  54:usr/get_cmd.c **** 
+  55:usr/get_cmd.c **** /// @brief 空闲中断回调函数
+  56:usr/get_cmd.c **** /// @param huart 
+  57:usr/get_cmd.c **** void BSP_UART_IDLE_CallBack(UART_HandleTypeDef *huart)
+  58:usr/get_cmd.c **** {
+ 214              		.loc 1 58 1 is_stmt 1 view -0
+ 215              		.cfi_startproc
+ 216              		@ args = 0, pretend = 0, frame = 8
+ 217              		@ frame_needed = 0, uses_anonymous_args = 0
+  59:usr/get_cmd.c **** 	if ((__HAL_UART_GET_FLAG(huart, UART_FLAG_IDLE) != RESET))
+ 218              		.loc 1 59 2 view .LVU50
+ 219              		.loc 1 59 7 is_stmt 0 view .LVU51
+ 220 0000 0368     		ldr	r3, [r0]
+ 221 0002 1B68     		ldr	r3, [r3]
+ARM GAS  /tmp/ccJ3XYuc.s 			page 6
+
+
+ 222              		.loc 1 59 5 view .LVU52
+ 223 0004 13F0100F 		tst	r3, #16
+ 224 0008 00D1     		bne	.L15
+ 225 000a 7047     		bx	lr
+ 226              	.L15:
+  58:usr/get_cmd.c **** 	if ((__HAL_UART_GET_FLAG(huart, UART_FLAG_IDLE) != RESET))
+ 227              		.loc 1 58 1 view .LVU53
+ 228 000c 10B5     		push	{r4, lr}
+ 229              	.LCFI1:
+ 230              		.cfi_def_cfa_offset 8
+ 231              		.cfi_offset 4, -8
+ 232              		.cfi_offset 14, -4
+ 233 000e 82B0     		sub	sp, sp, #8
+ 234              	.LCFI2:
+ 235              		.cfi_def_cfa_offset 16
+ 236 0010 0446     		mov	r4, r0
+  60:usr/get_cmd.c **** 	{
+  61:usr/get_cmd.c **** 		HAL_UART_DMAStop(huart);
+ 237              		.loc 1 61 3 is_stmt 1 view .LVU54
+ 238 0012 FFF7FEFF 		bl	HAL_UART_DMAStop
+ 239              	.LVL24:
+  62:usr/get_cmd.c **** 		__HAL_UART_CLEAR_IDLEFLAG(huart);
+ 240              		.loc 1 62 3 view .LVU55
+ 241              	.LBB5:
+ 242              		.loc 1 62 3 view .LVU56
+ 243 0016 0023     		movs	r3, #0
+ 244 0018 0193     		str	r3, [sp, #4]
+ 245              		.loc 1 62 3 view .LVU57
+ 246 001a 2368     		ldr	r3, [r4]
+ 247 001c 1A68     		ldr	r2, [r3]
+ 248 001e 0192     		str	r2, [sp, #4]
+ 249              		.loc 1 62 3 view .LVU58
+ 250 0020 5B68     		ldr	r3, [r3, #4]
+ 251 0022 0193     		str	r3, [sp, #4]
+ 252              		.loc 1 62 3 view .LVU59
+ 253 0024 019B     		ldr	r3, [sp, #4]
+ 254              	.LBE5:
+ 255              		.loc 1 62 3 view .LVU60
+  63:usr/get_cmd.c **** 		Uart_Receive_Data.rxlen = UART_RECEIVE_IDLE_RX_MAXLEN - __HAL_DMA_GET_COUNTER(huart->hdmarx);
+ 256              		.loc 1 63 3 view .LVU61
+ 257              		.loc 1 63 59 is_stmt 0 view .LVU62
+ 258 0026 E36B     		ldr	r3, [r4, #60]
+ 259 0028 1B68     		ldr	r3, [r3]
+ 260 002a 5B68     		ldr	r3, [r3, #4]
+ 261              		.loc 1 63 57 view .LVU63
+ 262 002c 5B42     		rsbs	r3, r3, #0
+ 263 002e DBB2     		uxtb	r3, r3
+ 264              		.loc 1 63 27 view .LVU64
+ 265 0030 024A     		ldr	r2, .L16
+ 266 0032 1370     		strb	r3, [r2]
+  64:usr/get_cmd.c **** 		Uart_Receive_Data.rxok = 1;
+ 267              		.loc 1 64 3 is_stmt 1 view .LVU65
+ 268              		.loc 1 64 26 is_stmt 0 view .LVU66
+ 269 0034 0123     		movs	r3, #1
+ 270 0036 5370     		strb	r3, [r2, #1]
+  65:usr/get_cmd.c **** 	}
+  66:usr/get_cmd.c **** }
+ARM GAS  /tmp/ccJ3XYuc.s 			page 7
+
+
+ 271              		.loc 1 66 1 view .LVU67
+ 272 0038 02B0     		add	sp, sp, #8
+ 273              	.LCFI3:
+ 274              		.cfi_def_cfa_offset 8
+ 275              		@ sp needed
+ 276 003a 10BD     		pop	{r4, pc}
+ 277              	.LVL25:
+ 278              	.L17:
+ 279              		.loc 1 66 1 view .LVU68
+ 280              		.align	2
+ 281              	.L16:
+ 282 003c 00000000 		.word	.LANCHOR0
+ 283              		.cfi_endproc
+ 284              	.LFE224:
+ 286              		.global	Uart_Receive_Data
+ 287              		.section	.data.Uart_Receive_Data,"aw"
+ 288              		.align	2
+ 289              		.set	.LANCHOR0,. + 0
+ 292              	Uart_Receive_Data:
+ 293 0000 00       		.byte	0
+ 294 0001 01       		.byte	1
+ 295 0002 00000000 		.space	256
+ 295      00000000 
+ 295      00000000 
+ 295      00000000 
+ 295      00000000 
+ 296              		.text
+ 297              	.Letext0:
+ 298              		.file 2 "/usr/include/newlib/machine/_default_types.h"
+ 299              		.file 3 "/usr/include/newlib/sys/_stdint.h"
+ 300              		.file 4 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h"
+ 301              		.file 5 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h"
+ 302              		.file 6 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
+ 303              		.file 7 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
+ 304              		.file 8 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h"
+ 305              		.file 9 "Core/Inc/main.h"
+ 306              		.file 10 "usr/get_cmd.h"
+ 307              		.file 11 "/usr/include/newlib/stdio.h"
+ 308              		.file 12 "/usr/include/newlib/stdlib.h"
+ 309              		.file 13 "/usr/include/newlib/string.h"
+ 310              		.file 14 "<built-in>"
+ARM GAS  /tmp/ccJ3XYuc.s 			page 8
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 get_cmd.c
+     /tmp/ccJ3XYuc.s:18     .rodata.Get_Cmd.str1.4:0000000000000000 $d
+     /tmp/ccJ3XYuc.s:29     .text.Get_Cmd:0000000000000000 $t
+     /tmp/ccJ3XYuc.s:37     .text.Get_Cmd:0000000000000000 Get_Cmd
+     /tmp/ccJ3XYuc.s:193    .text.Get_Cmd:0000000000000090 $d
+     /tmp/ccJ3XYuc.s:204    .text.BSP_UART_IDLE_CallBack:0000000000000000 $t
+     /tmp/ccJ3XYuc.s:211    .text.BSP_UART_IDLE_CallBack:0000000000000000 BSP_UART_IDLE_CallBack
+     /tmp/ccJ3XYuc.s:282    .text.BSP_UART_IDLE_CallBack:000000000000003c $d
+     /tmp/ccJ3XYuc.s:292    .data.Uart_Receive_Data:0000000000000000 Uart_Receive_Data
+     /tmp/ccJ3XYuc.s:288    .data.Uart_Receive_Data:0000000000000000 $d
+
+UNDEFINED SYMBOLS
+__aeabi_d2f
+strstr
+printf
+atof
+memset
+HAL_UART_Receive_DMA
+target_angle
+target_torque
+HAL_UART_DMAStop

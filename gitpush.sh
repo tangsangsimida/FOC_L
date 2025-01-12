@@ -4,7 +4,7 @@
 SCRIPT_VERSION="1.0.0"
 
 # 日志文件路径
-LOG_FILE="$(dirname "$0")/.log"
+LOG_FILE="$(dirname "$0")/log"
 MAX_LOG_SIZE=1048576 # 1MB
 
 # 颜色定义
@@ -24,7 +24,7 @@ show_help() {
 
 # 日志函数
 log() {
-    echo -e "$(date '+%Y-%m-%d %H:%M:%S') - $1"
+    echo -e "$(date '+%Y-%m-%d %H:%M:%S') - $1" | tee -a "$LOG_FILE"
 }
 
 # 检查日志文件大小
@@ -35,9 +35,6 @@ if [ -f "$LOG_FILE" ]; then
         > "$LOG_FILE"
     fi
 fi
-
-# 将脚本的输出同时显示在屏幕并写入 log 文件
-exec > >(tee -a "$LOG_FILE") 2>&1
 
 log "${GREEN}欢迎使用TS同步脚本 v$SCRIPT_VERSION${NC}"
 
@@ -63,7 +60,9 @@ fi
 # 开始同步
 start_time=$(date +%s)
 
-git pull
+log "${GREEN}开始同步...${NC}"
+git pull | tee -a "$LOG_FILE"
+echo "" | tee -a "$LOG_FILE"
 if [ $? -ne 0 ]; then
     log "${RED}错误：git pull 失败，请检查网络或仓库状态。${NC}"
     exit 1
@@ -77,10 +76,14 @@ else
     commit_message="同步_$current_date_time"
 fi
 
-git add *
-git commit -m "$commit_message"
+log "${GREEN}正在提交更改...${NC}"
+git add * 
+git commit -m "$commit_message" | tee -a "$LOG_FILE"
+echo "" | tee -a "$LOG_FILE"
 
-git push
+log "${GREEN}正在推送更改...${NC}"
+git push | tee -a "$LOG_FILE"
+echo "" | tee -a "$LOG_FILE"
 if [ $? -ne 0 ]; then
     log "${RED}错误：git push 失败，请检查网络或仓库状态。${NC}"
     exit 1

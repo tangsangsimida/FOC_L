@@ -4,7 +4,7 @@
 SCRIPT_VERSION="1.0.0"
 
 # 日志文件路径
-LOG_FILE="$(dirname "$0")/log"
+LOG_FILE="$(dirname "$0")/.log"
 MAX_LOG_SIZE=1048576 # 1MB
 
 # 颜色定义

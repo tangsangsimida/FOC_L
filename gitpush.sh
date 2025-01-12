@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# 将脚本的输出重定向到当前目录下的 log 文件中
-exec >> log 2>&1
+# 将脚本的输出同时显示在屏幕并写入 log 文件
+exec > >(tee -a log) 2>&1
 
 echo "欢迎使用TS同步脚本，下面开始进行文件同步到云"
 
@@ -22,3 +22,7 @@ git commit -m "$commit_message"
 git push 
 
 echo "同步完成_本次同步时间: $current_date_time"
+
+# 等待用户输入任意键结束
+read -n 1 -s -r -p "脚本执行完成，按任意键结束..."
+echo

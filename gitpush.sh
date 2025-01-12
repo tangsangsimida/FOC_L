@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 将脚本的输出同时显示在屏幕并写入 log 文件
-exec > >(tee -a log) 2>&1
+exec > >(tee -a .log) 2>&1
 
 echo "欢迎使用TS同步脚本，下面开始进行文件同步到云"
 

@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# 将脚本的输出重定向到当前目录下的 log 文件中
+exec >> log 2>&1
+
 echo "欢迎使用TS同步脚本，下面开始进行文件同步到云"
 
 git pull
@@ -19,4 +22,3 @@ git commit -m "$commit_message"
 git push 
 
 echo "同步完成_本次同步时间: $current_date_time"
-

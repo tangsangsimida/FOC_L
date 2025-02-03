@@ -850,6 +850,28 @@
 			)
 		)
 	)
+	(global_label "3V3"
+		(shape bidirectional)
+		(at 148.59 148.59 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "7a20dcb6-8374-48cf-9888-a00b66f53714")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 140.9859 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "DP"
 		(shape bidirectional)
 		(at 158.75 138.43 0)
@@ -940,6 +962,28 @@
 	)
 	(global_label "DP"
 		(shape bidirectional)
+		(at 158.75 148.59 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "faf8846c-da1a-4cc3-a905-273a394e8a4f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 165.3865 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "DP"
+		(shape bidirectional)
 		(at 148.59 97.79 180)
 		(fields_autoplaced yes)
 		(effects
@@ -1020,6 +1064,91 @@
 			(project "Ts_Foc_Vo1_0"
 				(path "/0cbcabec-8024-48c7-ab91-86e279a5637e/f3329442-eac4-40be-b987-eebdbe922017/a35a2634-1c1b-4e39-9abf-0b7a592915e4"
 					(reference "#PWR042")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Ts_Foc_Vo符号库:RES")
+		(at 153.67 148.59 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3609e8ce-81c8-452c-82e4-9cac79694736")
+		(property "Reference" "R37"
+			(at 155.702 150.876 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1.5k"
+			(at 151.384 150.876 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Ts_Foc_Vo封装库:Res_0402"
+			(at 153.924 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 153.67 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 153.67 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "SuppliersPartNumber" "C5200633"
+			(at 153.67 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "uuid" "std:0c78b8f437b74d4badbc2695159e48f2"
+			(at 153.67 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a7de7322-cd57-4c55-80ad-a594cde698dc")
+		)
+		(pin "2"
+			(uuid "4b5c07e5-5798-47d5-8076-b70651a5753f")
+		)
+		(instances
+			(project "Ts_Foc_Vo1_0"
+				(path "/0cbcabec-8024-48c7-ab91-86e279a5637e/f3329442-eac4-40be-b987-eebdbe922017/a35a2634-1c1b-4e39-9abf-0b7a592915e4"
+					(reference "R37")
 					(unit 1)
 				)
 			)

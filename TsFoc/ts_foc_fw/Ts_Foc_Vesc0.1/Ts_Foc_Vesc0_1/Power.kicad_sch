@@ -817,10 +817,22 @@
 		(uuid "925a9a33-0949-4edf-9067-ca0fe28a6b59")
 	)
 	(junction
+		(at 284.48 45.72)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "998fbf08-c745-4ad7-bd2b-1881a7de8ee4")
+	)
+	(junction
 		(at 82.55 88.9)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a1e9e6b4-51bd-4085-9d40-f03274bb0711")
+	)
+	(junction
+		(at 220.98 45.72)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c8351e2d-6239-4bad-82aa-2101de27aad4")
 	)
 	(junction
 		(at 165.1 63.5)
@@ -833,6 +845,17 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f7060781-f05a-46cc-a39e-93d399239857")
+	)
+	(bus
+		(pts
+			(xy 220.98 45.72) (xy 220.98 88.9)
+		)
+		(stroke
+			(width 0.381)
+			(type dash_dot_dot)
+			(color 0 255 30 1)
+		)
+		(uuid "00cd4c73-98fd-4360-b219-2fe98addc10e")
 	)
 	(wire
 		(pts
@@ -909,6 +932,16 @@
 	)
 	(wire
 		(pts
+			(xy 267.97 71.12) (xy 260.35 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1627fc19-8d3a-4ad4-873a-cf6ac1b4c526")
+	)
+	(wire
+		(pts
 			(xy 195.58 57.15) (xy 199.39 57.15)
 		)
 		(stroke
@@ -919,7 +952,7 @@
 	)
 	(bus
 		(pts
-			(xy 284.48 12.7) (xy 284.48 88.9)
+			(xy 284.48 12.7) (xy 284.48 45.72)
 		)
 		(stroke
 			(width 0.381)
@@ -937,6 +970,16 @@
 			(type default)
 		)
 		(uuid "32836a8f-0c54-45d4-bb0b-3c403b93d829")
+	)
+	(wire
+		(pts
+			(xy 242.57 71.12) (xy 250.19 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "353c686d-6a54-4222-b6ed-c8d506794498")
 	)
 	(bus
 		(pts
@@ -961,7 +1004,7 @@
 	)
 	(wire
 		(pts
-			(xy 242.57 62.23) (xy 237.49 62.23)
+			(xy 242.57 38.1) (xy 237.49 38.1)
 		)
 		(stroke
 			(width 0)
@@ -982,7 +1025,7 @@
 	)
 	(wire
 		(pts
-			(xy 252.73 62.23) (xy 257.81 62.23)
+			(xy 252.73 38.1) (xy 257.81 38.1)
 		)
 		(stroke
 			(width 0)
@@ -1000,6 +1043,17 @@
 			(color 0 255 30 1)
 		)
 		(uuid "787f70bc-11a7-4b6e-a3f0-76d9fc32d6cf")
+	)
+	(bus
+		(pts
+			(xy 220.98 45.72) (xy 284.48 45.72)
+		)
+		(stroke
+			(width 0.381)
+			(type dash_dot_dot)
+			(color 0 255 30 1)
+		)
+		(uuid "7a9996b7-5ffa-43a0-8080-5f27d330a0a6")
 	)
 	(wire
 		(pts
@@ -1023,7 +1077,7 @@
 	)
 	(wire
 		(pts
-			(xy 270.51 62.23) (xy 267.97 62.23)
+			(xy 270.51 38.1) (xy 267.97 38.1)
 		)
 		(stroke
 			(width 0)
@@ -1055,7 +1109,18 @@
 	)
 	(bus
 		(pts
-			(xy 220.98 12.7) (xy 220.98 88.9)
+			(xy 284.48 45.72) (xy 284.48 88.9)
+		)
+		(stroke
+			(width 0.381)
+			(type dash_dot_dot)
+			(color 0 255 30 1)
+		)
+		(uuid "aeca7d80-ff4b-45a1-a474-1900bb7e8d77")
+	)
+	(bus
+		(pts
+			(xy 220.98 12.7) (xy 220.98 45.72)
 		)
 		(stroke
 			(width 0.381)
@@ -1129,7 +1194,7 @@
 	)
 	(text "电源指示灯"
 		(exclude_from_sim yes)
-		(at 254 48.006 0)
+		(at 254 23.876 0)
 		(effects
 			(font
 				(size 5.08 5.08)
@@ -1223,7 +1288,7 @@
 	)
 	(global_label "3V3"
 		(shape input)
-		(at 237.49 62.23 180)
+		(at 237.49 38.1 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1233,7 +1298,29 @@
 		)
 		(uuid "f938f35b-1b27-44b0-9621-1d1ff5b9e6c9")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 230.9972 62.23 0)
+			(at 230.9972 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "PGND"
+		(shape input)
+		(at 242.57 71.12 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "fd3b80e4-dfbd-4404-a348-d938883a0398")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 234.4443 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1245,7 +1332,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 270.51 62.23 90)
+		(at 270.51 38.1 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1254,7 +1341,7 @@
 		(fields_autoplaced yes)
 		(uuid "0d8ef0d6-4aee-4adb-ad50-5b7059341139")
 		(property "Reference" "#PWR07"
-			(at 276.86 62.23 0)
+			(at 276.86 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1263,7 +1350,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 274.32 62.2299 90)
+			(at 274.32 38.0999 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1272,7 +1359,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 270.51 62.23 0)
+			(at 270.51 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1281,7 +1368,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 270.51 62.23 0)
+			(at 270.51 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1290,7 +1377,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 270.51 62.23 0)
+			(at 270.51 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1371,6 +1458,160 @@
 			(project "Ts_Foc_Vo1_0"
 				(path "/0cbcabec-8024-48c7-ab91-86e279a5637e/97ee4039-d600-4608-b2ff-7d42036ea92c"
 					(reference "#PWR08")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 267.97 71.12 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "51a70361-a7e2-4870-84ce-162467a4d509")
+		(property "Reference" "#PWR083"
+			(at 274.32 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 271.78 71.1199 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 267.97 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 267.97 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 267.97 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "42860ad7-16dc-441a-8172-9b3e12e4abc7")
+		)
+		(instances
+			(project "Ts_Foc_Vo1_0"
+				(path "/0cbcabec-8024-48c7-ab91-86e279a5637e/97ee4039-d600-4608-b2ff-7d42036ea92c"
+					(reference "#PWR083")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Ts_Foc_Vo符号库:RES")
+		(at 255.27 71.12 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "544453b5-087c-41e0-8cc4-3c8bc11992f2")
+		(property "Reference" "R38"
+			(at 254 69.596 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "0r"
+			(at 256.54 69.596 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Ts_Foc_Vo封装库:Res_0402"
+			(at 255.016 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 255.27 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 255.27 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "SuppliersPartNumber" "C5200633"
+			(at 255.27 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "uuid" "std:0c78b8f437b74d4badbc2695159e48f2"
+			(at 255.27 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fed063de-e2e4-4818-a66b-a86fb437f1bf")
+		)
+		(pin "2"
+			(uuid "46b269a3-05bf-47cb-afb0-26a84c68957d")
+		)
+		(instances
+			(project "Ts_Foc_Vo1_0"
+				(path "/0cbcabec-8024-48c7-ab91-86e279a5637e/97ee4039-d600-4608-b2ff-7d42036ea92c"
+					(reference "R38")
 					(unit 1)
 				)
 			)
@@ -1553,7 +1794,7 @@
 	)
 	(symbol
 		(lib_id "Ts_Foc_Vo符号库:RES")
-		(at 247.65 62.23 180)
+		(at 247.65 38.1 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1561,7 +1802,7 @@
 		(dnp no)
 		(uuid "d6c981a9-913f-4cf8-acad-d6baa8cba0df")
 		(property "Reference" "R4"
-			(at 246.38 60.706 90)
+			(at 246.38 36.576 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1570,7 +1811,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 248.92 60.706 90)
+			(at 248.92 36.576 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1579,7 +1820,7 @@
 			)
 		)
 		(property "Footprint" "Ts_Foc_Vo封装库:Res_0402"
-			(at 247.396 59.69 0)
+			(at 247.396 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1588,7 +1829,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 247.65 55.88 0)
+			(at 247.65 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1597,7 +1838,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 247.65 62.23 0)
+			(at 247.65 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1606,7 +1847,7 @@
 			)
 		)
 		(property "SuppliersPartNumber" "C5200633"
-			(at 247.65 50.8 0)
+			(at 247.65 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1615,7 +1856,7 @@
 			)
 		)
 		(property "uuid" "std:0c78b8f437b74d4badbc2695159e48f2"
-			(at 247.65 50.8 0)
+			(at 247.65 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1640,7 +1881,7 @@
 	)
 	(symbol
 		(lib_id "Ts_Foc_Vo符号库:LED")
-		(at 262.89 64.262 180)
+		(at 262.89 40.132 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1648,7 +1889,7 @@
 		(dnp no)
 		(uuid "daeeca24-4c9b-4c1b-8b28-0574bb33fcf2")
 		(property "Reference" "LED1"
-			(at 265.43 59.944 0)
+			(at 265.43 35.814 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1656,7 +1897,7 @@
 			)
 		)
 		(property "Value" "GREEN"
-			(at 260.858 59.944 0)
+			(at 260.858 35.814 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1664,7 +1905,7 @@
 			)
 		)
 		(property "Footprint" "Ts_Foc_Vo封装库:LED_0603"
-			(at 263.144 59.436 0)
+			(at 263.144 35.306 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1673,7 +1914,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.szlcsc.com/product/details_90991.html"
-			(at 262.89 59.436 0)
+			(at 262.89 35.306 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1682,7 +1923,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 262.89 64.262 0)
+			(at 262.89 40.132 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1691,7 +1932,7 @@
 			)
 		)
 		(property "SuppliersPartNumber" "C89809"
-			(at 263.144 59.69 0)
+			(at 263.144 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1700,7 +1941,7 @@
 			)
 		)
 		(property "uuid" "std:41b2f7bc7ea198335b3b1186c040b70b"
-			(at 263.144 59.69 0)
+			(at 263.144 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)

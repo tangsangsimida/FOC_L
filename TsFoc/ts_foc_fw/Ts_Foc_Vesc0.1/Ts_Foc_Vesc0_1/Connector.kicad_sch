@@ -194,6 +194,185 @@
 				)
 			)
 		)
+		(symbol "Ts_Foc_Vo符号库:Cap_Electrolytic"
+			(pin_numbers hide)
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at -4.318 2.286 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Cap_Electrolytic"
+				(at 4.826 3.048 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Ts_Foc_Vo封装库:Cap_Electrolytic"
+				(at 0.254 -2.794 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 -5.842 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "SuppliersPartNumber" "C2960233"
+				(at -0.254 -2.794 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "uuid" "std:f2c4c4acb06341a6b501ff67d9191846"
+				(at -0.254 -2.794 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Cap_Electrolytic_1_1"
+				(polyline
+					(pts
+						(xy -2.54 0) (xy -0.508 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.286 1.27) (xy -1.27 1.27)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 1.778) (xy -1.778 0.762)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.508 1.778) (xy -0.508 -1.778)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.508 0) (xy 2.54 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 1.143 1.778)
+					(mid 0.4139 0.0089)
+					(end 1.1176 -1.778)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin input line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Ts_Foc_Vo符号库:GH1.25-2P_LT"
 			(pin_names
 				(offset 1.016)
@@ -1558,6 +1737,18 @@
 		)
 	)
 	(junction
+		(at 124.46 33.02)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "17253200-5269-4c6b-91fa-5435c5003415")
+	)
+	(junction
+		(at 124.46 43.18)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4b4e36dc-fdb6-48f8-a619-a9955ac6df41")
+	)
+	(junction
 		(at 129.54 43.18)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1597,7 +1788,7 @@
 	)
 	(wire
 		(pts
-			(xy 127 33.02) (xy 129.54 33.02)
+			(xy 120.65 33.02) (xy 124.46 33.02)
 		)
 		(stroke
 			(width 0)
@@ -1637,7 +1828,7 @@
 	)
 	(wire
 		(pts
-			(xy 127 43.18) (xy 129.54 43.18)
+			(xy 120.65 43.18) (xy 124.46 43.18)
 		)
 		(stroke
 			(width 0)
@@ -1654,6 +1845,26 @@
 			(type default)
 		)
 		(uuid "c82b7233-a153-4d1d-a43d-ae0c432f5d62")
+	)
+	(wire
+		(pts
+			(xy 124.46 43.18) (xy 129.54 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f5987f7c-fd93-4adb-a853-ee13bc5d622f")
+	)
+	(wire
+		(pts
+			(xy 124.46 33.02) (xy 129.54 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f744e655-efc5-4b0b-87a9-ee10bfcad820")
 	)
 	(wire
 		(pts
@@ -4171,7 +4382,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 127 43.18 270)
+		(at 120.65 43.18 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4179,7 +4390,7 @@
 		(dnp no)
 		(uuid "44140176-eb05-4bd7-b9c5-f3fe2933804b")
 		(property "Reference" "#PWR057"
-			(at 120.65 43.18 0)
+			(at 114.3 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4188,7 +4399,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 123.444 43.18 0)
+			(at 117.094 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4196,7 +4407,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 127 43.18 0)
+			(at 120.65 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4205,7 +4416,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 127 43.18 0)
+			(at 120.65 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4214,7 +4425,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 127 43.18 0)
+			(at 120.65 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6228,7 +6439,7 @@
 	)
 	(symbol
 		(lib_id "power:VCC")
-		(at 127 33.02 90)
+		(at 120.65 33.02 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6237,7 +6448,7 @@
 		(fields_autoplaced yes)
 		(uuid "c31da426-b5d3-4953-bda6-489650829cd8")
 		(property "Reference" "#PWR056"
-			(at 130.81 33.02 0)
+			(at 124.46 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6246,7 +6457,7 @@
 			)
 		)
 		(property "Value" "VCC"
-			(at 123.19 33.0199 90)
+			(at 116.84 33.0199 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6255,7 +6466,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 127 33.02 0)
+			(at 120.65 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6264,7 +6475,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 127 33.02 0)
+			(at 120.65 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6273,7 +6484,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 127 33.02 0)
+			(at 120.65 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6782,6 +6993,93 @@
 			(project "Ts_Foc_Vo1_0"
 				(path "/0cbcabec-8024-48c7-ab91-86e279a5637e/f3329442-eac4-40be-b987-eebdbe922017"
 					(reference "CN7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Ts_Foc_Vo符号库:Cap_Electrolytic")
+		(at 124.46 38.1 270)
+		(unit 1)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board no)
+		(dnp yes)
+		(uuid "e9ddc493-efc9-4015-b3c9-1871b511119c")
+		(property "Reference" "C31"
+			(at 125.984 40.894 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "470uf"
+			(at 127.508 35.052 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Ts_Foc_Vo封装库:Cap_Electrolytic"
+			(at 121.666 38.354 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 118.618 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 124.46 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "SuppliersPartNumber" "C2960233"
+			(at 121.666 37.846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "uuid" "std:f2c4c4acb06341a6b501ff67d9191846"
+			(at 121.666 37.846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "58dd499c-733e-4e65-9918-87532f25e085")
+		)
+		(pin "1"
+			(uuid "22a120b6-0c3f-40d0-a7f3-7f5468d60014")
+		)
+		(instances
+			(project "Ts_Foc_Vo1_0"
+				(path "/0cbcabec-8024-48c7-ab91-86e279a5637e/f3329442-eac4-40be-b987-eebdbe922017"
+					(reference "C31")
 					(unit 1)
 				)
 			)

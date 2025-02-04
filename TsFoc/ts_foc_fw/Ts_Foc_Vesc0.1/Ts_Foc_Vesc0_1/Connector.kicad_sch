@@ -1259,6 +1259,87 @@
 				)
 			)
 		)
+		(symbol "Ts_Foc_Vo符号库:通孔焊盘"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "CN"
+				(at 0.508 0.508 0)
+				(effects
+					(font
+						(size 0.508 0.508)
+					)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Ts_Foc_Vo封装库:通孔焊盘"
+				(at 1.016 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "通孔焊盘_0_1"
+				(rectangle
+					(start 0 0)
+					(end 1.27 -2.54)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "通孔焊盘_1_1"
+				(pin output line
+					(at 3.81 -1.27 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 0.508 0.508)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0.508 0.508)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "power:GND"
 			(power)
 			(pin_numbers hide)
@@ -1684,7 +1765,7 @@
 	)
 	(text "SWD\n"
 		(exclude_from_sim yes)
-		(at 254 67.564 0)
+		(at 255.27 95.504 0)
 		(effects
 			(font
 				(size 5.08 5.08)
@@ -1806,7 +1887,7 @@
 			)
 		)
 	)
-	(global_label "FDCAN2-L"
+	(global_label "FDCAN2-"
 		(shape bidirectional)
 		(at 205.74 41.91 180)
 		(fields_autoplaced yes)
@@ -1818,7 +1899,7 @@
 		)
 		(uuid "0d1f3f77-d5f6-4e47-b86d-2c094ea8165f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 191.7858 41.91 0)
+			(at 192.8139 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1872,6 +1953,28 @@
 			)
 		)
 	)
+	(global_label "M0_OUT1_P"
+		(shape bidirectional)
+		(at 238.76 57.15 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "30810a11-fa21-4d98-8704-f5a46af71ba9")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 253.5607 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "M0_OUT2_P"
 		(shape bidirectional)
 		(at 237.49 39.37 0)
@@ -1896,7 +1999,7 @@
 	)
 	(global_label "3V3"
 		(shape bidirectional)
-		(at 254 82.55 180)
+		(at 255.27 110.49 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1906,7 +2009,7 @@
 		)
 		(uuid "35a9cb15-0a6d-463f-97ca-f5baeac3c5e7")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 246.3959 82.55 0)
+			(at 247.6659 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1982,6 +2085,28 @@
 			)
 		)
 	)
+	(global_label "M1_OUT2_P"
+		(shape bidirectional)
+		(at 259.08 60.96 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "69e3a23a-f116-41ce-b52f-b2b03d40d8a4")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 273.8807 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "UART3-TX"
 		(shape bidirectional)
 		(at 85.09 115.57 180)
@@ -2017,6 +2142,50 @@
 		(uuid "6d0c8414-5e60-464c-9217-db6cf8705284")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 82.5341 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "M0_OUT2_P"
+		(shape bidirectional)
+		(at 238.76 60.96 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "70151658-2362-4482-ba96-2f1c293d5532")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 253.5607 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "M1_OUT1_P"
+		(shape bidirectional)
+		(at 259.08 57.15 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "83b502b3-a02c-4f6b-9e62-8680ab6b3ca1")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 273.8807 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2158,7 +2327,7 @@
 			)
 		)
 	)
-	(global_label "FDCAN1-L"
+	(global_label "FDCAN1-"
 		(shape bidirectional)
 		(at 180.34 41.91 180)
 		(fields_autoplaced yes)
@@ -2170,7 +2339,7 @@
 		)
 		(uuid "9af16081-ddc9-4076-94f0-f87998c56342")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 166.3858 41.91 0)
+			(at 167.4139 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2182,7 +2351,7 @@
 	)
 	(global_label "SWCLK"
 		(shape bidirectional)
-		(at 254 80.01 180)
+		(at 255.27 107.95 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2192,7 +2361,7 @@
 		)
 		(uuid "a0b156cd-76f5-45fb-8ec7-fee185d6a980")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 243.6745 80.01 0)
+			(at 244.9445 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2226,7 +2395,7 @@
 	)
 	(global_label "SWDIO"
 		(shape bidirectional)
-		(at 254 74.93 180)
+		(at 255.27 102.87 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2236,7 +2405,7 @@
 		)
 		(uuid "a8bfc455-5bb5-402a-ad4e-3d9279c53da1")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 244.0373 74.93 0)
+			(at 245.3073 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2290,7 +2459,7 @@
 			)
 		)
 	)
-	(global_label "FDCAN2-H"
+	(global_label "FDCAN2+"
 		(shape bidirectional)
 		(at 205.74 39.37 180)
 		(fields_autoplaced yes)
@@ -2302,7 +2471,7 @@
 		)
 		(uuid "b9c5f441-1526-4b0f-b678-9455a27bb813")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 191.4834 39.37 0)
+			(at 192.8139 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2378,6 +2547,28 @@
 			)
 		)
 	)
+	(global_label "M1_OUT3"
+		(shape bidirectional)
+		(at 259.08 64.77 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "ca91a7d5-1e3f-47b7-a182-74670e9346ca")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 271.6431 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "M1_OUT2_P"
 		(shape bidirectional)
 		(at 266.7 39.37 0)
@@ -2400,7 +2591,7 @@
 			)
 		)
 	)
-	(global_label "FDCAN1-H"
+	(global_label "FDCAN1+"
 		(shape bidirectional)
 		(at 180.34 39.37 180)
 		(fields_autoplaced yes)
@@ -2412,7 +2603,7 @@
 		)
 		(uuid "d5a7fa52-85b4-458c-a6ae-cdaaf5a58909")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 166.0834 39.37 0)
+			(at 167.4139 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2479,6 +2670,28 @@
 		(uuid "ea8f8587-f6a4-468d-8c9c-3bf1c06dc653")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 196.1689 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "M0_OUT3"
+		(shape bidirectional)
+		(at 238.76 64.77 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "f6cfdb95-6088-44c2-82a3-54350fc919b3")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 251.3231 64.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2686,7 +2899,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 260.35 87.63 90)
+		(at 261.62 115.57 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2694,7 +2907,7 @@
 		(dnp no)
 		(uuid "0b7ad46e-9807-49a5-b9b1-080c3472123b")
 		(property "Reference" "#PWR081"
-			(at 266.7 87.63 0)
+			(at 267.97 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2703,7 +2916,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 262.89 87.63 90)
+			(at 264.16 115.57 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2712,7 +2925,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 260.35 87.63 0)
+			(at 261.62 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2721,7 +2934,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 260.35 87.63 0)
+			(at 261.62 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2730,7 +2943,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 260.35 87.63 0)
+			(at 261.62 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2818,6 +3031,70 @@
 		)
 	)
 	(symbol
+		(lib_id "Ts_Foc_Vo符号库:通孔焊盘")
+		(at 255.27 59.69 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "112bc153-c110-4d37-bfcd-59af1e8e2008")
+		(property "Reference" "CN18"
+			(at 255.778 59.182 0)
+			(effects
+				(font
+					(size 0.508 0.508)
+				)
+			)
+		)
+		(property "Value" "~"
+			(at 255.905 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Ts_Foc_Vo封装库:通孔焊盘"
+			(at 256.286 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 255.27 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 255.27 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a51673af-14e9-47d8-96ba-7ab722055a35")
+		)
+		(instances
+			(project "Ts_Foc_Vo1_0"
+				(path "/0cbcabec-8024-48c7-ab91-86e279a5637e/f3329442-eac4-40be-b987-eebdbe922017"
+					(reference "CN18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 36.83 110.49 180)
 		(unit 1)
@@ -2885,7 +3162,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 260.35 69.85 90)
+		(at 261.62 97.79 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2893,7 +3170,7 @@
 		(dnp no)
 		(uuid "17857be6-fdc5-40af-a76c-c50de6535de7")
 		(property "Reference" "#PWR080"
-			(at 266.7 69.85 0)
+			(at 267.97 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2902,7 +3179,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 262.89 69.85 90)
+			(at 264.16 97.79 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2911,7 +3188,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 260.35 69.85 0)
+			(at 261.62 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2920,7 +3197,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 260.35 69.85 0)
+			(at 261.62 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2929,7 +3206,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 260.35 69.85 0)
+			(at 261.62 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3345,6 +3622,70 @@
 		)
 	)
 	(symbol
+		(lib_id "Ts_Foc_Vo符号库:通孔焊盘")
+		(at 234.95 55.88 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "267b3555-d50b-476a-9c59-96605e268741")
+		(property "Reference" "CN14"
+			(at 235.458 55.372 0)
+			(effects
+				(font
+					(size 0.508 0.508)
+				)
+			)
+		)
+		(property "Value" "~"
+			(at 235.585 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Ts_Foc_Vo封装库:通孔焊盘"
+			(at 235.966 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 234.95 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 234.95 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "37f83e64-79b3-49b3-8453-7d9faf1da803")
+		)
+		(instances
+			(project ""
+				(path "/0cbcabec-8024-48c7-ab91-86e279a5637e/f3329442-eac4-40be-b987-eebdbe922017"
+					(reference "CN14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Ts_Foc_Vo符号库:MR30PW-M30.G.Y")
 		(at 232.41 39.37 180)
 		(unit 1)
@@ -3371,7 +3712,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Ts_Foc_Vo封装库:MR30PW-M30-G-Y"
+		(property "Footprint" ""
 			(at 227.076 37.592 90)
 			(effects
 				(font
@@ -3541,7 +3882,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 254 77.47 270)
+		(at 255.27 105.41 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3549,7 +3890,7 @@
 		(dnp no)
 		(uuid "2f367808-79da-45ad-94bf-f1604de68a44")
 		(property "Reference" "#PWR058"
-			(at 247.65 77.47 0)
+			(at 248.92 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3558,7 +3899,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 251.46 77.47 90)
+			(at 252.73 105.41 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3567,7 +3908,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 254 77.47 0)
+			(at 255.27 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3576,7 +3917,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 254 77.47 0)
+			(at 255.27 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3585,7 +3926,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 254 77.47 0)
+			(at 255.27 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3759,6 +4100,70 @@
 			(project "Ts_Foc_Vo1_0"
 				(path "/0cbcabec-8024-48c7-ab91-86e279a5637e/f3329442-eac4-40be-b987-eebdbe922017"
 					(reference "#PWR064")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Ts_Foc_Vo符号库:通孔焊盘")
+		(at 234.95 59.69 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "43a79105-7a32-4336-b6d4-833c304bcb57")
+		(property "Reference" "CN15"
+			(at 235.458 59.182 0)
+			(effects
+				(font
+					(size 0.508 0.508)
+				)
+			)
+		)
+		(property "Value" "~"
+			(at 235.585 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Ts_Foc_Vo封装库:通孔焊盘"
+			(at 235.966 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 234.95 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 234.95 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c1eda279-f857-4eb7-86c0-77e3ea725ac3")
+		)
+		(instances
+			(project "Ts_Foc_Vo1_0"
+				(path "/0cbcabec-8024-48c7-ab91-86e279a5637e/f3329442-eac4-40be-b987-eebdbe922017"
+					(reference "CN15")
 					(unit 1)
 				)
 			)
@@ -3989,7 +4394,7 @@
 	)
 	(symbol
 		(lib_id "Ts_Foc_Vo符号库:GH1.25-4P")
-		(at 259.08 78.74 0)
+		(at 260.35 106.68 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3997,7 +4402,7 @@
 		(dnp no)
 		(uuid "52524b06-6ee9-444f-9b22-e097de5afc31")
 		(property "Reference" "CN13"
-			(at 254.508 71.374 0)
+			(at 255.778 99.314 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4006,7 +4411,7 @@
 			)
 		)
 		(property "Value" "GH1.25-4P"
-			(at 262.636 84.074 90)
+			(at 263.906 112.014 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4015,7 +4420,7 @@
 			)
 		)
 		(property "Footprint" "Ts_Foc_Vo封装库:GH1.25_CONN-SMD_4P-P1.25"
-			(at 259.08 72.136 0)
+			(at 260.35 100.076 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4024,7 +4429,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 259.08 77.216 0)
+			(at 260.35 105.156 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4033,7 +4438,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 259.08 78.74 0)
+			(at 260.35 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4042,7 +4447,7 @@
 			)
 		)
 		(property "SuppliersPartNumber" "C18077711"
-			(at 259.08 82.296 0)
+			(at 260.35 110.236 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4051,7 +4456,7 @@
 			)
 		)
 		(property "uuid" "std:04baf036832348e9968012a97c32b546"
-			(at 259.08 82.296 0)
+			(at 260.35 110.236 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4770,6 +5175,70 @@
 			(project "Ts_Foc_Vo1_0"
 				(path "/0cbcabec-8024-48c7-ab91-86e279a5637e/f3329442-eac4-40be-b987-eebdbe922017"
 					(reference "#PWR069")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Ts_Foc_Vo符号库:通孔焊盘")
+		(at 255.27 63.5 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6a4e03e7-32d2-4b0f-97ba-6a35090ed716")
+		(property "Reference" "CN19"
+			(at 255.778 62.992 0)
+			(effects
+				(font
+					(size 0.508 0.508)
+				)
+			)
+		)
+		(property "Value" "~"
+			(at 255.905 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Ts_Foc_Vo封装库:通孔焊盘"
+			(at 256.286 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 255.27 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 255.27 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3dd32e82-6bd2-4367-a5cc-e9d554e32c76")
+		)
+		(instances
+			(project "Ts_Foc_Vo1_0"
+				(path "/0cbcabec-8024-48c7-ab91-86e279a5637e/f3329442-eac4-40be-b987-eebdbe922017"
+					(reference "CN19")
 					(unit 1)
 				)
 			)
@@ -5496,7 +5965,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Ts_Foc_Vo封装库:MR30PW-M30-G-Y"
+		(property "Footprint" ""
 			(at 256.286 37.592 90)
 			(effects
 				(font
@@ -5819,6 +6288,134 @@
 			(project ""
 				(path "/0cbcabec-8024-48c7-ab91-86e279a5637e/f3329442-eac4-40be-b987-eebdbe922017"
 					(reference "#PWR056")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Ts_Foc_Vo符号库:通孔焊盘")
+		(at 234.95 63.5 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c322ed1d-9912-423f-8700-6baf151d7de4")
+		(property "Reference" "CN16"
+			(at 235.458 62.992 0)
+			(effects
+				(font
+					(size 0.508 0.508)
+				)
+			)
+		)
+		(property "Value" "~"
+			(at 235.585 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Ts_Foc_Vo封装库:通孔焊盘"
+			(at 235.966 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 234.95 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 234.95 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "60eb2818-428d-4e72-bab3-2fbc8083c486")
+		)
+		(instances
+			(project "Ts_Foc_Vo1_0"
+				(path "/0cbcabec-8024-48c7-ab91-86e279a5637e/f3329442-eac4-40be-b987-eebdbe922017"
+					(reference "CN16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Ts_Foc_Vo符号库:通孔焊盘")
+		(at 255.27 55.88 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c3f5068a-4e28-428c-acd9-22dfa7372d57")
+		(property "Reference" "CN17"
+			(at 255.778 55.372 0)
+			(effects
+				(font
+					(size 0.508 0.508)
+				)
+			)
+		)
+		(property "Value" "~"
+			(at 255.905 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Ts_Foc_Vo封装库:通孔焊盘"
+			(at 256.286 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 255.27 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 255.27 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "620a13bb-c1e7-435c-906a-f8c93b390e44")
+		)
+		(instances
+			(project "Ts_Foc_Vo1_0"
+				(path "/0cbcabec-8024-48c7-ab91-86e279a5637e/f3329442-eac4-40be-b987-eebdbe922017"
+					(reference "CN17")
 					(unit 1)
 				)
 			)

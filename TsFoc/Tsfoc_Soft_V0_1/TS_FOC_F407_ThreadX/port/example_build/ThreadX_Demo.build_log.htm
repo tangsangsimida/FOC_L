@@ -1,0 +1,70 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.24.2.0
+Copyright (C) 2017 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: sang tang, tangsang, LIC=TA39H-WGKTD-35RTX-HNRMX-XPR1B-MIZEW
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.24.1
+Toolchain Path:  D:\software\keil5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 5 (build 528)
+Assembler:       Armasm.exe V5.06 update 5 (build 528)
+Linker/Locator:  ArmLink.exe V5.06 update 5 (build 528)
+Library Manager: ArmAr.exe V5.06 update 5 (build 528)
+Hex Converter:   FromElf.exe V5.06 update 5 (build 528)
+CPU DLL:         SARMCM3.DLL V5.24.1
+Dialog DLL:      DCM.DLL V1.16.0.0
+Target DLL:      UL2CM3.DLL V1.160.3.0
+Dialog DLL:      TCM.DLL V1.32.0.0
+ 
+<h2>Project:</h2>
+G:\Laboratory_Data\²Ù×÷ÏµÍ³\threadX\threadx-6.4.0_rel\ports\cortex_m4\keil\example_build\ThreadX_Demo.uvprojx
+Project File Date:  04/04/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 5 (build 528)', folder: 'D:\software\keil5\ARM\ARMCC\Bin'
+Build target 'ThreadX_Demo'
+linking...
+.\ThreadX_Demo.axf: Error: L6218E: Undefined symbol __tx_PendSVHandler (referred from tx_initialize_low_level.o).
+.\ThreadX_Demo.axf: Error: L6218E: Undefined symbol _tx_initialize_unused_memory (referred from tx_initialize_low_level.o).
+.\ThreadX_Demo.axf: Error: L6218E: Undefined symbol _tx_thread_context_restore (referred from tx_initialize_low_level.o).
+.\ThreadX_Demo.axf: Error: L6218E: Undefined symbol _tx_thread_context_save (referred from tx_initialize_low_level.o).
+.\ThreadX_Demo.axf: Error: L6218E: Undefined symbol _tx_thread_system_stack_ptr (referred from tx_initialize_low_level.o).
+.\ThreadX_Demo.axf: Error: L6218E: Undefined symbol _tx_timer_interrupt (referred from tx_initialize_low_level.o).
+.\ThreadX_Demo.axf: Error: L6218E: Undefined symbol _tx_initialize_kernel_enter (referred from demo_threadx.o).
+.\ThreadX_Demo.axf: Error: L6218E: Undefined symbol _tx_thread_sleep (referred from demo_threadx.o).
+.\ThreadX_Demo.axf: Error: L6218E: Undefined symbol _txe_event_flags_create (referred from demo_threadx.o).
+.\ThreadX_Demo.axf: Error: L6218E: Undefined symbol _txe_event_flags_get (referred from demo_threadx.o).
+.\ThreadX_Demo.axf: Error: L6218E: Undefined symbol _txe_event_flags_set (referred from demo_threadx.o).
+.\ThreadX_Demo.axf: Error: L6218E: Undefined symbol _txe_queue_create (referred from demo_threadx.o).
+.\ThreadX_Demo.axf: Error: L6218E: Undefined symbol _txe_queue_receive (referred from demo_threadx.o).
+.\ThreadX_Demo.axf: Error: L6218E: Undefined symbol _txe_queue_send (referred from demo_threadx.o).
+.\ThreadX_Demo.axf: Error: L6218E: Undefined symbol _txe_semaphore_create (referred from demo_threadx.o).
+.\ThreadX_Demo.axf: Error: L6218E: Undefined symbol _txe_semaphore_get (referred from demo_threadx.o).
+.\ThreadX_Demo.axf: Error: L6218E: Undefined symbol _txe_semaphore_put (referred from demo_threadx.o).
+.\ThreadX_Demo.axf: Error: L6218E: Undefined symbol _txe_thread_create (referred from demo_threadx.o).
+Not enough information to list image symbols.
+Not enough information to list load addresses in the image map.
+Finished: 2 information, 0 warning and 18 error messages.
+".\ThreadX_Demo.axf" - 18 Error(s), 0 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F4xx_DFP.2.17.1.pack
+                Keil.STM32F4xx_DFP.2.17.1
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_ThreadX_Demo
+  D:\software\keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+Target not created.
+Build Time Elapsed:  00:00:00
+</pre>
+</body>
+</html>

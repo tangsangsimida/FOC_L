@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "1b2c3769-6ea6-4960-aee3-f191f7080a01")
 	(paper "A4")
 	(title_block
@@ -11,9 +11,13 @@
 	)
 	(lib_symbols
 		(symbol "Ts_Foc_Vo符号库:1N4148W"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -93,7 +97,7 @@
 				)
 				(polyline
 					(pts
-						(xy 1.27 0) (xy 2.54 0)
+						(xy -1.27 -1.778) (xy 1.27 0) (xy -1.27 1.778) (xy -1.27 -1.778)
 					)
 					(stroke
 						(width 0.1524)
@@ -105,7 +109,7 @@
 				)
 				(polyline
 					(pts
-						(xy -1.27 -1.778) (xy 1.27 0) (xy -1.27 1.778) (xy -1.27 -1.778)
+						(xy 1.27 0) (xy 2.54 0)
 					)
 					(stroke
 						(width 0.1524)
@@ -164,11 +168,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Ts_Foc_Vo符号库:CAP"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -236,7 +245,7 @@
 			(symbol "CAP_1_1"
 				(polyline
 					(pts
-						(xy -0.508 -2.032) (xy -0.508 2.032)
+						(xy -0.508 0) (xy -2.54 0)
 					)
 					(stroke
 						(width 0.1524)
@@ -248,7 +257,7 @@
 				)
 				(polyline
 					(pts
-						(xy -0.508 0) (xy -2.54 0)
+						(xy -0.508 -2.032) (xy -0.508 2.032)
 					)
 					(stroke
 						(width 0.1524)
@@ -319,11 +328,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Ts_Foc_Vo符号库:DSK34"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -391,18 +405,6 @@
 			(symbol "DSK34_1_1"
 				(polyline
 					(pts
-						(xy 1.27 1.524) (xy -1.27 0) (xy 1.27 -1.778) (xy 1.27 1.524)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
 						(xy -2.032 1.524) (xy -2.032 1.778) (xy -1.524 1.778) (xy -1.524 -2.032) (xy -1.016 -2.032) (xy -1.016 -1.778)
 					)
 					(stroke
@@ -411,6 +413,18 @@
 					)
 					(fill
 						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.524) (xy -1.27 0) (xy 1.27 -1.778) (xy 1.27 1.524)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type outline)
 					)
 				)
 				(pin input line
@@ -450,6 +464,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Ts_Foc_Vo符号库:EG2133"
 			(pin_names
@@ -561,186 +576,6 @@
 					)
 				)
 				(pin input line
-					(at -12.7 -11.43 0)
-					(length 2.54)
-					(name "LO2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 12.7 -11.43 180)
-					(length 2.54)
-					(name "LO1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 12.7 -8.89 180)
-					(length 2.54)
-					(name "VS3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "12"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 12.7 -6.35 180)
-					(length 2.54)
-					(name "HO3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "13"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 12.7 -3.81 180)
-					(length 2.54)
-					(name "VB3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "14"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 12.7 -1.27 180)
-					(length 2.54)
-					(name "VS2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "15"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 12.7 1.27 180)
-					(length 2.54)
-					(name "HO2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 12.7 3.81 180)
-					(length 2.54)
-					(name "VB2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 12.7 6.35 180)
-					(length 2.54)
-					(name "VS1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "18"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 12.7 8.89 180)
-					(length 2.54)
-					(name "HO1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "19"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
 					(at -12.7 8.89 0)
 					(length 2.54)
 					(name "HIN2"
@@ -751,24 +586,6 @@
 						)
 					)
 					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 12.7 11.43 180)
-					(length 2.54)
-					(name "VB1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "20"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -902,7 +719,206 @@
 						)
 					)
 				)
+				(pin input line
+					(at -12.7 -11.43 0)
+					(length 2.54)
+					(name "LO2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 12.7 11.43 180)
+					(length 2.54)
+					(name "VB1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "20"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 12.7 8.89 180)
+					(length 2.54)
+					(name "HO1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "19"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 12.7 6.35 180)
+					(length 2.54)
+					(name "VS1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "18"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 12.7 3.81 180)
+					(length 2.54)
+					(name "VB2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "17"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 12.7 1.27 180)
+					(length 2.54)
+					(name "HO2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 12.7 -1.27 180)
+					(length 2.54)
+					(name "VS2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "15"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 12.7 -3.81 180)
+					(length 2.54)
+					(name "VB3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 12.7 -6.35 180)
+					(length 2.54)
+					(name "HO3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 12.7 -8.89 180)
+					(length 2.54)
+					(name "VS3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 12.7 -11.43 180)
+					(length 2.54)
+					(name "LO1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Ts_Foc_Vo符号库:INA240A2PWR"
 			(pin_names
@@ -1079,34 +1095,16 @@
 					)
 				)
 				(pin input line
-					(at 12.7 -3.81 180)
+					(at 12.7 3.81 180)
 					(length 2.54)
-					(name "VS"
+					(name "OUT"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 12.7 -1.27 180)
-					(length 2.54)
-					(name "REF2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
+					(number "8"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1133,16 +1131,34 @@
 					)
 				)
 				(pin input line
-					(at 12.7 3.81 180)
+					(at 12.7 -1.27 180)
 					(length 2.54)
-					(name "OUT"
+					(name "REF2"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "8"
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 12.7 -3.81 180)
+					(length 2.54)
+					(name "VS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1151,11 +1167,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Ts_Foc_Vo符号库:RES"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1269,6 +1290,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Ts_Foc_Vo符号库:RU3089M-C"
 			(pin_names
@@ -1443,7 +1465,7 @@
 					)
 				)
 				(pin input line
-					(at 7.62 -5.08 180)
+					(at 0 7.62 270)
 					(length 2.54)
 					(name "D"
 						(effects
@@ -1452,43 +1474,7 @@
 							)
 						)
 					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 7.62 -2.54 180)
-					(length 2.54)
-					(name "D"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 7.62 0 180)
-					(length 2.54)
-					(name "D"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
+					(number "9"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1515,7 +1501,7 @@
 					)
 				)
 				(pin input line
-					(at 0 7.62 270)
+					(at 7.62 0 180)
 					(length 2.54)
 					(name "D"
 						(effects
@@ -1524,7 +1510,43 @@
 							)
 						)
 					)
-					(number "9"
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 7.62 -2.54 180)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 7.62 -5.08 180)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1533,12 +1555,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:GND"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1629,12 +1656,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:VCC"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1706,7 +1738,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -1718,7 +1750,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -1749,7 +1781,64 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
+	)
+	(text "EG2133+自举"
+		(exclude_from_sim yes)
+		(at 62.738 32.004 0)
+		(effects
+			(font
+				(size 5.08 5.08)
+				(thickness 1.016)
+				(bold yes)
+				(italic yes)
+				(color 255 2 253 1)
+			)
+		)
+		(uuid "43d7b7e3-eca3-4ffe-a0c4-acc5fbb7d013")
+	)
+	(text "电流采样"
+		(exclude_from_sim yes)
+		(at 70.866 133.35 0)
+		(effects
+			(font
+				(size 5.08 5.08)
+				(thickness 1.016)
+				(bold yes)
+				(italic yes)
+				(color 255 2 253 1)
+			)
+		)
+		(uuid "46eb58ed-e1d5-4c4e-a7b0-f0d615a7b2ff")
+	)
+	(text "三项全桥逆变"
+		(exclude_from_sim yes)
+		(at 198.882 68.072 0)
+		(effects
+			(font
+				(size 5.08 5.08)
+				(thickness 1.016)
+				(bold yes)
+				(italic yes)
+				(color 255 2 253 1)
+			)
+		)
+		(uuid "8cb6fe11-66ad-4dd6-9ae0-09982a7eb5d2")
+	)
+	(text "Motor2"
+		(exclude_from_sim yes)
+		(at 204.978 33.02 0)
+		(effects
+			(font
+				(size 7.62 7.62)
+				(thickness 1.016)
+				(bold yes)
+				(italic yes)
+				(color 255 2 253 1)
+			)
+		)
+		(uuid "c225f8b6-f770-408d-98f8-0f38934f62a4")
 	)
 	(junction
 		(at 203.2 132.08)
@@ -3267,62 +3356,6 @@
 			(type default)
 		)
 		(uuid "fc743d0a-a6d6-4b56-a2d6-052f7dfb8526")
-	)
-	(text "EG2133+自举"
-		(exclude_from_sim yes)
-		(at 62.738 32.004 0)
-		(effects
-			(font
-				(size 5.08 5.08)
-				(thickness 1.016)
-				(bold yes)
-				(italic yes)
-				(color 255 2 253 1)
-			)
-		)
-		(uuid "43d7b7e3-eca3-4ffe-a0c4-acc5fbb7d013")
-	)
-	(text "电流采样"
-		(exclude_from_sim yes)
-		(at 70.866 133.35 0)
-		(effects
-			(font
-				(size 5.08 5.08)
-				(thickness 1.016)
-				(bold yes)
-				(italic yes)
-				(color 255 2 253 1)
-			)
-		)
-		(uuid "46eb58ed-e1d5-4c4e-a7b0-f0d615a7b2ff")
-	)
-	(text "三项全桥逆变"
-		(exclude_from_sim yes)
-		(at 198.882 68.072 0)
-		(effects
-			(font
-				(size 5.08 5.08)
-				(thickness 1.016)
-				(bold yes)
-				(italic yes)
-				(color 255 2 253 1)
-			)
-		)
-		(uuid "8cb6fe11-66ad-4dd6-9ae0-09982a7eb5d2")
-	)
-	(text "Motor2"
-		(exclude_from_sim yes)
-		(at 204.978 33.02 0)
-		(effects
-			(font
-				(size 7.62 7.62)
-				(thickness 1.016)
-				(bold yes)
-				(italic yes)
-				(color 255 2 253 1)
-			)
-		)
-		(uuid "c225f8b6-f770-408d-98f8-0f38934f62a4")
 	)
 	(global_label "M1_GL1"
 		(shape bidirectional)

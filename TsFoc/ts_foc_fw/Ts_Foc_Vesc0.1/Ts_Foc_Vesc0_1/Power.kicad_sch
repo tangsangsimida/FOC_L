@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "fa817cbf-bb6f-4752-b5ef-f0b2f9d24690")
 	(paper "A4")
 	(title_block
@@ -11,9 +11,13 @@
 	)
 	(lib_symbols
 		(symbol "Ts_Foc_Vo符号库:JSM2301S"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -93,7 +97,31 @@
 				)
 				(polyline
 					(pts
-						(xy -2.54 -2.286) (xy -2.54 -1.27)
+						(xy -2.54 2.286) (xy -2.54 1.27)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 1.778) (xy 0 1.778) (xy 0 2.54) (xy 2.54 2.54) (xy 2.54 0.762)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 0) (xy 0 0) (xy 0 -2.54) (xy 2.54 -2.54) (xy 2.54 -0.762)
 					)
 					(stroke
 						(width 0.1524)
@@ -117,19 +145,7 @@
 				)
 				(polyline
 					(pts
-						(xy -2.54 2.286) (xy -2.54 1.27)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -1.778) (xy -2.54 -1.778)
+						(xy -2.54 -2.286) (xy -2.54 -1.27)
 					)
 					(stroke
 						(width 0.1524)
@@ -142,6 +158,18 @@
 				(polyline
 					(pts
 						(xy -0.508 0) (xy -2.032 0.508) (xy -2.032 -0.508) (xy -0.508 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -1.778) (xy -2.54 -1.778)
 					)
 					(stroke
 						(width 0.1524)
@@ -175,30 +203,6 @@
 						(type background)
 					)
 				)
-				(polyline
-					(pts
-						(xy -2.54 0) (xy 0 0) (xy 0 -2.54) (xy 2.54 -2.54) (xy 2.54 -0.762)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.54 1.778) (xy 0 1.778) (xy 0 2.54) (xy 2.54 2.54) (xy 2.54 0.762)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
 				(pin input line
 					(at -5.08 0 0)
 					(length 2.54)
@@ -210,24 +214,6 @@
 						)
 					)
 					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 0 -5.08 90)
-					(length 2.54)
-					(name "S"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -253,12 +239,35 @@
 						)
 					)
 				)
+				(pin input line
+					(at 0 -5.08 90)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Ts_Foc_Vo符号库:LED"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -326,6 +335,30 @@
 			(symbol "LED_1_1"
 				(polyline
 					(pts
+						(xy -2.286 1.778) (xy -1.27 1.27) (xy -1.778 0.762) (xy -2.286 1.778)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 2.794) (xy -0.254 2.286) (xy -0.762 1.778) (xy -1.27 2.794)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
 						(xy -1.27 -0.508) (xy -1.27 -3.556)
 					)
 					(stroke
@@ -358,30 +391,6 @@
 					)
 					(fill
 						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.286 1.778) (xy -1.27 1.27) (xy -1.778 0.762) (xy -2.286 1.778)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 2.794) (xy -0.254 2.286) (xy -0.762 1.778) (xy -1.27 2.794)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type outline)
 					)
 				)
 				(polyline
@@ -433,11 +442,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Ts_Foc_Vo符号库:LMBR240ET1G"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -505,18 +519,6 @@
 			(symbol "LMBR240ET1G_1_1"
 				(polyline
 					(pts
-						(xy 1.27 1.524) (xy -1.27 0) (xy 1.27 -1.778) (xy 1.27 1.524)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
 						(xy -2.032 1.524) (xy -2.032 1.778) (xy -1.524 1.778) (xy -1.524 -2.032) (xy -1.016 -2.032) (xy -1.016 -1.778)
 					)
 					(stroke
@@ -525,6 +527,18 @@
 					)
 					(fill
 						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.524) (xy -1.27 0) (xy 1.27 -1.778) (xy 1.27 1.524)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type outline)
 					)
 				)
 				(pin input line
@@ -564,11 +578,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Ts_Foc_Vo符号库:RES"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -682,12 +701,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:GND"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -778,7 +802,36 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
+	)
+	(text "电源指示灯"
+		(exclude_from_sim yes)
+		(at 254 23.876 0)
+		(effects
+			(font
+				(size 5.08 5.08)
+				(thickness 1.016)
+				(bold yes)
+				(italic yes)
+				(color 255 2 253 1)
+			)
+		)
+		(uuid "96392625-466c-4cb9-8a3d-7905025dfd71")
+	)
+	(text "强弱电源切换\n"
+		(exclude_from_sim yes)
+		(at 182.88 34.29 0)
+		(effects
+			(font
+				(size 5.08 5.08)
+				(thickness 1.016)
+				(bold yes)
+				(italic yes)
+				(color 255 2 253 1)
+			)
+		)
+		(uuid "b5840fa3-54de-45ca-ac8d-4647a6373e88")
 	)
 	(junction
 		(at 220.98 88.9)
@@ -1191,34 +1244,6 @@
 			(type default)
 		)
 		(uuid "ff8ae039-4d16-46f0-9d88-b12f162a84d4")
-	)
-	(text "电源指示灯"
-		(exclude_from_sim yes)
-		(at 254 23.876 0)
-		(effects
-			(font
-				(size 5.08 5.08)
-				(thickness 1.016)
-				(bold yes)
-				(italic yes)
-				(color 255 2 253 1)
-			)
-		)
-		(uuid "96392625-466c-4cb9-8a3d-7905025dfd71")
-	)
-	(text "强弱电源切换\n"
-		(exclude_from_sim yes)
-		(at 182.88 34.29 0)
-		(effects
-			(font
-				(size 5.08 5.08)
-				(thickness 1.016)
-				(bold yes)
-				(italic yes)
-				(color 255 2 253 1)
-			)
-		)
-		(uuid "b5840fa3-54de-45ca-ac8d-4647a6373e88")
 	)
 	(global_label "5V_DC"
 		(shape input)
@@ -2052,6 +2077,10 @@
 	(sheet
 		(at 30.48 38.1)
 		(size 35.56 33.02)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -2090,6 +2119,10 @@
 	(sheet
 		(at 93.98 38.1)
 		(size 35.56 33.02)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)

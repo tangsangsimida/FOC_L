@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "7cfdebf1-17ed-4eb1-b19b-e9a3f927fff6")
 	(paper "A4")
 	(title_block
@@ -156,11 +156,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Ts_Foc_Vo符号库:CAP"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -228,7 +233,7 @@
 			(symbol "CAP_1_1"
 				(polyline
 					(pts
-						(xy -0.508 -2.032) (xy -0.508 2.032)
+						(xy -0.508 0) (xy -2.54 0)
 					)
 					(stroke
 						(width 0.1524)
@@ -240,7 +245,7 @@
 				)
 				(polyline
 					(pts
-						(xy -0.508 0) (xy -2.54 0)
+						(xy -0.508 -2.032) (xy -0.508 2.032)
 					)
 					(stroke
 						(width 0.1524)
@@ -311,11 +316,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Ts_Foc_Vo符号库:Cap_Electrolytic"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -442,9 +452,9 @@
 					)
 				)
 				(arc
-					(start 1.143 1.778)
-					(mid 0.4139 0.0089)
-					(end 1.1176 -1.778)
+					(start 1.1176 -1.778)
+					(mid 0.4139 0.0051)
+					(end 1.143 1.778)
 					(stroke
 						(width 0.1524)
 						(type solid)
@@ -490,12 +500,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:GND"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -586,7 +601,22 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
+	)
+	(text "5V-3V3\n"
+		(exclude_from_sim yes)
+		(at 247.142 23.368 0)
+		(effects
+			(font
+				(size 5.08 5.08)
+				(thickness 1.016)
+				(bold yes)
+				(italic yes)
+				(color 255 2 253 1)
+			)
+		)
+		(uuid "2e6ba38b-d477-4650-9ea8-3b2f97cdc7bf")
 	)
 	(junction
 		(at 250.19 45.72)
@@ -871,20 +901,6 @@
 			(type default)
 		)
 		(uuid "fe131600-67c7-49d9-9e26-0e2df3aad3ed")
-	)
-	(text "5V-3V3\n"
-		(exclude_from_sim yes)
-		(at 247.142 23.368 0)
-		(effects
-			(font
-				(size 5.08 5.08)
-				(thickness 1.016)
-				(bold yes)
-				(italic yes)
-				(color 255 2 253 1)
-			)
-		)
-		(uuid "2e6ba38b-d477-4650-9ea8-3b2f97cdc7bf")
 	)
 	(global_label "5V"
 		(shape input)

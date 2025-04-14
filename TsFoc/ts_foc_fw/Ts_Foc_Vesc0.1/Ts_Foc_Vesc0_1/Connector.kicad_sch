@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "dc988b8c-4082-4675-a353-8ae80f698e12")
 	(paper "A4")
 	(title_block
@@ -91,11 +91,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Mechanical:MountingHole_Pad"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim yes)
 			(in_bom no)
 			(on_board yes)
@@ -193,11 +198,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Ts_Foc_Vo符号库:Cap_Electrolytic"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -324,9 +334,9 @@
 					)
 				)
 				(arc
-					(start 1.143 1.778)
-					(mid 0.4139 0.0089)
-					(end 1.1176 -1.778)
+					(start 1.1176 -1.778)
+					(mid 0.4139 0.0051)
+					(end 1.143 1.778)
 					(stroke
 						(width 0.1524)
 						(type solid)
@@ -372,6 +382,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Ts_Foc_Vo符号库:GH1.25-2P_LT"
 			(pin_names
@@ -501,24 +512,6 @@
 					)
 				)
 				(pin input line
-					(at 1.27 -6.35 90)
-					(length 2.54)
-					(name "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
 					(at 1.27 6.35 270)
 					(length 2.54)
 					(name "4"
@@ -536,7 +529,26 @@
 						)
 					)
 				)
+				(pin input line
+					(at 1.27 -6.35 90)
+					(length 2.54)
+					(name "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Ts_Foc_Vo符号库:GH1.25-4P"
 			(pin_names
@@ -702,24 +714,6 @@
 					)
 				)
 				(pin input line
-					(at 1.27 -8.89 90)
-					(length 2.54)
-					(name "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
 					(at 1.27 8.89 270)
 					(length 2.54)
 					(name "6"
@@ -737,7 +731,26 @@
 						)
 					)
 				)
+				(pin input line
+					(at 1.27 -8.89 90)
+					(length 2.54)
+					(name "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Ts_Foc_Vo符号库:GH1.25-5PLT"
 			(pin_names
@@ -921,24 +934,6 @@
 					)
 				)
 				(pin input line
-					(at 1.27 -10.16 90)
-					(length 2.54)
-					(name "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
 					(at 1.27 10.16 270)
 					(length 2.54)
 					(name "7"
@@ -956,7 +951,26 @@
 						)
 					)
 				)
+				(pin input line
+					(at 1.27 -10.16 90)
+					(length 2.54)
+					(name "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Ts_Foc_Vo符号库:MR30PW-M30.G.Y"
 			(pin_names
@@ -1140,11 +1154,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Ts_Foc_Vo符号库:SMAJ36CA"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1224,18 +1243,6 @@
 				)
 				(polyline
 					(pts
-						(xy 2.54 1.27) (xy 0 0) (xy 2.54 -1.27) (xy 2.54 1.27)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
 						(xy -0.508 0.762) (xy -0.508 1.27) (xy 0 1.27) (xy 0 -1.27) (xy 0.508 -1.27) (xy 0.508 -0.762)
 					)
 					(stroke
@@ -1244,6 +1251,18 @@
 					)
 					(fill
 						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 1.27) (xy 0 0) (xy 2.54 -1.27) (xy 2.54 1.27)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type outline)
 					)
 				)
 				(pin input line
@@ -1283,6 +1302,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Ts_Foc_Vo符号库:XT30PW-M"
 			(pin_names
@@ -1365,6 +1385,24 @@
 					)
 				)
 				(pin input line
+					(at -6.35 -3.81 0)
+					(length 2.54)
+					(name "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
 					(at -1.27 5.08 270)
 					(length 2.54)
 					(name "-"
@@ -1418,25 +1456,8 @@
 						)
 					)
 				)
-				(pin input line
-					(at -6.35 -3.81 0)
-					(length 2.54)
-					(name "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Ts_Foc_Vo符号库:通孔焊盘"
 			(exclude_from_sim no)
@@ -1518,12 +1539,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:GND"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1614,12 +1640,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:VCC"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1691,7 +1722,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -1703,7 +1734,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -1734,7 +1765,120 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
+	)
+	(text "CAN\n"
+		(exclude_from_sim yes)
+		(at 196.85 23.368 0)
+		(effects
+			(font
+				(size 5.08 5.08)
+				(thickness 1.016)
+				(bold yes)
+				(italic yes)
+				(color 255 2 253 1)
+			)
+		)
+		(uuid "0cea2a8c-8f94-460b-acae-017232469d56")
+	)
+	(text "PowerIn"
+		(exclude_from_sim yes)
+		(at 146.05 22.098 0)
+		(effects
+			(font
+				(size 5.08 5.08)
+				(thickness 1.016)
+				(bold yes)
+				(italic yes)
+				(color 255 2 253 1)
+			)
+		)
+		(uuid "14433814-f742-4a73-98c5-21d6b3628e7e")
+	)
+	(text "电机接口"
+		(exclude_from_sim yes)
+		(at 249.174 21.082 0)
+		(effects
+			(font
+				(size 5.08 5.08)
+				(thickness 1.016)
+				(bold yes)
+				(italic yes)
+				(color 255 2 253 1)
+			)
+		)
+		(uuid "36c973da-3235-4823-afa6-eb85ceb16273")
+	)
+	(text "IIC-AS5600X2"
+		(exclude_from_sim yes)
+		(at 87.63 48.514 0)
+		(effects
+			(font
+				(size 5.08 5.08)
+				(thickness 1.016)
+				(bold yes)
+				(italic yes)
+				(color 255 2 253 1)
+			)
+		)
+		(uuid "6f3636ed-4b63-4b85-80cf-c562ec7c7f5c")
+	)
+	(text "Connector:\n"
+		(exclude_from_sim yes)
+		(at 35.814 20.32 0)
+		(effects
+			(font
+				(size 5.08 5.08)
+				(thickness 1.016)
+				(bold yes)
+				(italic yes)
+				(color 255 2 253 1)
+			)
+		)
+		(uuid "a2ff3261-d2f8-4474-a64c-be90b33dc064")
+	)
+	(text "SPI预留接口"
+		(exclude_from_sim yes)
+		(at 166.116 77.978 0)
+		(effects
+			(font
+				(size 5.08 5.08)
+				(thickness 1.016)
+				(bold yes)
+				(italic yes)
+				(color 255 2 253 1)
+			)
+		)
+		(uuid "bfe49b09-6a39-44a8-b5ed-c2322b46f6ed")
+	)
+	(text "USART"
+		(exclude_from_sim yes)
+		(at 60.706 95.758 0)
+		(effects
+			(font
+				(size 5.08 5.08)
+				(thickness 1.016)
+				(bold yes)
+				(italic yes)
+				(color 255 2 253 1)
+			)
+		)
+		(uuid "dc7e6b8b-3ca6-464b-b862-6707469f7a91")
+	)
+	(text "SWD\n"
+		(exclude_from_sim yes)
+		(at 255.27 95.504 0)
+		(effects
+			(font
+				(size 5.08 5.08)
+				(thickness 1.016)
+				(bold yes)
+				(italic yes)
+				(color 255 2 253 1)
+			)
+		)
+		(uuid "dcd1f875-ac0a-4b2d-aae9-d8428bd8b8e4")
 	)
 	(junction
 		(at 124.46 33.02)
@@ -1875,118 +2019,6 @@
 			(type default)
 		)
 		(uuid "fb497681-43ce-4d62-b070-c3bd6310c95f")
-	)
-	(text "CAN\n"
-		(exclude_from_sim yes)
-		(at 196.85 23.368 0)
-		(effects
-			(font
-				(size 5.08 5.08)
-				(thickness 1.016)
-				(bold yes)
-				(italic yes)
-				(color 255 2 253 1)
-			)
-		)
-		(uuid "0cea2a8c-8f94-460b-acae-017232469d56")
-	)
-	(text "PowerIn"
-		(exclude_from_sim yes)
-		(at 146.05 22.098 0)
-		(effects
-			(font
-				(size 5.08 5.08)
-				(thickness 1.016)
-				(bold yes)
-				(italic yes)
-				(color 255 2 253 1)
-			)
-		)
-		(uuid "14433814-f742-4a73-98c5-21d6b3628e7e")
-	)
-	(text "电机接口"
-		(exclude_from_sim yes)
-		(at 249.174 21.082 0)
-		(effects
-			(font
-				(size 5.08 5.08)
-				(thickness 1.016)
-				(bold yes)
-				(italic yes)
-				(color 255 2 253 1)
-			)
-		)
-		(uuid "36c973da-3235-4823-afa6-eb85ceb16273")
-	)
-	(text "IIC-AS5600X2"
-		(exclude_from_sim yes)
-		(at 87.63 48.514 0)
-		(effects
-			(font
-				(size 5.08 5.08)
-				(thickness 1.016)
-				(bold yes)
-				(italic yes)
-				(color 255 2 253 1)
-			)
-		)
-		(uuid "6f3636ed-4b63-4b85-80cf-c562ec7c7f5c")
-	)
-	(text "Connector:\n"
-		(exclude_from_sim yes)
-		(at 35.814 20.32 0)
-		(effects
-			(font
-				(size 5.08 5.08)
-				(thickness 1.016)
-				(bold yes)
-				(italic yes)
-				(color 255 2 253 1)
-			)
-		)
-		(uuid "a2ff3261-d2f8-4474-a64c-be90b33dc064")
-	)
-	(text "SPI预留接口"
-		(exclude_from_sim yes)
-		(at 166.116 77.978 0)
-		(effects
-			(font
-				(size 5.08 5.08)
-				(thickness 1.016)
-				(bold yes)
-				(italic yes)
-				(color 255 2 253 1)
-			)
-		)
-		(uuid "bfe49b09-6a39-44a8-b5ed-c2322b46f6ed")
-	)
-	(text "USART"
-		(exclude_from_sim yes)
-		(at 60.706 95.758 0)
-		(effects
-			(font
-				(size 5.08 5.08)
-				(thickness 1.016)
-				(bold yes)
-				(italic yes)
-				(color 255 2 253 1)
-			)
-		)
-		(uuid "dc7e6b8b-3ca6-464b-b862-6707469f7a91")
-	)
-	(text "SWD\n"
-		(exclude_from_sim yes)
-		(at 255.27 95.504 0)
-		(effects
-			(font
-				(size 5.08 5.08)
-				(thickness 1.016)
-				(bold yes)
-				(italic yes)
-				(color 255 2 253 1)
-			)
-		)
-		(uuid "dcd1f875-ac0a-4b2d-aae9-d8428bd8b8e4")
 	)
 	(global_label "3V3"
 		(shape bidirectional)
@@ -7504,6 +7536,10 @@
 	(sheet
 		(at 66.04 154.94)
 		(size 41.148 39.37)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -7542,6 +7578,10 @@
 	(sheet
 		(at 16.256 154.686)
 		(size 41.148 39.37)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)

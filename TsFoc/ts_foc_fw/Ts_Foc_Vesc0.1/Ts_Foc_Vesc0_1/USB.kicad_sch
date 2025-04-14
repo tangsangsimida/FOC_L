@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "d95305f4-6c94-438b-bbd6-9bc8ff8478c2")
 	(paper "A4")
 	(title_block
@@ -11,9 +11,13 @@
 	)
 	(lib_symbols
 		(symbol "Ts_Foc_Vo符号库:RES"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -127,6 +131,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Ts_Foc_Vo符号库:TYPE-C-16P"
 			(pin_names
@@ -220,78 +225,6 @@
 					)
 				)
 				(pin input line
-					(at 10.16 -12.7 180)
-					(length 2.54)
-					(name "SHELL"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 10.16 -10.16 180)
-					(length 2.54)
-					(name "SHELL"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 10.16 12.7 180)
-					(length 2.54)
-					(name "SHELL"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 10.16 15.24 180)
-					(length 2.54)
-					(name "SHELL"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
 					(at -12.7 15.24 0)
 					(length 2.54)
 					(name "GND"
@@ -328,6 +261,24 @@
 					)
 				)
 				(pin input line
+					(at -12.7 10.16 0)
+					(length 2.54)
+					(name "SBU2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "B8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
 					(at -12.7 7.62 0)
 					(length 2.54)
 					(name "CC1"
@@ -338,6 +289,24 @@
 						)
 					)
 					(number "A5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -12.7 5.08 0)
+					(length 2.54)
+					(name "D-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "B7"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -382,6 +351,24 @@
 					)
 				)
 				(pin input line
+					(at -12.7 -2.54 0)
+					(length 2.54)
+					(name "D+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "B6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
 					(at -12.7 -5.08 0)
 					(length 2.54)
 					(name "SBU1"
@@ -392,42 +379,6 @@
 						)
 					)
 					(number "A8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -12.7 -12.7 0)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "B1A12"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -12.7 -10.16 0)
-					(length 2.54)
-					(name "VBUS"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "B4A9"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -454,16 +405,16 @@
 					)
 				)
 				(pin input line
-					(at -12.7 -2.54 0)
+					(at -12.7 -10.16 0)
 					(length 2.54)
-					(name "D+"
+					(name "VBUS"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "B6"
+					(number "B4A9"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -472,16 +423,16 @@
 					)
 				)
 				(pin input line
-					(at -12.7 5.08 0)
+					(at -12.7 -12.7 0)
 					(length 2.54)
-					(name "D-"
+					(name "GND"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "B7"
+					(number "B1A12"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -490,16 +441,70 @@
 					)
 				)
 				(pin input line
-					(at -12.7 10.16 0)
+					(at 10.16 15.24 180)
 					(length 2.54)
-					(name "SBU2"
+					(name "SHELL"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "B8"
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 10.16 12.7 180)
+					(length 2.54)
+					(name "SHELL"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 10.16 -10.16 180)
+					(length 2.54)
+					(name "SHELL"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 10.16 -12.7 180)
+					(length 2.54)
+					(name "SHELL"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -508,12 +513,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:GND"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -604,7 +614,22 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
+	)
+	(text "USB_TYPE-C"
+		(exclude_from_sim yes)
+		(at 147.574 61.722 0)
+		(effects
+			(font
+				(size 5.08 5.08)
+				(thickness 1.016)
+				(bold yes)
+				(italic yes)
+				(color 255 2 253 1)
+			)
+		)
+		(uuid "92bf5bc7-8ab6-4f31-ae2a-8d611e68385b")
 	)
 	(junction
 		(at 171.45 86.36)
@@ -725,20 +750,6 @@
 			(type default)
 		)
 		(uuid "c0b920d2-a011-4f1d-8a8b-fda11ce501cd")
-	)
-	(text "USB_TYPE-C"
-		(exclude_from_sim yes)
-		(at 147.574 61.722 0)
-		(effects
-			(font
-				(size 5.08 5.08)
-				(thickness 1.016)
-				(bold yes)
-				(italic yes)
-				(color 255 2 253 1)
-			)
-		)
-		(uuid "92bf5bc7-8ab6-4f31-ae2a-8d611e68385b")
 	)
 	(global_label "DN"
 		(shape bidirectional)

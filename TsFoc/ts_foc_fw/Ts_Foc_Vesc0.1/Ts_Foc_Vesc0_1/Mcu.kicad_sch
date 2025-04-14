@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "dc988b8c-4082-4675-a353-8ae80f698e12")
 	(paper "A4")
 	(title_block
@@ -12,7 +12,9 @@
 	(lib_symbols
 		(symbol "Ts_Foc_Vo符号库:BOTTOM"
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -139,11 +141,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Ts_Foc_Vo符号库:LED"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -211,6 +218,30 @@
 			(symbol "LED_1_1"
 				(polyline
 					(pts
+						(xy -2.286 1.778) (xy -1.27 1.27) (xy -1.778 0.762) (xy -2.286 1.778)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 2.794) (xy -0.254 2.286) (xy -0.762 1.778) (xy -1.27 2.794)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
 						(xy -1.27 -0.508) (xy -1.27 -3.556)
 					)
 					(stroke
@@ -243,30 +274,6 @@
 					)
 					(fill
 						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.286 1.778) (xy -1.27 1.27) (xy -1.778 0.762) (xy -2.286 1.778)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 2.794) (xy -0.254 2.286) (xy -0.762 1.778) (xy -1.27 2.794)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type outline)
 					)
 				)
 				(polyline
@@ -318,10 +325,13 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Ts_Foc_Vo符号库:LED_RGB"
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -389,6 +399,30 @@
 			(symbol "LED_RGB_1_1"
 				(polyline
 					(pts
+						(xy -9.144 5.842) (xy -8.128 5.334) (xy -8.636 4.826) (xy -9.144 5.842)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -8.128 6.858) (xy -7.112 6.35) (xy -7.62 5.842) (xy -8.128 6.858)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
 						(xy -7.62 2.54) (xy -10.16 2.54)
 					)
 					(stroke
@@ -413,14 +447,14 @@
 				)
 				(polyline
 					(pts
-						(xy -6.35 2.54) (xy -7.62 2.54)
+						(xy -6.35 5.08) (xy -7.366 6.096)
 					)
 					(stroke
 						(width 0.1524)
 						(type solid)
 					)
 					(fill
-						(type none)
+						(type outline)
 					)
 				)
 				(polyline
@@ -437,19 +471,7 @@
 				)
 				(polyline
 					(pts
-						(xy -6.35 5.08) (xy -7.366 6.096)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.54 -5.08) (xy -10.16 -5.08)
+						(xy -6.35 2.54) (xy -7.62 2.54)
 					)
 					(stroke
 						(width 0.1524)
@@ -457,6 +479,18 @@
 					)
 					(fill
 						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.81 4.318) (xy -6.35 2.54) (xy -3.81 0.762) (xy -3.81 4.318)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type outline)
 					)
 				)
 				(polyline
@@ -485,7 +519,43 @@
 				)
 				(polyline
 					(pts
-						(xy 0.254 -2.286) (xy 1.27 -1.27)
+						(xy -2.54 2.54) (xy -2.54 -5.08) (xy 0 -5.08)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -5.08) (xy -10.16 -5.08)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0.762) (xy 2.54 2.54) (xy 0 4.318) (xy 0 0.762)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -6.858) (xy 2.54 -5.08) (xy 0 -3.302) (xy 0 -6.858)
 					)
 					(stroke
 						(width 0.1524)
@@ -509,7 +579,7 @@
 				)
 				(polyline
 					(pts
-						(xy 1.27 -3.302) (xy 2.286 -2.286)
+						(xy 0.254 -2.286) (xy 1.27 -1.27)
 					)
 					(stroke
 						(width 0.1524)
@@ -533,7 +603,19 @@
 				)
 				(polyline
 					(pts
-						(xy 2.54 -6.858) (xy 2.54 -3.302)
+						(xy 1.27 -3.302) (xy 2.286 -2.286)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.032 7.112) (xy 1.524 6.096) (xy 1.016 6.604) (xy 2.032 7.112)
 					)
 					(stroke
 						(width 0.1524)
@@ -545,31 +627,7 @@
 				)
 				(polyline
 					(pts
-						(xy 2.54 -5.08) (xy 3.81 -5.08)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 -5.08) (xy 7.62 -5.08)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 0.762) (xy 2.54 4.318)
+						(xy 2.032 -0.508) (xy 1.524 -1.524) (xy 1.016 -1.016) (xy 2.032 -0.508)
 					)
 					(stroke
 						(width 0.1524)
@@ -605,7 +663,7 @@
 				)
 				(polyline
 					(pts
-						(xy -2.54 2.54) (xy -2.54 -5.08) (xy 0 -5.08)
+						(xy 2.54 0.762) (xy 2.54 4.318)
 					)
 					(stroke
 						(width 0.1524)
@@ -617,7 +675,7 @@
 				)
 				(polyline
 					(pts
-						(xy -9.144 5.842) (xy -8.128 5.334) (xy -8.636 4.826) (xy -9.144 5.842)
+						(xy 2.54 -5.08) (xy 3.81 -5.08)
 					)
 					(stroke
 						(width 0.1524)
@@ -629,7 +687,7 @@
 				)
 				(polyline
 					(pts
-						(xy -8.128 6.858) (xy -7.112 6.35) (xy -7.62 5.842) (xy -8.128 6.858)
+						(xy 2.54 -5.08) (xy 7.62 -5.08)
 					)
 					(stroke
 						(width 0.1524)
@@ -641,67 +699,7 @@
 				)
 				(polyline
 					(pts
-						(xy -3.81 4.318) (xy -6.35 2.54) (xy -3.81 0.762) (xy -3.81 4.318)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -6.858) (xy 2.54 -5.08) (xy 0 -3.302) (xy 0 -6.858)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0.762) (xy 2.54 2.54) (xy 0 4.318) (xy 0 0.762)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.032 -0.508) (xy 1.524 -1.524) (xy 1.016 -1.016) (xy 2.032 -0.508)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.032 7.112) (xy 1.524 6.096) (xy 1.016 6.604) (xy 2.032 7.112)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.048 -1.524) (xy 2.54 -2.54) (xy 2.032 -2.032) (xy 3.048 -1.524)
+						(xy 2.54 -6.858) (xy 2.54 -3.302)
 					)
 					(stroke
 						(width 0.1524)
@@ -714,6 +712,18 @@
 				(polyline
 					(pts
 						(xy 3.048 6.096) (xy 2.54 5.08) (xy 2.032 5.588) (xy 3.048 6.096)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.048 -1.524) (xy 2.54 -2.54) (xy 2.032 -2.032) (xy 3.048 -1.524)
 					)
 					(stroke
 						(width 0.1524)
@@ -760,24 +770,6 @@
 					)
 				)
 				(pin input line
-					(at 10.16 -5.08 180)
-					(length 2.54)
-					(name "B-"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
 					(at 10.16 2.54 180)
 					(length 2.54)
 					(name "G-"
@@ -795,12 +787,35 @@
 						)
 					)
 				)
+				(pin input line
+					(at 10.16 -5.08 180)
+					(length 2.54)
+					(name "B-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Ts_Foc_Vo符号库:RES"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -914,12 +929,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:GND"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1010,7 +1030,64 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
+	)
+	(text "用户按键"
+		(exclude_from_sim yes)
+		(at 226.822 51.308 0)
+		(effects
+			(font
+				(size 5.08 5.08)
+				(thickness 1.016)
+				(bold yes)
+				(italic yes)
+				(color 255 2 253 1)
+			)
+		)
+		(uuid "1c79a320-71a7-4dc4-ae32-430c40f4586d")
+	)
+	(text "用户LED\n"
+		(exclude_from_sim yes)
+		(at 230.632 22.098 0)
+		(effects
+			(font
+				(size 5.08 5.08)
+				(thickness 1.016)
+				(bold yes)
+				(italic yes)
+				(color 255 2 253 1)
+			)
+		)
+		(uuid "432b5722-71ca-425b-bb22-3d0197d32405")
+	)
+	(text "Mcu："
+		(exclude_from_sim yes)
+		(at 25.908 19.812 0)
+		(effects
+			(font
+				(size 5.08 5.08)
+				(thickness 1.016)
+				(bold yes)
+				(italic yes)
+				(color 255 2 253 1)
+			)
+		)
+		(uuid "6bfa14d6-8589-4fc2-921e-12c3ad869985")
+	)
+	(text "RGB灯"
+		(exclude_from_sim yes)
+		(at 135.382 30.988 0)
+		(effects
+			(font
+				(size 5.08 5.08)
+				(thickness 1.016)
+				(bold yes)
+				(italic yes)
+				(color 255 2 253 1)
+			)
+		)
+		(uuid "f7aeee4e-842d-45b2-b959-f69c454063cd")
 	)
 	(junction
 		(at 92.71 13.97)
@@ -1318,62 +1395,6 @@
 			(type default)
 		)
 		(uuid "ff456ac7-6674-433d-94f2-a889e25ee0eb")
-	)
-	(text "用户按键"
-		(exclude_from_sim yes)
-		(at 226.822 51.308 0)
-		(effects
-			(font
-				(size 5.08 5.08)
-				(thickness 1.016)
-				(bold yes)
-				(italic yes)
-				(color 255 2 253 1)
-			)
-		)
-		(uuid "1c79a320-71a7-4dc4-ae32-430c40f4586d")
-	)
-	(text "用户LED\n"
-		(exclude_from_sim yes)
-		(at 230.632 22.098 0)
-		(effects
-			(font
-				(size 5.08 5.08)
-				(thickness 1.016)
-				(bold yes)
-				(italic yes)
-				(color 255 2 253 1)
-			)
-		)
-		(uuid "432b5722-71ca-425b-bb22-3d0197d32405")
-	)
-	(text "Mcu："
-		(exclude_from_sim yes)
-		(at 25.908 19.812 0)
-		(effects
-			(font
-				(size 5.08 5.08)
-				(thickness 1.016)
-				(bold yes)
-				(italic yes)
-				(color 255 2 253 1)
-			)
-		)
-		(uuid "6bfa14d6-8589-4fc2-921e-12c3ad869985")
-	)
-	(text "RGB灯"
-		(exclude_from_sim yes)
-		(at 135.382 30.988 0)
-		(effects
-			(font
-				(size 5.08 5.08)
-				(thickness 1.016)
-				(bold yes)
-				(italic yes)
-				(color 255 2 253 1)
-			)
-		)
-		(uuid "f7aeee4e-842d-45b2-b959-f69c454063cd")
 	)
 	(global_label "LED"
 		(shape bidirectional)
@@ -2317,6 +2338,10 @@
 	(sheet
 		(at 41.402 29.718)
 		(size 31.75 30.48)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)

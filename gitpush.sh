@@ -78,6 +78,7 @@ fi
 
 log "${GREEN}正在提交更改...${NC}"
 git add * 
+git add -u
 git commit -m "$commit_message" | tee -a "$LOG_FILE"
 echo "" | tee -a "$LOG_FILE"
 

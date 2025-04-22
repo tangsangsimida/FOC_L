@@ -1,0 +1,352 @@
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccxVKOMt.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"app_threadx.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.rodata.App_ThreadX_Init.str1.4,"aMS",%progbits,1
+  20              		.align	2
+  21              	.LC0:
+  22 0000 54687265 		.ascii	"Thread_Template\000"
+  22      61645F54 
+  22      656D706C 
+  22      61746500 
+  23              		.align	2
+  24              	.LC1:
+  25 0010 54687265 		.ascii	"Thread_Cmd\000"
+  25      61645F43 
+  25      6D6400
+  26              		.section	.text.App_ThreadX_Init,"ax",%progbits
+  27              		.align	1
+  28              		.global	App_ThreadX_Init
+  29              		.syntax unified
+  30              		.thumb
+  31              		.thumb_func
+  33              	App_ThreadX_Init:
+  34              	.LVL0:
+  35              	.LFB250:
+  36              		.file 1 "./Core/Src/app_threadx.c"
+   1:./Core/Src/app_threadx.c **** /* USER CODE BEGIN Header */
+   2:./Core/Src/app_threadx.c **** /**
+   3:./Core/Src/app_threadx.c ****   ******************************************************************************
+   4:./Core/Src/app_threadx.c ****   * @file    app_threadx.c
+   5:./Core/Src/app_threadx.c ****   * @author  MCD Application Team
+   6:./Core/Src/app_threadx.c ****   * @brief   ThreadX applicative file
+   7:./Core/Src/app_threadx.c ****   ******************************************************************************
+   8:./Core/Src/app_threadx.c ****   * @attention
+   9:./Core/Src/app_threadx.c ****   *
+  10:./Core/Src/app_threadx.c ****   * Copyright (c) 2021 STMicroelectronics.
+  11:./Core/Src/app_threadx.c ****   * All rights reserved.
+  12:./Core/Src/app_threadx.c ****   *
+  13:./Core/Src/app_threadx.c ****   * This software is licensed under terms that can be found in the LICENSE file
+  14:./Core/Src/app_threadx.c ****   * in the root directory of this software component.
+  15:./Core/Src/app_threadx.c ****   * If no LICENSE file comes with this software, it is provided AS-IS.
+  16:./Core/Src/app_threadx.c ****   *
+  17:./Core/Src/app_threadx.c ****   ******************************************************************************
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccxVKOMt.s 			page 2
+
+
+  18:./Core/Src/app_threadx.c ****   */
+  19:./Core/Src/app_threadx.c **** /* USER CODE END Header */
+  20:./Core/Src/app_threadx.c **** 
+  21:./Core/Src/app_threadx.c **** /* Includes ------------------------------------------------------------------*/
+  22:./Core/Src/app_threadx.c **** #include "app_threadx.h"
+  23:./Core/Src/app_threadx.c **** 
+  24:./Core/Src/app_threadx.c **** /* Private includes ----------------------------------------------------------*/
+  25:./Core/Src/app_threadx.c **** /* USER CODE BEGIN Includes */
+  26:./Core/Src/app_threadx.c **** #include "Thread_api.h"
+  27:./Core/Src/app_threadx.c **** /* USER CODE END Includes */
+  28:./Core/Src/app_threadx.c **** 
+  29:./Core/Src/app_threadx.c **** /* Private typedef -----------------------------------------------------------*/
+  30:./Core/Src/app_threadx.c **** /* USER CODE BEGIN PTD */
+  31:./Core/Src/app_threadx.c **** 
+  32:./Core/Src/app_threadx.c **** /* USER CODE END PTD */
+  33:./Core/Src/app_threadx.c **** 
+  34:./Core/Src/app_threadx.c **** /* Private define ------------------------------------------------------------*/
+  35:./Core/Src/app_threadx.c **** /* USER CODE BEGIN PD */
+  36:./Core/Src/app_threadx.c **** 
+  37:./Core/Src/app_threadx.c **** /* USER CODE END PD */
+  38:./Core/Src/app_threadx.c **** 
+  39:./Core/Src/app_threadx.c **** /* Private macro -------------------------------------------------------------*/
+  40:./Core/Src/app_threadx.c **** /* USER CODE BEGIN PM */
+  41:./Core/Src/app_threadx.c **** 
+  42:./Core/Src/app_threadx.c **** /* USER CODE END PM */
+  43:./Core/Src/app_threadx.c **** 
+  44:./Core/Src/app_threadx.c **** /* Private variables ---------------------------------------------------------*/
+  45:./Core/Src/app_threadx.c **** /* USER CODE BEGIN PV */
+  46:./Core/Src/app_threadx.c **** 
+  47:./Core/Src/app_threadx.c **** /* USER CODE END PV */
+  48:./Core/Src/app_threadx.c **** 
+  49:./Core/Src/app_threadx.c **** /* Private function prototypes -----------------------------------------------*/
+  50:./Core/Src/app_threadx.c **** /* USER CODE BEGIN PFP */
+  51:./Core/Src/app_threadx.c **** 
+  52:./Core/Src/app_threadx.c **** /* USER CODE END PFP */
+  53:./Core/Src/app_threadx.c **** 
+  54:./Core/Src/app_threadx.c **** /**
+  55:./Core/Src/app_threadx.c ****   * @brief  Application ThreadX Initialization.
+  56:./Core/Src/app_threadx.c ****   * @param memory_ptr: memory pointer
+  57:./Core/Src/app_threadx.c ****   * @retval int
+  58:./Core/Src/app_threadx.c ****   */
+  59:./Core/Src/app_threadx.c **** UINT App_ThreadX_Init(VOID *memory_ptr)
+  60:./Core/Src/app_threadx.c **** {
+  37              		.loc 1 60 1 view -0
+  38              		.cfi_startproc
+  39              		@ args = 0, pretend = 0, frame = 8
+  40              		@ frame_needed = 0, uses_anonymous_args = 0
+  41              		.loc 1 60 1 is_stmt 0 view .LVU1
+  42 0000 30B5     		push	{r4, r5, lr}
+  43              	.LCFI0:
+  44              		.cfi_def_cfa_offset 12
+  45              		.cfi_offset 4, -12
+  46              		.cfi_offset 5, -8
+  47              		.cfi_offset 14, -4
+  48 0002 8BB0     		sub	sp, sp, #44
+  49              	.LCFI1:
+  50              		.cfi_def_cfa_offset 56
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccxVKOMt.s 			page 3
+
+
+  51 0004 0446     		mov	r4, r0
+  61:./Core/Src/app_threadx.c ****   UINT ret = TX_SUCCESS;
+  52              		.loc 1 61 3 is_stmt 1 view .LVU2
+  53              	.LVL1:
+  62:./Core/Src/app_threadx.c **** 
+  63:./Core/Src/app_threadx.c ****   TX_BYTE_POOL *byte_pool = (TX_BYTE_POOL*)memory_ptr;
+  54              		.loc 1 63 3 view .LVU3
+  64:./Core/Src/app_threadx.c **** 
+  65:./Core/Src/app_threadx.c ****   /* USER CODE BEGIN App_ThreadX_Init */
+  66:./Core/Src/app_threadx.c ****   (void)byte_pool;
+  55              		.loc 1 66 3 view .LVU4
+  67:./Core/Src/app_threadx.c ****   CHAR *pointer;
+  56              		.loc 1 67 3 view .LVU5
+  68:./Core/Src/app_threadx.c **** 
+  69:./Core/Src/app_threadx.c **** //************************************************template线程***********************************
+  70:./Core/Src/app_threadx.c ****   if (tx_byte_allocate(byte_pool, (VOID **) &pointer,
+  57              		.loc 1 70 3 view .LVU6
+  58              		.loc 1 70 7 is_stmt 0 view .LVU7
+  59 0006 0023     		movs	r3, #0
+  60 0008 4FF40072 		mov	r2, #512
+  61 000c 09A9     		add	r1, sp, #36
+  62 000e FFF7FEFF 		bl	_txe_byte_allocate
+  63              	.LVL2:
+  64              		.loc 1 70 6 view .LVU8
+  65 0012 0546     		mov	r5, r0
+  66 0014 00B1     		cbz	r0, .L2
+  71:./Core/Src/app_threadx.c ****                        Thread_Template_Size, TX_NO_WAIT) != TX_SUCCESS)    ret = TX_POOL_ERROR;
+  67              		.loc 1 71 80 view .LVU9
+  68 0016 0225     		movs	r5, #2
+  69              	.L2:
+  70              	.LVL3:
+  72:./Core/Src/app_threadx.c ****   if(tx_thread_create(&Thread_Template, "Thread_Template",
+  71              		.loc 1 72 3 is_stmt 1 view .LVU10
+  72              		.loc 1 72 6 is_stmt 0 view .LVU11
+  73 0018 B023     		movs	r3, #176
+  74 001a 0693     		str	r3, [sp, #24]
+  75 001c 0123     		movs	r3, #1
+  76 001e 0593     		str	r3, [sp, #20]
+  77 0020 0023     		movs	r3, #0
+  78 0022 0493     		str	r3, [sp, #16]
+  79 0024 1423     		movs	r3, #20
+  80 0026 0393     		str	r3, [sp, #12]
+  81 0028 0293     		str	r3, [sp, #8]
+  82 002a 4FF40073 		mov	r3, #512
+  83 002e 0193     		str	r3, [sp, #4]
+  84 0030 099B     		ldr	r3, [sp, #36]
+  85 0032 0093     		str	r3, [sp]
+  86 0034 154B     		ldr	r3, .L12
+  87 0036 164A     		ldr	r2, .L12+4
+  88 0038 1649     		ldr	r1, .L12+8
+  89 003a 1748     		ldr	r0, .L12+12
+  90 003c FFF7FEFF 		bl	_txe_thread_create
+  91              	.LVL4:
+  92              		.loc 1 72 5 view .LVU12
+  93 0040 00B1     		cbz	r0, .L3
+  73:./Core/Src/app_threadx.c ****                       Thread_Template_Entry, (ULONG)&Thread_Template_parama1, pointer, Thread_Templ
+  74:./Core/Src/app_threadx.c ****                       Thread_Template_PRIO, Thread_Template_threshold,
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccxVKOMt.s 			page 4
+
+
+  75:./Core/Src/app_threadx.c ****                       TX_NO_TIME_SLICE, TX_AUTO_START) != TX_SUCCESS) ret = TX_THREAD_ERROR;
+  94              		.loc 1 75 75 view .LVU13
+  95 0042 0E25     		movs	r5, #14
+  96              	.LVL5:
+  97              	.L3:
+  76:./Core/Src/app_threadx.c **** //************************************************Cmd线程****************************************
+  77:./Core/Src/app_threadx.c ****   if (tx_byte_allocate(byte_pool, (VOID **) &pointer,
+  98              		.loc 1 77 3 is_stmt 1 view .LVU14
+  99              		.loc 1 77 7 is_stmt 0 view .LVU15
+ 100 0044 0023     		movs	r3, #0
+ 101 0046 4FF40072 		mov	r2, #512
+ 102 004a 09A9     		add	r1, sp, #36
+ 103 004c 2046     		mov	r0, r4
+ 104 004e FFF7FEFF 		bl	_txe_byte_allocate
+ 105              	.LVL6:
+ 106              		.loc 1 77 6 view .LVU16
+ 107 0052 00B1     		cbz	r0, .L4
+  78:./Core/Src/app_threadx.c ****                        Thread_Cmd_Size, TX_NO_WAIT) != TX_SUCCESS)    ret = TX_POOL_ERROR;
+ 108              		.loc 1 78 75 view .LVU17
+ 109 0054 0225     		movs	r5, #2
+ 110              	.LVL7:
+ 111              	.L4:
+  79:./Core/Src/app_threadx.c ****   if(tx_thread_create(&Thread_Cmd, "Thread_Cmd",
+ 112              		.loc 1 79 3 is_stmt 1 view .LVU18
+ 113              		.loc 1 79 6 is_stmt 0 view .LVU19
+ 114 0056 B023     		movs	r3, #176
+ 115 0058 0693     		str	r3, [sp, #24]
+ 116 005a 0123     		movs	r3, #1
+ 117 005c 0593     		str	r3, [sp, #20]
+ 118 005e 0023     		movs	r3, #0
+ 119 0060 0493     		str	r3, [sp, #16]
+ 120 0062 1423     		movs	r3, #20
+ 121 0064 0393     		str	r3, [sp, #12]
+ 122 0066 0293     		str	r3, [sp, #8]
+ 123 0068 4FF40073 		mov	r3, #512
+ 124 006c 0193     		str	r3, [sp, #4]
+ 125 006e 099B     		ldr	r3, [sp, #36]
+ 126 0070 0093     		str	r3, [sp]
+ 127 0072 0A4B     		ldr	r3, .L12+16
+ 128 0074 0A4A     		ldr	r2, .L12+20
+ 129 0076 0B49     		ldr	r1, .L12+24
+ 130 0078 0B48     		ldr	r0, .L12+28
+ 131 007a FFF7FEFF 		bl	_txe_thread_create
+ 132              	.LVL8:
+ 133              		.loc 1 79 5 view .LVU20
+ 134 007e 10B9     		cbnz	r0, .L11
+ 135              	.LVL9:
+ 136              	.L1:
+  80:./Core/Src/app_threadx.c ****                       Thread_Cmd_Entry, (ULONG)&Thread_Cmd_parama1, pointer, Thread_Cmd_Size,
+  81:./Core/Src/app_threadx.c ****                       Thread_Cmd_PRIO, Thread_Cmd_threshold,
+  82:./Core/Src/app_threadx.c ****                       TX_NO_TIME_SLICE, TX_AUTO_START) != TX_SUCCESS) ret = TX_THREAD_ERROR;
+  83:./Core/Src/app_threadx.c **** 
+  84:./Core/Src/app_threadx.c **** 
+  85:./Core/Src/app_threadx.c ****   /* USER CODE END App_ThreadX_Init */
+  86:./Core/Src/app_threadx.c **** 
+  87:./Core/Src/app_threadx.c ****   return ret;
+  88:./Core/Src/app_threadx.c **** }
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccxVKOMt.s 			page 5
+
+
+ 137              		.loc 1 88 1 view .LVU21
+ 138 0080 2846     		mov	r0, r5
+ 139 0082 0BB0     		add	sp, sp, #44
+ 140              	.LCFI2:
+ 141              		.cfi_remember_state
+ 142              		.cfi_def_cfa_offset 12
+ 143              		@ sp needed
+ 144 0084 30BD     		pop	{r4, r5, pc}
+ 145              	.LVL10:
+ 146              	.L11:
+ 147              	.LCFI3:
+ 148              		.cfi_restore_state
+  82:./Core/Src/app_threadx.c **** 
+ 149              		.loc 1 82 75 view .LVU22
+ 150 0086 0E25     		movs	r5, #14
+ 151              	.LVL11:
+  87:./Core/Src/app_threadx.c **** }
+ 152              		.loc 1 87 3 is_stmt 1 view .LVU23
+  87:./Core/Src/app_threadx.c **** }
+ 153              		.loc 1 87 10 is_stmt 0 view .LVU24
+ 154 0088 FAE7     		b	.L1
+ 155              	.L13:
+ 156 008a 00BF     		.align	2
+ 157              	.L12:
+ 158 008c 00000000 		.word	Thread_Template_parama1
+ 159 0090 00000000 		.word	Thread_Template_Entry
+ 160 0094 00000000 		.word	.LC0
+ 161 0098 00000000 		.word	Thread_Template
+ 162 009c 00000000 		.word	Thread_Cmd_parama1
+ 163 00a0 00000000 		.word	Thread_Cmd_Entry
+ 164 00a4 10000000 		.word	.LC1
+ 165 00a8 00000000 		.word	Thread_Cmd
+ 166              		.cfi_endproc
+ 167              	.LFE250:
+ 169              		.section	.text.MX_ThreadX_Init,"ax",%progbits
+ 170              		.align	1
+ 171              		.global	MX_ThreadX_Init
+ 172              		.syntax unified
+ 173              		.thumb
+ 174              		.thumb_func
+ 176              	MX_ThreadX_Init:
+ 177              	.LFB251:
+  89:./Core/Src/app_threadx.c **** 
+  90:./Core/Src/app_threadx.c **** /**
+  91:./Core/Src/app_threadx.c ****   * @brief  MX_ThreadX_Init
+  92:./Core/Src/app_threadx.c ****   * @param  None
+  93:./Core/Src/app_threadx.c ****   * @retval None
+  94:./Core/Src/app_threadx.c ****   */
+  95:./Core/Src/app_threadx.c **** void MX_ThreadX_Init(void)
+  96:./Core/Src/app_threadx.c **** {
+ 178              		.loc 1 96 1 is_stmt 1 view -0
+ 179              		.cfi_startproc
+ 180              		@ args = 0, pretend = 0, frame = 0
+ 181              		@ frame_needed = 0, uses_anonymous_args = 0
+ 182 0000 08B5     		push	{r3, lr}
+ 183              	.LCFI4:
+ 184              		.cfi_def_cfa_offset 8
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccxVKOMt.s 			page 6
+
+
+ 185              		.cfi_offset 3, -8
+ 186              		.cfi_offset 14, -4
+  97:./Core/Src/app_threadx.c ****   /* USER CODE BEGIN  Before_Kernel_Start */
+  98:./Core/Src/app_threadx.c **** 
+  99:./Core/Src/app_threadx.c ****   /* USER CODE END  Before_Kernel_Start */
+ 100:./Core/Src/app_threadx.c **** 
+ 101:./Core/Src/app_threadx.c ****   tx_kernel_enter();
+ 187              		.loc 1 101 3 view .LVU26
+ 188 0002 FFF7FEFF 		bl	_tx_initialize_kernel_enter
+ 189              	.LVL12:
+ 102:./Core/Src/app_threadx.c **** 
+ 103:./Core/Src/app_threadx.c ****   /* USER CODE BEGIN  Kernel_Start_Error */
+ 104:./Core/Src/app_threadx.c **** 
+ 105:./Core/Src/app_threadx.c ****   /* USER CODE END  Kernel_Start_Error */
+ 106:./Core/Src/app_threadx.c **** }
+ 190              		.loc 1 106 1 is_stmt 0 view .LVU27
+ 191 0006 08BD     		pop	{r3, pc}
+ 192              		.cfi_endproc
+ 193              	.LFE251:
+ 195              		.text
+ 196              	.Letext0:
+ 197              		.file 2 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 198              		.file 3 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
+ 199              		.file 4 "./Middlewares/ST/threadx/common/inc/tx_api.h"
+ 200              		.file 5 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 201              		.file 6 "./app/Threads/Thread_template/Thread_template.h"
+ 202              		.file 7 "./app/Threads/Thread_cmd/Thread_cmd.h"
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccxVKOMt.s 			page 7
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 app_threadx.c
+C:\Users\Dennis\AppData\Local\Temp\ccxVKOMt.s:20     .rodata.App_ThreadX_Init.str1.4:00000000 $d
+C:\Users\Dennis\AppData\Local\Temp\ccxVKOMt.s:27     .text.App_ThreadX_Init:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\ccxVKOMt.s:33     .text.App_ThreadX_Init:00000000 App_ThreadX_Init
+C:\Users\Dennis\AppData\Local\Temp\ccxVKOMt.s:158    .text.App_ThreadX_Init:0000008c $d
+C:\Users\Dennis\AppData\Local\Temp\ccxVKOMt.s:170    .text.MX_ThreadX_Init:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\ccxVKOMt.s:176    .text.MX_ThreadX_Init:00000000 MX_ThreadX_Init
+
+UNDEFINED SYMBOLS
+_txe_byte_allocate
+_txe_thread_create
+Thread_Template_parama1
+Thread_Template_Entry
+Thread_Template
+Thread_Cmd_parama1
+Thread_Cmd_Entry
+Thread_Cmd
+_tx_initialize_kernel_enter

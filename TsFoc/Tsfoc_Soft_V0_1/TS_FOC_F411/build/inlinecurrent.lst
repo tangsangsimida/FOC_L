@@ -1,30 +1,30 @@
-ARM GAS  /tmp/ccmIN3Gu.s 			page 1
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGqe6V7.s 			page 1
 
 
    1              		.cpu cortex-m4
-   2              		.eabi_attribute 27, 1
-   3              		.eabi_attribute 28, 1
-   4              		.eabi_attribute 20, 1
-   5              		.eabi_attribute 21, 1
-   6              		.eabi_attribute 23, 3
-   7              		.eabi_attribute 24, 1
-   8              		.eabi_attribute 25, 1
-   9              		.eabi_attribute 26, 1
-  10              		.eabi_attribute 30, 1
-  11              		.eabi_attribute 34, 1
-  12              		.eabi_attribute 18, 4
-  13              		.file	"inlinecurrent.c"
-  14              		.text
-  15              	.Ltext0:
-  16              		.cfi_sections	.debug_frame
-  17              		.section	.text.DriftOffsets,"ax",%progbits
-  18              		.align	1
-  19              		.global	DriftOffsets
-  20              		.arch armv7e-m
-  21              		.syntax unified
-  22              		.thumb
-  23              		.thumb_func
-  24              		.fpu fpv4-sp-d16
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"inlinecurrent.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.DriftOffsets,"ax",%progbits
+  20              		.align	1
+  21              		.global	DriftOffsets
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
   26              	DriftOffsets:
   27              	.LVL0:
   28              	.LFB3:
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccmIN3Gu.s 			page 1
   37              	.LBB2:
   38              		.loc 1 19 6 view .LVU3
   39              		.loc 1 19 10 is_stmt 0 view .LVU4
-ARM GAS  /tmp/ccmIN3Gu.s 			page 2
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGqe6V7.s 			page 2
 
 
   40 0000 0023     		movs	r3, #0
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccmIN3Gu.s 			page 1
   84              		.loc 1 25 28 is_stmt 0 view .LVU21
   85 004e D0ED046A 		vldr.32	s13, [r0, #16]
   86              		.loc 1 25 40 view .LVU22
-ARM GAS  /tmp/ccmIN3Gu.s 			page 3
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGqe6V7.s 			page 3
 
 
   87 0052 DFED087A 		vldr.32	s15, .L4+8
@@ -151,222 +151,221 @@ ARM GAS  /tmp/ccmIN3Gu.s 			page 1
  112              		.syntax unified
  113              		.thumb
  114              		.thumb_func
- 115              		.fpu fpv4-sp-d16
- 117              	CurrSense_Init:
- 118              	.LVL3:
- 119              	.LFB4:
+ 116              	CurrSense_Init:
+ 117              	.LVL3:
+ 118              	.LFB4:
   29:usr/inlinecurrent.c **** 
   30:usr/inlinecurrent.c **** /// @brief 初始化电流传感器
   31:usr/inlinecurrent.c **** /// @param Sensor 
   32:usr/inlinecurrent.c **** void CurrSense_Init(Inlinecurrent_Typedef *Sensor)
   33:usr/inlinecurrent.c **** {
- 120              		.loc 1 33 1 is_stmt 1 view -0
- 121              		.cfi_startproc
- 122              		@ args = 0, pretend = 0, frame = 0
- 123              		@ frame_needed = 0, uses_anonymous_args = 0
- 124              		.loc 1 33 1 is_stmt 0 view .LVU30
- 125 0000 10B5     		push	{r4, lr}
- 126              	.LCFI0:
- 127              		.cfi_def_cfa_offset 8
- 128              		.cfi_offset 4, -8
- 129              		.cfi_offset 14, -4
- 130 0002 0446     		mov	r4, r0
+ 119              		.loc 1 33 1 is_stmt 1 view -0
+ 120              		.cfi_startproc
+ 121              		@ args = 0, pretend = 0, frame = 0
+ 122              		@ frame_needed = 0, uses_anonymous_args = 0
+ 123              		.loc 1 33 1 is_stmt 0 view .LVU30
+ 124 0000 10B5     		push	{r4, lr}
+ 125              	.LCFI0:
+ 126              		.cfi_def_cfa_offset 8
+ 127              		.cfi_offset 4, -8
+ 128              		.cfi_offset 14, -4
+ 129 0002 0446     		mov	r4, r0
   34:usr/inlinecurrent.c **** 	DriftOffsets(Sensor);
- 131              		.loc 1 34 2 is_stmt 1 view .LVU31
- 132 0004 FFF7FEFF 		bl	DriftOffsets
- 133              	.LVL4:
+ 130              		.loc 1 34 2 is_stmt 1 view .LVU31
+ 131 0004 FFF7FEFF 		bl	DriftOffsets
+ 132              	.LVL4:
   35:usr/inlinecurrent.c **** 	
   36:usr/inlinecurrent.c **** 	_shunt_resistor = 0.01; 
- 134              		.loc 1 36 2 view .LVU32
-ARM GAS  /tmp/ccmIN3Gu.s 			page 4
+ 133              		.loc 1 36 2 view .LVU32
+ 134              		.loc 1 36 18 is_stmt 0 view .LVU33
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGqe6V7.s 			page 4
 
 
- 135              		.loc 1 36 18 is_stmt 0 view .LVU33
- 136 0008 074B     		ldr	r3, .L8
- 137 000a 084A     		ldr	r2, .L8+4
- 138 000c 1A60     		str	r2, [r3]	@ float
+ 135 0008 074B     		ldr	r3, .L8
+ 136 000a 084A     		ldr	r2, .L8+4
+ 137 000c 1A60     		str	r2, [r3]	@ float
   37:usr/inlinecurrent.c **** 	amp_gain = 50; 
- 139              		.loc 1 37 2 is_stmt 1 view .LVU34
- 140              		.loc 1 37 11 is_stmt 0 view .LVU35
- 141 000e 084B     		ldr	r3, .L8+8
- 142 0010 084A     		ldr	r2, .L8+12
- 143 0012 1A60     		str	r2, [r3]	@ float
+ 138              		.loc 1 37 2 is_stmt 1 view .LVU34
+ 139              		.loc 1 37 11 is_stmt 0 view .LVU35
+ 140 000e 084B     		ldr	r3, .L8+8
+ 141 0010 084A     		ldr	r2, .L8+12
+ 142 0012 1A60     		str	r2, [r3]	@ float
   38:usr/inlinecurrent.c **** 	
   39:usr/inlinecurrent.c **** 	vlots_to_amps = 1.0f / _shunt_resistor / amp_gain;
- 144              		.loc 1 39 2 is_stmt 1 view .LVU36
- 145              		.loc 1 39 16 is_stmt 0 view .LVU37
- 146 0014 4FF08043 		mov	r3, #1073741824
- 147 0018 074A     		ldr	r2, .L8+16
- 148 001a 1360     		str	r3, [r2]	@ float
+ 143              		.loc 1 39 2 is_stmt 1 view .LVU36
+ 144              		.loc 1 39 16 is_stmt 0 view .LVU37
+ 145 0014 4FF08043 		mov	r3, #1073741824
+ 146 0018 074A     		ldr	r2, .L8+16
+ 147 001a 1360     		str	r3, [r2]	@ float
   40:usr/inlinecurrent.c **** 	
   41:usr/inlinecurrent.c **** 	Sensor->gain_a = vlots_to_amps * -1;
- 149              		.loc 1 41 2 is_stmt 1 view .LVU38
- 150              		.loc 1 41 17 is_stmt 0 view .LVU39
- 151 001c 4FF04042 		mov	r2, #-1073741824
- 152 0020 A261     		str	r2, [r4, #24]	@ float
+ 148              		.loc 1 41 2 is_stmt 1 view .LVU38
+ 149              		.loc 1 41 17 is_stmt 0 view .LVU39
+ 150 001c 4FF04042 		mov	r2, #-1073741824
+ 151 0020 A261     		str	r2, [r4, #24]	@ float
   42:usr/inlinecurrent.c **** 	Sensor->gain_b = vlots_to_amps * -1;
- 153              		.loc 1 42 2 is_stmt 1 view .LVU40
- 154              		.loc 1 42 17 is_stmt 0 view .LVU41
- 155 0022 E261     		str	r2, [r4, #28]	@ float
+ 152              		.loc 1 42 2 is_stmt 1 view .LVU40
+ 153              		.loc 1 42 17 is_stmt 0 view .LVU41
+ 154 0022 E261     		str	r2, [r4, #28]	@ float
   43:usr/inlinecurrent.c **** 	Sensor->gain_c = vlots_to_amps;
- 156              		.loc 1 43 2 is_stmt 1 view .LVU42
- 157              		.loc 1 43 17 is_stmt 0 view .LVU43
- 158 0024 2362     		str	r3, [r4, #32]	@ float
+ 155              		.loc 1 43 2 is_stmt 1 view .LVU42
+ 156              		.loc 1 43 17 is_stmt 0 view .LVU43
+ 157 0024 2362     		str	r3, [r4, #32]	@ float
   44:usr/inlinecurrent.c **** }
- 159              		.loc 1 44 1 view .LVU44
- 160 0026 10BD     		pop	{r4, pc}
- 161              	.LVL5:
- 162              	.L9:
- 163              		.loc 1 44 1 view .LVU45
- 164              		.align	2
- 165              	.L8:
- 166 0028 00000000 		.word	.LANCHOR1
- 167 002c 0AD7233C 		.word	1008981770
- 168 0030 00000000 		.word	.LANCHOR2
- 169 0034 00004842 		.word	1112014848
- 170 0038 00000000 		.word	.LANCHOR3
- 171              		.cfi_endproc
- 172              	.LFE4:
- 174              		.section	.text.Current_Update,"ax",%progbits
- 175              		.align	1
- 176              		.global	Current_Update
- 177              		.syntax unified
- 178              		.thumb
- 179              		.thumb_func
- 180              		.fpu fpv4-sp-d16
- 182              	Current_Update:
- 183              	.LVL6:
- 184              	.LFB5:
+ 158              		.loc 1 44 1 view .LVU44
+ 159 0026 10BD     		pop	{r4, pc}
+ 160              	.LVL5:
+ 161              	.L9:
+ 162              		.loc 1 44 1 view .LVU45
+ 163              		.align	2
+ 164              	.L8:
+ 165 0028 00000000 		.word	.LANCHOR1
+ 166 002c 0AD7233C 		.word	1008981770
+ 167 0030 00000000 		.word	.LANCHOR2
+ 168 0034 00004842 		.word	1112014848
+ 169 0038 00000000 		.word	.LANCHOR3
+ 170              		.cfi_endproc
+ 171              	.LFE4:
+ 173              		.section	.text.Current_Update,"ax",%progbits
+ 174              		.align	1
+ 175              		.global	Current_Update
+ 176              		.syntax unified
+ 177              		.thumb
+ 178              		.thumb_func
+ 180              	Current_Update:
+ 181              	.LVL6:
+ 182              	.LFB5:
   45:usr/inlinecurrent.c **** 
-ARM GAS  /tmp/ccmIN3Gu.s 			page 5
-
-
   46:usr/inlinecurrent.c **** /// @brief 更新电流数值
   47:usr/inlinecurrent.c **** /// @param Sensor 
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGqe6V7.s 			page 5
+
+
   48:usr/inlinecurrent.c **** void Current_Update(Inlinecurrent_Typedef *Sensor)
   49:usr/inlinecurrent.c **** {
- 185              		.loc 1 49 1 is_stmt 1 view -0
- 186              		.cfi_startproc
- 187              		@ args = 0, pretend = 0, frame = 0
- 188              		@ frame_needed = 0, uses_anonymous_args = 0
- 189              		@ link register save eliminated.
+ 183              		.loc 1 49 1 is_stmt 1 view -0
+ 184              		.cfi_startproc
+ 185              		@ args = 0, pretend = 0, frame = 0
+ 186              		@ frame_needed = 0, uses_anonymous_args = 0
+ 187              		@ link register save eliminated.
   50:usr/inlinecurrent.c **** 	float tran_vol_a = (float)adc_buffer[Sensor->A]*_ADC_CONV;
- 190              		.loc 1 50 2 view .LVU47
- 191              		.loc 1 50 45 is_stmt 0 view .LVU48
- 192 0000 0268     		ldr	r2, [r0]
- 193              		.loc 1 50 38 view .LVU49
- 194 0002 144B     		ldr	r3, .L11
- 195 0004 33F81220 		ldrh	r2, [r3, r2, lsl #1]
- 196 0008 07EE102A 		vmov	s14, r2	@ int
- 197              		.loc 1 50 21 view .LVU50
- 198 000c B8EE477A 		vcvt.f32.u32	s14, s14
- 199              		.loc 1 50 8 view .LVU51
- 200 0010 DFED116A 		vldr.32	s13, .L11+4
- 201 0014 27EE267A 		vmul.f32	s14, s14, s13
- 202              	.LVL7:
+ 188              		.loc 1 50 2 view .LVU47
+ 189              		.loc 1 50 45 is_stmt 0 view .LVU48
+ 190 0000 0268     		ldr	r2, [r0]
+ 191              		.loc 1 50 38 view .LVU49
+ 192 0002 144B     		ldr	r3, .L11
+ 193 0004 33F81220 		ldrh	r2, [r3, r2, lsl #1]
+ 194 0008 07EE102A 		vmov	s14, r2	@ int
+ 195              		.loc 1 50 21 view .LVU50
+ 196 000c B8EE477A 		vcvt.f32.u32	s14, s14
+ 197              		.loc 1 50 8 view .LVU51
+ 198 0010 DFED116A 		vldr.32	s13, .L11+4
+ 199 0014 27EE267A 		vmul.f32	s14, s14, s13
+ 200              	.LVL7:
   51:usr/inlinecurrent.c **** 	float tran_vol_b = (float)adc_buffer[Sensor->B]*_ADC_CONV;
- 203              		.loc 1 51 2 is_stmt 1 view .LVU52
- 204              		.loc 1 51 45 is_stmt 0 view .LVU53
- 205 0018 4268     		ldr	r2, [r0, #4]
- 206              		.loc 1 51 38 view .LVU54
- 207 001a 33F81230 		ldrh	r3, [r3, r2, lsl #1]
- 208 001e 07EE903A 		vmov	s15, r3	@ int
- 209              		.loc 1 51 21 view .LVU55
- 210 0022 F8EE677A 		vcvt.f32.u32	s15, s15
- 211              		.loc 1 51 8 view .LVU56
- 212 0026 67EEA67A 		vmul.f32	s15, s15, s13
- 213              	.LVL8:
+ 201              		.loc 1 51 2 is_stmt 1 view .LVU52
+ 202              		.loc 1 51 45 is_stmt 0 view .LVU53
+ 203 0018 4268     		ldr	r2, [r0, #4]
+ 204              		.loc 1 51 38 view .LVU54
+ 205 001a 33F81230 		ldrh	r3, [r3, r2, lsl #1]
+ 206 001e 07EE903A 		vmov	s15, r3	@ int
+ 207              		.loc 1 51 21 view .LVU55
+ 208 0022 F8EE677A 		vcvt.f32.u32	s15, s15
+ 209              		.loc 1 51 8 view .LVU56
+ 210 0026 67EEA67A 		vmul.f32	s15, s15, s13
+ 211              	.LVL8:
   52:usr/inlinecurrent.c **** 	
   53:usr/inlinecurrent.c **** 	Sensor->I_a = (tran_vol_a - Sensor->offset_ia)*Sensor->gain_a;
- 214              		.loc 1 53 2 is_stmt 1 view .LVU57
- 215              		.loc 1 53 36 is_stmt 0 view .LVU58
- 216 002a D0ED046A 		vldr.32	s13, [r0, #16]
- 217              		.loc 1 53 28 view .LVU59
- 218 002e 37EE667A 		vsub.f32	s14, s14, s13
- 219              	.LVL9:
- 220              		.loc 1 53 55 view .LVU60
- 221 0032 D0ED066A 		vldr.32	s13, [r0, #24]
- 222              		.loc 1 53 48 view .LVU61
- 223 0036 27EE267A 		vmul.f32	s14, s14, s13
- 224              		.loc 1 53 14 view .LVU62
- 225 003a 80ED027A 		vstr.32	s14, [r0, #8]
+ 212              		.loc 1 53 2 is_stmt 1 view .LVU57
+ 213              		.loc 1 53 36 is_stmt 0 view .LVU58
+ 214 002a D0ED046A 		vldr.32	s13, [r0, #16]
+ 215              		.loc 1 53 28 view .LVU59
+ 216 002e 37EE667A 		vsub.f32	s14, s14, s13
+ 217              	.LVL9:
+ 218              		.loc 1 53 55 view .LVU60
+ 219 0032 D0ED066A 		vldr.32	s13, [r0, #24]
+ 220              		.loc 1 53 48 view .LVU61
+ 221 0036 27EE267A 		vmul.f32	s14, s14, s13
+ 222              		.loc 1 53 14 view .LVU62
+ 223 003a 80ED027A 		vstr.32	s14, [r0, #8]
   54:usr/inlinecurrent.c **** 	Sensor->I_b = (tran_vol_b - Sensor->offset_ib)*Sensor->gain_b;
- 226              		.loc 1 54 2 is_stmt 1 view .LVU63
- 227              		.loc 1 54 36 is_stmt 0 view .LVU64
- 228 003e 90ED057A 		vldr.32	s14, [r0, #20]
- 229              		.loc 1 54 28 view .LVU65
- 230 0042 77EEC77A 		vsub.f32	s15, s15, s14
- 231              	.LVL10:
- 232              		.loc 1 54 55 view .LVU66
-ARM GAS  /tmp/ccmIN3Gu.s 			page 6
+ 224              		.loc 1 54 2 is_stmt 1 view .LVU63
+ 225              		.loc 1 54 36 is_stmt 0 view .LVU64
+ 226 003e 90ED057A 		vldr.32	s14, [r0, #20]
+ 227              		.loc 1 54 28 view .LVU65
+ 228 0042 77EEC77A 		vsub.f32	s15, s15, s14
+ 229              	.LVL10:
+ 230              		.loc 1 54 55 view .LVU66
+ 231 0046 90ED077A 		vldr.32	s14, [r0, #28]
+ 232              		.loc 1 54 48 view .LVU67
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGqe6V7.s 			page 6
 
 
- 233 0046 90ED077A 		vldr.32	s14, [r0, #28]
- 234              		.loc 1 54 48 view .LVU67
- 235 004a 67EE877A 		vmul.f32	s15, s15, s14
- 236              		.loc 1 54 14 view .LVU68
- 237 004e C0ED037A 		vstr.32	s15, [r0, #12]
+ 233 004a 67EE877A 		vmul.f32	s15, s15, s14
+ 234              		.loc 1 54 14 view .LVU68
+ 235 004e C0ED037A 		vstr.32	s15, [r0, #12]
   55:usr/inlinecurrent.c **** }
- 238              		.loc 1 55 1 view .LVU69
- 239 0052 7047     		bx	lr
- 240              	.L12:
- 241              		.align	2
- 242              	.L11:
- 243 0054 00000000 		.word	.LANCHOR0
- 244 0058 5940533A 		.word	978534489
- 245              		.cfi_endproc
- 246              	.LFE5:
- 248              		.global	vlots_to_amps
- 249              		.global	amp_gain
- 250              		.global	_shunt_resistor
- 251              		.global	adc_buffer
- 252              		.section	.bss.adc_buffer,"aw",%nobits
- 253              		.align	2
- 254              		.set	.LANCHOR0,. + 0
- 257              	adc_buffer:
- 258 0000 00000000 		.space	12
- 258      00000000 
- 258      00000000 
- 259              		.section	.bss.vlots_to_amps,"aw",%nobits
- 260              		.align	2
- 261              		.set	.LANCHOR3,. + 0
- 264              	vlots_to_amps:
- 265 0000 00000000 		.space	4
- 266              		.section	.data._shunt_resistor,"aw"
- 267              		.align	2
- 268              		.set	.LANCHOR1,. + 0
- 271              	_shunt_resistor:
- 272 0000 0AD7233C 		.word	1008981770
- 273              		.section	.data.amp_gain,"aw"
- 274              		.align	2
- 275              		.set	.LANCHOR2,. + 0
- 278              	amp_gain:
- 279 0000 00004842 		.word	1112014848
- 280              		.text
- 281              	.Letext0:
- 282              		.file 2 "usr/inlinecurrent.h"
- 283              		.file 3 "/usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h"
-ARM GAS  /tmp/ccmIN3Gu.s 			page 7
+ 236              		.loc 1 55 1 view .LVU69
+ 237 0052 7047     		bx	lr
+ 238              	.L12:
+ 239              		.align	2
+ 240              	.L11:
+ 241 0054 00000000 		.word	.LANCHOR0
+ 242 0058 5940533A 		.word	978534489
+ 243              		.cfi_endproc
+ 244              	.LFE5:
+ 246              		.global	vlots_to_amps
+ 247              		.global	amp_gain
+ 248              		.global	_shunt_resistor
+ 249              		.global	adc_buffer
+ 250              		.section	.bss.adc_buffer,"aw",%nobits
+ 251              		.align	2
+ 252              		.set	.LANCHOR0,. + 0
+ 255              	adc_buffer:
+ 256 0000 00000000 		.space	12
+ 256      00000000 
+ 256      00000000 
+ 257              		.section	.bss.vlots_to_amps,"aw",%nobits
+ 258              		.align	2
+ 259              		.set	.LANCHOR3,. + 0
+ 262              	vlots_to_amps:
+ 263 0000 00000000 		.space	4
+ 264              		.section	.data._shunt_resistor,"aw"
+ 265              		.align	2
+ 266              		.set	.LANCHOR1,. + 0
+ 269              	_shunt_resistor:
+ 270 0000 0AD7233C 		.word	1008981770
+ 271              		.section	.data.amp_gain,"aw"
+ 272              		.align	2
+ 273              		.set	.LANCHOR2,. + 0
+ 276              	amp_gain:
+ 277 0000 00004842 		.word	1112014848
+ 278              		.text
+ 279              	.Letext0:
+ 280              		.file 2 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 281              		.file 3 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 282              		.file 4 "usr/inlinecurrent.h"
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGqe6V7.s 			page 7
 
 
 DEFINED SYMBOLS
-                            *ABS*:0000000000000000 inlinecurrent.c
-     /tmp/ccmIN3Gu.s:18     .text.DriftOffsets:0000000000000000 $t
-     /tmp/ccmIN3Gu.s:26     .text.DriftOffsets:0000000000000000 DriftOffsets
-     /tmp/ccmIN3Gu.s:103    .text.DriftOffsets:000000000000006c $d
-     /tmp/ccmIN3Gu.s:110    .text.CurrSense_Init:0000000000000000 $t
-     /tmp/ccmIN3Gu.s:117    .text.CurrSense_Init:0000000000000000 CurrSense_Init
-     /tmp/ccmIN3Gu.s:166    .text.CurrSense_Init:0000000000000028 $d
-     /tmp/ccmIN3Gu.s:175    .text.Current_Update:0000000000000000 $t
-     /tmp/ccmIN3Gu.s:182    .text.Current_Update:0000000000000000 Current_Update
-     /tmp/ccmIN3Gu.s:243    .text.Current_Update:0000000000000054 $d
-     /tmp/ccmIN3Gu.s:264    .bss.vlots_to_amps:0000000000000000 vlots_to_amps
-     /tmp/ccmIN3Gu.s:278    .data.amp_gain:0000000000000000 amp_gain
-     /tmp/ccmIN3Gu.s:271    .data._shunt_resistor:0000000000000000 _shunt_resistor
-     /tmp/ccmIN3Gu.s:257    .bss.adc_buffer:0000000000000000 adc_buffer
-     /tmp/ccmIN3Gu.s:253    .bss.adc_buffer:0000000000000000 $d
-     /tmp/ccmIN3Gu.s:260    .bss.vlots_to_amps:0000000000000000 $d
-     /tmp/ccmIN3Gu.s:267    .data._shunt_resistor:0000000000000000 $d
-     /tmp/ccmIN3Gu.s:274    .data.amp_gain:0000000000000000 $d
+                            *ABS*:00000000 inlinecurrent.c
+C:\Users\Dennis\AppData\Local\Temp\ccGqe6V7.s:20     .text.DriftOffsets:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\ccGqe6V7.s:26     .text.DriftOffsets:00000000 DriftOffsets
+C:\Users\Dennis\AppData\Local\Temp\ccGqe6V7.s:103    .text.DriftOffsets:0000006c $d
+C:\Users\Dennis\AppData\Local\Temp\ccGqe6V7.s:110    .text.CurrSense_Init:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\ccGqe6V7.s:116    .text.CurrSense_Init:00000000 CurrSense_Init
+C:\Users\Dennis\AppData\Local\Temp\ccGqe6V7.s:165    .text.CurrSense_Init:00000028 $d
+C:\Users\Dennis\AppData\Local\Temp\ccGqe6V7.s:174    .text.Current_Update:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\ccGqe6V7.s:180    .text.Current_Update:00000000 Current_Update
+C:\Users\Dennis\AppData\Local\Temp\ccGqe6V7.s:241    .text.Current_Update:00000054 $d
+C:\Users\Dennis\AppData\Local\Temp\ccGqe6V7.s:262    .bss.vlots_to_amps:00000000 vlots_to_amps
+C:\Users\Dennis\AppData\Local\Temp\ccGqe6V7.s:276    .data.amp_gain:00000000 amp_gain
+C:\Users\Dennis\AppData\Local\Temp\ccGqe6V7.s:269    .data._shunt_resistor:00000000 _shunt_resistor
+C:\Users\Dennis\AppData\Local\Temp\ccGqe6V7.s:255    .bss.adc_buffer:00000000 adc_buffer
+C:\Users\Dennis\AppData\Local\Temp\ccGqe6V7.s:251    .bss.adc_buffer:00000000 $d
+C:\Users\Dennis\AppData\Local\Temp\ccGqe6V7.s:258    .bss.vlots_to_amps:00000000 $d
+C:\Users\Dennis\AppData\Local\Temp\ccGqe6V7.s:265    .data._shunt_resistor:00000000 $d
+C:\Users\Dennis\AppData\Local\Temp\ccGqe6V7.s:272    .data.amp_gain:00000000 $d
 
 NO UNDEFINED SYMBOLS

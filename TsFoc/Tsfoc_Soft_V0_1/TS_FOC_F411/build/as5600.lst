@@ -1,30 +1,30 @@
-ARM GAS  /tmp/ccJtfGFq.s 			page 1
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccE7EW4z.s 			page 1
 
 
    1              		.cpu cortex-m4
-   2              		.eabi_attribute 27, 1
-   3              		.eabi_attribute 28, 1
-   4              		.eabi_attribute 20, 1
-   5              		.eabi_attribute 21, 1
-   6              		.eabi_attribute 23, 3
-   7              		.eabi_attribute 24, 1
-   8              		.eabi_attribute 25, 1
-   9              		.eabi_attribute 26, 1
-  10              		.eabi_attribute 30, 1
-  11              		.eabi_attribute 34, 1
-  12              		.eabi_attribute 18, 4
-  13              		.file	"as5600.c"
-  14              		.text
-  15              	.Ltext0:
-  16              		.cfi_sections	.debug_frame
-  17              		.section	.text.Read_AS5600_Angle,"ax",%progbits
-  18              		.align	1
-  19              		.global	Read_AS5600_Angle
-  20              		.arch armv7e-m
-  21              		.syntax unified
-  22              		.thumb
-  23              		.thumb_func
-  24              		.fpu fpv4-sp-d16
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"as5600.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.Read_AS5600_Angle,"ax",%progbits
+  20              		.align	1
+  21              		.global	Read_AS5600_Angle
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
   26              	Read_AS5600_Angle:
   27              	.LVL0:
   28              	.LFB223:
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccJtfGFq.s 			page 1
   45              		.loc 1 11 13 is_stmt 0 view .LVU3
   46 0006 0023     		movs	r3, #0
   47 0008 ADF81430 		strh	r3, [sp, #20]	@ movhi
-ARM GAS  /tmp/ccJtfGFq.s 			page 2
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccE7EW4z.s 			page 2
 
 
   12:usr/as5600.c  ****     HAL_I2C_Mem_Read(&hi2c1, AS5600_ADDRESS, ANGLE_REGISTER, I2C_MEMADD_SIZE_8BIT, data, 2, HAL_MAX
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccJtfGFq.s 			page 1
   96 0062 09DD     		ble	.L2
   97              		.loc 1 17 38 is_stmt 1 discriminator 1 view .LVU20
   98              		.loc 1 17 56 is_stmt 0 discriminator 1 view .LVU21
-ARM GAS  /tmp/ccJtfGFq.s 			page 3
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccE7EW4z.s 			page 3
 
 
   99 0064 2369     		ldr	r3, [r4, #16]
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccJtfGFq.s 			page 1
  143              		.cfi_endproc
  144              	.LFE223:
  146              		.section	.text.Get_AS5600_Angle,"ax",%progbits
-ARM GAS  /tmp/ccJtfGFq.s 			page 4
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccE7EW4z.s 			page 4
 
 
  147              		.align	1
@@ -186,62 +186,62 @@ ARM GAS  /tmp/ccJtfGFq.s 			page 1
  149              		.syntax unified
  150              		.thumb
  151              		.thumb_func
- 152              		.fpu fpv4-sp-d16
- 154              	Get_AS5600_Angle:
- 155              	.LVL9:
- 156              	.LFB224:
+ 153              	Get_AS5600_Angle:
+ 154              	.LVL9:
+ 155              	.LFB224:
   27:usr/as5600.c  **** // 获取AS5600角度(带旋转数值)
   28:usr/as5600.c  **** // 输入：as5600 结构体指针
   29:usr/as5600.c  **** // 返回：角度值 单位：弧度
   30:usr/as5600.c  **** // 说明：获取AS5600角度(带旋转数值)，不更新as5600结构体中的角度值和旋转�
   31:usr/as5600.c  **** float Get_AS5600_Angle(As5600_Sensor_Typedef* as5600) 
   32:usr/as5600.c  **** {
- 157              		.loc 1 32 1 is_stmt 1 view -0
- 158              		.cfi_startproc
- 159              		@ args = 0, pretend = 0, frame = 0
- 160              		@ frame_needed = 0, uses_anonymous_args = 0
- 161              		@ link register save eliminated.
+ 156              		.loc 1 32 1 is_stmt 1 view -0
+ 157              		.cfi_startproc
+ 158              		@ args = 0, pretend = 0, frame = 0
+ 159              		@ frame_needed = 0, uses_anonymous_args = 0
+ 160              		@ link register save eliminated.
   33:usr/as5600.c  ****     return as5600->Angle + as5600->Rotations*_2PI;
- 162              		.loc 1 33 5 view .LVU34
- 163              		.loc 1 33 18 is_stmt 0 view .LVU35
- 164 0000 90ED010A 		vldr.32	s0, [r0, #4]
- 165              		.loc 1 33 34 view .LVU36
- 166 0004 D0ED047A 		vldr.32	s15, [r0, #16]	@ int
- 167              		.loc 1 33 45 view .LVU37
- 168 0008 F8EEE77A 		vcvt.f32.s32	s15, s15
- 169 000c 9FED037A 		vldr.32	s14, .L14
- 170 0010 67EE877A 		vmul.f32	s15, s15, s14
+ 161              		.loc 1 33 5 view .LVU34
+ 162              		.loc 1 33 18 is_stmt 0 view .LVU35
+ 163 0000 90ED010A 		vldr.32	s0, [r0, #4]
+ 164              		.loc 1 33 34 view .LVU36
+ 165 0004 D0ED047A 		vldr.32	s15, [r0, #16]	@ int
+ 166              		.loc 1 33 45 view .LVU37
+ 167 0008 F8EEE77A 		vcvt.f32.s32	s15, s15
+ 168 000c 9FED037A 		vldr.32	s14, .L14
+ 169 0010 67EE877A 		vmul.f32	s15, s15, s14
   34:usr/as5600.c  **** }
- 171              		.loc 1 34 1 view .LVU38
- 172 0014 30EE270A 		vadd.f32	s0, s0, s15
- 173 0018 7047     		bx	lr
- 174              	.L15:
- 175 001a 00BF     		.align	2
- 176              	.L14:
- 177 001c DB0FC940 		.word	1086918619
- 178              		.cfi_endproc
- 179              	.LFE224:
- 181              		.text
- 182              	.Letext0:
- 183              		.file 2 "/usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h"
- 184              		.file 3 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h"
- 185              		.file 4 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
- 186              		.file 5 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
- 187              		.file 6 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h"
- 188              		.file 7 "usr/as5600.h"
- 189              		.file 8 "Core/Inc/i2c.h"
- 190              		.file 9 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
-ARM GAS  /tmp/ccJtfGFq.s 			page 5
+ 170              		.loc 1 34 1 view .LVU38
+ 171 0014 30EE270A 		vadd.f32	s0, s0, s15
+ 172 0018 7047     		bx	lr
+ 173              	.L15:
+ 174 001a 00BF     		.align	2
+ 175              	.L14:
+ 176 001c DB0FC940 		.word	1086918619
+ 177              		.cfi_endproc
+ 178              	.LFE224:
+ 180              		.text
+ 181              	.Letext0:
+ 182              		.file 2 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 183              		.file 3 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 184              		.file 4 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h"
+ 185              		.file 5 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
+ 186              		.file 6 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
+ 187              		.file 7 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h"
+ 188              		.file 8 "usr/as5600.h"
+ 189              		.file 9 "Core/Inc/i2c.h"
+ 190              		.file 10 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccE7EW4z.s 			page 5
 
 
 DEFINED SYMBOLS
-                            *ABS*:0000000000000000 as5600.c
-     /tmp/ccJtfGFq.s:18     .text.Read_AS5600_Angle:0000000000000000 $t
-     /tmp/ccJtfGFq.s:26     .text.Read_AS5600_Angle:0000000000000000 Read_AS5600_Angle
-     /tmp/ccJtfGFq.s:139    .text.Read_AS5600_Angle:0000000000000090 $d
-     /tmp/ccJtfGFq.s:147    .text.Get_AS5600_Angle:0000000000000000 $t
-     /tmp/ccJtfGFq.s:154    .text.Get_AS5600_Angle:0000000000000000 Get_AS5600_Angle
-     /tmp/ccJtfGFq.s:177    .text.Get_AS5600_Angle:000000000000001c $d
+                            *ABS*:00000000 as5600.c
+C:\Users\Dennis\AppData\Local\Temp\ccE7EW4z.s:20     .text.Read_AS5600_Angle:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\ccE7EW4z.s:26     .text.Read_AS5600_Angle:00000000 Read_AS5600_Angle
+C:\Users\Dennis\AppData\Local\Temp\ccE7EW4z.s:139    .text.Read_AS5600_Angle:00000090 $d
+C:\Users\Dennis\AppData\Local\Temp\ccE7EW4z.s:147    .text.Get_AS5600_Angle:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\ccE7EW4z.s:153    .text.Get_AS5600_Angle:00000000 Get_AS5600_Angle
+C:\Users\Dennis\AppData\Local\Temp\ccE7EW4z.s:176    .text.Get_AS5600_Angle:0000001c $d
 
 UNDEFINED SYMBOLS
 HAL_I2C_Mem_Read

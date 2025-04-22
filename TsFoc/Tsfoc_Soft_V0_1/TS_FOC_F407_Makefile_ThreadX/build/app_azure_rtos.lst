@@ -1,0 +1,157 @@
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccZHa0z9.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"app_azure_rtos.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.tx_application_define,"ax",%progbits
+  20              		.align	1
+  21              		.global	tx_application_define
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	tx_application_define:
+  27              	.LVL0:
+  28              	.LFB8:
+  29              		.file 1 "./AZURE_RTOS/App/app_azure_rtos.c"
+   1:./AZURE_RTOS/App/app_azure_rtos.c **** 
+   2:./AZURE_RTOS/App/app_azure_rtos.c **** /* USER CODE BEGIN Header */
+   3:./AZURE_RTOS/App/app_azure_rtos.c **** /**
+   4:./AZURE_RTOS/App/app_azure_rtos.c ****   ******************************************************************************
+   5:./AZURE_RTOS/App/app_azure_rtos.c ****   * @file    app_azure_rtos.c
+   6:./AZURE_RTOS/App/app_azure_rtos.c ****   * @author  MCD Application Team
+   7:./AZURE_RTOS/App/app_azure_rtos.c ****   * @brief   azure_rtos application implementation file
+   8:./AZURE_RTOS/App/app_azure_rtos.c ****   ******************************************************************************
+   9:./AZURE_RTOS/App/app_azure_rtos.c ****   * @attention
+  10:./AZURE_RTOS/App/app_azure_rtos.c ****   *
+  11:./AZURE_RTOS/App/app_azure_rtos.c ****   * Copyright (c) 2021 STMicroelectronics.
+  12:./AZURE_RTOS/App/app_azure_rtos.c ****   * All rights reserved.
+  13:./AZURE_RTOS/App/app_azure_rtos.c ****   *
+  14:./AZURE_RTOS/App/app_azure_rtos.c ****   * This software is licensed under terms that can be found in the LICENSE file
+  15:./AZURE_RTOS/App/app_azure_rtos.c ****   * in the root directory of this software component.
+  16:./AZURE_RTOS/App/app_azure_rtos.c ****   * If no LICENSE file comes with this software, it is provided AS-IS.
+  17:./AZURE_RTOS/App/app_azure_rtos.c ****   *
+  18:./AZURE_RTOS/App/app_azure_rtos.c ****   ******************************************************************************
+  19:./AZURE_RTOS/App/app_azure_rtos.c ****   */
+  20:./AZURE_RTOS/App/app_azure_rtos.c **** /* USER CODE END Header */
+  21:./AZURE_RTOS/App/app_azure_rtos.c **** 
+  22:./AZURE_RTOS/App/app_azure_rtos.c **** /* Includes ------------------------------------------------------------------*/
+  23:./AZURE_RTOS/App/app_azure_rtos.c **** 
+  24:./AZURE_RTOS/App/app_azure_rtos.c **** #include "app_azure_rtos.h"
+  25:./AZURE_RTOS/App/app_azure_rtos.c **** 
+  26:./AZURE_RTOS/App/app_azure_rtos.c **** /* Private includes ----------------------------------------------------------*/
+  27:./AZURE_RTOS/App/app_azure_rtos.c **** /* USER CODE BEGIN Includes */
+  28:./AZURE_RTOS/App/app_azure_rtos.c **** 
+  29:./AZURE_RTOS/App/app_azure_rtos.c **** /* USER CODE END Includes */
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccZHa0z9.s 			page 2
+
+
+  30:./AZURE_RTOS/App/app_azure_rtos.c **** 
+  31:./AZURE_RTOS/App/app_azure_rtos.c **** /* Private typedef -----------------------------------------------------------*/
+  32:./AZURE_RTOS/App/app_azure_rtos.c **** /* USER CODE BEGIN PTD */
+  33:./AZURE_RTOS/App/app_azure_rtos.c **** 
+  34:./AZURE_RTOS/App/app_azure_rtos.c **** /* USER CODE END PTD */
+  35:./AZURE_RTOS/App/app_azure_rtos.c **** 
+  36:./AZURE_RTOS/App/app_azure_rtos.c **** /* Private define ------------------------------------------------------------*/
+  37:./AZURE_RTOS/App/app_azure_rtos.c **** /* USER CODE BEGIN PD */
+  38:./AZURE_RTOS/App/app_azure_rtos.c **** 
+  39:./AZURE_RTOS/App/app_azure_rtos.c **** /* USER CODE END PD */
+  40:./AZURE_RTOS/App/app_azure_rtos.c **** 
+  41:./AZURE_RTOS/App/app_azure_rtos.c **** /* Private macro -------------------------------------------------------------*/
+  42:./AZURE_RTOS/App/app_azure_rtos.c **** /* USER CODE BEGIN PM */
+  43:./AZURE_RTOS/App/app_azure_rtos.c **** 
+  44:./AZURE_RTOS/App/app_azure_rtos.c **** /* USER CODE END PM */
+  45:./AZURE_RTOS/App/app_azure_rtos.c **** 
+  46:./AZURE_RTOS/App/app_azure_rtos.c **** /* Private variables ---------------------------------------------------------*/
+  47:./AZURE_RTOS/App/app_azure_rtos.c **** /* USER CODE BEGIN PV */
+  48:./AZURE_RTOS/App/app_azure_rtos.c **** 
+  49:./AZURE_RTOS/App/app_azure_rtos.c **** /* USER CODE END PV */
+  50:./AZURE_RTOS/App/app_azure_rtos.c **** 
+  51:./AZURE_RTOS/App/app_azure_rtos.c **** /* Private function prototypes -----------------------------------------------*/
+  52:./AZURE_RTOS/App/app_azure_rtos.c **** /* USER CODE BEGIN PFP */
+  53:./AZURE_RTOS/App/app_azure_rtos.c **** 
+  54:./AZURE_RTOS/App/app_azure_rtos.c **** /* USER CODE END PFP */
+  55:./AZURE_RTOS/App/app_azure_rtos.c **** 
+  56:./AZURE_RTOS/App/app_azure_rtos.c **** /**
+  57:./AZURE_RTOS/App/app_azure_rtos.c ****   * @brief  Define the initial system.
+  58:./AZURE_RTOS/App/app_azure_rtos.c ****   * @param  first_unused_memory : Pointer to the first unused memory
+  59:./AZURE_RTOS/App/app_azure_rtos.c ****   * @retval None
+  60:./AZURE_RTOS/App/app_azure_rtos.c ****   */
+  61:./AZURE_RTOS/App/app_azure_rtos.c **** VOID tx_application_define(VOID *first_unused_memory)
+  62:./AZURE_RTOS/App/app_azure_rtos.c **** {
+  30              		.loc 1 62 1 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		@ link register save eliminated.
+  63:./AZURE_RTOS/App/app_azure_rtos.c ****   /* USER CODE BEGIN  tx_application_define */
+  64:./AZURE_RTOS/App/app_azure_rtos.c **** 
+  65:./AZURE_RTOS/App/app_azure_rtos.c ****   /* USER CODE END  tx_application_define */
+  66:./AZURE_RTOS/App/app_azure_rtos.c **** 
+  67:./AZURE_RTOS/App/app_azure_rtos.c ****   /*
+  68:./AZURE_RTOS/App/app_azure_rtos.c ****    * Using dynamic memory allocation requires to apply some changes to the linker file.
+  69:./AZURE_RTOS/App/app_azure_rtos.c ****    * ThreadX needs to pass a pointer to the first free memory location in RAM to the tx_application
+  70:./AZURE_RTOS/App/app_azure_rtos.c ****    * using the "first_unused_memory" argument.
+  71:./AZURE_RTOS/App/app_azure_rtos.c ****    * This require changes in the linker files to expose this memory location.
+  72:./AZURE_RTOS/App/app_azure_rtos.c ****    * For EWARM add the following section into the .icf file:
+  73:./AZURE_RTOS/App/app_azure_rtos.c ****        place in RAM_region    { last section FREE_MEM };
+  74:./AZURE_RTOS/App/app_azure_rtos.c ****    * For MDK-ARM
+  75:./AZURE_RTOS/App/app_azure_rtos.c ****        - either define the RW_IRAM1 region in the ".sct" file
+  76:./AZURE_RTOS/App/app_azure_rtos.c ****        - or modify the line below in "tx_low_level_initilize.s to match the memory region being use
+  77:./AZURE_RTOS/App/app_azure_rtos.c ****           LDR r1, =|Image$$RW_IRAM1$$ZI$$Limit|
+  78:./AZURE_RTOS/App/app_azure_rtos.c **** 
+  79:./AZURE_RTOS/App/app_azure_rtos.c ****    * For STM32CubeIDE add the following section into the .ld file:
+  80:./AZURE_RTOS/App/app_azure_rtos.c ****        ._threadx_heap :
+  81:./AZURE_RTOS/App/app_azure_rtos.c ****          {
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccZHa0z9.s 			page 3
+
+
+  82:./AZURE_RTOS/App/app_azure_rtos.c ****             . = ALIGN(8);
+  83:./AZURE_RTOS/App/app_azure_rtos.c ****             __RAM_segment_used_end__ = .;
+  84:./AZURE_RTOS/App/app_azure_rtos.c ****             . = . + 64K;
+  85:./AZURE_RTOS/App/app_azure_rtos.c ****             . = ALIGN(8);
+  86:./AZURE_RTOS/App/app_azure_rtos.c ****           } >RAM_D1 AT> RAM_D1
+  87:./AZURE_RTOS/App/app_azure_rtos.c ****       * The simplest way to provide memory for ThreadX is to define a new section, see ._threadx_he
+  88:./AZURE_RTOS/App/app_azure_rtos.c ****       * In the example above the ThreadX heap size is set to 64KBytes.
+  89:./AZURE_RTOS/App/app_azure_rtos.c ****       * The ._threadx_heap must be located between the .bss and the ._user_heap_stack sections in t
+  90:./AZURE_RTOS/App/app_azure_rtos.c ****       * Caution: Make sure that ThreadX does not need more than the provided heap memory (64KBytes 
+  91:./AZURE_RTOS/App/app_azure_rtos.c ****       * Read more in STM32CubeIDE User Guide, chapter: "Linker script".
+  92:./AZURE_RTOS/App/app_azure_rtos.c **** 
+  93:./AZURE_RTOS/App/app_azure_rtos.c ****    * The "tx_initialize_low_level.s" should be also modified to enable the "USE_DYNAMIC_MEMORY_ALLO
+  94:./AZURE_RTOS/App/app_azure_rtos.c ****    */
+  95:./AZURE_RTOS/App/app_azure_rtos.c **** 
+  96:./AZURE_RTOS/App/app_azure_rtos.c ****   /* USER CODE BEGIN DYNAMIC_MEM_ALLOC */
+  97:./AZURE_RTOS/App/app_azure_rtos.c ****   (void)first_unused_memory;
+  35              		.loc 1 97 3 view .LVU1
+  98:./AZURE_RTOS/App/app_azure_rtos.c ****   /* USER CODE END DYNAMIC_MEM_ALLOC */
+  99:./AZURE_RTOS/App/app_azure_rtos.c **** }
+  36              		.loc 1 99 1 is_stmt 0 view .LVU2
+  37 0000 7047     		bx	lr
+  38              		.cfi_endproc
+  39              	.LFE8:
+  41              		.text
+  42              	.Letext0:
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccZHa0z9.s 			page 4
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 app_azure_rtos.c
+C:\Users\Dennis\AppData\Local\Temp\ccZHa0z9.s:20     .text.tx_application_define:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\ccZHa0z9.s:26     .text.tx_application_define:00000000 tx_application_define
+
+NO UNDEFINED SYMBOLS

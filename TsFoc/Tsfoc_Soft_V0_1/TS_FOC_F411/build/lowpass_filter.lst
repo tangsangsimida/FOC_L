@@ -1,30 +1,30 @@
-ARM GAS  /tmp/ccHZHOza.s 			page 1
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccwV4hX0.s 			page 1
 
 
    1              		.cpu cortex-m4
-   2              		.eabi_attribute 27, 1
-   3              		.eabi_attribute 28, 1
-   4              		.eabi_attribute 20, 1
-   5              		.eabi_attribute 21, 1
-   6              		.eabi_attribute 23, 3
-   7              		.eabi_attribute 24, 1
-   8              		.eabi_attribute 25, 1
-   9              		.eabi_attribute 26, 1
-  10              		.eabi_attribute 30, 1
-  11              		.eabi_attribute 34, 1
-  12              		.eabi_attribute 18, 4
-  13              		.file	"lowpass_filter.c"
-  14              		.text
-  15              	.Ltext0:
-  16              		.cfi_sections	.debug_frame
-  17              		.section	.text.Lowpass_Filter_Init,"ax",%progbits
-  18              		.align	1
-  19              		.global	Lowpass_Filter_Init
-  20              		.arch armv7e-m
-  21              		.syntax unified
-  22              		.thumb
-  23              		.thumb_func
-  24              		.fpu fpv4-sp-d16
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"lowpass_filter.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.Lowpass_Filter_Init,"ax",%progbits
+  20              		.align	1
+  21              		.global	Lowpass_Filter_Init
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
   26              	Lowpass_Filter_Init:
   27              	.LVL0:
   28              	.LFB223:
@@ -57,13 +57,12 @@ ARM GAS  /tmp/ccHZHOza.s 			page 1
   46              		.syntax unified
   47              		.thumb
   48              		.thumb_func
-  49              		.fpu fpv4-sp-d16
-ARM GAS  /tmp/ccHZHOza.s 			page 2
+  50              	Lowpass_Filter_calc:
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccwV4hX0.s 			page 2
 
 
-  51              	Lowpass_Filter_calc:
-  52              	.LVL1:
-  53              	.LFB224:
+  51              	.LVL1:
+  52              	.LFB224:
   11:usr/lowpass_filter.c **** 
   12:usr/lowpass_filter.c **** 
   13:usr/lowpass_filter.c **** 
@@ -75,150 +74,150 @@ ARM GAS  /tmp/ccHZHOza.s 			page 1
   19:usr/lowpass_filter.c **** /// @return 
   20:usr/lowpass_filter.c **** float Lowpass_Filter_calc(Lowpass_Filter_Typedef* flt, float x)
   21:usr/lowpass_filter.c **** {
-  54              		.loc 1 21 1 is_stmt 1 view -0
-  55              		.cfi_startproc
-  56              		@ args = 0, pretend = 0, frame = 0
-  57              		@ frame_needed = 0, uses_anonymous_args = 0
-  58              		.loc 1 21 1 is_stmt 0 view .LVU5
-  59 0000 10B5     		push	{r4, lr}
-  60              	.LCFI0:
-  61              		.cfi_def_cfa_offset 8
-  62              		.cfi_offset 4, -8
-  63              		.cfi_offset 14, -4
-  64 0002 2DED028B 		vpush.64	{d8}
-  65              	.LCFI1:
-  66              		.cfi_def_cfa_offset 16
-  67              		.cfi_offset 80, -16
-  68              		.cfi_offset 81, -12
-  69 0006 0446     		mov	r4, r0
-  70 0008 B0EE408A 		vmov.f32	s16, s0
+  53              		.loc 1 21 1 is_stmt 1 view -0
+  54              		.cfi_startproc
+  55              		@ args = 0, pretend = 0, frame = 0
+  56              		@ frame_needed = 0, uses_anonymous_args = 0
+  57              		.loc 1 21 1 is_stmt 0 view .LVU5
+  58 0000 10B5     		push	{r4, lr}
+  59              	.LCFI0:
+  60              		.cfi_def_cfa_offset 8
+  61              		.cfi_offset 4, -8
+  62              		.cfi_offset 14, -4
+  63 0002 2DED028B 		vpush.64	{d8}
+  64              	.LCFI1:
+  65              		.cfi_def_cfa_offset 16
+  66              		.cfi_offset 80, -16
+  67              		.cfi_offset 81, -12
+  68 0006 0446     		mov	r4, r0
+  69 0008 B0EE408A 		vmov.f32	s16, s0
   22:usr/lowpass_filter.c ****     unsigned long timestamp = HAL_GetTick();
-  71              		.loc 1 22 5 is_stmt 1 view .LVU6
-  72              		.loc 1 22 31 is_stmt 0 view .LVU7
-  73 000c FFF7FEFF 		bl	HAL_GetTick
-  74              	.LVL2:
+  70              		.loc 1 22 5 is_stmt 1 view .LVU6
+  71              		.loc 1 22 31 is_stmt 0 view .LVU7
+  72 000c FFF7FEFF 		bl	HAL_GetTick
+  73              	.LVL2:
   23:usr/lowpass_filter.c ****     float dt = (timestamp - flt->timestamp_prev)*1e-3f;
-  75              		.loc 1 23 5 is_stmt 1 view .LVU8
-  76              		.loc 1 23 32 is_stmt 0 view .LVU9
-  77 0010 6368     		ldr	r3, [r4, #4]
-  78              		.loc 1 23 27 view .LVU10
-  79 0012 C31A     		subs	r3, r0, r3
-  80 0014 07EE903A 		vmov	s15, r3	@ int
-  81              		.loc 1 23 49 view .LVU11
-  82 0018 F8EE677A 		vcvt.f32.u32	s15, s15
-  83              		.loc 1 23 11 view .LVU12
-  84 001c 9FED147A 		vldr.32	s14, .L10
-  85 0020 67EE877A 		vmul.f32	s15, s15, s14
-  86              	.LVL3:
+  74              		.loc 1 23 5 is_stmt 1 view .LVU8
+  75              		.loc 1 23 32 is_stmt 0 view .LVU9
+  76 0010 6368     		ldr	r3, [r4, #4]
+  77              		.loc 1 23 27 view .LVU10
+  78 0012 C31A     		subs	r3, r0, r3
+  79 0014 07EE903A 		vmov	s15, r3	@ int
+  80              		.loc 1 23 49 view .LVU11
+  81 0018 F8EE677A 		vcvt.f32.u32	s15, s15
+  82              		.loc 1 23 11 view .LVU12
+  83 001c 9FED147A 		vldr.32	s14, .L10
+  84 0020 67EE877A 		vmul.f32	s15, s15, s14
+  85              	.LVL3:
   24:usr/lowpass_filter.c **** 
   25:usr/lowpass_filter.c ****     if (dt < 0.0f ) dt = 1e-3f;
-  87              		.loc 1 25 5 is_stmt 1 view .LVU13
+  86              		.loc 1 25 5 is_stmt 1 view .LVU13
   26:usr/lowpass_filter.c ****     else if(dt > 0.3f) {
-  88              		.loc 1 26 10 view .LVU14
-  89              		.loc 1 26 12 is_stmt 0 view .LVU15
-  90 0024 9FED137A 		vldr.32	s14, .L10+4
-  91 0028 F4EEC77A 		vcmpe.f32	s15, s14
-ARM GAS  /tmp/ccHZHOza.s 			page 3
+  87              		.loc 1 26 10 view .LVU14
+  88              		.loc 1 26 12 is_stmt 0 view .LVU15
+  89 0024 9FED137A 		vldr.32	s14, .L10+4
+  90 0028 F4EEC77A 		vcmpe.f32	s15, s14
+  91 002c F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccwV4hX0.s 			page 3
 
 
-  92 002c F1EE10FA 		vmrs	APSR_nzcv, FPSCR
-  93 0030 17DC     		bgt	.L9
+  92 0030 17DC     		bgt	.L9
   27:usr/lowpass_filter.c ****         flt->y_prev = x;
   28:usr/lowpass_filter.c ****         flt->timestamp_prev = timestamp;
   29:usr/lowpass_filter.c ****         return x;
   30:usr/lowpass_filter.c ****     }
   31:usr/lowpass_filter.c **** 
   32:usr/lowpass_filter.c ****     float alpha = flt->Tf/(flt->Tf + dt);
-  94              		.loc 1 32 5 is_stmt 1 view .LVU16
-  95              		.loc 1 32 22 is_stmt 0 view .LVU17
-  96 0032 D4ED006A 		vldr.32	s13, [r4]
-  97              		.loc 1 32 36 view .LVU18
-  98 0036 76EEA77A 		vadd.f32	s15, s13, s15
-  99              	.LVL4:
- 100              		.loc 1 32 11 view .LVU19
- 101 003a 86EEA77A 		vdiv.f32	s14, s13, s15
- 102              	.LVL5:
+  93              		.loc 1 32 5 is_stmt 1 view .LVU16
+  94              		.loc 1 32 22 is_stmt 0 view .LVU17
+  95 0032 D4ED006A 		vldr.32	s13, [r4]
+  96              		.loc 1 32 36 view .LVU18
+  97 0036 76EEA77A 		vadd.f32	s15, s13, s15
+  98              	.LVL4:
+  99              		.loc 1 32 11 view .LVU19
+ 100 003a 86EEA77A 		vdiv.f32	s14, s13, s15
+ 101              	.LVL5:
   33:usr/lowpass_filter.c ****     float y = alpha*flt->y_prev + (1.0f - alpha)*x;
- 103              		.loc 1 33 5 is_stmt 1 view .LVU20
- 104              		.loc 1 33 24 is_stmt 0 view .LVU21
- 105 003e D4ED027A 		vldr.32	s15, [r4, #8]
- 106              		.loc 1 33 20 view .LVU22
- 107 0042 67EE877A 		vmul.f32	s15, s15, s14
- 108              		.loc 1 33 41 view .LVU23
- 109 0046 B7EE000A 		vmov.f32	s0, #1.0e+0
- 110 004a 30EE470A 		vsub.f32	s0, s0, s14
- 111              		.loc 1 33 49 view .LVU24
- 112 004e 20EE080A 		vmul.f32	s0, s0, s16
- 113              		.loc 1 33 11 view .LVU25
- 114 0052 37EE800A 		vadd.f32	s0, s15, s0
- 115              	.LVL6:
+ 102              		.loc 1 33 5 is_stmt 1 view .LVU20
+ 103              		.loc 1 33 24 is_stmt 0 view .LVU21
+ 104 003e D4ED027A 		vldr.32	s15, [r4, #8]
+ 105              		.loc 1 33 20 view .LVU22
+ 106 0042 67EE877A 		vmul.f32	s15, s15, s14
+ 107              		.loc 1 33 41 view .LVU23
+ 108 0046 B7EE000A 		vmov.f32	s0, #1.0e+0
+ 109 004a 30EE470A 		vsub.f32	s0, s0, s14
+ 110              		.loc 1 33 49 view .LVU24
+ 111 004e 20EE080A 		vmul.f32	s0, s0, s16
+ 112              		.loc 1 33 11 view .LVU25
+ 113 0052 37EE800A 		vadd.f32	s0, s15, s0
+ 114              	.LVL6:
   34:usr/lowpass_filter.c ****     flt->y_prev = y;
- 116              		.loc 1 34 5 is_stmt 1 view .LVU26
- 117              		.loc 1 34 17 is_stmt 0 view .LVU27
- 118 0056 84ED020A 		vstr.32	s0, [r4, #8]
+ 115              		.loc 1 34 5 is_stmt 1 view .LVU26
+ 116              		.loc 1 34 17 is_stmt 0 view .LVU27
+ 117 0056 84ED020A 		vstr.32	s0, [r4, #8]
   35:usr/lowpass_filter.c ****     flt->timestamp_prev = timestamp;
- 119              		.loc 1 35 5 is_stmt 1 view .LVU28
- 120              		.loc 1 35 25 is_stmt 0 view .LVU29
- 121 005a 6060     		str	r0, [r4, #4]
+ 118              		.loc 1 35 5 is_stmt 1 view .LVU28
+ 119              		.loc 1 35 25 is_stmt 0 view .LVU29
+ 120 005a 6060     		str	r0, [r4, #4]
   36:usr/lowpass_filter.c ****     return y;
- 122              		.loc 1 36 5 is_stmt 1 view .LVU30
- 123              	.LVL7:
- 124              	.L2:
+ 121              		.loc 1 36 5 is_stmt 1 view .LVU30
+ 122              	.LVL7:
+ 123              	.L2:
   37:usr/lowpass_filter.c **** }
- 125              		.loc 1 37 1 is_stmt 0 view .LVU31
- 126 005c BDEC028B 		vldm	sp!, {d8}
- 127              	.LCFI2:
- 128              		.cfi_remember_state
- 129              		.cfi_restore 80
- 130              		.cfi_restore 81
- 131              		.cfi_def_cfa_offset 8
- 132              	.LVL8:
- 133              		.loc 1 37 1 view .LVU32
- 134 0060 10BD     		pop	{r4, pc}
- 135              	.LVL9:
- 136              	.L9:
- 137              	.LCFI3:
-ARM GAS  /tmp/ccHZHOza.s 			page 4
+ 124              		.loc 1 37 1 is_stmt 0 view .LVU31
+ 125 005c BDEC028B 		vldm	sp!, {d8}
+ 126              	.LCFI2:
+ 127              		.cfi_remember_state
+ 128              		.cfi_restore 80
+ 129              		.cfi_restore 81
+ 130              		.cfi_def_cfa_offset 8
+ 131              	.LVL8:
+ 132              		.loc 1 37 1 view .LVU32
+ 133 0060 10BD     		pop	{r4, pc}
+ 134              	.LVL9:
+ 135              	.L9:
+ 136              	.LCFI3:
+ 137              		.cfi_restore_state
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccwV4hX0.s 			page 4
 
 
- 138              		.cfi_restore_state
   27:usr/lowpass_filter.c ****         flt->timestamp_prev = timestamp;
- 139              		.loc 1 27 9 is_stmt 1 view .LVU33
+ 138              		.loc 1 27 9 is_stmt 1 view .LVU33
   27:usr/lowpass_filter.c ****         flt->timestamp_prev = timestamp;
- 140              		.loc 1 27 21 is_stmt 0 view .LVU34
- 141 0062 84ED028A 		vstr.32	s16, [r4, #8]
+ 139              		.loc 1 27 21 is_stmt 0 view .LVU34
+ 140 0062 84ED028A 		vstr.32	s16, [r4, #8]
   28:usr/lowpass_filter.c ****         return x;
- 142              		.loc 1 28 9 is_stmt 1 view .LVU35
+ 141              		.loc 1 28 9 is_stmt 1 view .LVU35
   28:usr/lowpass_filter.c ****         return x;
- 143              		.loc 1 28 29 is_stmt 0 view .LVU36
- 144 0066 6060     		str	r0, [r4, #4]
+ 142              		.loc 1 28 29 is_stmt 0 view .LVU36
+ 143 0066 6060     		str	r0, [r4, #4]
   29:usr/lowpass_filter.c ****     }
- 145              		.loc 1 29 9 is_stmt 1 view .LVU37
+ 144              		.loc 1 29 9 is_stmt 1 view .LVU37
   29:usr/lowpass_filter.c ****     }
- 146              		.loc 1 29 16 is_stmt 0 view .LVU38
- 147 0068 B0EE480A 		vmov.f32	s0, s16
- 148 006c F6E7     		b	.L2
- 149              	.L11:
- 150 006e 00BF     		.align	2
- 151              	.L10:
- 152 0070 6F12833A 		.word	981668463
- 153 0074 9A99993E 		.word	1050253722
- 154              		.cfi_endproc
- 155              	.LFE224:
- 157              		.text
- 158              	.Letext0:
- 159              		.file 2 "usr/lowpass_filter.h"
- 160              		.file 3 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
-ARM GAS  /tmp/ccHZHOza.s 			page 5
+ 145              		.loc 1 29 16 is_stmt 0 view .LVU38
+ 146 0068 B0EE480A 		vmov.f32	s0, s16
+ 147 006c F6E7     		b	.L2
+ 148              	.L11:
+ 149 006e 00BF     		.align	2
+ 150              	.L10:
+ 151 0070 6F12833A 		.word	981668463
+ 152 0074 9A99993E 		.word	1050253722
+ 153              		.cfi_endproc
+ 154              	.LFE224:
+ 156              		.text
+ 157              	.Letext0:
+ 158              		.file 2 "usr/lowpass_filter.h"
+ 159              		.file 3 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccwV4hX0.s 			page 5
 
 
 DEFINED SYMBOLS
-                            *ABS*:0000000000000000 lowpass_filter.c
-     /tmp/ccHZHOza.s:18     .text.Lowpass_Filter_Init:0000000000000000 $t
-     /tmp/ccHZHOza.s:26     .text.Lowpass_Filter_Init:0000000000000000 Lowpass_Filter_Init
-     /tmp/ccHZHOza.s:44     .text.Lowpass_Filter_calc:0000000000000000 $t
-     /tmp/ccHZHOza.s:51     .text.Lowpass_Filter_calc:0000000000000000 Lowpass_Filter_calc
-     /tmp/ccHZHOza.s:152    .text.Lowpass_Filter_calc:0000000000000070 $d
+                            *ABS*:00000000 lowpass_filter.c
+C:\Users\Dennis\AppData\Local\Temp\ccwV4hX0.s:20     .text.Lowpass_Filter_Init:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\ccwV4hX0.s:26     .text.Lowpass_Filter_Init:00000000 Lowpass_Filter_Init
+C:\Users\Dennis\AppData\Local\Temp\ccwV4hX0.s:44     .text.Lowpass_Filter_calc:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\ccwV4hX0.s:50     .text.Lowpass_Filter_calc:00000000 Lowpass_Filter_calc
+C:\Users\Dennis\AppData\Local\Temp\ccwV4hX0.s:151    .text.Lowpass_Filter_calc:00000070 $d
 
 UNDEFINED SYMBOLS
 HAL_GetTick

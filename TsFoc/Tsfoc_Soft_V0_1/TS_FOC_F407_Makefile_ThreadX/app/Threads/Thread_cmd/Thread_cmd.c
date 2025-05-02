@@ -24,9 +24,9 @@ struct UART_RECEIVE_IDLE_DataStructure
 } Uart_Receive_Data ={ 0, 1 };
 
 
-int8_t Get_Cmd(UART_HandleTypeDef *huart)
+int8_t Get_Cmd(UART_HandleTypeDef *huart, ULONG THREAD_CMD)
 {
-
+    Thread_Cmd_parama * Thread_Cmd = (Thread_Cmd_parama *)THREAD_CMD;
 	int8_t nret = 0;
 	if (Uart_Receive_Data.rxok == 0)
 	{
@@ -37,24 +37,29 @@ int8_t Get_Cmd(UART_HandleTypeDef *huart)
 		if (nret == 0)
 		{
             //数据接收成功，清洗数据
-            char *command = (char *)Uart_Receive_Data.rxbuf; // 指向 cmd_data.data 的起始地址
-            char *angle_str;
-			      char *torque_str;
+            char command[UART_RECEIVE_IDLE_RX_MAXLEN] = {0};
+            memcpy(command, Uart_Receive_Data.rxbuf, Uart_Receive_Data.rxlen);
+            char *angle_str = NULL;
+			char *torque_str = NULL;
+            char *angle_num = NULL;
+            char *torque_num = NULL;
 
             angle_str = strstr(command, "set_angle:"); // 找到 "set_angle:" 的位置
             if (angle_str != NULL) {
-                angle_str += strlen("set_angle:"); // 指向角度值的起始位置
-                double angle = atof(angle_str); // 将字符串转换为浮点数
-                printf("设置角度为:%lf\r\n",angle);
+                strcpy(Thread_Cmd->Cmd_Name_last, "set_angle:"); // 保存命令名称
+                angle_num = angle_str + strlen("set_angle:"); // 指向角度值的起始位置
+                double angle = atof(angle_num); // 将字符串转换为浮点数
+                Thread_Cmd->Cmd_Param_last = angle; // 保存角度值
             }
-			      torque_str = strstr(command, "set_torque:"); // 找到 "set_torque:" 的位置
+			torque_str = strstr(command, "set_torque:"); // 找到 "set_torque:" 的位置
             if (torque_str != NULL) {
-                torque_str += strlen("set_torque:"); // 指向力矩值的起始位置
-                double torque = atof(torque_str); // 将字符串转换为浮点数
-                printf("设置力矩为:%lf\r\n",torque);
+                strcpy(Thread_Cmd->Cmd_Name_last, "set_torque:"); // 保存命令名称
+                torque_num = torque_str + strlen("set_torque:"); // 指向力矩值的起始位置
+                double torque = atof(torque_num); // 将字符串转换为浮点数
+                Thread_Cmd->Cmd_Param_last = torque; // 保存力矩值
             }
-
-
+            //这个地方不要直接打印参数,建议到线程中去处理
+            memset(command, 0, UART_RECEIVE_IDLE_RX_MAXLEN); // 清空接收缓存
 		}
 		Uart_Receive_Data.rxok = 0;
 		__HAL_UART_ENABLE_IT(huart, UART_IT_IDLE);
@@ -87,22 +92,21 @@ void BSP_UART_IDLE_CallBack(UART_HandleTypeDef *huart)
 *******************************************************************************/
 void Thread_Cmd_Entry(ULONG thread_input)
 {
-	thread_input = (uint8_t )thread_input;
-
+    Thread_Cmd_parama * thread_param = (Thread_Cmd_parama *)thread_input;
 	while(1)
 	{
-    if (Get_Cmd(&DEBUG_UART) == 0)   //接收到数据
+    if (Get_Cmd(&DEBUG_UART, thread_input) == 0)   //接收到数据
     {
         //处理数据
-
+        printf("Cmd_Name_last: %s\r\n", thread_param->Cmd_Name_last);
+        printf("Cmd_Param_last: %lf\r\n", thread_param->Cmd_Param_last);
     }
     else
     {
         //处理接收错误
     }
     
-        tx_thread_sleep(2);
-
+    tx_thread_sleep(2);
 	}
 }
 

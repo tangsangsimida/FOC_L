@@ -24,8 +24,7 @@ Thread_Template_parama Thread_Template_parama1;	//实例化入口函数的参数
 *******************************************************************************/
 void Thread_Template_Entry(ULONG thread_input)
 {
-	(void)thread_input;
-
+  // Thread_Template_parama *parama = (Thread_Template_parama*)thread_input;	//获取入口函数的参数
 	while(1)
 	{
         HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc16UdTA.s 			page 1
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccLygrsY.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -27,44 +27,19 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc16UdTA.s 			page 1
   22      653A00
   23 000b 00       		.align	2
   24              	.LC1:
-  25 000c 256C660D 		.ascii	"%lf\015\012\000"
-  25      0A00
-  26 0012 0000     		.align	2
-  27              	.LC2:
-  28 0014 E8AEBEE7 		.ascii	"\350\256\276\347\275\256\350\247\222\345\272\246\344"
-  28      BDAEE8A7 
-  28      92E5BAA6 
-  28      E4
-  29 0021 B8BA3A25 		.ascii	"\270\272:%lf\015\012\000"
-  29      6C660D0A 
-  29      00
-  30 002a 0000     		.align	2
-  31              	.LC3:
-  32 002c 7365745F 		.ascii	"set_torque:\000"
-  32      746F7271 
-  32      75653A00 
-  33              		.align	2
-  34              	.LC4:
-  35 0038 E8AEBEE7 		.ascii	"\350\256\276\347\275\256\345\212\233\347\237\251\344"
-  35      BDAEE58A 
-  35      9BE79FA9 
-  35      E4
-  36 0045 B8BA3A25 		.ascii	"\270\272:%lf\015\012\000"
-  36      6C660D0A 
-  36      00
-  37              		.section	.text.Get_Cmd,"ax",%progbits
-  38              		.align	1
-  39              		.global	Get_Cmd
-  40              		.syntax unified
-  41              		.thumb
-  42              		.thumb_func
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc16UdTA.s 			page 2
-
-
-  44              	Get_Cmd:
-  45              	.LVL0:
-  46              	.LFB250:
-  47              		.file 1 "./app/Threads/Thread_cmd/Thread_cmd.c"
+  25 000c 7365745F 		.ascii	"set_torque:\000"
+  25      746F7271 
+  25      75653A00 
+  26              		.section	.text.Get_Cmd,"ax",%progbits
+  27              		.align	1
+  28              		.global	Get_Cmd
+  29              		.syntax unified
+  30              		.thumb
+  31              		.thumb_func
+  33              	Get_Cmd:
+  34              	.LVL0:
+  35              	.LFB250:
+  36              		.file 1 "./app/Threads/Thread_cmd/Thread_cmd.c"
    1:./app/Threads/Thread_cmd/Thread_cmd.c **** /**
    2:./app/Threads/Thread_cmd/Thread_cmd.c ****   ******************************************************************************
    3:./app/Threads/Thread_cmd/Thread_cmd.c ****   * @file           : Thread_template.c
@@ -83,6 +58,9 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc16UdTA.s 			page 1
   16:./app/Threads/Thread_cmd/Thread_cmd.c **** 
   17:./app/Threads/Thread_cmd/Thread_cmd.c **** 
   18:./app/Threads/Thread_cmd/Thread_cmd.c **** 
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccLygrsY.s 			page 2
+
+
   19:./app/Threads/Thread_cmd/Thread_cmd.c **** struct UART_RECEIVE_IDLE_DataStructure
   20:./app/Threads/Thread_cmd/Thread_cmd.c **** {
   21:./app/Threads/Thread_cmd/Thread_cmd.c **** 	volatile uint8_t rxlen; 
@@ -91,456 +69,552 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc16UdTA.s 			page 1
   24:./app/Threads/Thread_cmd/Thread_cmd.c **** } Uart_Receive_Data ={ 0, 1 };
   25:./app/Threads/Thread_cmd/Thread_cmd.c **** 
   26:./app/Threads/Thread_cmd/Thread_cmd.c **** 
-  27:./app/Threads/Thread_cmd/Thread_cmd.c **** int8_t Get_Cmd(UART_HandleTypeDef *huart)
+  27:./app/Threads/Thread_cmd/Thread_cmd.c **** int8_t Get_Cmd(UART_HandleTypeDef *huart, ULONG THREAD_CMD)
   28:./app/Threads/Thread_cmd/Thread_cmd.c **** {
-  48              		.loc 1 28 1 view -0
-  49              		.cfi_startproc
-  50              		@ args = 0, pretend = 0, frame = 0
-  51              		@ frame_needed = 0, uses_anonymous_args = 0
-  52              		.loc 1 28 1 is_stmt 0 view .LVU1
-  53 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
-  54              	.LCFI0:
-  55              		.cfi_def_cfa_offset 24
-  56              		.cfi_offset 3, -24
-  57              		.cfi_offset 4, -20
-  58              		.cfi_offset 5, -16
-  59              		.cfi_offset 6, -12
-  60              		.cfi_offset 7, -8
-  61              		.cfi_offset 14, -4
-  29:./app/Threads/Thread_cmd/Thread_cmd.c **** 
+  37              		.loc 1 28 1 view -0
+  38              		.cfi_startproc
+  39              		@ args = 0, pretend = 0, frame = 256
+  40              		@ frame_needed = 0, uses_anonymous_args = 0
+  29:./app/Threads/Thread_cmd/Thread_cmd.c ****     Thread_Cmd_parama * Thread_Cmd = (Thread_Cmd_parama *)THREAD_CMD;
+  41              		.loc 1 29 5 view .LVU1
   30:./app/Threads/Thread_cmd/Thread_cmd.c **** 	int8_t nret = 0;
-  62              		.loc 1 30 2 is_stmt 1 view .LVU2
-  63              	.LVL1:
+  42              		.loc 1 30 2 view .LVU2
   31:./app/Threads/Thread_cmd/Thread_cmd.c **** 	if (Uart_Receive_Data.rxok == 0)
-  64              		.loc 1 31 2 view .LVU3
-  65              		.loc 1 31 23 is_stmt 0 view .LVU4
-  66 0002 204B     		ldr	r3, .L7
-  67 0004 5B78     		ldrb	r3, [r3, #1]	@ zero_extendqisi2
-  68              		.loc 1 31 5 view .LVU5
-  69 0006 002B     		cmp	r3, #0
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc16UdTA.s 			page 3
-
-
-  70 0008 39D0     		beq	.L5
-  71 000a 0646     		mov	r6, r0
+  43              		.loc 1 31 2 view .LVU3
+  44              		.loc 1 31 23 is_stmt 0 view .LVU4
+  45 0000 2C4B     		ldr	r3, .L10
+  46 0002 5B78     		ldrb	r3, [r3, #1]	@ zero_extendqisi2
+  47              		.loc 1 31 5 view .LVU5
+  48 0004 002B     		cmp	r3, #0
+  49 0006 51D0     		beq	.L5
+  28:./app/Threads/Thread_cmd/Thread_cmd.c ****     Thread_Cmd_parama * Thread_Cmd = (Thread_Cmd_parama *)THREAD_CMD;
+  50              		.loc 1 28 1 view .LVU6
+  51 0008 F0B5     		push	{r4, r5, r6, r7, lr}
+  52              	.LCFI0:
+  53              		.cfi_def_cfa_offset 20
+  54              		.cfi_offset 4, -20
+  55              		.cfi_offset 5, -16
+  56              		.cfi_offset 6, -12
+  57              		.cfi_offset 7, -8
+  58              		.cfi_offset 14, -4
+  59 000a C1B0     		sub	sp, sp, #260
+  60              	.LCFI1:
+  61              		.cfi_def_cfa_offset 280
+  62 000c 0646     		mov	r6, r0
+  63 000e 0C46     		mov	r4, r1
   32:./app/Threads/Thread_cmd/Thread_cmd.c **** 	{
   33:./app/Threads/Thread_cmd/Thread_cmd.c **** 		nret = -1;
   34:./app/Threads/Thread_cmd/Thread_cmd.c **** 	}
   35:./app/Threads/Thread_cmd/Thread_cmd.c **** 	else
   36:./app/Threads/Thread_cmd/Thread_cmd.c **** 	{
   37:./app/Threads/Thread_cmd/Thread_cmd.c **** 		if (nret == 0)
-  72              		.loc 1 37 3 is_stmt 1 view .LVU6
-  73              	.LBB2:
+  64              		.loc 1 37 3 is_stmt 1 view .LVU7
+  65              	.LBB2:
   38:./app/Threads/Thread_cmd/Thread_cmd.c **** 		{
   39:./app/Threads/Thread_cmd/Thread_cmd.c ****             //数据接收成功，清洗数据
-  40:./app/Threads/Thread_cmd/Thread_cmd.c ****             char *command = (char *)Uart_Receive_Data.rxbuf; // 指向 cmd_data.data 的起始地�
-  74              		.loc 1 40 13 view .LVU7
-  75              	.LVL2:
-  41:./app/Threads/Thread_cmd/Thread_cmd.c ****             char *angle_str;
-  76              		.loc 1 41 13 view .LVU8
-  42:./app/Threads/Thread_cmd/Thread_cmd.c **** 			      char *torque_str;
-  77              		.loc 1 42 10 view .LVU9
-  43:./app/Threads/Thread_cmd/Thread_cmd.c **** 
-  44:./app/Threads/Thread_cmd/Thread_cmd.c ****             angle_str = strstr(command, "set_angle:"); // 找到 "set_angle:" 的位置
-  78              		.loc 1 44 13 view .LVU10
-  79              		.loc 1 44 25 is_stmt 0 view .LVU11
-  80 000c 1E49     		ldr	r1, .L7+4
-  81 000e 1F48     		ldr	r0, .L7+8
-  82              	.LVL3:
-  83              		.loc 1 44 25 view .LVU12
-  84 0010 FFF7FEFF 		bl	strstr
+  40:./app/Threads/Thread_cmd/Thread_cmd.c ****             char command[UART_RECEIVE_IDLE_RX_MAXLEN] = {0};
+  66              		.loc 1 40 13 view .LVU8
+  67              		.loc 1 40 18 is_stmt 0 view .LVU9
+  68 0010 0021     		movs	r1, #0
+  69              	.LVL1:
+  70              		.loc 1 40 18 view .LVU10
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccLygrsY.s 			page 3
+
+
+  71 0012 0091     		str	r1, [sp]
+  72 0014 FC22     		movs	r2, #252
+  73 0016 01A8     		add	r0, sp, #4
+  74              	.LVL2:
+  75              		.loc 1 40 18 view .LVU11
+  76 0018 FFF7FEFF 		bl	memset
+  77              	.LVL3:
+  41:./app/Threads/Thread_cmd/Thread_cmd.c ****             memcpy(command, Uart_Receive_Data.rxbuf, Uart_Receive_Data.rxlen);
+  78              		.loc 1 41 13 is_stmt 1 view .LVU12
+  79              		.loc 1 41 71 is_stmt 0 view .LVU13
+  80 001c 2549     		ldr	r1, .L10
+  81 001e 11F8022B 		ldrb	r2, [r1], #2	@ zero_extendqisi2
+  82              		.loc 1 41 13 view .LVU14
+  83 0022 6846     		mov	r0, sp
+  84 0024 FFF7FEFF 		bl	memcpy
   85              	.LVL4:
-  45:./app/Threads/Thread_cmd/Thread_cmd.c ****             if (angle_str != NULL) {
-  86              		.loc 1 45 13 is_stmt 1 view .LVU13
-  87              		.loc 1 45 16 is_stmt 0 view .LVU14
-  88 0014 78B1     		cbz	r0, .L3
-  89              	.LBB3:
-  46:./app/Threads/Thread_cmd/Thread_cmd.c ****                 angle_str += strlen("set_angle:"); // 指向角度值的起始位置
-  90              		.loc 1 46 17 is_stmt 1 view .LVU15
-  91              	.LVL5:
-  47:./app/Threads/Thread_cmd/Thread_cmd.c ****                 double angle = atof(angle_str); // 将字符串转换为浮点数
-  92              		.loc 1 47 17 view .LVU16
-  93              		.loc 1 47 32 is_stmt 0 view .LVU17
-  94 0016 0A30     		adds	r0, r0, #10
-  95              	.LVL6:
-  96              		.loc 1 47 32 view .LVU18
-  97 0018 FFF7FEFF 		bl	atof
-  98              	.LVL7:
-  99              		.loc 1 47 32 view .LVU19
- 100 001c 55EC104B 		vmov	r4, r5, d0
-  48:./app/Threads/Thread_cmd/Thread_cmd.c ****                 printf("%lf\r\n",angle);
- 101              		.loc 1 48 17 is_stmt 1 view .LVU20
- 102 0020 10EE102A 		vmov	r2, s0	@ int
- 103 0024 2B46     		mov	r3, r5
- 104 0026 1A48     		ldr	r0, .L7+12
- 105 0028 FFF7FEFF 		bl	printf
- 106              	.LVL8:
-  49:./app/Threads/Thread_cmd/Thread_cmd.c ****                 printf("设置角度为:%lf\r\n",angle);
- 107              		.loc 1 49 17 view .LVU21
- 108 002c 2246     		mov	r2, r4
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc16UdTA.s 			page 4
+  42:./app/Threads/Thread_cmd/Thread_cmd.c ****             char *angle_str = NULL;
+  86              		.loc 1 42 13 is_stmt 1 view .LVU15
+  43:./app/Threads/Thread_cmd/Thread_cmd.c **** 			char *torque_str = NULL;
+  87              		.loc 1 43 4 view .LVU16
+  44:./app/Threads/Thread_cmd/Thread_cmd.c ****             char *angle_num = NULL;
+  88              		.loc 1 44 13 view .LVU17
+  45:./app/Threads/Thread_cmd/Thread_cmd.c ****             char *torque_num = NULL;
+  89              		.loc 1 45 13 view .LVU18
+  46:./app/Threads/Thread_cmd/Thread_cmd.c **** 
+  47:./app/Threads/Thread_cmd/Thread_cmd.c ****             angle_str = strstr(command, "set_angle:"); // 找到 "set_angle:" 的位置
+  90              		.loc 1 47 13 view .LVU19
+  91              		.loc 1 47 25 is_stmt 0 view .LVU20
+  92 0028 2349     		ldr	r1, .L10+4
+  93 002a 6846     		mov	r0, sp
+  94 002c FFF7FEFF 		bl	strstr
+  95              	.LVL5:
+  48:./app/Threads/Thread_cmd/Thread_cmd.c ****             if (angle_str != NULL) {
+  96              		.loc 1 48 13 is_stmt 1 view .LVU21
+  97              		.loc 1 48 16 is_stmt 0 view .LVU22
+  98 0030 0246     		mov	r2, r0
+  99 0032 68B1     		cbz	r0, .L3
+ 100              	.LBB3:
+  49:./app/Threads/Thread_cmd/Thread_cmd.c ****                 strcpy(Thread_Cmd->Cmd_Name_last, "set_angle:"); // 保存命令名称
+ 101              		.loc 1 49 17 is_stmt 1 view .LVU23
+ 102 0034 204B     		ldr	r3, .L10+4
+ 103 0036 03CB     		ldmia	r3!, {r0, r1}
+ 104              	.LVL6:
+ 105              		.loc 1 49 17 is_stmt 0 view .LVU24
+ 106 0038 2060     		str	r0, [r4]	@ unaligned
+ 107 003a 6160     		str	r1, [r4, #4]	@ unaligned
+ 108 003c 1988     		ldrh	r1, [r3]	@ unaligned
+ 109 003e 9B78     		ldrb	r3, [r3, #2]	@ zero_extendqisi2
+ 110 0040 2181     		strh	r1, [r4, #8]	@ unaligned
+ 111 0042 A372     		strb	r3, [r4, #10]
+  50:./app/Threads/Thread_cmd/Thread_cmd.c ****                 angle_num = angle_str + strlen("set_angle:"); // 指向角度值的起始位置
+ 112              		.loc 1 50 17 is_stmt 1 view .LVU25
+ 113              	.LVL7:
+  51:./app/Threads/Thread_cmd/Thread_cmd.c ****                 double angle = atof(angle_num); // 将字符串转换为浮点数
+ 114              		.loc 1 51 17 view .LVU26
+ 115              		.loc 1 51 32 is_stmt 0 view .LVU27
+ 116 0044 02F10A00 		add	r0, r2, #10
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccLygrsY.s 			page 4
 
 
- 109 002e 2B46     		mov	r3, r5
- 110 0030 1848     		ldr	r0, .L7+16
- 111 0032 FFF7FEFF 		bl	printf
- 112              	.LVL9:
- 113              	.L3:
- 114              		.loc 1 49 17 is_stmt 0 view .LVU22
- 115              	.LBE3:
-  50:./app/Threads/Thread_cmd/Thread_cmd.c ****             }
-  51:./app/Threads/Thread_cmd/Thread_cmd.c **** 			      torque_str = strstr(command, "set_torque:"); // 找到 "set_torque:" 的位置
- 116              		.loc 1 51 10 is_stmt 1 view .LVU23
- 117              		.loc 1 51 23 is_stmt 0 view .LVU24
- 118 0036 1849     		ldr	r1, .L7+20
- 119 0038 1448     		ldr	r0, .L7+8
- 120 003a FFF7FEFF 		bl	strstr
- 121              	.LVL10:
-  52:./app/Threads/Thread_cmd/Thread_cmd.c ****             if (torque_str != NULL) {
- 122              		.loc 1 52 13 is_stmt 1 view .LVU25
- 123              		.loc 1 52 16 is_stmt 0 view .LVU26
- 124 003e 38B1     		cbz	r0, .L4
- 125              	.LBB4:
-  53:./app/Threads/Thread_cmd/Thread_cmd.c ****                 torque_str += strlen("set_torque:"); // 指向力矩值的起始位置
- 126              		.loc 1 53 17 is_stmt 1 view .LVU27
- 127              	.LVL11:
-  54:./app/Threads/Thread_cmd/Thread_cmd.c ****                 // printf("%s\r\n",torque_str);
-  55:./app/Threads/Thread_cmd/Thread_cmd.c ****                 double torque = atof(torque_str); // 将字符串转换为浮点数
- 128              		.loc 1 55 17 view .LVU28
- 129              		.loc 1 55 33 is_stmt 0 view .LVU29
- 130 0040 0B30     		adds	r0, r0, #11
- 131              	.LVL12:
- 132              		.loc 1 55 33 view .LVU30
- 133 0042 FFF7FEFF 		bl	atof
- 134              	.LVL13:
- 135              		.loc 1 55 33 view .LVU31
- 136 0046 53EC102B 		vmov	r2, r3, d0
- 137              	.LVL14:
-  56:./app/Threads/Thread_cmd/Thread_cmd.c ****                 printf("设置力矩为:%lf\r\n",torque);
- 138              		.loc 1 56 17 is_stmt 1 view .LVU32
- 139 004a 1448     		ldr	r0, .L7+24
- 140 004c FFF7FEFF 		bl	printf
- 141              	.LVL15:
- 142              	.L4:
- 143              		.loc 1 56 17 is_stmt 0 view .LVU33
- 144              	.LBE4:
- 145              	.LBE2:
-  57:./app/Threads/Thread_cmd/Thread_cmd.c ****             }
-  58:./app/Threads/Thread_cmd/Thread_cmd.c **** 
-  59:./app/Threads/Thread_cmd/Thread_cmd.c **** 
-  60:./app/Threads/Thread_cmd/Thread_cmd.c **** 		}
-  61:./app/Threads/Thread_cmd/Thread_cmd.c **** 		Uart_Receive_Data.rxok = 0;
- 146              		.loc 1 61 3 is_stmt 1 view .LVU34
- 147              		.loc 1 61 26 is_stmt 0 view .LVU35
- 148 0050 0C4D     		ldr	r5, .L7
- 149 0052 0024     		movs	r4, #0
- 150 0054 6C70     		strb	r4, [r5, #1]
-  62:./app/Threads/Thread_cmd/Thread_cmd.c **** 		__HAL_UART_ENABLE_IT(huart, UART_IT_IDLE);
- 151              		.loc 1 62 3 is_stmt 1 view .LVU36
- 152 0056 3268     		ldr	r2, [r6]
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc16UdTA.s 			page 5
+ 117              	.LVL8:
+ 118              		.loc 1 51 32 view .LVU28
+ 119 0048 FFF7FEFF 		bl	atof
+ 120              	.LVL9:
+  52:./app/Threads/Thread_cmd/Thread_cmd.c ****                 Thread_Cmd->Cmd_Param_last = angle; // 保存角度值
+ 121              		.loc 1 52 17 is_stmt 1 view .LVU29
+ 122              		.loc 1 52 44 is_stmt 0 view .LVU30
+ 123 004c 84ED080B 		vstr.64	d0, [r4, #32]
+ 124              	.LVL10:
+ 125              	.L3:
+ 126              		.loc 1 52 44 view .LVU31
+ 127              	.LBE3:
+  53:./app/Threads/Thread_cmd/Thread_cmd.c ****             }
+  54:./app/Threads/Thread_cmd/Thread_cmd.c **** 			torque_str = strstr(command, "set_torque:"); // 找到 "set_torque:" 的位置
+ 128              		.loc 1 54 4 is_stmt 1 view .LVU32
+ 129              		.loc 1 54 17 is_stmt 0 view .LVU33
+ 130 0050 1A49     		ldr	r1, .L10+8
+ 131 0052 6846     		mov	r0, sp
+ 132 0054 FFF7FEFF 		bl	strstr
+ 133              	.LVL11:
+  55:./app/Threads/Thread_cmd/Thread_cmd.c ****             if (torque_str != NULL) {
+ 134              		.loc 1 55 13 is_stmt 1 view .LVU34
+ 135              		.loc 1 55 16 is_stmt 0 view .LVU35
+ 136 0058 0546     		mov	r5, r0
+ 137 005a 50B1     		cbz	r0, .L4
+ 138              	.LBB4:
+  56:./app/Threads/Thread_cmd/Thread_cmd.c ****                 strcpy(Thread_Cmd->Cmd_Name_last, "set_torque:"); // 保存命令名称
+ 139              		.loc 1 56 17 is_stmt 1 view .LVU36
+ 140 005c 174B     		ldr	r3, .L10+8
+ 141 005e 07CB     		ldmia	r3!, {r0, r1, r2}
+ 142              	.LVL12:
+ 143              		.loc 1 56 17 is_stmt 0 view .LVU37
+ 144 0060 2060     		str	r0, [r4]	@ unaligned
+ 145 0062 6160     		str	r1, [r4, #4]	@ unaligned
+ 146 0064 A260     		str	r2, [r4, #8]	@ unaligned
+  57:./app/Threads/Thread_cmd/Thread_cmd.c ****                 torque_num = torque_str + strlen("set_torque:"); // 指向力矩值的起始位置
+ 147              		.loc 1 57 17 is_stmt 1 view .LVU38
+ 148              	.LVL13:
+  58:./app/Threads/Thread_cmd/Thread_cmd.c ****                 double torque = atof(torque_num); // 将字符串转换为浮点数
+ 149              		.loc 1 58 17 view .LVU39
+ 150              		.loc 1 58 33 is_stmt 0 view .LVU40
+ 151 0066 05F10B00 		add	r0, r5, #11
+ 152              	.LVL14:
+ 153              		.loc 1 58 33 view .LVU41
+ 154 006a FFF7FEFF 		bl	atof
+ 155              	.LVL15:
+  59:./app/Threads/Thread_cmd/Thread_cmd.c ****                 Thread_Cmd->Cmd_Param_last = torque; // 保存力矩值
+ 156              		.loc 1 59 17 is_stmt 1 view .LVU42
+ 157              		.loc 1 59 44 is_stmt 0 view .LVU43
+ 158 006e 84ED080B 		vstr.64	d0, [r4, #32]
+ 159              	.LVL16:
+ 160              	.L4:
+ 161              		.loc 1 59 44 view .LVU44
+ 162              	.LBE4:
+  60:./app/Threads/Thread_cmd/Thread_cmd.c ****             }
+  61:./app/Threads/Thread_cmd/Thread_cmd.c ****             //这个地方不要直接打印参数,建议到线程中去处理
+  62:./app/Threads/Thread_cmd/Thread_cmd.c ****             memset(command, 0, UART_RECEIVE_IDLE_RX_MAXLEN); // 清空接收缓存
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccLygrsY.s 			page 5
 
 
- 153 0058 D368     		ldr	r3, [r2, #12]
- 154 005a 43F01003 		orr	r3, r3, #16
- 155 005e D360     		str	r3, [r2, #12]
-  63:./app/Threads/Thread_cmd/Thread_cmd.c **** 		memset(Uart_Receive_Data.rxbuf, 0, UART_RECEIVE_IDLE_RX_MAXLEN);
- 156              		.loc 1 63 3 view .LVU37
- 157 0060 0235     		adds	r5, r5, #2
- 158 0062 4FF48077 		mov	r7, #256
- 159 0066 3A46     		mov	r2, r7
- 160 0068 2146     		mov	r1, r4
- 161 006a 2846     		mov	r0, r5
- 162 006c FFF7FEFF 		bl	memset
- 163              	.LVL16:
-  64:./app/Threads/Thread_cmd/Thread_cmd.c **** 		HAL_UART_Receive_DMA(huart, Uart_Receive_Data.rxbuf, UART_RECEIVE_IDLE_RX_MAXLEN);
- 164              		.loc 1 64 3 view .LVU38
- 165 0070 3A46     		mov	r2, r7
- 166 0072 2946     		mov	r1, r5
- 167 0074 3046     		mov	r0, r6
- 168 0076 FFF7FEFF 		bl	HAL_UART_Receive_DMA
+ 163              		.loc 1 62 13 is_stmt 1 view .LVU45
+ 164 0072 4FF48077 		mov	r7, #256
+ 165 0076 3A46     		mov	r2, r7
+ 166 0078 0021     		movs	r1, #0
+ 167 007a 6846     		mov	r0, sp
+ 168 007c FFF7FEFF 		bl	memset
  169              	.LVL17:
-  30:./app/Threads/Thread_cmd/Thread_cmd.c **** 	if (Uart_Receive_Data.rxok == 0)
- 170              		.loc 1 30 9 is_stmt 0 view .LVU39
- 171 007a 2046     		mov	r0, r4
- 172              	.LVL18:
- 173              	.L2:
-  65:./app/Threads/Thread_cmd/Thread_cmd.c **** 	}
-  66:./app/Threads/Thread_cmd/Thread_cmd.c ****     // printf("Get_Cmd_nret: %d\r\n",nret);
-  67:./app/Threads/Thread_cmd/Thread_cmd.c **** 	return nret;
- 174              		.loc 1 67 2 is_stmt 1 view .LVU40
-  68:./app/Threads/Thread_cmd/Thread_cmd.c **** }
- 175              		.loc 1 68 1 is_stmt 0 view .LVU41
- 176 007c F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 170              	.LBE2:
+  63:./app/Threads/Thread_cmd/Thread_cmd.c **** 		}
+  64:./app/Threads/Thread_cmd/Thread_cmd.c **** 		Uart_Receive_Data.rxok = 0;
+ 171              		.loc 1 64 3 view .LVU46
+ 172              		.loc 1 64 26 is_stmt 0 view .LVU47
+ 173 0080 0C4D     		ldr	r5, .L10
+ 174              	.LVL18:
+ 175              		.loc 1 64 26 view .LVU48
+ 176 0082 0024     		movs	r4, #0
  177              	.LVL19:
- 178              	.L5:
+ 178              		.loc 1 64 26 view .LVU49
+ 179 0084 6C70     		strb	r4, [r5, #1]
+  65:./app/Threads/Thread_cmd/Thread_cmd.c **** 		__HAL_UART_ENABLE_IT(huart, UART_IT_IDLE);
+ 180              		.loc 1 65 3 is_stmt 1 view .LVU50
+ 181 0086 3268     		ldr	r2, [r6]
+ 182 0088 D368     		ldr	r3, [r2, #12]
+ 183 008a 43F01003 		orr	r3, r3, #16
+ 184 008e D360     		str	r3, [r2, #12]
+  66:./app/Threads/Thread_cmd/Thread_cmd.c **** 		memset(Uart_Receive_Data.rxbuf, 0, UART_RECEIVE_IDLE_RX_MAXLEN);
+ 185              		.loc 1 66 3 view .LVU51
+ 186 0090 0235     		adds	r5, r5, #2
+ 187 0092 3A46     		mov	r2, r7
+ 188 0094 2146     		mov	r1, r4
+ 189 0096 2846     		mov	r0, r5
+ 190 0098 FFF7FEFF 		bl	memset
+ 191              	.LVL20:
+  67:./app/Threads/Thread_cmd/Thread_cmd.c **** 		HAL_UART_Receive_DMA(huart, Uart_Receive_Data.rxbuf, UART_RECEIVE_IDLE_RX_MAXLEN);
+ 192              		.loc 1 67 3 view .LVU52
+ 193 009c 3A46     		mov	r2, r7
+ 194 009e 2946     		mov	r1, r5
+ 195 00a0 3046     		mov	r0, r6
+ 196 00a2 FFF7FEFF 		bl	HAL_UART_Receive_DMA
+ 197              	.LVL21:
+  30:./app/Threads/Thread_cmd/Thread_cmd.c **** 	if (Uart_Receive_Data.rxok == 0)
+ 198              		.loc 1 30 9 is_stmt 0 view .LVU53
+ 199 00a6 2046     		mov	r0, r4
+ 200              	.LVL22:
+  68:./app/Threads/Thread_cmd/Thread_cmd.c **** 	}
+  69:./app/Threads/Thread_cmd/Thread_cmd.c ****     // printf("Get_Cmd_nret: %d\r\n",nret);
+  70:./app/Threads/Thread_cmd/Thread_cmd.c **** 	return nret;
+ 201              		.loc 1 70 2 is_stmt 1 view .LVU54
+  71:./app/Threads/Thread_cmd/Thread_cmd.c **** }
+ 202              		.loc 1 71 1 is_stmt 0 view .LVU55
+ 203 00a8 41B0     		add	sp, sp, #260
+ 204              	.LCFI2:
+ 205              		.cfi_def_cfa_offset 20
+ 206              		@ sp needed
+ 207 00aa F0BD     		pop	{r4, r5, r6, r7, pc}
+ 208              	.LVL23:
+ 209              	.L5:
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccLygrsY.s 			page 6
+
+
+ 210              	.LCFI3:
+ 211              		.cfi_def_cfa_offset 0
+ 212              		.cfi_restore 4
+ 213              		.cfi_restore 5
+ 214              		.cfi_restore 6
+ 215              		.cfi_restore 7
+ 216              		.cfi_restore 14
   33:./app/Threads/Thread_cmd/Thread_cmd.c **** 	}
- 179              		.loc 1 33 8 view .LVU42
- 180 007e 4FF0FF30 		mov	r0, #-1
- 181              	.LVL20:
-  33:./app/Threads/Thread_cmd/Thread_cmd.c **** 	}
- 182              		.loc 1 33 8 view .LVU43
- 183 0082 FBE7     		b	.L2
- 184              	.L8:
- 185              		.align	2
- 186              	.L7:
- 187 0084 00000000 		.word	.LANCHOR0
- 188 0088 00000000 		.word	.LC0
- 189 008c 02000000 		.word	.LANCHOR0+2
- 190 0090 0C000000 		.word	.LC1
- 191 0094 14000000 		.word	.LC2
- 192 0098 2C000000 		.word	.LC3
- 193 009c 38000000 		.word	.LC4
- 194              		.cfi_endproc
- 195              	.LFE250:
- 197              		.section	.text.BSP_UART_IDLE_CallBack,"ax",%progbits
- 198              		.align	1
- 199              		.global	BSP_UART_IDLE_CallBack
- 200              		.syntax unified
- 201              		.thumb
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc16UdTA.s 			page 6
+ 217              		.loc 1 33 8 view .LVU56
+ 218 00ac 4FF0FF30 		mov	r0, #-1
+ 219              	.LVL24:
+  70:./app/Threads/Thread_cmd/Thread_cmd.c **** }
+ 220              		.loc 1 70 2 is_stmt 1 view .LVU57
+ 221              		.loc 1 71 1 is_stmt 0 view .LVU58
+ 222 00b0 7047     		bx	lr
+ 223              	.L11:
+ 224 00b2 00BF     		.align	2
+ 225              	.L10:
+ 226 00b4 00000000 		.word	.LANCHOR0
+ 227 00b8 00000000 		.word	.LC0
+ 228 00bc 0C000000 		.word	.LC1
+ 229              		.cfi_endproc
+ 230              	.LFE250:
+ 232              		.section	.text.BSP_UART_IDLE_CallBack,"ax",%progbits
+ 233              		.align	1
+ 234              		.global	BSP_UART_IDLE_CallBack
+ 235              		.syntax unified
+ 236              		.thumb
+ 237              		.thumb_func
+ 239              	BSP_UART_IDLE_CallBack:
+ 240              	.LVL25:
+ 241              	.LFB251:
+  72:./app/Threads/Thread_cmd/Thread_cmd.c **** 
+  73:./app/Threads/Thread_cmd/Thread_cmd.c **** 
+  74:./app/Threads/Thread_cmd/Thread_cmd.c **** void BSP_UART_IDLE_CallBack(UART_HandleTypeDef *huart)
+  75:./app/Threads/Thread_cmd/Thread_cmd.c **** {
+ 242              		.loc 1 75 1 is_stmt 1 view -0
+ 243              		.cfi_startproc
+ 244              		@ args = 0, pretend = 0, frame = 8
+ 245              		@ frame_needed = 0, uses_anonymous_args = 0
+  76:./app/Threads/Thread_cmd/Thread_cmd.c **** 	if ((__HAL_UART_GET_FLAG(huart, UART_FLAG_IDLE) != RESET))
+ 246              		.loc 1 76 2 view .LVU60
+ 247              		.loc 1 76 7 is_stmt 0 view .LVU61
+ 248 0000 0368     		ldr	r3, [r0]
+ 249 0002 1B68     		ldr	r3, [r3]
+ 250              		.loc 1 76 5 view .LVU62
+ 251 0004 13F0100F 		tst	r3, #16
+ 252 0008 00D1     		bne	.L18
+ 253 000a 7047     		bx	lr
+ 254              	.L18:
+  75:./app/Threads/Thread_cmd/Thread_cmd.c **** 	if ((__HAL_UART_GET_FLAG(huart, UART_FLAG_IDLE) != RESET))
+ 255              		.loc 1 75 1 view .LVU63
+ 256 000c 10B5     		push	{r4, lr}
+ 257              	.LCFI4:
+ 258              		.cfi_def_cfa_offset 8
+ 259              		.cfi_offset 4, -8
+ 260              		.cfi_offset 14, -4
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccLygrsY.s 			page 7
 
 
- 202              		.thumb_func
- 204              	BSP_UART_IDLE_CallBack:
- 205              	.LVL21:
- 206              	.LFB251:
-  69:./app/Threads/Thread_cmd/Thread_cmd.c **** 
-  70:./app/Threads/Thread_cmd/Thread_cmd.c **** 
-  71:./app/Threads/Thread_cmd/Thread_cmd.c **** void BSP_UART_IDLE_CallBack(UART_HandleTypeDef *huart)
-  72:./app/Threads/Thread_cmd/Thread_cmd.c **** {
- 207              		.loc 1 72 1 is_stmt 1 view -0
- 208              		.cfi_startproc
- 209              		@ args = 0, pretend = 0, frame = 8
- 210              		@ frame_needed = 0, uses_anonymous_args = 0
-  73:./app/Threads/Thread_cmd/Thread_cmd.c **** 	if ((__HAL_UART_GET_FLAG(huart, UART_FLAG_IDLE) != RESET))
- 211              		.loc 1 73 2 view .LVU45
- 212              		.loc 1 73 7 is_stmt 0 view .LVU46
- 213 0000 0368     		ldr	r3, [r0]
- 214 0002 1B68     		ldr	r3, [r3]
- 215              		.loc 1 73 5 view .LVU47
- 216 0004 13F0100F 		tst	r3, #16
- 217 0008 00D1     		bne	.L15
- 218 000a 7047     		bx	lr
- 219              	.L15:
-  72:./app/Threads/Thread_cmd/Thread_cmd.c **** 	if ((__HAL_UART_GET_FLAG(huart, UART_FLAG_IDLE) != RESET))
- 220              		.loc 1 72 1 view .LVU48
- 221 000c 10B5     		push	{r4, lr}
- 222              	.LCFI1:
- 223              		.cfi_def_cfa_offset 8
- 224              		.cfi_offset 4, -8
- 225              		.cfi_offset 14, -4
- 226 000e 82B0     		sub	sp, sp, #8
- 227              	.LCFI2:
- 228              		.cfi_def_cfa_offset 16
- 229 0010 0446     		mov	r4, r0
-  74:./app/Threads/Thread_cmd/Thread_cmd.c **** 	{
-  75:./app/Threads/Thread_cmd/Thread_cmd.c **** 		HAL_UART_DMAStop(huart);
- 230              		.loc 1 75 3 is_stmt 1 view .LVU49
- 231 0012 FFF7FEFF 		bl	HAL_UART_DMAStop
- 232              	.LVL22:
-  76:./app/Threads/Thread_cmd/Thread_cmd.c **** 		__HAL_UART_CLEAR_IDLEFLAG(huart);
- 233              		.loc 1 76 3 view .LVU50
- 234              	.LBB5:
- 235              		.loc 1 76 3 view .LVU51
- 236 0016 0023     		movs	r3, #0
- 237 0018 0193     		str	r3, [sp, #4]
- 238              		.loc 1 76 3 view .LVU52
- 239 001a 2368     		ldr	r3, [r4]
- 240 001c 1A68     		ldr	r2, [r3]
- 241 001e 0192     		str	r2, [sp, #4]
- 242              		.loc 1 76 3 view .LVU53
- 243 0020 5B68     		ldr	r3, [r3, #4]
- 244 0022 0193     		str	r3, [sp, #4]
- 245              		.loc 1 76 3 view .LVU54
- 246 0024 019B     		ldr	r3, [sp, #4]
- 247              	.LBE5:
- 248              		.loc 1 76 3 view .LVU55
-  77:./app/Threads/Thread_cmd/Thread_cmd.c **** 		Uart_Receive_Data.rxlen = UART_RECEIVE_IDLE_RX_MAXLEN - __HAL_DMA_GET_COUNTER(huart->hdmarx);
- 249              		.loc 1 77 3 view .LVU56
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc16UdTA.s 			page 7
+ 261 000e 82B0     		sub	sp, sp, #8
+ 262              	.LCFI5:
+ 263              		.cfi_def_cfa_offset 16
+ 264 0010 0446     		mov	r4, r0
+  77:./app/Threads/Thread_cmd/Thread_cmd.c **** 	{
+  78:./app/Threads/Thread_cmd/Thread_cmd.c **** 		HAL_UART_DMAStop(huart);
+ 265              		.loc 1 78 3 is_stmt 1 view .LVU64
+ 266 0012 FFF7FEFF 		bl	HAL_UART_DMAStop
+ 267              	.LVL26:
+  79:./app/Threads/Thread_cmd/Thread_cmd.c **** 		__HAL_UART_CLEAR_IDLEFLAG(huart);
+ 268              		.loc 1 79 3 view .LVU65
+ 269              	.LBB5:
+ 270              		.loc 1 79 3 view .LVU66
+ 271 0016 0023     		movs	r3, #0
+ 272 0018 0193     		str	r3, [sp, #4]
+ 273              		.loc 1 79 3 view .LVU67
+ 274 001a 2368     		ldr	r3, [r4]
+ 275 001c 1A68     		ldr	r2, [r3]
+ 276 001e 0192     		str	r2, [sp, #4]
+ 277              		.loc 1 79 3 view .LVU68
+ 278 0020 5B68     		ldr	r3, [r3, #4]
+ 279 0022 0193     		str	r3, [sp, #4]
+ 280              		.loc 1 79 3 view .LVU69
+ 281 0024 019B     		ldr	r3, [sp, #4]
+ 282              	.LBE5:
+ 283              		.loc 1 79 3 view .LVU70
+  80:./app/Threads/Thread_cmd/Thread_cmd.c **** 		Uart_Receive_Data.rxlen = UART_RECEIVE_IDLE_RX_MAXLEN - __HAL_DMA_GET_COUNTER(huart->hdmarx);
+ 284              		.loc 1 80 3 view .LVU71
+ 285              		.loc 1 80 59 is_stmt 0 view .LVU72
+ 286 0026 E36B     		ldr	r3, [r4, #60]
+ 287 0028 1B68     		ldr	r3, [r3]
+ 288 002a 5B68     		ldr	r3, [r3, #4]
+ 289              		.loc 1 80 57 view .LVU73
+ 290 002c 5B42     		rsbs	r3, r3, #0
+ 291 002e DBB2     		uxtb	r3, r3
+ 292              		.loc 1 80 27 view .LVU74
+ 293 0030 024A     		ldr	r2, .L19
+ 294 0032 1370     		strb	r3, [r2]
+  81:./app/Threads/Thread_cmd/Thread_cmd.c **** 		Uart_Receive_Data.rxok = 1;
+ 295              		.loc 1 81 3 is_stmt 1 view .LVU75
+ 296              		.loc 1 81 26 is_stmt 0 view .LVU76
+ 297 0034 0123     		movs	r3, #1
+ 298 0036 5370     		strb	r3, [r2, #1]
+  82:./app/Threads/Thread_cmd/Thread_cmd.c **** 	}
+  83:./app/Threads/Thread_cmd/Thread_cmd.c **** }
+ 299              		.loc 1 83 1 view .LVU77
+ 300 0038 02B0     		add	sp, sp, #8
+ 301              	.LCFI6:
+ 302              		.cfi_def_cfa_offset 8
+ 303              		@ sp needed
+ 304 003a 10BD     		pop	{r4, pc}
+ 305              	.LVL27:
+ 306              	.L20:
+ 307              		.loc 1 83 1 view .LVU78
+ 308              		.align	2
+ 309              	.L19:
+ 310 003c 00000000 		.word	.LANCHOR0
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccLygrsY.s 			page 8
 
 
- 250              		.loc 1 77 59 is_stmt 0 view .LVU57
- 251 0026 E36B     		ldr	r3, [r4, #60]
- 252 0028 1B68     		ldr	r3, [r3]
- 253 002a 5B68     		ldr	r3, [r3, #4]
- 254              		.loc 1 77 57 view .LVU58
- 255 002c 5B42     		rsbs	r3, r3, #0
- 256 002e DBB2     		uxtb	r3, r3
- 257              		.loc 1 77 27 view .LVU59
- 258 0030 024A     		ldr	r2, .L16
- 259 0032 1370     		strb	r3, [r2]
-  78:./app/Threads/Thread_cmd/Thread_cmd.c **** 		Uart_Receive_Data.rxok = 1;
- 260              		.loc 1 78 3 is_stmt 1 view .LVU60
- 261              		.loc 1 78 26 is_stmt 0 view .LVU61
- 262 0034 0123     		movs	r3, #1
- 263 0036 5370     		strb	r3, [r2, #1]
-  79:./app/Threads/Thread_cmd/Thread_cmd.c **** 	}
-  80:./app/Threads/Thread_cmd/Thread_cmd.c **** }
- 264              		.loc 1 80 1 view .LVU62
- 265 0038 02B0     		add	sp, sp, #8
- 266              	.LCFI3:
- 267              		.cfi_def_cfa_offset 8
- 268              		@ sp needed
- 269 003a 10BD     		pop	{r4, pc}
- 270              	.LVL23:
- 271              	.L17:
- 272              		.loc 1 80 1 view .LVU63
- 273              		.align	2
- 274              	.L16:
- 275 003c 00000000 		.word	.LANCHOR0
- 276              		.cfi_endproc
- 277              	.LFE251:
- 279              		.section	.text.Thread_Cmd_Entry,"ax",%progbits
- 280              		.align	1
- 281              		.global	Thread_Cmd_Entry
- 282              		.syntax unified
- 283              		.thumb
- 284              		.thumb_func
- 286              	Thread_Cmd_Entry:
- 287              	.LFB252:
-  81:./app/Threads/Thread_cmd/Thread_cmd.c **** 
-  82:./app/Threads/Thread_cmd/Thread_cmd.c **** /*******************************************************************************
-  83:./app/Threads/Thread_cmd/Thread_cmd.c **** * Function Name  : Thread_Cmd_Entry
-  84:./app/Threads/Thread_cmd/Thread_cmd.c **** * Description    : Thread_Cmd_Entry线程
-  85:./app/Threads/Thread_cmd/Thread_cmd.c **** * Input          : ULONG thread_input
-  86:./app/Threads/Thread_cmd/Thread_cmd.c **** * Output         : None
-  87:./app/Threads/Thread_cmd/Thread_cmd.c **** * Return         : None
-  88:./app/Threads/Thread_cmd/Thread_cmd.c **** * Note			 : 快速创建线程demo
-  89:./app/Threads/Thread_cmd/Thread_cmd.c **** *******************************************************************************/
-  90:./app/Threads/Thread_cmd/Thread_cmd.c **** void Thread_Cmd_Entry(ULONG thread_input)
-  91:./app/Threads/Thread_cmd/Thread_cmd.c **** {
- 288              		.loc 1 91 1 is_stmt 1 view -0
- 289              		.cfi_startproc
- 290              		@ Volatile: function does not return.
- 291              		@ args = 0, pretend = 0, frame = 0
- 292              		@ frame_needed = 0, uses_anonymous_args = 0
- 293              	.LVL24:
- 294              		.loc 1 91 1 is_stmt 0 view .LVU65
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc16UdTA.s 			page 8
+ 311              		.cfi_endproc
+ 312              	.LFE251:
+ 314              		.section	.rodata.Thread_Cmd_Entry.str1.4,"aMS",%progbits,1
+ 315              		.align	2
+ 316              	.LC2:
+ 317 0000 436D645F 		.ascii	"Cmd_Name_last: %s\015\012\000"
+ 317      4E616D65 
+ 317      5F6C6173 
+ 317      743A2025 
+ 317      730D0A00 
+ 318              		.align	2
+ 319              	.LC3:
+ 320 0014 436D645F 		.ascii	"Cmd_Param_last: %lf\015\012\000"
+ 320      50617261 
+ 320      6D5F6C61 
+ 320      73743A20 
+ 320      256C660D 
+ 321              		.section	.text.Thread_Cmd_Entry,"ax",%progbits
+ 322              		.align	1
+ 323              		.global	Thread_Cmd_Entry
+ 324              		.syntax unified
+ 325              		.thumb
+ 326              		.thumb_func
+ 328              	Thread_Cmd_Entry:
+ 329              	.LVL28:
+ 330              	.LFB252:
+  84:./app/Threads/Thread_cmd/Thread_cmd.c **** 
+  85:./app/Threads/Thread_cmd/Thread_cmd.c **** /*******************************************************************************
+  86:./app/Threads/Thread_cmd/Thread_cmd.c **** * Function Name  : Thread_Cmd_Entry
+  87:./app/Threads/Thread_cmd/Thread_cmd.c **** * Description    : Thread_Cmd_Entry线程
+  88:./app/Threads/Thread_cmd/Thread_cmd.c **** * Input          : ULONG thread_input
+  89:./app/Threads/Thread_cmd/Thread_cmd.c **** * Output         : None
+  90:./app/Threads/Thread_cmd/Thread_cmd.c **** * Return         : None
+  91:./app/Threads/Thread_cmd/Thread_cmd.c **** * Note			 : 快速创建线程demo
+  92:./app/Threads/Thread_cmd/Thread_cmd.c **** *******************************************************************************/
+  93:./app/Threads/Thread_cmd/Thread_cmd.c **** void Thread_Cmd_Entry(ULONG thread_input)
+  94:./app/Threads/Thread_cmd/Thread_cmd.c **** {
+ 331              		.loc 1 94 1 is_stmt 1 view -0
+ 332              		.cfi_startproc
+ 333              		@ args = 0, pretend = 0, frame = 0
+ 334              		@ frame_needed = 0, uses_anonymous_args = 0
+ 335              		.loc 1 94 1 is_stmt 0 view .LVU80
+ 336 0000 10B5     		push	{r4, lr}
+ 337              	.LCFI7:
+ 338              		.cfi_def_cfa_offset 8
+ 339              		.cfi_offset 4, -8
+ 340              		.cfi_offset 14, -4
+ 341 0002 0446     		mov	r4, r0
+  95:./app/Threads/Thread_cmd/Thread_cmd.c ****     Thread_Cmd_parama * thread_param = (Thread_Cmd_parama *)thread_input;
+ 342              		.loc 1 95 5 is_stmt 1 view .LVU81
+ 343              	.LVL29:
+ 344              		.loc 1 95 5 is_stmt 0 view .LVU82
+ 345 0004 0BE0     		b	.L23
+ 346              	.LVL30:
+ 347              	.L25:
+  96:./app/Threads/Thread_cmd/Thread_cmd.c **** 	while(1)
+  97:./app/Threads/Thread_cmd/Thread_cmd.c **** 	{
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccLygrsY.s 			page 9
 
 
- 295 0000 08B5     		push	{r3, lr}
- 296              	.LCFI4:
- 297              		.cfi_def_cfa_offset 8
- 298              		.cfi_offset 3, -8
- 299              		.cfi_offset 14, -4
- 300              	.LVL25:
- 301              	.L19:
-  92:./app/Threads/Thread_cmd/Thread_cmd.c **** 	thread_input = (uint8_t )thread_input;
-  93:./app/Threads/Thread_cmd/Thread_cmd.c **** 
-  94:./app/Threads/Thread_cmd/Thread_cmd.c **** 	while(1)
- 302              		.loc 1 94 2 is_stmt 1 view .LVU66
-  95:./app/Threads/Thread_cmd/Thread_cmd.c **** 	{
-  96:./app/Threads/Thread_cmd/Thread_cmd.c ****     if (Get_Cmd(&DEBUG_UART) == 0)   //接收到数据
- 303              		.loc 1 96 5 view .LVU67
- 304              		.loc 1 96 9 is_stmt 0 view .LVU68
- 305 0002 0348     		ldr	r0, .L21
- 306 0004 FFF7FEFF 		bl	Get_Cmd
- 307              	.LVL26:
-  97:./app/Threads/Thread_cmd/Thread_cmd.c ****     {
-  98:./app/Threads/Thread_cmd/Thread_cmd.c ****         //处理数据
-  99:./app/Threads/Thread_cmd/Thread_cmd.c **** 
- 100:./app/Threads/Thread_cmd/Thread_cmd.c ****     }
- 101:./app/Threads/Thread_cmd/Thread_cmd.c ****     else
- 102:./app/Threads/Thread_cmd/Thread_cmd.c ****     {
- 103:./app/Threads/Thread_cmd/Thread_cmd.c ****         //处理接收错误
- 104:./app/Threads/Thread_cmd/Thread_cmd.c ****     }
- 308              		.loc 1 104 5 is_stmt 1 view .LVU69
- 105:./app/Threads/Thread_cmd/Thread_cmd.c ****     
- 106:./app/Threads/Thread_cmd/Thread_cmd.c ****         tx_thread_sleep(2);
- 309              		.loc 1 106 9 view .LVU70
- 310 0008 0220     		movs	r0, #2
- 311 000a FFF7FEFF 		bl	_tx_thread_sleep
- 312              	.LVL27:
-  94:./app/Threads/Thread_cmd/Thread_cmd.c **** 	{
- 313              		.loc 1 94 7 view .LVU71
- 314 000e F8E7     		b	.L19
- 315              	.L22:
- 316              		.align	2
- 317              	.L21:
- 318 0010 00000000 		.word	huart1
- 319              		.cfi_endproc
- 320              	.LFE252:
- 322              		.global	Uart_Receive_Data
- 323              		.global	Thread_Cmd_parama1
- 324              		.global	Thread_Cmd
- 325              		.section	.bss.Thread_Cmd,"aw",%nobits
- 326              		.align	2
- 329              	Thread_Cmd:
- 330 0000 00000000 		.space	176
- 330      00000000 
- 330      00000000 
- 330      00000000 
- 330      00000000 
- 331              		.section	.bss.Thread_Cmd_parama1,"aw",%nobits
- 332              		.align	2
- 335              	Thread_Cmd_parama1:
- 336 0000 00000000 		.space	36
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc16UdTA.s 			page 9
+  98:./app/Threads/Thread_cmd/Thread_cmd.c ****     if (Get_Cmd(&DEBUG_UART, thread_input) == 0)   //接收到数据
+  99:./app/Threads/Thread_cmd/Thread_cmd.c ****     {
+ 100:./app/Threads/Thread_cmd/Thread_cmd.c ****         //处理数据
+ 101:./app/Threads/Thread_cmd/Thread_cmd.c ****         printf("Cmd_Name_last: %s\r\n", thread_param->Cmd_Name_last);
+ 348              		.loc 1 101 9 is_stmt 1 view .LVU83
+ 349 0006 2146     		mov	r1, r4
+ 350 0008 0848     		ldr	r0, .L26
+ 351 000a FFF7FEFF 		bl	printf
+ 352              	.LVL31:
+ 102:./app/Threads/Thread_cmd/Thread_cmd.c ****         printf("Cmd_Param_last: %lf\r\n", thread_param->Cmd_Param_last);
+ 353              		.loc 1 102 9 view .LVU84
+ 354 000e D4E90823 		ldrd	r2, [r4, #32]
+ 355 0012 0748     		ldr	r0, .L26+4
+ 356 0014 FFF7FEFF 		bl	printf
+ 357              	.LVL32:
+ 358              	.L22:
+ 103:./app/Threads/Thread_cmd/Thread_cmd.c ****     }
+ 104:./app/Threads/Thread_cmd/Thread_cmd.c ****     else
+ 105:./app/Threads/Thread_cmd/Thread_cmd.c ****     {
+ 106:./app/Threads/Thread_cmd/Thread_cmd.c ****         //处理接收错误
+ 107:./app/Threads/Thread_cmd/Thread_cmd.c ****     }
+ 359              		.loc 1 107 5 view .LVU85
+ 108:./app/Threads/Thread_cmd/Thread_cmd.c ****     
+ 109:./app/Threads/Thread_cmd/Thread_cmd.c ****     tx_thread_sleep(2);
+ 360              		.loc 1 109 5 view .LVU86
+ 361 0018 0220     		movs	r0, #2
+ 362 001a FFF7FEFF 		bl	_tx_thread_sleep
+ 363              	.LVL33:
+  96:./app/Threads/Thread_cmd/Thread_cmd.c **** 	{
+ 364              		.loc 1 96 7 view .LVU87
+ 365              	.L23:
+  96:./app/Threads/Thread_cmd/Thread_cmd.c **** 	{
+ 366              		.loc 1 96 2 view .LVU88
+  98:./app/Threads/Thread_cmd/Thread_cmd.c ****     {
+ 367              		.loc 1 98 5 view .LVU89
+  98:./app/Threads/Thread_cmd/Thread_cmd.c ****     {
+ 368              		.loc 1 98 9 is_stmt 0 view .LVU90
+ 369 001e 2146     		mov	r1, r4
+ 370 0020 0448     		ldr	r0, .L26+8
+ 371 0022 FFF7FEFF 		bl	Get_Cmd
+ 372              	.LVL34:
+  98:./app/Threads/Thread_cmd/Thread_cmd.c ****     {
+ 373              		.loc 1 98 8 view .LVU91
+ 374 0026 0028     		cmp	r0, #0
+ 375 0028 EDD0     		beq	.L25
+ 376 002a F5E7     		b	.L22
+ 377              	.L27:
+ 378              		.align	2
+ 379              	.L26:
+ 380 002c 00000000 		.word	.LC2
+ 381 0030 14000000 		.word	.LC3
+ 382 0034 00000000 		.word	huart1
+ 383              		.cfi_endproc
+ 384              	.LFE252:
+ 386              		.global	Uart_Receive_Data
+ 387              		.global	Thread_Cmd_parama1
+ 388              		.global	Thread_Cmd
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccLygrsY.s 			page 10
 
 
- 336      00000000 
- 336      00000000 
- 336      00000000 
- 336      00000000 
- 337              		.section	.data.Uart_Receive_Data,"aw"
- 338              		.align	2
- 339              		.set	.LANCHOR0,. + 0
- 342              	Uart_Receive_Data:
- 343 0000 00       		.byte	0
- 344 0001 01       		.byte	1
- 345 0002 00000000 		.space	256
- 345      00000000 
- 345      00000000 
- 345      00000000 
- 345      00000000 
- 346              		.text
- 347              	.Letext0:
- 348              		.file 2 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\machine\\_default_types.h"
- 349              		.file 3 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
- 350              		.file 4 "./Middlewares/ST/threadx/common/inc/tx_api.h"
- 351              		.file 5 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\sys\\_stdint.h"
- 352              		.file 6 "./Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h"
- 353              		.file 7 "./Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h"
- 354              		.file 8 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
- 355              		.file 9 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
- 356              		.file 10 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h"
- 357              		.file 11 "./app/Threads/Thread_cmd/Thread_cmd.h"
- 358              		.file 12 "./Core/Inc/usart.h"
- 359              		.file 13 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\stdlib.h"
- 360              		.file 14 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\stdio.h"
- 361              		.file 15 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\string.h"
- 362              		.file 16 "<built-in>"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc16UdTA.s 			page 10
+ 389              		.section	.bss.Thread_Cmd,"aw",%nobits
+ 390              		.align	2
+ 393              	Thread_Cmd:
+ 394 0000 00000000 		.space	176
+ 394      00000000 
+ 394      00000000 
+ 394      00000000 
+ 394      00000000 
+ 395              		.section	.bss.Thread_Cmd_parama1,"aw",%nobits
+ 396              		.align	3
+ 399              	Thread_Cmd_parama1:
+ 400 0000 00000000 		.space	40
+ 400      00000000 
+ 400      00000000 
+ 400      00000000 
+ 400      00000000 
+ 401              		.section	.data.Uart_Receive_Data,"aw"
+ 402              		.align	2
+ 403              		.set	.LANCHOR0,. + 0
+ 406              	Uart_Receive_Data:
+ 407 0000 00       		.byte	0
+ 408 0001 01       		.byte	1
+ 409 0002 00000000 		.space	256
+ 409      00000000 
+ 409      00000000 
+ 409      00000000 
+ 409      00000000 
+ 410              		.text
+ 411              	.Letext0:
+ 412              		.file 2 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 413              		.file 3 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
+ 414              		.file 4 "./Middlewares/ST/threadx/common/inc/tx_api.h"
+ 415              		.file 5 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 416              		.file 6 "./Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h"
+ 417              		.file 7 "./Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h"
+ 418              		.file 8 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
+ 419              		.file 9 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
+ 420              		.file 10 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h"
+ 421              		.file 11 "./app/Threads/Thread_cmd/Thread_cmd.h"
+ 422              		.file 12 "./Core/Inc/usart.h"
+ 423              		.file 13 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\stdio.h"
+ 424              		.file 14 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\stdlib.h"
+ 425              		.file 15 "<built-in>"
+ 426              		.file 16 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\string.h"
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccLygrsY.s 			page 11
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 Thread_cmd.c
-C:\Users\Dennis\AppData\Local\Temp\cc16UdTA.s:20     .rodata.Get_Cmd.str1.4:00000000 $d
-C:\Users\Dennis\AppData\Local\Temp\cc16UdTA.s:38     .text.Get_Cmd:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\cc16UdTA.s:44     .text.Get_Cmd:00000000 Get_Cmd
-C:\Users\Dennis\AppData\Local\Temp\cc16UdTA.s:187    .text.Get_Cmd:00000084 $d
-C:\Users\Dennis\AppData\Local\Temp\cc16UdTA.s:198    .text.BSP_UART_IDLE_CallBack:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\cc16UdTA.s:204    .text.BSP_UART_IDLE_CallBack:00000000 BSP_UART_IDLE_CallBack
-C:\Users\Dennis\AppData\Local\Temp\cc16UdTA.s:275    .text.BSP_UART_IDLE_CallBack:0000003c $d
-C:\Users\Dennis\AppData\Local\Temp\cc16UdTA.s:280    .text.Thread_Cmd_Entry:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\cc16UdTA.s:286    .text.Thread_Cmd_Entry:00000000 Thread_Cmd_Entry
-C:\Users\Dennis\AppData\Local\Temp\cc16UdTA.s:318    .text.Thread_Cmd_Entry:00000010 $d
-C:\Users\Dennis\AppData\Local\Temp\cc16UdTA.s:342    .data.Uart_Receive_Data:00000000 Uart_Receive_Data
-C:\Users\Dennis\AppData\Local\Temp\cc16UdTA.s:335    .bss.Thread_Cmd_parama1:00000000 Thread_Cmd_parama1
-C:\Users\Dennis\AppData\Local\Temp\cc16UdTA.s:329    .bss.Thread_Cmd:00000000 Thread_Cmd
-C:\Users\Dennis\AppData\Local\Temp\cc16UdTA.s:326    .bss.Thread_Cmd:00000000 $d
-C:\Users\Dennis\AppData\Local\Temp\cc16UdTA.s:332    .bss.Thread_Cmd_parama1:00000000 $d
-C:\Users\Dennis\AppData\Local\Temp\cc16UdTA.s:338    .data.Uart_Receive_Data:00000000 $d
+C:\Users\Dennis\AppData\Local\Temp\ccLygrsY.s:20     .rodata.Get_Cmd.str1.4:00000000 $d
+C:\Users\Dennis\AppData\Local\Temp\ccLygrsY.s:27     .text.Get_Cmd:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\ccLygrsY.s:33     .text.Get_Cmd:00000000 Get_Cmd
+C:\Users\Dennis\AppData\Local\Temp\ccLygrsY.s:226    .text.Get_Cmd:000000b4 $d
+C:\Users\Dennis\AppData\Local\Temp\ccLygrsY.s:233    .text.BSP_UART_IDLE_CallBack:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\ccLygrsY.s:239    .text.BSP_UART_IDLE_CallBack:00000000 BSP_UART_IDLE_CallBack
+C:\Users\Dennis\AppData\Local\Temp\ccLygrsY.s:310    .text.BSP_UART_IDLE_CallBack:0000003c $d
+C:\Users\Dennis\AppData\Local\Temp\ccLygrsY.s:315    .rodata.Thread_Cmd_Entry.str1.4:00000000 $d
+C:\Users\Dennis\AppData\Local\Temp\ccLygrsY.s:322    .text.Thread_Cmd_Entry:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\ccLygrsY.s:328    .text.Thread_Cmd_Entry:00000000 Thread_Cmd_Entry
+C:\Users\Dennis\AppData\Local\Temp\ccLygrsY.s:380    .text.Thread_Cmd_Entry:0000002c $d
+C:\Users\Dennis\AppData\Local\Temp\ccLygrsY.s:406    .data.Uart_Receive_Data:00000000 Uart_Receive_Data
+C:\Users\Dennis\AppData\Local\Temp\ccLygrsY.s:399    .bss.Thread_Cmd_parama1:00000000 Thread_Cmd_parama1
+C:\Users\Dennis\AppData\Local\Temp\ccLygrsY.s:393    .bss.Thread_Cmd:00000000 Thread_Cmd
+C:\Users\Dennis\AppData\Local\Temp\ccLygrsY.s:390    .bss.Thread_Cmd:00000000 $d
+C:\Users\Dennis\AppData\Local\Temp\ccLygrsY.s:396    .bss.Thread_Cmd_parama1:00000000 $d
+C:\Users\Dennis\AppData\Local\Temp\ccLygrsY.s:402    .data.Uart_Receive_Data:00000000 $d
 
 UNDEFINED SYMBOLS
+memset
+memcpy
 strstr
 atof
-printf
-memset
 HAL_UART_Receive_DMA
 HAL_UART_DMAStop
+printf
 _tx_thread_sleep
 huart1

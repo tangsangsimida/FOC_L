@@ -1,0 +1,363 @@
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfN42j.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"ux_dcd_stm32_transfer_request.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text._ux_dcd_stm32_transfer_request,"ax",%progbits
+  20              		.align	1
+  21              		.global	_ux_dcd_stm32_transfer_request
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	_ux_dcd_stm32_transfer_request:
+  27              	.LVL0:
+  28              	.LFB251:
+  29              		.file 1 "./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.
+   1:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /**************************************************************************/
+   2:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*                                                                        */
+   3:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
+   4:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*                                                                        */
+   5:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*       This software is licensed under the Microsoft Software License   */
+   6:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*       Terms for Microsoft Azure RTOS. Full text of the license can be  */
+   7:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*       found in the LICENSE file at https://aka.ms/AzureRTOS_EULA       */
+   8:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*       and in the root directory of this software.                      */
+   9:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*                                                                        */
+  10:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /**************************************************************************/
+  11:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** 
+  12:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** 
+  13:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /**************************************************************************/
+  14:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /**************************************************************************/
+  15:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /**                                                                       */
+  16:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /** USBX Component                                                        */
+  17:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /**                                                                       */
+  18:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /**   STM32 Controller Driver                                             */
+  19:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /**                                                                       */
+  20:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /**************************************************************************/
+  21:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /**************************************************************************/
+  22:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** 
+  23:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** #define UX_SOURCE_CODE
+  24:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** #define UX_DCD_STM32_SOURCE_CODE
+  25:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** 
+  26:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** 
+  27:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /* Include necessary system files.  */
+  28:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** 
+  29:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** #include "ux_api.h"
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfN42j.s 			page 2
+
+
+  30:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** #include "ux_dcd_stm32.h"
+  31:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** #include "ux_utility.h"
+  32:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** #include "ux_device_stack.h"
+  33:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** 
+  34:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** 
+  35:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** #if !defined(UX_DEVICE_STANDALONE)
+  36:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /**************************************************************************/
+  37:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*                                                                        */
+  38:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*  FUNCTION                                               RELEASE        */
+  39:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*                                                                        */
+  40:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*    _ux_dcd_stm32_transfer_request                      PORTABLE C      */
+  41:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*                                                           6.1          */
+  42:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*  AUTHOR                                                                */
+  43:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*                                                                        */
+  44:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*    Chaoqiong Xiao, Microsoft Corporation                               */
+  45:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*                                                                        */
+  46:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*  DESCRIPTION                                                           */
+  47:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*                                                                        */
+  48:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*    This function will initiate a transfer to a specific endpoint.      */
+  49:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*    If the endpoint is IN, the endpoint register will be set to accept  */
+  50:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*    the request.                                                        */
+  51:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*                                                                        */
+  52:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*    If the endpoint is IN, the endpoint FIFO will be filled with the    */
+  53:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*    buffer and the endpoint register set.                               */
+  54:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*                                                                        */
+  55:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*  INPUT                                                                 */
+  56:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*                                                                        */
+  57:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*    dcd_stm32                             Pointer to device controller  */
+  58:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*    transfer_request                      Pointer to transfer request   */
+  59:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*                                                                        */
+  60:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*  OUTPUT                                                                */
+  61:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*                                                                        */
+  62:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*    Completion Status                                                   */
+  63:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*                                                                        */
+  64:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*                                                                        */
+  65:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*  CALLS                                                                 */
+  66:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*                                                                        */
+  67:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*    HAL_PCD_EP_Transmit                   Transmit data                 */
+  68:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*    HAL_PCD_EP_Receive                    Receive data                  */
+  69:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*    _ux_utility_semaphore_get             Get semaphore                 */
+  70:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*                                                                        */
+  71:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*  CALLED BY                                                             */
+  72:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*                                                                        */
+  73:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*    STM32 Controller Driver                                             */
+  74:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*                                                                        */
+  75:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*  RELEASE HISTORY                                                       */
+  76:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*                                                                        */
+  77:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*    DATE              NAME                      DESCRIPTION             */
+  78:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*                                                                        */
+  79:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*  05-19-2020     Chaoqiong Xiao           Initial Version 6.0           */
+  80:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*  09-30-2020     Chaoqiong Xiao           Modified comment(s), used ST  */
+  81:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*                                            HAL library to drive the    */
+  82:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*                                            controller,                 */
+  83:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*                                            resulting in version 6.1    */
+  84:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /*                                                                        */
+  85:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** /**************************************************************************/
+  86:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** UINT  _ux_dcd_stm32_transfer_request(UX_DCD_STM32 *dcd_stm32, UX_SLAVE_TRANSFER *transfer_request)
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfN42j.s 			page 3
+
+
+  87:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** {
+  30              		.loc 1 87 1 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		.loc 1 87 1 is_stmt 0 view .LVU1
+  35 0000 38B5     		push	{r3, r4, r5, lr}
+  36              	.LCFI0:
+  37              		.cfi_def_cfa_offset 16
+  38              		.cfi_offset 3, -16
+  39              		.cfi_offset 4, -12
+  40              		.cfi_offset 5, -8
+  41              		.cfi_offset 14, -4
+  42 0002 0C46     		mov	r4, r1
+  88:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** 
+  89:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** UX_SLAVE_ENDPOINT       *endpoint;
+  43              		.loc 1 89 1 is_stmt 1 view .LVU2
+  90:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** UINT                    status;
+  44              		.loc 1 90 1 view .LVU3
+  91:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** 
+  92:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** 
+  93:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****     /* Get the pointer to the logical endpoint from the transfer request.  */
+  94:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****     endpoint =  transfer_request -> ux_slave_transfer_request_endpoint;
+  45              		.loc 1 94 5 view .LVU4
+  46              		.loc 1 94 14 is_stmt 0 view .LVU5
+  47 0004 8D68     		ldr	r5, [r1, #8]
+  48              	.LVL1:
+  95:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** 
+  96:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****     /* Check for transfer direction.  Is this a IN endpoint ? */
+  97:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****     if (transfer_request -> ux_slave_transfer_request_phase == UX_TRANSFER_PHASE_DATA_OUT)
+  49              		.loc 1 97 5 is_stmt 1 view .LVU6
+  50              		.loc 1 97 26 is_stmt 0 view .LVU7
+  51 0006 8B6A     		ldr	r3, [r1, #40]
+  52              		.loc 1 97 8 view .LVU8
+  53 0008 032B     		cmp	r3, #3
+  54 000a 0AD0     		beq	.L5
+  98:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****     {
+  99:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** 
+ 100:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****         /* Transmit data.  */
+ 101:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****         HAL_PCD_EP_Transmit(dcd_stm32 -> pcd_handle,
+ 102:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****                             endpoint->ux_slave_endpoint_descriptor.bEndpointAddress,
+ 103:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****                             transfer_request->ux_slave_transfer_request_data_pointer,
+ 104:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****                             transfer_request->ux_slave_transfer_request_requested_length);
+ 105:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** 
+ 106:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****         /* If the endpoint is a Control endpoint, all this is happening under Interrupt and there i
+ 107:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****            thread to suspend.  */
+ 108:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****         if ((endpoint -> ux_slave_endpoint_descriptor.bEndpointAddress & (UINT)~UX_ENDPOINT_DIRECTI
+ 109:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****         {
+ 110:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** 
+ 111:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****             /* We should wait for the semaphore to wake us up.  */
+ 112:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****             status =  _ux_utility_semaphore_get(&transfer_request -> ux_slave_transfer_request_sema
+ 113:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****                                                 (ULONG)transfer_request -> ux_slave_transfer_reques
+ 114:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** 
+ 115:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****             /* Check the completion code. */
+ 116:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****             if (status != UX_SUCCESS)
+ 117:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****                 return(status);
+ 118:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** 
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfN42j.s 			page 4
+
+
+ 119:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****             transfer_request -> ux_slave_transfer_request_actual_length = transfer_request->ux_slav
+ 120:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** 
+ 121:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****             /* Check the transfer request completion code. We may have had a BUS reset or
+ 122:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****                a device disconnection.  */
+ 123:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****             if (transfer_request -> ux_slave_transfer_request_completion_code != UX_SUCCESS)
+ 124:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****                 return(transfer_request -> ux_slave_transfer_request_completion_code);
+ 125:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** 
+ 126:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****             /* Return to caller with success.  */
+ 127:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****             return(UX_SUCCESS);
+ 128:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****         }
+ 129:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****     }
+ 130:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****     else
+ 131:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****     {
+ 132:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** 
+ 133:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****         /* We have a request for a SETUP or OUT Endpoint.  */
+ 134:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****         /* Receive data.  */
+ 135:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****         HAL_PCD_EP_Receive(dcd_stm32 -> pcd_handle,
+  55              		.loc 1 135 9 is_stmt 1 view .LVU9
+  56 000c 4B69     		ldr	r3, [r1, #20]
+  57 000e CA68     		ldr	r2, [r1, #12]
+  58 0010 297D     		ldrb	r1, [r5, #20]	@ zero_extendqisi2
+  59              	.LVL2:
+  60              		.loc 1 135 9 is_stmt 0 view .LVU10
+  61 0012 C06C     		ldr	r0, [r0, #76]
+  62              	.LVL3:
+  63              		.loc 1 135 9 view .LVU11
+  64 0014 FFF7FEFF 		bl	HAL_PCD_EP_Receive
+  65              	.LVL4:
+ 136:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****                             endpoint->ux_slave_endpoint_descriptor.bEndpointAddress,
+ 137:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****                             transfer_request->ux_slave_transfer_request_data_pointer,
+ 138:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****                             transfer_request->ux_slave_transfer_request_requested_length);
+ 139:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** 
+ 140:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****         /* If the endpoint is a Control endpoint, all this is happening under Interrupt and there i
+ 141:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****            thread to suspend.  */
+ 142:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****         if ((endpoint -> ux_slave_endpoint_descriptor.bEndpointAddress & (UINT)~UX_ENDPOINT_DIRECTI
+  66              		.loc 1 142 9 is_stmt 1 view .LVU12
+  67              		.loc 1 142 54 is_stmt 0 view .LVU13
+  68 0018 6869     		ldr	r0, [r5, #20]
+  69              		.loc 1 142 12 view .LVU14
+  70 001a 30F08000 		bics	r0, r0, #128
+  71 001e 15D1     		bne	.L6
+  72              	.L1:
+ 143:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****         {
+ 144:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** 
+ 145:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****             /* We should wait for the semaphore to wake us up.  */
+ 146:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****             status =  _ux_utility_semaphore_get(&transfer_request -> ux_slave_transfer_request_sema
+ 147:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****                                                 (ULONG)transfer_request -> ux_slave_transfer_reques
+ 148:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** 
+ 149:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****             /* Check the completion code. */
+ 150:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****             if (status != UX_SUCCESS)
+ 151:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****                 return(status);
+ 152:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** 
+ 153:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****             /* Check the transfer request completion code. We may have had a BUS reset or
+ 154:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****                a device disconnection.  */
+ 155:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****             if (transfer_request -> ux_slave_transfer_request_completion_code != UX_SUCCESS)
+ 156:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****                 return(transfer_request -> ux_slave_transfer_request_completion_code);
+ 157:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** 
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfN42j.s 			page 5
+
+
+ 158:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****             /* Return to caller with success.  */
+ 159:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****             return(UX_SUCCESS);
+ 160:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****         }
+ 161:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****     }
+ 162:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** 
+ 163:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****     /* Return to caller with success.  */
+ 164:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****     return(UX_SUCCESS);
+ 165:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** }
+  73              		.loc 1 165 1 view .LVU15
+  74 0020 38BD     		pop	{r3, r4, r5, pc}
+  75              	.LVL5:
+  76              	.L5:
+ 101:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****                             endpoint->ux_slave_endpoint_descriptor.bEndpointAddress,
+  77              		.loc 1 101 9 is_stmt 1 view .LVU16
+  78 0022 4B69     		ldr	r3, [r1, #20]
+  79 0024 CA68     		ldr	r2, [r1, #12]
+  80 0026 297D     		ldrb	r1, [r5, #20]	@ zero_extendqisi2
+  81              	.LVL6:
+ 101:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****                             endpoint->ux_slave_endpoint_descriptor.bEndpointAddress,
+  82              		.loc 1 101 9 is_stmt 0 view .LVU17
+  83 0028 C06C     		ldr	r0, [r0, #76]
+  84              	.LVL7:
+ 101:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****                             endpoint->ux_slave_endpoint_descriptor.bEndpointAddress,
+  85              		.loc 1 101 9 view .LVU18
+  86 002a FFF7FEFF 		bl	HAL_PCD_EP_Transmit
+  87              	.LVL8:
+ 108:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****         {
+  88              		.loc 1 108 9 is_stmt 1 view .LVU19
+ 108:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****         {
+  89              		.loc 1 108 54 is_stmt 0 view .LVU20
+  90 002e 6869     		ldr	r0, [r5, #20]
+ 108:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****         {
+  91              		.loc 1 108 12 view .LVU21
+  92 0030 30F08000 		bics	r0, r0, #128
+  93 0034 F4D0     		beq	.L1
+ 112:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****                                                 (ULONG)transfer_request -> ux_slave_transfer_reques
+  94              		.loc 1 112 13 is_stmt 1 view .LVU22
+ 112:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****                                                 (ULONG)transfer_request -> ux_slave_transfer_reques
+  95              		.loc 1 112 23 is_stmt 0 view .LVU23
+  96 0036 E16C     		ldr	r1, [r4, #76]
+  97 0038 04F13000 		add	r0, r4, #48
+  98 003c FFF7FEFF 		bl	_ux_utility_semaphore_get
+  99              	.LVL9:
+ 116:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****                 return(status);
+ 100              		.loc 1 116 13 is_stmt 1 view .LVU24
+ 116:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****                 return(status);
+ 101              		.loc 1 116 16 is_stmt 0 view .LVU25
+ 102 0040 0028     		cmp	r0, #0
+ 103 0042 EDD1     		bne	.L1
+ 119:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** 
+ 104              		.loc 1 119 13 is_stmt 1 view .LVU26
+ 119:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** 
+ 105              		.loc 1 119 91 is_stmt 0 view .LVU27
+ 106 0044 6369     		ldr	r3, [r4, #20]
+ 119:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c **** 
+ 107              		.loc 1 119 73 view .LVU28
+ 108 0046 A361     		str	r3, [r4, #24]
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfN42j.s 			page 6
+
+
+ 123:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****                 return(transfer_request -> ux_slave_transfer_request_completion_code);
+ 109              		.loc 1 123 13 is_stmt 1 view .LVU29
+ 123:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****                 return(transfer_request -> ux_slave_transfer_request_completion_code);
+ 110              		.loc 1 123 34 is_stmt 0 view .LVU30
+ 111 0048 606A     		ldr	r0, [r4, #36]
+ 112              	.LVL10:
+ 123:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****                 return(transfer_request -> ux_slave_transfer_request_completion_code);
+ 113              		.loc 1 123 34 view .LVU31
+ 114 004a E9E7     		b	.L1
+ 115              	.L6:
+ 146:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****                                                 (ULONG)transfer_request -> ux_slave_transfer_reques
+ 116              		.loc 1 146 13 is_stmt 1 view .LVU32
+ 146:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****                                                 (ULONG)transfer_request -> ux_slave_transfer_reques
+ 117              		.loc 1 146 23 is_stmt 0 view .LVU33
+ 118 004c E16C     		ldr	r1, [r4, #76]
+ 119 004e 04F13000 		add	r0, r4, #48
+ 120 0052 FFF7FEFF 		bl	_ux_utility_semaphore_get
+ 121              	.LVL11:
+ 150:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****                 return(status);
+ 122              		.loc 1 150 13 is_stmt 1 view .LVU34
+ 150:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****                 return(status);
+ 123              		.loc 1 150 16 is_stmt 0 view .LVU35
+ 124 0056 0028     		cmp	r0, #0
+ 125 0058 E2D1     		bne	.L1
+ 155:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****                 return(transfer_request -> ux_slave_transfer_request_completion_code);
+ 126              		.loc 1 155 13 is_stmt 1 view .LVU36
+ 155:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****                 return(transfer_request -> ux_slave_transfer_request_completion_code);
+ 127              		.loc 1 155 34 is_stmt 0 view .LVU37
+ 128 005a 606A     		ldr	r0, [r4, #36]
+ 129              	.LVL12:
+ 155:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_transfer_request.c ****                 return(transfer_request -> ux_slave_transfer_request_completion_code);
+ 130              		.loc 1 155 34 view .LVU38
+ 131 005c E0E7     		b	.L1
+ 132              		.cfi_endproc
+ 133              	.LFE251:
+ 135              		.text
+ 136              	.Letext0:
+ 137              		.file 2 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 138              		.file 3 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 139              		.file 4 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
+ 140              		.file 5 "./Middlewares/ST/threadx/common/inc/tx_api.h"
+ 141              		.file 6 "./Middlewares/ST/usbx/common/core/inc/ux_api.h"
+ 142              		.file 7 "./Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h"
+ 143              		.file 8 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
+ 144              		.file 9 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h"
+ 145              		.file 10 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h"
+ 146              		.file 11 "./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32.h"
+ 147              		.file 12 "./Middlewares/ST/usbx/common/core/inc/ux_utility.h"
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfN42j.s 			page 7
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 ux_dcd_stm32_transfer_request.c
+C:\Users\Dennis\AppData\Local\Temp\ccGfN42j.s:20     .text._ux_dcd_stm32_transfer_request:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\ccGfN42j.s:26     .text._ux_dcd_stm32_transfer_request:00000000 _ux_dcd_stm32_transfer_request
+
+UNDEFINED SYMBOLS
+HAL_PCD_EP_Receive
+HAL_PCD_EP_Transmit
+_ux_utility_semaphore_get

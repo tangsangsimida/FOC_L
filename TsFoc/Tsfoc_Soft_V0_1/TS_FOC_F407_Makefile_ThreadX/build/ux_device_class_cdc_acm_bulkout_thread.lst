@@ -1,0 +1,377 @@
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccLTcoPs.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"ux_device_class_cdc_acm_bulkout_thread.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text._ux_device_class_cdc_acm_bulkout_thread,"ax",%progbits
+  20              		.align	1
+  21              		.global	_ux_device_class_cdc_acm_bulkout_thread
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	_ux_device_class_cdc_acm_bulkout_thread:
+  27              	.LVL0:
+  28              	.LFB11:
+  29              		.file 1 "./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thre
+   1:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /**************************************************************************/
+   2:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*                                                                        */
+   3:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
+   4:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*                                                                        */
+   5:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*       This software is licensed under the Microsoft Software License   */
+   6:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*       Terms for Microsoft Azure RTOS. Full text of the license can be  */
+   7:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*       found in the LICENSE file at https://aka.ms/AzureRTOS_EULA       */
+   8:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*       and in the root directory of this software.                      */
+   9:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*                                                                        */
+  10:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /**************************************************************************/
+  11:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** 
+  12:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /**************************************************************************/
+  13:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /**************************************************************************/
+  14:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /**                                                                       */
+  15:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /** USBX Component                                                        */
+  16:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /**                                                                       */
+  17:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /**   Device CDC_ACM Class                                                */
+  18:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /**                                                                       */
+  19:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /**************************************************************************/
+  20:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /**************************************************************************/
+  21:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** 
+  22:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** #define UX_SOURCE_CODE
+  23:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** 
+  24:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** 
+  25:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /* Include necessary system files.  */
+  26:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** 
+  27:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** #include "ux_api.h"
+  28:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** #include "ux_device_class_cdc_acm.h"
+  29:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** #include "ux_device_stack.h"
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccLTcoPs.s 			page 2
+
+
+  30:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** 
+  31:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** 
+  32:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** #if !defined(UX_DEVICE_CLASS_CDC_ACM_TRANSMISSION_DISABLE) && !defined(UX_DEVICE_STANDALONE)
+  33:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /**************************************************************************/
+  34:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*                                                                        */
+  35:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*  FUNCTION                                               RELEASE        */
+  36:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*                                                                        */
+  37:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*    _ux_device_class_cdc_acm_bulkout_thread             PORTABLE C      */
+  38:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*                                                           6.1.10       */
+  39:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*  AUTHOR                                                                */
+  40:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*                                                                        */
+  41:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*    Chaoqiong Xiao, Microsoft Corporation                               */
+  42:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*                                                                        */
+  43:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*  DESCRIPTION                                                           */
+  44:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*                                                                        */
+  45:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*    This function is the thread of the cdc_acm bulk out endpoint. It    */
+  46:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*    is waiting for the host to send data on the bulk out endpoint to    */
+  47:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*    the device.                                                         */
+  48:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*                                                                        */
+  49:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*    It's for RTOS mode.                                                 */
+  50:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*                                                                        */
+  51:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*  INPUT                                                                 */
+  52:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*                                                                        */
+  53:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*    cdc_acm_class                             Address of cdc_acm class  */
+  54:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*                                                container               */
+  55:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*                                                                        */
+  56:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*  OUTPUT                                                                */
+  57:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*                                                                        */
+  58:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*    None                                                                */
+  59:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*                                                                        */
+  60:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*  CALLS                                                                 */
+  61:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*                                                                        */
+  62:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*    _ux_device_stack_transfer_request     Request transfer              */
+  63:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*                                                                        */
+  64:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*  CALLED BY                                                             */
+  65:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*                                                                        */
+  66:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*    ThreadX                                                             */
+  67:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*                                                                        */
+  68:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*  RELEASE HISTORY                                                       */
+  69:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*                                                                        */
+  70:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*    DATE              NAME                      DESCRIPTION             */
+  71:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*                                                                        */
+  72:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*  05-19-2020     Chaoqiong Xiao           Initial Version 6.0           */
+  73:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*  09-30-2020     Chaoqiong Xiao           Modified comment(s),          */
+  74:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*                                            resulting in version 6.1    */
+  75:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*  04-02-2021     Chaoqiong Xiao           Modified comment(s),          */
+  76:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*                                            added macro to disable      */
+  77:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*                                            transmission support,       */
+  78:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*                                            resulting in version 6.1.6  */
+  79:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*  01-31-2022     Chaoqiong Xiao           Modified comment(s),          */
+  80:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*                                            refined macros names,       */
+  81:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*                                            resulting in version 6.1.10 */
+  82:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /*                                                                        */
+  83:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** /**************************************************************************/
+  84:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** VOID  _ux_device_class_cdc_acm_bulkout_thread(ULONG cdc_acm_class)
+  85:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** {
+  30              		.loc 1 85 1 view -0
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccLTcoPs.s 			page 3
+
+
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		.loc 1 85 1 is_stmt 0 view .LVU1
+  35 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+  36              	.LCFI0:
+  37              		.cfi_def_cfa_offset 24
+  38              		.cfi_offset 4, -24
+  39              		.cfi_offset 5, -20
+  40              		.cfi_offset 6, -16
+  41              		.cfi_offset 7, -12
+  42              		.cfi_offset 8, -8
+  43              		.cfi_offset 14, -4
+  44 0004 0746     		mov	r7, r0
+  86:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** 
+  87:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** UX_SLAVE_CLASS_CDC_ACM          *cdc_acm;
+  45              		.loc 1 87 1 is_stmt 1 view .LVU2
+  88:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** UX_SLAVE_DEVICE                 *device;
+  46              		.loc 1 88 1 view .LVU3
+  89:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** UX_SLAVE_ENDPOINT               *endpoint;
+  47              		.loc 1 89 1 view .LVU4
+  90:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** UX_SLAVE_INTERFACE              *interface;
+  48              		.loc 1 90 1 view .LVU5
+  91:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** UX_SLAVE_TRANSFER               *transfer_request;
+  49              		.loc 1 91 1 view .LVU6
+  92:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** UINT                            status;
+  50              		.loc 1 92 1 view .LVU7
+  93:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** 
+  94:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****     /* Cast properly the cdc_acm instance.  */
+  95:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****     UX_THREAD_EXTENSION_PTR_GET(cdc_acm, UX_SLAVE_CLASS_CDC_ACM, cdc_acm_class)
+  51              		.loc 1 95 5 view .LVU8
+  52              	.LVL1:
+  96:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** 
+  97:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****     /* Get the pointer to the device.  */
+  98:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****     device =  &_ux_system_slave -> ux_system_slave_device;
+  53              		.loc 1 98 5 view .LVU9
+  54              		.loc 1 98 33 is_stmt 0 view .LVU10
+  55 0006 194B     		ldr	r3, .L10
+  56 0008 1D68     		ldr	r5, [r3]
+  57              	.LVL2:
+  99:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** 
+ 100:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****     /* This is the first time we are activated. We need the interface to the class.  */
+ 101:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****     interface =  cdc_acm -> ux_slave_class_cdc_acm_interface;
+  58              		.loc 1 101 5 is_stmt 1 view .LVU11
+  59              		.loc 1 101 15 is_stmt 0 view .LVU12
+  60 000a 0368     		ldr	r3, [r0]
+  61              	.LVL3:
+ 102:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** 
+ 103:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****     /* Locate the endpoints.  */
+ 104:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****     endpoint =  interface -> ux_slave_interface_first_endpoint;
+  62              		.loc 1 104 5 is_stmt 1 view .LVU13
+  63              		.loc 1 104 14 is_stmt 0 view .LVU14
+  64 000c 5C6B     		ldr	r4, [r3, #52]
+  65              	.LVL4:
+ 105:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** 
+ 106:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****     /* Check the endpoint direction, if OUT we have the correct endpoint.  */
+ 107:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****     if ((endpoint -> ux_slave_endpoint_descriptor.bEndpointAddress & UX_ENDPOINT_DIRECTION) != UX_E
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccLTcoPs.s 			page 4
+
+
+  66              		.loc 1 107 5 is_stmt 1 view .LVU15
+  67              		.loc 1 107 50 is_stmt 0 view .LVU16
+  68 000e 6369     		ldr	r3, [r4, #20]
+  69              	.LVL5:
+  70              		.loc 1 107 8 view .LVU17
+  71 0010 13F0800F 		tst	r3, #128
+  72 0014 0FD0     		beq	.L7
+ 108:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****     {
+ 109:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** 
+ 110:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****         /* So the next endpoint has to be the OUT endpoint.  */
+ 111:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****         endpoint =  endpoint -> ux_slave_endpoint_next_endpoint;
+  73              		.loc 1 111 9 is_stmt 1 view .LVU18
+  74              		.loc 1 111 18 is_stmt 0 view .LVU19
+  75 0016 646A     		ldr	r4, [r4, #36]
+  76              	.LVL6:
+  77              		.loc 1 111 18 view .LVU20
+  78 0018 0DE0     		b	.L7
+  79              	.LVL7:
+  80              	.L5:
+ 112:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****     }
+ 113:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** 
+ 114:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****     /* This thread runs forever but can be suspended or resumed by the user application.  */
+ 115:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****     while(1)
+ 116:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****     {
+ 117:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** 
+ 118:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****         /* Select the transfer request associated with BULK OUT endpoint.   */
+ 119:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****         transfer_request =  &endpoint -> ux_slave_endpoint_transfer_request;
+ 120:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** 
+ 121:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****         /* As long as the device is in the CONFIGURED state.  */
+ 122:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****         while (device -> ux_slave_device_state == UX_DEVICE_CONFIGURED)
+ 123:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****         {
+ 124:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** 
+ 125:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****             /* Send the request to the device controller.  */
+ 126:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****             status =  _ux_device_stack_transfer_request(transfer_request, endpoint -> ux_slave_endp
+ 127:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****                                                                 endpoint -> ux_slave_endpoint_descr
+ 128:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** 
+ 129:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****             /* Check the completion code. */
+ 130:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****             if (status == UX_SUCCESS)
+ 131:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****             {
+ 132:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** 
+ 133:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****                 /* Check the state of the transfer.  If there is an error, we do not proceed with t
+ 134:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****                 if (transfer_request -> ux_slave_transfer_request_completion_code == UX_SUCCESS)
+ 135:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****                 {
+ 136:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** 
+ 137:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****                     /* If there is a callback defined by the application, send the transaction even
+ 138:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****                     if (cdc_acm -> ux_device_class_cdc_acm_read_callback != UX_NULL)
+ 139:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** 
+ 140:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****                         /* Callback exists. */
+ 141:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****                         cdc_acm -> ux_device_class_cdc_acm_read_callback(cdc_acm, UX_SUCCESS, trans
+ 142:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****                                                                                     transfer_reques
+ 143:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** 
+ 144:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****                 }
+ 145:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****                 else
+ 146:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****                 {
+ 147:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** 
+ 148:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****                     /* We have an error. If there is a callback defined by the application, send th
+ 149:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****                     if (cdc_acm -> ux_device_class_cdc_acm_read_callback != UX_NULL)
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccLTcoPs.s 			page 5
+
+
+  81              		.loc 1 149 21 is_stmt 1 view .LVU21
+  82              		.loc 1 149 33 is_stmt 0 view .LVU22
+  83 001a D7F81482 		ldr	r8, [r7, #532]
+  84              		.loc 1 149 24 view .LVU23
+  85 001e B8F1000F 		cmp	r8, #0
+  86 0022 0AD0     		beq	.L3
+ 150:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** 
+ 151:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****                         /* Callback exists. */
+ 152:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****                         cdc_acm -> ux_device_class_cdc_acm_read_callback(cdc_acm, status, UX_NULL, 
+  87              		.loc 1 152 25 is_stmt 1 view .LVU24
+  88 0024 0023     		movs	r3, #0
+  89 0026 1A46     		mov	r2, r3
+  90 0028 3846     		mov	r0, r7
+  91              	.LVL8:
+  92              		.loc 1 152 25 is_stmt 0 view .LVU25
+  93 002a C047     		blx	r8
+  94              	.LVL9:
+  95              		.loc 1 152 25 view .LVU26
+  96 002c 05E0     		b	.L3
+  97              	.L9:
+ 153:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** 
+ 154:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****                 }
+ 155:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****             }
+ 156:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****         }
+ 157:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** 
+ 158:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****     /* We need to suspend ourselves. We will be resumed by the application if needed.  */
+ 159:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****     _ux_device_thread_suspend(&cdc_acm -> ux_slave_class_cdc_acm_bulkout_thread);
+  98              		.loc 1 159 5 is_stmt 1 view .LVU27
+  99 002e 07F59A70 		add	r0, r7, #308
+ 100 0032 FFF7FEFF 		bl	_ux_utility_thread_suspend
+ 101              	.LVL10:
+ 115:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****     {
+ 102              		.loc 1 115 10 view .LVU28
+ 103              	.L7:
+ 115:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****     {
+ 104              		.loc 1 115 5 view .LVU29
+ 119:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** 
+ 105              		.loc 1 119 9 view .LVU30
+ 119:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** 
+ 106              		.loc 1 119 26 is_stmt 0 view .LVU31
+ 107 0036 04F13006 		add	r6, r4, #48
+ 108              	.LVL11:
+ 122:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****         {
+ 109              		.loc 1 122 9 is_stmt 1 view .LVU32
+ 110              	.L3:
+ 122:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****         {
+ 111              		.loc 1 122 15 view .LVU33
+ 122:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****         {
+ 112              		.loc 1 122 23 is_stmt 0 view .LVU34
+ 113 003a 2B6A     		ldr	r3, [r5, #32]
+ 122:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****         {
+ 114              		.loc 1 122 15 view .LVU35
+ 115 003c 032B     		cmp	r3, #3
+ 116 003e F6D1     		bne	.L9
+ 126:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****                                                                 endpoint -> ux_slave_endpoint_descr
+ 117              		.loc 1 126 13 is_stmt 1 view .LVU36
+ 126:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****                                                                 endpoint -> ux_slave_endpoint_descr
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccLTcoPs.s 			page 6
+
+
+ 118              		.loc 1 126 23 is_stmt 0 view .LVU37
+ 119 0040 E169     		ldr	r1, [r4, #28]
+ 120 0042 0A46     		mov	r2, r1
+ 121 0044 3046     		mov	r0, r6
+ 122 0046 FFF7FEFF 		bl	_ux_device_stack_transfer_request
+ 123              	.LVL12:
+ 130:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****             {
+ 124              		.loc 1 130 13 is_stmt 1 view .LVU38
+ 130:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****             {
+ 125              		.loc 1 130 16 is_stmt 0 view .LVU39
+ 126 004a 0146     		mov	r1, r0
+ 127 004c 0028     		cmp	r0, #0
+ 128 004e F4D1     		bne	.L3
+ 134:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****                 {
+ 129              		.loc 1 134 17 is_stmt 1 view .LVU40
+ 134:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****                 {
+ 130              		.loc 1 134 38 is_stmt 0 view .LVU41
+ 131 0050 636D     		ldr	r3, [r4, #84]
+ 134:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****                 {
+ 132              		.loc 1 134 20 view .LVU42
+ 133 0052 002B     		cmp	r3, #0
+ 134 0054 E1D1     		bne	.L5
+ 138:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** 
+ 135              		.loc 1 138 21 is_stmt 1 view .LVU43
+ 138:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** 
+ 136              		.loc 1 138 33 is_stmt 0 view .LVU44
+ 137 0056 D7F81482 		ldr	r8, [r7, #532]
+ 138:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c **** 
+ 138              		.loc 1 138 24 view .LVU45
+ 139 005a B8F1000F 		cmp	r8, #0
+ 140 005e ECD0     		beq	.L3
+ 141:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****                                                                                     transfer_reques
+ 141              		.loc 1 141 25 is_stmt 1 view .LVU46
+ 142 0060 A36C     		ldr	r3, [r4, #72]
+ 143 0062 E26B     		ldr	r2, [r4, #60]
+ 144 0064 0021     		movs	r1, #0
+ 145 0066 3846     		mov	r0, r7
+ 146              	.LVL13:
+ 141:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_bulkout_thread.c ****                                                                                     transfer_reques
+ 147              		.loc 1 141 25 is_stmt 0 view .LVU47
+ 148 0068 C047     		blx	r8
+ 149              	.LVL14:
+ 150 006a E6E7     		b	.L3
+ 151              	.L11:
+ 152              		.align	2
+ 153              	.L10:
+ 154 006c 00000000 		.word	_ux_system_slave
+ 155              		.cfi_endproc
+ 156              	.LFE11:
+ 158              		.text
+ 159              	.Letext0:
+ 160              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
+ 161              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
+ 162              		.file 4 "./Middlewares/ST/usbx/common/core/inc/ux_api.h"
+ 163              		.file 5 "./Middlewares/ST/usbx/common/usbx_device_classes/inc/ux_device_class_cdc_acm.h"
+ 164              		.file 6 "./Middlewares/ST/usbx/common/core/inc/ux_system.h"
+ 165              		.file 7 "./Middlewares/ST/usbx/common/core/inc/ux_utility.h"
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccLTcoPs.s 			page 7
+
+
+ 166              		.file 8 "./Middlewares/ST/usbx/common/core/inc/ux_device_stack.h"
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccLTcoPs.s 			page 8
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 ux_device_class_cdc_acm_bulkout_thread.c
+C:\Users\Dennis\AppData\Local\Temp\ccLTcoPs.s:20     .text._ux_device_class_cdc_acm_bulkout_thread:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\ccLTcoPs.s:26     .text._ux_device_class_cdc_acm_bulkout_thread:00000000 _ux_device_class_cdc_acm_bulkout_thread
+C:\Users\Dennis\AppData\Local\Temp\ccLTcoPs.s:154    .text._ux_device_class_cdc_acm_bulkout_thread:0000006c $d
+
+UNDEFINED SYMBOLS
+_ux_utility_thread_suspend
+_ux_device_stack_transfer_request
+_ux_system_slave

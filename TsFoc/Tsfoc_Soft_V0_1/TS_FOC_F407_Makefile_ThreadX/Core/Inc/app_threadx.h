@@ -30,7 +30,7 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "Thread_api.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/

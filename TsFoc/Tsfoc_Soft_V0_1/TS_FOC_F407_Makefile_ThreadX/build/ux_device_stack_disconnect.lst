@@ -1,0 +1,428 @@
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccfToZ4p.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"ux_device_stack_disconnect.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text._ux_device_stack_disconnect,"ax",%progbits
+  20              		.align	1
+  21              		.global	_ux_device_stack_disconnect
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	_ux_device_stack_disconnect:
+  27              	.LFB11:
+  28              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c"
+   1:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /**************************************************************************/
+   2:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*                                                                        */
+   3:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
+   4:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*                                                                        */
+   5:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*       This software is licensed under the Microsoft Software License   */
+   6:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*       Terms for Microsoft Azure RTOS. Full text of the license can be  */
+   7:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*       found in the LICENSE file at https://aka.ms/AzureRTOS_EULA       */
+   8:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*       and in the root directory of this software.                      */
+   9:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*                                                                        */
+  10:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /**************************************************************************/
+  11:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** 
+  12:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** 
+  13:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /**************************************************************************/
+  14:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /**************************************************************************/
+  15:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /**                                                                       */ 
+  16:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /** USBX Component                                                        */ 
+  17:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /**                                                                       */
+  18:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /**   Device Stack                                                        */
+  19:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /**                                                                       */
+  20:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /**************************************************************************/
+  21:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /**************************************************************************/
+  22:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** 
+  23:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** #define UX_SOURCE_CODE
+  24:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** 
+  25:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** 
+  26:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /* Include necessary system files.  */
+  27:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** 
+  28:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** #include "ux_api.h"
+  29:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** #include "ux_device_stack.h"
+  30:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** 
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccfToZ4p.s 			page 2
+
+
+  31:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** 
+  32:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /**************************************************************************/
+  33:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*                                                                        */
+  34:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*  FUNCTION                                               RELEASE        */
+  35:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*                                                                        */
+  36:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*    _ux_device_stack_disconnect                         PORTABLE C      */
+  37:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*                                                           6.1          */
+  38:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*  AUTHOR                                                                */
+  39:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*                                                                        */
+  40:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*    Chaoqiong Xiao, Microsoft Corporation                               */
+  41:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*                                                                        */
+  42:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*  DESCRIPTION                                                           */
+  43:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*                                                                        */
+  44:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*    This function is called when the device gets disconnected from the  */
+  45:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*    host. All the device resources are freed.                           */
+  46:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*                                                                        */
+  47:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*                                                                        */
+  48:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*  INPUT                                                                 */
+  49:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*                                                                        */
+  50:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*    None                                                                */ 
+  51:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*                                                                        */
+  52:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*  OUTPUT                                                                */
+  53:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*                                                                        */
+  54:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*    Completion Status                                                   */ 
+  55:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*                                                                        */
+  56:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*  CALLS                                                                 */ 
+  57:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*                                                                        */ 
+  58:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*    (ux_slave_class_entry_function)       Device class entry function   */ 
+  59:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*    (ux_slave_dcd_function)               DCD dispatch function         */ 
+  60:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*    _ux_device_stack_interface_delete     Delete interface              */
+  61:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*                                                                        */ 
+  62:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*  CALLED BY                                                             */ 
+  63:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*                                                                        */ 
+  64:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*    Application                                                         */ 
+  65:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*    Device Stack                                                        */
+  66:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*                                                                        */ 
+  67:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*  RELEASE HISTORY                                                       */ 
+  68:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*                                                                        */ 
+  69:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*    DATE              NAME                      DESCRIPTION             */ 
+  70:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*                                                                        */ 
+  71:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*  05-19-2020     Chaoqiong Xiao           Initial Version 6.0           */
+  72:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*  09-30-2020     Chaoqiong Xiao           Modified comment(s),          */
+  73:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*                                            optimized based on compile  */
+  74:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*                                            definitions,                */
+  75:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*                                            resulting in version 6.1    */
+  76:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /*                                                                        */
+  77:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** /**************************************************************************/
+  78:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** UINT  _ux_device_stack_disconnect(VOID)
+  79:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** {
+  29              		.loc 1 79 1 view -0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 48
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33 0000 70B5     		push	{r4, r5, r6, lr}
+  34              	.LCFI0:
+  35              		.cfi_def_cfa_offset 16
+  36              		.cfi_offset 4, -16
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccfToZ4p.s 			page 3
+
+
+  37              		.cfi_offset 5, -12
+  38              		.cfi_offset 6, -8
+  39              		.cfi_offset 14, -4
+  40 0002 8CB0     		sub	sp, sp, #48
+  41              	.LCFI1:
+  42              		.cfi_def_cfa_offset 64
+  80:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** 
+  81:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** UX_SLAVE_DCD                *dcd;
+  43              		.loc 1 81 1 view .LVU1
+  82:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** UX_SLAVE_DEVICE             *device;
+  44              		.loc 1 82 1 view .LVU2
+  83:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** UX_SLAVE_INTERFACE          *interface; 
+  45              		.loc 1 83 1 view .LVU3
+  84:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** #if !defined(UX_DEVICE_INITIALIZE_FRAMEWORK_SCAN_DISABLE) || UX_MAX_DEVICE_INTERFACES > 1
+  85:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** UX_SLAVE_INTERFACE          *next_interface; 
+  46              		.loc 1 85 1 view .LVU4
+  86:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** #endif
+  87:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** UX_SLAVE_CLASS              *class;
+  47              		.loc 1 87 1 view .LVU5
+  88:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** UX_SLAVE_CLASS_COMMAND      class_command;
+  48              		.loc 1 88 1 view .LVU6
+  89:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** UINT                        status = UX_ERROR;
+  49              		.loc 1 89 1 view .LVU7
+  50              	.LVL0:
+  90:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****                         
+  91:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****     /* Get the pointer to the DCD.  */
+  92:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****     dcd =  &_ux_system_slave -> ux_system_slave_dcd;
+  51              		.loc 1 92 5 view .LVU8
+  52              		.loc 1 92 30 is_stmt 0 view .LVU9
+  53 0004 1A4B     		ldr	r3, .L13
+  54 0006 1D68     		ldr	r5, [r3]
+  55              	.LVL1:
+  93:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** 
+  94:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****     /* Get the pointer to the device.  */
+  95:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****     device =  &_ux_system_slave -> ux_system_slave_device;
+  56              		.loc 1 95 5 is_stmt 1 view .LVU10
+  96:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** 
+  97:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****     /* If trace is enabled, insert this event into the trace buffer.  */
+  98:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****     UX_TRACE_IN_LINE_INSERT(UX_TRACE_DEVICE_STACK_DISCONNECT, device, 0, 0, 0, UX_TRACE_DEVICE_STAC
+  99:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** 
+ 100:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****     /* If trace is enabled, register this object.  */
+ 101:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****     UX_TRACE_OBJECT_UNREGISTER(device);
+  57              		.loc 1 101 39 view .LVU11
+ 102:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** 
+ 103:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****     /* If the device was in the configured state, there may be interfaces
+ 104:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****        attached to the configuration.  */
+ 105:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****     if (device -> ux_slave_device_state == UX_DEVICE_CONFIGURED)
+  58              		.loc 1 105 5 view .LVU12
+  59              		.loc 1 105 16 is_stmt 0 view .LVU13
+  60 0008 2B6A     		ldr	r3, [r5, #32]
+  61              		.loc 1 105 8 view .LVU14
+  62 000a 032B     		cmp	r3, #3
+  63 000c 11D0     		beq	.L10
+  64              	.L2:
+ 106:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****     {
+ 107:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****         /* Get the pointer to the first interface.  */
+ 108:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****         interface =  device -> ux_slave_device_first_interface;
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccfToZ4p.s 			page 4
+
+
+ 109:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** 
+ 110:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** #if !defined(UX_DEVICE_INITIALIZE_FRAMEWORK_SCAN_DISABLE) || UX_MAX_DEVICE_INTERFACES > 1
+ 111:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****         /* Parse all the interfaces if any.  */
+ 112:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****         while (interface != UX_NULL)
+ 113:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****         {
+ 114:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** #endif
+ 115:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** 
+ 116:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****             /* Build all the fields of the Class Command.  */
+ 117:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****             class_command.ux_slave_class_command_request =   UX_SLAVE_CLASS_COMMAND_DEACTIVATE;
+ 118:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****             class_command.ux_slave_class_command_interface =  (VOID *) interface;
+ 119:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** 
+ 120:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****             /* Get the pointer to the class container of this interface.  */
+ 121:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****             class =  interface -> ux_slave_interface_class;
+ 122:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****             
+ 123:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****             /* Store the class container. */
+ 124:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****             class_command.ux_slave_class_command_class_ptr =  class;
+ 125:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** 
+ 126:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****             /* If there is a class container for this instance, deactivate it.  */
+ 127:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****             if (class != UX_NULL)
+ 128:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****             
+ 129:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****                 /* Call the class with the DEACTIVATE signal.  */
+ 130:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****                 class -> ux_slave_class_entry_function(&class_command);
+ 131:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** 
+ 132:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** #if !defined(UX_DEVICE_INITIALIZE_FRAMEWORK_SCAN_DISABLE) || UX_MAX_DEVICE_INTERFACES > 1
+ 133:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****             /* Get the next interface.  */
+ 134:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****             next_interface =  interface -> ux_slave_interface_next_interface;
+ 135:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** #endif
+ 136:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** 
+ 137:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****             /* Remove the interface and all endpoints associated with it.  */
+ 138:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****             _ux_device_stack_interface_delete(interface);
+ 139:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** 
+ 140:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** #if !defined(UX_DEVICE_INITIALIZE_FRAMEWORK_SCAN_DISABLE) || UX_MAX_DEVICE_INTERFACES > 1
+ 141:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****             /* Now we refresh the interface pointer.  */
+ 142:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****             interface =  next_interface;
+ 143:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****         }
+ 144:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** #endif
+ 145:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** 
+ 146:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****         /* Mark the device as attached now.  */
+ 147:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****         device -> ux_slave_device_state =  UX_DEVICE_ATTACHED;
+ 148:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****     }
+ 149:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** 
+ 150:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****     /* If the device was attached, we need to destroy the control endpoint.  */
+ 151:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****     if (device -> ux_slave_device_state == UX_DEVICE_ATTACHED)
+  65              		.loc 1 151 5 is_stmt 1 view .LVU15
+  66              		.loc 1 151 16 is_stmt 0 view .LVU16
+  67 000e 2B6A     		ldr	r3, [r5, #32]
+  68              		.loc 1 151 8 view .LVU17
+  69 0010 012B     		cmp	r3, #1
+  70 0012 25D0     		beq	.L11
+  89:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****                         
+  71              		.loc 1 89 29 view .LVU18
+  72 0014 FF24     		movs	r4, #255
+  73              	.LVL2:
+  74              	.L6:
+ 152:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** 
+ 153:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****         /* Now we can destroy the default control endpoint.  */
+ 154:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****         status =  dcd -> ux_slave_dcd_function(dcd, UX_DCD_DESTROY_ENDPOINT,
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccfToZ4p.s 			page 5
+
+
+ 155:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****                                 (VOID *) &device -> ux_slave_device_control_endpoint);
+ 156:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** 
+ 157:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****     /* We are reverting to configuration 0.  */
+ 158:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****     device -> ux_slave_device_configuration_selected =  0;
+  75              		.loc 1 158 5 is_stmt 1 view .LVU19
+  76              		.loc 1 158 54 is_stmt 0 view .LVU20
+  77 0016 0023     		movs	r3, #0
+  78 0018 C5F8EC30 		str	r3, [r5, #236]
+ 159:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** 
+ 160:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****     /* Set the device to be non attached.  */
+ 161:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****     device -> ux_slave_device_state =  UX_DEVICE_RESET;
+  79              		.loc 1 161 5 is_stmt 1 view .LVU21
+  80              		.loc 1 161 37 is_stmt 0 view .LVU22
+  81 001c 2B62     		str	r3, [r5, #32]
+ 162:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** 
+ 163:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****     /* Check the status change callback.  */
+ 164:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****     if(_ux_system_slave -> ux_system_slave_change_function != UX_NULL)
+  82              		.loc 1 164 5 is_stmt 1 view .LVU23
+  83              		.loc 1 164 25 is_stmt 0 view .LVU24
+  84 001e 144B     		ldr	r3, .L13
+  85 0020 1B68     		ldr	r3, [r3]
+  86 0022 D3F8C031 		ldr	r3, [r3, #448]
+  87              		.loc 1 164 7 view .LVU25
+  88 0026 0BB1     		cbz	r3, .L1
+ 165:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****     {
+ 166:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** 
+ 167:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****         /* Inform the application if a callback function was programmed.  */
+ 168:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****         _ux_system_slave -> ux_system_slave_change_function(UX_DEVICE_REMOVED);
+  89              		.loc 1 168 9 is_stmt 1 view .LVU26
+  90 0028 0A20     		movs	r0, #10
+  91 002a 9847     		blx	r3
+  92              	.LVL3:
+ 169:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****     }
+ 170:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** 
+ 171:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****     /* Return the status to the caller.  */
+ 172:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****     return(status);
+  93              		.loc 1 172 5 view .LVU27
+  94              	.L1:
+ 173:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** }
+  95              		.loc 1 173 1 is_stmt 0 view .LVU28
+  96 002c 2046     		mov	r0, r4
+  97 002e 0CB0     		add	sp, sp, #48
+  98              	.LCFI2:
+  99              		.cfi_remember_state
+ 100              		.cfi_def_cfa_offset 16
+ 101              		@ sp needed
+ 102 0030 70BD     		pop	{r4, r5, r6, pc}
+ 103              	.LVL4:
+ 104              	.L10:
+ 105              	.LCFI3:
+ 106              		.cfi_restore_state
+ 108:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** 
+ 107              		.loc 1 108 9 is_stmt 1 view .LVU29
+ 108:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** 
+ 108              		.loc 1 108 19 is_stmt 0 view .LVU30
+ 109 0032 D5F81041 		ldr	r4, [r5, #272]
+ 110              	.LVL5:
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccfToZ4p.s 			page 6
+
+
+ 112:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****         {
+ 111              		.loc 1 112 9 is_stmt 1 view .LVU31
+ 112:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****         {
+ 112              		.loc 1 112 15 is_stmt 0 view .LVU32
+ 113 0036 04E0     		b	.L3
+ 114              	.LVL6:
+ 115              	.L4:
+ 134:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** #endif
+ 116              		.loc 1 134 13 is_stmt 1 view .LVU33
+ 134:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** #endif
+ 117              		.loc 1 134 28 is_stmt 0 view .LVU34
+ 118 0038 266B     		ldr	r6, [r4, #48]
+ 119              	.LVL7:
+ 138:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** 
+ 120              		.loc 1 138 13 is_stmt 1 view .LVU35
+ 121 003a 2046     		mov	r0, r4
+ 122 003c FFF7FEFF 		bl	_ux_device_stack_interface_delete
+ 123              	.LVL8:
+ 142:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****         }
+ 124              		.loc 1 142 13 view .LVU36
+ 142:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****         }
+ 125              		.loc 1 142 23 is_stmt 0 view .LVU37
+ 126 0040 3446     		mov	r4, r6
+ 127              	.LVL9:
+ 128              	.L3:
+ 112:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****         {
+ 129              		.loc 1 112 15 is_stmt 1 view .LVU38
+ 130 0042 54B1     		cbz	r4, .L12
+ 117:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****             class_command.ux_slave_class_command_interface =  (VOID *) interface;
+ 131              		.loc 1 117 13 view .LVU39
+ 117:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****             class_command.ux_slave_class_command_interface =  (VOID *) interface;
+ 132              		.loc 1 117 58 is_stmt 0 view .LVU40
+ 133 0044 0323     		movs	r3, #3
+ 134 0046 0193     		str	r3, [sp, #4]
+ 118:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** 
+ 135              		.loc 1 118 13 is_stmt 1 view .LVU41
+ 118:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** 
+ 136              		.loc 1 118 60 is_stmt 0 view .LVU42
+ 137 0048 0394     		str	r4, [sp, #12]
+ 121:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****             
+ 138              		.loc 1 121 13 is_stmt 1 view .LVU43
+ 121:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****             
+ 139              		.loc 1 121 19 is_stmt 0 view .LVU44
+ 140 004a 6368     		ldr	r3, [r4, #4]
+ 141              	.LVL10:
+ 124:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** 
+ 142              		.loc 1 124 13 is_stmt 1 view .LVU45
+ 124:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** 
+ 143              		.loc 1 124 60 is_stmt 0 view .LVU46
+ 144 004c 0993     		str	r3, [sp, #36]
+ 127:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****             
+ 145              		.loc 1 127 13 is_stmt 1 view .LVU47
+ 127:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****             
+ 146              		.loc 1 127 16 is_stmt 0 view .LVU48
+ 147 004e 002B     		cmp	r3, #0
+ 148 0050 F2D0     		beq	.L4
+ 130:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** 
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccfToZ4p.s 			page 7
+
+
+ 149              		.loc 1 130 17 is_stmt 1 view .LVU49
+ 130:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** 
+ 150              		.loc 1 130 23 is_stmt 0 view .LVU50
+ 151 0052 5B6C     		ldr	r3, [r3, #68]
+ 152              	.LVL11:
+ 130:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** 
+ 153              		.loc 1 130 17 view .LVU51
+ 154 0054 01A8     		add	r0, sp, #4
+ 155 0056 9847     		blx	r3
+ 156              	.LVL12:
+ 130:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c **** 
+ 157              		.loc 1 130 17 view .LVU52
+ 158 0058 EEE7     		b	.L4
+ 159              	.L12:
+ 147:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****     }
+ 160              		.loc 1 147 9 is_stmt 1 view .LVU53
+ 147:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****     }
+ 161              		.loc 1 147 41 is_stmt 0 view .LVU54
+ 162 005a 0123     		movs	r3, #1
+ 163 005c 2B62     		str	r3, [r5, #32]
+ 164 005e D6E7     		b	.L2
+ 165              	.LVL13:
+ 166              	.L11:
+ 154:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****                                 (VOID *) &device -> ux_slave_device_control_endpoint);
+ 167              		.loc 1 154 9 is_stmt 1 view .LVU55
+ 154:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****                                 (VOID *) &device -> ux_slave_device_control_endpoint);
+ 168              		.loc 1 154 23 is_stmt 0 view .LVU56
+ 169 0060 AB69     		ldr	r3, [r5, #24]
+ 154:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****                                 (VOID *) &device -> ux_slave_device_control_endpoint);
+ 170              		.loc 1 154 19 view .LVU57
+ 171 0062 05F15C02 		add	r2, r5, #92
+ 172 0066 0F21     		movs	r1, #15
+ 173 0068 2846     		mov	r0, r5
+ 174 006a 9847     		blx	r3
+ 175              	.LVL14:
+ 176 006c 0446     		mov	r4, r0
+ 177              	.LVL15:
+ 154:./Middlewares/ST/usbx/common/core/src/ux_device_stack_disconnect.c ****                                 (VOID *) &device -> ux_slave_device_control_endpoint);
+ 178              		.loc 1 154 19 view .LVU58
+ 179 006e D2E7     		b	.L6
+ 180              	.L14:
+ 181              		.align	2
+ 182              	.L13:
+ 183 0070 00000000 		.word	_ux_system_slave
+ 184              		.cfi_endproc
+ 185              	.LFE11:
+ 187              		.text
+ 188              	.Letext0:
+ 189              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
+ 190              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
+ 191              		.file 4 "./Middlewares/ST/usbx/common/core/inc/ux_api.h"
+ 192              		.file 5 "./Middlewares/ST/usbx/common/core/inc/ux_system.h"
+ 193              		.file 6 "./Middlewares/ST/usbx/common/core/inc/ux_device_stack.h"
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccfToZ4p.s 			page 8
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 ux_device_stack_disconnect.c
+C:\Users\Dennis\AppData\Local\Temp\ccfToZ4p.s:20     .text._ux_device_stack_disconnect:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\ccfToZ4p.s:26     .text._ux_device_stack_disconnect:00000000 _ux_device_stack_disconnect
+C:\Users\Dennis\AppData\Local\Temp\ccfToZ4p.s:183    .text._ux_device_stack_disconnect:00000070 $d
+
+UNDEFINED SYMBOLS
+_ux_device_stack_interface_delete
+_ux_system_slave

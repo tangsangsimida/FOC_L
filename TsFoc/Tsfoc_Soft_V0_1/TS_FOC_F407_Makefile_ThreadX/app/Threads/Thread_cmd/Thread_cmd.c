@@ -43,21 +43,15 @@ int8_t Get_Cmd(UART_HandleTypeDef *huart)
 
             angle_str = strstr(command, "set_angle:"); // 找到 "set_angle:" 的位置
             if (angle_str != NULL) {
-              strcpy((char *)Thread_Cmd_parama1.Cmd_Name,(char *)"set_angle");
                 angle_str += strlen("set_angle:"); // 指向角度值的起始位置
-                // printf("%s\r\n",angle_str);
-                float angle = atof(angle_str); // 将字符串转换为浮点数
-                // printf("设置角度为:%f\r\n",angle);
-                Thread_Cmd_parama1.Cmd_Param = angle;
+                double angle = atof(angle_str); // 将字符串转换为浮点数
+                printf("设置角度为:%lf\r\n",angle);
             }
 			      torque_str = strstr(command, "set_torque:"); // 找到 "set_torque:" 的位置
             if (torque_str != NULL) {
-                strcpy((char *)Thread_Cmd_parama1.Cmd_Name,(char *)"set_torque");
                 torque_str += strlen("set_torque:"); // 指向力矩值的起始位置
-                // printf("%s\r\n",torque_str);
-                float torque = atof(torque_str); // 将字符串转换为浮点数
-                // printf("设置力矩为:%f\r\n",torque);
-                Thread_Cmd_parama1.Cmd_Param = torque;
+                double torque = atof(torque_str); // 将字符串转换为浮点数
+                printf("设置力矩为:%lf\r\n",torque);
             }
 
 
@@ -67,6 +61,7 @@ int8_t Get_Cmd(UART_HandleTypeDef *huart)
 		memset(Uart_Receive_Data.rxbuf, 0, UART_RECEIVE_IDLE_RX_MAXLEN);
 		HAL_UART_Receive_DMA(huart, Uart_Receive_Data.rxbuf, UART_RECEIVE_IDLE_RX_MAXLEN);
 	}
+    // printf("Get_Cmd_nret: %d\r\n",nret);
 	return nret;
 }
 
@@ -99,8 +94,7 @@ void Thread_Cmd_Entry(ULONG thread_input)
     if (Get_Cmd(&DEBUG_UART) == 0)   //接收到数据
     {
         //处理数据
-        printf("Thread_Cmd_Entry_cmd_name: %s\r\n",Thread_Cmd_parama1.Cmd_Name);
-        printf("Thread_Cmd_Entry_cmd_param: %f\r\n",Thread_Cmd_parama1.Cmd_Param);
+
     }
     else
     {

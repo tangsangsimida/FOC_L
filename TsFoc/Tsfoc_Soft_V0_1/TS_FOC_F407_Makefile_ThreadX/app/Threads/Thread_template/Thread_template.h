@@ -8,8 +8,8 @@
 
 // 线程变量
 #define Thread_Template_Size (512)			//线程堆栈大小
-#define Thread_Template_PRIO (20)			//线程优先级
-#define Thread_Template_threshold (20)		//线程抢占阈值
+#define Thread_Template_PRIO (4)			//线程优先级
+#define Thread_Template_threshold (4)		//线程抢占阈值
 typedef struct							//线程执行函数的参数结构体
 {
 	uint8_t parama1;

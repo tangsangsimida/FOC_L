@@ -1,0 +1,995 @@
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccf5DJPH.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"ux_device_class_cdc_acm_ioctl.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text._ux_device_class_cdc_acm_ioctl,"ax",%progbits
+  20              		.align	1
+  21              		.global	_ux_device_class_cdc_acm_ioctl
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	_ux_device_class_cdc_acm_ioctl:
+  27              	.LVL0:
+  28              	.LFB11:
+  29              		.file 1 "./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c"
+   1:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /**************************************************************************/
+   2:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*                                                                        */
+   3:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
+   4:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*                                                                        */
+   5:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*       This software is licensed under the Microsoft Software License   */
+   6:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*       Terms for Microsoft Azure RTOS. Full text of the license can be  */
+   7:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*       found in the LICENSE file at https://aka.ms/AzureRTOS_EULA       */
+   8:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*       and in the root directory of this software.                      */
+   9:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*                                                                        */
+  10:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /**************************************************************************/
+  11:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+  12:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /**************************************************************************/
+  13:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /**************************************************************************/
+  14:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /**                                                                       */ 
+  15:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /** USBX Component                                                        */ 
+  16:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /**                                                                       */
+  17:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /**   Device CDC Class                                                    */
+  18:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /**                                                                       */
+  19:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /**************************************************************************/
+  20:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /**************************************************************************/
+  21:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+  22:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** #define UX_SOURCE_CODE
+  23:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+  24:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+  25:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /* Include necessary system files.  */
+  26:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+  27:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** #include "ux_api.h"
+  28:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** #include "ux_device_class_cdc_acm.h"
+  29:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** #include "ux_device_stack.h"
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccf5DJPH.s 			page 2
+
+
+  30:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+  31:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+  32:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /**************************************************************************/ 
+  33:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*                                                                        */ 
+  34:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*  FUNCTION                                               RELEASE        */ 
+  35:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*                                                                        */ 
+  36:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*    _ux_device_class_cdc_acm_ioctl                      PORTABLE C      */ 
+  37:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*                                                           6.1.10       */
+  38:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*  AUTHOR                                                                */
+  39:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*                                                                        */
+  40:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*    Chaoqiong Xiao, Microsoft Corporation                               */
+  41:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*                                                                        */
+  42:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*  DESCRIPTION                                                           */
+  43:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*                                                                        */ 
+  44:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*    This function performs certain functions on the cdc acm instance    */ 
+  45:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*                                                                        */ 
+  46:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*  INPUT                                                                 */ 
+  47:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*                                                                        */ 
+  48:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*    cdc_acm                               Address of cdc_acm class      */ 
+  49:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*                                                instance                */ 
+  50:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*                                                                        */ 
+  51:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*  OUTPUT                                                                */ 
+  52:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*                                                                        */ 
+  53:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*    Status                                                              */ 
+  54:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*                                                                        */ 
+  55:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*  CALLS                                                                 */ 
+  56:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*                                                                        */ 
+  57:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*    _ux_device_stack_transfer_abort           Abort transfer            */
+  58:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*    _ux_utility_memory_allocate               Allocate memory           */
+  59:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*    _ux_utility_memory_free                   Free memory               */
+  60:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*    _ux_utility_event_flags_create            Create event flags        */
+  61:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*    _ux_utility_event_flags_delete            Delete event flags        */
+  62:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*    _ux_device_thread_create                  Create thread             */
+  63:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*    _ux_device_thread_delete                  Delete thread             */
+  64:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*                                                                        */ 
+  65:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*  CALLED BY                                                             */ 
+  66:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*                                                                        */ 
+  67:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*    ThreadX                                                             */ 
+  68:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*                                                                        */ 
+  69:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*  RELEASE HISTORY                                                       */ 
+  70:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*                                                                        */ 
+  71:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*    DATE              NAME                      DESCRIPTION             */ 
+  72:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*                                                                        */ 
+  73:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*  05-19-2020     Chaoqiong Xiao           Initial Version 6.0           */
+  74:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*  09-30-2020     Chaoqiong Xiao           Modified comment(s),          */
+  75:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*                                            used UX prefix to refer to  */
+  76:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*                                            TX symbols instead of using */
+  77:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*                                            them directly,              */
+  78:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*                                            resulting in version 6.1    */
+  79:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*  03-02-2021     Xiuwen Cai               Modified comment(s), removed  */
+  80:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*                                            unreachable statement,      */
+  81:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*                                            resulting in version 6.1.5  */
+  82:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*  04-02-2021     Chaoqiong Xiao           Modified comment(s),          */
+  83:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*                                            added macro to disable      */
+  84:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*                                            transmission support,       */
+  85:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*                                            moved transmission resource */
+  86:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*                                            management to init/uninit,  */
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccf5DJPH.s 			page 3
+
+
+  87:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*                                            resulting in version 6.1.6  */
+  88:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*  10-15-2021     Chaoqiong Xiao           Modified comment(s),          */
+  89:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*                                            fixed compile issue,        */
+  90:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*                                            resulting in version 6.1.9  */
+  91:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*  01-31-2022     Chaoqiong Xiao           Modified comment(s),          */
+  92:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*                                            added standalone support,   */
+  93:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*                                            fixed aborting return code, */
+  94:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*                                            resulting in version 6.1.10 */
+  95:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /*                                                                        */
+  96:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** /**************************************************************************/
+  97:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** UINT _ux_device_class_cdc_acm_ioctl(UX_SLAVE_CLASS_CDC_ACM *cdc_acm, ULONG ioctl_function,
+  98:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                                     VOID *parameter)
+  99:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** {
+  30              		.loc 1 99 1 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		.loc 1 99 1 is_stmt 0 view .LVU1
+  35 0000 70B5     		push	{r4, r5, r6, lr}
+  36              	.LCFI0:
+  37              		.cfi_def_cfa_offset 16
+  38              		.cfi_offset 4, -16
+  39              		.cfi_offset 5, -12
+  40              		.cfi_offset 6, -8
+  41              		.cfi_offset 14, -4
+  42 0002 0446     		mov	r4, r0
+ 100:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 101:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** UINT                                                status;
+  43              		.loc 1 101 1 is_stmt 1 view .LVU2
+ 102:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** UX_SLAVE_CLASS_CDC_ACM_LINE_CODING_PARAMETER        *line_coding;
+  44              		.loc 1 102 1 view .LVU3
+ 103:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** UX_SLAVE_CLASS_CDC_ACM_LINE_STATE_PARAMETER         *line_state;
+  45              		.loc 1 103 1 view .LVU4
+ 104:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** #ifndef UX_DEVICE_CLASS_CDC_ACM_TRANSMISSION_DISABLE
+ 105:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** UX_SLAVE_CLASS_CDC_ACM_CALLBACK_PARAMETER           *callback;
+  46              		.loc 1 105 1 view .LVU5
+ 106:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** #endif
+ 107:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** UX_SLAVE_ENDPOINT                                   *endpoint;
+  47              		.loc 1 107 1 view .LVU6
+ 108:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** UX_SLAVE_INTERFACE                                  *interface;
+  48              		.loc 1 108 1 view .LVU7
+ 109:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** UX_SLAVE_TRANSFER                                   *transfer_request;
+  49              		.loc 1 109 1 view .LVU8
+ 110:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 111:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****     /* Let's be optimist ! */
+ 112:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****     status = UX_SUCCESS;
+  50              		.loc 1 112 5 view .LVU9
+  51              	.LVL1:
+ 113:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 114:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****     /* The command request will tell us what we need to do here.  */
+ 115:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****     switch (ioctl_function)
+  52              		.loc 1 115 5 view .LVU10
+  53 0004 4B1E     		subs	r3, r1, #1
+  54 0006 082B     		cmp	r3, #8
+  55 0008 00F29D80 		bhi	.L2
+  56 000c DFE803F0 		tbb	[pc, r3]
+  57              	.LVL2:
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccf5DJPH.s 			page 4
+
+
+  58              	.L4:
+  59 0010 05       		.byte	(.L11-.L4)/2
+  60 0011 13       		.byte	(.L10-.L4)/2
+  61 0012 20       		.byte	(.L9-.L4)/2
+  62 0013 30       		.byte	(.L8-.L4)/2
+  63 0014 28       		.byte	(.L7-.L4)/2
+  64 0015 62       		.byte	(.L6-.L4)/2
+  65 0016 79       		.byte	(.L5-.L4)/2
+  66 0017 4F       		.byte	(.L3-.L4)/2
+  67 0018 4F       		.byte	(.L3-.L4)/2
+  68 0019 00       		.p2align 1
+  69              	.L11:
+ 116:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****     {
+ 117:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 118:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****         case UX_SLAVE_CLASS_CDC_ACM_IOCTL_SET_LINE_CODING:
+ 119:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****     
+ 120:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             /* Properly cast the parameter pointer.  */
+ 121:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             line_coding = (UX_SLAVE_CLASS_CDC_ACM_LINE_CODING_PARAMETER *) parameter;
+  70              		.loc 1 121 13 view .LVU11
+ 122:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****     
+ 123:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             /* Save the parameters in the cdc_acm function.  */
+ 124:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             cdc_acm -> ux_slave_class_cdc_acm_baudrate  =  line_coding -> ux_slave_class_cdc_acm_pa
+  71              		.loc 1 124 13 view .LVU12
+  72              		.loc 1 124 72 is_stmt 0 view .LVU13
+  73 001a 1368     		ldr	r3, [r2]
+  74              		.loc 1 124 57 view .LVU14
+  75 001c A367     		str	r3, [r4, #120]
+ 125:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             cdc_acm -> ux_slave_class_cdc_acm_stop_bit  =  line_coding -> ux_slave_class_cdc_acm_pa
+  76              		.loc 1 125 13 is_stmt 1 view .LVU15
+  77              		.loc 1 125 72 is_stmt 0 view .LVU16
+  78 001e 1379     		ldrb	r3, [r2, #4]	@ zero_extendqisi2
+  79              		.loc 1 125 57 view .LVU17
+  80 0020 84F87C30 		strb	r3, [r4, #124]
+ 126:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             cdc_acm -> ux_slave_class_cdc_acm_parity    =  line_coding -> ux_slave_class_cdc_acm_pa
+  81              		.loc 1 126 13 is_stmt 1 view .LVU18
+  82              		.loc 1 126 72 is_stmt 0 view .LVU19
+  83 0024 5379     		ldrb	r3, [r2, #5]	@ zero_extendqisi2
+  84              		.loc 1 126 57 view .LVU20
+  85 0026 84F87D30 		strb	r3, [r4, #125]
+ 127:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             cdc_acm -> ux_slave_class_cdc_acm_data_bit  =  line_coding -> ux_slave_class_cdc_acm_pa
+  86              		.loc 1 127 13 is_stmt 1 view .LVU21
+  87              		.loc 1 127 72 is_stmt 0 view .LVU22
+  88 002a 9379     		ldrb	r3, [r2, #6]	@ zero_extendqisi2
+  89              		.loc 1 127 57 view .LVU23
+  90 002c 84F87E30 		strb	r3, [r4, #126]
+ 128:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             
+ 129:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             break;
+  91              		.loc 1 129 13 is_stmt 1 view .LVU24
+ 112:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+  92              		.loc 1 112 12 is_stmt 0 view .LVU25
+  93 0030 0024     		movs	r4, #0
+  94              	.LVL3:
+  95              	.L1:
+ 130:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             
+ 131:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****         case UX_SLAVE_CLASS_CDC_ACM_IOCTL_GET_LINE_CODING:
+ 132:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****     
+ 133:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             /* Properly cast the parameter pointer.  */
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccf5DJPH.s 			page 5
+
+
+ 134:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             line_coding = (UX_SLAVE_CLASS_CDC_ACM_LINE_CODING_PARAMETER *) parameter;
+ 135:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****     
+ 136:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             /* Save the parameters in the cdc_acm function.  */
+ 137:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             line_coding -> ux_slave_class_cdc_acm_parameter_baudrate = cdc_acm -> ux_slave_class_cd
+ 138:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             line_coding -> ux_slave_class_cdc_acm_parameter_stop_bit = cdc_acm -> ux_slave_class_cd
+ 139:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             line_coding -> ux_slave_class_cdc_acm_parameter_parity   = cdc_acm -> ux_slave_class_cd
+ 140:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             line_coding -> ux_slave_class_cdc_acm_parameter_data_bit = cdc_acm -> ux_slave_class_cd
+ 141:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             
+ 142:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             break;
+ 143:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             
+ 144:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 145:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****         case UX_SLAVE_CLASS_CDC_ACM_IOCTL_GET_LINE_STATE:
+ 146:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****         
+ 147:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             /* Properly cast the parameter pointer.  */
+ 148:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             line_state = (UX_SLAVE_CLASS_CDC_ACM_LINE_STATE_PARAMETER *) parameter;
+ 149:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****     
+ 150:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             /* Return the DTR/RTS signals.  */
+ 151:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             line_state -> ux_slave_class_cdc_acm_parameter_rts = cdc_acm -> ux_slave_class_cdc_acm_
+ 152:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             line_state -> ux_slave_class_cdc_acm_parameter_dtr = cdc_acm -> ux_slave_class_cdc_acm_
+ 153:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             
+ 154:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             break;
+ 155:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             
+ 156:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****         case UX_SLAVE_CLASS_CDC_ACM_IOCTL_SET_LINE_STATE:
+ 157:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****         
+ 158:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             /* Properly cast the parameter pointer.  */
+ 159:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             line_state = (UX_SLAVE_CLASS_CDC_ACM_LINE_STATE_PARAMETER *) parameter;
+ 160:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****     
+ 161:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             /* Set the DTR/RTS signals.  */
+ 162:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             cdc_acm -> ux_slave_class_cdc_acm_data_rts_state = line_state -> ux_slave_class_cdc_acm
+ 163:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             cdc_acm -> ux_slave_class_cdc_acm_data_dtr_state = line_state -> ux_slave_class_cdc_acm
+ 164:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             
+ 165:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             break;
+ 166:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             
+ 167:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 168:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****         case UX_SLAVE_CLASS_CDC_ACM_IOCTL_ABORT_PIPE:
+ 169:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 170:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             /* Get the interface from the instance.  */
+ 171:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             interface =  cdc_acm -> ux_slave_class_cdc_acm_interface;
+ 172:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****     
+ 173:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             /* Locate the endpoints.  */
+ 174:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             endpoint =  interface -> ux_slave_interface_first_endpoint;
+ 175:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             
+ 176:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             /* What direction ?  */
+ 177:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             switch( (ULONG) (ALIGN_TYPE) parameter)
+ 178:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             {
+ 179:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 case UX_SLAVE_CLASS_CDC_ACM_ENDPOINT_XMIT : 
+ 180:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****     
+ 181:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 /* Check the endpoint direction, if IN we have the correct endpoint.  */
+ 182:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 if ((endpoint -> ux_slave_endpoint_descriptor.bEndpointAddress & UX_ENDPOINT_DIRECT
+ 183:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 {
+ 184:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 185:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                     /* So the next endpoint has to be the XMIT endpoint.  */
+ 186:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                     endpoint =  endpoint -> ux_slave_endpoint_next_endpoint;
+ 187:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 }
+ 188:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 break;
+ 189:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 
+ 190:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 case UX_SLAVE_CLASS_CDC_ACM_ENDPOINT_RCV : 
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccf5DJPH.s 			page 6
+
+
+ 191:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****     
+ 192:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 /* Check the endpoint direction, if OUT we have the correct endpoint.  */
+ 193:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 if ((endpoint -> ux_slave_endpoint_descriptor.bEndpointAddress & UX_ENDPOINT_DIRECT
+ 194:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 {
+ 195:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 196:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                     /* So the next endpoint has to be the RCV endpoint.  */
+ 197:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                     endpoint =  endpoint -> ux_slave_endpoint_next_endpoint;
+ 198:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 }
+ 199:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 break;
+ 200:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 
+ 201:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 202:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 203:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 default :
+ 204:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 
+ 205:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 /* Parameter not supported. Return an error.  */
+ 206:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 status =  UX_ENDPOINT_HANDLE_UNKNOWN;
+ 207:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             }
+ 208:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****         
+ 209:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             /* Get the transfer request associated with the endpoint.  */
+ 210:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             transfer_request =  &endpoint -> ux_slave_endpoint_transfer_request;
+ 211:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             
+ 212:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** #if defined(UX_DEVICE_STANDALONE)
+ 213:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 214:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             /* Abort the transfer.  */
+ 215:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             _ux_device_stack_transfer_abort(transfer_request, UX_TRANSFER_STATUS_ABORT);
+ 216:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             if ((ULONG) (ALIGN_TYPE) parameter == UX_SLAVE_CLASS_CDC_ACM_ENDPOINT_XMIT)
+ 217:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 cdc_acm -> ux_device_class_cdc_acm_write_state = UX_STATE_RESET;
+ 218:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             else
+ 219:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 cdc_acm -> ux_device_class_cdc_acm_read_state = UX_STATE_RESET;
+ 220:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** #else
+ 221:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 222:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             /* Check the status of the transfer. */ 
+ 223:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             if (transfer_request -> ux_slave_transfer_request_status ==  UX_TRANSFER_STATUS_PENDING
+ 224:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             {
+ 225:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 226:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 /* Abort the transfer.  */
+ 227:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             _ux_device_stack_transfer_abort(transfer_request, UX_ABORTED);
+ 228:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             
+ 229:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             }
+ 230:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** #endif
+ 231:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             break;
+ 232:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 233:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****         case UX_SLAVE_CLASS_CDC_ACM_IOCTL_SET_READ_TIMEOUT:
+ 234:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****         case UX_SLAVE_CLASS_CDC_ACM_IOCTL_SET_WRITE_TIMEOUT:
+ 235:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 236:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             /* Get the interface from the instance.  */
+ 237:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             interface =  cdc_acm -> ux_slave_class_cdc_acm_interface;
+ 238:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 239:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             /* Locate the endpoints.  */
+ 240:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             endpoint =  interface -> ux_slave_interface_first_endpoint;
+ 241:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 242:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             /* If it's reading timeout but endpoint is OUT, it should be the next one.  */
+ 243:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             if ((endpoint -> ux_slave_endpoint_descriptor.bEndpointAddress & UX_ENDPOINT_DIRECTION)
+ 244:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 (ULONG)((ioctl_function == UX_SLAVE_CLASS_CDC_ACM_IOCTL_SET_READ_TIMEOUT) ? UX_ENDP
+ 245:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 endpoint = endpoint -> ux_slave_endpoint_next_endpoint;
+ 246:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 247:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             /* Get the transfer request associated with the endpoint.  */
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccf5DJPH.s 			page 7
+
+
+ 248:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             transfer_request =  &endpoint -> ux_slave_endpoint_transfer_request;
+ 249:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 250:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             /* Check the status of the transfer.  */ 
+ 251:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             if (transfer_request -> ux_slave_transfer_request_status ==  UX_TRANSFER_STATUS_PENDING
+ 252:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 status = UX_ERROR;
+ 253:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             else
+ 254:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 transfer_request -> ux_slave_transfer_request_timeout = (ULONG) (ALIGN_TYPE) parame
+ 255:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 256:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             break;
+ 257:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 258:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** #ifndef UX_DEVICE_CLASS_CDC_ACM_TRANSMISSION_DISABLE
+ 259:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 260:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****         case UX_SLAVE_CLASS_CDC_ACM_IOCTL_TRANSMISSION_START:
+ 261:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 262:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             /* Check if we are in callback transmission already.  */
+ 263:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             if (cdc_acm -> ux_slave_class_cdc_acm_transmission_status == UX_TRUE)
+ 264:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             {
+ 265:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 /* We should not to that ! */
+ 266:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 return(UX_ERROR);
+ 267:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             
+ 268:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             }
+ 269:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             
+ 270:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             /* Properly cast the parameter pointer.  */
+ 271:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             callback = (UX_SLAVE_CLASS_CDC_ACM_CALLBACK_PARAMETER *) parameter;
+ 272:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             
+ 273:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             /* Save the callback function for write.  */
+ 274:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             cdc_acm -> ux_device_class_cdc_acm_write_callback  = callback -> ux_device_class_cdc_ac
+ 275:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 276:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             /* Save the callback function for read.  */
+ 277:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             cdc_acm -> ux_device_class_cdc_acm_read_callback = callback -> ux_device_class_cdc_acm_
+ 278:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 279:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** #if !defined(UX_DEVICE_STANDALONE)
+ 280:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 281:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             /* Start transmission threads.  */
+ 282:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             _ux_utility_thread_resume(&cdc_acm -> ux_slave_class_cdc_acm_bulkin_thread);
+ 283:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             _ux_utility_thread_resume(&cdc_acm -> ux_slave_class_cdc_acm_bulkout_thread);
+ 284:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** #endif
+ 285:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 286:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             /* Declare the transmission with callback on.  */
+ 287:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             cdc_acm -> ux_slave_class_cdc_acm_transmission_status = UX_TRUE;
+ 288:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             
+ 289:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             /* We are done here.  */
+ 290:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             return(UX_SUCCESS);
+ 291:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 292:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****         case UX_SLAVE_CLASS_CDC_ACM_IOCTL_TRANSMISSION_STOP:
+ 293:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****         
+ 294:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             /* Check if we are in callback transmission already.  */
+ 295:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             if (cdc_acm -> ux_slave_class_cdc_acm_transmission_status == UX_TRUE)
+ 296:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             {
+ 297:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****         
+ 298:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 /* Get the interface from the instance.  */
+ 299:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 interface =  cdc_acm -> ux_slave_class_cdc_acm_interface;
+ 300:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****     
+ 301:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 /* Locate the endpoints.  */
+ 302:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 endpoint =  interface -> ux_slave_interface_first_endpoint;
+ 303:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 304:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 /* Get the transfer request associated with the endpoint.  */
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccf5DJPH.s 			page 8
+
+
+ 305:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 transfer_request =  &endpoint -> ux_slave_endpoint_transfer_request;
+ 306:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 
+ 307:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 /* Abort the transfer.  */
+ 308:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 _ux_device_stack_transfer_abort(transfer_request, UX_ABORTED);
+ 309:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****         
+ 310:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 /* Next endpoint.  */
+ 311:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 endpoint =  endpoint -> ux_slave_endpoint_next_endpoint;
+ 312:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 313:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 /* Get the transfer request associated with the endpoint.  */
+ 314:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 transfer_request =  &endpoint -> ux_slave_endpoint_transfer_request;
+ 315:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 
+ 316:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 /* Abort the transfer.  */
+ 317:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 _ux_device_stack_transfer_abort(transfer_request, UX_ABORTED);
+ 318:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 319:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** #if !defined(UX_DEVICE_STANDALONE)
+ 320:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 321:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 /* Suspend threads.  */
+ 322:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 _ux_device_thread_suspend(&cdc_acm -> ux_slave_class_cdc_acm_bulkin_thread);
+ 323:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 _ux_device_thread_suspend(&cdc_acm -> ux_slave_class_cdc_acm_bulkout_thread);
+ 324:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** #endif
+ 325:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 326:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 /* Clear scheduled write flag.  */
+ 327:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 cdc_acm -> ux_slave_class_cdc_acm_scheduled_write = UX_FALSE;
+ 328:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 329:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 /* Declare the transmission with callback off.  */
+ 330:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 cdc_acm -> ux_slave_class_cdc_acm_transmission_status = UX_FALSE;
+ 331:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             }
+ 332:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             else
+ 333:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 
+ 334:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 /* We should not try to stop an non existing transmission.  */
+ 335:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 return(UX_ERROR);                
+ 336:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 337:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             break;                
+ 338:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** #endif
+ 339:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****     
+ 340:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****         default: 
+ 341:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 342:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             /* Error trap. */
+ 343:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             _ux_system_error_handler(UX_SYSTEM_LEVEL_THREAD, UX_SYSTEM_CONTEXT_CLASS, UX_FUNCTION_N
+ 344:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****     
+ 345:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             /* If trace is enabled, insert this event into the trace buffer.  */
+ 346:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             UX_TRACE_IN_LINE_INSERT(UX_TRACE_ERROR, UX_FUNCTION_NOT_SUPPORTED, 0, 0, 0, UX_TRACE_ER
+ 347:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****     
+ 348:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             /* Function not supported. Return an error.  */
+ 349:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             status =  UX_FUNCTION_NOT_SUPPORTED;
+ 350:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****     }   
+ 351:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 352:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****     /* Return status to caller.  */
+ 353:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****     return(status);
+ 354:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****           
+ 355:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** }
+  96              		.loc 1 355 1 view .LVU26
+  97 0032 2046     		mov	r0, r4
+  98 0034 70BD     		pop	{r4, r5, r6, pc}
+  99              	.LVL4:
+ 100              	.L10:
+ 134:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****     
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccf5DJPH.s 			page 9
+
+
+ 101              		.loc 1 134 13 is_stmt 1 view .LVU27
+ 137:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             line_coding -> ux_slave_class_cdc_acm_parameter_stop_bit = cdc_acm -> ux_slave_class_cd
+ 102              		.loc 1 137 13 view .LVU28
+ 137:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             line_coding -> ux_slave_class_cdc_acm_parameter_stop_bit = cdc_acm -> ux_slave_class_cd
+ 103              		.loc 1 137 80 is_stmt 0 view .LVU29
+ 104 0036 A36F     		ldr	r3, [r4, #120]
+ 137:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             line_coding -> ux_slave_class_cdc_acm_parameter_stop_bit = cdc_acm -> ux_slave_class_cd
+ 105              		.loc 1 137 70 view .LVU30
+ 106 0038 1360     		str	r3, [r2]
+ 138:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             line_coding -> ux_slave_class_cdc_acm_parameter_parity   = cdc_acm -> ux_slave_class_cd
+ 107              		.loc 1 138 13 is_stmt 1 view .LVU31
+ 138:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             line_coding -> ux_slave_class_cdc_acm_parameter_parity   = cdc_acm -> ux_slave_class_cd
+ 108              		.loc 1 138 80 is_stmt 0 view .LVU32
+ 109 003a 94F87C30 		ldrb	r3, [r4, #124]	@ zero_extendqisi2
+ 138:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             line_coding -> ux_slave_class_cdc_acm_parameter_parity   = cdc_acm -> ux_slave_class_cd
+ 110              		.loc 1 138 70 view .LVU33
+ 111 003e 1371     		strb	r3, [r2, #4]
+ 139:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             line_coding -> ux_slave_class_cdc_acm_parameter_data_bit = cdc_acm -> ux_slave_class_cd
+ 112              		.loc 1 139 13 is_stmt 1 view .LVU34
+ 139:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             line_coding -> ux_slave_class_cdc_acm_parameter_data_bit = cdc_acm -> ux_slave_class_cd
+ 113              		.loc 1 139 80 is_stmt 0 view .LVU35
+ 114 0040 94F87D30 		ldrb	r3, [r4, #125]	@ zero_extendqisi2
+ 139:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             line_coding -> ux_slave_class_cdc_acm_parameter_data_bit = cdc_acm -> ux_slave_class_cd
+ 115              		.loc 1 139 70 view .LVU36
+ 116 0044 5371     		strb	r3, [r2, #5]
+ 140:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             
+ 117              		.loc 1 140 13 is_stmt 1 view .LVU37
+ 140:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             
+ 118              		.loc 1 140 80 is_stmt 0 view .LVU38
+ 119 0046 94F87E30 		ldrb	r3, [r4, #126]	@ zero_extendqisi2
+ 140:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             
+ 120              		.loc 1 140 70 view .LVU39
+ 121 004a 9371     		strb	r3, [r2, #6]
+ 142:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             
+ 122              		.loc 1 142 13 is_stmt 1 view .LVU40
+ 112:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 123              		.loc 1 112 12 is_stmt 0 view .LVU41
+ 124 004c 0024     		movs	r4, #0
+ 125              	.LVL5:
+ 142:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             
+ 126              		.loc 1 142 13 view .LVU42
+ 127 004e F0E7     		b	.L1
+ 128              	.LVL6:
+ 129              	.L9:
+ 148:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****     
+ 130              		.loc 1 148 13 is_stmt 1 view .LVU43
+ 151:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             line_state -> ux_slave_class_cdc_acm_parameter_dtr = cdc_acm -> ux_slave_class_cdc_acm_
+ 131              		.loc 1 151 13 view .LVU44
+ 151:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             line_state -> ux_slave_class_cdc_acm_parameter_dtr = cdc_acm -> ux_slave_class_cdc_acm_
+ 132              		.loc 1 151 74 is_stmt 0 view .LVU45
+ 133 0050 94F88030 		ldrb	r3, [r4, #128]	@ zero_extendqisi2
+ 151:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             line_state -> ux_slave_class_cdc_acm_parameter_dtr = cdc_acm -> ux_slave_class_cdc_acm_
+ 134              		.loc 1 151 64 view .LVU46
+ 135 0054 1370     		strb	r3, [r2]
+ 152:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             
+ 136              		.loc 1 152 13 is_stmt 1 view .LVU47
+ 152:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccf5DJPH.s 			page 10
+
+
+ 137              		.loc 1 152 74 is_stmt 0 view .LVU48
+ 138 0056 94F87F30 		ldrb	r3, [r4, #127]	@ zero_extendqisi2
+ 152:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             
+ 139              		.loc 1 152 64 view .LVU49
+ 140 005a 5370     		strb	r3, [r2, #1]
+ 154:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             
+ 141              		.loc 1 154 13 is_stmt 1 view .LVU50
+ 112:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 142              		.loc 1 112 12 is_stmt 0 view .LVU51
+ 143 005c 0024     		movs	r4, #0
+ 144              	.LVL7:
+ 154:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             
+ 145              		.loc 1 154 13 view .LVU52
+ 146 005e E8E7     		b	.L1
+ 147              	.LVL8:
+ 148              	.L7:
+ 159:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****     
+ 149              		.loc 1 159 13 is_stmt 1 view .LVU53
+ 162:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             cdc_acm -> ux_slave_class_cdc_acm_data_dtr_state = line_state -> ux_slave_class_cdc_acm
+ 150              		.loc 1 162 13 view .LVU54
+ 162:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             cdc_acm -> ux_slave_class_cdc_acm_data_dtr_state = line_state -> ux_slave_class_cdc_acm
+ 151              		.loc 1 162 75 is_stmt 0 view .LVU55
+ 152 0060 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 162:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             cdc_acm -> ux_slave_class_cdc_acm_data_dtr_state = line_state -> ux_slave_class_cdc_acm
+ 153              		.loc 1 162 62 view .LVU56
+ 154 0062 84F88030 		strb	r3, [r4, #128]
+ 163:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             
+ 155              		.loc 1 163 13 is_stmt 1 view .LVU57
+ 163:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             
+ 156              		.loc 1 163 75 is_stmt 0 view .LVU58
+ 157 0066 5378     		ldrb	r3, [r2, #1]	@ zero_extendqisi2
+ 163:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             
+ 158              		.loc 1 163 62 view .LVU59
+ 159 0068 84F87F30 		strb	r3, [r4, #127]
+ 165:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             
+ 160              		.loc 1 165 13 is_stmt 1 view .LVU60
+ 112:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 161              		.loc 1 112 12 is_stmt 0 view .LVU61
+ 162 006c 0024     		movs	r4, #0
+ 163              	.LVL9:
+ 165:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             
+ 164              		.loc 1 165 13 view .LVU62
+ 165 006e E0E7     		b	.L1
+ 166              	.LVL10:
+ 167              	.L8:
+ 171:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****     
+ 168              		.loc 1 171 13 is_stmt 1 view .LVU63
+ 171:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****     
+ 169              		.loc 1 171 23 is_stmt 0 view .LVU64
+ 170 0070 2368     		ldr	r3, [r4]
+ 171              	.LVL11:
+ 174:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             
+ 172              		.loc 1 174 13 is_stmt 1 view .LVU65
+ 174:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             
+ 173              		.loc 1 174 22 is_stmt 0 view .LVU66
+ 174 0072 5B6B     		ldr	r3, [r3, #52]
+ 175              	.LVL12:
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccf5DJPH.s 			page 11
+
+
+ 177:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             {
+ 176              		.loc 1 177 13 is_stmt 1 view .LVU67
+ 177 0074 012A     		cmp	r2, #1
+ 178 0076 0BD0     		beq	.L13
+ 179 0078 022A     		cmp	r2, #2
+ 180 007a 0FD0     		beq	.L14
+ 181 007c 5324     		movs	r4, #83
+ 182              	.LVL13:
+ 183              	.L15:
+ 210:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             
+ 184              		.loc 1 210 13 view .LVU68
+ 210:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             
+ 185              		.loc 1 210 30 is_stmt 0 view .LVU69
+ 186 007e 03F13000 		add	r0, r3, #48
+ 187              	.LVL14:
+ 223:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             {
+ 188              		.loc 1 223 13 is_stmt 1 view .LVU70
+ 223:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             {
+ 189              		.loc 1 223 34 is_stmt 0 view .LVU71
+ 190 0082 1B6B     		ldr	r3, [r3, #48]
+ 191              	.LVL15:
+ 223:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             {
+ 192              		.loc 1 223 16 view .LVU72
+ 193 0084 012B     		cmp	r3, #1
+ 194 0086 D4D1     		bne	.L1
+ 227:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             
+ 195              		.loc 1 227 13 is_stmt 1 view .LVU73
+ 196 0088 F921     		movs	r1, #249
+ 197              	.LVL16:
+ 227:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             
+ 198              		.loc 1 227 13 is_stmt 0 view .LVU74
+ 199 008a FFF7FEFF 		bl	_ux_device_stack_transfer_abort
+ 200              	.LVL17:
+ 227:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             
+ 201              		.loc 1 227 13 view .LVU75
+ 202 008e D0E7     		b	.L1
+ 203              	.LVL18:
+ 204              	.L13:
+ 182:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 {
+ 205              		.loc 1 182 17 is_stmt 1 view .LVU76
+ 182:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 {
+ 206              		.loc 1 182 62 is_stmt 0 view .LVU77
+ 207 0090 5C69     		ldr	r4, [r3, #20]
+ 208              	.LVL19:
+ 182:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 {
+ 209              		.loc 1 182 20 view .LVU78
+ 210 0092 14F08004 		ands	r4, r4, #128
+ 211 0096 08D1     		bne	.L18
+ 186:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 }
+ 212              		.loc 1 186 21 is_stmt 1 view .LVU79
+ 186:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 }
+ 213              		.loc 1 186 30 is_stmt 0 view .LVU80
+ 214 0098 5B6A     		ldr	r3, [r3, #36]
+ 215              	.LVL20:
+ 186:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 }
+ 216              		.loc 1 186 30 view .LVU81
+ 217 009a F0E7     		b	.L15
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccf5DJPH.s 			page 12
+
+
+ 218              	.LVL21:
+ 219              	.L14:
+ 193:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 {
+ 220              		.loc 1 193 17 is_stmt 1 view .LVU82
+ 193:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 {
+ 221              		.loc 1 193 62 is_stmt 0 view .LVU83
+ 222 009c 5C69     		ldr	r4, [r3, #20]
+ 223              	.LVL22:
+ 193:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 {
+ 224              		.loc 1 193 20 view .LVU84
+ 225 009e 14F08004 		ands	r4, r4, #128
+ 226 00a2 ECD0     		beq	.L15
+ 197:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 }
+ 227              		.loc 1 197 21 is_stmt 1 view .LVU85
+ 197:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 }
+ 228              		.loc 1 197 30 is_stmt 0 view .LVU86
+ 229 00a4 5B6A     		ldr	r3, [r3, #36]
+ 230              	.LVL23:
+ 112:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 231              		.loc 1 112 12 view .LVU87
+ 232 00a6 0024     		movs	r4, #0
+ 233 00a8 E9E7     		b	.L15
+ 234              	.L18:
+ 112:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 235              		.loc 1 112 12 view .LVU88
+ 236 00aa 0024     		movs	r4, #0
+ 237 00ac E7E7     		b	.L15
+ 238              	.LVL24:
+ 239              	.L3:
+ 237:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 240              		.loc 1 237 13 is_stmt 1 view .LVU89
+ 237:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 241              		.loc 1 237 23 is_stmt 0 view .LVU90
+ 242 00ae 2368     		ldr	r3, [r4]
+ 243              	.LVL25:
+ 240:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 244              		.loc 1 240 13 is_stmt 1 view .LVU91
+ 240:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 245              		.loc 1 240 22 is_stmt 0 view .LVU92
+ 246 00b0 5B6B     		ldr	r3, [r3, #52]
+ 247              	.LVL26:
+ 243:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 (ULONG)((ioctl_function == UX_SLAVE_CLASS_CDC_ACM_IOCTL_SET_READ_TIMEOUT) ? UX_ENDP
+ 248              		.loc 1 243 13 is_stmt 1 view .LVU93
+ 243:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 (ULONG)((ioctl_function == UX_SLAVE_CLASS_CDC_ACM_IOCTL_SET_READ_TIMEOUT) ? UX_ENDP
+ 249              		.loc 1 243 58 is_stmt 0 view .LVU94
+ 250 00b2 5869     		ldr	r0, [r3, #20]
+ 243:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 (ULONG)((ioctl_function == UX_SLAVE_CLASS_CDC_ACM_IOCTL_SET_READ_TIMEOUT) ? UX_ENDP
+ 251              		.loc 1 243 76 view .LVU95
+ 252 00b4 00F08000 		and	r0, r0, #128
+ 244:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 endpoint = endpoint -> ux_slave_endpoint_next_endpoint;
+ 253              		.loc 1 244 17 view .LVU96
+ 254 00b8 0829     		cmp	r1, #8
+ 255 00ba 09D0     		beq	.L24
+ 256 00bc 8021     		movs	r1, #128
+ 257              	.LVL27:
+ 258              	.L16:
+ 243:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 (ULONG)((ioctl_function == UX_SLAVE_CLASS_CDC_ACM_IOCTL_SET_READ_TIMEOUT) ? UX_ENDP
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccf5DJPH.s 			page 13
+
+
+ 259              		.loc 1 243 16 view .LVU97
+ 260 00be 8842     		cmp	r0, r1
+ 261 00c0 00D0     		beq	.L17
+ 245:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 262              		.loc 1 245 17 is_stmt 1 view .LVU98
+ 245:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 263              		.loc 1 245 26 is_stmt 0 view .LVU99
+ 264 00c2 5B6A     		ldr	r3, [r3, #36]
+ 265              	.LVL28:
+ 266              	.L17:
+ 248:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 267              		.loc 1 248 13 is_stmt 1 view .LVU100
+ 251:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 status = UX_ERROR;
+ 268              		.loc 1 251 13 view .LVU101
+ 251:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 status = UX_ERROR;
+ 269              		.loc 1 251 34 is_stmt 0 view .LVU102
+ 270 00c4 196B     		ldr	r1, [r3, #48]
+ 251:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 status = UX_ERROR;
+ 271              		.loc 1 251 16 view .LVU103
+ 272 00c6 0129     		cmp	r1, #1
+ 273 00c8 44D0     		beq	.L20
+ 254:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 274              		.loc 1 254 17 is_stmt 1 view .LVU104
+ 254:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 275              		.loc 1 254 71 is_stmt 0 view .LVU105
+ 276 00ca DA67     		str	r2, [r3, #124]
+ 277              	.LVL29:
+ 112:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 278              		.loc 1 112 12 view .LVU106
+ 279 00cc 0024     		movs	r4, #0
+ 280              	.LVL30:
+ 112:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 281              		.loc 1 112 12 view .LVU107
+ 282 00ce B0E7     		b	.L1
+ 283              	.LVL31:
+ 284              	.L24:
+ 244:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 endpoint = endpoint -> ux_slave_endpoint_next_endpoint;
+ 285              		.loc 1 244 17 view .LVU108
+ 286 00d0 0021     		movs	r1, #0
+ 287              	.LVL32:
+ 244:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 endpoint = endpoint -> ux_slave_endpoint_next_endpoint;
+ 288              		.loc 1 244 17 view .LVU109
+ 289 00d2 F4E7     		b	.L16
+ 290              	.LVL33:
+ 291              	.L6:
+ 263:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             {
+ 292              		.loc 1 263 13 is_stmt 1 view .LVU110
+ 263:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             {
+ 293              		.loc 1 263 25 is_stmt 0 view .LVU111
+ 294 00d4 D4F81832 		ldr	r3, [r4, #536]
+ 263:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             {
+ 295              		.loc 1 263 16 view .LVU112
+ 296 00d8 012B     		cmp	r3, #1
+ 297 00da 3DD0     		beq	.L21
+ 271:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             
+ 298              		.loc 1 271 13 is_stmt 1 view .LVU113
+ 299              	.LVL34:
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccf5DJPH.s 			page 14
+
+
+ 274:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 300              		.loc 1 274 13 view .LVU114
+ 274:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 301              		.loc 1 274 75 is_stmt 0 view .LVU115
+ 302 00dc 1368     		ldr	r3, [r2]
+ 274:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 303              		.loc 1 274 64 view .LVU116
+ 304 00de C4F81032 		str	r3, [r4, #528]
+ 277:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 305              		.loc 1 277 13 is_stmt 1 view .LVU117
+ 277:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 306              		.loc 1 277 73 is_stmt 0 view .LVU118
+ 307 00e2 5368     		ldr	r3, [r2, #4]
+ 277:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 308              		.loc 1 277 62 view .LVU119
+ 309 00e4 C4F81432 		str	r3, [r4, #532]
+ 282:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             _ux_utility_thread_resume(&cdc_acm -> ux_slave_class_cdc_acm_bulkout_thread);
+ 310              		.loc 1 282 13 is_stmt 1 view .LVU120
+ 311 00e8 04F18400 		add	r0, r4, #132
+ 312 00ec FFF7FEFF 		bl	_ux_utility_thread_resume
+ 313              	.LVL35:
+ 283:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** #endif
+ 314              		.loc 1 283 13 view .LVU121
+ 315 00f0 04F59A70 		add	r0, r4, #308
+ 316 00f4 FFF7FEFF 		bl	_ux_utility_thread_resume
+ 317              	.LVL36:
+ 287:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             
+ 318              		.loc 1 287 13 view .LVU122
+ 287:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             
+ 319              		.loc 1 287 67 is_stmt 0 view .LVU123
+ 320 00f8 0123     		movs	r3, #1
+ 321 00fa C4F81832 		str	r3, [r4, #536]
+ 290:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 322              		.loc 1 290 13 is_stmt 1 view .LVU124
+ 290:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 323              		.loc 1 290 19 is_stmt 0 view .LVU125
+ 324 00fe 0024     		movs	r4, #0
+ 325              	.LVL37:
+ 290:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 326              		.loc 1 290 19 view .LVU126
+ 327 0100 97E7     		b	.L1
+ 328              	.LVL38:
+ 329              	.L5:
+ 295:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             {
+ 330              		.loc 1 295 13 is_stmt 1 view .LVU127
+ 295:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             {
+ 331              		.loc 1 295 25 is_stmt 0 view .LVU128
+ 332 0102 D4F81832 		ldr	r3, [r4, #536]
+ 295:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             {
+ 333              		.loc 1 295 16 view .LVU129
+ 334 0106 012B     		cmp	r3, #1
+ 335 0108 01D0     		beq	.L25
+ 335:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 336              		.loc 1 335 23 view .LVU130
+ 337 010a FF24     		movs	r4, #255
+ 338              	.LVL39:
+ 335:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccf5DJPH.s 			page 15
+
+
+ 339              		.loc 1 335 23 view .LVU131
+ 340 010c 91E7     		b	.L1
+ 341              	.LVL40:
+ 342              	.L25:
+ 299:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****     
+ 343              		.loc 1 299 17 is_stmt 1 view .LVU132
+ 299:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****     
+ 344              		.loc 1 299 27 is_stmt 0 view .LVU133
+ 345 010e 2546     		mov	r5, r4
+ 346 0110 55F8843B 		ldr	r3, [r5], #132
+ 347              	.LVL41:
+ 302:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 348              		.loc 1 302 17 is_stmt 1 view .LVU134
+ 302:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 349              		.loc 1 302 26 is_stmt 0 view .LVU135
+ 350 0114 5E6B     		ldr	r6, [r3, #52]
+ 351              	.LVL42:
+ 305:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 
+ 352              		.loc 1 305 17 is_stmt 1 view .LVU136
+ 308:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****         
+ 353              		.loc 1 308 17 view .LVU137
+ 354 0116 F921     		movs	r1, #249
+ 355              	.LVL43:
+ 308:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****         
+ 356              		.loc 1 308 17 is_stmt 0 view .LVU138
+ 357 0118 06F13000 		add	r0, r6, #48
+ 358              	.LVL44:
+ 308:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****         
+ 359              		.loc 1 308 17 view .LVU139
+ 360 011c FFF7FEFF 		bl	_ux_device_stack_transfer_abort
+ 361              	.LVL45:
+ 311:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 362              		.loc 1 311 17 is_stmt 1 view .LVU140
+ 311:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 363              		.loc 1 311 26 is_stmt 0 view .LVU141
+ 364 0120 706A     		ldr	r0, [r6, #36]
+ 365              	.LVL46:
+ 314:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 
+ 366              		.loc 1 314 17 is_stmt 1 view .LVU142
+ 317:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 367              		.loc 1 317 17 view .LVU143
+ 368 0122 F921     		movs	r1, #249
+ 369 0124 3030     		adds	r0, r0, #48
+ 370              	.LVL47:
+ 317:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 371              		.loc 1 317 17 is_stmt 0 view .LVU144
+ 372 0126 FFF7FEFF 		bl	_ux_device_stack_transfer_abort
+ 373              	.LVL48:
+ 322:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****                 _ux_device_thread_suspend(&cdc_acm -> ux_slave_class_cdc_acm_bulkout_thread);
+ 374              		.loc 1 322 17 is_stmt 1 view .LVU145
+ 375 012a 2846     		mov	r0, r5
+ 376 012c FFF7FEFF 		bl	_ux_utility_thread_suspend
+ 377              	.LVL49:
+ 323:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** #endif
+ 378              		.loc 1 323 17 view .LVU146
+ 379 0130 04F59A70 		add	r0, r4, #308
+ 380 0134 FFF7FEFF 		bl	_ux_utility_thread_suspend
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccf5DJPH.s 			page 16
+
+
+ 381              	.LVL50:
+ 327:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 382              		.loc 1 327 17 view .LVU147
+ 327:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 383              		.loc 1 327 67 is_stmt 0 view .LVU148
+ 384 0138 0023     		movs	r3, #0
+ 385 013a C4F81C32 		str	r3, [r4, #540]
+ 330:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             }
+ 386              		.loc 1 330 17 is_stmt 1 view .LVU149
+ 330:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             }
+ 387              		.loc 1 330 71 is_stmt 0 view .LVU150
+ 388 013e C4F81832 		str	r3, [r4, #536]
+ 337:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** #endif
+ 389              		.loc 1 337 13 is_stmt 1 view .LVU151
+ 112:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** 
+ 390              		.loc 1 112 12 is_stmt 0 view .LVU152
+ 391 0142 1C46     		mov	r4, r3
+ 392              	.LVL51:
+ 337:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c **** #endif
+ 393              		.loc 1 337 13 view .LVU153
+ 394 0144 75E7     		b	.L1
+ 395              	.LVL52:
+ 396              	.L2:
+ 343:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****     
+ 397              		.loc 1 343 13 is_stmt 1 view .LVU154
+ 398 0146 5422     		movs	r2, #84
+ 399              	.LVL53:
+ 343:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****     
+ 400              		.loc 1 343 13 is_stmt 0 view .LVU155
+ 401 0148 0721     		movs	r1, #7
+ 402              	.LVL54:
+ 343:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****     
+ 403              		.loc 1 343 13 view .LVU156
+ 404 014a 0220     		movs	r0, #2
+ 405 014c FFF7FEFF 		bl	_ux_system_error_handler
+ 406              	.LVL55:
+ 349:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****     }   
+ 407              		.loc 1 349 13 is_stmt 1 view .LVU157
+ 349:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****     }   
+ 408              		.loc 1 349 20 is_stmt 0 view .LVU158
+ 409 0150 5424     		movs	r4, #84
+ 410              	.LVL56:
+ 349:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****     }   
+ 411              		.loc 1 349 20 view .LVU159
+ 412 0152 6EE7     		b	.L1
+ 413              	.LVL57:
+ 414              	.L20:
+ 252:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             else
+ 415              		.loc 1 252 24 view .LVU160
+ 416 0154 FF24     		movs	r4, #255
+ 417              	.LVL58:
+ 252:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             else
+ 418              		.loc 1 252 24 view .LVU161
+ 419 0156 6CE7     		b	.L1
+ 420              	.LVL59:
+ 421              	.L21:
+ 266:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccf5DJPH.s 			page 17
+
+
+ 422              		.loc 1 266 23 view .LVU162
+ 423 0158 FF24     		movs	r4, #255
+ 424              	.LVL60:
+ 266:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_ioctl.c ****             
+ 425              		.loc 1 266 23 view .LVU163
+ 426 015a 6AE7     		b	.L1
+ 427              		.cfi_endproc
+ 428              	.LFE11:
+ 430              		.text
+ 431              	.Letext0:
+ 432              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
+ 433              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
+ 434              		.file 4 "./Middlewares/ST/usbx/common/core/inc/ux_api.h"
+ 435              		.file 5 "./Middlewares/ST/usbx/common/usbx_device_classes/inc/ux_device_class_cdc_acm.h"
+ 436              		.file 6 "./Middlewares/ST/usbx/common/core/inc/ux_device_stack.h"
+ 437              		.file 7 "./Middlewares/ST/usbx/common/core/inc/ux_utility.h"
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccf5DJPH.s 			page 18
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 ux_device_class_cdc_acm_ioctl.c
+C:\Users\Dennis\AppData\Local\Temp\ccf5DJPH.s:20     .text._ux_device_class_cdc_acm_ioctl:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\ccf5DJPH.s:26     .text._ux_device_class_cdc_acm_ioctl:00000000 _ux_device_class_cdc_acm_ioctl
+C:\Users\Dennis\AppData\Local\Temp\ccf5DJPH.s:59     .text._ux_device_class_cdc_acm_ioctl:00000010 $d
+C:\Users\Dennis\AppData\Local\Temp\ccf5DJPH.s:68     .text._ux_device_class_cdc_acm_ioctl:00000019 $d
+C:\Users\Dennis\AppData\Local\Temp\ccf5DJPH.s:68     .text._ux_device_class_cdc_acm_ioctl:0000001a $t
+
+UNDEFINED SYMBOLS
+_ux_device_stack_transfer_abort
+_ux_utility_thread_resume
+_ux_utility_thread_suspend
+_ux_system_error_handler

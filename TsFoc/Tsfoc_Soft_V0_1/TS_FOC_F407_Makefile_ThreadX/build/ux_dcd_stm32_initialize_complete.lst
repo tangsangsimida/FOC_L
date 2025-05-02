@@ -1,0 +1,498 @@
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccMcmH2a.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"ux_dcd_stm32_initialize_complete.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text._ux_dcd_stm32_initialize_complete,"ax",%progbits
+  20              		.align	1
+  21              		.global	_ux_dcd_stm32_initialize_complete
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	_ux_dcd_stm32_initialize_complete:
+  27              	.LFB251:
+  28              		.file 1 "./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_comple
+   1:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /**************************************************************************/
+   2:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*                                                                        */
+   3:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
+   4:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*                                                                        */
+   5:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*       This software is licensed under the Microsoft Software License   */
+   6:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*       Terms for Microsoft Azure RTOS. Full text of the license can be  */
+   7:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*       found in the LICENSE file at https://aka.ms/AzureRTOS_EULA       */
+   8:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*       and in the root directory of this software.                      */
+   9:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*                                                                        */
+  10:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /**************************************************************************/
+  11:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** 
+  12:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** 
+  13:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /**************************************************************************/
+  14:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /**************************************************************************/
+  15:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /**                                                                       */
+  16:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /** USBX Component                                                        */
+  17:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /**                                                                       */
+  18:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /**   STM32 Controller Driver                                             */
+  19:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /**                                                                       */
+  20:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /**************************************************************************/
+  21:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /**************************************************************************/
+  22:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** 
+  23:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** #define UX_SOURCE_CODE
+  24:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** #define UX_DCD_STM32_SOURCE_CODE
+  25:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** 
+  26:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** 
+  27:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /* Include necessary system files.  */
+  28:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** 
+  29:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** #include "ux_api.h"
+  30:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** #include "ux_system.h"
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccMcmH2a.s 			page 2
+
+
+  31:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** #include "ux_utility.h"
+  32:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** #include "ux_dcd_stm32.h"
+  33:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** #include "ux_device_stack.h"
+  34:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** 
+  35:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** 
+  36:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /**************************************************************************/
+  37:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*                                                                        */
+  38:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*  FUNCTION                                               RELEASE        */
+  39:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*                                                                        */
+  40:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*    _ux_dcd_stm32_initialize_complete                   PORTABLE C      */
+  41:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*                                                           6.1          */
+  42:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*  AUTHOR                                                                */
+  43:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*                                                                        */
+  44:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*    Chaoqiong Xiao, Microsoft Corporation                               */
+  45:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*                                                                        */
+  46:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*  DESCRIPTION                                                           */
+  47:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*                                                                        */
+  48:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*    This function completes the initialization of the USB slave         */
+  49:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*    controller for the STM32 chip.                                      */
+  50:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*                                                                        */
+  51:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*  INPUT                                                                 */
+  52:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*                                                                        */
+  53:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*    None                                                                */
+  54:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*                                                                        */
+  55:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*  OUTPUT                                                                */
+  56:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*                                                                        */
+  57:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*    Completion Status                                                   */
+  58:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*                                                                        */
+  59:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*  CALLS                                                                 */
+  60:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*                                                                        */
+  61:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*    (ux_slave_dcd_function)               Process the DCD function      */
+  62:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*    _ux_utility_descriptor_parse          Parse descriptor              */
+  63:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*    _ux_utility_memory_allocate           Allocate memory               */
+  64:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*                                                                        */
+  65:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*  CALLED BY                                                             */
+  66:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*                                                                        */
+  67:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*    STM32 Controller Driver                                             */
+  68:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*                                                                        */
+  69:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*  RELEASE HISTORY                                                       */
+  70:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*                                                                        */
+  71:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*    DATE              NAME                      DESCRIPTION             */
+  72:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*                                                                        */
+  73:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*  05-19-2020     Chaoqiong Xiao           Initial Version 6.0           */
+  74:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*  09-30-2020     Chaoqiong Xiao           Modified comment(s),          */
+  75:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*                                            prefixed UX to MS_TO_TICK,  */
+  76:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*                                            used ST HAL library to      */
+  77:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*                                            drive the controller,       */
+  78:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*                                            resulting in version 6.1    */
+  79:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /*                                                                        */
+  80:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** /**************************************************************************/
+  81:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** UINT  _ux_dcd_stm32_initialize_complete(VOID)
+  82:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** {
+  29              		.loc 1 82 1 view -0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33 0000 38B5     		push	{r3, r4, r5, lr}
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccMcmH2a.s 			page 3
+
+
+  34              	.LCFI0:
+  35              		.cfi_def_cfa_offset 16
+  36              		.cfi_offset 3, -16
+  37              		.cfi_offset 4, -12
+  38              		.cfi_offset 5, -8
+  39              		.cfi_offset 14, -4
+  83:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** 
+  84:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** UX_SLAVE_DCD            *dcd;
+  40              		.loc 1 84 1 view .LVU1
+  85:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** UX_DCD_STM32            *dcd_stm32;
+  41              		.loc 1 85 1 view .LVU2
+  86:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** UX_SLAVE_DEVICE         *device;
+  42              		.loc 1 86 1 view .LVU3
+  87:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** UCHAR                     *device_framework;
+  43              		.loc 1 87 1 view .LVU4
+  88:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** UX_SLAVE_TRANSFER       *transfer_request;
+  44              		.loc 1 88 1 view .LVU5
+  89:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** 
+  90:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** 
+  91:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     /* Get the pointer to the DCD.  */
+  92:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     dcd =  &_ux_system_slave -> ux_system_slave_dcd;
+  45              		.loc 1 92 5 view .LVU6
+  46              		.loc 1 92 30 is_stmt 0 view .LVU7
+  47 0002 374B     		ldr	r3, .L9
+  48 0004 1C68     		ldr	r4, [r3]
+  49              	.LVL0:
+  93:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** 
+  94:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     /* Get the pointer to the STM32 DCD.  */
+  95:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     dcd_stm32 = (UX_DCD_STM32 *) dcd -> ux_slave_dcd_controller_hardware;
+  50              		.loc 1 95 5 is_stmt 1 view .LVU8
+  51              		.loc 1 95 15 is_stmt 0 view .LVU9
+  52 0006 E569     		ldr	r5, [r4, #28]
+  53              	.LVL1:
+  96:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** 
+  97:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     /* Get the pointer to the device.  */
+  98:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     device =  &_ux_system_slave -> ux_system_slave_device;
+  54              		.loc 1 98 5 is_stmt 1 view .LVU10
+  99:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** 
+ 100:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     /* Are we in DFU mode ? If so, check if we are in a Reset mode.  */
+ 101:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     if (_ux_system_slave -> ux_system_slave_device_dfu_state_machine == UX_SYSTEM_DFU_STATE_APP_DET
+  55              		.loc 1 101 5 view .LVU11
+  56              		.loc 1 101 26 is_stmt 0 view .LVU12
+  57 0008 D4F8B831 		ldr	r3, [r4, #440]
+  58              		.loc 1 101 8 view .LVU13
+  59 000c 012B     		cmp	r3, #1
+  60 000e 55D0     		beq	.L7
+ 102:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     {
+ 103:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** 
+ 104:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****         /* The device is now in DFU reset mode. Switch to the DFU device framework.  */
+ 105:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****         _ux_system_slave -> ux_system_slave_device_framework =  _ux_system_slave -> ux_system_slave
+ 106:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****         _ux_system_slave -> ux_system_slave_device_framework_length =  _ux_system_slave -> ux_syste
+ 107:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** 
+ 108:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     }
+ 109:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     else
+ 110:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     {
+ 111:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** 
+ 112:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****         /* Set State to App Idle. */
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccMcmH2a.s 			page 4
+
+
+ 113:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****         _ux_system_slave -> ux_system_slave_device_dfu_state_machine = UX_SYSTEM_DFU_STATE_APP_IDLE
+  61              		.loc 1 113 9 is_stmt 1 view .LVU14
+  62              		.loc 1 113 70 is_stmt 0 view .LVU15
+  63 0010 0023     		movs	r3, #0
+  64 0012 C4F8B831 		str	r3, [r4, #440]
+ 114:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** 
+ 115:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****         /* Check the speed and set the correct descriptor.  */
+ 116:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****         if (_ux_system_slave -> ux_system_slave_speed ==  UX_FULL_SPEED_DEVICE)
+  65              		.loc 1 116 9 is_stmt 1 view .LVU16
+  66              		.loc 1 116 30 is_stmt 0 view .LVU17
+  67 0016 D4F89C31 		ldr	r3, [r4, #412]
+  68              		.loc 1 116 12 view .LVU18
+  69 001a 012B     		cmp	r3, #1
+  70 001c 57D0     		beq	.L8
+ 117:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****         {
+ 118:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** 
+ 119:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****             /* The device is operating at full speed.  */
+ 120:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****             _ux_system_slave -> ux_system_slave_device_framework =  _ux_system_slave -> ux_system_s
+ 121:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****             _ux_system_slave -> ux_system_slave_device_framework_length =  _ux_system_slave -> ux_s
+ 122:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****         }
+ 123:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****         else
+ 124:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****         {
+ 125:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** 
+ 126:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****             /* The device is operating at high speed.  */
+ 127:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****             _ux_system_slave -> ux_system_slave_device_framework =  _ux_system_slave -> ux_system_s
+  71              		.loc 1 127 13 is_stmt 1 view .LVU19
+  72              		.loc 1 127 86 is_stmt 0 view .LVU20
+  73 001e D4F83831 		ldr	r3, [r4, #312]
+  74              		.loc 1 127 66 view .LVU21
+  75 0022 C4F82831 		str	r3, [r4, #296]
+ 128:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****             _ux_system_slave -> ux_system_slave_device_framework_length =  _ux_system_slave -> ux_s
+  76              		.loc 1 128 13 is_stmt 1 view .LVU22
+  77              		.loc 1 128 93 is_stmt 0 view .LVU23
+  78 0026 D4F83C31 		ldr	r3, [r4, #316]
+  79              		.loc 1 128 73 view .LVU24
+  80 002a C4F82C31 		str	r3, [r4, #300]
+  81              	.L3:
+ 129:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****         }
+ 130:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     }
+ 131:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** 
+ 132:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     /* Get the device framework pointer.  */
+ 133:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     device_framework =  _ux_system_slave -> ux_system_slave_device_framework;
+  82              		.loc 1 133 5 is_stmt 1 view .LVU25
+  83              	.LVL2:
+ 134:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** 
+ 135:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     /* And create the decompressed device descriptor structure.  */
+ 136:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     _ux_utility_descriptor_parse(device_framework,
+  84              		.loc 1 136 5 view .LVU26
+  85 002e 04F12403 		add	r3, r4, #36
+  86 0032 0E22     		movs	r2, #14
+  87 0034 2B49     		ldr	r1, .L9+4
+  88 0036 D4F82801 		ldr	r0, [r4, #296]
+  89 003a FFF7FEFF 		bl	_ux_utility_descriptor_parse
+  90              	.LVL3:
+ 137:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****                                 _ux_system_device_descriptor_structure,
+ 138:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****                                 UX_DEVICE_DESCRIPTOR_ENTRIES,
+ 139:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****                                 (UCHAR *) &device -> ux_slave_device_descriptor);
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccMcmH2a.s 			page 5
+
+
+ 140:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** 
+ 141:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     /* Now we create a transfer request to accept the first SETUP packet
+ 142:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****        and get the ball running. First get the address of the endpoint
+ 143:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****        transfer request container.  */
+ 144:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     transfer_request =  &device -> ux_slave_device_control_endpoint.ux_slave_endpoint_transfer_requ
+  91              		.loc 1 144 5 view .LVU27
+ 145:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** 
+ 146:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     /* Set the timeout to be for Control Endpoint.  */
+ 147:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     transfer_request -> ux_slave_transfer_request_timeout =  UX_MS_TO_TICK(UX_CONTROL_TRANSFER_TIME
+  92              		.loc 1 147 5 view .LVU28
+  93              		.loc 1 147 59 is_stmt 0 view .LVU29
+  94 003e 4FF47A73 		mov	r3, #1000
+  95 0042 C4F8D830 		str	r3, [r4, #216]
+ 148:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** 
+ 149:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     /* Adjust the current data pointer as well.  */
+ 150:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     transfer_request -> ux_slave_transfer_request_current_data_pointer =
+  96              		.loc 1 150 5 is_stmt 1 view .LVU30
+ 151:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****                             transfer_request -> ux_slave_transfer_request_data_pointer;
+  97              		.loc 1 151 46 is_stmt 0 view .LVU31
+  98 0046 D4F89830 		ldr	r3, [r4, #152]
+ 150:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****                             transfer_request -> ux_slave_transfer_request_data_pointer;
+  99              		.loc 1 150 72 view .LVU32
+ 100 004a C4F89C30 		str	r3, [r4, #156]
+ 152:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** 
+ 153:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     /* Update the transfer request endpoint pointer with the default endpoint.  */
+ 154:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     transfer_request -> ux_slave_transfer_request_endpoint =  &device -> ux_slave_device_control_en
+ 101              		.loc 1 154 5 is_stmt 1 view .LVU33
+ 102              		.loc 1 154 63 is_stmt 0 view .LVU34
+ 103 004e 04F15C02 		add	r2, r4, #92
+ 104              		.loc 1 154 60 view .LVU35
+ 105 0052 C4F89420 		str	r2, [r4, #148]
+ 155:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** 
+ 156:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     /* The control endpoint max packet size needs to be filled manually in its descriptor.  */
+ 157:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     transfer_request -> ux_slave_transfer_request_endpoint -> ux_slave_endpoint_descriptor.wMaxPack
+ 106              		.loc 1 157 5 is_stmt 1 view .LVU36
+ 158:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****                                 device -> ux_slave_device_descriptor.bMaxPacketSize0;
+ 107              		.loc 1 158 69 is_stmt 0 view .LVU37
+ 108 0056 E36B     		ldr	r3, [r4, #60]
+ 157:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****                                 device -> ux_slave_device_descriptor.bMaxPacketSize0;
+ 109              		.loc 1 157 107 view .LVU38
+ 110 0058 D361     		str	r3, [r2, #28]
+ 159:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** 
+ 160:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     /* On the control endpoint, always expect the maximum.  */
+ 161:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     transfer_request -> ux_slave_transfer_request_requested_length =
+ 111              		.loc 1 161 5 is_stmt 1 view .LVU39
+ 112              		.loc 1 161 68 is_stmt 0 view .LVU40
+ 113 005a C4F8A030 		str	r3, [r4, #160]
+ 162:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****                                 device -> ux_slave_device_descriptor.bMaxPacketSize0;
+ 163:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** 
+ 164:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     /* Attach the control endpoint to the transfer request.  */
+ 165:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     transfer_request -> ux_slave_transfer_request_endpoint =  &device -> ux_slave_device_control_en
+ 114              		.loc 1 165 5 is_stmt 1 view .LVU41
+ 166:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** 
+ 167:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     /* Create the default control endpoint attached to the device.
+ 168:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****        Once this endpoint is enabled, the host can then send a setup packet
+ 169:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****        The device controller will receive it and will call the setup function
+ 170:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****        module.  */
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccMcmH2a.s 			page 6
+
+
+ 171:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     dcd -> ux_slave_dcd_function(dcd, UX_DCD_CREATE_ENDPOINT,
+ 115              		.loc 1 171 5 view .LVU42
+ 116              		.loc 1 171 9 is_stmt 0 view .LVU43
+ 117 005e A369     		ldr	r3, [r4, #24]
+ 118              		.loc 1 171 5 view .LVU44
+ 119 0060 0E21     		movs	r1, #14
+ 120 0062 2046     		mov	r0, r4
+ 121 0064 9847     		blx	r3
+ 122              	.LVL4:
+ 172:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****                                     (VOID *) &device -> ux_slave_device_control_endpoint);
+ 173:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** 
+ 174:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     /* Open Control OUT endpoint.  */
+ 175:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     HAL_PCD_EP_Flush(dcd_stm32 -> pcd_handle, 0x00U);
+ 123              		.loc 1 175 5 is_stmt 1 view .LVU45
+ 124 0066 0021     		movs	r1, #0
+ 125 0068 E86C     		ldr	r0, [r5, #76]
+ 126 006a FFF7FEFF 		bl	HAL_PCD_EP_Flush
+ 127              	.LVL5:
+ 176:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     HAL_PCD_EP_Open(dcd_stm32 -> pcd_handle, 0x00U, device -> ux_slave_device_descriptor.bMaxPacket
+ 128              		.loc 1 176 5 view .LVU46
+ 129 006e 0023     		movs	r3, #0
+ 130 0070 A28F     		ldrh	r2, [r4, #60]
+ 131 0072 1946     		mov	r1, r3
+ 132 0074 E86C     		ldr	r0, [r5, #76]
+ 133 0076 FFF7FEFF 		bl	HAL_PCD_EP_Open
+ 134              	.LVL6:
+ 177:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** 
+ 178:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     /* Open Control IN endpoint.  */
+ 179:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     HAL_PCD_EP_Flush(dcd_stm32 -> pcd_handle, 0x80U);
+ 135              		.loc 1 179 5 view .LVU47
+ 136 007a 8021     		movs	r1, #128
+ 137 007c E86C     		ldr	r0, [r5, #76]
+ 138 007e FFF7FEFF 		bl	HAL_PCD_EP_Flush
+ 139              	.LVL7:
+ 180:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     HAL_PCD_EP_Open(dcd_stm32 -> pcd_handle, 0x80U, device -> ux_slave_device_descriptor.bMaxPacket
+ 140              		.loc 1 180 5 view .LVU48
+ 141 0082 0023     		movs	r3, #0
+ 142 0084 A28F     		ldrh	r2, [r4, #60]
+ 143 0086 8021     		movs	r1, #128
+ 144 0088 E86C     		ldr	r0, [r5, #76]
+ 145 008a FFF7FEFF 		bl	HAL_PCD_EP_Open
+ 146              	.LVL8:
+ 181:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** 
+ 182:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     /* Ensure the control endpoint is properly reset.  */
+ 183:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     device -> ux_slave_device_control_endpoint.ux_slave_endpoint_state = UX_ENDPOINT_RESET;
+ 147              		.loc 1 183 5 view .LVU49
+ 148              		.loc 1 183 72 is_stmt 0 view .LVU50
+ 149 008e 0023     		movs	r3, #0
+ 150 0090 2366     		str	r3, [r4, #96]
+ 184:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** 
+ 185:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     /* Mark the phase as SETUP.  */
+ 186:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     transfer_request -> ux_slave_transfer_request_type =  UX_TRANSFER_PHASE_SETUP;
+ 151              		.loc 1 186 5 is_stmt 1 view .LVU51
+ 152              		.loc 1 186 56 is_stmt 0 view .LVU52
+ 153 0092 0122     		movs	r2, #1
+ 154 0094 C4F89020 		str	r2, [r4, #144]
+ 187:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** 
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccMcmH2a.s 			page 7
+
+
+ 188:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     /* Mark this transfer request as pending.  */
+ 189:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     transfer_request -> ux_slave_transfer_request_status =  UX_TRANSFER_STATUS_PENDING;
+ 155              		.loc 1 189 5 is_stmt 1 view .LVU53
+ 156              		.loc 1 189 58 is_stmt 0 view .LVU54
+ 157 0098 C4F88C20 		str	r2, [r4, #140]
+ 190:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** 
+ 191:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     /* Ask for 8 bytes of the SETUP packet.  */
+ 192:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     transfer_request -> ux_slave_transfer_request_requested_length =    UX_SETUP_SIZE;
+ 158              		.loc 1 192 5 is_stmt 1 view .LVU55
+ 159              		.loc 1 192 68 is_stmt 0 view .LVU56
+ 160 009c 0822     		movs	r2, #8
+ 161 009e C4F8A020 		str	r2, [r4, #160]
+ 193:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     transfer_request -> ux_slave_transfer_request_in_transfer_length =  UX_SETUP_SIZE;
+ 162              		.loc 1 193 5 is_stmt 1 view .LVU57
+ 163              		.loc 1 193 70 is_stmt 0 view .LVU58
+ 164 00a2 C4F8A820 		str	r2, [r4, #168]
+ 194:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** 
+ 195:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     /* Reset the number of bytes sent/received.  */
+ 196:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     transfer_request -> ux_slave_transfer_request_actual_length =  0;
+ 165              		.loc 1 196 5 is_stmt 1 view .LVU59
+ 166              		.loc 1 196 65 is_stmt 0 view .LVU60
+ 167 00a6 C4F8A430 		str	r3, [r4, #164]
+ 197:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** 
+ 198:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     /* Check the status change callback.  */
+ 199:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     if(_ux_system_slave -> ux_system_slave_change_function != UX_NULL)
+ 168              		.loc 1 199 5 is_stmt 1 view .LVU61
+ 169              		.loc 1 199 25 is_stmt 0 view .LVU62
+ 170 00aa 0D4B     		ldr	r3, .L9
+ 171 00ac 1B68     		ldr	r3, [r3]
+ 172 00ae D3F8C031 		ldr	r3, [r3, #448]
+ 173              		.loc 1 199 7 view .LVU63
+ 174 00b2 0BB1     		cbz	r3, .L5
+ 200:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     {
+ 201:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** 
+ 202:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****         /* Inform the application if a callback function was programmed.  */
+ 203:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****         _ux_system_slave -> ux_system_slave_change_function(UX_DEVICE_ATTACHED);
+ 175              		.loc 1 203 9 is_stmt 1 view .LVU64
+ 176 00b4 0120     		movs	r0, #1
+ 177 00b6 9847     		blx	r3
+ 178              	.LVL9:
+ 179              	.L5:
+ 204:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     }
+ 205:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** 
+ 206:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     /* If trace is enabled, insert this event into the trace buffer.  */
+ 207:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     UX_TRACE_IN_LINE_INSERT(UX_TRACE_DEVICE_STACK_CONNECT, 0, 0, 0, 0, UX_TRACE_DEVICE_STACK_EVENTS
+ 208:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** 
+ 209:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     /* If trace is enabled, register this object.  */
+ 210:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     UX_TRACE_OBJECT_REGISTER(UX_TRACE_DEVICE_OBJECT_TYPE_DEVICE, device, 0, 0, 0)
+ 211:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** 
+ 212:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     /* We are now ready for the USB device to accept the first packet when connected.  */
+ 213:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****     return(UX_SUCCESS);
+ 180              		.loc 1 213 5 view .LVU65
+ 214:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** }
+ 181              		.loc 1 214 1 is_stmt 0 view .LVU66
+ 182 00b8 0020     		movs	r0, #0
+ 183 00ba 38BD     		pop	{r3, r4, r5, pc}
+ 184              	.LVL10:
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccMcmH2a.s 			page 8
+
+
+ 185              	.L7:
+ 105:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****         _ux_system_slave -> ux_system_slave_device_framework_length =  _ux_system_slave -> ux_syste
+ 186              		.loc 1 105 9 is_stmt 1 view .LVU67
+ 105:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****         _ux_system_slave -> ux_system_slave_device_framework_length =  _ux_system_slave -> ux_syste
+ 187              		.loc 1 105 82 is_stmt 0 view .LVU68
+ 188 00bc D4F85031 		ldr	r3, [r4, #336]
+ 105:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****         _ux_system_slave -> ux_system_slave_device_framework_length =  _ux_system_slave -> ux_syste
+ 189              		.loc 1 105 62 view .LVU69
+ 190 00c0 C4F82831 		str	r3, [r4, #296]
+ 106:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** 
+ 191              		.loc 1 106 9 is_stmt 1 view .LVU70
+ 106:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** 
+ 192              		.loc 1 106 89 is_stmt 0 view .LVU71
+ 193 00c4 D4F85431 		ldr	r3, [r4, #340]
+ 106:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c **** 
+ 194              		.loc 1 106 69 view .LVU72
+ 195 00c8 C4F82C31 		str	r3, [r4, #300]
+ 196 00cc AFE7     		b	.L3
+ 197              	.L8:
+ 120:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****             _ux_system_slave -> ux_system_slave_device_framework_length =  _ux_system_slave -> ux_s
+ 198              		.loc 1 120 13 is_stmt 1 view .LVU73
+ 120:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****             _ux_system_slave -> ux_system_slave_device_framework_length =  _ux_system_slave -> ux_s
+ 199              		.loc 1 120 86 is_stmt 0 view .LVU74
+ 200 00ce D4F83031 		ldr	r3, [r4, #304]
+ 120:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****             _ux_system_slave -> ux_system_slave_device_framework_length =  _ux_system_slave -> ux_s
+ 201              		.loc 1 120 66 view .LVU75
+ 202 00d2 C4F82831 		str	r3, [r4, #296]
+ 121:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****         }
+ 203              		.loc 1 121 13 is_stmt 1 view .LVU76
+ 121:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****         }
+ 204              		.loc 1 121 93 is_stmt 0 view .LVU77
+ 205 00d6 D4F83431 		ldr	r3, [r4, #308]
+ 121:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_initialize_complete.c ****         }
+ 206              		.loc 1 121 73 view .LVU78
+ 207 00da C4F82C31 		str	r3, [r4, #300]
+ 208 00de A6E7     		b	.L3
+ 209              	.L10:
+ 210              		.align	2
+ 211              	.L9:
+ 212 00e0 00000000 		.word	_ux_system_slave
+ 213 00e4 00000000 		.word	_ux_system_device_descriptor_structure
+ 214              		.cfi_endproc
+ 215              	.LFE251:
+ 217              		.text
+ 218              	.Letext0:
+ 219              		.file 2 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 220              		.file 3 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 221              		.file 4 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
+ 222              		.file 5 "./Middlewares/ST/threadx/common/inc/tx_api.h"
+ 223              		.file 6 "./Middlewares/ST/usbx/common/core/inc/ux_api.h"
+ 224              		.file 7 "./Middlewares/ST/usbx/common/core/inc/ux_system.h"
+ 225              		.file 8 "./Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h"
+ 226              		.file 9 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
+ 227              		.file 10 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h"
+ 228              		.file 11 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h"
+ 229              		.file 12 "./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32.h"
+ 230              		.file 13 "./Middlewares/ST/usbx/common/core/inc/ux_utility.h"
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccMcmH2a.s 			page 9
+
+
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccMcmH2a.s 			page 10
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 ux_dcd_stm32_initialize_complete.c
+C:\Users\Dennis\AppData\Local\Temp\ccMcmH2a.s:20     .text._ux_dcd_stm32_initialize_complete:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\ccMcmH2a.s:26     .text._ux_dcd_stm32_initialize_complete:00000000 _ux_dcd_stm32_initialize_complete
+C:\Users\Dennis\AppData\Local\Temp\ccMcmH2a.s:212    .text._ux_dcd_stm32_initialize_complete:000000e0 $d
+
+UNDEFINED SYMBOLS
+_ux_utility_descriptor_parse
+HAL_PCD_EP_Flush
+HAL_PCD_EP_Open
+_ux_system_slave
+_ux_system_device_descriptor_structure

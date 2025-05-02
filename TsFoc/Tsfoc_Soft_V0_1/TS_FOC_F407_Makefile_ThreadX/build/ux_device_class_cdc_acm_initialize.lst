@@ -1,0 +1,781 @@
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cczJ08tG.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"ux_device_class_cdc_acm_initialize.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.rodata._ux_device_class_cdc_acm_initialize.str1.4,"aMS",%progbits,1
+  20              		.align	2
+  21              	.LC0:
+  22 0000 75785F73 		.ascii	"ux_slave_class_cdc_acm_in_mutex\000"
+  22      6C617665 
+  22      5F636C61 
+  22      73735F63 
+  22      64635F61 
+  23              		.align	2
+  24              	.LC1:
+  25 0020 75785F73 		.ascii	"ux_slave_class_cdc_acm_out_mutex\000"
+  25      6C617665 
+  25      5F636C61 
+  25      73735F63 
+  25      64635F61 
+  26 0041 000000   		.align	2
+  27              	.LC2:
+  28 0044 75785F64 		.ascii	"ux_device_class_cdc_acm_event_flag\000"
+  28      65766963 
+  28      655F636C 
+  28      6173735F 
+  28      6364635F 
+  29 0067 00       		.align	2
+  30              	.LC3:
+  31 0068 75785F73 		.ascii	"ux_slave_class_cdc_acm_bulkin_thread\000"
+  31      6C617665 
+  31      5F636C61 
+  31      73735F63 
+  31      64635F61 
+  32 008d 000000   		.align	2
+  33              	.LC4:
+  34 0090 75785F73 		.ascii	"ux_slave_class_cdc_acm_bulkout_thread\000"
+  34      6C617665 
+  34      5F636C61 
+  34      73735F63 
+  34      64635F61 
+  35              		.section	.text._ux_device_class_cdc_acm_initialize,"ax",%progbits
+  36              		.align	1
+  37              		.global	_ux_device_class_cdc_acm_initialize
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cczJ08tG.s 			page 2
+
+
+  38              		.syntax unified
+  39              		.thumb
+  40              		.thumb_func
+  42              	_ux_device_class_cdc_acm_initialize:
+  43              	.LVL0:
+  44              	.LFB11:
+  45              		.file 1 "./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c
+   1:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /**************************************************************************/
+   2:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*                                                                        */
+   3:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
+   4:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*                                                                        */
+   5:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*       This software is licensed under the Microsoft Software License   */
+   6:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*       Terms for Microsoft Azure RTOS. Full text of the license can be  */
+   7:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*       found in the LICENSE file at https://aka.ms/AzureRTOS_EULA       */
+   8:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*       and in the root directory of this software.                      */
+   9:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*                                                                        */
+  10:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /**************************************************************************/
+  11:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** 
+  12:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /**************************************************************************/
+  13:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /**                                                                       */ 
+  14:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /** USBX Component                                                        */ 
+  15:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /**                                                                       */
+  16:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /**   Device CDC Class                                                    */
+  17:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /**                                                                       */
+  18:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /**************************************************************************/
+  19:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /**************************************************************************/
+  20:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** 
+  21:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** #define UX_SOURCE_CODE
+  22:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** 
+  23:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** 
+  24:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /* Include necessary system files.  */
+  25:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** 
+  26:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** #include "ux_api.h"
+  27:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** #include "ux_device_class_cdc_acm.h"
+  28:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** #include "ux_device_stack.h"
+  29:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** 
+  30:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** 
+  31:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** #if UX_OVERFLOW_CHECK_MULC_ULONG(UX_THREAD_STACK_SIZE, 2)
+  32:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** #error UX_THREAD_STACK_SIZE too large
+  33:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** #endif
+  34:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** 
+  35:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /**************************************************************************/ 
+  36:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*                                                                        */ 
+  37:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*  FUNCTION                                               RELEASE        */ 
+  38:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*                                                                        */ 
+  39:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*    _ux_device_class_cdc_acm_initialize                 PORTABLE C      */ 
+  40:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*                                                           6.1.10       */
+  41:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*  AUTHOR                                                                */
+  42:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*                                                                        */
+  43:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*    Chaoqiong Xiao, Microsoft Corporation                               */
+  44:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*                                                                        */
+  45:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*  DESCRIPTION                                                           */
+  46:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*                                                                        */ 
+  47:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*    This function initializes the USB CDC device.                       */ 
+  48:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*                                                                        */ 
+  49:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*  INPUT                                                                 */ 
+  50:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*                                                                        */ 
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cczJ08tG.s 			page 3
+
+
+  51:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*    command                               Pointer to cdc_acm command    */ 
+  52:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*                                                                        */ 
+  53:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*  OUTPUT                                                                */ 
+  54:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*                                                                        */ 
+  55:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*    Completion Status                                                   */ 
+  56:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*                                                                        */ 
+  57:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*  CALLS                                                                 */ 
+  58:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*                                                                        */ 
+  59:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*    _ux_utility_memory_allocate           Allocate memory               */ 
+  60:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*    _ux_utility_memory_free               Free memory                   */ 
+  61:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*    _ux_utility_mutex_create              Create mutex                  */ 
+  62:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*    _ux_utility_mutex_delete              Delete mutex                  */ 
+  63:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*                                                                        */ 
+  64:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*  CALLED BY                                                             */ 
+  65:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*                                                                        */ 
+  66:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*    USBX Source Code                                                    */ 
+  67:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*                                                                        */ 
+  68:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*  RELEASE HISTORY                                                       */ 
+  69:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*                                                                        */ 
+  70:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*    DATE              NAME                      DESCRIPTION             */ 
+  71:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*                                                                        */ 
+  72:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*  05-19-2020     Chaoqiong Xiao           Initial Version 6.0           */
+  73:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*  09-30-2020     Chaoqiong Xiao           Modified comment(s),          */
+  74:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*                                            resulting in version 6.1    */
+  75:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*  04-02-2021     Chaoqiong Xiao           Modified comment(s),          */
+  76:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*                                            added macro to disable      */
+  77:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*                                            transmission support,       */
+  78:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*                                            moved transmission resource */
+  79:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*                                            allocate to here (init),    */
+  80:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*                                            resulting in version 6.1.6  */
+  81:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*  01-31-2022     Chaoqiong Xiao           Modified comment(s),          */
+  82:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*                                            added standalone support,   */
+  83:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*                                            resulting in version 6.1.10 */
+  84:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /*                                                                        */
+  85:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** /**************************************************************************/
+  86:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** UINT  _ux_device_class_cdc_acm_initialize(UX_SLAVE_CLASS_COMMAND *command)
+  87:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** {
+  46              		.loc 1 87 1 view -0
+  47              		.cfi_startproc
+  48              		@ args = 0, pretend = 0, frame = 0
+  49              		@ frame_needed = 0, uses_anonymous_args = 0
+  50              		.loc 1 87 1 is_stmt 0 view .LVU1
+  51 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+  52              	.LCFI0:
+  53              		.cfi_def_cfa_offset 20
+  54              		.cfi_offset 4, -20
+  55              		.cfi_offset 5, -16
+  56              		.cfi_offset 6, -12
+  57              		.cfi_offset 7, -8
+  58              		.cfi_offset 14, -4
+  59 0002 87B0     		sub	sp, sp, #28
+  60              	.LCFI1:
+  61              		.cfi_def_cfa_offset 48
+  62 0004 0546     		mov	r5, r0
+  88:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****                                           
+  89:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** UX_SLAVE_CLASS_CDC_ACM                  *cdc_acm;
+  63              		.loc 1 89 1 is_stmt 1 view .LVU2
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cczJ08tG.s 			page 4
+
+
+  90:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** UX_SLAVE_CLASS_CDC_ACM_PARAMETER        *cdc_acm_parameter;
+  64              		.loc 1 90 1 view .LVU3
+  91:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** UX_SLAVE_CLASS                          *class;
+  65              		.loc 1 91 1 view .LVU4
+  92:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** #if !defined(UX_DEVICE_STANDALONE)
+  93:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** UINT                                    status;
+  66              		.loc 1 93 1 view .LVU5
+  94:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** #endif
+  95:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** 
+  96:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     /* Get the class container.  */
+  97:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     class =  command -> ux_slave_class_command_class_ptr;
+  67              		.loc 1 97 5 view .LVU6
+  68              		.loc 1 97 11 is_stmt 0 view .LVU7
+  69 0006 066A     		ldr	r6, [r0, #32]
+  70              	.LVL1:
+  98:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** 
+  99:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     /* Create an instance of the device cdc_acm class.  */
+ 100:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     cdc_acm =  _ux_utility_memory_allocate(UX_NO_ALIGN, UX_REGULAR_MEMORY, sizeof(UX_SLAVE_CLASS_CD
+  71              		.loc 1 100 5 is_stmt 1 view .LVU8
+  72              		.loc 1 100 16 is_stmt 0 view .LVU9
+  73 0008 4FF40B72 		mov	r2, #556
+  74 000c 0021     		movs	r1, #0
+  75 000e 0846     		mov	r0, r1
+  76              	.LVL2:
+  77              		.loc 1 100 16 view .LVU10
+  78 0010 FFF7FEFF 		bl	_ux_utility_memory_allocate
+  79              	.LVL3:
+ 101:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** 
+ 102:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     /* Check for successful allocation.  */
+ 103:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     if (cdc_acm == UX_NULL)
+  80              		.loc 1 103 5 is_stmt 1 view .LVU11
+  81              		.loc 1 103 8 is_stmt 0 view .LVU12
+  82 0014 0028     		cmp	r0, #0
+  83 0016 00F09B80 		beq	.L12
+  84 001a 0446     		mov	r4, r0
+ 104:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         return(UX_MEMORY_INSUFFICIENT);
+ 105:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** 
+ 106:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     /* Save the address of the CDC instance inside the CDC container.  */
+ 107:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     class -> ux_slave_class_instance = (VOID *) cdc_acm;
+  85              		.loc 1 107 5 is_stmt 1 view .LVU13
+  86              		.loc 1 107 38 is_stmt 0 view .LVU14
+  87 001c B064     		str	r0, [r6, #72]
+ 108:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** 
+ 109:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     /* Get the pointer to the application parameters for the cdc_acm class.  */
+ 110:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     cdc_acm_parameter =  command -> ux_slave_class_command_parameter;
+  88              		.loc 1 110 5 is_stmt 1 view .LVU15
+  89              		.loc 1 110 23 is_stmt 0 view .LVU16
+  90 001e 6B6A     		ldr	r3, [r5, #36]
+  91              	.LVL4:
+ 111:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** 
+ 112:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     /* Store the start and stop signals if needed by the application.  */
+ 113:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     cdc_acm -> ux_slave_class_cdc_acm_parameter.ux_slave_class_cdc_acm_instance_activate = cdc_acm_
+  92              		.loc 1 113 5 is_stmt 1 view .LVU17
+  93              		.loc 1 113 110 is_stmt 0 view .LVU18
+  94 0020 1A68     		ldr	r2, [r3]
+  95              		.loc 1 113 90 view .LVU19
+  96 0022 4260     		str	r2, [r0, #4]
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cczJ08tG.s 			page 5
+
+
+ 114:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     cdc_acm -> ux_slave_class_cdc_acm_parameter.ux_slave_class_cdc_acm_instance_deactivate = cdc_ac
+  97              		.loc 1 114 5 is_stmt 1 view .LVU20
+  98              		.loc 1 114 112 is_stmt 0 view .LVU21
+  99 0024 5A68     		ldr	r2, [r3, #4]
+ 100              		.loc 1 114 92 view .LVU22
+ 101 0026 8260     		str	r2, [r0, #8]
+ 115:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     cdc_acm -> ux_slave_class_cdc_acm_parameter.ux_slave_class_cdc_acm_parameter_change = cdc_acm_p
+ 102              		.loc 1 115 5 is_stmt 1 view .LVU23
+ 103              		.loc 1 115 109 is_stmt 0 view .LVU24
+ 104 0028 9B68     		ldr	r3, [r3, #8]
+ 105              	.LVL5:
+ 106              		.loc 1 115 89 view .LVU25
+ 107 002a C360     		str	r3, [r0, #12]
+ 116:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** 
+ 117:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** #if !defined(UX_DEVICE_STANDALONE)
+ 118:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** 
+ 119:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     /* Create the Mutex for each endpoint as multiple threads cannot access each pipe at the same t
+ 120:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     status =  _ux_utility_mutex_create(&cdc_acm -> ux_slave_class_cdc_acm_endpoint_in_mutex, "ux_sl
+ 108              		.loc 1 120 5 is_stmt 1 view .LVU26
+ 109              		.loc 1 120 15 is_stmt 0 view .LVU27
+ 110 002c 00F11006 		add	r6, r0, #16
+ 111              	.LVL6:
+ 112              		.loc 1 120 15 view .LVU28
+ 113 0030 4849     		ldr	r1, .L24
+ 114 0032 3046     		mov	r0, r6
+ 115              	.LVL7:
+ 116              		.loc 1 120 15 view .LVU29
+ 117 0034 FFF7FEFF 		bl	_ux_utility_mutex_create
+ 118              	.LVL8:
+ 121:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** 
+ 122:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     /* Check Mutex creation error.  */
+ 123:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     if(status != UX_SUCCESS)
+ 119              		.loc 1 123 5 is_stmt 1 view .LVU30
+ 120              		.loc 1 123 7 is_stmt 0 view .LVU31
+ 121 0038 38BB     		cbnz	r0, .L18
+ 124:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     {
+ 125:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** 
+ 126:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         /* Free the resources.  */
+ 127:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         _ux_utility_memory_free(cdc_acm);
+ 128:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         
+ 129:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         /* Return fatal error.  */
+ 130:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         return(UX_MUTEX_ERROR);
+ 131:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     }        
+ 132:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** 
+ 133:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     /* Out Mutex. */
+ 134:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     status =  _ux_utility_mutex_create(&cdc_acm -> ux_slave_class_cdc_acm_endpoint_out_mutex, "ux_s
+ 122              		.loc 1 134 5 is_stmt 1 view .LVU32
+ 123              		.loc 1 134 15 is_stmt 0 view .LVU33
+ 124 003a 04F14407 		add	r7, r4, #68
+ 125 003e 4649     		ldr	r1, .L24+4
+ 126 0040 3846     		mov	r0, r7
+ 127              	.LVL9:
+ 128              		.loc 1 134 15 view .LVU34
+ 129 0042 FFF7FEFF 		bl	_ux_utility_mutex_create
+ 130              	.LVL10:
+ 135:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** 
+ 136:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     /* Check Mutex creation error.  */
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cczJ08tG.s 			page 6
+
+
+ 137:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     if(status != UX_SUCCESS)
+ 131              		.loc 1 137 5 is_stmt 1 view .LVU35
+ 132              		.loc 1 137 7 is_stmt 0 view .LVU36
+ 133 0046 28BB     		cbnz	r0, .L19
+ 138:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     {
+ 139:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** 
+ 140:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         /* Delete the endpoint IN mutex.  */
+ 141:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         _ux_utility_mutex_delete(&cdc_acm -> ux_slave_class_cdc_acm_endpoint_in_mutex);
+ 142:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** 
+ 143:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         /* Free the resources.  */
+ 144:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         _ux_utility_memory_free(cdc_acm);
+ 145:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         
+ 146:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         /* Return fatal error.  */
+ 147:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         return(UX_MUTEX_ERROR);
+ 148:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     }        
+ 149:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     
+ 150:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** #endif
+ 151:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** 
+ 152:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     /* Update the line coding fields with default values.  */
+ 153:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     cdc_acm -> ux_slave_class_cdc_acm_baudrate  =  UX_SLAVE_CLASS_CDC_ACM_LINE_CODING_BAUDRATE;
+ 134              		.loc 1 153 5 is_stmt 1 view .LVU37
+ 135              		.loc 1 153 49 is_stmt 0 view .LVU38
+ 136 0048 4FF4E133 		mov	r3, #115200
+ 137 004c A367     		str	r3, [r4, #120]
+ 154:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     cdc_acm -> ux_slave_class_cdc_acm_stop_bit  =  UX_SLAVE_CLASS_CDC_ACM_LINE_CODING_STOP_BIT;
+ 138              		.loc 1 154 5 is_stmt 1 view .LVU39
+ 139              		.loc 1 154 49 is_stmt 0 view .LVU40
+ 140 004e 0123     		movs	r3, #1
+ 141 0050 84F87C30 		strb	r3, [r4, #124]
+ 155:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     cdc_acm -> ux_slave_class_cdc_acm_parity    =  UX_SLAVE_CLASS_CDC_ACM_LINE_CODING_PARITY;
+ 142              		.loc 1 155 5 is_stmt 1 view .LVU41
+ 143              		.loc 1 155 49 is_stmt 0 view .LVU42
+ 144 0054 0020     		movs	r0, #0
+ 145              	.LVL11:
+ 146              		.loc 1 155 49 view .LVU43
+ 147 0056 84F87D00 		strb	r0, [r4, #125]
+ 156:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     cdc_acm -> ux_slave_class_cdc_acm_data_bit  =  UX_SLAVE_CLASS_CDC_ACM_LINE_CODING_DATA_BIT;
+ 148              		.loc 1 156 5 is_stmt 1 view .LVU44
+ 149              		.loc 1 156 49 is_stmt 0 view .LVU45
+ 150 005a 0823     		movs	r3, #8
+ 151 005c 84F87E30 		strb	r3, [r4, #126]
+ 157:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** 
+ 158:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** #ifndef UX_DEVICE_CLASS_CDC_ACM_TRANSMISSION_DISABLE
+ 159:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** 
+ 160:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** #if defined(UX_DEVICE_STANDALONE)
+ 161:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** 
+ 162:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     /* Set task function.  */
+ 163:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     class -> ux_slave_class_task_function = _ux_device_class_cdc_acm_tasks_run;
+ 164:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** #else
+ 165:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** 
+ 166:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     /* We need to prepare the 2 threads for sending and receiving.  */
+ 167:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     /* Allocate some memory for the bulk out and in thread stack. */
+ 168:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     cdc_acm -> ux_slave_class_cdc_acm_bulkout_thread_stack =  
+ 152              		.loc 1 168 5 is_stmt 1 view .LVU46
+ 169:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****             _ux_utility_memory_allocate(UX_NO_ALIGN, UX_REGULAR_MEMORY, UX_THREAD_STACK_SIZE * 2);
+ 153              		.loc 1 169 13 is_stmt 0 view .LVU47
+ 154 0060 4FF40062 		mov	r2, #2048
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cczJ08tG.s 			page 7
+
+
+ 155 0064 0146     		mov	r1, r0
+ 156 0066 FFF7FEFF 		bl	_ux_utility_memory_allocate
+ 157              	.LVL12:
+ 168:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****             _ux_utility_memory_allocate(UX_NO_ALIGN, UX_REGULAR_MEMORY, UX_THREAD_STACK_SIZE * 2);
+ 158              		.loc 1 168 60 view .LVU48
+ 159 006a C4F80C02 		str	r0, [r4, #524]
+ 170:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** 
+ 171:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     /* Check for successful allocation.  */
+ 172:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     if (cdc_acm -> ux_slave_class_cdc_acm_bulkout_thread_stack == UX_NULL)
+ 160              		.loc 1 172 5 is_stmt 1 view .LVU49
+ 161              		.loc 1 172 8 is_stmt 0 view .LVU50
+ 162 006e C8B1     		cbz	r0, .L13
+ 173:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** 
+ 174:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         /* Return the status to the caller.  */
+ 175:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         status = (UX_MEMORY_INSUFFICIENT);
+ 176:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** 
+ 177:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     /* If success, go on to create event flags.  */
+ 178:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     if (status == UX_SUCCESS)
+ 163              		.loc 1 178 5 is_stmt 1 view .LVU51
+ 179:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     {
+ 180:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** 
+ 181:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         /* Allocate some memory for the bulk in thread stack. */
+ 182:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         cdc_acm -> ux_slave_class_cdc_acm_bulkin_thread_stack =
+ 164              		.loc 1 182 9 view .LVU52
+ 183:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****             cdc_acm -> ux_slave_class_cdc_acm_bulkout_thread_stack + UX_THREAD_STACK_SIZE;
+ 165              		.loc 1 183 68 is_stmt 0 view .LVU53
+ 166 0070 00F58060 		add	r0, r0, #1024
+ 182:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****             cdc_acm -> ux_slave_class_cdc_acm_bulkout_thread_stack + UX_THREAD_STACK_SIZE;
+ 167              		.loc 1 182 63 view .LVU54
+ 168 0074 C4F80802 		str	r0, [r4, #520]
+ 184:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** 
+ 185:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         /* Create a event flag group for the cdc_acm class to synchronize with the application writ
+ 186:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         status =  _ux_utility_event_flags_create(
+ 169              		.loc 1 186 9 is_stmt 1 view .LVU55
+ 170              		.loc 1 186 19 is_stmt 0 view .LVU56
+ 171 0078 3849     		ldr	r1, .L24+8
+ 172 007a 04F5F270 		add	r0, r4, #484
+ 173 007e FFF7FEFF 		bl	_ux_utility_event_flags_create
+ 174              	.LVL13:
+ 187:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****                         &cdc_acm -> ux_slave_class_cdc_acm_event_flags_group,
+ 188:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****                         "ux_device_class_cdc_acm_event_flag");
+ 189:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** 
+ 190:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         /* Check status.  */
+ 191:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         if (status != UX_SUCCESS)
+ 175              		.loc 1 191 9 is_stmt 1 view .LVU57
+ 176              		.loc 1 191 12 is_stmt 0 view .LVU58
+ 177 0082 0546     		mov	r5, r0
+ 178              	.LVL14:
+ 179              		.loc 1 191 12 view .LVU59
+ 180 0084 78B1     		cbz	r0, .L5
+ 192:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         {
+ 193:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****             status = (UX_EVENT_ERROR);
+ 181              		.loc 1 193 20 view .LVU60
+ 182 0086 1825     		movs	r5, #24
+ 183 0088 0EE0     		b	.L6
+ 184              	.LVL15:
+ 185              	.L18:
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cczJ08tG.s 			page 8
+
+
+ 127:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         
+ 186              		.loc 1 127 9 is_stmt 1 view .LVU61
+ 187 008a 2046     		mov	r0, r4
+ 188              	.LVL16:
+ 127:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         
+ 189              		.loc 1 127 9 is_stmt 0 view .LVU62
+ 190 008c FFF7FEFF 		bl	_ux_utility_memory_free
+ 191              	.LVL17:
+ 130:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     }        
+ 192              		.loc 1 130 9 is_stmt 1 view .LVU63
+ 130:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     }        
+ 193              		.loc 1 130 15 is_stmt 0 view .LVU64
+ 194 0090 1725     		movs	r5, #23
+ 195              	.LVL18:
+ 130:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     }        
+ 196              		.loc 1 130 15 view .LVU65
+ 197 0092 0CE0     		b	.L1
+ 198              	.LVL19:
+ 199              	.L19:
+ 141:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** 
+ 200              		.loc 1 141 9 is_stmt 1 view .LVU66
+ 201 0094 3046     		mov	r0, r6
+ 202              	.LVL20:
+ 141:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** 
+ 203              		.loc 1 141 9 is_stmt 0 view .LVU67
+ 204 0096 FFF7FEFF 		bl	_ux_utility_mutex_delete
+ 205              	.LVL21:
+ 144:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         
+ 206              		.loc 1 144 9 is_stmt 1 view .LVU68
+ 207 009a 2046     		mov	r0, r4
+ 208 009c FFF7FEFF 		bl	_ux_utility_memory_free
+ 209              	.LVL22:
+ 147:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     }        
+ 210              		.loc 1 147 9 view .LVU69
+ 147:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     }        
+ 211              		.loc 1 147 15 is_stmt 0 view .LVU70
+ 212 00a0 1725     		movs	r5, #23
+ 213              	.LVL23:
+ 147:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     }        
+ 214              		.loc 1 147 15 view .LVU71
+ 215 00a2 04E0     		b	.L1
+ 216              	.LVL24:
+ 217              	.L13:
+ 175:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** 
+ 218              		.loc 1 175 16 view .LVU72
+ 219 00a4 1225     		movs	r5, #18
+ 220              	.LVL25:
+ 221              	.L5:
+ 194:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         }
+ 195:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     }
+ 196:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** 
+ 197:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     /* If success, go on to create bulkin thread.  */
+ 198:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     if (status == UX_SUCCESS)
+ 222              		.loc 1 198 5 is_stmt 1 view .LVU73
+ 223              		.loc 1 198 8 is_stmt 0 view .LVU74
+ 224 00a6 2DB1     		cbz	r5, .L20
+ 225              	.LVL26:
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cczJ08tG.s 			page 9
+
+
+ 226              	.L6:
+ 199:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     {
+ 200:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** 
+ 201:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         /* Bulk endpoint treatment needs to be running in a different thread. So start
+ 202:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****             a new thread. We pass a pointer to the cdc_acm instance to the new thread.  This thread
+ 203:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****             does not start until we have a instance of the class. */
+ 204:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         status =  _ux_utility_thread_create(
+ 205:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****                     &cdc_acm -> ux_slave_class_cdc_acm_bulkin_thread,
+ 206:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****                     "ux_slave_class_cdc_acm_bulkin_thread", 
+ 207:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****                     _ux_device_class_cdc_acm_bulkin_thread,
+ 208:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****                     (ULONG) (ALIGN_TYPE) cdc_acm,
+ 209:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****                     (VOID *) cdc_acm -> ux_slave_class_cdc_acm_bulkin_thread_stack,
+ 210:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****                     UX_THREAD_STACK_SIZE, UX_THREAD_PRIORITY_CLASS,
+ 211:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****                     UX_THREAD_PRIORITY_CLASS, UX_NO_TIME_SLICE, UX_DONT_START);
+ 212:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** 
+ 213:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         /* Check the creation of this thread.  */
+ 214:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         if (status != UX_SUCCESS)
+ 215:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         {
+ 216:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****             status = (UX_THREAD_ERROR);
+ 217:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         }
+ 218:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         else
+ 219:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         {
+ 220:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****             UX_THREAD_EXTENSION_PTR_SET(
+ 221:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****                 &(cdc_acm -> ux_slave_class_cdc_acm_bulkin_thread), cdc_acm)
+ 222:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         }
+ 227              		.loc 1 222 9 is_stmt 1 view .LVU75
+ 223:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     }
+ 224:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** 
+ 225:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     /* If success, go on to create bulkout thread.  */
+ 226:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     if (status == UX_SUCCESS)
+ 228              		.loc 1 226 5 view .LVU76
+ 229              		.loc 1 226 8 is_stmt 0 view .LVU77
+ 230 00a8 E5B1     		cbz	r5, .L21
+ 231              	.LVL27:
+ 232              	.L7:
+ 227:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     {
+ 228:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** 
+ 229:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         /* Bulk endpoint treatment needs to be running in a different thread. So start
+ 230:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****             a new thread. We pass a pointer to the cdc_acm instance to the new thread.  This thread
+ 231:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****             does not start until we have a instance of the class. */
+ 232:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         status =  _ux_utility_thread_create(
+ 233:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****                     &cdc_acm -> ux_slave_class_cdc_acm_bulkout_thread,
+ 234:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****                     "ux_slave_class_cdc_acm_bulkout_thread", 
+ 235:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****                     _ux_device_class_cdc_acm_bulkout_thread,
+ 236:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****                     (ULONG) (ALIGN_TYPE) cdc_acm,
+ 237:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****                     (VOID *) cdc_acm -> ux_slave_class_cdc_acm_bulkout_thread_stack,
+ 238:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****                     UX_THREAD_STACK_SIZE, UX_THREAD_PRIORITY_CLASS,
+ 239:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****                     UX_THREAD_PRIORITY_CLASS, UX_NO_TIME_SLICE, UX_DONT_START);
+ 240:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** 
+ 241:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         /* Check the creation of this thread.  */
+ 242:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         if (status != UX_SUCCESS)
+ 243:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         {
+ 244:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****             status = (UX_THREAD_ERROR);
+ 245:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         }
+ 246:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         else
+ 247:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         {
+ 248:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****             UX_THREAD_EXTENSION_PTR_SET(
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cczJ08tG.s 			page 10
+
+
+ 249:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****                 &(cdc_acm -> ux_slave_class_cdc_acm_bulkout_thread), cdc_acm)
+ 250:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         }
+ 233              		.loc 1 250 9 is_stmt 1 view .LVU78
+ 251:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     }
+ 252:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** 
+ 253:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     /* Check error.  */
+ 254:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     if (status != UX_SUCCESS)
+ 234              		.loc 1 254 5 view .LVU79
+ 235              		.loc 1 254 8 is_stmt 0 view .LVU80
+ 236 00aa 002D     		cmp	r5, #0
+ 237 00ac 31D1     		bne	.L8
+ 238              	.LVL28:
+ 239              	.L1:
+ 255:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     {
+ 256:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** 
+ 257:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         /* Free resources and return error.  */
+ 258:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         if (cdc_acm -> ux_slave_class_cdc_acm_bulkin_thread.tx_thread_id)
+ 259:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****             _ux_utility_thread_delete(&cdc_acm -> ux_slave_class_cdc_acm_bulkin_thread);
+ 260:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         if (cdc_acm -> ux_slave_class_cdc_acm_event_flags_group.tx_event_flags_group_id)
+ 261:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****             _ux_utility_event_flags_delete(&cdc_acm -> ux_slave_class_cdc_acm_event_flags_group);
+ 262:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         if (cdc_acm -> ux_slave_class_cdc_acm_bulkout_thread_stack)
+ 263:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****             _ux_utility_memory_free(cdc_acm -> ux_slave_class_cdc_acm_bulkout_thread_stack);
+ 264:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         _ux_utility_mutex_delete(&cdc_acm -> ux_slave_class_cdc_acm_endpoint_in_mutex);
+ 265:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         _ux_utility_mutex_delete(&cdc_acm -> ux_slave_class_cdc_acm_endpoint_out_mutex);
+ 266:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         _ux_utility_memory_free(cdc_acm);
+ 267:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         return(status);
+ 268:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     }
+ 269:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** 
+ 270:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** #endif
+ 271:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** #endif
+ 272:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** 
+ 273:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     /* Return completion status.  */
+ 274:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     return(UX_SUCCESS);
+ 275:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** }
+ 240              		.loc 1 275 1 view .LVU81
+ 241 00ae 2846     		mov	r0, r5
+ 242 00b0 07B0     		add	sp, sp, #28
+ 243              	.LCFI2:
+ 244              		.cfi_remember_state
+ 245              		.cfi_def_cfa_offset 20
+ 246              		@ sp needed
+ 247 00b2 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 248              	.LVL29:
+ 249              	.L20:
+ 250              	.LCFI3:
+ 251              		.cfi_restore_state
+ 204:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****                     &cdc_acm -> ux_slave_class_cdc_acm_bulkin_thread,
+ 252              		.loc 1 204 9 is_stmt 1 view .LVU82
+ 209:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****                     UX_THREAD_STACK_SIZE, UX_THREAD_PRIORITY_CLASS,
+ 253              		.loc 1 209 38 is_stmt 0 view .LVU83
+ 254 00b4 D4F80822 		ldr	r2, [r4, #520]
+ 204:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****                     &cdc_acm -> ux_slave_class_cdc_acm_bulkin_thread,
+ 255              		.loc 1 204 19 view .LVU84
+ 256 00b8 0023     		movs	r3, #0
+ 257 00ba 0593     		str	r3, [sp, #20]
+ 258 00bc 0493     		str	r3, [sp, #16]
+ 259 00be 1423     		movs	r3, #20
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cczJ08tG.s 			page 11
+
+
+ 260 00c0 0393     		str	r3, [sp, #12]
+ 261 00c2 0293     		str	r3, [sp, #8]
+ 262 00c4 4FF48063 		mov	r3, #1024
+ 263 00c8 0193     		str	r3, [sp, #4]
+ 264 00ca 0092     		str	r2, [sp]
+ 265 00cc 2346     		mov	r3, r4
+ 266 00ce 244A     		ldr	r2, .L24+12
+ 267 00d0 2449     		ldr	r1, .L24+16
+ 268 00d2 04F18400 		add	r0, r4, #132
+ 269 00d6 FFF7FEFF 		bl	_ux_utility_thread_create
+ 270              	.LVL30:
+ 214:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         {
+ 271              		.loc 1 214 9 is_stmt 1 view .LVU85
+ 214:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         {
+ 272              		.loc 1 214 12 is_stmt 0 view .LVU86
+ 273 00da 0546     		mov	r5, r0
+ 274 00dc 0028     		cmp	r0, #0
+ 275 00de E3D0     		beq	.L6
+ 216:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         }
+ 276              		.loc 1 216 20 view .LVU87
+ 277 00e0 1625     		movs	r5, #22
+ 278 00e2 E2E7     		b	.L7
+ 279              	.LVL31:
+ 280              	.L21:
+ 232:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****                     &cdc_acm -> ux_slave_class_cdc_acm_bulkout_thread,
+ 281              		.loc 1 232 9 is_stmt 1 view .LVU88
+ 237:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****                     UX_THREAD_STACK_SIZE, UX_THREAD_PRIORITY_CLASS,
+ 282              		.loc 1 237 38 is_stmt 0 view .LVU89
+ 283 00e4 D4F80C22 		ldr	r2, [r4, #524]
+ 232:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****                     &cdc_acm -> ux_slave_class_cdc_acm_bulkout_thread,
+ 284              		.loc 1 232 19 view .LVU90
+ 285 00e8 0023     		movs	r3, #0
+ 286 00ea 0593     		str	r3, [sp, #20]
+ 287 00ec 0493     		str	r3, [sp, #16]
+ 288 00ee 1423     		movs	r3, #20
+ 289 00f0 0393     		str	r3, [sp, #12]
+ 290 00f2 0293     		str	r3, [sp, #8]
+ 291 00f4 4FF48063 		mov	r3, #1024
+ 292 00f8 0193     		str	r3, [sp, #4]
+ 293 00fa 0092     		str	r2, [sp]
+ 294 00fc 2346     		mov	r3, r4
+ 295 00fe 1A4A     		ldr	r2, .L24+20
+ 296 0100 1A49     		ldr	r1, .L24+24
+ 297 0102 04F59A70 		add	r0, r4, #308
+ 298 0106 FFF7FEFF 		bl	_ux_utility_thread_create
+ 299              	.LVL32:
+ 242:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         {
+ 300              		.loc 1 242 9 is_stmt 1 view .LVU91
+ 242:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         {
+ 301              		.loc 1 242 12 is_stmt 0 view .LVU92
+ 302 010a 0546     		mov	r5, r0
+ 303 010c 0028     		cmp	r0, #0
+ 304 010e CCD0     		beq	.L7
+ 244:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         }
+ 305              		.loc 1 244 20 view .LVU93
+ 306 0110 1625     		movs	r5, #22
+ 307              	.LVL33:
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cczJ08tG.s 			page 12
+
+
+ 308              	.L8:
+ 258:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****             _ux_utility_thread_delete(&cdc_acm -> ux_slave_class_cdc_acm_bulkin_thread);
+ 309              		.loc 1 258 9 is_stmt 1 view .LVU94
+ 258:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****             _ux_utility_thread_delete(&cdc_acm -> ux_slave_class_cdc_acm_bulkin_thread);
+ 310              		.loc 1 258 60 is_stmt 0 view .LVU95
+ 311 0112 D4F88430 		ldr	r3, [r4, #132]
+ 258:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****             _ux_utility_thread_delete(&cdc_acm -> ux_slave_class_cdc_acm_bulkin_thread);
+ 312              		.loc 1 258 12 view .LVU96
+ 313 0116 8BB9     		cbnz	r3, .L22
+ 314              	.L9:
+ 260:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****             _ux_utility_event_flags_delete(&cdc_acm -> ux_slave_class_cdc_acm_event_flags_group);
+ 315              		.loc 1 260 9 is_stmt 1 view .LVU97
+ 260:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****             _ux_utility_event_flags_delete(&cdc_acm -> ux_slave_class_cdc_acm_event_flags_group);
+ 316              		.loc 1 260 64 is_stmt 0 view .LVU98
+ 317 0118 D4F8E431 		ldr	r3, [r4, #484]
+ 260:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****             _ux_utility_event_flags_delete(&cdc_acm -> ux_slave_class_cdc_acm_event_flags_group);
+ 318              		.loc 1 260 12 view .LVU99
+ 319 011c 9BB9     		cbnz	r3, .L23
+ 320              	.L10:
+ 262:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****             _ux_utility_memory_free(cdc_acm -> ux_slave_class_cdc_acm_bulkout_thread_stack);
+ 321              		.loc 1 262 9 is_stmt 1 view .LVU100
+ 262:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****             _ux_utility_memory_free(cdc_acm -> ux_slave_class_cdc_acm_bulkout_thread_stack);
+ 322              		.loc 1 262 21 is_stmt 0 view .LVU101
+ 323 011e D4F80C02 		ldr	r0, [r4, #524]
+ 262:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****             _ux_utility_memory_free(cdc_acm -> ux_slave_class_cdc_acm_bulkout_thread_stack);
+ 324              		.loc 1 262 12 view .LVU102
+ 325 0122 08B1     		cbz	r0, .L11
+ 263:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         _ux_utility_mutex_delete(&cdc_acm -> ux_slave_class_cdc_acm_endpoint_in_mutex);
+ 326              		.loc 1 263 13 is_stmt 1 view .LVU103
+ 327 0124 FFF7FEFF 		bl	_ux_utility_memory_free
+ 328              	.LVL34:
+ 329              	.L11:
+ 264:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         _ux_utility_mutex_delete(&cdc_acm -> ux_slave_class_cdc_acm_endpoint_out_mutex);
+ 330              		.loc 1 264 9 view .LVU104
+ 331 0128 3046     		mov	r0, r6
+ 332 012a FFF7FEFF 		bl	_ux_utility_mutex_delete
+ 333              	.LVL35:
+ 265:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         _ux_utility_memory_free(cdc_acm);
+ 334              		.loc 1 265 9 view .LVU105
+ 335 012e 3846     		mov	r0, r7
+ 336 0130 FFF7FEFF 		bl	_ux_utility_mutex_delete
+ 337              	.LVL36:
+ 266:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         return(status);
+ 338              		.loc 1 266 9 view .LVU106
+ 339 0134 2046     		mov	r0, r4
+ 340 0136 FFF7FEFF 		bl	_ux_utility_memory_free
+ 341              	.LVL37:
+ 267:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     }
+ 342              		.loc 1 267 9 view .LVU107
+ 267:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****     }
+ 343              		.loc 1 267 15 is_stmt 0 view .LVU108
+ 344 013a B8E7     		b	.L1
+ 345              	.L22:
+ 259:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         if (cdc_acm -> ux_slave_class_cdc_acm_event_flags_group.tx_event_flags_group_id)
+ 346              		.loc 1 259 13 is_stmt 1 view .LVU109
+ 347 013c 04F18400 		add	r0, r4, #132
+ 348 0140 FFF7FEFF 		bl	_ux_utility_thread_delete
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cczJ08tG.s 			page 13
+
+
+ 349              	.LVL38:
+ 350 0144 E8E7     		b	.L9
+ 351              	.L23:
+ 261:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c ****         if (cdc_acm -> ux_slave_class_cdc_acm_bulkout_thread_stack)
+ 352              		.loc 1 261 13 view .LVU110
+ 353 0146 04F5F270 		add	r0, r4, #484
+ 354 014a FFF7FEFF 		bl	_ux_utility_event_flags_delete
+ 355              	.LVL39:
+ 356 014e E6E7     		b	.L10
+ 357              	.LVL40:
+ 358              	.L12:
+ 104:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** 
+ 359              		.loc 1 104 15 is_stmt 0 view .LVU111
+ 360 0150 1225     		movs	r5, #18
+ 361              	.LVL41:
+ 104:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_initialize.c **** 
+ 362              		.loc 1 104 15 view .LVU112
+ 363 0152 ACE7     		b	.L1
+ 364              	.L25:
+ 365              		.align	2
+ 366              	.L24:
+ 367 0154 00000000 		.word	.LC0
+ 368 0158 20000000 		.word	.LC1
+ 369 015c 44000000 		.word	.LC2
+ 370 0160 00000000 		.word	_ux_device_class_cdc_acm_bulkin_thread
+ 371 0164 68000000 		.word	.LC3
+ 372 0168 00000000 		.word	_ux_device_class_cdc_acm_bulkout_thread
+ 373 016c 90000000 		.word	.LC4
+ 374              		.cfi_endproc
+ 375              	.LFE11:
+ 377              		.text
+ 378              	.Letext0:
+ 379              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
+ 380              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
+ 381              		.file 4 "./Middlewares/ST/usbx/common/core/inc/ux_api.h"
+ 382              		.file 5 "./Middlewares/ST/usbx/common/usbx_device_classes/inc/ux_device_class_cdc_acm.h"
+ 383              		.file 6 "./Middlewares/ST/usbx/common/core/inc/ux_utility.h"
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cczJ08tG.s 			page 14
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 ux_device_class_cdc_acm_initialize.c
+C:\Users\Dennis\AppData\Local\Temp\cczJ08tG.s:20     .rodata._ux_device_class_cdc_acm_initialize.str1.4:00000000 $d
+C:\Users\Dennis\AppData\Local\Temp\cczJ08tG.s:36     .text._ux_device_class_cdc_acm_initialize:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\cczJ08tG.s:42     .text._ux_device_class_cdc_acm_initialize:00000000 _ux_device_class_cdc_acm_initialize
+C:\Users\Dennis\AppData\Local\Temp\cczJ08tG.s:367    .text._ux_device_class_cdc_acm_initialize:00000154 $d
+
+UNDEFINED SYMBOLS
+_ux_utility_memory_allocate
+_ux_utility_mutex_create
+_ux_utility_event_flags_create
+_ux_utility_memory_free
+_ux_utility_mutex_delete
+_ux_utility_thread_create
+_ux_utility_thread_delete
+_ux_utility_event_flags_delete
+_ux_device_class_cdc_acm_bulkin_thread
+_ux_device_class_cdc_acm_bulkout_thread

@@ -1,0 +1,149 @@
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccAbxIaw.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"ux_device_class_dfu_state_get.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text._ux_device_class_dfu_state_get,"ax",%progbits
+  20              		.align	1
+  21              		.global	_ux_device_class_dfu_state_get
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	_ux_device_class_dfu_state_get:
+  27              	.LVL0:
+  28              	.LFB11:
+  29              		.file 1 "./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c"
+   1:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /**************************************************************************/
+   2:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /*                                                                        */
+   3:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
+   4:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /*                                                                        */
+   5:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /*       This software is licensed under the Microsoft Software License   */
+   6:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /*       Terms for Microsoft Azure RTOS. Full text of the license can be  */
+   7:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /*       found in the LICENSE file at https://aka.ms/AzureRTOS_EULA       */
+   8:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /*       and in the root directory of this software.                      */
+   9:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /*                                                                        */
+  10:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /**************************************************************************/
+  11:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** 
+  12:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /**************************************************************************/
+  13:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /**                                                                       */
+  14:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /** USBX Component                                                        */
+  15:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /**                                                                       */
+  16:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /**   Device DFU Class                                                    */
+  17:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /**                                                                       */
+  18:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /**************************************************************************/
+  19:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /**************************************************************************/
+  20:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** 
+  21:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** #define UX_SOURCE_CODE
+  22:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** 
+  23:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** 
+  24:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /* Include necessary system files.  */
+  25:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** 
+  26:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** #include "ux_api.h"
+  27:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** #include "ux_device_class_dfu.h"
+  28:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** #include "ux_device_stack.h"
+  29:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** 
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccAbxIaw.s 			page 2
+
+
+  30:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** 
+  31:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /**************************************************************************/
+  32:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /*                                                                        */
+  33:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /*  FUNCTION                                               RELEASE        */
+  34:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /*                                                                        */
+  35:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /*    _ux_device_class_dfu_state_get                      PORTABLE C      */
+  36:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /*                                                           6.1.6        */
+  37:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /*  AUTHOR                                                                */
+  38:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /*                                                                        */
+  39:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /*    Chaoqiong Xiao, Microsoft Corporation                               */
+  40:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /*                                                                        */
+  41:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /*  DESCRIPTION                                                           */
+  42:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /*                                                                        */
+  43:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /*    This function gets the USB DFU device state.                        */
+  44:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /*                                                                        */
+  45:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /*  INPUT                                                                 */
+  46:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /*                                                                        */
+  47:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /*    dfu                                   Pointer to DFU instance       */
+  48:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /*                                                                        */
+  49:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /*  OUTPUT                                                                */
+  50:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /*                                                                        */
+  51:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /*    DFU state                                                           */
+  52:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /*                                                                        */
+  53:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /*  CALLS                                                                 */
+  54:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /*                                                                        */
+  55:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /*    None                                                                */
+  56:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /*                                                                        */
+  57:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /*  CALLED BY                                                             */
+  58:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /*                                                                        */
+  59:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /*    Application Code                                                    */
+  60:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /*    USBX Source Code                                                    */
+  61:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /*                                                                        */
+  62:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /*  RELEASE HISTORY                                                       */
+  63:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /*                                                                        */
+  64:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /*    DATE              NAME                      DESCRIPTION             */
+  65:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /*                                                                        */
+  66:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /*  04-02-2021     Chaoqiong Xiao           Initial Version 6.1.6         */
+  67:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /*                                                                        */
+  68:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** /**************************************************************************/
+  69:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** UCHAR  _ux_device_class_dfu_state_get(UX_SLAVE_CLASS_DFU *dfu)
+  70:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** {
+  30              		.loc 1 70 1 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		@ link register save eliminated.
+  71:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c ****     UX_PARAMETER_NOT_USED(dfu);
+  35              		.loc 1 71 5 view .LVU1
+  72:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c ****     return (UCHAR)_ux_system_slave -> ux_system_slave_device_dfu_state_machine;
+  36              		.loc 1 72 5 view .LVU2
+  37              		.loc 1 72 36 is_stmt 0 view .LVU3
+  38 0000 024B     		ldr	r3, .L2
+  39 0002 1B68     		ldr	r3, [r3]
+  73:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_state_get.c **** }
+  40              		.loc 1 73 1 view .LVU4
+  41 0004 93F8B801 		ldrb	r0, [r3, #440]	@ zero_extendqisi2
+  42              	.LVL1:
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccAbxIaw.s 			page 3
+
+
+  43              		.loc 1 73 1 view .LVU5
+  44 0008 7047     		bx	lr
+  45              	.L3:
+  46 000a 00BF     		.align	2
+  47              	.L2:
+  48 000c 00000000 		.word	_ux_system_slave
+  49              		.cfi_endproc
+  50              	.LFE11:
+  52              		.text
+  53              	.Letext0:
+  54              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
+  55              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
+  56              		.file 4 "./Middlewares/ST/usbx/common/core/inc/ux_api.h"
+  57              		.file 5 "./Middlewares/ST/usbx/common/usbx_device_classes/inc/ux_device_class_dfu.h"
+  58              		.file 6 "./Middlewares/ST/usbx/common/core/inc/ux_system.h"
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccAbxIaw.s 			page 4
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 ux_device_class_dfu_state_get.c
+C:\Users\Dennis\AppData\Local\Temp\ccAbxIaw.s:20     .text._ux_device_class_dfu_state_get:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\ccAbxIaw.s:26     .text._ux_device_class_dfu_state_get:00000000 _ux_device_class_dfu_state_get
+C:\Users\Dennis\AppData\Local\Temp\ccAbxIaw.s:48     .text._ux_device_class_dfu_state_get:0000000c $d
+
+UNDEFINED SYMBOLS
+_ux_system_slave

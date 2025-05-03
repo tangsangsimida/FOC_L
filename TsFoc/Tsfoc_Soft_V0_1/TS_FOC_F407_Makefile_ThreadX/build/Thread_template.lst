@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccm1Xois.s 			page 1
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccBShlv3.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,15 +19,16 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccm1Xois.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text.Thread_Template_Entry,"ax",%progbits
+  19              		.section	.text.aRGB_led_show,"ax",%progbits
   20              		.align	1
-  21              		.global	Thread_Template_Entry
+  21              		.global	aRGB_led_show
   22              		.syntax unified
   23              		.thumb
   24              		.thumb_func
-  26              	Thread_Template_Entry:
-  27              	.LFB250:
-  28              		.file 1 "./app/Threads/Thread_template/Thread_template.c"
+  26              	aRGB_led_show:
+  27              	.LVL0:
+  28              	.LFB251:
+  29              		.file 1 "./app/Threads/Thread_template/Thread_template.c"
    1:./app/Threads/Thread_template/Thread_template.c **** /**
    2:./app/Threads/Thread_template/Thread_template.c ****   ******************************************************************************
    3:./app/Threads/Thread_template/Thread_template.c ****   * @file           : Thread_template.c
@@ -54,87 +55,608 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccm1Xois.s 			page 1
   24:./app/Threads/Thread_template/Thread_template.c **** *******************************************************************************/
   25:./app/Threads/Thread_template/Thread_template.c **** void Thread_Template_Entry(ULONG thread_input)
   26:./app/Threads/Thread_template/Thread_template.c **** {
-  29              		.loc 1 26 1 view -0
-  30              		.cfi_startproc
-  31              		@ Volatile: function does not return.
+  27:./app/Threads/Thread_template/Thread_template.c ****   // Thread_Template_parama *parama = (Thread_Template_parama*)thread_input;	//获取入口函数�
+  28:./app/Threads/Thread_template/Thread_template.c ****   can_filter_init();							//初始化CAN滤波器
+  29:./app/Threads/Thread_template/Thread_template.c ****   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccBShlv3.s 			page 2
+
+
+  30:./app/Threads/Thread_template/Thread_template.c ****   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
+  31:./app/Threads/Thread_template/Thread_template.c ****   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);
+  32:./app/Threads/Thread_template/Thread_template.c ****   
+  33:./app/Threads/Thread_template/Thread_template.c ****   uint32_t RGB_flow_color[RGB_FLOW_COLOR_LENGHT + 1] = {0xFF0000FF, 0xFF00FF00, 0xFFFF0000, 0xFF000
+  34:./app/Threads/Thread_template/Thread_template.c ****   uint16_t i, j;
+  35:./app/Threads/Thread_template/Thread_template.c ****   float delta_alpha, delta_red, delta_green, delta_blue;
+  36:./app/Threads/Thread_template/Thread_template.c ****   float alpha,red,green,blue;
+  37:./app/Threads/Thread_template/Thread_template.c ****   uint32_t aRGB;
+  38:./app/Threads/Thread_template/Thread_template.c **** 
+  39:./app/Threads/Thread_template/Thread_template.c **** 	while(1)
+  40:./app/Threads/Thread_template/Thread_template.c **** 	{
+  41:./app/Threads/Thread_template/Thread_template.c **** 
+  42:./app/Threads/Thread_template/Thread_template.c ****     for(i = 0; i < RGB_FLOW_COLOR_LENGHT; i++)
+  43:./app/Threads/Thread_template/Thread_template.c ****     {
+  44:./app/Threads/Thread_template/Thread_template.c ****         alpha = (RGB_flow_color[i] & 0xFF000000) >> 24;
+  45:./app/Threads/Thread_template/Thread_template.c ****         red = ((RGB_flow_color[i] & 0x00FF0000) >> 16);
+  46:./app/Threads/Thread_template/Thread_template.c ****         green = ((RGB_flow_color[i] & 0x0000FF00) >> 8);
+  47:./app/Threads/Thread_template/Thread_template.c ****         blue = ((RGB_flow_color[i] & 0x000000FF) >> 0);
+  48:./app/Threads/Thread_template/Thread_template.c **** 
+  49:./app/Threads/Thread_template/Thread_template.c ****         delta_alpha = (float)((RGB_flow_color[i + 1] & 0xFF000000) >> 24) - (float)((RGB_flow_color
+  50:./app/Threads/Thread_template/Thread_template.c ****         delta_red = (float)((RGB_flow_color[i + 1] & 0x00FF0000) >> 16) - (float)((RGB_flow_color[i
+  51:./app/Threads/Thread_template/Thread_template.c ****         delta_green = (float)((RGB_flow_color[i + 1] & 0x0000FF00) >> 8) - (float)((RGB_flow_color[
+  52:./app/Threads/Thread_template/Thread_template.c ****         delta_blue = (float)((RGB_flow_color[i + 1] & 0x000000FF) >> 0) - (float)((RGB_flow_color[i
+  53:./app/Threads/Thread_template/Thread_template.c **** 
+  54:./app/Threads/Thread_template/Thread_template.c ****         delta_alpha /= RGB_FLOW_COLOR_CHANGE_TIME;
+  55:./app/Threads/Thread_template/Thread_template.c ****         delta_red /= RGB_FLOW_COLOR_CHANGE_TIME;
+  56:./app/Threads/Thread_template/Thread_template.c ****         delta_green /= RGB_FLOW_COLOR_CHANGE_TIME;
+  57:./app/Threads/Thread_template/Thread_template.c ****         delta_blue /= RGB_FLOW_COLOR_CHANGE_TIME;
+  58:./app/Threads/Thread_template/Thread_template.c ****         for(j = 0; j < RGB_FLOW_COLOR_CHANGE_TIME; j++)
+  59:./app/Threads/Thread_template/Thread_template.c ****         {
+  60:./app/Threads/Thread_template/Thread_template.c ****             alpha += delta_alpha;
+  61:./app/Threads/Thread_template/Thread_template.c ****             red += delta_red;
+  62:./app/Threads/Thread_template/Thread_template.c ****             green += delta_green;
+  63:./app/Threads/Thread_template/Thread_template.c ****             blue += delta_blue;
+  64:./app/Threads/Thread_template/Thread_template.c **** 
+  65:./app/Threads/Thread_template/Thread_template.c ****             aRGB = ((uint32_t)(alpha)) << 24 | ((uint32_t)(red)) << 16 | ((uint32_t)(green)) << 8 |
+  66:./app/Threads/Thread_template/Thread_template.c ****             aRGB_led_show(aRGB);
+  67:./app/Threads/Thread_template/Thread_template.c ****             tx_thread_sleep(1);
+  68:./app/Threads/Thread_template/Thread_template.c ****         }
+  69:./app/Threads/Thread_template/Thread_template.c **** 
+  70:./app/Threads/Thread_template/Thread_template.c ****     }
+  71:./app/Threads/Thread_template/Thread_template.c ****     
+  72:./app/Threads/Thread_template/Thread_template.c ****     // CAN_cmd_chassis(0, 0, 0, 0);
+  73:./app/Threads/Thread_template/Thread_template.c ****     CAN_cmd_gimbal(1, 2, 3, 4);
+  74:./app/Threads/Thread_template/Thread_template.c ****     HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
+  75:./app/Threads/Thread_template/Thread_template.c ****     tx_thread_sleep(1);
+  76:./app/Threads/Thread_template/Thread_template.c **** 	}
+  77:./app/Threads/Thread_template/Thread_template.c **** }
+  78:./app/Threads/Thread_template/Thread_template.c **** 
+  79:./app/Threads/Thread_template/Thread_template.c **** 
+  80:./app/Threads/Thread_template/Thread_template.c **** 
+  81:./app/Threads/Thread_template/Thread_template.c **** 
+  82:./app/Threads/Thread_template/Thread_template.c **** void aRGB_led_show(uint32_t aRGB)
+  83:./app/Threads/Thread_template/Thread_template.c **** {
+  30              		.loc 1 83 1 view -0
+  31              		.cfi_startproc
   32              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccm1Xois.s 			page 2
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccBShlv3.s 			page 3
 
 
   33              		@ frame_needed = 0, uses_anonymous_args = 0
-  34              	.LVL0:
-  35              		.loc 1 26 1 is_stmt 0 view .LVU1
-  36 0000 08B5     		push	{r3, lr}
+  34              		@ link register save eliminated.
+  35              		.loc 1 83 1 is_stmt 0 view .LVU1
+  36 0000 10B4     		push	{r4}
   37              	.LCFI0:
-  38              		.cfi_def_cfa_offset 8
-  39              		.cfi_offset 3, -8
-  40              		.cfi_offset 14, -4
-  41              	.LVL1:
-  42              	.L2:
-  27:./app/Threads/Thread_template/Thread_template.c ****   // Thread_Template_parama *parama = (Thread_Template_parama*)thread_input;	//获取入口函数�
-  28:./app/Threads/Thread_template/Thread_template.c **** 	while(1)
-  43              		.loc 1 28 2 is_stmt 1 discriminator 1 view .LVU2
-  29:./app/Threads/Thread_template/Thread_template.c **** 	{
-  30:./app/Threads/Thread_template/Thread_template.c ****         HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
-  44              		.loc 1 30 9 discriminator 1 view .LVU3
-  45 0002 4FF40051 		mov	r1, #8192
-  46 0006 0348     		ldr	r0, .L4
-  47 0008 FFF7FEFF 		bl	HAL_GPIO_TogglePin
-  48              	.LVL2:
-  31:./app/Threads/Thread_template/Thread_template.c **** 
-  32:./app/Threads/Thread_template/Thread_template.c ****         tx_thread_sleep(100);
-  49              		.loc 1 32 9 discriminator 1 view .LVU4
-  50 000c 6420     		movs	r0, #100
-  51 000e FFF7FEFF 		bl	_tx_thread_sleep
-  52              	.LVL3:
-  28:./app/Threads/Thread_template/Thread_template.c **** 	{
-  53              		.loc 1 28 7 discriminator 1 view .LVU5
-  54 0012 F6E7     		b	.L2
-  55              	.L5:
-  56              		.align	2
-  57              	.L4:
-  58 0014 00080240 		.word	1073874944
-  59              		.cfi_endproc
-  60              	.LFE250:
-  62              		.global	Thread_Template_parama1
-  63              		.global	Thread_Template
-  64              		.section	.bss.Thread_Template,"aw",%nobits
-  65              		.align	2
-  68              	Thread_Template:
-  69 0000 00000000 		.space	176
-  69      00000000 
-  69      00000000 
-  69      00000000 
-  69      00000000 
-  70              		.section	.bss.Thread_Template_parama1,"aw",%nobits
-  71              		.align	2
-  74              	Thread_Template_parama1:
-  75 0000 00       		.space	1
-  76              		.text
-  77              	.Letext0:
-  78              		.file 2 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\machine\\_default_types.h"
-  79              		.file 3 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
-  80              		.file 4 "./Middlewares/ST/threadx/common/inc/tx_api.h"
-  81              		.file 5 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\sys\\_stdint.h"
-  82              		.file 6 "./Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h"
-  83              		.file 7 "./app/Threads/Thread_template/Thread_template.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccm1Xois.s 			page 3
+  38              		.cfi_def_cfa_offset 4
+  39              		.cfi_offset 4, -4
+  84:./app/Threads/Thread_template/Thread_template.c ****     static uint8_t alpha;
+  40              		.loc 1 84 5 is_stmt 1 view .LVU2
+  85:./app/Threads/Thread_template/Thread_template.c ****     static uint16_t red,green,blue;
+  41              		.loc 1 85 5 view .LVU3
+  86:./app/Threads/Thread_template/Thread_template.c **** 
+  87:./app/Threads/Thread_template/Thread_template.c ****     alpha = (aRGB & 0xFF000000) >> 24;
+  42              		.loc 1 87 5 view .LVU4
+  43              		.loc 1 87 11 is_stmt 0 view .LVU5
+  44 0002 030E     		lsrs	r3, r0, #24
+  45 0004 0D4A     		ldr	r2, .L3
+  46 0006 1370     		strb	r3, [r2]
+  88:./app/Threads/Thread_template/Thread_template.c ****     red = ((aRGB & 0x00FF0000) >> 16) * alpha;
+  47              		.loc 1 88 5 is_stmt 1 view .LVU6
+  48              		.loc 1 88 9 is_stmt 0 view .LVU7
+  49 0008 C0F30742 		ubfx	r2, r0, #16, #8
+  50 000c 03FB02F2 		mul	r2, r3, r2
+  51 0010 0B49     		ldr	r1, .L3+4
+  52 0012 0A80     		strh	r2, [r1]	@ movhi
+  89:./app/Threads/Thread_template/Thread_template.c ****     green = ((aRGB & 0x0000FF00) >> 8) * alpha;
+  53              		.loc 1 89 5 is_stmt 1 view .LVU8
+  54              		.loc 1 89 11 is_stmt 0 view .LVU9
+  55 0014 C0F30721 		ubfx	r1, r0, #8, #8
+  56 0018 03FB01F1 		mul	r1, r3, r1
+  57 001c 094C     		ldr	r4, .L3+8
+  58 001e 2180     		strh	r1, [r4]	@ movhi
+  90:./app/Threads/Thread_template/Thread_template.c ****     blue = ((aRGB & 0x000000FF) >> 0) * alpha;
+  59              		.loc 1 90 5 is_stmt 1 view .LVU10
+  60              		.loc 1 90 10 is_stmt 0 view .LVU11
+  61 0020 C0B2     		uxtb	r0, r0
+  62              	.LVL1:
+  63              		.loc 1 90 10 view .LVU12
+  64 0022 03FB00F0 		mul	r0, r3, r0
+  65 0026 084B     		ldr	r3, .L3+12
+  66 0028 1880     		strh	r0, [r3]	@ movhi
+  91:./app/Threads/Thread_template/Thread_template.c **** 
+  92:./app/Threads/Thread_template/Thread_template.c ****     __HAL_TIM_SetCompare(&htim1, TIM_CHANNEL_1, blue);
+  67              		.loc 1 92 5 is_stmt 1 view .LVU13
+  68 002a 084B     		ldr	r3, .L3+16
+  69 002c 1B68     		ldr	r3, [r3]
+  70 002e 5863     		str	r0, [r3, #52]
+  93:./app/Threads/Thread_template/Thread_template.c ****     __HAL_TIM_SetCompare(&htim1, TIM_CHANNEL_2, green);
+  71              		.loc 1 93 5 view .LVU14
+  72 0030 9963     		str	r1, [r3, #56]
+  94:./app/Threads/Thread_template/Thread_template.c ****     __HAL_TIM_SetCompare(&htim1, TIM_CHANNEL_3, red);
+  73              		.loc 1 94 5 view .LVU15
+  74 0032 DA63     		str	r2, [r3, #60]
+  95:./app/Threads/Thread_template/Thread_template.c **** }
+  75              		.loc 1 95 1 is_stmt 0 view .LVU16
+  76 0034 5DF8044B 		ldr	r4, [sp], #4
+  77              	.LCFI1:
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccBShlv3.s 			page 4
 
 
-  84              		.file 8 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccm1Xois.s 			page 4
+  78              		.cfi_restore 4
+  79              		.cfi_def_cfa_offset 0
+  80 0038 7047     		bx	lr
+  81              	.L4:
+  82 003a 00BF     		.align	2
+  83              	.L3:
+  84 003c 00000000 		.word	.LANCHOR0
+  85 0040 00000000 		.word	.LANCHOR1
+  86 0044 00000000 		.word	.LANCHOR2
+  87 0048 00000000 		.word	.LANCHOR3
+  88 004c 00000000 		.word	htim1
+  89              		.cfi_endproc
+  90              	.LFE251:
+  92              		.section	.text.Thread_Template_Entry,"ax",%progbits
+  93              		.align	1
+  94              		.global	Thread_Template_Entry
+  95              		.syntax unified
+  96              		.thumb
+  97              		.thumb_func
+  99              	Thread_Template_Entry:
+ 100              	.LVL2:
+ 101              	.LFB250:
+  26:./app/Threads/Thread_template/Thread_template.c ****   // Thread_Template_parama *parama = (Thread_Template_parama*)thread_input;	//获取入口函数�
+ 102              		.loc 1 26 1 is_stmt 1 view -0
+ 103              		.cfi_startproc
+ 104              		@ args = 0, pretend = 0, frame = 16
+ 105              		@ frame_needed = 0, uses_anonymous_args = 0
+  26:./app/Threads/Thread_template/Thread_template.c ****   // Thread_Template_parama *parama = (Thread_Template_parama*)thread_input;	//获取入口函数�
+ 106              		.loc 1 26 1 is_stmt 0 view .LVU18
+ 107 0000 30B5     		push	{r4, r5, lr}
+ 108              	.LCFI2:
+ 109              		.cfi_def_cfa_offset 12
+ 110              		.cfi_offset 4, -12
+ 111              		.cfi_offset 5, -8
+ 112              		.cfi_offset 14, -4
+ 113 0002 2DED088B 		vpush.64	{d8, d9, d10, d11}
+ 114              	.LCFI3:
+ 115              		.cfi_def_cfa_offset 44
+ 116              		.cfi_offset 80, -44
+ 117              		.cfi_offset 81, -40
+ 118              		.cfi_offset 82, -36
+ 119              		.cfi_offset 83, -32
+ 120              		.cfi_offset 84, -28
+ 121              		.cfi_offset 85, -24
+ 122              		.cfi_offset 86, -20
+ 123              		.cfi_offset 87, -16
+ 124 0006 85B0     		sub	sp, sp, #20
+ 125              	.LCFI4:
+ 126              		.cfi_def_cfa_offset 64
+  28:./app/Threads/Thread_template/Thread_template.c ****   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
+ 127              		.loc 1 28 3 is_stmt 1 view .LVU19
+ 128 0008 FFF7FEFF 		bl	can_filter_init
+ 129              	.LVL3:
+  29:./app/Threads/Thread_template/Thread_template.c ****   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
+ 130              		.loc 1 29 3 view .LVU20
+ 131 000c 4C4C     		ldr	r4, .L13
+ 132 000e 0021     		movs	r1, #0
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccBShlv3.s 			page 5
+
+
+ 133 0010 2046     		mov	r0, r4
+ 134 0012 FFF7FEFF 		bl	HAL_TIM_PWM_Start
+ 135              	.LVL4:
+  30:./app/Threads/Thread_template/Thread_template.c ****   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);
+ 136              		.loc 1 30 3 view .LVU21
+ 137 0016 0421     		movs	r1, #4
+ 138 0018 2046     		mov	r0, r4
+ 139 001a FFF7FEFF 		bl	HAL_TIM_PWM_Start
+ 140              	.LVL5:
+  31:./app/Threads/Thread_template/Thread_template.c ****   
+ 141              		.loc 1 31 3 view .LVU22
+ 142 001e 0821     		movs	r1, #8
+ 143 0020 2046     		mov	r0, r4
+ 144 0022 FFF7FEFF 		bl	HAL_TIM_PWM_Start
+ 145              	.LVL6:
+  33:./app/Threads/Thread_template/Thread_template.c ****   uint16_t i, j;
+ 146              		.loc 1 33 3 view .LVU23
+  33:./app/Threads/Thread_template/Thread_template.c ****   uint16_t i, j;
+ 147              		.loc 1 33 12 is_stmt 0 view .LVU24
+ 148 0026 474B     		ldr	r3, .L13+4
+ 149 0028 0FCB     		ldm	r3, {r0, r1, r2, r3}
+ 150 002a 04AC     		add	r4, sp, #16
+ 151 002c 04E90F00 		stmdb	r4, {r0, r1, r2, r3}
+ 152 0030 84E0     		b	.L10
+ 153              	.LVL7:
+ 154              	.L8:
+  60:./app/Threads/Thread_template/Thread_template.c ****             red += delta_red;
+ 155              		.loc 1 60 13 is_stmt 1 discriminator 3 view .LVU25
+  60:./app/Threads/Thread_template/Thread_template.c ****             red += delta_red;
+ 156              		.loc 1 60 19 is_stmt 0 discriminator 3 view .LVU26
+ 157 0032 7BEE8ABA 		vadd.f32	s23, s23, s20
+ 158              	.LVL8:
+  61:./app/Threads/Thread_template/Thread_template.c ****             green += delta_green;
+ 159              		.loc 1 61 13 is_stmt 1 discriminator 3 view .LVU27
+  61:./app/Threads/Thread_template/Thread_template.c ****             green += delta_green;
+ 160              		.loc 1 61 17 is_stmt 0 discriminator 3 view .LVU28
+ 161 0036 3BEE29BA 		vadd.f32	s22, s22, s19
+ 162              	.LVL9:
+  62:./app/Threads/Thread_template/Thread_template.c ****             blue += delta_blue;
+ 163              		.loc 1 62 13 is_stmt 1 discriminator 3 view .LVU29
+  62:./app/Threads/Thread_template/Thread_template.c ****             blue += delta_blue;
+ 164              		.loc 1 62 19 is_stmt 0 discriminator 3 view .LVU30
+ 165 003a 7AEE89AA 		vadd.f32	s21, s21, s18
+ 166              	.LVL10:
+  63:./app/Threads/Thread_template/Thread_template.c **** 
+ 167              		.loc 1 63 13 is_stmt 1 discriminator 3 view .LVU31
+  63:./app/Threads/Thread_template/Thread_template.c **** 
+ 168              		.loc 1 63 18 is_stmt 0 discriminator 3 view .LVU32
+ 169 003e 38EE288A 		vadd.f32	s16, s16, s17
+ 170              	.LVL11:
+  65:./app/Threads/Thread_template/Thread_template.c ****             aRGB_led_show(aRGB);
+ 171              		.loc 1 65 13 is_stmt 1 discriminator 3 view .LVU33
+  65:./app/Threads/Thread_template/Thread_template.c ****             aRGB_led_show(aRGB);
+ 172              		.loc 1 65 21 is_stmt 0 discriminator 3 view .LVU34
+ 173 0042 FCEEEB7A 		vcvt.u32.f32	s15, s23
+ 174 0046 17EE903A 		vmov	r3, s15	@ int
+  65:./app/Threads/Thread_template/Thread_template.c ****             aRGB_led_show(aRGB);
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccBShlv3.s 			page 6
+
+
+ 175              		.loc 1 65 49 discriminator 3 view .LVU35
+ 176 004a FCEECB7A 		vcvt.u32.f32	s15, s22
+ 177 004e 17EE900A 		vmov	r0, s15	@ int
+  65:./app/Threads/Thread_template/Thread_template.c ****             aRGB_led_show(aRGB);
+ 178              		.loc 1 65 66 discriminator 3 view .LVU36
+ 179 0052 0204     		lsls	r2, r0, #16
+  65:./app/Threads/Thread_template/Thread_template.c ****             aRGB_led_show(aRGB);
+ 180              		.loc 1 65 46 discriminator 3 view .LVU37
+ 181 0054 42EA0360 		orr	r0, r2, r3, lsl #24
+  65:./app/Threads/Thread_template/Thread_template.c ****             aRGB_led_show(aRGB);
+ 182              		.loc 1 65 75 discriminator 3 view .LVU38
+ 183 0058 FCEEEA7A 		vcvt.u32.f32	s15, s21
+ 184 005c 17EE903A 		vmov	r3, s15	@ int
+  65:./app/Threads/Thread_template/Thread_template.c ****             aRGB_led_show(aRGB);
+ 185              		.loc 1 65 72 discriminator 3 view .LVU39
+ 186 0060 40EA0323 		orr	r3, r0, r3, lsl #8
+  65:./app/Threads/Thread_template/Thread_template.c ****             aRGB_led_show(aRGB);
+ 187              		.loc 1 65 120 discriminator 3 view .LVU40
+ 188 0064 FCEEC87A 		vcvt.u32.f32	s15, s16
+ 189 0068 17EE900A 		vmov	r0, s15	@ int
+ 190              	.LVL12:
+  66:./app/Threads/Thread_template/Thread_template.c ****             tx_thread_sleep(1);
+ 191              		.loc 1 66 13 is_stmt 1 discriminator 3 view .LVU41
+ 192 006c 1843     		orrs	r0, r0, r3
+ 193              	.LVL13:
+  66:./app/Threads/Thread_template/Thread_template.c ****             tx_thread_sleep(1);
+ 194              		.loc 1 66 13 is_stmt 0 discriminator 3 view .LVU42
+ 195 006e FFF7FEFF 		bl	aRGB_led_show
+ 196              	.LVL14:
+  67:./app/Threads/Thread_template/Thread_template.c ****         }
+ 197              		.loc 1 67 13 is_stmt 1 discriminator 3 view .LVU43
+ 198 0072 0120     		movs	r0, #1
+ 199 0074 FFF7FEFF 		bl	_tx_thread_sleep
+ 200              	.LVL15:
+  58:./app/Threads/Thread_template/Thread_template.c ****         {
+ 201              		.loc 1 58 52 discriminator 3 view .LVU44
+  58:./app/Threads/Thread_template/Thread_template.c ****         {
+ 202              		.loc 1 58 53 is_stmt 0 discriminator 3 view .LVU45
+ 203 0078 0134     		adds	r4, r4, #1
+ 204              	.LVL16:
+  58:./app/Threads/Thread_template/Thread_template.c ****         {
+ 205              		.loc 1 58 53 discriminator 3 view .LVU46
+ 206 007a A4B2     		uxth	r4, r4
+ 207              	.LVL17:
+ 208              	.L7:
+  58:./app/Threads/Thread_template/Thread_template.c ****         {
+ 209              		.loc 1 58 20 is_stmt 1 discriminator 1 view .LVU47
+  58:./app/Threads/Thread_template/Thread_template.c ****         {
+ 210              		.loc 1 58 9 is_stmt 0 discriminator 1 view .LVU48
+ 211 007c B4F5FA7F 		cmp	r4, #500
+ 212 0080 D7D3     		bcc	.L8
+  42:./app/Threads/Thread_template/Thread_template.c ****     {
+ 213              		.loc 1 42 43 is_stmt 1 discriminator 2 view .LVU49
+  42:./app/Threads/Thread_template/Thread_template.c ****     {
+ 214              		.loc 1 42 44 is_stmt 0 discriminator 2 view .LVU50
+ 215 0082 0135     		adds	r5, r5, #1
+ 216              	.LVL18:
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccBShlv3.s 			page 7
+
+
+  42:./app/Threads/Thread_template/Thread_template.c ****     {
+ 217              		.loc 1 42 44 discriminator 2 view .LVU51
+ 218 0084 ADB2     		uxth	r5, r5
+ 219              	.LVL19:
+ 220              	.L6:
+  42:./app/Threads/Thread_template/Thread_template.c ****     {
+ 221              		.loc 1 42 16 is_stmt 1 discriminator 1 view .LVU52
+  42:./app/Threads/Thread_template/Thread_template.c ****     {
+ 222              		.loc 1 42 5 is_stmt 0 discriminator 1 view .LVU53
+ 223 0086 022D     		cmp	r5, #2
+ 224 0088 4AD8     		bhi	.L12
+  44:./app/Threads/Thread_template/Thread_template.c ****         red = ((RGB_flow_color[i] & 0x00FF0000) >> 16);
+ 225              		.loc 1 44 9 is_stmt 1 view .LVU54
+  44:./app/Threads/Thread_template/Thread_template.c ****         red = ((RGB_flow_color[i] & 0x00FF0000) >> 16);
+ 226              		.loc 1 44 32 is_stmt 0 view .LVU55
+ 227 008a 04AB     		add	r3, sp, #16
+ 228 008c 03EB8503 		add	r3, r3, r5, lsl #2
+ 229 0090 53F8103C 		ldr	r3, [r3, #-16]
+  44:./app/Threads/Thread_template/Thread_template.c ****         red = ((RGB_flow_color[i] & 0x00FF0000) >> 16);
+ 230              		.loc 1 44 50 view .LVU56
+ 231 0094 1A0E     		lsrs	r2, r3, #24
+ 232 0096 0BEE902A 		vmov	s23, r2	@ int
+  44:./app/Threads/Thread_template/Thread_template.c ****         red = ((RGB_flow_color[i] & 0x00FF0000) >> 16);
+ 233              		.loc 1 44 15 view .LVU57
+ 234 009a F8EE6BBA 		vcvt.f32.u32	s23, s23
+ 235              	.LVL20:
+  45:./app/Threads/Thread_template/Thread_template.c ****         green = ((RGB_flow_color[i] & 0x0000FF00) >> 8);
+ 236              		.loc 1 45 9 is_stmt 1 view .LVU58
+  45:./app/Threads/Thread_template/Thread_template.c ****         green = ((RGB_flow_color[i] & 0x0000FF00) >> 8);
+ 237              		.loc 1 45 49 is_stmt 0 view .LVU59
+ 238 009e C3F30742 		ubfx	r2, r3, #16, #8
+ 239 00a2 0BEE102A 		vmov	s22, r2	@ int
+  45:./app/Threads/Thread_template/Thread_template.c ****         green = ((RGB_flow_color[i] & 0x0000FF00) >> 8);
+ 240              		.loc 1 45 13 view .LVU60
+ 241 00a6 B8EE4BBA 		vcvt.f32.u32	s22, s22
+ 242              	.LVL21:
+  46:./app/Threads/Thread_template/Thread_template.c ****         blue = ((RGB_flow_color[i] & 0x000000FF) >> 0);
+ 243              		.loc 1 46 9 is_stmt 1 view .LVU61
+  46:./app/Threads/Thread_template/Thread_template.c ****         blue = ((RGB_flow_color[i] & 0x000000FF) >> 0);
+ 244              		.loc 1 46 51 is_stmt 0 view .LVU62
+ 245 00aa C3F30722 		ubfx	r2, r3, #8, #8
+ 246 00ae 0AEE902A 		vmov	s21, r2	@ int
+  46:./app/Threads/Thread_template/Thread_template.c ****         blue = ((RGB_flow_color[i] & 0x000000FF) >> 0);
+ 247              		.loc 1 46 15 view .LVU63
+ 248 00b2 F8EE6AAA 		vcvt.f32.u32	s21, s21
+ 249              	.LVL22:
+  47:./app/Threads/Thread_template/Thread_template.c **** 
+ 250              		.loc 1 47 9 is_stmt 1 view .LVU64
+  47:./app/Threads/Thread_template/Thread_template.c **** 
+ 251              		.loc 1 47 50 is_stmt 0 view .LVU65
+ 252 00b6 DBB2     		uxtb	r3, r3
+  47:./app/Threads/Thread_template/Thread_template.c **** 
+ 253              		.loc 1 47 14 view .LVU66
+ 254 00b8 07EE903A 		vmov	s15, r3	@ int
+ 255 00bc B8EE678A 		vcvt.f32.u32	s16, s15
+ 256              	.LVL23:
+  49:./app/Threads/Thread_template/Thread_template.c ****         delta_red = (float)((RGB_flow_color[i + 1] & 0x00FF0000) >> 16) - (float)((RGB_flow_color[i
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccBShlv3.s 			page 8
+
+
+ 257              		.loc 1 49 9 is_stmt 1 view .LVU67
+  49:./app/Threads/Thread_template/Thread_template.c ****         delta_red = (float)((RGB_flow_color[i + 1] & 0x00FF0000) >> 16) - (float)((RGB_flow_color[i
+ 258              		.loc 1 49 49 is_stmt 0 view .LVU68
+ 259 00c0 6B1C     		adds	r3, r5, #1
+  49:./app/Threads/Thread_template/Thread_template.c ****         delta_red = (float)((RGB_flow_color[i + 1] & 0x00FF0000) >> 16) - (float)((RGB_flow_color[i
+ 260              		.loc 1 49 46 view .LVU69
+ 261 00c2 04AA     		add	r2, sp, #16
+ 262 00c4 02EB8303 		add	r3, r2, r3, lsl #2
+ 263 00c8 53F8103C 		ldr	r3, [r3, #-16]
+  49:./app/Threads/Thread_template/Thread_template.c ****         delta_red = (float)((RGB_flow_color[i + 1] & 0x00FF0000) >> 16) - (float)((RGB_flow_color[i
+ 264              		.loc 1 49 68 view .LVU70
+ 265 00cc 1A0E     		lsrs	r2, r3, #24
+ 266 00ce 06EE102A 		vmov	s12, r2	@ int
+  49:./app/Threads/Thread_template/Thread_template.c ****         delta_red = (float)((RGB_flow_color[i + 1] & 0x00FF0000) >> 16) - (float)((RGB_flow_color[i
+ 267              		.loc 1 49 23 view .LVU71
+ 268 00d2 B8EE466A 		vcvt.f32.u32	s12, s12
+  49:./app/Threads/Thread_template/Thread_template.c ****         delta_red = (float)((RGB_flow_color[i + 1] & 0x00FF0000) >> 16) - (float)((RGB_flow_color[i
+ 269              		.loc 1 49 21 view .LVU72
+ 270 00d6 36EE6B6A 		vsub.f32	s12, s12, s23
+ 271              	.LVL24:
+  50:./app/Threads/Thread_template/Thread_template.c ****         delta_green = (float)((RGB_flow_color[i + 1] & 0x0000FF00) >> 8) - (float)((RGB_flow_color[
+ 272              		.loc 1 50 9 is_stmt 1 view .LVU73
+  50:./app/Threads/Thread_template/Thread_template.c ****         delta_green = (float)((RGB_flow_color[i + 1] & 0x0000FF00) >> 8) - (float)((RGB_flow_color[
+ 273              		.loc 1 50 66 is_stmt 0 view .LVU74
+ 274 00da C3F30742 		ubfx	r2, r3, #16, #8
+ 275 00de 06EE902A 		vmov	s13, r2	@ int
+  50:./app/Threads/Thread_template/Thread_template.c ****         delta_green = (float)((RGB_flow_color[i + 1] & 0x0000FF00) >> 8) - (float)((RGB_flow_color[
+ 276              		.loc 1 50 21 view .LVU75
+ 277 00e2 F8EE666A 		vcvt.f32.u32	s13, s13
+  50:./app/Threads/Thread_template/Thread_template.c ****         delta_green = (float)((RGB_flow_color[i + 1] & 0x0000FF00) >> 8) - (float)((RGB_flow_color[
+ 278              		.loc 1 50 19 view .LVU76
+ 279 00e6 76EECB6A 		vsub.f32	s13, s13, s22
+ 280              	.LVL25:
+  51:./app/Threads/Thread_template/Thread_template.c ****         delta_blue = (float)((RGB_flow_color[i + 1] & 0x000000FF) >> 0) - (float)((RGB_flow_color[i
+ 281              		.loc 1 51 9 is_stmt 1 view .LVU77
+  51:./app/Threads/Thread_template/Thread_template.c ****         delta_blue = (float)((RGB_flow_color[i + 1] & 0x000000FF) >> 0) - (float)((RGB_flow_color[i
+ 282              		.loc 1 51 68 is_stmt 0 view .LVU78
+ 283 00ea C3F30722 		ubfx	r2, r3, #8, #8
+ 284 00ee 07EE102A 		vmov	s14, r2	@ int
+  51:./app/Threads/Thread_template/Thread_template.c ****         delta_blue = (float)((RGB_flow_color[i + 1] & 0x000000FF) >> 0) - (float)((RGB_flow_color[i
+ 285              		.loc 1 51 23 view .LVU79
+ 286 00f2 B8EE477A 		vcvt.f32.u32	s14, s14
+  51:./app/Threads/Thread_template/Thread_template.c ****         delta_blue = (float)((RGB_flow_color[i + 1] & 0x000000FF) >> 0) - (float)((RGB_flow_color[i
+ 287              		.loc 1 51 21 view .LVU80
+ 288 00f6 37EE6A7A 		vsub.f32	s14, s14, s21
+ 289              	.LVL26:
+  52:./app/Threads/Thread_template/Thread_template.c **** 
+ 290              		.loc 1 52 9 is_stmt 1 view .LVU81
+  52:./app/Threads/Thread_template/Thread_template.c **** 
+ 291              		.loc 1 52 67 is_stmt 0 view .LVU82
+ 292 00fa DBB2     		uxtb	r3, r3
+ 293 00fc 07EE903A 		vmov	s15, r3	@ int
+  52:./app/Threads/Thread_template/Thread_template.c **** 
+ 294              		.loc 1 52 22 view .LVU83
+ 295 0100 F8EE677A 		vcvt.f32.u32	s15, s15
+  52:./app/Threads/Thread_template/Thread_template.c **** 
+ 296              		.loc 1 52 20 view .LVU84
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccBShlv3.s 			page 9
+
+
+ 297 0104 77EEC87A 		vsub.f32	s15, s15, s16
+ 298              	.LVL27:
+  54:./app/Threads/Thread_template/Thread_template.c ****         delta_red /= RGB_FLOW_COLOR_CHANGE_TIME;
+ 299              		.loc 1 54 9 is_stmt 1 view .LVU85
+  54:./app/Threads/Thread_template/Thread_template.c ****         delta_red /= RGB_FLOW_COLOR_CHANGE_TIME;
+ 300              		.loc 1 54 21 is_stmt 0 view .LVU86
+ 301 0108 DFED0F5A 		vldr.32	s11, .L13+8
+ 302 010c 86EE25AA 		vdiv.f32	s20, s12, s11
+ 303              	.LVL28:
+  55:./app/Threads/Thread_template/Thread_template.c ****         delta_green /= RGB_FLOW_COLOR_CHANGE_TIME;
+ 304              		.loc 1 55 9 is_stmt 1 view .LVU87
+  55:./app/Threads/Thread_template/Thread_template.c ****         delta_green /= RGB_FLOW_COLOR_CHANGE_TIME;
+ 305              		.loc 1 55 19 is_stmt 0 view .LVU88
+ 306 0110 C6EEA59A 		vdiv.f32	s19, s13, s11
+ 307              	.LVL29:
+  56:./app/Threads/Thread_template/Thread_template.c ****         delta_blue /= RGB_FLOW_COLOR_CHANGE_TIME;
+ 308              		.loc 1 56 9 is_stmt 1 view .LVU89
+  56:./app/Threads/Thread_template/Thread_template.c ****         delta_blue /= RGB_FLOW_COLOR_CHANGE_TIME;
+ 309              		.loc 1 56 21 is_stmt 0 view .LVU90
+ 310 0114 87EE259A 		vdiv.f32	s18, s14, s11
+ 311              	.LVL30:
+  57:./app/Threads/Thread_template/Thread_template.c ****         for(j = 0; j < RGB_FLOW_COLOR_CHANGE_TIME; j++)
+ 312              		.loc 1 57 9 is_stmt 1 view .LVU91
+  57:./app/Threads/Thread_template/Thread_template.c ****         for(j = 0; j < RGB_FLOW_COLOR_CHANGE_TIME; j++)
+ 313              		.loc 1 57 20 is_stmt 0 view .LVU92
+ 314 0118 C7EEA58A 		vdiv.f32	s17, s15, s11
+ 315              	.LVL31:
+  58:./app/Threads/Thread_template/Thread_template.c ****         {
+ 316              		.loc 1 58 9 is_stmt 1 view .LVU93
+  58:./app/Threads/Thread_template/Thread_template.c ****         {
+ 317              		.loc 1 58 15 is_stmt 0 view .LVU94
+ 318 011c 0024     		movs	r4, #0
+  58:./app/Threads/Thread_template/Thread_template.c ****         {
+ 319              		.loc 1 58 9 view .LVU95
+ 320 011e ADE7     		b	.L7
+ 321              	.LVL32:
+ 322              	.L12:
+  73:./app/Threads/Thread_template/Thread_template.c ****     HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
+ 323              		.loc 1 73 5 is_stmt 1 view .LVU96
+ 324 0120 0423     		movs	r3, #4
+ 325 0122 0322     		movs	r2, #3
+ 326 0124 0221     		movs	r1, #2
+ 327 0126 0120     		movs	r0, #1
+ 328 0128 FFF7FEFF 		bl	CAN_cmd_gimbal
+ 329              	.LVL33:
+  74:./app/Threads/Thread_template/Thread_template.c ****     tx_thread_sleep(1);
+ 330              		.loc 1 74 5 view .LVU97
+ 331 012c 4FF40051 		mov	r1, #8192
+ 332 0130 0648     		ldr	r0, .L13+12
+ 333 0132 FFF7FEFF 		bl	HAL_GPIO_TogglePin
+ 334              	.LVL34:
+  75:./app/Threads/Thread_template/Thread_template.c **** 	}
+ 335              		.loc 1 75 5 view .LVU98
+ 336 0136 0120     		movs	r0, #1
+ 337 0138 FFF7FEFF 		bl	_tx_thread_sleep
+ 338              	.LVL35:
+  39:./app/Threads/Thread_template/Thread_template.c **** 	{
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccBShlv3.s 			page 10
+
+
+ 339              		.loc 1 39 7 view .LVU99
+ 340              	.L10:
+  34:./app/Threads/Thread_template/Thread_template.c ****   float delta_alpha, delta_red, delta_green, delta_blue;
+ 341              		.loc 1 34 3 view .LVU100
+  35:./app/Threads/Thread_template/Thread_template.c ****   float alpha,red,green,blue;
+ 342              		.loc 1 35 3 view .LVU101
+  36:./app/Threads/Thread_template/Thread_template.c ****   uint32_t aRGB;
+ 343              		.loc 1 36 3 view .LVU102
+  37:./app/Threads/Thread_template/Thread_template.c **** 
+ 344              		.loc 1 37 3 view .LVU103
+  39:./app/Threads/Thread_template/Thread_template.c **** 	{
+ 345              		.loc 1 39 2 view .LVU104
+  42:./app/Threads/Thread_template/Thread_template.c ****     {
+ 346              		.loc 1 42 5 view .LVU105
+  42:./app/Threads/Thread_template/Thread_template.c ****     {
+ 347              		.loc 1 42 11 is_stmt 0 view .LVU106
+ 348 013c 0025     		movs	r5, #0
+  42:./app/Threads/Thread_template/Thread_template.c ****     {
+ 349              		.loc 1 42 5 view .LVU107
+ 350 013e A2E7     		b	.L6
+ 351              	.L14:
+ 352              		.align	2
+ 353              	.L13:
+ 354 0140 00000000 		.word	htim1
+ 355 0144 00000000 		.word	.LANCHOR4
+ 356 0148 0000FA43 		.word	1140457472
+ 357 014c 00080240 		.word	1073874944
+ 358              		.cfi_endproc
+ 359              	.LFE250:
+ 361              		.global	Thread_Template_parama1
+ 362              		.global	Thread_Template
+ 363              		.section	.rodata
+ 364              		.align	2
+ 365              		.set	.LANCHOR4,. + 0
+ 366              	.LC0:
+ 367 0000 FF0000FF 		.word	-16776961
+ 368 0004 00FF00FF 		.word	-16711936
+ 369 0008 0000FFFF 		.word	-65536
+ 370 000c FF0000FF 		.word	-16776961
+ 371              		.section	.bss.Thread_Template,"aw",%nobits
+ 372              		.align	2
+ 375              	Thread_Template:
+ 376 0000 00000000 		.space	176
+ 376      00000000 
+ 376      00000000 
+ 376      00000000 
+ 376      00000000 
+ 377              		.section	.bss.Thread_Template_parama1,"aw",%nobits
+ 378              		.align	2
+ 381              	Thread_Template_parama1:
+ 382 0000 00       		.space	1
+ 383              		.section	.bss.alpha.3,"aw",%nobits
+ 384              		.set	.LANCHOR0,. + 0
+ 387              	alpha.3:
+ 388 0000 00       		.space	1
+ 389              		.section	.bss.blue.0,"aw",%nobits
+ 390              		.align	1
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccBShlv3.s 			page 11
+
+
+ 391              		.set	.LANCHOR3,. + 0
+ 394              	blue.0:
+ 395 0000 0000     		.space	2
+ 396              		.section	.bss.green.1,"aw",%nobits
+ 397              		.align	1
+ 398              		.set	.LANCHOR2,. + 0
+ 401              	green.1:
+ 402 0000 0000     		.space	2
+ 403              		.section	.bss.red.2,"aw",%nobits
+ 404              		.align	1
+ 405              		.set	.LANCHOR1,. + 0
+ 408              	red.2:
+ 409 0000 0000     		.space	2
+ 410              		.text
+ 411              	.Letext0:
+ 412              		.file 2 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 413              		.file 3 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
+ 414              		.file 4 "./Middlewares/ST/threadx/common/inc/tx_api.h"
+ 415              		.file 5 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 416              		.file 6 "./Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h"
+ 417              		.file 7 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
+ 418              		.file 8 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
+ 419              		.file 9 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h"
+ 420              		.file 10 "./app/Threads/Thread_template/Thread_template.h"
+ 421              		.file 11 "./Core/Inc/tim.h"
+ 422              		.file 12 "./app/peripheral/inc/user_can.h"
+ 423              		.file 13 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h"
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccBShlv3.s 			page 12
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 Thread_template.c
-C:\Users\Dennis\AppData\Local\Temp\ccm1Xois.s:20     .text.Thread_Template_Entry:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccm1Xois.s:26     .text.Thread_Template_Entry:00000000 Thread_Template_Entry
-C:\Users\Dennis\AppData\Local\Temp\ccm1Xois.s:58     .text.Thread_Template_Entry:00000014 $d
-C:\Users\Dennis\AppData\Local\Temp\ccm1Xois.s:74     .bss.Thread_Template_parama1:00000000 Thread_Template_parama1
-C:\Users\Dennis\AppData\Local\Temp\ccm1Xois.s:68     .bss.Thread_Template:00000000 Thread_Template
-C:\Users\Dennis\AppData\Local\Temp\ccm1Xois.s:65     .bss.Thread_Template:00000000 $d
-C:\Users\Dennis\AppData\Local\Temp\ccm1Xois.s:71     .bss.Thread_Template_parama1:00000000 $d
+C:\Users\Dennis\AppData\Local\Temp\ccBShlv3.s:20     .text.aRGB_led_show:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\ccBShlv3.s:26     .text.aRGB_led_show:00000000 aRGB_led_show
+C:\Users\Dennis\AppData\Local\Temp\ccBShlv3.s:84     .text.aRGB_led_show:0000003c $d
+C:\Users\Dennis\AppData\Local\Temp\ccBShlv3.s:93     .text.Thread_Template_Entry:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\ccBShlv3.s:99     .text.Thread_Template_Entry:00000000 Thread_Template_Entry
+C:\Users\Dennis\AppData\Local\Temp\ccBShlv3.s:354    .text.Thread_Template_Entry:00000140 $d
+C:\Users\Dennis\AppData\Local\Temp\ccBShlv3.s:381    .bss.Thread_Template_parama1:00000000 Thread_Template_parama1
+C:\Users\Dennis\AppData\Local\Temp\ccBShlv3.s:375    .bss.Thread_Template:00000000 Thread_Template
+C:\Users\Dennis\AppData\Local\Temp\ccBShlv3.s:364    .rodata:00000000 $d
+C:\Users\Dennis\AppData\Local\Temp\ccBShlv3.s:372    .bss.Thread_Template:00000000 $d
+C:\Users\Dennis\AppData\Local\Temp\ccBShlv3.s:378    .bss.Thread_Template_parama1:00000000 $d
+C:\Users\Dennis\AppData\Local\Temp\ccBShlv3.s:387    .bss.alpha.3:00000000 alpha.3
+C:\Users\Dennis\AppData\Local\Temp\ccBShlv3.s:388    .bss.alpha.3:00000000 $d
+C:\Users\Dennis\AppData\Local\Temp\ccBShlv3.s:390    .bss.blue.0:00000000 $d
+C:\Users\Dennis\AppData\Local\Temp\ccBShlv3.s:394    .bss.blue.0:00000000 blue.0
+C:\Users\Dennis\AppData\Local\Temp\ccBShlv3.s:397    .bss.green.1:00000000 $d
+C:\Users\Dennis\AppData\Local\Temp\ccBShlv3.s:401    .bss.green.1:00000000 green.1
+C:\Users\Dennis\AppData\Local\Temp\ccBShlv3.s:404    .bss.red.2:00000000 $d
+C:\Users\Dennis\AppData\Local\Temp\ccBShlv3.s:408    .bss.red.2:00000000 red.2
 
 UNDEFINED SYMBOLS
-HAL_GPIO_TogglePin
+htim1
+can_filter_init
+HAL_TIM_PWM_Start
 _tx_thread_sleep
+CAN_cmd_gimbal
+HAL_GPIO_TogglePin

@@ -34,6 +34,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include <stdio.h>
+#include "ts_foc.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -69,6 +70,7 @@ int _write(int fd, char *ptr, int len)
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
+Motor * motor1;
 
 /* USER CODE END PM */
 
@@ -136,6 +138,39 @@ int main(void)
   MX_USART3_UART_Init();
   MX_TIM1_Init();
   /* USER CODE BEGIN 2 */
+
+  // HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_4);
+  // HAL_TIM_PWM_Start(&htim8, TIM_CHANNEL_1);
+  // HAL_TIM_PWM_Start(&htim8, TIM_CHANNEL_2);
+
+  motor1 = (Motor *)malloc(sizeof(Motor) * 1);
+  Thread_Motor_Control_parama1.Motor1_handle = (ULONG)motor1;
+  motor1->Motor_ID = 1;
+  motor1->PP = 7;  
+  motor1->DIR = 0;
+  motor1->As5600_Sensor = (As5600_Sensor_Typedef *)malloc(sizeof(As5600_Sensor_Typedef) * 1);
+  motor1->As5600_Sensor->Rotations = 0;
+  motor1->As5600_Sensor->i2c_handle = &hi2c1;
+  Read_AS5600_Angle(motor1->As5600_Sensor);
+  motor1->Motor_Set_Compare1 = Motor1_Set_Compare1;
+  motor1->Motor_Set_Compare2 = Motor1_Set_Compare2;
+  motor1->Motor_Set_Compare3 = Motor1_Set_Compare3;
+  motor1->voltage_power_supply = 12.0;
+  motor1->zero_electric_angle = 0;
+  motor1->Ualpha = motor1->Ubeta = motor1->Ua = motor1->Ub = motor1->Uc = 0;
+
+  Read_AS5600_Angle(motor1->As5600_Sensor);
+
+  // setTorque(motor1,2, _3PI_2);
+  // HAL_Delay(1000);  
+  // Read_AS5600_Angle(motor1->As5600_Sensor);
+  // motor1->zero_electric_angle = _electricalAngle(motor1);
+  // setTorque(motor1,0, _3PI_2);
+  // printf("0电角度:%d\r\n",(int)(motor1->zero_electric_angle*1000));
+  // HAL_Delay(1000);
+  // printf("init_ok\r\n");
+
+  // float Kp = 0.133; //位置环比例系数
 
   /* USER CODE END 2 */
 

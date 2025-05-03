@@ -2,7 +2,7 @@
 
 
 
-uint16_t adc_buffer[4]; // 定义数组存储 DMA 传输后的 ADC 数据
+uint16_t adc_buffer[6]; // 定义数组存储 DMA 传输后的 ADC 数据
 
 
 

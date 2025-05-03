@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccBho0RW.s 			page 1
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc1NLfgF.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccBho0RW.s 			page 1
   27:./Middlewares/ST/usbx/common/core/src/ux_host_stack_rh_device_insertion.c **** 
   28:./Middlewares/ST/usbx/common/core/src/ux_host_stack_rh_device_insertion.c **** #include "ux_api.h"
   29:./Middlewares/ST/usbx/common/core/src/ux_host_stack_rh_device_insertion.c **** #include "ux_host_stack.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccBho0RW.s 			page 2
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc1NLfgF.s 			page 2
 
 
   30:./Middlewares/ST/usbx/common/core/src/ux_host_stack_rh_device_insertion.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccBho0RW.s 			page 1
   84:./Middlewares/ST/usbx/common/core/src/ux_host_stack_rh_device_insertion.c **** /*  01-31-2022     Chaoqiong Xiao           Modified comment(s),          */
   85:./Middlewares/ST/usbx/common/core/src/ux_host_stack_rh_device_insertion.c **** /*                                            added standalone support,   */
   86:./Middlewares/ST/usbx/common/core/src/ux_host_stack_rh_device_insertion.c **** /*                                            resulting in version 6.1.10 */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccBho0RW.s 			page 3
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc1NLfgF.s 			page 3
 
 
   87:./Middlewares/ST/usbx/common/core/src/ux_host_stack_rh_device_insertion.c **** /*                                                                        */
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccBho0RW.s 			page 1
  121:./Middlewares/ST/usbx/common/core/src/ux_host_stack_rh_device_insertion.c **** UINT        device_speed;
   50              		.loc 1 121 1 view .LVU4
  122:./Middlewares/ST/usbx/common/core/src/ux_host_stack_rh_device_insertion.c **** ULONG       port_status;
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccBho0RW.s 			page 4
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc1NLfgF.s 			page 4
 
 
   51              		.loc 1 122 1 view .LVU5
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccBho0RW.s 			page 1
  145:./Middlewares/ST/usbx/common/core/src/ux_host_stack_rh_device_insertion.c ****         /* Now we have to do a PORT_RESET command.  */
  146:./Middlewares/ST/usbx/common/core/src/ux_host_stack_rh_device_insertion.c ****         port_status =  hcd -> ux_hcd_entry_function(hcd, UX_HCD_RESET_PORT, (VOID *)((ALIGN_TYPE)po
  147:./Middlewares/ST/usbx/common/core/src/ux_host_stack_rh_device_insertion.c ****         if (port_status == UX_SUCCESS)
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccBho0RW.s 			page 5
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc1NLfgF.s 			page 5
 
 
  148:./Middlewares/ST/usbx/common/core/src/ux_host_stack_rh_device_insertion.c ****         {
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccBho0RW.s 			page 1
  188:./Middlewares/ST/usbx/common/core/src/ux_host_stack_rh_device_insertion.c ****                 /* The device has been mounted properly, we have to remember this
  189:./Middlewares/ST/usbx/common/core/src/ux_host_stack_rh_device_insertion.c ****                    so when the device is removed, we have to invoke the enumeration
  190:./Middlewares/ST/usbx/common/core/src/ux_host_stack_rh_device_insertion.c ****                    function again */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccBho0RW.s 			page 6
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc1NLfgF.s 			page 6
 
 
  191:./Middlewares/ST/usbx/common/core/src/ux_host_stack_rh_device_insertion.c ****                 hcd -> ux_hcd_rh_device_connection |= (ULONG)(1 << port_index);
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccBho0RW.s 			page 1
  215:./Middlewares/ST/usbx/common/core/src/ux_host_stack_rh_device_insertion.c ****                     break;
  216:./Middlewares/ST/usbx/common/core/src/ux_host_stack_rh_device_insertion.c **** 
  217:./Middlewares/ST/usbx/common/core/src/ux_host_stack_rh_device_insertion.c ****                 /* Simulate remove to free allocated resources if retry.  */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccBho0RW.s 			page 7
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc1NLfgF.s 			page 7
 
 
  218:./Middlewares/ST/usbx/common/core/src/ux_host_stack_rh_device_insertion.c ****                 if (index_loop < UX_RH_ENUMERATION_RETRY - 1)
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccBho0RW.s 			page 1
  160              	.LVL17:
  152:./Middlewares/ST/usbx/common/core/src/ux_host_stack_rh_device_insertion.c **** 
  161              		.loc 1 152 28 view .LVU46
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccBho0RW.s 			page 8
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc1NLfgF.s 			page 8
 
 
  162 0072 9847     		blx	r3
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccBho0RW.s 			page 1
  201              		.loc 1 210 17 is_stmt 1 view .LVU61
  210:./Middlewares/ST/usbx/common/core/src/ux_host_stack_rh_device_insertion.c ****                     break;
  202              		.loc 1 210 20 is_stmt 0 view .LVU62
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccBho0RW.s 			page 9
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc1NLfgF.s 			page 9
 
 
  203 009e 1128     		cmp	r0, #17
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccBho0RW.s 			page 1
  239 00ca 1BB1     		cbz	r3, .L10
  239:./Middlewares/ST/usbx/common/core/src/ux_host_stack_rh_device_insertion.c ****     {
  240:./Middlewares/ST/usbx/common/core/src/ux_host_stack_rh_device_insertion.c ****         _ux_system_host -> ux_system_host_change_function(UX_DEVICE_CONNECTION, UX_NULL, (VOID*)dev
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccBho0RW.s 			page 10
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc1NLfgF.s 			page 10
 
 
  240              		.loc 1 240 9 is_stmt 1 view .LVU75
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccBho0RW.s 			page 1
  281 00f0 00000000 		.word	_ux_system_host
  282              		.cfi_endproc
  283              	.LFE11:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccBho0RW.s 			page 11
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc1NLfgF.s 			page 11
 
 
  285              		.text
@@ -609,14 +609,14 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccBho0RW.s 			page 1
  290              		.file 5 "./Middlewares/ST/usbx/common/core/inc/ux_system.h"
  291              		.file 6 "./Middlewares/ST/usbx/common/core/inc/ux_utility.h"
  292              		.file 7 "./Middlewares/ST/usbx/common/core/inc/ux_host_stack.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccBho0RW.s 			page 12
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc1NLfgF.s 			page 12
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 ux_host_stack_rh_device_insertion.c
-C:\Users\Dennis\AppData\Local\Temp\ccBho0RW.s:20     .text._ux_host_stack_rh_device_insertion:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccBho0RW.s:26     .text._ux_host_stack_rh_device_insertion:00000000 _ux_host_stack_rh_device_insertion
-C:\Users\Dennis\AppData\Local\Temp\ccBho0RW.s:281    .text._ux_host_stack_rh_device_insertion:000000f0 $d
+C:\Users\Dennis\AppData\Local\Temp\cc1NLfgF.s:20     .text._ux_host_stack_rh_device_insertion:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\cc1NLfgF.s:26     .text._ux_host_stack_rh_device_insertion:00000000 _ux_host_stack_rh_device_insertion
+C:\Users\Dennis\AppData\Local\Temp\cc1NLfgF.s:281    .text._ux_host_stack_rh_device_insertion:000000f0 $d
 
 UNDEFINED SYMBOLS
 _ux_utility_delay_ms

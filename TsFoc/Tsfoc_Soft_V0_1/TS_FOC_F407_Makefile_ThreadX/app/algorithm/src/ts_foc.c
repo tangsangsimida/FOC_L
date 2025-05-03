@@ -17,7 +17,7 @@ float _normalizeRadian(float angle)
 // 归一化角度到 [0, 360] 度
 float _normalizeAngle(float angle) {
     float a = fmod(angle, 360.0);   // 取余运算可以用于归一化
-    return a >= 0 ? a : (a + 360.0f);  
+    return a >= 0 ? a : (a + 360.0);  
 }
 
 
@@ -92,7 +92,7 @@ void setTorque(Motor* motor,float Uq,float angle_el)
 /// @param compare 占空比值
 void __attribute__((weak)) Motor1_Set_Compare1(uint32_t compare) 
 {
-    __HAL_TIM_SetCompare(&htim8, TIM_CHANNEL_2, compare);
+    __HAL_TIM_SetCompare(&htim4, TIM_CHANNEL_4, compare);
 }
 
 /// @brief 设置电机1通道2pwm输出占空比
@@ -106,14 +106,14 @@ void __attribute__((weak)) Motor1_Set_Compare2(uint32_t compare)
 /// @param compare 占空比值
 void __attribute__((weak)) Motor1_Set_Compare3(uint32_t compare) 
 {
-    __HAL_TIM_SetCompare(&htim4, TIM_CHANNEL_4, compare);
+    __HAL_TIM_SetCompare(&htim8, TIM_CHANNEL_2, compare);
 }
 
 /// @brief 设置电机2通道1pwm输出占空比
 /// @param compare 占空比值
 void __attribute__((weak)) Motor2_Set_Compare1(uint32_t compare) 
 {
-    __HAL_TIM_SetCompare(&htim4, TIM_CHANNEL_1, compare);
+    __HAL_TIM_SetCompare(&htim4, TIM_CHANNEL_3, compare);
 }
 
 /// @brief 设置电机2通道2pwm输出占空比
@@ -127,7 +127,7 @@ void __attribute__((weak)) Motor2_Set_Compare2(uint32_t compare)
 /// @param compare 占空比值
 void __attribute__((weak)) Motor2_Set_Compare3(uint32_t compare) 
 {
-    __HAL_TIM_SetCompare(&htim4, TIM_CHANNEL_3, compare);
+    __HAL_TIM_SetCompare(&htim4, TIM_CHANNEL_1, compare);
 }
 
 

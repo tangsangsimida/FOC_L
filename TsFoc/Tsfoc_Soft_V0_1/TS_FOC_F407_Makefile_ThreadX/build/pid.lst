@@ -1,0 +1,567 @@
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cct7fRut.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"pid.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.Pid_Vel_Init,"ax",%progbits
+  20              		.align	1
+  21              		.global	Pid_Vel_Init
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	Pid_Vel_Init:
+  27              	.LVL0:
+  28              	.LFB242:
+  29              		.file 1 "./app/algorithm/src/pid.c"
+   1:./app/algorithm/src/pid.c **** #include "pid.h"
+   2:./app/algorithm/src/pid.c **** 
+   3:./app/algorithm/src/pid.c **** /// @brief PID_Vel控制器初始化
+   4:./app/algorithm/src/pid.c **** /// @param Pid 
+   5:./app/algorithm/src/pid.c **** /// @param P 
+   6:./app/algorithm/src/pid.c **** /// @param I 
+   7:./app/algorithm/src/pid.c **** /// @param D 
+   8:./app/algorithm/src/pid.c **** /// @param ramp     PID控制器加速度限幅
+   9:./app/algorithm/src/pid.c **** /// @param limit    PID控制器输出限幅
+  10:./app/algorithm/src/pid.c **** void Pid_Vel_Init(Pid_Typedef* Pid , float P, float I, float D, float ramp, float limit)
+  11:./app/algorithm/src/pid.c **** {
+  30              		.loc 1 11 1 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		.loc 1 11 1 is_stmt 0 view .LVU1
+  35 0000 10B5     		push	{r4, lr}
+  36              	.LCFI0:
+  37              		.cfi_def_cfa_offset 8
+  38              		.cfi_offset 4, -8
+  39              		.cfi_offset 14, -4
+  40 0002 0446     		mov	r4, r0
+  12:./app/algorithm/src/pid.c ****     Pid->P = P;
+  41              		.loc 1 12 5 is_stmt 1 view .LVU2
+  42              		.loc 1 12 12 is_stmt 0 view .LVU3
+  43 0004 80ED000A 		vstr.32	s0, [r0]
+  13:./app/algorithm/src/pid.c ****     Pid->I = I;
+  44              		.loc 1 13 5 is_stmt 1 view .LVU4
+  45              		.loc 1 13 12 is_stmt 0 view .LVU5
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cct7fRut.s 			page 2
+
+
+  46 0008 C0ED010A 		vstr.32	s1, [r0, #4]
+  14:./app/algorithm/src/pid.c ****     Pid->D = D;
+  47              		.loc 1 14 5 is_stmt 1 view .LVU6
+  48              		.loc 1 14 12 is_stmt 0 view .LVU7
+  49 000c 80ED021A 		vstr.32	s2, [r0, #8]
+  15:./app/algorithm/src/pid.c ****     Pid->output_ramp = ramp;                //PID控制器加速度限幅
+  50              		.loc 1 15 5 is_stmt 1 view .LVU8
+  51              		.loc 1 15 22 is_stmt 0 view .LVU9
+  52 0010 C0ED031A 		vstr.32	s3, [r0, #12]
+  16:./app/algorithm/src/pid.c ****     Pid->limit = limit;
+  53              		.loc 1 16 5 is_stmt 1 view .LVU10
+  54              		.loc 1 16 16 is_stmt 0 view .LVU11
+  55 0014 80ED042A 		vstr.32	s4, [r0, #16]
+  17:./app/algorithm/src/pid.c ****     Pid->timestamp_prev = HAL_GetTick();
+  56              		.loc 1 17 5 is_stmt 1 view .LVU12
+  57              		.loc 1 17 27 is_stmt 0 view .LVU13
+  58 0018 FFF7FEFF 		bl	HAL_GetTick
+  59              	.LVL1:
+  60              		.loc 1 17 25 view .LVU14
+  61 001c 2062     		str	r0, [r4, #32]
+  18:./app/algorithm/src/pid.c **** }
+  62              		.loc 1 18 1 view .LVU15
+  63 001e 10BD     		pop	{r4, pc}
+  64              		.loc 1 18 1 view .LVU16
+  65              		.cfi_endproc
+  66              	.LFE242:
+  68              		.section	.text.Pid_Ang_Init,"ax",%progbits
+  69              		.align	1
+  70              		.global	Pid_Ang_Init
+  71              		.syntax unified
+  72              		.thumb
+  73              		.thumb_func
+  75              	Pid_Ang_Init:
+  76              	.LVL2:
+  77              	.LFB243:
+  19:./app/algorithm/src/pid.c **** 
+  20:./app/algorithm/src/pid.c **** /// @brief PID_Ang控制器初始化
+  21:./app/algorithm/src/pid.c **** /// @param Pid 
+  22:./app/algorithm/src/pid.c **** /// @param P 
+  23:./app/algorithm/src/pid.c **** /// @param I 
+  24:./app/algorithm/src/pid.c **** /// @param D 
+  25:./app/algorithm/src/pid.c **** /// @param ramp     PID控制器加速度限幅
+  26:./app/algorithm/src/pid.c **** /// @param limit    PID控制器输出限幅
+  27:./app/algorithm/src/pid.c **** void Pid_Ang_Init(Pid_Typedef* Pid , float P, float I, float D, float ramp, float limit)
+  28:./app/algorithm/src/pid.c **** {
+  78              		.loc 1 28 1 is_stmt 1 view -0
+  79              		.cfi_startproc
+  80              		@ args = 0, pretend = 0, frame = 0
+  81              		@ frame_needed = 0, uses_anonymous_args = 0
+  82              		.loc 1 28 1 is_stmt 0 view .LVU18
+  83 0000 10B5     		push	{r4, lr}
+  84              	.LCFI1:
+  85              		.cfi_def_cfa_offset 8
+  86              		.cfi_offset 4, -8
+  87              		.cfi_offset 14, -4
+  88 0002 0446     		mov	r4, r0
+  29:./app/algorithm/src/pid.c ****     Pid->P = P;
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cct7fRut.s 			page 3
+
+
+  89              		.loc 1 29 5 is_stmt 1 view .LVU19
+  90              		.loc 1 29 12 is_stmt 0 view .LVU20
+  91 0004 80ED000A 		vstr.32	s0, [r0]
+  30:./app/algorithm/src/pid.c ****     Pid->I = I;
+  92              		.loc 1 30 5 is_stmt 1 view .LVU21
+  93              		.loc 1 30 12 is_stmt 0 view .LVU22
+  94 0008 C0ED010A 		vstr.32	s1, [r0, #4]
+  31:./app/algorithm/src/pid.c ****     Pid->D = D;
+  95              		.loc 1 31 5 is_stmt 1 view .LVU23
+  96              		.loc 1 31 12 is_stmt 0 view .LVU24
+  97 000c 80ED021A 		vstr.32	s2, [r0, #8]
+  32:./app/algorithm/src/pid.c ****     Pid->output_ramp = ramp;                //PID控制器加速度限幅
+  98              		.loc 1 32 5 is_stmt 1 view .LVU25
+  99              		.loc 1 32 22 is_stmt 0 view .LVU26
+ 100 0010 C0ED031A 		vstr.32	s3, [r0, #12]
+  33:./app/algorithm/src/pid.c ****     Pid->limit = limit;
+ 101              		.loc 1 33 5 is_stmt 1 view .LVU27
+ 102              		.loc 1 33 16 is_stmt 0 view .LVU28
+ 103 0014 80ED042A 		vstr.32	s4, [r0, #16]
+  34:./app/algorithm/src/pid.c ****     Pid->timestamp_prev = HAL_GetTick();
+ 104              		.loc 1 34 5 is_stmt 1 view .LVU29
+ 105              		.loc 1 34 27 is_stmt 0 view .LVU30
+ 106 0018 FFF7FEFF 		bl	HAL_GetTick
+ 107              	.LVL3:
+ 108              		.loc 1 34 25 view .LVU31
+ 109 001c 2062     		str	r0, [r4, #32]
+  35:./app/algorithm/src/pid.c **** }
+ 110              		.loc 1 35 1 view .LVU32
+ 111 001e 10BD     		pop	{r4, pc}
+ 112              		.loc 1 35 1 view .LVU33
+ 113              		.cfi_endproc
+ 114              	.LFE243:
+ 116              		.section	.text.Pid_Curr_Init,"ax",%progbits
+ 117              		.align	1
+ 118              		.global	Pid_Curr_Init
+ 119              		.syntax unified
+ 120              		.thumb
+ 121              		.thumb_func
+ 123              	Pid_Curr_Init:
+ 124              	.LVL4:
+ 125              	.LFB244:
+  36:./app/algorithm/src/pid.c **** 
+  37:./app/algorithm/src/pid.c **** /// @brief PID_Curr控制器初始化
+  38:./app/algorithm/src/pid.c **** /// @param Pid 
+  39:./app/algorithm/src/pid.c **** /// @param P 
+  40:./app/algorithm/src/pid.c **** /// @param I 
+  41:./app/algorithm/src/pid.c **** /// @param D 
+  42:./app/algorithm/src/pid.c **** /// @param ramp     PID控制器加速度限幅
+  43:./app/algorithm/src/pid.c **** /// @param limit    PID控制器输出限幅
+  44:./app/algorithm/src/pid.c **** void Pid_Curr_Init(Pid_Typedef* Pid , float P, float I, float D, float ramp, float limit)
+  45:./app/algorithm/src/pid.c **** {
+ 126              		.loc 1 45 1 is_stmt 1 view -0
+ 127              		.cfi_startproc
+ 128              		@ args = 0, pretend = 0, frame = 0
+ 129              		@ frame_needed = 0, uses_anonymous_args = 0
+ 130              		.loc 1 45 1 is_stmt 0 view .LVU35
+ 131 0000 10B5     		push	{r4, lr}
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cct7fRut.s 			page 4
+
+
+ 132              	.LCFI2:
+ 133              		.cfi_def_cfa_offset 8
+ 134              		.cfi_offset 4, -8
+ 135              		.cfi_offset 14, -4
+ 136 0002 0446     		mov	r4, r0
+  46:./app/algorithm/src/pid.c ****     Pid->P = P;
+ 137              		.loc 1 46 5 is_stmt 1 view .LVU36
+ 138              		.loc 1 46 12 is_stmt 0 view .LVU37
+ 139 0004 80ED000A 		vstr.32	s0, [r0]
+  47:./app/algorithm/src/pid.c ****     Pid->I = I;
+ 140              		.loc 1 47 5 is_stmt 1 view .LVU38
+ 141              		.loc 1 47 12 is_stmt 0 view .LVU39
+ 142 0008 C0ED010A 		vstr.32	s1, [r0, #4]
+  48:./app/algorithm/src/pid.c ****     Pid->D = D;
+ 143              		.loc 1 48 5 is_stmt 1 view .LVU40
+ 144              		.loc 1 48 12 is_stmt 0 view .LVU41
+ 145 000c 80ED021A 		vstr.32	s2, [r0, #8]
+  49:./app/algorithm/src/pid.c ****     Pid->output_ramp = ramp;                //PID控制器加速度限幅
+ 146              		.loc 1 49 5 is_stmt 1 view .LVU42
+ 147              		.loc 1 49 22 is_stmt 0 view .LVU43
+ 148 0010 C0ED031A 		vstr.32	s3, [r0, #12]
+  50:./app/algorithm/src/pid.c ****     Pid->limit = limit;                     //PID控制器输出限幅
+ 149              		.loc 1 50 5 is_stmt 1 view .LVU44
+ 150              		.loc 1 50 16 is_stmt 0 view .LVU45
+ 151 0014 80ED042A 		vstr.32	s4, [r0, #16]
+  51:./app/algorithm/src/pid.c ****     Pid->timestamp_prev = HAL_GetTick();
+ 152              		.loc 1 51 5 is_stmt 1 view .LVU46
+ 153              		.loc 1 51 27 is_stmt 0 view .LVU47
+ 154 0018 FFF7FEFF 		bl	HAL_GetTick
+ 155              	.LVL5:
+ 156              		.loc 1 51 25 view .LVU48
+ 157 001c 2062     		str	r0, [r4, #32]
+  52:./app/algorithm/src/pid.c **** }
+ 158              		.loc 1 52 1 view .LVU49
+ 159 001e 10BD     		pop	{r4, pc}
+ 160              		.loc 1 52 1 view .LVU50
+ 161              		.cfi_endproc
+ 162              	.LFE244:
+ 164              		.section	.text.Pid_clac,"ax",%progbits
+ 165              		.align	1
+ 166              		.global	Pid_clac
+ 167              		.syntax unified
+ 168              		.thumb
+ 169              		.thumb_func
+ 171              	Pid_clac:
+ 172              	.LVL6:
+ 173              	.LFB245:
+  53:./app/algorithm/src/pid.c **** 
+  54:./app/algorithm/src/pid.c **** /// @brief PID控制器
+  55:./app/algorithm/src/pid.c **** /// @param Pid PID控制器实例
+  56:./app/algorithm/src/pid.c **** /// @param error 
+  57:./app/algorithm/src/pid.c **** /// @return 
+  58:./app/algorithm/src/pid.c **** float Pid_clac(Pid_Typedef* Pid, float error)
+  59:./app/algorithm/src/pid.c **** {
+ 174              		.loc 1 59 1 is_stmt 1 view -0
+ 175              		.cfi_startproc
+ 176              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cct7fRut.s 			page 5
+
+
+ 177              		@ frame_needed = 0, uses_anonymous_args = 0
+ 178              		.loc 1 59 1 is_stmt 0 view .LVU52
+ 179 0000 10B5     		push	{r4, lr}
+ 180              	.LCFI3:
+ 181              		.cfi_def_cfa_offset 8
+ 182              		.cfi_offset 4, -8
+ 183              		.cfi_offset 14, -4
+ 184 0002 2DED028B 		vpush.64	{d8}
+ 185              	.LCFI4:
+ 186              		.cfi_def_cfa_offset 16
+ 187              		.cfi_offset 80, -16
+ 188              		.cfi_offset 81, -12
+ 189 0006 0446     		mov	r4, r0
+ 190 0008 B0EE408A 		vmov.f32	s16, s0
+  60:./app/algorithm/src/pid.c ****     // 计算两次循环中间的间隔时间
+  61:./app/algorithm/src/pid.c ****     unsigned long timestamp_now = HAL_GetTick();
+ 191              		.loc 1 61 5 is_stmt 1 view .LVU53
+ 192              		.loc 1 61 35 is_stmt 0 view .LVU54
+ 193 000c FFF7FEFF 		bl	HAL_GetTick
+ 194              	.LVL7:
+  62:./app/algorithm/src/pid.c ****     float Ts = (timestamp_now - Pid->timestamp_prev) * 1e-3f;
+ 195              		.loc 1 62 5 is_stmt 1 view .LVU55
+ 196              		.loc 1 62 36 is_stmt 0 view .LVU56
+ 197 0010 236A     		ldr	r3, [r4, #32]
+ 198              		.loc 1 62 31 view .LVU57
+ 199 0012 C31A     		subs	r3, r0, r3
+ 200 0014 07EE103A 		vmov	s14, r3	@ int
+ 201              		.loc 1 62 54 view .LVU58
+ 202 0018 B8EE477A 		vcvt.f32.u32	s14, s14
+ 203              		.loc 1 62 11 view .LVU59
+ 204 001c DFED4F7A 		vldr.32	s15, .L35
+ 205 0020 27EE277A 		vmul.f32	s14, s14, s15
+ 206              	.LVL8:
+  63:./app/algorithm/src/pid.c ****     if(Ts <= 0 || Ts > 0.5f) Ts = 1e-3f;
+ 207              		.loc 1 63 5 is_stmt 1 view .LVU60
+ 208              		.loc 1 63 7 is_stmt 0 view .LVU61
+ 209 0024 B5EEC07A 		vcmpe.f32	s14, #0
+ 210 0028 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 211 002c 09D9     		bls	.L22
+ 212              		.loc 1 63 16 discriminator 2 view .LVU62
+ 213 002e F6EE007A 		vmov.f32	s15, #5.0e-1
+ 214 0032 B4EEE77A 		vcmpe.f32	s14, s15
+ 215 0036 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 216 003a 04DD     		ble	.L8
+ 217              		.loc 1 63 33 view .LVU63
+ 218 003c 9FED477A 		vldr.32	s14, .L35
+ 219              	.LVL9:
+ 220              		.loc 1 63 33 view .LVU64
+ 221 0040 01E0     		b	.L8
+ 222              	.LVL10:
+ 223              	.L22:
+ 224              		.loc 1 63 33 view .LVU65
+ 225 0042 9FED467A 		vldr.32	s14, .L35
+ 226              	.LVL11:
+ 227              	.L8:
+  64:./app/algorithm/src/pid.c **** 
+  65:./app/algorithm/src/pid.c ****     // P环
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cct7fRut.s 			page 6
+
+
+  66:./app/algorithm/src/pid.c ****     float proportional = Pid->P * error;
+ 228              		.loc 1 66 5 is_stmt 1 view .LVU66
+ 229              		.loc 1 66 29 is_stmt 0 view .LVU67
+ 230 0046 D4ED007A 		vldr.32	s15, [r4]
+ 231              		.loc 1 66 11 view .LVU68
+ 232 004a 67EE887A 		vmul.f32	s15, s15, s16
+ 233              	.LVL12:
+  67:./app/algorithm/src/pid.c ****     // Tustin 散点积分（I环）
+  68:./app/algorithm/src/pid.c ****     float integral = Pid->integral_prev + Pid->I*Ts*0.5f*(error + Pid->error_prev);
+ 234              		.loc 1 68 5 is_stmt 1 view .LVU69
+ 235              		.loc 1 68 25 is_stmt 0 view .LVU70
+ 236 004e D4ED076A 		vldr.32	s13, [r4, #28]
+ 237              		.loc 1 68 46 view .LVU71
+ 238 0052 94ED016A 		vldr.32	s12, [r4, #4]
+ 239              		.loc 1 68 49 view .LVU72
+ 240 0056 26EE076A 		vmul.f32	s12, s12, s14
+ 241              		.loc 1 68 52 view .LVU73
+ 242 005a F6EE005A 		vmov.f32	s11, #5.0e-1
+ 243 005e 26EE256A 		vmul.f32	s12, s12, s11
+ 244              		.loc 1 68 70 view .LVU74
+ 245 0062 D4ED055A 		vldr.32	s11, [r4, #20]
+ 246              		.loc 1 68 65 view .LVU75
+ 247 0066 75EE885A 		vadd.f32	s11, s11, s16
+ 248              		.loc 1 68 57 view .LVU76
+ 249 006a 26EE256A 		vmul.f32	s12, s12, s11
+ 250              		.loc 1 68 11 view .LVU77
+ 251 006e 76EE866A 		vadd.f32	s13, s13, s12
+ 252              	.LVL13:
+  69:./app/algorithm/src/pid.c ****     integral = _constrain(integral, -Pid->limit, Pid->limit);
+ 253              		.loc 1 69 5 is_stmt 1 view .LVU78
+ 254              		.loc 1 69 16 is_stmt 0 view .LVU79
+ 255 0072 94ED046A 		vldr.32	s12, [r4, #16]
+ 256 0076 B1EE466A 		vneg.f32	s12, s12
+ 257 007a B4EEE66A 		vcmpe.f32	s12, s13
+ 258 007e F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 259 0082 44DD     		ble	.L31
+ 260              		.loc 1 69 16 discriminator 1 view .LVU80
+ 261 0084 D4ED046A 		vldr.32	s13, [r4, #16]
+ 262              	.LVL14:
+ 263              		.loc 1 69 16 discriminator 1 view .LVU81
+ 264 0088 F1EE666A 		vneg.f32	s13, s13
+ 265              	.L11:
+ 266              	.LVL15:
+  70:./app/algorithm/src/pid.c ****     // D环（微分环节）
+  71:./app/algorithm/src/pid.c ****     float derivative = Pid->D*(error - Pid->error_prev)/Ts;
+ 267              		.loc 1 71 5 is_stmt 1 discriminator 8 view .LVU82
+ 268              		.loc 1 71 27 is_stmt 0 discriminator 8 view .LVU83
+ 269 008c 94ED026A 		vldr.32	s12, [r4, #8]
+ 270              		.loc 1 71 43 discriminator 8 view .LVU84
+ 271 0090 D4ED055A 		vldr.32	s11, [r4, #20]
+ 272              		.loc 1 71 38 discriminator 8 view .LVU85
+ 273 0094 78EE655A 		vsub.f32	s11, s16, s11
+ 274              		.loc 1 71 30 discriminator 8 view .LVU86
+ 275 0098 26EE256A 		vmul.f32	s12, s12, s11
+ 276              		.loc 1 71 11 discriminator 8 view .LVU87
+ 277 009c 86EE070A 		vdiv.f32	s0, s12, s14
+ 278              	.LVL16:
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cct7fRut.s 			page 7
+
+
+  72:./app/algorithm/src/pid.c **** 
+  73:./app/algorithm/src/pid.c ****     // 将P,I,D三环的计算值加起来
+  74:./app/algorithm/src/pid.c ****     float output = proportional + integral + derivative;
+ 279              		.loc 1 74 5 is_stmt 1 discriminator 8 view .LVU88
+ 280              		.loc 1 74 33 is_stmt 0 discriminator 8 view .LVU89
+ 281 00a0 76EEA77A 		vadd.f32	s15, s13, s15
+ 282              	.LVL17:
+ 283              		.loc 1 74 11 discriminator 8 view .LVU90
+ 284 00a4 37EE800A 		vadd.f32	s0, s15, s0
+ 285              	.LVL18:
+  75:./app/algorithm/src/pid.c ****     output = _constrain(output, -Pid->limit, Pid->limit);
+ 286              		.loc 1 75 5 is_stmt 1 discriminator 8 view .LVU91
+ 287              		.loc 1 75 14 is_stmt 0 discriminator 8 view .LVU92
+ 288 00a8 D4ED047A 		vldr.32	s15, [r4, #16]
+ 289 00ac F1EE677A 		vneg.f32	s15, s15
+ 290 00b0 F4EEC07A 		vcmpe.f32	s15, s0
+ 291 00b4 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 292 00b8 33DD     		ble	.L32
+ 293              		.loc 1 75 14 discriminator 1 view .LVU93
+ 294 00ba D4ED047A 		vldr.32	s15, [r4, #16]
+ 295 00be B1EE670A 		vneg.f32	s0, s15
+ 296              	.LVL19:
+ 297              	.L15:
+  76:./app/algorithm/src/pid.c **** 
+  77:./app/algorithm/src/pid.c ****     if(Pid->output_ramp > 0){
+ 298              		.loc 1 77 5 is_stmt 1 discriminator 8 view .LVU94
+ 299              		.loc 1 77 11 is_stmt 0 discriminator 8 view .LVU95
+ 300 00c2 D4ED037A 		vldr.32	s15, [r4, #12]
+ 301              		.loc 1 77 7 discriminator 8 view .LVU96
+ 302 00c6 F5EEC07A 		vcmpe.f32	s15, #0
+ 303 00ca F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 304 00ce 14DD     		ble	.L17
+ 305              	.LBB2:
+  78:./app/algorithm/src/pid.c ****         // 对PID的变化速率进行限制
+  79:./app/algorithm/src/pid.c ****         float output_rate = (output - Pid->output_prev)/Ts;
+ 306              		.loc 1 79 9 is_stmt 1 view .LVU97
+ 307              		.loc 1 79 42 is_stmt 0 view .LVU98
+ 308 00d0 D4ED067A 		vldr.32	s15, [r4, #24]
+ 309              		.loc 1 79 37 view .LVU99
+ 310 00d4 70EE677A 		vsub.f32	s15, s0, s15
+ 311              		.loc 1 79 15 view .LVU100
+ 312 00d8 87EE876A 		vdiv.f32	s12, s15, s14
+ 313              	.LVL20:
+  80:./app/algorithm/src/pid.c ****         if (output_rate > Pid->output_ramp)
+ 314              		.loc 1 80 9 is_stmt 1 view .LVU101
+ 315              		.loc 1 80 30 is_stmt 0 view .LVU102
+ 316 00dc D4ED037A 		vldr.32	s15, [r4, #12]
+ 317              		.loc 1 80 12 view .LVU103
+ 318 00e0 F4EEC67A 		vcmpe.f32	s15, s12
+ 319 00e4 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 320 00e8 25D5     		bpl	.L33
+  81:./app/algorithm/src/pid.c ****             output = Pid->output_prev + Pid->output_ramp*Ts;
+ 321              		.loc 1 81 13 is_stmt 1 view .LVU104
+ 322              		.loc 1 81 25 is_stmt 0 view .LVU105
+ 323 00ea D4ED067A 		vldr.32	s15, [r4, #24]
+ 324              		.loc 1 81 44 view .LVU106
+ 325 00ee 94ED030A 		vldr.32	s0, [r4, #12]
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cct7fRut.s 			page 8
+
+
+ 326              	.LVL21:
+ 327              		.loc 1 81 57 view .LVU107
+ 328 00f2 20EE070A 		vmul.f32	s0, s0, s14
+ 329              		.loc 1 81 20 view .LVU108
+ 330 00f6 37EE800A 		vadd.f32	s0, s15, s0
+ 331              	.LVL22:
+ 332              	.L17:
+ 333              		.loc 1 81 20 view .LVU109
+ 334              	.LBE2:
+  82:./app/algorithm/src/pid.c ****         else if (output_rate < -Pid->output_ramp)
+  83:./app/algorithm/src/pid.c ****             output = Pid->output_prev - Pid->output_ramp*Ts;
+  84:./app/algorithm/src/pid.c ****     }
+  85:./app/algorithm/src/pid.c **** 
+  86:./app/algorithm/src/pid.c ****     // 保存值（为了下一次循环）
+  87:./app/algorithm/src/pid.c ****     Pid->integral_prev = integral;
+ 335              		.loc 1 87 5 is_stmt 1 view .LVU110
+ 336              		.loc 1 87 24 is_stmt 0 view .LVU111
+ 337 00fa C4ED076A 		vstr.32	s13, [r4, #28]
+  88:./app/algorithm/src/pid.c ****     Pid->output_prev = output;
+ 338              		.loc 1 88 5 is_stmt 1 view .LVU112
+ 339              		.loc 1 88 22 is_stmt 0 view .LVU113
+ 340 00fe 84ED060A 		vstr.32	s0, [r4, #24]
+  89:./app/algorithm/src/pid.c ****     Pid->error_prev = error;
+ 341              		.loc 1 89 5 is_stmt 1 view .LVU114
+ 342              		.loc 1 89 21 is_stmt 0 view .LVU115
+ 343 0102 84ED058A 		vstr.32	s16, [r4, #20]
+  90:./app/algorithm/src/pid.c ****     Pid->timestamp_prev = timestamp_now;
+ 344              		.loc 1 90 5 is_stmt 1 view .LVU116
+ 345              		.loc 1 90 25 is_stmt 0 view .LVU117
+ 346 0106 2062     		str	r0, [r4, #32]
+  91:./app/algorithm/src/pid.c ****     return output;
+ 347              		.loc 1 91 5 is_stmt 1 view .LVU118
+  92:./app/algorithm/src/pid.c **** }
+ 348              		.loc 1 92 1 is_stmt 0 view .LVU119
+ 349 0108 BDEC028B 		vldm	sp!, {d8}
+ 350              	.LCFI5:
+ 351              		.cfi_remember_state
+ 352              		.cfi_restore 80
+ 353              		.cfi_restore 81
+ 354              		.cfi_def_cfa_offset 8
+ 355              	.LVL23:
+ 356              		.loc 1 92 1 view .LVU120
+ 357 010c 10BD     		pop	{r4, pc}
+ 358              	.LVL24:
+ 359              	.L31:
+ 360              	.LCFI6:
+ 361              		.cfi_restore_state
+  69:./app/algorithm/src/pid.c ****     // D环（微分环节）
+ 362              		.loc 1 69 16 discriminator 2 view .LVU121
+ 363 010e 94ED046A 		vldr.32	s12, [r4, #16]
+ 364 0112 B4EEE66A 		vcmpe.f32	s12, s13
+ 365 0116 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 366 011a B7D5     		bpl	.L11
+  69:./app/algorithm/src/pid.c ****     // D环（微分环节）
+ 367              		.loc 1 69 16 discriminator 4 view .LVU122
+ 368 011c D4ED046A 		vldr.32	s13, [r4, #16]
+ 369              	.LVL25:
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cct7fRut.s 			page 9
+
+
+  69:./app/algorithm/src/pid.c ****     // D环（微分环节）
+ 370              		.loc 1 69 16 discriminator 4 view .LVU123
+ 371 0120 B4E7     		b	.L11
+ 372              	.LVL26:
+ 373              	.L32:
+  75:./app/algorithm/src/pid.c **** 
+ 374              		.loc 1 75 14 discriminator 2 view .LVU124
+ 375 0122 D4ED047A 		vldr.32	s15, [r4, #16]
+ 376 0126 F4EEC07A 		vcmpe.f32	s15, s0
+ 377 012a F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 378 012e C8D5     		bpl	.L15
+  75:./app/algorithm/src/pid.c **** 
+ 379              		.loc 1 75 14 discriminator 4 view .LVU125
+ 380 0130 94ED040A 		vldr.32	s0, [r4, #16]
+ 381              	.LVL27:
+  75:./app/algorithm/src/pid.c **** 
+ 382              		.loc 1 75 14 discriminator 4 view .LVU126
+ 383 0134 C5E7     		b	.L15
+ 384              	.LVL28:
+ 385              	.L33:
+ 386              	.LBB3:
+  82:./app/algorithm/src/pid.c ****             output = Pid->output_prev - Pid->output_ramp*Ts;
+ 387              		.loc 1 82 14 is_stmt 1 view .LVU127
+  82:./app/algorithm/src/pid.c ****             output = Pid->output_prev - Pid->output_ramp*Ts;
+ 388              		.loc 1 82 36 is_stmt 0 view .LVU128
+ 389 0136 D4ED037A 		vldr.32	s15, [r4, #12]
+  82:./app/algorithm/src/pid.c ****             output = Pid->output_prev - Pid->output_ramp*Ts;
+ 390              		.loc 1 82 32 view .LVU129
+ 391 013a F1EE677A 		vneg.f32	s15, s15
+  82:./app/algorithm/src/pid.c ****             output = Pid->output_prev - Pid->output_ramp*Ts;
+ 392              		.loc 1 82 17 view .LVU130
+ 393 013e F4EEC67A 		vcmpe.f32	s15, s12
+ 394 0142 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 395 0146 D8DD     		ble	.L17
+  83:./app/algorithm/src/pid.c ****     }
+ 396              		.loc 1 83 13 is_stmt 1 view .LVU131
+  83:./app/algorithm/src/pid.c ****     }
+ 397              		.loc 1 83 25 is_stmt 0 view .LVU132
+ 398 0148 D4ED067A 		vldr.32	s15, [r4, #24]
+  83:./app/algorithm/src/pid.c ****     }
+ 399              		.loc 1 83 44 view .LVU133
+ 400 014c 94ED030A 		vldr.32	s0, [r4, #12]
+ 401              	.LVL29:
+  83:./app/algorithm/src/pid.c ****     }
+ 402              		.loc 1 83 57 view .LVU134
+ 403 0150 20EE070A 		vmul.f32	s0, s0, s14
+  83:./app/algorithm/src/pid.c ****     }
+ 404              		.loc 1 83 20 view .LVU135
+ 405 0154 37EEC00A 		vsub.f32	s0, s15, s0
+ 406              	.LVL30:
+  83:./app/algorithm/src/pid.c ****     }
+ 407              		.loc 1 83 20 view .LVU136
+ 408 0158 CFE7     		b	.L17
+ 409              	.L36:
+ 410 015a 00BF     		.align	2
+ 411              	.L35:
+ 412 015c 6F12833A 		.word	981668463
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cct7fRut.s 			page 10
+
+
+ 413              	.LBE3:
+ 414              		.cfi_endproc
+ 415              	.LFE245:
+ 417              		.text
+ 418              	.Letext0:
+ 419              		.file 2 "./app/algorithm/inc/pid.h"
+ 420              		.file 3 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cct7fRut.s 			page 11
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 pid.c
+C:\Users\Dennis\AppData\Local\Temp\cct7fRut.s:20     .text.Pid_Vel_Init:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\cct7fRut.s:26     .text.Pid_Vel_Init:00000000 Pid_Vel_Init
+C:\Users\Dennis\AppData\Local\Temp\cct7fRut.s:69     .text.Pid_Ang_Init:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\cct7fRut.s:75     .text.Pid_Ang_Init:00000000 Pid_Ang_Init
+C:\Users\Dennis\AppData\Local\Temp\cct7fRut.s:117    .text.Pid_Curr_Init:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\cct7fRut.s:123    .text.Pid_Curr_Init:00000000 Pid_Curr_Init
+C:\Users\Dennis\AppData\Local\Temp\cct7fRut.s:165    .text.Pid_clac:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\cct7fRut.s:171    .text.Pid_clac:00000000 Pid_clac
+C:\Users\Dennis\AppData\Local\Temp\cct7fRut.s:412    .text.Pid_clac:0000015c $d
+
+UNDEFINED SYMBOLS
+HAL_GetTick

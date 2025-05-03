@@ -1,0 +1,145 @@
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cch3MkbS.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"Thread_Motor_Control.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.Thread_Motor_Control_Entry,"ax",%progbits
+  20              		.align	1
+  21              		.global	Thread_Motor_Control_Entry
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	Thread_Motor_Control_Entry:
+  27              	.LFB250:
+  28              		.file 1 "./app/threads/Thread_Motor_Control/Thread_Motor_Control.c"
+   1:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** /**
+   2:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****   ******************************************************************************
+   3:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****   * @file           : Thread_template.c
+   4:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****   * @brief          : 降低代码耦合
+   5:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****   ******************************************************************************
+   6:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****   * @author			  : Dennis_Re_Yoonjiho
+   7:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****   * @attention		:
+   8:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****   *	
+   9:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****   * 						   	Copyright (c) 2021 Dennis_Re_Yoonjiho
+  10:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****   ******************************************************************************
+  11:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****   */
+  12:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** 
+  13:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** 
+  14:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** #include "Thread_Motor_Control.h"
+  15:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** 
+  16:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** 
+  17:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** TX_THREAD Thread_Motor_Control;						//实例化线程句柄,线程相关信息
+  18:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** Thread_Motor_Control_parama Thread_Motor_Control_parama1;	//实例化入口函数的参数
+  19:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** 
+  20:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** 
+  21:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** 
+  22:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** 
+  23:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** /*******************************************************************************
+  24:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** * Function Name  : Thread_Motor_Control_Entry
+  25:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** * Description    : Thread_Motor_Control_Entry线程
+  26:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** * Input          : ULONG thread_input
+  27:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** * Output         : None
+  28:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** * Return         : None
+  29:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** * Note			 : 快速创建线程demo
+  30:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** *******************************************************************************/
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cch3MkbS.s 			page 2
+
+
+  31:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** void Thread_Motor_Control_Entry(ULONG thread_input)
+  32:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** {
+  29              		.loc 1 32 1 view -0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33              	.LVL0:
+  34              		.loc 1 32 1 is_stmt 0 view .LVU1
+  35 0000 08B5     		push	{r3, lr}
+  36              	.LCFI0:
+  37              		.cfi_def_cfa_offset 8
+  38              		.cfi_offset 3, -8
+  39              		.cfi_offset 14, -4
+  40              	.LVL1:
+  41              	.L2:
+  33:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****     Thread_Motor_Control_parama * thread_param = (Thread_Motor_Control_parama *)thread_input;
+  34:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****     Motor* motor1 = (Motor*)thread_param->Motor1_handle;
+  35:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** 
+  36:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** 	while(1)
+  42              		.loc 1 36 2 is_stmt 1 discriminator 1 view .LVU2
+  37:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** 	{
+  38:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****         tx_thread_sleep(100);
+  43              		.loc 1 38 9 discriminator 1 view .LVU3
+  44 0002 6420     		movs	r0, #100
+  45 0004 FFF7FEFF 		bl	_tx_thread_sleep
+  46              	.LVL2:
+  36:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** 	{
+  47              		.loc 1 36 7 discriminator 1 view .LVU4
+  48 0008 FBE7     		b	.L2
+  49              		.cfi_endproc
+  50              	.LFE250:
+  52              		.global	Thread_Motor_Control_parama1
+  53              		.global	Thread_Motor_Control
+  54              		.section	.bss.Thread_Motor_Control,"aw",%nobits
+  55              		.align	2
+  58              	Thread_Motor_Control:
+  59 0000 00000000 		.space	176
+  59      00000000 
+  59      00000000 
+  59      00000000 
+  59      00000000 
+  60              		.section	.bss.Thread_Motor_Control_parama1,"aw",%nobits
+  61              		.align	3
+  64              	Thread_Motor_Control_parama1:
+  65 0000 00000000 		.space	48
+  65      00000000 
+  65      00000000 
+  65      00000000 
+  65      00000000 
+  66              		.text
+  67              	.Letext0:
+  68              		.file 2 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\machine\\_default_types.h"
+  69              		.file 3 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
+  70              		.file 4 "./Middlewares/ST/threadx/common/inc/tx_api.h"
+  71              		.file 5 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\sys\\_stdint.h"
+  72              		.file 6 "./Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h"
+  73              		.file 7 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cch3MkbS.s 			page 3
+
+
+  74              		.file 8 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
+  75              		.file 9 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h"
+  76              		.file 10 "./app/peripheral/inc/as5600.h"
+  77              		.file 11 "./app/algorithm/inc/pid.h"
+  78              		.file 12 "./app/algorithm/inc/lowpass_filter.h"
+  79              		.file 13 "./app/peripheral/inc/inlinecurrent.h"
+  80              		.file 14 "./app/algorithm/inc/ts_foc.h"
+  81              		.file 15 "./app/threads/Thread_Motor_Control/Thread_Motor_Control.h"
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cch3MkbS.s 			page 4
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 Thread_Motor_Control.c
+C:\Users\Dennis\AppData\Local\Temp\cch3MkbS.s:20     .text.Thread_Motor_Control_Entry:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\cch3MkbS.s:26     .text.Thread_Motor_Control_Entry:00000000 Thread_Motor_Control_Entry
+C:\Users\Dennis\AppData\Local\Temp\cch3MkbS.s:64     .bss.Thread_Motor_Control_parama1:00000000 Thread_Motor_Control_parama1
+C:\Users\Dennis\AppData\Local\Temp\cch3MkbS.s:58     .bss.Thread_Motor_Control:00000000 Thread_Motor_Control
+C:\Users\Dennis\AppData\Local\Temp\cch3MkbS.s:55     .bss.Thread_Motor_Control:00000000 $d
+C:\Users\Dennis\AppData\Local\Temp\cch3MkbS.s:61     .bss.Thread_Motor_Control_parama1:00000000 $d
+
+UNDEFINED SYMBOLS
+_tx_thread_sleep

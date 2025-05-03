@@ -83,6 +83,13 @@ UINT App_ThreadX_Init(VOID *memory_ptr)
                       Thread_Cmd_PRIO, Thread_Cmd_threshold,
                       TX_NO_TIME_SLICE, TX_AUTO_START) != TX_SUCCESS) ret = TX_THREAD_ERROR;
 
+//************************************************Motor_Ctrl线程***********************************************
+if (tx_byte_allocate(byte_pool, (VOID **) &pointer,
+                      Thread_Motor_Control_Size, TX_NO_WAIT) != TX_SUCCESS)    ret = TX_POOL_ERROR;
+if(tx_thread_create(&Thread_Motor_Control, "Thread_Motor_Control",
+                      Thread_Motor_Control_Entry, (ULONG)&Thread_Motor_Control_parama1, pointer, Thread_Motor_Control_Size,
+                      Thread_Motor_Control_PRIO, Thread_Motor_Control_threshold,
+                      TX_NO_TIME_SLICE, TX_AUTO_START) != TX_SUCCESS) ret = TX_THREAD_ERROR;
 
 
 

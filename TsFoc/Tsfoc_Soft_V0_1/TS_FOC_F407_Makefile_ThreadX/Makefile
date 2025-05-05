@@ -36,6 +36,8 @@ BUILD_DIR = build
 ######################################
 # C sources
 C_SOURCES =  \
+./app/Threads/Thread_oled/Thread_oled.c \
+./app/Threads/Thread_led/Thread_led.c \
 ./app/peripheral/src/OLED_Function.c \
 ./app/peripheral/src/OLED_IIC_Config.c \
 ./app/algorithm/src/pid.c \
@@ -502,6 +504,8 @@ AS_INCLUDES =
 
 # C includes
 C_INCLUDES =  \
+-I./app/Threads/Thread_oled/ \
+-I./app/Threads/Thread_led/ \
 -I./app/peripheral/inc/ \
 -I./app/Threads/Thread_Motor_Control/ \
 -I./app/algorithm/inc/ \
@@ -531,6 +535,7 @@ C_INCLUDES =  \
 ASFLAGS = $(MCU) $(AS_DEFS) $(AS_INCLUDES) $(OPT) -Wall -fdata-sections -ffunction-sections
 
 CFLAGS += $(MCU) $(C_DEFS) $(C_INCLUDES) $(OPT) -Wall -fdata-sections -ffunction-sections
+CFLAGS += -Wno-missing-braces # 忽略警告: 字符串数组初始化时缺少大括号
 
 ifeq ($(DEBUG), 1)
 CFLAGS += -g -gdwarf-2

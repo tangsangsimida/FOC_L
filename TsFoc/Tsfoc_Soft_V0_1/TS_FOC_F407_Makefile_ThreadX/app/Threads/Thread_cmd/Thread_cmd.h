@@ -10,8 +10,8 @@
 #include <stdlib.h>
 #include "dma.h"
 #define Thread_Cmd_Size (2048)			//线程堆栈大小
-#define Thread_Cmd_PRIO (20)			//线程优先级
-#define Thread_Cmd_threshold (20)		//线程抢占阈值
+#define Thread_Cmd_PRIO (17)			//线程优先级
+#define Thread_Cmd_threshold (17)		//线程抢占阈值
 
 #define UART_RECEIVE_IDLE_RX_MAXLEN  256
 

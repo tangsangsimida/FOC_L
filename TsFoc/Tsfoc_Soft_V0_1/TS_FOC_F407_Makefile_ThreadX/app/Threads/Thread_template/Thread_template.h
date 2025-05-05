@@ -14,8 +14,8 @@
 
 // 线程变量
 #define Thread_Template_Size (512)			//线程堆栈大小
-#define Thread_Template_PRIO (15)			//线程优先级
-#define Thread_Template_threshold (15)		//线程抢占阈值
+#define Thread_Template_PRIO (31)			//线程优先级
+#define Thread_Template_threshold (31)		//线程抢占阈值
 typedef struct							//线程执行函数的参数结构体
 {
 	uint8_t parama1;
@@ -29,11 +29,6 @@ extern Thread_Template_parama Thread_Template_parama1;	//实例化入口函数�
 // 其他变量……
 
 
-// RGB线程 变量
-
-#define RGB_FLOW_COLOR_CHANGE_TIME  500
-#define RGB_FLOW_COLOR_LENGHT   3
-void aRGB_led_show(uint32_t);
 
 
 #endif

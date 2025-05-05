@@ -24,8 +24,8 @@ unsigned char  ScreenBuffer[SCREEN_PAGE_NUM][SCREEN_COLUMN];//定义屏幕的存
 */
 void I2C_WriteByte(uint8_t addr, uint8_t data)
 {
-	extern I2C_HandleTypeDef hi2c1;
-	HAL_I2C_Mem_Write(&hi2c1, OLED_ADDRESS, addr, I2C_MEMADD_SIZE_8BIT, &data, 1, 10);
+	extern I2C_HandleTypeDef OLED_IIC_Handler;
+	HAL_I2C_Mem_Write(&OLED_IIC_Handler, OLED_ADDRESS, addr, I2C_MEMADD_SIZE_8BIT, &data, 1, 10);
 }
 
 /**

@@ -16,6 +16,8 @@
 #include "stdint.h"
 
 
+#define OLED_IIC_Handler 	hi2c1	//IIC句柄   
+
 
 #define  OLED_ADDRESS 		0x78	//OLED地址  默认0x78
 

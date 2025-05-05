@@ -91,6 +91,21 @@ if(tx_thread_create(&Thread_Motor_Control, "Thread_Motor_Control",
                       Thread_Motor_Control_PRIO, Thread_Motor_Control_threshold,
                       TX_NO_TIME_SLICE, TX_AUTO_START) != TX_SUCCESS) ret = TX_THREAD_ERROR;
 
+//************************************************oled线程***********************************************
+if (tx_byte_allocate(byte_pool, (VOID **) &pointer,
+                      Thread_oled_Size, TX_NO_WAIT) != TX_SUCCESS)    ret = TX_POOL_ERROR;
+if(tx_thread_create(&Thread_oled, "Thread_oled",
+                      Thread_oled_Entry, (ULONG)&Thread_oled_parama1, pointer, Thread_oled_Size,
+                      Thread_oled_PRIO, Thread_oled_threshold,
+                      TX_NO_TIME_SLICE, TX_AUTO_START) != TX_SUCCESS) ret = TX_THREAD_ERROR;
+
+//************************************************led线程***********************************************
+if (tx_byte_allocate(byte_pool, (VOID **) &pointer,
+                      Thread_led_Size, TX_NO_WAIT) != TX_SUCCESS)    ret = TX_POOL_ERROR;
+if(tx_thread_create(&Thread_led, "Thread_led",
+                      Thread_led_Entry, (ULONG)&Thread_led_parama1, pointer, Thread_led_Size,
+                      Thread_led_PRIO, Thread_led_threshold,
+                      TX_NO_TIME_SLICE, TX_AUTO_START) != TX_SUCCESS) ret = TX_THREAD_ERROR;
 
 
 

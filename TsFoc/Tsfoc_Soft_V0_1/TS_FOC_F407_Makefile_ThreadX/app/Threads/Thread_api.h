@@ -7,7 +7,8 @@
 #include "Thread_template.h"
 #include "Thread_cmd.h"
 #include "Thread_Motor_Control.h"
-
+#include "Thread_oled.h"
+#include "Thread_led.h"
 
 
 #endif

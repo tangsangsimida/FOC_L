@@ -427,7 +427,7 @@ C_SOURCES =  \
 ./Middlewares/ST/threadx/common/src/txe_timer_create.c \
 ./Middlewares/ST/threadx/common/src/txe_timer_deactivate.c \
 ./Middlewares/ST/threadx/common/src/txe_timer_delete.c \
-./Middlewares/ST/threadx/common/src/txe_timer_info_get.c
+./Middlewares/ST/threadx/common/src/txe_timer_info_get.c \
 
 
 
@@ -520,7 +520,7 @@ C_INCLUDES =  \
 -I./Middlewares/ST/usbx/common/usbx_device_classes/inc/ \
 -I./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ \
 -I./Middlewares/ST/threadx/common/inc/ \
--I./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/
+-I./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/ \
 
 
 

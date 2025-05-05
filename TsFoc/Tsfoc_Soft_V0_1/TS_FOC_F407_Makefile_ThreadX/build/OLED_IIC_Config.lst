@@ -1,0 +1,1316 @@
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"OLED_IIC_Config.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.I2C_WriteByte,"ax",%progbits
+  20              		.align	1
+  21              		.global	I2C_WriteByte
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	I2C_WriteByte:
+  27              	.LVL0:
+  28              	.LFB239:
+  29              		.file 1 "./app/peripheral/src/OLED_IIC_Config.c"
+   1:./app/peripheral/src/OLED_IIC_Config.c **** /**
+   2:./app/peripheral/src/OLED_IIC_Config.c ****  * ************************************************************************
+   3:./app/peripheral/src/OLED_IIC_Config.c ****  * 
+   4:./app/peripheral/src/OLED_IIC_Config.c ****  * @file OLED_IIC_Config.c
+   5:./app/peripheral/src/OLED_IIC_Config.c ****  * @author zxr
+   6:./app/peripheral/src/OLED_IIC_Config.c ****  * @brief IIC初始化配置和OLED屏幕的底层驱动
+   7:./app/peripheral/src/OLED_IIC_Config.c ****  * 
+   8:./app/peripheral/src/OLED_IIC_Config.c ****  * ************************************************************************
+   9:./app/peripheral/src/OLED_IIC_Config.c ****  * @copyright Copyright (c) 2024 zxr 
+  10:./app/peripheral/src/OLED_IIC_Config.c ****  * ************************************************************************
+  11:./app/peripheral/src/OLED_IIC_Config.c ****  */
+  12:./app/peripheral/src/OLED_IIC_Config.c **** #include "OLED_IIC_Config.h"
+  13:./app/peripheral/src/OLED_IIC_Config.c **** #include "i2c.h"
+  14:./app/peripheral/src/OLED_IIC_Config.c **** 
+  15:./app/peripheral/src/OLED_IIC_Config.c **** unsigned char  ScreenBuffer[SCREEN_PAGE_NUM][SCREEN_COLUMN];//定义屏幕的存储空间
+  16:./app/peripheral/src/OLED_IIC_Config.c **** 
+  17:./app/peripheral/src/OLED_IIC_Config.c **** 
+  18:./app/peripheral/src/OLED_IIC_Config.c **** 
+  19:./app/peripheral/src/OLED_IIC_Config.c **** /**
+  20:./app/peripheral/src/OLED_IIC_Config.c **** * @brief  向OLED寄存器地址写一个byte的数据
+  21:./app/peripheral/src/OLED_IIC_Config.c **** * @param  addr：寄存器地址
+  22:./app/peripheral/src/OLED_IIC_Config.c **** * @param  data：要写入的数据
+  23:./app/peripheral/src/OLED_IIC_Config.c **** * @retval 无
+  24:./app/peripheral/src/OLED_IIC_Config.c **** */
+  25:./app/peripheral/src/OLED_IIC_Config.c **** void I2C_WriteByte(uint8_t addr, uint8_t data)
+  26:./app/peripheral/src/OLED_IIC_Config.c **** {
+  30              		.loc 1 26 1 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 8
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s 			page 2
+
+
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		.loc 1 26 1 is_stmt 0 view .LVU1
+  35 0000 00B5     		push	{lr}
+  36              	.LCFI0:
+  37              		.cfi_def_cfa_offset 4
+  38              		.cfi_offset 14, -4
+  39 0002 87B0     		sub	sp, sp, #28
+  40              	.LCFI1:
+  41              		.cfi_def_cfa_offset 32
+  42 0004 0246     		mov	r2, r0
+  43 0006 8DF81710 		strb	r1, [sp, #23]
+  27:./app/peripheral/src/OLED_IIC_Config.c **** 	extern I2C_HandleTypeDef hi2c1;
+  44              		.loc 1 27 2 is_stmt 1 view .LVU2
+  28:./app/peripheral/src/OLED_IIC_Config.c **** 	HAL_I2C_Mem_Write(&hi2c1, OLED_ADDRESS, addr, I2C_MEMADD_SIZE_8BIT, &data, 1, 10);
+  45              		.loc 1 28 2 view .LVU3
+  46 000a 0A23     		movs	r3, #10
+  47 000c 0293     		str	r3, [sp, #8]
+  48 000e 0123     		movs	r3, #1
+  49 0010 0193     		str	r3, [sp, #4]
+  50 0012 0DF11701 		add	r1, sp, #23
+  51              	.LVL1:
+  52              		.loc 1 28 2 is_stmt 0 view .LVU4
+  53 0016 0091     		str	r1, [sp]
+  54 0018 7821     		movs	r1, #120
+  55              	.LVL2:
+  56              		.loc 1 28 2 view .LVU5
+  57 001a 0348     		ldr	r0, .L3
+  58              	.LVL3:
+  59              		.loc 1 28 2 view .LVU6
+  60 001c FFF7FEFF 		bl	HAL_I2C_Mem_Write
+  61              	.LVL4:
+  29:./app/peripheral/src/OLED_IIC_Config.c **** }
+  62              		.loc 1 29 1 view .LVU7
+  63 0020 07B0     		add	sp, sp, #28
+  64              	.LCFI2:
+  65              		.cfi_def_cfa_offset 4
+  66              		@ sp needed
+  67 0022 5DF804FB 		ldr	pc, [sp], #4
+  68              	.L4:
+  69 0026 00BF     		.align	2
+  70              	.L3:
+  71 0028 00000000 		.word	hi2c1
+  72              		.cfi_endproc
+  73              	.LFE239:
+  75              		.section	.text.WriteCmd,"ax",%progbits
+  76              		.align	1
+  77              		.global	WriteCmd
+  78              		.syntax unified
+  79              		.thumb
+  80              		.thumb_func
+  82              	WriteCmd:
+  83              	.LVL5:
+  84              	.LFB240:
+  30:./app/peripheral/src/OLED_IIC_Config.c **** 
+  31:./app/peripheral/src/OLED_IIC_Config.c **** /**
+  32:./app/peripheral/src/OLED_IIC_Config.c ****  * ************************************************************************
+  33:./app/peripheral/src/OLED_IIC_Config.c ****  * @brief 写命令函数
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s 			page 3
+
+
+  34:./app/peripheral/src/OLED_IIC_Config.c ****  * @param[in] cmd  写入的命令
+  35:./app/peripheral/src/OLED_IIC_Config.c ****  * ************************************************************************
+  36:./app/peripheral/src/OLED_IIC_Config.c ****  */
+  37:./app/peripheral/src/OLED_IIC_Config.c **** void WriteCmd(unsigned char cmd)
+  38:./app/peripheral/src/OLED_IIC_Config.c **** {
+  85              		.loc 1 38 1 is_stmt 1 view -0
+  86              		.cfi_startproc
+  87              		@ args = 0, pretend = 0, frame = 0
+  88              		@ frame_needed = 0, uses_anonymous_args = 0
+  89              		.loc 1 38 1 is_stmt 0 view .LVU9
+  90 0000 08B5     		push	{r3, lr}
+  91              	.LCFI3:
+  92              		.cfi_def_cfa_offset 8
+  93              		.cfi_offset 3, -8
+  94              		.cfi_offset 14, -4
+  95 0002 0146     		mov	r1, r0
+  39:./app/peripheral/src/OLED_IIC_Config.c **** 	I2C_WriteByte(0x00, cmd);
+  96              		.loc 1 39 2 is_stmt 1 view .LVU10
+  97 0004 0020     		movs	r0, #0
+  98              	.LVL6:
+  99              		.loc 1 39 2 is_stmt 0 view .LVU11
+ 100 0006 FFF7FEFF 		bl	I2C_WriteByte
+ 101              	.LVL7:
+  40:./app/peripheral/src/OLED_IIC_Config.c **** }
+ 102              		.loc 1 40 1 view .LVU12
+ 103 000a 08BD     		pop	{r3, pc}
+ 104              		.cfi_endproc
+ 105              	.LFE240:
+ 107              		.section	.text.WriteDat,"ax",%progbits
+ 108              		.align	1
+ 109              		.global	WriteDat
+ 110              		.syntax unified
+ 111              		.thumb
+ 112              		.thumb_func
+ 114              	WriteDat:
+ 115              	.LVL8:
+ 116              	.LFB241:
+  41:./app/peripheral/src/OLED_IIC_Config.c **** 
+  42:./app/peripheral/src/OLED_IIC_Config.c **** /**
+  43:./app/peripheral/src/OLED_IIC_Config.c ****  * ************************************************************************
+  44:./app/peripheral/src/OLED_IIC_Config.c ****  * @brief 写数据函数
+  45:./app/peripheral/src/OLED_IIC_Config.c ****  * @param[in] dat  写入的数据
+  46:./app/peripheral/src/OLED_IIC_Config.c ****  * ************************************************************************
+  47:./app/peripheral/src/OLED_IIC_Config.c ****  */
+  48:./app/peripheral/src/OLED_IIC_Config.c **** void WriteDat(unsigned char dat)
+  49:./app/peripheral/src/OLED_IIC_Config.c **** {
+ 117              		.loc 1 49 1 is_stmt 1 view -0
+ 118              		.cfi_startproc
+ 119              		@ args = 0, pretend = 0, frame = 0
+ 120              		@ frame_needed = 0, uses_anonymous_args = 0
+ 121              		.loc 1 49 1 is_stmt 0 view .LVU14
+ 122 0000 08B5     		push	{r3, lr}
+ 123              	.LCFI4:
+ 124              		.cfi_def_cfa_offset 8
+ 125              		.cfi_offset 3, -8
+ 126              		.cfi_offset 14, -4
+ 127 0002 0146     		mov	r1, r0
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s 			page 4
+
+
+  50:./app/peripheral/src/OLED_IIC_Config.c **** 	I2C_WriteByte(0x40, dat);
+ 128              		.loc 1 50 2 is_stmt 1 view .LVU15
+ 129 0004 4020     		movs	r0, #64
+ 130              	.LVL9:
+ 131              		.loc 1 50 2 is_stmt 0 view .LVU16
+ 132 0006 FFF7FEFF 		bl	I2C_WriteByte
+ 133              	.LVL10:
+  51:./app/peripheral/src/OLED_IIC_Config.c **** }
+ 134              		.loc 1 51 1 view .LVU17
+ 135 000a 08BD     		pop	{r3, pc}
+ 136              		.cfi_endproc
+ 137              	.LFE241:
+ 139              		.section	.text.OLED_ON,"ax",%progbits
+ 140              		.align	1
+ 141              		.global	OLED_ON
+ 142              		.syntax unified
+ 143              		.thumb
+ 144              		.thumb_func
+ 146              	OLED_ON:
+ 147              	.LFB242:
+  52:./app/peripheral/src/OLED_IIC_Config.c **** 
+  53:./app/peripheral/src/OLED_IIC_Config.c **** /**
+  54:./app/peripheral/src/OLED_IIC_Config.c ****  * ************************************************************************
+  55:./app/peripheral/src/OLED_IIC_Config.c ****  * @brief 开启OLED
+  56:./app/peripheral/src/OLED_IIC_Config.c ****  * ************************************************************************
+  57:./app/peripheral/src/OLED_IIC_Config.c ****  */
+  58:./app/peripheral/src/OLED_IIC_Config.c **** void OLED_ON(void)
+  59:./app/peripheral/src/OLED_IIC_Config.c **** {
+ 148              		.loc 1 59 1 is_stmt 1 view -0
+ 149              		.cfi_startproc
+ 150              		@ args = 0, pretend = 0, frame = 0
+ 151              		@ frame_needed = 0, uses_anonymous_args = 0
+ 152 0000 08B5     		push	{r3, lr}
+ 153              	.LCFI5:
+ 154              		.cfi_def_cfa_offset 8
+ 155              		.cfi_offset 3, -8
+ 156              		.cfi_offset 14, -4
+  60:./app/peripheral/src/OLED_IIC_Config.c **** 	WriteCmd(0X8D);  //设置电荷泵
+ 157              		.loc 1 60 2 view .LVU19
+ 158 0002 8D20     		movs	r0, #141
+ 159 0004 FFF7FEFF 		bl	WriteCmd
+ 160              	.LVL11:
+  61:./app/peripheral/src/OLED_IIC_Config.c **** 	WriteCmd(0X14);  //开启电荷泵
+ 161              		.loc 1 61 2 view .LVU20
+ 162 0008 1420     		movs	r0, #20
+ 163 000a FFF7FEFF 		bl	WriteCmd
+ 164              	.LVL12:
+  62:./app/peripheral/src/OLED_IIC_Config.c **** 	WriteCmd(0XAF);  //OLED唤醒
+ 165              		.loc 1 62 2 view .LVU21
+ 166 000e AF20     		movs	r0, #175
+ 167 0010 FFF7FEFF 		bl	WriteCmd
+ 168              	.LVL13:
+  63:./app/peripheral/src/OLED_IIC_Config.c **** }
+ 169              		.loc 1 63 1 is_stmt 0 view .LVU22
+ 170 0014 08BD     		pop	{r3, pc}
+ 171              		.cfi_endproc
+ 172              	.LFE242:
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s 			page 5
+
+
+ 174              		.section	.text.OLED_OFF,"ax",%progbits
+ 175              		.align	1
+ 176              		.global	OLED_OFF
+ 177              		.syntax unified
+ 178              		.thumb
+ 179              		.thumb_func
+ 181              	OLED_OFF:
+ 182              	.LFB243:
+  64:./app/peripheral/src/OLED_IIC_Config.c **** 
+  65:./app/peripheral/src/OLED_IIC_Config.c **** /**
+  66:./app/peripheral/src/OLED_IIC_Config.c ****  * ************************************************************************
+  67:./app/peripheral/src/OLED_IIC_Config.c ****  * @brief 休眠OLED
+  68:./app/peripheral/src/OLED_IIC_Config.c ****  * ************************************************************************
+  69:./app/peripheral/src/OLED_IIC_Config.c ****  */
+  70:./app/peripheral/src/OLED_IIC_Config.c **** void OLED_OFF(void)
+  71:./app/peripheral/src/OLED_IIC_Config.c **** {
+ 183              		.loc 1 71 1 is_stmt 1 view -0
+ 184              		.cfi_startproc
+ 185              		@ args = 0, pretend = 0, frame = 0
+ 186              		@ frame_needed = 0, uses_anonymous_args = 0
+ 187 0000 08B5     		push	{r3, lr}
+ 188              	.LCFI6:
+ 189              		.cfi_def_cfa_offset 8
+ 190              		.cfi_offset 3, -8
+ 191              		.cfi_offset 14, -4
+  72:./app/peripheral/src/OLED_IIC_Config.c **** 	WriteCmd(0X8D);  //设置电荷泵
+ 192              		.loc 1 72 2 view .LVU24
+ 193 0002 8D20     		movs	r0, #141
+ 194 0004 FFF7FEFF 		bl	WriteCmd
+ 195              	.LVL14:
+  73:./app/peripheral/src/OLED_IIC_Config.c **** 	WriteCmd(0X10);  //关闭电荷泵
+ 196              		.loc 1 73 2 view .LVU25
+ 197 0008 1020     		movs	r0, #16
+ 198 000a FFF7FEFF 		bl	WriteCmd
+ 199              	.LVL15:
+  74:./app/peripheral/src/OLED_IIC_Config.c **** 	WriteCmd(0XAE);  //OLED休眠
+ 200              		.loc 1 74 2 view .LVU26
+ 201 000e AE20     		movs	r0, #174
+ 202 0010 FFF7FEFF 		bl	WriteCmd
+ 203              	.LVL16:
+  75:./app/peripheral/src/OLED_IIC_Config.c **** }
+ 204              		.loc 1 75 1 is_stmt 0 view .LVU27
+ 205 0014 08BD     		pop	{r3, pc}
+ 206              		.cfi_endproc
+ 207              	.LFE243:
+ 209              		.section	.text.OLED_CLS,"ax",%progbits
+ 210              		.align	1
+ 211              		.global	OLED_CLS
+ 212              		.syntax unified
+ 213              		.thumb
+ 214              		.thumb_func
+ 216              	OLED_CLS:
+ 217              	.LFB244:
+  76:./app/peripheral/src/OLED_IIC_Config.c **** 
+  77:./app/peripheral/src/OLED_IIC_Config.c **** /**
+  78:./app/peripheral/src/OLED_IIC_Config.c ****  * ************************************************************************
+  79:./app/peripheral/src/OLED_IIC_Config.c ****  * @brief OLED清屏函数
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s 			page 6
+
+
+  80:./app/peripheral/src/OLED_IIC_Config.c ****  * ************************************************************************
+  81:./app/peripheral/src/OLED_IIC_Config.c ****  */
+  82:./app/peripheral/src/OLED_IIC_Config.c **** void OLED_CLS(void)//清屏
+  83:./app/peripheral/src/OLED_IIC_Config.c **** {
+ 218              		.loc 1 83 1 is_stmt 1 view -0
+ 219              		.cfi_startproc
+ 220              		@ args = 0, pretend = 0, frame = 0
+ 221              		@ frame_needed = 0, uses_anonymous_args = 0
+ 222 0000 38B5     		push	{r3, r4, r5, lr}
+ 223              	.LCFI7:
+ 224              		.cfi_def_cfa_offset 16
+ 225              		.cfi_offset 3, -16
+ 226              		.cfi_offset 4, -12
+ 227              		.cfi_offset 5, -8
+ 228              		.cfi_offset 14, -4
+  84:./app/peripheral/src/OLED_IIC_Config.c **** 	unsigned char m,n;
+ 229              		.loc 1 84 2 view .LVU29
+  85:./app/peripheral/src/OLED_IIC_Config.c **** 	for(m=0;m<8;m++)
+ 230              		.loc 1 85 2 view .LVU30
+ 231              	.LVL17:
+ 232              		.loc 1 85 7 is_stmt 0 view .LVU31
+ 233 0002 0025     		movs	r5, #0
+ 234              		.loc 1 85 2 view .LVU32
+ 235 0004 09E0     		b	.L14
+ 236              	.LVL18:
+ 237              	.L16:
+  86:./app/peripheral/src/OLED_IIC_Config.c **** 	{
+  87:./app/peripheral/src/OLED_IIC_Config.c **** 		WriteCmd(0xb0+m);	//page0-page1
+  88:./app/peripheral/src/OLED_IIC_Config.c **** 		WriteCmd(0x00);		//low column start address
+  89:./app/peripheral/src/OLED_IIC_Config.c **** 		WriteCmd(0x10);		//high column start address
+  90:./app/peripheral/src/OLED_IIC_Config.c **** 		for(n=0;n<128;n++)
+  91:./app/peripheral/src/OLED_IIC_Config.c **** 		{
+  92:./app/peripheral/src/OLED_IIC_Config.c **** 			WriteDat(0x00);
+ 238              		.loc 1 92 4 is_stmt 1 discriminator 3 view .LVU33
+ 239 0006 0020     		movs	r0, #0
+ 240 0008 FFF7FEFF 		bl	WriteDat
+ 241              	.LVL19:
+  90:./app/peripheral/src/OLED_IIC_Config.c **** 		{
+ 242              		.loc 1 90 17 discriminator 3 view .LVU34
+  90:./app/peripheral/src/OLED_IIC_Config.c **** 		{
+ 243              		.loc 1 90 18 is_stmt 0 discriminator 3 view .LVU35
+ 244 000c 0134     		adds	r4, r4, #1
+ 245              	.LVL20:
+  90:./app/peripheral/src/OLED_IIC_Config.c **** 		{
+ 246              		.loc 1 90 18 discriminator 3 view .LVU36
+ 247 000e E4B2     		uxtb	r4, r4
+ 248              	.LVL21:
+ 249              	.L15:
+  90:./app/peripheral/src/OLED_IIC_Config.c **** 		{
+ 250              		.loc 1 90 11 is_stmt 1 discriminator 1 view .LVU37
+  90:./app/peripheral/src/OLED_IIC_Config.c **** 		{
+ 251              		.loc 1 90 3 is_stmt 0 discriminator 1 view .LVU38
+ 252 0010 14F0800F 		tst	r4, #128
+ 253 0014 F7D0     		beq	.L16
+  85:./app/peripheral/src/OLED_IIC_Config.c **** 	for(m=0;m<8;m++)
+ 254              		.loc 1 85 14 is_stmt 1 discriminator 2 view .LVU39
+  85:./app/peripheral/src/OLED_IIC_Config.c **** 	for(m=0;m<8;m++)
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s 			page 7
+
+
+ 255              		.loc 1 85 15 is_stmt 0 discriminator 2 view .LVU40
+ 256 0016 0135     		adds	r5, r5, #1
+ 257              	.LVL22:
+  85:./app/peripheral/src/OLED_IIC_Config.c **** 	for(m=0;m<8;m++)
+ 258              		.loc 1 85 15 discriminator 2 view .LVU41
+ 259 0018 EDB2     		uxtb	r5, r5
+ 260              	.LVL23:
+ 261              	.L14:
+  85:./app/peripheral/src/OLED_IIC_Config.c **** 	for(m=0;m<8;m++)
+ 262              		.loc 1 85 10 is_stmt 1 discriminator 1 view .LVU42
+  85:./app/peripheral/src/OLED_IIC_Config.c **** 	for(m=0;m<8;m++)
+ 263              		.loc 1 85 2 is_stmt 0 discriminator 1 view .LVU43
+ 264 001a 072D     		cmp	r5, #7
+ 265 001c 0CD8     		bhi	.L19
+  87:./app/peripheral/src/OLED_IIC_Config.c **** 		WriteCmd(0x00);		//low column start address
+ 266              		.loc 1 87 3 is_stmt 1 view .LVU44
+ 267 001e A5F15000 		sub	r0, r5, #80
+ 268 0022 C0B2     		uxtb	r0, r0
+ 269 0024 FFF7FEFF 		bl	WriteCmd
+ 270              	.LVL24:
+  88:./app/peripheral/src/OLED_IIC_Config.c **** 		WriteCmd(0x10);		//high column start address
+ 271              		.loc 1 88 3 view .LVU45
+ 272 0028 0020     		movs	r0, #0
+ 273 002a FFF7FEFF 		bl	WriteCmd
+ 274              	.LVL25:
+  89:./app/peripheral/src/OLED_IIC_Config.c **** 		for(n=0;n<128;n++)
+ 275              		.loc 1 89 3 view .LVU46
+ 276 002e 1020     		movs	r0, #16
+ 277 0030 FFF7FEFF 		bl	WriteCmd
+ 278              	.LVL26:
+  90:./app/peripheral/src/OLED_IIC_Config.c **** 		{
+ 279              		.loc 1 90 3 view .LVU47
+  90:./app/peripheral/src/OLED_IIC_Config.c **** 		{
+ 280              		.loc 1 90 8 is_stmt 0 view .LVU48
+ 281 0034 0024     		movs	r4, #0
+  90:./app/peripheral/src/OLED_IIC_Config.c **** 		{
+ 282              		.loc 1 90 3 view .LVU49
+ 283 0036 EBE7     		b	.L15
+ 284              	.LVL27:
+ 285              	.L19:
+  93:./app/peripheral/src/OLED_IIC_Config.c **** 		}
+  94:./app/peripheral/src/OLED_IIC_Config.c **** 	}
+  95:./app/peripheral/src/OLED_IIC_Config.c **** }
+ 286              		.loc 1 95 1 view .LVU50
+ 287 0038 38BD     		pop	{r3, r4, r5, pc}
+ 288              		.loc 1 95 1 view .LVU51
+ 289              		.cfi_endproc
+ 290              	.LFE244:
+ 292              		.section	.text.OLED_Init,"ax",%progbits
+ 293              		.align	1
+ 294              		.global	OLED_Init
+ 295              		.syntax unified
+ 296              		.thumb
+ 297              		.thumb_func
+ 299              	OLED_Init:
+ 300              	.LFB245:
+  96:./app/peripheral/src/OLED_IIC_Config.c **** 
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s 			page 8
+
+
+  97:./app/peripheral/src/OLED_IIC_Config.c **** /**
+  98:./app/peripheral/src/OLED_IIC_Config.c ****  * ************************************************************************
+  99:./app/peripheral/src/OLED_IIC_Config.c ****  * @brief OLED初始化函数
+ 100:./app/peripheral/src/OLED_IIC_Config.c ****  * ************************************************************************
+ 101:./app/peripheral/src/OLED_IIC_Config.c ****  */
+ 102:./app/peripheral/src/OLED_IIC_Config.c **** void OLED_Init(void)
+ 103:./app/peripheral/src/OLED_IIC_Config.c **** {
+ 301              		.loc 1 103 1 is_stmt 1 view -0
+ 302              		.cfi_startproc
+ 303              		@ args = 0, pretend = 0, frame = 0
+ 304              		@ frame_needed = 0, uses_anonymous_args = 0
+ 305 0000 08B5     		push	{r3, lr}
+ 306              	.LCFI8:
+ 307              		.cfi_def_cfa_offset 8
+ 308              		.cfi_offset 3, -8
+ 309              		.cfi_offset 14, -4
+ 104:./app/peripheral/src/OLED_IIC_Config.c **** 	WriteCmd(0xAE); //显示关闭
+ 310              		.loc 1 104 2 view .LVU53
+ 311 0002 AE20     		movs	r0, #174
+ 312 0004 FFF7FEFF 		bl	WriteCmd
+ 313              	.LVL28:
+ 105:./app/peripheral/src/OLED_IIC_Config.c **** 	WriteCmd(0x20);	//设置内存寻址模式
+ 314              		.loc 1 105 2 view .LVU54
+ 315 0008 2020     		movs	r0, #32
+ 316 000a FFF7FEFF 		bl	WriteCmd
+ 317              	.LVL29:
+ 106:./app/peripheral/src/OLED_IIC_Config.c **** 	WriteCmd(0x10);	//00,水平寻址模式;01,垂直寻址模式;10,页寻址模式(复位);11,无效
+ 318              		.loc 1 106 2 view .LVU55
+ 319 000e 1020     		movs	r0, #16
+ 320 0010 FFF7FEFF 		bl	WriteCmd
+ 321              	.LVL30:
+ 107:./app/peripheral/src/OLED_IIC_Config.c **** 	WriteCmd(0xb0);	//设置页寻址模式的页起始地址,0-7
+ 322              		.loc 1 107 2 view .LVU56
+ 323 0014 B020     		movs	r0, #176
+ 324 0016 FFF7FEFF 		bl	WriteCmd
+ 325              	.LVL31:
+ 108:./app/peripheral/src/OLED_IIC_Config.c **** 	WriteCmd(0xc8);	//设置COM输出扫描方向
+ 326              		.loc 1 108 2 view .LVU57
+ 327 001a C820     		movs	r0, #200
+ 328 001c FFF7FEFF 		bl	WriteCmd
+ 329              	.LVL32:
+ 109:./app/peripheral/src/OLED_IIC_Config.c **** 	WriteCmd(0x00); //-设置低列地址
+ 330              		.loc 1 109 2 view .LVU58
+ 331 0020 0020     		movs	r0, #0
+ 332 0022 FFF7FEFF 		bl	WriteCmd
+ 333              	.LVL33:
+ 110:./app/peripheral/src/OLED_IIC_Config.c **** 	WriteCmd(0x10); //-设置高列地址
+ 334              		.loc 1 110 2 view .LVU59
+ 335 0026 1020     		movs	r0, #16
+ 336 0028 FFF7FEFF 		bl	WriteCmd
+ 337              	.LVL34:
+ 111:./app/peripheral/src/OLED_IIC_Config.c **** 	WriteCmd(0x40); //-设置起始行地址
+ 338              		.loc 1 111 2 view .LVU60
+ 339 002c 4020     		movs	r0, #64
+ 340 002e FFF7FEFF 		bl	WriteCmd
+ 341              	.LVL35:
+ 112:./app/peripheral/src/OLED_IIC_Config.c **** 	WriteCmd(0x81); //设置对比度控制寄存器
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s 			page 9
+
+
+ 342              		.loc 1 112 2 view .LVU61
+ 343 0032 8120     		movs	r0, #129
+ 344 0034 FFF7FEFF 		bl	WriteCmd
+ 345              	.LVL36:
+ 113:./app/peripheral/src/OLED_IIC_Config.c **** 	WriteCmd(0xff); //亮度调节 0x00~0xff
+ 346              		.loc 1 113 2 view .LVU62
+ 347 0038 FF20     		movs	r0, #255
+ 348 003a FFF7FEFF 		bl	WriteCmd
+ 349              	.LVL37:
+ 114:./app/peripheral/src/OLED_IIC_Config.c **** 	WriteCmd(0xa1); //设置段重新映射0到127
+ 350              		.loc 1 114 2 view .LVU63
+ 351 003e A120     		movs	r0, #161
+ 352 0040 FFF7FEFF 		bl	WriteCmd
+ 353              	.LVL38:
+ 115:./app/peripheral/src/OLED_IIC_Config.c **** 	WriteCmd(0xa6); //设置正常显示
+ 354              		.loc 1 115 2 view .LVU64
+ 355 0044 A620     		movs	r0, #166
+ 356 0046 FFF7FEFF 		bl	WriteCmd
+ 357              	.LVL39:
+ 116:./app/peripheral/src/OLED_IIC_Config.c **** 	WriteCmd(0xa8); //设置复用比例(1到64)
+ 358              		.loc 1 116 2 view .LVU65
+ 359 004a A820     		movs	r0, #168
+ 360 004c FFF7FEFF 		bl	WriteCmd
+ 361              	.LVL40:
+ 117:./app/peripheral/src/OLED_IIC_Config.c **** 	WriteCmd(0x3F); //
+ 362              		.loc 1 117 2 view .LVU66
+ 363 0050 3F20     		movs	r0, #63
+ 364 0052 FFF7FEFF 		bl	WriteCmd
+ 365              	.LVL41:
+ 118:./app/peripheral/src/OLED_IIC_Config.c **** 	WriteCmd(0xa4); //0xa4,输出遵循RAM内容;0xa5,输出忽略RAM内容
+ 366              		.loc 1 118 2 view .LVU67
+ 367 0056 A420     		movs	r0, #164
+ 368 0058 FFF7FEFF 		bl	WriteCmd
+ 369              	.LVL42:
+ 119:./app/peripheral/src/OLED_IIC_Config.c **** 	WriteCmd(0xd3); //设置显示偏移
+ 370              		.loc 1 119 2 view .LVU68
+ 371 005c D320     		movs	r0, #211
+ 372 005e FFF7FEFF 		bl	WriteCmd
+ 373              	.LVL43:
+ 120:./app/peripheral/src/OLED_IIC_Config.c **** 	WriteCmd(0x00); //不偏移
+ 374              		.loc 1 120 2 view .LVU69
+ 375 0062 0020     		movs	r0, #0
+ 376 0064 FFF7FEFF 		bl	WriteCmd
+ 377              	.LVL44:
+ 121:./app/peripheral/src/OLED_IIC_Config.c **** 	WriteCmd(0xd5); //--set display clock divide ratio/oscillator frequency
+ 378              		.loc 1 121 2 view .LVU70
+ 379 0068 D520     		movs	r0, #213
+ 380 006a FFF7FEFF 		bl	WriteCmd
+ 381              	.LVL45:
+ 122:./app/peripheral/src/OLED_IIC_Config.c **** 	WriteCmd(0xf0); //--set divide ratio
+ 382              		.loc 1 122 2 view .LVU71
+ 383 006e F020     		movs	r0, #240
+ 384 0070 FFF7FEFF 		bl	WriteCmd
+ 385              	.LVL46:
+ 123:./app/peripheral/src/OLED_IIC_Config.c **** 	WriteCmd(0xd9); //--set pre-charge period
+ 386              		.loc 1 123 2 view .LVU72
+ 387 0074 D920     		movs	r0, #217
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s 			page 10
+
+
+ 388 0076 FFF7FEFF 		bl	WriteCmd
+ 389              	.LVL47:
+ 124:./app/peripheral/src/OLED_IIC_Config.c **** 	WriteCmd(0x22); //
+ 390              		.loc 1 124 2 view .LVU73
+ 391 007a 2220     		movs	r0, #34
+ 392 007c FFF7FEFF 		bl	WriteCmd
+ 393              	.LVL48:
+ 125:./app/peripheral/src/OLED_IIC_Config.c **** 	WriteCmd(0xda); //--set com pins hardware configuration
+ 394              		.loc 1 125 2 view .LVU74
+ 395 0080 DA20     		movs	r0, #218
+ 396 0082 FFF7FEFF 		bl	WriteCmd
+ 397              	.LVL49:
+ 126:./app/peripheral/src/OLED_IIC_Config.c **** 	WriteCmd(0x12);
+ 398              		.loc 1 126 2 view .LVU75
+ 399 0086 1220     		movs	r0, #18
+ 400 0088 FFF7FEFF 		bl	WriteCmd
+ 401              	.LVL50:
+ 127:./app/peripheral/src/OLED_IIC_Config.c **** 	WriteCmd(0xdb); //--set vcomh
+ 402              		.loc 1 127 2 view .LVU76
+ 403 008c DB20     		movs	r0, #219
+ 404 008e FFF7FEFF 		bl	WriteCmd
+ 405              	.LVL51:
+ 128:./app/peripheral/src/OLED_IIC_Config.c **** 	WriteCmd(0x20); //0x20,0.77xVcc
+ 406              		.loc 1 128 2 view .LVU77
+ 407 0092 2020     		movs	r0, #32
+ 408 0094 FFF7FEFF 		bl	WriteCmd
+ 409              	.LVL52:
+ 129:./app/peripheral/src/OLED_IIC_Config.c **** 	WriteCmd(0x8d); //设置DC-DC使能
+ 410              		.loc 1 129 2 view .LVU78
+ 411 0098 8D20     		movs	r0, #141
+ 412 009a FFF7FEFF 		bl	WriteCmd
+ 413              	.LVL53:
+ 130:./app/peripheral/src/OLED_IIC_Config.c **** 	WriteCmd(0x14); //
+ 414              		.loc 1 130 2 view .LVU79
+ 415 009e 1420     		movs	r0, #20
+ 416 00a0 FFF7FEFF 		bl	WriteCmd
+ 417              	.LVL54:
+ 131:./app/peripheral/src/OLED_IIC_Config.c **** 	WriteCmd(0xaf); //--turn on oled panel
+ 418              		.loc 1 131 2 view .LVU80
+ 419 00a4 AF20     		movs	r0, #175
+ 420 00a6 FFF7FEFF 		bl	WriteCmd
+ 421              	.LVL55:
+ 132:./app/peripheral/src/OLED_IIC_Config.c **** 	OLED_CLS();
+ 422              		.loc 1 132 2 view .LVU81
+ 423 00aa FFF7FEFF 		bl	OLED_CLS
+ 424              	.LVL56:
+ 133:./app/peripheral/src/OLED_IIC_Config.c **** }
+ 425              		.loc 1 133 1 is_stmt 0 view .LVU82
+ 426 00ae 08BD     		pop	{r3, pc}
+ 427              		.cfi_endproc
+ 428              	.LFE245:
+ 430              		.section	.text.OLED_RefreshRAM,"ax",%progbits
+ 431              		.align	1
+ 432              		.global	OLED_RefreshRAM
+ 433              		.syntax unified
+ 434              		.thumb
+ 435              		.thumb_func
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s 			page 11
+
+
+ 437              	OLED_RefreshRAM:
+ 438              	.LFB246:
+ 134:./app/peripheral/src/OLED_IIC_Config.c **** 
+ 135:./app/peripheral/src/OLED_IIC_Config.c **** /**
+ 136:./app/peripheral/src/OLED_IIC_Config.c ****  * ************************************************************************
+ 137:./app/peripheral/src/OLED_IIC_Config.c ****  * @brief 更新数据缓冲区
+ 138:./app/peripheral/src/OLED_IIC_Config.c ****  * ************************************************************************
+ 139:./app/peripheral/src/OLED_IIC_Config.c ****  */
+ 140:./app/peripheral/src/OLED_IIC_Config.c **** void OLED_RefreshRAM(void)
+ 141:./app/peripheral/src/OLED_IIC_Config.c **** {
+ 439              		.loc 1 141 1 is_stmt 1 view -0
+ 440              		.cfi_startproc
+ 441              		@ args = 0, pretend = 0, frame = 0
+ 442              		@ frame_needed = 0, uses_anonymous_args = 0
+ 443 0000 38B5     		push	{r3, r4, r5, lr}
+ 444              	.LCFI9:
+ 445              		.cfi_def_cfa_offset 16
+ 446              		.cfi_offset 3, -16
+ 447              		.cfi_offset 4, -12
+ 448              		.cfi_offset 5, -8
+ 449              		.cfi_offset 14, -4
+ 142:./app/peripheral/src/OLED_IIC_Config.c **** 	// 页寻址模式填充
+ 143:./app/peripheral/src/OLED_IIC_Config.c **** 	for(unsigned short int m = 0; m < SCREEN_ROW/8; m++)
+ 450              		.loc 1 143 2 view .LVU84
+ 451              	.LBB2:
+ 452              		.loc 1 143 6 view .LVU85
+ 453              	.LVL57:
+ 454              		.loc 1 143 25 is_stmt 0 view .LVU86
+ 455 0002 0025     		movs	r5, #0
+ 456              		.loc 1 143 2 view .LVU87
+ 457 0004 0BE0     		b	.L23
+ 458              	.LVL58:
+ 459              	.L25:
+ 460              	.LBB3:
+ 144:./app/peripheral/src/OLED_IIC_Config.c **** 	{
+ 145:./app/peripheral/src/OLED_IIC_Config.c **** 		WriteCmd(0xb0+m);		//设置页地址b0~b7
+ 146:./app/peripheral/src/OLED_IIC_Config.c **** 		WriteCmd(0x00);			//设置显示位置—列低地址00-0f
+ 147:./app/peripheral/src/OLED_IIC_Config.c **** 		WriteCmd(0x10);			//设置显示位置—列高地址10-1f
+ 148:./app/peripheral/src/OLED_IIC_Config.c **** 		for(unsigned short int n = 0; n < SCREEN_COLUMN; n++)
+ 149:./app/peripheral/src/OLED_IIC_Config.c **** 		{
+ 150:./app/peripheral/src/OLED_IIC_Config.c **** 			WriteDat(ScreenBuffer[m][n]);
+ 461              		.loc 1 150 4 is_stmt 1 discriminator 3 view .LVU88
+ 462 0006 0E4B     		ldr	r3, .L29
+ 463 0008 03EBC513 		add	r3, r3, r5, lsl #7
+ 464 000c 185D     		ldrb	r0, [r3, r4]	@ zero_extendqisi2
+ 465 000e FFF7FEFF 		bl	WriteDat
+ 466              	.LVL59:
+ 148:./app/peripheral/src/OLED_IIC_Config.c **** 		{
+ 467              		.loc 1 148 52 discriminator 3 view .LVU89
+ 148:./app/peripheral/src/OLED_IIC_Config.c **** 		{
+ 468              		.loc 1 148 53 is_stmt 0 discriminator 3 view .LVU90
+ 469 0012 0134     		adds	r4, r4, #1
+ 470              	.LVL60:
+ 148:./app/peripheral/src/OLED_IIC_Config.c **** 		{
+ 471              		.loc 1 148 53 discriminator 3 view .LVU91
+ 472 0014 A4B2     		uxth	r4, r4
+ 473              	.LVL61:
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s 			page 12
+
+
+ 474              	.L24:
+ 148:./app/peripheral/src/OLED_IIC_Config.c **** 		{
+ 475              		.loc 1 148 33 is_stmt 1 discriminator 1 view .LVU92
+ 148:./app/peripheral/src/OLED_IIC_Config.c **** 		{
+ 476              		.loc 1 148 3 is_stmt 0 discriminator 1 view .LVU93
+ 477 0016 7F2C     		cmp	r4, #127
+ 478 0018 F5D9     		bls	.L25
+ 479              	.LBE3:
+ 143:./app/peripheral/src/OLED_IIC_Config.c **** 	{
+ 480              		.loc 1 143 50 is_stmt 1 discriminator 2 view .LVU94
+ 143:./app/peripheral/src/OLED_IIC_Config.c **** 	{
+ 481              		.loc 1 143 51 is_stmt 0 discriminator 2 view .LVU95
+ 482 001a 0135     		adds	r5, r5, #1
+ 483              	.LVL62:
+ 143:./app/peripheral/src/OLED_IIC_Config.c **** 	{
+ 484              		.loc 1 143 51 discriminator 2 view .LVU96
+ 485 001c ADB2     		uxth	r5, r5
+ 486              	.LVL63:
+ 487              	.L23:
+ 143:./app/peripheral/src/OLED_IIC_Config.c **** 	{
+ 488              		.loc 1 143 32 is_stmt 1 discriminator 1 view .LVU97
+ 143:./app/peripheral/src/OLED_IIC_Config.c **** 	{
+ 489              		.loc 1 143 2 is_stmt 0 discriminator 1 view .LVU98
+ 490 001e 072D     		cmp	r5, #7
+ 491 0020 0CD8     		bhi	.L28
+ 145:./app/peripheral/src/OLED_IIC_Config.c **** 		WriteCmd(0x00);			//设置显示位置—列低地址00-0f
+ 492              		.loc 1 145 3 is_stmt 1 view .LVU99
+ 493 0022 A5F15000 		sub	r0, r5, #80
+ 494 0026 C0B2     		uxtb	r0, r0
+ 495 0028 FFF7FEFF 		bl	WriteCmd
+ 496              	.LVL64:
+ 146:./app/peripheral/src/OLED_IIC_Config.c **** 		WriteCmd(0x10);			//设置显示位置—列高地址10-1f
+ 497              		.loc 1 146 3 view .LVU100
+ 498 002c 0020     		movs	r0, #0
+ 499 002e FFF7FEFF 		bl	WriteCmd
+ 500              	.LVL65:
+ 147:./app/peripheral/src/OLED_IIC_Config.c **** 		for(unsigned short int n = 0; n < SCREEN_COLUMN; n++)
+ 501              		.loc 1 147 3 view .LVU101
+ 502 0032 1020     		movs	r0, #16
+ 503 0034 FFF7FEFF 		bl	WriteCmd
+ 504              	.LVL66:
+ 148:./app/peripheral/src/OLED_IIC_Config.c **** 		{
+ 505              		.loc 1 148 3 view .LVU102
+ 506              	.LBB4:
+ 148:./app/peripheral/src/OLED_IIC_Config.c **** 		{
+ 507              		.loc 1 148 7 view .LVU103
+ 148:./app/peripheral/src/OLED_IIC_Config.c **** 		{
+ 508              		.loc 1 148 26 is_stmt 0 view .LVU104
+ 509 0038 0024     		movs	r4, #0
+ 148:./app/peripheral/src/OLED_IIC_Config.c **** 		{
+ 510              		.loc 1 148 3 view .LVU105
+ 511 003a ECE7     		b	.L24
+ 512              	.LVL67:
+ 513              	.L28:
+ 148:./app/peripheral/src/OLED_IIC_Config.c **** 		{
+ 514              		.loc 1 148 3 view .LVU106
+ 515              	.LBE4:
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s 			page 13
+
+
+ 516              	.LBE2:
+ 151:./app/peripheral/src/OLED_IIC_Config.c **** 		}
+ 152:./app/peripheral/src/OLED_IIC_Config.c **** 	} 
+ 153:./app/peripheral/src/OLED_IIC_Config.c **** }
+ 517              		.loc 1 153 1 view .LVU107
+ 518 003c 38BD     		pop	{r3, r4, r5, pc}
+ 519              	.LVL68:
+ 520              	.L30:
+ 521              		.loc 1 153 1 view .LVU108
+ 522 003e 00BF     		.align	2
+ 523              	.L29:
+ 524 0040 00000000 		.word	.LANCHOR0
+ 525              		.cfi_endproc
+ 526              	.LFE246:
+ 528              		.section	.text.OLED_ClearRAM,"ax",%progbits
+ 529              		.align	1
+ 530              		.global	OLED_ClearRAM
+ 531              		.syntax unified
+ 532              		.thumb
+ 533              		.thumb_func
+ 535              	OLED_ClearRAM:
+ 536              	.LFB247:
+ 154:./app/peripheral/src/OLED_IIC_Config.c **** 
+ 155:./app/peripheral/src/OLED_IIC_Config.c **** /**
+ 156:./app/peripheral/src/OLED_IIC_Config.c ****  * ************************************************************************
+ 157:./app/peripheral/src/OLED_IIC_Config.c ****  * @brief 清除数据缓冲区
+ 158:./app/peripheral/src/OLED_IIC_Config.c ****  * ************************************************************************
+ 159:./app/peripheral/src/OLED_IIC_Config.c ****  */
+ 160:./app/peripheral/src/OLED_IIC_Config.c **** void OLED_ClearRAM(void)
+ 161:./app/peripheral/src/OLED_IIC_Config.c **** {
+ 537              		.loc 1 161 1 is_stmt 1 view -0
+ 538              		.cfi_startproc
+ 539              		@ args = 0, pretend = 0, frame = 0
+ 540              		@ frame_needed = 0, uses_anonymous_args = 0
+ 541              		@ link register save eliminated.
+ 162:./app/peripheral/src/OLED_IIC_Config.c **** 	for(unsigned short int m = 0; m < SCREEN_ROW/8; m++)
+ 542              		.loc 1 162 2 view .LVU110
+ 543              	.LBB5:
+ 544              		.loc 1 162 6 view .LVU111
+ 545              	.LVL69:
+ 546              		.loc 1 162 25 is_stmt 0 view .LVU112
+ 547 0000 0020     		movs	r0, #0
+ 548              		.loc 1 162 2 view .LVU113
+ 549 0002 0AE0     		b	.L32
+ 550              	.LVL70:
+ 551              	.L33:
+ 552              	.LBB6:
+ 163:./app/peripheral/src/OLED_IIC_Config.c **** 	{
+ 164:./app/peripheral/src/OLED_IIC_Config.c **** 		for(unsigned short int n = 0; n < SCREEN_COLUMN; n++)
+ 165:./app/peripheral/src/OLED_IIC_Config.c **** 		{
+ 166:./app/peripheral/src/OLED_IIC_Config.c **** 			ScreenBuffer[m][n] = 0x00;
+ 553              		.loc 1 166 4 is_stmt 1 discriminator 3 view .LVU114
+ 554              		.loc 1 166 23 is_stmt 0 discriminator 3 view .LVU115
+ 555 0004 074A     		ldr	r2, .L37
+ 556 0006 02EBC012 		add	r2, r2, r0, lsl #7
+ 557 000a 0021     		movs	r1, #0
+ 558 000c D154     		strb	r1, [r2, r3]
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s 			page 14
+
+
+ 164:./app/peripheral/src/OLED_IIC_Config.c **** 		{
+ 559              		.loc 1 164 52 is_stmt 1 discriminator 3 view .LVU116
+ 164:./app/peripheral/src/OLED_IIC_Config.c **** 		{
+ 560              		.loc 1 164 53 is_stmt 0 discriminator 3 view .LVU117
+ 561 000e 0133     		adds	r3, r3, #1
+ 562              	.LVL71:
+ 164:./app/peripheral/src/OLED_IIC_Config.c **** 		{
+ 563              		.loc 1 164 53 discriminator 3 view .LVU118
+ 564 0010 9BB2     		uxth	r3, r3
+ 565              	.LVL72:
+ 566              	.L34:
+ 164:./app/peripheral/src/OLED_IIC_Config.c **** 		{
+ 567              		.loc 1 164 33 is_stmt 1 discriminator 1 view .LVU119
+ 164:./app/peripheral/src/OLED_IIC_Config.c **** 		{
+ 568              		.loc 1 164 3 is_stmt 0 discriminator 1 view .LVU120
+ 569 0012 7F2B     		cmp	r3, #127
+ 570 0014 F6D9     		bls	.L33
+ 571              	.LBE6:
+ 162:./app/peripheral/src/OLED_IIC_Config.c **** 	for(unsigned short int m = 0; m < SCREEN_ROW/8; m++)
+ 572              		.loc 1 162 50 is_stmt 1 discriminator 2 view .LVU121
+ 162:./app/peripheral/src/OLED_IIC_Config.c **** 	for(unsigned short int m = 0; m < SCREEN_ROW/8; m++)
+ 573              		.loc 1 162 51 is_stmt 0 discriminator 2 view .LVU122
+ 574 0016 0130     		adds	r0, r0, #1
+ 575              	.LVL73:
+ 162:./app/peripheral/src/OLED_IIC_Config.c **** 	for(unsigned short int m = 0; m < SCREEN_ROW/8; m++)
+ 576              		.loc 1 162 51 discriminator 2 view .LVU123
+ 577 0018 80B2     		uxth	r0, r0
+ 578              	.LVL74:
+ 579              	.L32:
+ 162:./app/peripheral/src/OLED_IIC_Config.c **** 	for(unsigned short int m = 0; m < SCREEN_ROW/8; m++)
+ 580              		.loc 1 162 32 is_stmt 1 discriminator 1 view .LVU124
+ 162:./app/peripheral/src/OLED_IIC_Config.c **** 	for(unsigned short int m = 0; m < SCREEN_ROW/8; m++)
+ 581              		.loc 1 162 2 is_stmt 0 discriminator 1 view .LVU125
+ 582 001a 0728     		cmp	r0, #7
+ 583 001c 01D8     		bhi	.L36
+ 584              	.LBB7:
+ 164:./app/peripheral/src/OLED_IIC_Config.c **** 		{
+ 585              		.loc 1 164 26 view .LVU126
+ 586 001e 0023     		movs	r3, #0
+ 587 0020 F7E7     		b	.L34
+ 588              	.L36:
+ 589              	.LBE7:
+ 590              	.LBE5:
+ 167:./app/peripheral/src/OLED_IIC_Config.c **** 		}
+ 168:./app/peripheral/src/OLED_IIC_Config.c **** 	}
+ 169:./app/peripheral/src/OLED_IIC_Config.c **** }
+ 591              		.loc 1 169 1 view .LVU127
+ 592 0022 7047     		bx	lr
+ 593              	.L38:
+ 594              		.align	2
+ 595              	.L37:
+ 596 0024 00000000 		.word	.LANCHOR0
+ 597              		.cfi_endproc
+ 598              	.LFE247:
+ 600              		.section	.text.OLED_SetPixel,"ax",%progbits
+ 601              		.align	1
+ 602              		.global	OLED_SetPixel
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s 			page 15
+
+
+ 603              		.syntax unified
+ 604              		.thumb
+ 605              		.thumb_func
+ 607              	OLED_SetPixel:
+ 608              	.LVL75:
+ 609              	.LFB248:
+ 170:./app/peripheral/src/OLED_IIC_Config.c **** 
+ 171:./app/peripheral/src/OLED_IIC_Config.c **** /**
+ 172:./app/peripheral/src/OLED_IIC_Config.c ****  * ************************************************************************
+ 173:./app/peripheral/src/OLED_IIC_Config.c ****  * @brief 设置坐标像素点数据
+ 174:./app/peripheral/src/OLED_IIC_Config.c ****  * 
+ 175:./app/peripheral/src/OLED_IIC_Config.c ****  * @param[in] x  			起始点横坐标(x:0~127）
+ 176:./app/peripheral/src/OLED_IIC_Config.c ****  * @param[in] y  			起始点纵坐标(y:0~63）
+ 177:./app/peripheral/src/OLED_IIC_Config.c ****  * @param[in] set_pixel  	该点的数据  SET_PIXEL = 1, RESET_PIXEL = 0
+ 178:./app/peripheral/src/OLED_IIC_Config.c ****  * 
+ 179:./app/peripheral/src/OLED_IIC_Config.c ****  * ************************************************************************
+ 180:./app/peripheral/src/OLED_IIC_Config.c ****  */
+ 181:./app/peripheral/src/OLED_IIC_Config.c **** void OLED_SetPixel(signed short int x, signed short int y, unsigned char set_pixel)
+ 182:./app/peripheral/src/OLED_IIC_Config.c **** { 
+ 610              		.loc 1 182 1 is_stmt 1 view -0
+ 611              		.cfi_startproc
+ 612              		@ args = 0, pretend = 0, frame = 0
+ 613              		@ frame_needed = 0, uses_anonymous_args = 0
+ 614              		@ link register save eliminated.
+ 183:./app/peripheral/src/OLED_IIC_Config.c **** 	if (x >= 0 && x < SCREEN_COLUMN && y >= 0 && y < SCREEN_ROW) {
+ 615              		.loc 1 183 2 view .LVU129
+ 616              		.loc 1 183 13 is_stmt 0 view .LVU130
+ 617 0000 83B2     		uxth	r3, r0
+ 618              		.loc 1 183 5 view .LVU131
+ 619 0002 7F2B     		cmp	r3, #127
+ 620 0004 33D8     		bhi	.L39
+ 621              		.loc 1 183 34 discriminator 1 view .LVU132
+ 622 0006 0029     		cmp	r1, #0
+ 623 0008 31DB     		blt	.L39
+ 624              		.loc 1 183 44 discriminator 2 view .LVU133
+ 625 000a 3F29     		cmp	r1, #63
+ 626 000c 2FDC     		bgt	.L39
+ 184:./app/peripheral/src/OLED_IIC_Config.c **** 		if(set_pixel){
+ 627              		.loc 1 184 3 is_stmt 1 view .LVU134
+ 628              		.loc 1 184 5 is_stmt 0 view .LVU135
+ 629 000e C2B1     		cbz	r2, .L41
+ 185:./app/peripheral/src/OLED_IIC_Config.c **** 				ScreenBuffer[y/8][x] |= (0x01 << (y%8));
+ 630              		.loc 1 185 5 is_stmt 1 view .LVU136
+ 631              		.loc 1 185 26 is_stmt 0 view .LVU137
+ 632 0010 0B46     		mov	r3, r1
+ 633 0012 0029     		cmp	r1, #0
+ 634 0014 13DB     		blt	.L44
+ 635              	.L42:
+ 636 0016 DA10     		asrs	r2, r3, #3
+ 637              	.LVL76:
+ 638              		.loc 1 185 40 view .LVU138
+ 639 0018 4B42     		rsbs	r3, r1, #0
+ 640 001a 01F00701 		and	r1, r1, #7
+ 641              	.LVL77:
+ 642              		.loc 1 185 40 view .LVU139
+ 643 001e 03F00703 		and	r3, r3, #7
+ 644 0022 58BF     		it	pl
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s 			page 16
+
+
+ 645 0024 5942     		rsbpl	r1, r3, #0
+ 646              		.loc 1 185 35 view .LVU140
+ 647 0026 4FF0010C 		mov	ip, #1
+ 648 002a 0CFA01FC 		lsl	ip, ip, r1
+ 649              		.loc 1 185 26 view .LVU141
+ 650 002e 114B     		ldr	r3, .L46
+ 651 0030 03EBC213 		add	r3, r3, r2, lsl #7
+ 652 0034 195C     		ldrb	r1, [r3, r0]	@ zero_extendqisi2
+ 653 0036 41EA0C01 		orr	r1, r1, ip
+ 654 003a 1954     		strb	r1, [r3, r0]
+ 655 003c 7047     		bx	lr
+ 656              	.LVL78:
+ 657              	.L44:
+ 658              		.loc 1 185 26 view .LVU142
+ 659 003e CB1D     		adds	r3, r1, #7
+ 660 0040 E9E7     		b	.L42
+ 661              	.L41:
+ 186:./app/peripheral/src/OLED_IIC_Config.c **** 		}  
+ 187:./app/peripheral/src/OLED_IIC_Config.c **** 		else{
+ 188:./app/peripheral/src/OLED_IIC_Config.c **** 				ScreenBuffer[y/8][x] &= ~(0x01 << (y%8));
+ 662              		.loc 1 188 5 is_stmt 1 view .LVU143
+ 663              		.loc 1 188 26 is_stmt 0 view .LVU144
+ 664 0042 0B46     		mov	r3, r1
+ 665 0044 0029     		cmp	r1, #0
+ 666 0046 13DB     		blt	.L45
+ 667              	.L43:
+ 668 0048 DA10     		asrs	r2, r3, #3
+ 669              	.LVL79:
+ 670              		.loc 1 188 41 view .LVU145
+ 671 004a 4B42     		rsbs	r3, r1, #0
+ 672 004c 01F00701 		and	r1, r1, #7
+ 673              	.LVL80:
+ 674              		.loc 1 188 41 view .LVU146
+ 675 0050 03F00703 		and	r3, r3, #7
+ 676 0054 58BF     		it	pl
+ 677 0056 5942     		rsbpl	r1, r3, #0
+ 678              		.loc 1 188 36 view .LVU147
+ 679 0058 4FF0010C 		mov	ip, #1
+ 680 005c 0CFA01FC 		lsl	ip, ip, r1
+ 681              		.loc 1 188 26 view .LVU148
+ 682 0060 044B     		ldr	r3, .L46
+ 683 0062 03EBC213 		add	r3, r3, r2, lsl #7
+ 684 0066 195C     		ldrb	r1, [r3, r0]	@ zero_extendqisi2
+ 685 0068 21EA0C01 		bic	r1, r1, ip
+ 686 006c 1954     		strb	r1, [r3, r0]
+ 687              	.L39:
+ 189:./app/peripheral/src/OLED_IIC_Config.c **** 		}
+ 190:./app/peripheral/src/OLED_IIC_Config.c **** 	}
+ 191:./app/peripheral/src/OLED_IIC_Config.c **** }
+ 688              		.loc 1 191 1 view .LVU149
+ 689 006e 7047     		bx	lr
+ 690              	.LVL81:
+ 691              	.L45:
+ 188:./app/peripheral/src/OLED_IIC_Config.c **** 		}
+ 692              		.loc 1 188 26 view .LVU150
+ 693 0070 CB1D     		adds	r3, r1, #7
+ 694 0072 E9E7     		b	.L43
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s 			page 17
+
+
+ 695              	.L47:
+ 696              		.align	2
+ 697              	.L46:
+ 698 0074 00000000 		.word	.LANCHOR0
+ 699              		.cfi_endproc
+ 700              	.LFE248:
+ 702              		.section	.text.OLED_DisplayMode,"ax",%progbits
+ 703              		.align	1
+ 704              		.global	OLED_DisplayMode
+ 705              		.syntax unified
+ 706              		.thumb
+ 707              		.thumb_func
+ 709              	OLED_DisplayMode:
+ 710              	.LVL82:
+ 711              	.LFB249:
+ 192:./app/peripheral/src/OLED_IIC_Config.c **** 
+ 193:./app/peripheral/src/OLED_IIC_Config.c **** /**
+ 194:./app/peripheral/src/OLED_IIC_Config.c ****  * ************************************************************************
+ 195:./app/peripheral/src/OLED_IIC_Config.c ****  * @brief 屏幕内容取反显示
+ 196:./app/peripheral/src/OLED_IIC_Config.c ****  * 
+ 197:./app/peripheral/src/OLED_IIC_Config.c ****  * @param[in] mode  开关
+ 198:./app/peripheral/src/OLED_IIC_Config.c ****  * 					开	ON	0xA7	点亮全屏
+ 199:./app/peripheral/src/OLED_IIC_Config.c ****  *  				关	OFF	0xA6	默认此模式，设置像素点亮
+ 200:./app/peripheral/src/OLED_IIC_Config.c ****  * 
+ 201:./app/peripheral/src/OLED_IIC_Config.c ****  * ************************************************************************
+ 202:./app/peripheral/src/OLED_IIC_Config.c ****  */
+ 203:./app/peripheral/src/OLED_IIC_Config.c **** void OLED_DisplayMode(unsigned char mode)
+ 204:./app/peripheral/src/OLED_IIC_Config.c **** {
+ 712              		.loc 1 204 1 is_stmt 1 view -0
+ 713              		.cfi_startproc
+ 714              		@ args = 0, pretend = 0, frame = 0
+ 715              		@ frame_needed = 0, uses_anonymous_args = 0
+ 716              		.loc 1 204 1 is_stmt 0 view .LVU152
+ 717 0000 08B5     		push	{r3, lr}
+ 718              	.LCFI10:
+ 719              		.cfi_def_cfa_offset 8
+ 720              		.cfi_offset 3, -8
+ 721              		.cfi_offset 14, -4
+ 205:./app/peripheral/src/OLED_IIC_Config.c **** 	WriteCmd(mode);
+ 722              		.loc 1 205 2 is_stmt 1 view .LVU153
+ 723 0002 FFF7FEFF 		bl	WriteCmd
+ 724              	.LVL83:
+ 206:./app/peripheral/src/OLED_IIC_Config.c **** }
+ 725              		.loc 1 206 1 is_stmt 0 view .LVU154
+ 726 0006 08BD     		pop	{r3, pc}
+ 727              		.cfi_endproc
+ 728              	.LFE249:
+ 730              		.section	.text.OLED_IntensityControl,"ax",%progbits
+ 731              		.align	1
+ 732              		.global	OLED_IntensityControl
+ 733              		.syntax unified
+ 734              		.thumb
+ 735              		.thumb_func
+ 737              	OLED_IntensityControl:
+ 738              	.LVL84:
+ 739              	.LFB250:
+ 207:./app/peripheral/src/OLED_IIC_Config.c **** 
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s 			page 18
+
+
+ 208:./app/peripheral/src/OLED_IIC_Config.c **** /**
+ 209:./app/peripheral/src/OLED_IIC_Config.c ****  * ************************************************************************
+ 210:./app/peripheral/src/OLED_IIC_Config.c ****  * @brief 屏幕亮度调节
+ 211:./app/peripheral/src/OLED_IIC_Config.c ****  * 
+ 212:./app/peripheral/src/OLED_IIC_Config.c ****  * @param[in] intensity  亮度大小（0~255），默认为0x7f
+ 213:./app/peripheral/src/OLED_IIC_Config.c ****  * 
+ 214:./app/peripheral/src/OLED_IIC_Config.c ****  * ************************************************************************
+ 215:./app/peripheral/src/OLED_IIC_Config.c ****  */
+ 216:./app/peripheral/src/OLED_IIC_Config.c **** void OLED_IntensityControl(unsigned char intensity)
+ 217:./app/peripheral/src/OLED_IIC_Config.c **** {
+ 740              		.loc 1 217 1 is_stmt 1 view -0
+ 741              		.cfi_startproc
+ 742              		@ args = 0, pretend = 0, frame = 0
+ 743              		@ frame_needed = 0, uses_anonymous_args = 0
+ 744              		.loc 1 217 1 is_stmt 0 view .LVU156
+ 745 0000 10B5     		push	{r4, lr}
+ 746              	.LCFI11:
+ 747              		.cfi_def_cfa_offset 8
+ 748              		.cfi_offset 4, -8
+ 749              		.cfi_offset 14, -4
+ 750 0002 0446     		mov	r4, r0
+ 218:./app/peripheral/src/OLED_IIC_Config.c **** 	WriteCmd(0x81);
+ 751              		.loc 1 218 2 is_stmt 1 view .LVU157
+ 752 0004 8120     		movs	r0, #129
+ 753              	.LVL85:
+ 754              		.loc 1 218 2 is_stmt 0 view .LVU158
+ 755 0006 FFF7FEFF 		bl	WriteCmd
+ 756              	.LVL86:
+ 219:./app/peripheral/src/OLED_IIC_Config.c **** 	WriteCmd(intensity);
+ 757              		.loc 1 219 2 is_stmt 1 view .LVU159
+ 758 000a 2046     		mov	r0, r4
+ 759 000c FFF7FEFF 		bl	WriteCmd
+ 760              	.LVL87:
+ 220:./app/peripheral/src/OLED_IIC_Config.c **** }
+ 761              		.loc 1 220 1 is_stmt 0 view .LVU160
+ 762 0010 10BD     		pop	{r4, pc}
+ 763              		.cfi_endproc
+ 764              	.LFE250:
+ 766              		.section	.text.OLED_Shift,"ax",%progbits
+ 767              		.align	1
+ 768              		.global	OLED_Shift
+ 769              		.syntax unified
+ 770              		.thumb
+ 771              		.thumb_func
+ 773              	OLED_Shift:
+ 774              	.LVL88:
+ 775              	.LFB251:
+ 221:./app/peripheral/src/OLED_IIC_Config.c **** 
+ 222:./app/peripheral/src/OLED_IIC_Config.c **** /**
+ 223:./app/peripheral/src/OLED_IIC_Config.c ****  * ************************************************************************
+ 224:./app/peripheral/src/OLED_IIC_Config.c ****  * @brief 全屏内容偏移指定距离
+ 225:./app/peripheral/src/OLED_IIC_Config.c ****  * 
+ 226:./app/peripheral/src/OLED_IIC_Config.c ****  * @param[in] shift_num  偏移距离（0~63）
+ 227:./app/peripheral/src/OLED_IIC_Config.c ****  * 
+ 228:./app/peripheral/src/OLED_IIC_Config.c ****  * ************************************************************************
+ 229:./app/peripheral/src/OLED_IIC_Config.c ****  */
+ 230:./app/peripheral/src/OLED_IIC_Config.c **** void OLED_Shift(unsigned char shift_num)
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s 			page 19
+
+
+ 231:./app/peripheral/src/OLED_IIC_Config.c **** {
+ 776              		.loc 1 231 1 is_stmt 1 view -0
+ 777              		.cfi_startproc
+ 778              		@ args = 0, pretend = 0, frame = 0
+ 779              		@ frame_needed = 0, uses_anonymous_args = 0
+ 780              		.loc 1 231 1 is_stmt 0 view .LVU162
+ 781 0000 38B5     		push	{r3, r4, r5, lr}
+ 782              	.LCFI12:
+ 783              		.cfi_def_cfa_offset 16
+ 784              		.cfi_offset 3, -16
+ 785              		.cfi_offset 4, -12
+ 786              		.cfi_offset 5, -8
+ 787              		.cfi_offset 14, -4
+ 788 0002 0546     		mov	r5, r0
+ 232:./app/peripheral/src/OLED_IIC_Config.c **** 	for(unsigned char i = 0; i < shift_num; i++)
+ 789              		.loc 1 232 2 is_stmt 1 view .LVU163
+ 790              	.LBB8:
+ 791              		.loc 1 232 6 view .LVU164
+ 792              	.LVL89:
+ 793              		.loc 1 232 20 is_stmt 0 view .LVU165
+ 794 0004 0024     		movs	r4, #0
+ 795              		.loc 1 232 2 view .LVU166
+ 796 0006 0AE0     		b	.L53
+ 797              	.LVL90:
+ 798              	.L54:
+ 233:./app/peripheral/src/OLED_IIC_Config.c **** 		{
+ 234:./app/peripheral/src/OLED_IIC_Config.c **** 			WriteCmd(0xd3);//设置显示偏移，垂直向上偏移
+ 799              		.loc 1 234 4 is_stmt 1 discriminator 3 view .LVU167
+ 800 0008 D320     		movs	r0, #211
+ 801 000a FFF7FEFF 		bl	WriteCmd
+ 802              	.LVL91:
+ 235:./app/peripheral/src/OLED_IIC_Config.c **** 			WriteCmd(i);//偏移量
+ 803              		.loc 1 235 4 discriminator 3 view .LVU168
+ 804 000e 2046     		mov	r0, r4
+ 805 0010 FFF7FEFF 		bl	WriteCmd
+ 806              	.LVL92:
+ 236:./app/peripheral/src/OLED_IIC_Config.c **** 			HAL_Delay(10);//延时时间
+ 807              		.loc 1 236 4 discriminator 3 view .LVU169
+ 808 0014 0A20     		movs	r0, #10
+ 809 0016 FFF7FEFF 		bl	HAL_Delay
+ 810              	.LVL93:
+ 232:./app/peripheral/src/OLED_IIC_Config.c **** 		{
+ 811              		.loc 1 232 42 discriminator 3 view .LVU170
+ 232:./app/peripheral/src/OLED_IIC_Config.c **** 		{
+ 812              		.loc 1 232 43 is_stmt 0 discriminator 3 view .LVU171
+ 813 001a 0134     		adds	r4, r4, #1
+ 814              	.LVL94:
+ 232:./app/peripheral/src/OLED_IIC_Config.c **** 		{
+ 815              		.loc 1 232 43 discriminator 3 view .LVU172
+ 816 001c E4B2     		uxtb	r4, r4
+ 817              	.LVL95:
+ 818              	.L53:
+ 232:./app/peripheral/src/OLED_IIC_Config.c **** 		{
+ 819              		.loc 1 232 27 is_stmt 1 discriminator 1 view .LVU173
+ 232:./app/peripheral/src/OLED_IIC_Config.c **** 		{
+ 820              		.loc 1 232 2 is_stmt 0 discriminator 1 view .LVU174
+ 821 001e AC42     		cmp	r4, r5
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s 			page 20
+
+
+ 822 0020 F2D3     		bcc	.L54
+ 823              	.LBE8:
+ 237:./app/peripheral/src/OLED_IIC_Config.c **** 		}
+ 238:./app/peripheral/src/OLED_IIC_Config.c **** }
+ 824              		.loc 1 238 1 view .LVU175
+ 825 0022 38BD     		pop	{r3, r4, r5, pc}
+ 826              		.loc 1 238 1 view .LVU176
+ 827              		.cfi_endproc
+ 828              	.LFE251:
+ 830              		.section	.text.OLED_HorizontalShift,"ax",%progbits
+ 831              		.align	1
+ 832              		.global	OLED_HorizontalShift
+ 833              		.syntax unified
+ 834              		.thumb
+ 835              		.thumb_func
+ 837              	OLED_HorizontalShift:
+ 838              	.LVL96:
+ 839              	.LFB252:
+ 239:./app/peripheral/src/OLED_IIC_Config.c **** 
+ 240:./app/peripheral/src/OLED_IIC_Config.c **** 
+ 241:./app/peripheral/src/OLED_IIC_Config.c **** /**
+ 242:./app/peripheral/src/OLED_IIC_Config.c ****  * ************************************************************************
+ 243:./app/peripheral/src/OLED_IIC_Config.c ****  * @brief 屏幕内容水平方向滚动播放
+ 244:./app/peripheral/src/OLED_IIC_Config.c ****  * 
+ 245:./app/peripheral/src/OLED_IIC_Config.c ****  * @param[in] start_page  	开始页数	(0~7)
+ 246:./app/peripheral/src/OLED_IIC_Config.c ****  * @param[in] end_page  	结束页数	(0~7)
+ 247:./app/peripheral/src/OLED_IIC_Config.c ****  * @param[in] direction  	滚动方向
+ 248:./app/peripheral/src/OLED_IIC_Config.c ****  * 								左		LEFT	0x27
+ 249:./app/peripheral/src/OLED_IIC_Config.c ****  * 								右		RIGHT	0x26
+ 250:./app/peripheral/src/OLED_IIC_Config.c ****  * @note 在开始页数和结束页数之间的内容才会滚动播放，且写命令顺序不得
+ 251:./app/peripheral/src/OLED_IIC_Config.c ****  * ************************************************************************
+ 252:./app/peripheral/src/OLED_IIC_Config.c ****  */
+ 253:./app/peripheral/src/OLED_IIC_Config.c **** void OLED_HorizontalShift(unsigned char start_page,unsigned char end_page,unsigned char direction)
+ 254:./app/peripheral/src/OLED_IIC_Config.c **** {
+ 840              		.loc 1 254 1 is_stmt 1 view -0
+ 841              		.cfi_startproc
+ 842              		@ args = 0, pretend = 0, frame = 0
+ 843              		@ frame_needed = 0, uses_anonymous_args = 0
+ 844              		.loc 1 254 1 is_stmt 0 view .LVU178
+ 845 0000 70B5     		push	{r4, r5, r6, lr}
+ 846              	.LCFI13:
+ 847              		.cfi_def_cfa_offset 16
+ 848              		.cfi_offset 4, -16
+ 849              		.cfi_offset 5, -12
+ 850              		.cfi_offset 6, -8
+ 851              		.cfi_offset 14, -4
+ 852 0002 0546     		mov	r5, r0
+ 853 0004 0C46     		mov	r4, r1
+ 854 0006 1646     		mov	r6, r2
+ 255:./app/peripheral/src/OLED_IIC_Config.c **** 	WriteCmd(0x2e);  //关闭滚动
+ 855              		.loc 1 255 2 is_stmt 1 view .LVU179
+ 856 0008 2E20     		movs	r0, #46
+ 857              	.LVL97:
+ 858              		.loc 1 255 2 is_stmt 0 view .LVU180
+ 859 000a FFF7FEFF 		bl	WriteCmd
+ 860              	.LVL98:
+ 256:./app/peripheral/src/OLED_IIC_Config.c **** 
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s 			page 21
+
+
+ 257:./app/peripheral/src/OLED_IIC_Config.c **** 	WriteCmd(direction);//设置滚动方向
+ 861              		.loc 1 257 2 is_stmt 1 view .LVU181
+ 862 000e 3046     		mov	r0, r6
+ 863 0010 FFF7FEFF 		bl	WriteCmd
+ 864              	.LVL99:
+ 258:./app/peripheral/src/OLED_IIC_Config.c **** 	WriteCmd(0x00);//虚拟字节设置，默认为0x00
+ 865              		.loc 1 258 2 view .LVU182
+ 866 0014 0020     		movs	r0, #0
+ 867 0016 FFF7FEFF 		bl	WriteCmd
+ 868              	.LVL100:
+ 259:./app/peripheral/src/OLED_IIC_Config.c **** 	WriteCmd(start_page);//设置开始页地址
+ 869              		.loc 1 259 2 view .LVU183
+ 870 001a 2846     		mov	r0, r5
+ 871 001c FFF7FEFF 		bl	WriteCmd
+ 872              	.LVL101:
+ 260:./app/peripheral/src/OLED_IIC_Config.c **** 	WriteCmd(0x05);//设置每个滚动步骤之间的时间间隔的帧频
+ 873              		.loc 1 260 2 view .LVU184
+ 874 0020 0520     		movs	r0, #5
+ 875 0022 FFF7FEFF 		bl	WriteCmd
+ 876              	.LVL102:
+ 261:./app/peripheral/src/OLED_IIC_Config.c **** 	WriteCmd(end_page);//设置结束页地址
+ 877              		.loc 1 261 2 view .LVU185
+ 878 0026 2046     		mov	r0, r4
+ 879 0028 FFF7FEFF 		bl	WriteCmd
+ 880              	.LVL103:
+ 262:./app/peripheral/src/OLED_IIC_Config.c **** 	WriteCmd(0x00);//虚拟字节设置，默认为0x00
+ 881              		.loc 1 262 2 view .LVU186
+ 882 002c 0020     		movs	r0, #0
+ 883 002e FFF7FEFF 		bl	WriteCmd
+ 884              	.LVL104:
+ 263:./app/peripheral/src/OLED_IIC_Config.c **** 	WriteCmd(0xff);//虚拟字节设置，默认为0xff
+ 885              		.loc 1 263 2 view .LVU187
+ 886 0032 FF20     		movs	r0, #255
+ 887 0034 FFF7FEFF 		bl	WriteCmd
+ 888              	.LVL105:
+ 264:./app/peripheral/src/OLED_IIC_Config.c **** 
+ 265:./app/peripheral/src/OLED_IIC_Config.c **** 	WriteCmd(0x2f);//开启滚动-0x2f，禁用滚动-0x2e，禁用需要重写数据
+ 889              		.loc 1 265 2 view .LVU188
+ 890 0038 2F20     		movs	r0, #47
+ 891 003a FFF7FEFF 		bl	WriteCmd
+ 892              	.LVL106:
+ 266:./app/peripheral/src/OLED_IIC_Config.c **** }
+ 893              		.loc 1 266 1 is_stmt 0 view .LVU189
+ 894 003e 70BD     		pop	{r4, r5, r6, pc}
+ 895              		.cfi_endproc
+ 896              	.LFE252:
+ 898              		.global	ScreenBuffer
+ 899              		.section	.bss.ScreenBuffer,"aw",%nobits
+ 900              		.align	2
+ 901              		.set	.LANCHOR0,. + 0
+ 904              	ScreenBuffer:
+ 905 0000 00000000 		.space	1024
+ 905      00000000 
+ 905      00000000 
+ 905      00000000 
+ 905      00000000 
+ 906              		.text
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s 			page 22
+
+
+ 907              	.Letext0:
+ 908              		.file 2 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 909              		.file 3 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 910              		.file 4 "./Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h"
+ 911              		.file 5 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
+ 912              		.file 6 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
+ 913              		.file 7 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h"
+ 914              		.file 8 "./Core/Inc/i2c.h"
+ 915              		.file 9 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s 			page 23
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 OLED_IIC_Config.c
+C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s:20     .text.I2C_WriteByte:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s:26     .text.I2C_WriteByte:00000000 I2C_WriteByte
+C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s:71     .text.I2C_WriteByte:00000028 $d
+C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s:76     .text.WriteCmd:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s:82     .text.WriteCmd:00000000 WriteCmd
+C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s:108    .text.WriteDat:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s:114    .text.WriteDat:00000000 WriteDat
+C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s:140    .text.OLED_ON:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s:146    .text.OLED_ON:00000000 OLED_ON
+C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s:175    .text.OLED_OFF:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s:181    .text.OLED_OFF:00000000 OLED_OFF
+C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s:210    .text.OLED_CLS:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s:216    .text.OLED_CLS:00000000 OLED_CLS
+C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s:293    .text.OLED_Init:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s:299    .text.OLED_Init:00000000 OLED_Init
+C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s:431    .text.OLED_RefreshRAM:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s:437    .text.OLED_RefreshRAM:00000000 OLED_RefreshRAM
+C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s:524    .text.OLED_RefreshRAM:00000040 $d
+C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s:529    .text.OLED_ClearRAM:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s:535    .text.OLED_ClearRAM:00000000 OLED_ClearRAM
+C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s:596    .text.OLED_ClearRAM:00000024 $d
+C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s:601    .text.OLED_SetPixel:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s:607    .text.OLED_SetPixel:00000000 OLED_SetPixel
+C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s:698    .text.OLED_SetPixel:00000074 $d
+C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s:703    .text.OLED_DisplayMode:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s:709    .text.OLED_DisplayMode:00000000 OLED_DisplayMode
+C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s:731    .text.OLED_IntensityControl:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s:737    .text.OLED_IntensityControl:00000000 OLED_IntensityControl
+C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s:767    .text.OLED_Shift:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s:773    .text.OLED_Shift:00000000 OLED_Shift
+C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s:831    .text.OLED_HorizontalShift:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s:837    .text.OLED_HorizontalShift:00000000 OLED_HorizontalShift
+C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s:904    .bss.ScreenBuffer:00000000 ScreenBuffer
+C:\Users\Dennis\AppData\Local\Temp\ccCxzwP1.s:900    .bss.ScreenBuffer:00000000 $d
+
+UNDEFINED SYMBOLS
+HAL_I2C_Mem_Write
+hi2c1
+HAL_Delay

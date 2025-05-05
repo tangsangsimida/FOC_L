@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccuc6yo3.s 			page 1
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccogn57c.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccuc6yo3.s 			page 1
    8:./Core/Src/app_threadx.c ****   * @attention
    9:./Core/Src/app_threadx.c ****   *
   10:./Core/Src/app_threadx.c ****   * Copyright (c) 2021 STMicroelectronics.
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccuc6yo3.s 			page 2
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccogn57c.s 			page 2
 
 
   11:./Core/Src/app_threadx.c ****   * All rights reserved.
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccuc6yo3.s 			page 1
   44              		.loc 1 60 1 is_stmt 0 view .LVU1
   45 0000 30B5     		push	{r4, r5, lr}
   46              	.LCFI0:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccuc6yo3.s 			page 3
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccogn57c.s 			page 3
 
 
   47              		.cfi_def_cfa_offset 12
@@ -169,7 +169,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccuc6yo3.s 			page 1
   79 001e 0593     		str	r3, [sp, #20]
   80 0020 0023     		movs	r3, #0
   81 0022 0493     		str	r3, [sp, #16]
-  82 0024 1423     		movs	r3, #20
+  82 0024 0F23     		movs	r3, #15
   83 0026 0393     		str	r3, [sp, #12]
   84 0028 0293     		str	r3, [sp, #8]
   85 002a 4FF40073 		mov	r3, #512
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccuc6yo3.s 			page 1
   88 0032 0093     		str	r3, [sp]
   89 0034 244B     		ldr	r3, .L16
   90 0036 254A     		ldr	r2, .L16+4
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccuc6yo3.s 			page 4
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccogn57c.s 			page 4
 
 
   91 0038 2549     		ldr	r1, .L16+8
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccuc6yo3.s 			page 1
  137 007e 00B1     		cbz	r0, .L5
   82:./Core/Src/app_threadx.c ****                       Thread_Cmd_Entry, (ULONG)&Thread_Cmd_parama1, pointer, Thread_Cmd_Size,
   83:./Core/Src/app_threadx.c ****                       Thread_Cmd_PRIO, Thread_Cmd_threshold,
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccuc6yo3.s 			page 5
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccogn57c.s 			page 5
 
 
   84:./Core/Src/app_threadx.c ****                       TX_NO_TIME_SLICE, TX_AUTO_START) != TX_SUCCESS) ret = TX_THREAD_ERROR;
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccuc6yo3.s 			page 1
   95:./Core/Src/app_threadx.c **** 
   96:./Core/Src/app_threadx.c **** 
   97:./Core/Src/app_threadx.c **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccuc6yo3.s 			page 6
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccogn57c.s 			page 6
 
 
   98:./Core/Src/app_threadx.c **** 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccuc6yo3.s 			page 1
  106:./Core/Src/app_threadx.c **** 
  107:./Core/Src/app_threadx.c **** /**
  108:./Core/Src/app_threadx.c ****   * @brief  MX_ThreadX_Init
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccuc6yo3.s 			page 7
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccogn57c.s 			page 7
 
 
  109:./Core/Src/app_threadx.c ****   * @param  None
@@ -400,18 +400,19 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccuc6yo3.s 			page 1
  248              		.file 5 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\sys\\_stdint.h"
  249              		.file 6 "./app/Threads/Thread_template/Thread_template.h"
  250              		.file 7 "./app/Threads/Thread_cmd/Thread_cmd.h"
- 251              		.file 8 "./app/Threads/Thread_Motor_Control/Thread_Motor_Control.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccuc6yo3.s 			page 8
+ 251              		.file 8 "./app/peripheral/inc/OLED_Front.h"
+ 252              		.file 9 "./app/Threads/Thread_Motor_Control/Thread_Motor_Control.h"
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccogn57c.s 			page 8
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 app_threadx.c
-C:\Users\Dennis\AppData\Local\Temp\ccuc6yo3.s:20     .rodata.App_ThreadX_Init.str1.4:00000000 $d
-C:\Users\Dennis\AppData\Local\Temp\ccuc6yo3.s:30     .text.App_ThreadX_Init:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccuc6yo3.s:36     .text.App_ThreadX_Init:00000000 App_ThreadX_Init
-C:\Users\Dennis\AppData\Local\Temp\ccuc6yo3.s:202    .text.App_ThreadX_Init:000000c8 $d
-C:\Users\Dennis\AppData\Local\Temp\ccuc6yo3.s:218    .text.MX_ThreadX_Init:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccuc6yo3.s:224    .text.MX_ThreadX_Init:00000000 MX_ThreadX_Init
+C:\Users\Dennis\AppData\Local\Temp\ccogn57c.s:20     .rodata.App_ThreadX_Init.str1.4:00000000 $d
+C:\Users\Dennis\AppData\Local\Temp\ccogn57c.s:30     .text.App_ThreadX_Init:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\ccogn57c.s:36     .text.App_ThreadX_Init:00000000 App_ThreadX_Init
+C:\Users\Dennis\AppData\Local\Temp\ccogn57c.s:202    .text.App_ThreadX_Init:000000c8 $d
+C:\Users\Dennis\AppData\Local\Temp\ccogn57c.s:218    .text.MX_ThreadX_Init:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\ccogn57c.s:224    .text.MX_ThreadX_Init:00000000 MX_ThreadX_Init
 
 UNDEFINED SYMBOLS
 _txe_byte_allocate

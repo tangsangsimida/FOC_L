@@ -36,6 +36,8 @@ BUILD_DIR = build
 ######################################
 # C sources
 C_SOURCES =  \
+./app/peripheral/src/OLED_Function.c \
+./app/peripheral/src/OLED_IIC_Config.c \
 ./app/algorithm/src/pid.c \
 ./app/peripheral/src/user_can.c \
 ./app/algorithm/src/lowpass_filter.c \

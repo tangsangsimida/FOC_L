@@ -32,10 +32,15 @@ void Thread_Motor_Control_Entry(ULONG thread_input)
 {
     Thread_Motor_Control_parama * thread_param = (Thread_Motor_Control_parama *)thread_input;
     Motor* motor1 = (Motor*)thread_param->Motor1_handle;
+    OLED_Init();  //OLED初始化
+    OLED_ShowStr(0,0,"OLED-TEXT",1);
+    char temp[100];
+    while(1)
+    {
 
-	while(1)
-	{
-        tx_thread_sleep(100);
-
-	}
+      sprintf(temp,"%ld",HAL_GetTick());
+      OLED_ShowStr(0,10,temp,2);
+      
+      tx_thread_sleep(1);
+    }
 }

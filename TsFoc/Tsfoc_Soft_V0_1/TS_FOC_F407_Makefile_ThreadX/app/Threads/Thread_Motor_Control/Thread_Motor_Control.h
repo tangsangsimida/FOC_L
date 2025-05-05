@@ -6,6 +6,14 @@
 #include "stdint.h"
 #include "ts_foc.h"
 
+
+
+
+#include "OLED_IIC_Config.h"
+#include "OLED_Function.h"
+#include "OLED_Front.h"
+
+
 #define Thread_Motor_Control_Size (4096)			//线程堆栈大小
 #define Thread_Motor_Control_PRIO (20)			//线程优先级
 #define Thread_Motor_Control_threshold (20)		//线程抢占阈值

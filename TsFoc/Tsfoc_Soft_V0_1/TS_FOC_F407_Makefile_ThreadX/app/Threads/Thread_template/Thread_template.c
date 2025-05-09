@@ -14,6 +14,11 @@
 TX_THREAD Thread_Template;						//实例化线程句柄,线程相关信息
 Thread_Template_parama Thread_Template_parama1;	//实例化入口函数的参数
 
+
+
+
+
+
 /*******************************************************************************
 * Function Name  : Thread_Template_Entry
 * Description    : Thread_Template_Entry线程
@@ -24,18 +29,14 @@ Thread_Template_parama Thread_Template_parama1;	//实例化入口函数的参数
 *******************************************************************************/
 void Thread_Template_Entry(ULONG thread_input)
 {
-  // Thread_Template_parama *parama = (Thread_Template_parama*)thread_input;	//获取入口函数的参数
 
 	while(1)
 	{
+
     HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
-    tx_thread_sleep(1);
+    tx_thread_sleep(200);
 	}
 }
-
-
-
-
 
 
 

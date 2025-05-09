@@ -95,17 +95,17 @@ void Thread_Cmd_Entry(ULONG thread_input)
     Thread_Cmd_parama * thread_param = (Thread_Cmd_parama *)thread_input;
 	while(1)
 	{
-    if (Get_Cmd(&DEBUG_UART, thread_input) == 0)   //接收到数据
-    {
-        //处理数据
-        printf("Cmd_Name_last: %s\r\n", thread_param->Cmd_Name_last);
-        printf("Cmd_Param_last: %lf\r\n", thread_param->Cmd_Param_last);
-    }
-    else
-    {
-        //处理接收错误
-    }
-    
+        if (Get_Cmd(&DEBUG_UART, thread_input) == 0)   //接收到数据
+        {
+            //处理数据
+            printf("Cmd_Name_last: %s\r\n", thread_param->Cmd_Name_last);
+            printf("Cmd_Param_last: %lf\r\n", thread_param->Cmd_Param_last);
+        }
+        else
+        {
+            //处理接收错误
+        }
+        
     tx_thread_sleep(2);
 	}
 }

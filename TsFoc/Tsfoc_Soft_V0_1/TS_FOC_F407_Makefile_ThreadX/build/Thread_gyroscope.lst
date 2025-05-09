@@ -1,0 +1,597 @@
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccvElrek.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"Thread_gyroscope.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.send_command,"ax",%progbits
+  20              		.align	1
+  21              		.global	send_command
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	send_command:
+  27              	.LVL0:
+  28              	.LFB251:
+  29              		.file 1 "./app/Threads/Thread_gyroscope/Thread_gyroscope.c"
+   1:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** /**
+   2:./app/Threads/Thread_gyroscope/Thread_gyroscope.c ****   ******************************************************************************
+   3:./app/Threads/Thread_gyroscope/Thread_gyroscope.c ****   * @file           : Thread_template.c
+   4:./app/Threads/Thread_gyroscope/Thread_gyroscope.c ****   * @brief          : 降低代码耦合
+   5:./app/Threads/Thread_gyroscope/Thread_gyroscope.c ****   ******************************************************************************
+   6:./app/Threads/Thread_gyroscope/Thread_gyroscope.c ****   * @author			  : Dennis_Re_Yoonjiho
+   7:./app/Threads/Thread_gyroscope/Thread_gyroscope.c ****   * @attention		:
+   8:./app/Threads/Thread_gyroscope/Thread_gyroscope.c ****   *	
+   9:./app/Threads/Thread_gyroscope/Thread_gyroscope.c ****   * 						   	Copyright (c) 2021 Dennis_Re_Yoonjiho
+  10:./app/Threads/Thread_gyroscope/Thread_gyroscope.c ****   ******************************************************************************
+  11:./app/Threads/Thread_gyroscope/Thread_gyroscope.c ****   */
+  12:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** #include "Thread_gyroscope.h"
+  13:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 
+  14:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** TX_THREAD Thread_gyroscope;						//实例化线程句柄,线程相关信息
+  15:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** Thread_gyroscope_parama Thread_gyroscope_parama1;	//实例化入口函数的参数
+  16:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 
+  17:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 
+  18:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** struct UART_RECEIVE_IDLE_DataStructure
+  19:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** {
+  20:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 	volatile uint8_t rxlen; 
+  21:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 	volatile uint8_t rxok; 
+  22:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 	uint8_t rxbuf[UART_RECEIVE_IDLE_RX_MAXLEN]; 
+  23:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** } GYRO_Receive_Data ={ 0, 1 };
+  24:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 
+  25:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 
+  26:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 
+  27:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 
+  28:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** /*******************************************************************************
+  29:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** * Function Name  : Thread_gyroscope_Entry
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccvElrek.s 			page 2
+
+
+  30:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** * Description    : Thread_gyroscope_Entry线程
+  31:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** * Input          : ULONG thread_input
+  32:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** * Output         : None
+  33:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** * Return         : None
+  34:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** * Note			 : 快速创建线程demo
+  35:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** *******************************************************************************/
+  36:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** void Thread_gyroscope_Entry(ULONG thread_input)
+  37:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** {
+  38:./app/Threads/Thread_gyroscope/Thread_gyroscope.c ****   Thread_gyroscope_parama * thread_param = (Thread_gyroscope_parama *)thread_input;
+  39:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 	while(1)
+  40:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 	{
+  41:./app/Threads/Thread_gyroscope/Thread_gyroscope.c ****     if (Get_gyroscope_date(&GYRO_UART_PORT, thread_input) == 0)   //接收到数据
+  42:./app/Threads/Thread_gyroscope/Thread_gyroscope.c ****     {
+  43:./app/Threads/Thread_gyroscope/Thread_gyroscope.c ****         //打印接收到的数据
+  44:./app/Threads/Thread_gyroscope/Thread_gyroscope.c ****         printf("%s\r\n",Thread_gyroscope_parama1.GYRO_DATA);
+  45:./app/Threads/Thread_gyroscope/Thread_gyroscope.c ****     }
+  46:./app/Threads/Thread_gyroscope/Thread_gyroscope.c ****     else
+  47:./app/Threads/Thread_gyroscope/Thread_gyroscope.c ****     {
+  48:./app/Threads/Thread_gyroscope/Thread_gyroscope.c ****         //处理接收错误
+  49:./app/Threads/Thread_gyroscope/Thread_gyroscope.c ****         send_command(0xa4,0x06,0x03,0x01); 
+  50:./app/Threads/Thread_gyroscope/Thread_gyroscope.c ****         tx_thread_sleep(3);
+  51:./app/Threads/Thread_gyroscope/Thread_gyroscope.c ****         send_command(0xa4,0x03,0x08,0x1b); 
+  52:./app/Threads/Thread_gyroscope/Thread_gyroscope.c ****         tx_thread_sleep(3);
+  53:./app/Threads/Thread_gyroscope/Thread_gyroscope.c ****     }
+  54:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 
+  55:./app/Threads/Thread_gyroscope/Thread_gyroscope.c ****     tx_thread_sleep(20);
+  56:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 	}
+  57:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** }
+  58:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 
+  59:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** //查询A4060301AE
+  60:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** //地址	    写功能码	  寄存器	   数据	      校验和低8位
+  61:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** //器件地址	读功能码	起始寄存器	寄存器数量	校验和低8位
+  62:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** void send_command(uint8_t addr,uint8_t ft_coade,uint8_t start_reg,uint8_t reg_number)
+  63:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** {
+  30              		.loc 1 63 1 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 8
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		.loc 1 63 1 is_stmt 0 view .LVU1
+  35 0000 00B5     		push	{lr}
+  36              	.LCFI0:
+  37              		.cfi_def_cfa_offset 4
+  38              		.cfi_offset 14, -4
+  39 0002 83B0     		sub	sp, sp, #12
+  40              	.LCFI1:
+  41              		.cfi_def_cfa_offset 16
+  64:./app/Threads/Thread_gyroscope/Thread_gyroscope.c ****    uint8_t send_data[5]={addr,ft_coade,start_reg,reg_number,0x00};
+  42              		.loc 1 64 4 is_stmt 1 view .LVU2
+  43              		.loc 1 64 12 is_stmt 0 view .LVU3
+  44 0004 8DF80000 		strb	r0, [sp]
+  45 0008 8DF80110 		strb	r1, [sp, #1]
+  46 000c 8DF80220 		strb	r2, [sp, #2]
+  47 0010 8DF80330 		strb	r3, [sp, #3]
+  48 0014 4FF0000C 		mov	ip, #0
+  49 0018 8DF804C0 		strb	ip, [sp, #4]
+  65:./app/Threads/Thread_gyroscope/Thread_gyroscope.c ****    send_data[4] = (addr+ft_coade+start_reg+reg_number)%256;
+  50              		.loc 1 65 4 is_stmt 1 view .LVU4
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccvElrek.s 			page 3
+
+
+  51              		.loc 1 65 24 is_stmt 0 view .LVU5
+  52 001c 0844     		add	r0, r0, r1
+  53              	.LVL1:
+  54              		.loc 1 65 33 view .LVU6
+  55 001e 0244     		add	r2, r2, r0
+  56              	.LVL2:
+  57              		.loc 1 65 43 view .LVU7
+  58 0020 1344     		add	r3, r3, r2
+  59              	.LVL3:
+  60              		.loc 1 65 55 view .LVU8
+  61 0022 BCEB0302 		subs	r2, ip, r3
+  62 0026 DBB2     		uxtb	r3, r3
+  63 0028 D2B2     		uxtb	r2, r2
+  64 002a 58BF     		it	pl
+  65 002c 5342     		rsbpl	r3, r2, #0
+  66              		.loc 1 65 17 view .LVU9
+  67 002e 8DF80430 		strb	r3, [sp, #4]
+  66:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 	 HAL_UART_Transmit(&huart3,send_data,5,HAL_MAX_DELAY);
+  68              		.loc 1 66 3 is_stmt 1 view .LVU10
+  69 0032 4FF0FF33 		mov	r3, #-1
+  70 0036 0522     		movs	r2, #5
+  71 0038 6946     		mov	r1, sp
+  72              	.LVL4:
+  73              		.loc 1 66 3 is_stmt 0 view .LVU11
+  74 003a 0348     		ldr	r0, .L3
+  75 003c FFF7FEFF 		bl	HAL_UART_Transmit
+  76              	.LVL5:
+  67:./app/Threads/Thread_gyroscope/Thread_gyroscope.c ****   //  printf("send_data:%02X %02X %02X %02X %02X\r\n",send_data[0],send_data[1],send_data[2],send_d
+  68:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** }
+  77              		.loc 1 68 1 view .LVU12
+  78 0040 03B0     		add	sp, sp, #12
+  79              	.LCFI2:
+  80              		.cfi_def_cfa_offset 4
+  81              		@ sp needed
+  82 0042 5DF804FB 		ldr	pc, [sp], #4
+  83              	.L4:
+  84 0046 00BF     		.align	2
+  85              	.L3:
+  86 0048 00000000 		.word	huart3
+  87              		.cfi_endproc
+  88              	.LFE251:
+  90              		.section	.rodata.Get_gyroscope_date.str1.4,"aMS",%progbits,1
+  91              		.align	2
+  92              	.LC0:
+  93 0000 4759524F 		.ascii	"GYRO_Receive_Data.rxlen: %d\015\012\000"
+  93      5F526563 
+  93      65697665 
+  93      5F446174 
+  93      612E7278 
+  94              		.section	.text.Get_gyroscope_date,"ax",%progbits
+  95              		.align	1
+  96              		.global	Get_gyroscope_date
+  97              		.syntax unified
+  98              		.thumb
+  99              		.thumb_func
+ 101              	Get_gyroscope_date:
+ 102              	.LVL6:
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccvElrek.s 			page 4
+
+
+ 103              	.LFB252:
+  69:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 
+  70:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** int8_t Get_gyroscope_date(UART_HandleTypeDef *huart, ULONG THREAD_gyroscope)
+  71:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** {
+ 104              		.loc 1 71 1 is_stmt 1 view -0
+ 105              		.cfi_startproc
+ 106              		@ args = 0, pretend = 0, frame = 0
+ 107              		@ frame_needed = 0, uses_anonymous_args = 0
+ 108              		.loc 1 71 1 is_stmt 0 view .LVU14
+ 109 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 110              	.LCFI3:
+ 111              		.cfi_def_cfa_offset 24
+ 112              		.cfi_offset 3, -24
+ 113              		.cfi_offset 4, -20
+ 114              		.cfi_offset 5, -16
+ 115              		.cfi_offset 6, -12
+ 116              		.cfi_offset 7, -8
+ 117              		.cfi_offset 14, -4
+  72:./app/Threads/Thread_gyroscope/Thread_gyroscope.c ****     Thread_gyroscope_parama * Thread_gyroscope = (Thread_gyroscope_parama *)THREAD_gyroscope;
+ 118              		.loc 1 72 5 is_stmt 1 view .LVU15
+ 119              	.LVL7:
+  73:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 	int8_t nret = 0;
+ 120              		.loc 1 73 2 view .LVU16
+  74:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 	if (GYRO_Receive_Data.rxok == 0)
+ 121              		.loc 1 74 2 view .LVU17
+ 122              		.loc 1 74 23 is_stmt 0 view .LVU18
+ 123 0002 144B     		ldr	r3, .L9
+ 124 0004 5B78     		ldrb	r3, [r3, #1]	@ zero_extendqisi2
+ 125              		.loc 1 74 5 view .LVU19
+ 126 0006 13B3     		cbz	r3, .L7
+ 127 0008 0646     		mov	r6, r0
+ 128 000a 0C46     		mov	r4, r1
+  75:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 	{
+  76:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 		nret = -1;
+  77:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 	}
+  78:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 	else
+  79:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 	{
+  80:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 		if (nret == 0)
+ 129              		.loc 1 80 3 is_stmt 1 view .LVU20
+  81:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 		{
+  82:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 			  //解析数据
+  83:./app/Threads/Thread_gyroscope/Thread_gyroscope.c ****         printf("GYRO_Receive_Data.rxlen: %d\r\n",GYRO_Receive_Data.rxlen);
+ 130              		.loc 1 83 9 view .LVU21
+ 131              		.loc 1 83 67 is_stmt 0 view .LVU22
+ 132 000c 114F     		ldr	r7, .L9
+ 133 000e 3978     		ldrb	r1, [r7]	@ zero_extendqisi2
+ 134              	.LVL8:
+ 135              		.loc 1 83 9 view .LVU23
+ 136 0010 1148     		ldr	r0, .L9+4
+ 137              	.LVL9:
+ 138              		.loc 1 83 9 view .LVU24
+ 139 0012 FFF7FEFF 		bl	printf
+ 140              	.LVL10:
+  84:./app/Threads/Thread_gyroscope/Thread_gyroscope.c ****         memcpy(Thread_gyroscope->GYRO_DATA, GYRO_Receive_Data.rxbuf, GYRO_Receive_Data.rxlen);
+ 141              		.loc 1 84 9 is_stmt 1 view .LVU25
+ 142              		.loc 1 84 87 is_stmt 0 view .LVU26
+ 143 0016 3D46     		mov	r5, r7
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccvElrek.s 			page 5
+
+
+ 144 0018 15F8022B 		ldrb	r2, [r5], #2	@ zero_extendqisi2
+ 145              		.loc 1 84 9 view .LVU27
+ 146 001c 2946     		mov	r1, r5
+ 147 001e 2046     		mov	r0, r4
+ 148 0020 FFF7FEFF 		bl	memcpy
+ 149              	.LVL11:
+  85:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 		}
+  86:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 		GYRO_Receive_Data.rxok = 0;
+ 150              		.loc 1 86 3 is_stmt 1 view .LVU28
+ 151              		.loc 1 86 26 is_stmt 0 view .LVU29
+ 152 0024 0024     		movs	r4, #0
+ 153              	.LVL12:
+ 154              		.loc 1 86 26 view .LVU30
+ 155 0026 7C70     		strb	r4, [r7, #1]
+  87:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 		__HAL_UART_ENABLE_IT(huart, UART_IT_IDLE);
+ 156              		.loc 1 87 3 is_stmt 1 view .LVU31
+ 157 0028 3268     		ldr	r2, [r6]
+ 158 002a D368     		ldr	r3, [r2, #12]
+ 159 002c 43F01003 		orr	r3, r3, #16
+ 160 0030 D360     		str	r3, [r2, #12]
+  88:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 		memset(GYRO_Receive_Data.rxbuf, 0, UART_RECEIVE_IDLE_RX_MAXLEN);
+ 161              		.loc 1 88 3 view .LVU32
+ 162 0032 4FF48077 		mov	r7, #256
+ 163 0036 3A46     		mov	r2, r7
+ 164 0038 2146     		mov	r1, r4
+ 165 003a 2846     		mov	r0, r5
+ 166 003c FFF7FEFF 		bl	memset
+ 167              	.LVL13:
+  89:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 		HAL_UART_Receive_DMA(huart, GYRO_Receive_Data.rxbuf, UART_RECEIVE_IDLE_RX_MAXLEN);
+ 168              		.loc 1 89 3 view .LVU33
+ 169 0040 3A46     		mov	r2, r7
+ 170 0042 2946     		mov	r1, r5
+ 171 0044 3046     		mov	r0, r6
+ 172 0046 FFF7FEFF 		bl	HAL_UART_Receive_DMA
+ 173              	.LVL14:
+  73:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 	if (GYRO_Receive_Data.rxok == 0)
+ 174              		.loc 1 73 9 is_stmt 0 view .LVU34
+ 175 004a 2046     		mov	r0, r4
+ 176              	.LVL15:
+ 177              	.L6:
+  90:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 	}
+  91:./app/Threads/Thread_gyroscope/Thread_gyroscope.c ****     // printf("Get_gyroscope_nret: %d\r\n",nret);
+  92:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 	return nret;
+ 178              		.loc 1 92 2 is_stmt 1 view .LVU35
+  93:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** }
+ 179              		.loc 1 93 1 is_stmt 0 view .LVU36
+ 180 004c F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 181              	.LVL16:
+ 182              	.L7:
+  76:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 	}
+ 183              		.loc 1 76 8 view .LVU37
+ 184 004e 4FF0FF30 		mov	r0, #-1
+ 185              	.LVL17:
+  76:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 	}
+ 186              		.loc 1 76 8 view .LVU38
+ 187 0052 FBE7     		b	.L6
+ 188              	.L10:
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccvElrek.s 			page 6
+
+
+ 189              		.align	2
+ 190              	.L9:
+ 191 0054 00000000 		.word	.LANCHOR0
+ 192 0058 00000000 		.word	.LC0
+ 193              		.cfi_endproc
+ 194              	.LFE252:
+ 196              		.section	.rodata.Thread_gyroscope_Entry.str1.4,"aMS",%progbits,1
+ 197              		.align	2
+ 198              	.LC1:
+ 199 0000 25730D0A 		.ascii	"%s\015\012\000"
+ 199      00
+ 200              		.section	.text.Thread_gyroscope_Entry,"ax",%progbits
+ 201              		.align	1
+ 202              		.global	Thread_gyroscope_Entry
+ 203              		.syntax unified
+ 204              		.thumb
+ 205              		.thumb_func
+ 207              	Thread_gyroscope_Entry:
+ 208              	.LVL18:
+ 209              	.LFB250:
+  37:./app/Threads/Thread_gyroscope/Thread_gyroscope.c ****   Thread_gyroscope_parama * thread_param = (Thread_gyroscope_parama *)thread_input;
+ 210              		.loc 1 37 1 is_stmt 1 view -0
+ 211              		.cfi_startproc
+ 212              		@ args = 0, pretend = 0, frame = 0
+ 213              		@ frame_needed = 0, uses_anonymous_args = 0
+  37:./app/Threads/Thread_gyroscope/Thread_gyroscope.c ****   Thread_gyroscope_parama * thread_param = (Thread_gyroscope_parama *)thread_input;
+ 214              		.loc 1 37 1 is_stmt 0 view .LVU40
+ 215 0000 10B5     		push	{r4, lr}
+ 216              	.LCFI4:
+ 217              		.cfi_def_cfa_offset 8
+ 218              		.cfi_offset 4, -8
+ 219              		.cfi_offset 14, -4
+ 220 0002 0446     		mov	r4, r0
+  38:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 	while(1)
+ 221              		.loc 1 38 3 is_stmt 1 view .LVU41
+ 222              	.LVL19:
+  38:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 	while(1)
+ 223              		.loc 1 38 3 is_stmt 0 view .LVU42
+ 224 0004 06E0     		b	.L14
+ 225              	.LVL20:
+ 226              	.L16:
+  44:./app/Threads/Thread_gyroscope/Thread_gyroscope.c ****     }
+ 227              		.loc 1 44 9 is_stmt 1 view .LVU43
+ 228 0006 1049     		ldr	r1, .L17
+ 229 0008 1048     		ldr	r0, .L17+4
+ 230 000a FFF7FEFF 		bl	printf
+ 231              	.LVL21:
+ 232              	.L13:
+  55:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 	}
+ 233              		.loc 1 55 5 view .LVU44
+ 234 000e 1420     		movs	r0, #20
+ 235 0010 FFF7FEFF 		bl	_tx_thread_sleep
+ 236              	.LVL22:
+  39:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 	{
+ 237              		.loc 1 39 7 view .LVU45
+ 238              	.L14:
+  39:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 	{
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccvElrek.s 			page 7
+
+
+ 239              		.loc 1 39 2 view .LVU46
+  41:./app/Threads/Thread_gyroscope/Thread_gyroscope.c ****     {
+ 240              		.loc 1 41 5 view .LVU47
+  41:./app/Threads/Thread_gyroscope/Thread_gyroscope.c ****     {
+ 241              		.loc 1 41 9 is_stmt 0 view .LVU48
+ 242 0014 2146     		mov	r1, r4
+ 243 0016 0E48     		ldr	r0, .L17+8
+ 244 0018 FFF7FEFF 		bl	Get_gyroscope_date
+ 245              	.LVL23:
+  41:./app/Threads/Thread_gyroscope/Thread_gyroscope.c ****     {
+ 246              		.loc 1 41 8 view .LVU49
+ 247 001c 0028     		cmp	r0, #0
+ 248 001e F2D0     		beq	.L16
+ 249              	.LBB2:
+  49:./app/Threads/Thread_gyroscope/Thread_gyroscope.c ****         tx_thread_sleep(3);
+ 250              		.loc 1 49 9 is_stmt 1 view .LVU50
+ 251 0020 0123     		movs	r3, #1
+ 252 0022 0322     		movs	r2, #3
+ 253 0024 0621     		movs	r1, #6
+ 254 0026 A420     		movs	r0, #164
+ 255 0028 FFF7FEFF 		bl	send_command
+ 256              	.LVL24:
+  50:./app/Threads/Thread_gyroscope/Thread_gyroscope.c ****         send_command(0xa4,0x03,0x08,0x1b); 
+ 257              		.loc 1 50 9 view .LVU51
+ 258 002c 0320     		movs	r0, #3
+ 259 002e FFF7FEFF 		bl	_tx_thread_sleep
+ 260              	.LVL25:
+  51:./app/Threads/Thread_gyroscope/Thread_gyroscope.c ****         tx_thread_sleep(3);
+ 261              		.loc 1 51 9 view .LVU52
+ 262 0032 1B23     		movs	r3, #27
+ 263 0034 0822     		movs	r2, #8
+ 264 0036 0321     		movs	r1, #3
+ 265 0038 A420     		movs	r0, #164
+ 266 003a FFF7FEFF 		bl	send_command
+ 267              	.LVL26:
+  52:./app/Threads/Thread_gyroscope/Thread_gyroscope.c ****     }
+ 268              		.loc 1 52 9 view .LVU53
+ 269 003e 0320     		movs	r0, #3
+ 270 0040 FFF7FEFF 		bl	_tx_thread_sleep
+ 271              	.LVL27:
+ 272 0044 E3E7     		b	.L13
+ 273              	.L18:
+ 274 0046 00BF     		.align	2
+ 275              	.L17:
+ 276 0048 00000000 		.word	.LANCHOR1
+ 277 004c 00000000 		.word	.LC1
+ 278 0050 00000000 		.word	huart3
+ 279              	.LBE2:
+ 280              		.cfi_endproc
+ 281              	.LFE250:
+ 283              		.section	.text.BSP_GYRO_IDLE_CallBack,"ax",%progbits
+ 284              		.align	1
+ 285              		.global	BSP_GYRO_IDLE_CallBack
+ 286              		.syntax unified
+ 287              		.thumb
+ 288              		.thumb_func
+ 290              	BSP_GYRO_IDLE_CallBack:
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccvElrek.s 			page 8
+
+
+ 291              	.LVL28:
+ 292              	.LFB253:
+  94:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 
+  95:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 
+  96:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 
+  97:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** void BSP_GYRO_IDLE_CallBack(UART_HandleTypeDef *huart)
+  98:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** {
+ 293              		.loc 1 98 1 view -0
+ 294              		.cfi_startproc
+ 295              		@ args = 0, pretend = 0, frame = 8
+ 296              		@ frame_needed = 0, uses_anonymous_args = 0
+  99:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 	if ((__HAL_UART_GET_FLAG(huart, UART_FLAG_IDLE) != RESET))
+ 297              		.loc 1 99 2 view .LVU55
+ 298              		.loc 1 99 7 is_stmt 0 view .LVU56
+ 299 0000 0368     		ldr	r3, [r0]
+ 300 0002 1B68     		ldr	r3, [r3]
+ 301              		.loc 1 99 5 view .LVU57
+ 302 0004 13F0100F 		tst	r3, #16
+ 303 0008 00D1     		bne	.L25
+ 304 000a 7047     		bx	lr
+ 305              	.L25:
+  98:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 	if ((__HAL_UART_GET_FLAG(huart, UART_FLAG_IDLE) != RESET))
+ 306              		.loc 1 98 1 view .LVU58
+ 307 000c 10B5     		push	{r4, lr}
+ 308              	.LCFI5:
+ 309              		.cfi_def_cfa_offset 8
+ 310              		.cfi_offset 4, -8
+ 311              		.cfi_offset 14, -4
+ 312 000e 82B0     		sub	sp, sp, #8
+ 313              	.LCFI6:
+ 314              		.cfi_def_cfa_offset 16
+ 315 0010 0446     		mov	r4, r0
+ 100:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 	{
+ 101:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 		HAL_UART_DMAStop(huart);
+ 316              		.loc 1 101 3 is_stmt 1 view .LVU59
+ 317 0012 FFF7FEFF 		bl	HAL_UART_DMAStop
+ 318              	.LVL29:
+ 102:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 		__HAL_UART_CLEAR_IDLEFLAG(huart);
+ 319              		.loc 1 102 3 view .LVU60
+ 320              	.LBB3:
+ 321              		.loc 1 102 3 view .LVU61
+ 322 0016 0023     		movs	r3, #0
+ 323 0018 0193     		str	r3, [sp, #4]
+ 324              		.loc 1 102 3 view .LVU62
+ 325 001a 2368     		ldr	r3, [r4]
+ 326 001c 1A68     		ldr	r2, [r3]
+ 327 001e 0192     		str	r2, [sp, #4]
+ 328              		.loc 1 102 3 view .LVU63
+ 329 0020 5B68     		ldr	r3, [r3, #4]
+ 330 0022 0193     		str	r3, [sp, #4]
+ 331              		.loc 1 102 3 view .LVU64
+ 332 0024 019B     		ldr	r3, [sp, #4]
+ 333              	.LBE3:
+ 334              		.loc 1 102 3 view .LVU65
+ 103:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 		GYRO_Receive_Data.rxlen = UART_RECEIVE_IDLE_RX_MAXLEN - __HAL_DMA_GET_COUNTER(huart->hdmarx);
+ 335              		.loc 1 103 3 view .LVU66
+ 336              		.loc 1 103 59 is_stmt 0 view .LVU67
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccvElrek.s 			page 9
+
+
+ 337 0026 E36B     		ldr	r3, [r4, #60]
+ 338 0028 1B68     		ldr	r3, [r3]
+ 339 002a 5B68     		ldr	r3, [r3, #4]
+ 340              		.loc 1 103 57 view .LVU68
+ 341 002c 5B42     		rsbs	r3, r3, #0
+ 342 002e DBB2     		uxtb	r3, r3
+ 343              		.loc 1 103 27 view .LVU69
+ 344 0030 024A     		ldr	r2, .L26
+ 345 0032 1370     		strb	r3, [r2]
+ 104:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 		GYRO_Receive_Data.rxok = 1;
+ 346              		.loc 1 104 3 is_stmt 1 view .LVU70
+ 347              		.loc 1 104 26 is_stmt 0 view .LVU71
+ 348 0034 0123     		movs	r3, #1
+ 349 0036 5370     		strb	r3, [r2, #1]
+ 105:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** 	}
+ 106:./app/Threads/Thread_gyroscope/Thread_gyroscope.c **** }
+ 350              		.loc 1 106 1 view .LVU72
+ 351 0038 02B0     		add	sp, sp, #8
+ 352              	.LCFI7:
+ 353              		.cfi_def_cfa_offset 8
+ 354              		@ sp needed
+ 355 003a 10BD     		pop	{r4, pc}
+ 356              	.LVL30:
+ 357              	.L27:
+ 358              		.loc 1 106 1 view .LVU73
+ 359              		.align	2
+ 360              	.L26:
+ 361 003c 00000000 		.word	.LANCHOR0
+ 362              		.cfi_endproc
+ 363              	.LFE253:
+ 365              		.global	GYRO_Receive_Data
+ 366              		.global	Thread_gyroscope_parama1
+ 367              		.global	Thread_gyroscope
+ 368              		.section	.bss.Thread_gyroscope,"aw",%nobits
+ 369              		.align	2
+ 372              	Thread_gyroscope:
+ 373 0000 00000000 		.space	176
+ 373      00000000 
+ 373      00000000 
+ 373      00000000 
+ 373      00000000 
+ 374              		.section	.bss.Thread_gyroscope_parama1,"aw",%nobits
+ 375              		.align	2
+ 376              		.set	.LANCHOR1,. + 0
+ 379              	Thread_gyroscope_parama1:
+ 380 0000 00000000 		.space	100
+ 380      00000000 
+ 380      00000000 
+ 380      00000000 
+ 380      00000000 
+ 381              		.section	.data.GYRO_Receive_Data,"aw"
+ 382              		.align	2
+ 383              		.set	.LANCHOR0,. + 0
+ 386              	GYRO_Receive_Data:
+ 387 0000 00       		.byte	0
+ 388 0001 01       		.byte	1
+ 389 0002 00000000 		.space	256
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccvElrek.s 			page 10
+
+
+ 389      00000000 
+ 389      00000000 
+ 389      00000000 
+ 389      00000000 
+ 390              		.text
+ 391              	.Letext0:
+ 392              		.file 2 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 393              		.file 3 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
+ 394              		.file 4 "./Middlewares/ST/threadx/common/inc/tx_api.h"
+ 395              		.file 5 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 396              		.file 6 "./Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h"
+ 397              		.file 7 "./Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h"
+ 398              		.file 8 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
+ 399              		.file 9 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
+ 400              		.file 10 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h"
+ 401              		.file 11 "./app/Threads/Thread_gyroscope/Thread_gyroscope.h"
+ 402              		.file 12 "./Core/Inc/usart.h"
+ 403              		.file 13 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\stdio.h"
+ 404              		.file 14 "<built-in>"
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccvElrek.s 			page 11
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 Thread_gyroscope.c
+C:\Users\Dennis\AppData\Local\Temp\ccvElrek.s:20     .text.send_command:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\ccvElrek.s:26     .text.send_command:00000000 send_command
+C:\Users\Dennis\AppData\Local\Temp\ccvElrek.s:86     .text.send_command:00000048 $d
+C:\Users\Dennis\AppData\Local\Temp\ccvElrek.s:91     .rodata.Get_gyroscope_date.str1.4:00000000 $d
+C:\Users\Dennis\AppData\Local\Temp\ccvElrek.s:95     .text.Get_gyroscope_date:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\ccvElrek.s:101    .text.Get_gyroscope_date:00000000 Get_gyroscope_date
+C:\Users\Dennis\AppData\Local\Temp\ccvElrek.s:191    .text.Get_gyroscope_date:00000054 $d
+C:\Users\Dennis\AppData\Local\Temp\ccvElrek.s:197    .rodata.Thread_gyroscope_Entry.str1.4:00000000 $d
+C:\Users\Dennis\AppData\Local\Temp\ccvElrek.s:201    .text.Thread_gyroscope_Entry:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\ccvElrek.s:207    .text.Thread_gyroscope_Entry:00000000 Thread_gyroscope_Entry
+C:\Users\Dennis\AppData\Local\Temp\ccvElrek.s:276    .text.Thread_gyroscope_Entry:00000048 $d
+C:\Users\Dennis\AppData\Local\Temp\ccvElrek.s:284    .text.BSP_GYRO_IDLE_CallBack:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\ccvElrek.s:290    .text.BSP_GYRO_IDLE_CallBack:00000000 BSP_GYRO_IDLE_CallBack
+C:\Users\Dennis\AppData\Local\Temp\ccvElrek.s:361    .text.BSP_GYRO_IDLE_CallBack:0000003c $d
+C:\Users\Dennis\AppData\Local\Temp\ccvElrek.s:386    .data.GYRO_Receive_Data:00000000 GYRO_Receive_Data
+C:\Users\Dennis\AppData\Local\Temp\ccvElrek.s:379    .bss.Thread_gyroscope_parama1:00000000 Thread_gyroscope_parama1
+C:\Users\Dennis\AppData\Local\Temp\ccvElrek.s:372    .bss.Thread_gyroscope:00000000 Thread_gyroscope
+C:\Users\Dennis\AppData\Local\Temp\ccvElrek.s:369    .bss.Thread_gyroscope:00000000 $d
+C:\Users\Dennis\AppData\Local\Temp\ccvElrek.s:375    .bss.Thread_gyroscope_parama1:00000000 $d
+C:\Users\Dennis\AppData\Local\Temp\ccvElrek.s:382    .data.GYRO_Receive_Data:00000000 $d
+
+UNDEFINED SYMBOLS
+HAL_UART_Transmit
+huart3
+printf
+memcpy
+memset
+HAL_UART_Receive_DMA
+_tx_thread_sleep
+HAL_UART_DMAStop

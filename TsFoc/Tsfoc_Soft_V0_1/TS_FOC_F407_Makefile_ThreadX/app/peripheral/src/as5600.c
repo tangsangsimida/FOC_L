@@ -17,6 +17,7 @@ float Read_AS5600_Angle(As5600_Sensor_Typedef* as5600)
     if(fabs(d_angle) > (0.8f*_2PI) ) as5600->Rotations += ( d_angle > 0 ) ? -1 : 1; 
     as5600->Angle = angle;
     as5600->angle_ts = HAL_GetTick();
+    // printf("angle:%f\n", as5600->Angle);
     return as5600->Angle;
 }
 // 获取AS5600角度(带旋转数值)

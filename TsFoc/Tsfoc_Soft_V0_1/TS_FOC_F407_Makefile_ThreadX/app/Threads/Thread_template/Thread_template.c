@@ -34,7 +34,7 @@ void Thread_Template_Entry(ULONG thread_input)
 	{
 
     HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
-    tx_thread_sleep(200);
+    tx_thread_sleep(20);
 	}
 }
 

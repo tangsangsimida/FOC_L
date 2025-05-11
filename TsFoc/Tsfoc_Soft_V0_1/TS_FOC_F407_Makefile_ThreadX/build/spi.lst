@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s 			page 1
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccmR1oPb.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s 			page 1
   28:./Core/Src/spi.c **** SPI_HandleTypeDef hspi2;
   29:./Core/Src/spi.c **** DMA_HandleTypeDef hdma_spi1_tx;
   30:./Core/Src/spi.c **** DMA_HandleTypeDef hdma_spi1_rx;
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s 			page 2
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccmR1oPb.s 			page 2
 
 
   31:./Core/Src/spi.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s 			page 1
   50:./Core/Src/spi.c ****   hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_2;
   64              		.loc 1 50 3 is_stmt 1 view .LVU15
   65              		.loc 1 50 32 is_stmt 0 view .LVU16
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s 			page 3
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccmR1oPb.s 			page 3
 
 
   66 001e C361     		str	r3, [r0, #28]
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s 			page 1
  107              		.thumb
  108              		.thumb_func
  110              	MX_SPI2_Init:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s 			page 4
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccmR1oPb.s 			page 4
 
 
  111              	.LFB240:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s 			page 1
   82:./Core/Src/spi.c ****   hspi2.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_2;
  147              		.loc 1 82 3 is_stmt 1 view .LVU46
  148              		.loc 1 82 32 is_stmt 0 view .LVU47
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s 			page 5
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccmR1oPb.s 			page 5
 
 
  149 001e C361     		str	r3, [r0, #28]
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s 			page 1
  190              		.thumb
  191              		.thumb_func
  193              	HAL_SPI_MspInit:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s 			page 6
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccmR1oPb.s 			page 6
 
 
  194              	.LVL4:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s 			page 1
  119:./Core/Src/spi.c ****     GPIO_InitStruct.Alternate = GPIO_AF5_SPI1;
  120:./Core/Src/spi.c ****     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
  121:./Core/Src/spi.c **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s 			page 7
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccmR1oPb.s 			page 7
 
 
  122:./Core/Src/spi.c ****     /* SPI1 DMA Init */
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s 			page 1
  169:./Core/Src/spi.c **** 
  170:./Core/Src/spi.c ****   /* USER CODE END SPI2_MspInit 0 */
  171:./Core/Src/spi.c ****     /* SPI2 clock enable */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s 			page 8
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccmR1oPb.s 			page 8
 
 
  172:./Core/Src/spi.c ****     __HAL_RCC_SPI2_CLK_ENABLE();
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s 			page 1
  107:./Core/Src/spi.c **** 
  259              		.loc 1 107 5 view .LVU77
  260 003a 019A     		ldr	r2, [sp, #4]
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s 			page 9
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccmR1oPb.s 			page 9
 
 
  261              	.LBE2:
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s 			page 1
  298 0062 3948     		ldr	r0, .L23+12
  299              	.LVL7:
  120:./Core/Src/spi.c **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s 			page 10
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccmR1oPb.s 			page 10
 
 
  300              		.loc 1 120 5 is_stmt 0 view .LVU95
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s 			page 1
  335              		.loc 1 133 5 is_stmt 1 view .LVU114
  133:./Core/Src/spi.c ****     if (HAL_DMA_Init(&hdma_spi1_tx) != HAL_OK)
  336              		.loc 1 133 32 is_stmt 0 view .LVU115
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s 			page 11
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccmR1oPb.s 			page 11
 
 
  337 0088 4562     		str	r5, [r0, #36]
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s 			page 1
  147:./Core/Src/spi.c ****     hdma_spi1_rx.Init.MemDataAlignment = DMA_MDATAALIGN_BYTE;
  373              		.loc 1 147 43 is_stmt 0 view .LVU134
  374 00ae 4361     		str	r3, [r0, #20]
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s 			page 12
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccmR1oPb.s 			page 12
 
 
  148:./Core/Src/spi.c ****     hdma_spi1_rx.Init.Mode = DMA_NORMAL;
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s 			page 1
  412              	.L21:
  136:./Core/Src/spi.c ****     }
  413              		.loc 1 136 7 view .LVU152
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s 			page 13
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccmR1oPb.s 			page 13
 
 
  414 00d6 FFF7FEFF 		bl	Error_Handler
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s 			page 1
  456              	.LBE5:
  174:./Core/Src/spi.c ****     /**SPI2 GPIO Configuration
  457              		.loc 1 174 5 view .LVU165
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s 			page 14
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccmR1oPb.s 			page 14
 
 
  180:./Core/Src/spi.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s 			page 1
  499 0144 00380240 		.word	1073887232
  500 0148 00000240 		.word	1073872896
  501 014c 00000000 		.word	.LANCHOR2
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s 			page 15
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccmR1oPb.s 			page 15
 
 
  502 0150 58640240 		.word	1073898584
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s 			page 1
  217:./Core/Src/spi.c **** 
  218:./Core/Src/spi.c ****     /* SPI1 interrupt Deinit */
  219:./Core/Src/spi.c ****     HAL_NVIC_DisableIRQ(SPI1_IRQn);
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s 			page 16
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccmR1oPb.s 			page 16
 
 
  220:./Core/Src/spi.c ****   /* USER CODE BEGIN SPI1_MspDeInit 1 */
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s 			page 1
  215:./Core/Src/spi.c ****     HAL_DMA_DeInit(spiHandle->hdmarx);
  561              		.loc 1 215 5 is_stmt 1 view .LVU192
  562 0028 A06C     		ldr	r0, [r4, #72]
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s 			page 17
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccmR1oPb.s 			page 17
 
 
  563 002a FFF7FEFF 		bl	HAL_DMA_DeInit
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s 			page 1
  614 0000 00000000 		.space	96
  614      00000000 
  614      00000000 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s 			page 18
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccmR1oPb.s 			page 18
 
 
  614      00000000 
@@ -1062,31 +1062,31 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s 			page 1
  645              		.file 9 "./Core/Inc/spi.h"
  646              		.file 10 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h"
  647              		.file 11 "./Core/Inc/main.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s 			page 19
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccmR1oPb.s 			page 19
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 spi.c
-C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s:20     .text.MX_SPI1_Init:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s:26     .text.MX_SPI1_Init:00000000 MX_SPI1_Init
-C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s:98     .text.MX_SPI1_Init:00000038 $d
-C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s:104    .text.MX_SPI2_Init:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s:110    .text.MX_SPI2_Init:00000000 MX_SPI2_Init
-C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s:181    .text.MX_SPI2_Init:00000038 $d
-C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s:187    .text.HAL_SPI_MspInit:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s:193    .text.HAL_SPI_MspInit:00000000 HAL_SPI_MspInit
-C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s:497    .text.HAL_SPI_MspInit:0000013c $d
-C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s:510    .text.HAL_SPI_MspDeInit:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s:516    .text.HAL_SPI_MspDeInit:00000000 HAL_SPI_MspDeInit
-C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s:597    .text.HAL_SPI_MspDeInit:0000005c $d
-C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s:613    .bss.hdma_spi1_rx:00000000 hdma_spi1_rx
-C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s:620    .bss.hdma_spi1_tx:00000000 hdma_spi1_tx
-C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s:634    .bss.hspi2:00000000 hspi2
-C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s:627    .bss.hspi1:00000000 hspi1
-C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s:609    .bss.hdma_spi1_rx:00000000 $d
-C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s:616    .bss.hdma_spi1_tx:00000000 $d
-C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s:623    .bss.hspi1:00000000 $d
-C:\Users\Dennis\AppData\Local\Temp\ccFAPFWp.s:630    .bss.hspi2:00000000 $d
+C:\Users\Dennis\AppData\Local\Temp\ccmR1oPb.s:20     .text.MX_SPI1_Init:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\ccmR1oPb.s:26     .text.MX_SPI1_Init:00000000 MX_SPI1_Init
+C:\Users\Dennis\AppData\Local\Temp\ccmR1oPb.s:98     .text.MX_SPI1_Init:00000038 $d
+C:\Users\Dennis\AppData\Local\Temp\ccmR1oPb.s:104    .text.MX_SPI2_Init:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\ccmR1oPb.s:110    .text.MX_SPI2_Init:00000000 MX_SPI2_Init
+C:\Users\Dennis\AppData\Local\Temp\ccmR1oPb.s:181    .text.MX_SPI2_Init:00000038 $d
+C:\Users\Dennis\AppData\Local\Temp\ccmR1oPb.s:187    .text.HAL_SPI_MspInit:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\ccmR1oPb.s:193    .text.HAL_SPI_MspInit:00000000 HAL_SPI_MspInit
+C:\Users\Dennis\AppData\Local\Temp\ccmR1oPb.s:497    .text.HAL_SPI_MspInit:0000013c $d
+C:\Users\Dennis\AppData\Local\Temp\ccmR1oPb.s:510    .text.HAL_SPI_MspDeInit:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\ccmR1oPb.s:516    .text.HAL_SPI_MspDeInit:00000000 HAL_SPI_MspDeInit
+C:\Users\Dennis\AppData\Local\Temp\ccmR1oPb.s:597    .text.HAL_SPI_MspDeInit:0000005c $d
+C:\Users\Dennis\AppData\Local\Temp\ccmR1oPb.s:613    .bss.hdma_spi1_rx:00000000 hdma_spi1_rx
+C:\Users\Dennis\AppData\Local\Temp\ccmR1oPb.s:620    .bss.hdma_spi1_tx:00000000 hdma_spi1_tx
+C:\Users\Dennis\AppData\Local\Temp\ccmR1oPb.s:634    .bss.hspi2:00000000 hspi2
+C:\Users\Dennis\AppData\Local\Temp\ccmR1oPb.s:627    .bss.hspi1:00000000 hspi1
+C:\Users\Dennis\AppData\Local\Temp\ccmR1oPb.s:609    .bss.hdma_spi1_rx:00000000 $d
+C:\Users\Dennis\AppData\Local\Temp\ccmR1oPb.s:616    .bss.hdma_spi1_tx:00000000 $d
+C:\Users\Dennis\AppData\Local\Temp\ccmR1oPb.s:623    .bss.hspi1:00000000 $d
+C:\Users\Dennis\AppData\Local\Temp\ccmR1oPb.s:630    .bss.hspi2:00000000 $d
 
 UNDEFINED SYMBOLS
 HAL_SPI_Init

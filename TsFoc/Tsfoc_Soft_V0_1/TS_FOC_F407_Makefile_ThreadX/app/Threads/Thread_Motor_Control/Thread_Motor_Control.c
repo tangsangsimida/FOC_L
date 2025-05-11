@@ -32,10 +32,28 @@ void Thread_Motor_Control_Entry(ULONG thread_input)
 {
     Thread_Motor_Control_parama * thread_param = (Thread_Motor_Control_parama *)thread_input;
     Motor* motor1 = (Motor*)thread_param->Motor1_handle;
+    float Kp = 0.133; //位置环比例系数
+    setTorque(motor1,2, _3PI_2);
+    tx_thread_sleep(500);  
+    Read_AS5600_Angle(motor1->As5600_Sensor);
+    motor1->zero_electric_angle = _electricalAngle(motor1);
+    setTorque(motor1,0, _3PI_2);
+    printf("0电角度:%d\r\n",(int)(motor1->zero_electric_angle*1000));
+    tx_thread_sleep(500);
+    printf("init_ok\r\n");
+
+    int count = 0;
 
     while(1)
     {
-
+      Read_AS5600_Angle(motor1->As5600_Sensor);
+      setTorque(motor1,Kp*(0-motor1->DIR*Get_AS5600_Angle(motor1->As5600_Sensor))*180.f/PI,_electricalAngle(motor1));   //位置闭环
+      if(count++>100)
+      {
+        count = 0;
+        printf("%.2f,%4d\r\n",motor1->As5600_Sensor->Angle,motor1->As5600_Sensor->Rotations);
+      }
+      // printf("Motor1 Angle: %f\n", motor1->As5600_Sensor->Angle);
       tx_thread_sleep(1);
-    }
+    } 
 }

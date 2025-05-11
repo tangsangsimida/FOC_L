@@ -65,7 +65,7 @@ void Thread_led_Entry(ULONG thread_input)
 
             aRGB = ((uint32_t)(alpha)) << 24 | ((uint32_t)(red)) << 16 | ((uint32_t)(green)) << 8 | ((uint32_t)(blue)) << 0;
             aRGB_led_show(aRGB);
-            tx_thread_sleep(1);
+            tx_thread_sleep(4);
         }
 
     }

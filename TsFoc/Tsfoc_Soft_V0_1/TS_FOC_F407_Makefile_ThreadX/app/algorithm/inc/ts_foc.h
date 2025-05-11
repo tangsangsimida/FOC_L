@@ -10,7 +10,12 @@
 #include "tim.h"
 
 
-
+// /// @brief 电机状态
+// /// @note 电机状态结构体
+// /// 后续优化，上位机读取状态可直接从这个对象的示例中获取
+// typedef struct 
+// {
+// }Motor_Staute_Typedef;
 
 
 

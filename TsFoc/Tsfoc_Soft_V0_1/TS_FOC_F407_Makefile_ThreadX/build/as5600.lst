@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2gNaZG.s 			page 1
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cch75Uxz.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2gNaZG.s 			page 1
   45              		.loc 1 11 13 is_stmt 0 view .LVU3
   46 0006 0023     		movs	r3, #0
   47 0008 ADF81430 		strh	r3, [sp, #20]	@ movhi
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2gNaZG.s 			page 2
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cch75Uxz.s 			page 2
 
 
   12:./app/peripheral/src/as5600.c ****     HAL_I2C_Mem_Read(as5600->i2c_handle, AS5600_ADDRESS, ANGLE_REGISTER, I2C_MEMADD_SIZE_8BIT, data
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2gNaZG.s 			page 1
   96 0062 09DD     		ble	.L2
   97              		.loc 1 17 38 is_stmt 1 discriminator 1 view .LVU20
   98              		.loc 1 17 56 is_stmt 0 discriminator 1 view .LVU21
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2gNaZG.s 			page 3
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cch75Uxz.s 			page 3
 
 
   99 0064 2369     		ldr	r3, [r4, #16]
@@ -144,10 +144,11 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2gNaZG.s 			page 1
  117              	.LVL7:
  118              		.loc 1 19 22 view .LVU29
  119 0080 A060     		str	r0, [r4, #8]
-  20:./app/peripheral/src/as5600.c ****     return as5600->Angle;
- 120              		.loc 1 20 5 is_stmt 1 view .LVU30
-  21:./app/peripheral/src/as5600.c **** }
- 121              		.loc 1 21 1 is_stmt 0 view .LVU31
+  20:./app/peripheral/src/as5600.c ****     // printf("angle:%f\n", as5600->Angle);
+  21:./app/peripheral/src/as5600.c ****     return as5600->Angle;
+ 120              		.loc 1 21 5 is_stmt 1 view .LVU30
+  22:./app/peripheral/src/as5600.c **** }
+ 121              		.loc 1 22 1 is_stmt 0 view .LVU31
  122 0082 94ED010A 		vldr.32	s0, [r4, #4]
  123 0086 06B0     		add	sp, sp, #24
  124              	.LCFI2:
@@ -177,35 +178,35 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2gNaZG.s 			page 1
  148              		.syntax unified
  149              		.thumb
  150              		.thumb_func
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cch75Uxz.s 			page 4
+
+
  152              	Get_AS5600_Angle:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2gNaZG.s 			page 4
-
-
  153              	.LVL9:
  154              	.LFB243:
-  22:./app/peripheral/src/as5600.c **** // 获取AS5600角度(带旋转数值)
-  23:./app/peripheral/src/as5600.c **** // 输入：as5600 结构体指针
-  24:./app/peripheral/src/as5600.c **** // 返回：角度值 单位：弧度
-  25:./app/peripheral/src/as5600.c **** // 说明：获取AS5600角度(带旋转数值)，不更新as5600结构体中的角度值和旋转�
-  26:./app/peripheral/src/as5600.c **** float Get_AS5600_Angle(As5600_Sensor_Typedef* as5600) 
-  27:./app/peripheral/src/as5600.c **** {
- 155              		.loc 1 27 1 is_stmt 1 view -0
+  23:./app/peripheral/src/as5600.c **** // 获取AS5600角度(带旋转数值)
+  24:./app/peripheral/src/as5600.c **** // 输入：as5600 结构体指针
+  25:./app/peripheral/src/as5600.c **** // 返回：角度值 单位：弧度
+  26:./app/peripheral/src/as5600.c **** // 说明：获取AS5600角度(带旋转数值)，不更新as5600结构体中的角度值和旋转�
+  27:./app/peripheral/src/as5600.c **** float Get_AS5600_Angle(As5600_Sensor_Typedef* as5600) 
+  28:./app/peripheral/src/as5600.c **** {
+ 155              		.loc 1 28 1 is_stmt 1 view -0
  156              		.cfi_startproc
  157              		@ args = 0, pretend = 0, frame = 0
  158              		@ frame_needed = 0, uses_anonymous_args = 0
  159              		@ link register save eliminated.
-  28:./app/peripheral/src/as5600.c ****     return as5600->Angle + as5600->Rotations*_2PI;
- 160              		.loc 1 28 5 view .LVU34
- 161              		.loc 1 28 18 is_stmt 0 view .LVU35
+  29:./app/peripheral/src/as5600.c ****     return as5600->Angle + as5600->Rotations*_2PI;
+ 160              		.loc 1 29 5 view .LVU34
+ 161              		.loc 1 29 18 is_stmt 0 view .LVU35
  162 0000 90ED010A 		vldr.32	s0, [r0, #4]
- 163              		.loc 1 28 34 view .LVU36
+ 163              		.loc 1 29 34 view .LVU36
  164 0004 D0ED047A 		vldr.32	s15, [r0, #16]	@ int
- 165              		.loc 1 28 45 view .LVU37
+ 165              		.loc 1 29 45 view .LVU37
  166 0008 F8EEE77A 		vcvt.f32.s32	s15, s15
  167 000c 9FED037A 		vldr.32	s14, .L14
  168 0010 67EE877A 		vmul.f32	s15, s15, s14
-  29:./app/peripheral/src/as5600.c **** }
- 169              		.loc 1 29 1 view .LVU38
+  30:./app/peripheral/src/as5600.c **** }
+ 169              		.loc 1 30 1 view .LVU38
  170 0014 30EE270A 		vadd.f32	s0, s0, s15
  171 0018 7047     		bx	lr
  172              	.L15:
@@ -224,17 +225,17 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2gNaZG.s 			page 1
  186              		.file 7 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h"
  187              		.file 8 "./app/peripheral/inc/as5600.h"
  188              		.file 9 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2gNaZG.s 			page 5
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cch75Uxz.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 as5600.c
-C:\Users\Dennis\AppData\Local\Temp\cc2gNaZG.s:20     .text.Read_AS5600_Angle:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\cc2gNaZG.s:26     .text.Read_AS5600_Angle:00000000 Read_AS5600_Angle
-C:\Users\Dennis\AppData\Local\Temp\cc2gNaZG.s:139    .text.Read_AS5600_Angle:00000090 $d
-C:\Users\Dennis\AppData\Local\Temp\cc2gNaZG.s:146    .text.Get_AS5600_Angle:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\cc2gNaZG.s:152    .text.Get_AS5600_Angle:00000000 Get_AS5600_Angle
-C:\Users\Dennis\AppData\Local\Temp\cc2gNaZG.s:175    .text.Get_AS5600_Angle:0000001c $d
+C:\Users\Dennis\AppData\Local\Temp\cch75Uxz.s:20     .text.Read_AS5600_Angle:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\cch75Uxz.s:26     .text.Read_AS5600_Angle:00000000 Read_AS5600_Angle
+C:\Users\Dennis\AppData\Local\Temp\cch75Uxz.s:139    .text.Read_AS5600_Angle:00000090 $d
+C:\Users\Dennis\AppData\Local\Temp\cch75Uxz.s:146    .text.Get_AS5600_Angle:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\cch75Uxz.s:152    .text.Get_AS5600_Angle:00000000 Get_AS5600_Angle
+C:\Users\Dennis\AppData\Local\Temp\cch75Uxz.s:175    .text.Get_AS5600_Angle:0000001c $d
 
 UNDEFINED SYMBOLS
 HAL_I2C_Mem_Read

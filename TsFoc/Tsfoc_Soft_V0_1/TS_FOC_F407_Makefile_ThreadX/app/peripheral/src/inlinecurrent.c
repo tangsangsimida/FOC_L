@@ -52,4 +52,5 @@ void Current_Update(Inlinecurrent_Typedef *Sensor)
 	
 	Sensor->I_a = (tran_vol_a - Sensor->offset_ia)*Sensor->gain_a;
 	Sensor->I_b = (tran_vol_b - Sensor->offset_ib)*Sensor->gain_b;
+
 }

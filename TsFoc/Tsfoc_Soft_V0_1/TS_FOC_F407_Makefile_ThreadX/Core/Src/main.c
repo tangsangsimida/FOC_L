@@ -137,29 +137,59 @@ int main(void)
   MX_USART2_UART_Init();
   MX_USART3_UART_Init();
   MX_TIM1_Init();
+  MX_I2C3_Init();
+  MX_SPI3_Init();
   /* USER CODE BEGIN 2 */
 
+  // 开启ADC DMA传输
+  HAL_ADC_Start_DMA(&hadc1,(uint32_t *)adc_buffer, 4); // 启动 ADC DMA 传输
+  // 开启pwm输出
   HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_4);
   HAL_TIM_PWM_Start(&htim8, TIM_CHANNEL_1);
   HAL_TIM_PWM_Start(&htim8, TIM_CHANNEL_2);
-
+  HAL_Delay(1000);
+  // 实例化电机
   motor1 = (Motor *)malloc(sizeof(Motor) * 1);
+  // 电机参数配置
   Thread_Motor_Control_parama1.Motor1_handle = (ULONG)motor1;
-  motor1->Motor_ID = 1;
+  motor1->Motor_ID = 0;
   motor1->PP = 7;  
   motor1->DIR = 1;
+  motor1->voltage_power_supply = 12.0;
+  motor1->zero_electric_angle = 0;
+  // 角度传感器初始化
   motor1->As5600_Sensor = (As5600_Sensor_Typedef *)malloc(sizeof(As5600_Sensor_Typedef) * 1);
   motor1->As5600_Sensor->Rotations = 0;
   motor1->As5600_Sensor->i2c_handle = &hi2c1;
   Read_AS5600_Angle(motor1->As5600_Sensor);
+  // 电流传感器初始化
+  motor1->Inlinecurrent = (Inlinecurrent_Typedef *)malloc(sizeof(Inlinecurrent_Typedef) * 1);
+  motor1->Inlinecurrent->A = 2;
+  motor1->Inlinecurrent->B = 3;
+  motor1->Inlinecurrent->I_a = 0;
+  motor1->Inlinecurrent->I_b = 0;
+  CurrSense_Init(motor1->Inlinecurrent);
+  motor1->Ualpha = motor1->Ubeta = motor1->Ua = motor1->Ub = motor1->Uc = 0;
+  // pid参数配置
+  motor1->Pid_Ang = (Pid_Typedef *)malloc(sizeof(Pid_Typedef) * 1);
+  Pid_Ang_Init(motor1->Pid_Ang, 0.5, 0, 0, 100000, 32);
+  motor1->Pid_Vel = (Pid_Typedef *)malloc(sizeof(Pid_Typedef) * 1);
+  Pid_Vel_Init(motor1->Pid_Vel,0.001,0.01,0,10000,motor1->voltage_power_supply/2);
+  motor1->Pid_Curr = (Pid_Typedef *)malloc(sizeof(Pid_Typedef) * 1);
+  Pid_Curr_Init(motor1->Pid_Curr, 2, 200, 0, 100000, 100000);
+  // lowpass滤波器配置
+  motor1->Lowpass_Filter_Vel = (Lowpass_Filter_Typedef *)malloc(sizeof(Lowpass_Filter_Typedef) * 1);
+  motor1->Lowpass_Filter_Curr = (Lowpass_Filter_Typedef *)malloc(sizeof(Lowpass_Filter_Typedef) * 1);
+  Lowpass_Filter_Init(motor1->Lowpass_Filter_Vel, 0.01);
+  Lowpass_Filter_Init(motor1->Lowpass_Filter_Curr, 0.01);
+  // pwm通道配置
   motor1->Motor_Set_Compare1 = Motor1_Set_Compare1;
   motor1->Motor_Set_Compare2 = Motor1_Set_Compare2;
   motor1->Motor_Set_Compare3 = Motor1_Set_Compare3;
-  motor1->voltage_power_supply = 12.0;
-  motor1->zero_electric_angle = 0;
-  motor1->Ualpha = motor1->Ubeta = motor1->Ua = motor1->Ub = motor1->Uc = 0;
-
+  // 更新一次电机角度
   Read_AS5600_Angle(motor1->As5600_Sensor);
+
+
 
 
 

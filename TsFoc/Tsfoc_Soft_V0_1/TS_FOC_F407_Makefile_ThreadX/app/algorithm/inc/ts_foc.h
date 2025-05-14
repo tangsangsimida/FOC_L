@@ -31,7 +31,7 @@ typedef struct MOTOR
     uint8_t Motor_ID;
     int PP,DIR;                                 //极对数,旋转方向
     float voltage_power_supply;                 //电源电压
-    int zero_electric_angle;                  //零角度
+    float zero_electric_angle;                  //零角度
     float Ualpha,Ubeta,Ua,Ub,Uc;
 
     As5600_Sensor_Typedef * As5600_Sensor;      //角度传感器对象
@@ -59,6 +59,17 @@ float _normalizeAngle(float angle);
 float _electricalAngle(Motor* motor);
 void setPwm(Motor* motor, float Ua, float Ub, float Uc);
 void setTorque(Motor* motor,float Uq,float angle_el);
+void aligns_Motor_Zero_Angle(Motor* motor);
+float cal_Iq_Id(Inlinecurrent_Typedef *Sensor, float angle_el);
+float Get_Current(Motor* motor);
+void Set_Velocity_Angle(Motor* motor, float target);
+void Set_Velocity(Motor* motor, float target);
+void Set_Force_Angle(Motor* motor, float target);
+void setTorque_Curr(Motor* motor, float Target);
+void set_Force_Angle_Curr(Motor* motor, float Target);
+void set_Velocity_Curr(Motor* motor, float Target);
+void set_Velocity_Angle_Curr(Motor* motor, float Target);
+float Get_filter_Velocity(Motor* motor);
 
 
 
@@ -80,3 +91,4 @@ void Motor2_Set_Compare3(uint32_t compare);
 
 
 #endif /* _TS_FOC_H_ */
+

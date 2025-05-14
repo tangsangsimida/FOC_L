@@ -8,22 +8,24 @@
 /// @brief 电流传感器对象
 typedef struct INLINECURRENT
 {
-    volatile int A;
-    volatile int B;
+    volatile int A; // 电流信号A
+    volatile int B; // 电流信号B
 
-	volatile float I_a;
-	volatile float I_b;
-	volatile float offset_ia;
-	volatile float offset_ib;
-	volatile float gain_a, gain_b, gain_c;
-	volatile float I_Q;
+	volatile float I_a; // 电流A
+	volatile float I_b; // 电流B
+	volatile float I_c; // 电流C
+	
+	volatile float offset_ia; // 电流A 偏移量
+	volatile float offset_ib; // 电流B 偏移量
+	volatile float gain_a, gain_b, gain_c; // 电流增益
+	volatile float I_Q; // 电流Q
 
 }Inlinecurrent_Typedef;
 
 
 
 
-extern uint16_t adc_buffer[6]; // 存储 DMA 传输后的 ADC 数据
+extern uint16_t adc_buffer[]; // 存储 DMA 传输后的 ADC 数据
 
 
 

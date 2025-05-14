@@ -1,6 +1,5 @@
 #include "ts_foc.h"
 
-
 // 归一化角度到 [0,2PI]
 float _normalizeRadian(float angle)
 {
@@ -12,13 +11,121 @@ float _normalizeRadian(float angle)
   //例如，当 angle 的值为 -PI/2，_2PI 的值为 2PI 时，fmod(angle, _2PI) 将返回一个负数。在这种情况下，可以通过将负数的余数加上 _2PI 来将角度归一化到 [0, 2PI] 的范围内，以确保角度的值始终为正数。
 }
 
-
-
 // 归一化角度到 [0, 360] 度
 float _normalizeAngle(float angle) {
     float a = fmod(angle, 360.0);   // 取余运算可以用于归一化
     return a >= 0 ? a : (a + 360.0);  
 }
+
+
+/// @brief 计算电机0电角度
+/// @param motor 
+void aligns_Motor_Zero_Angle(Motor* motor)
+{
+  setTorque(motor,3, _3PI_2);
+  HAL_Delay(2000);
+  Read_AS5600_Angle(motor->As5600_Sensor);
+  motor->zero_electric_angle = _electricalAngle(motor);
+  setTorque(motor,0, _3PI_2);
+  printf("%d号电机零电角度:%.2f\r\n",motor->Motor_ID,motor->zero_electric_angle);
+}
+
+/// @brief 获取电机速度(带有滤波)
+/// @param motor 
+/// @return 
+float Get_filter_Velocity(Motor* motor)
+{
+  //获取速度数据并滤波
+  float vel_M0_ori=Get_AS5600_Velocity(motor->As5600_Sensor);
+  float vel_M0_flit=Lowpass_Filter_calc(motor->Lowpass_Filter_Vel,motor->DIR*vel_M0_ori);
+  // motor->As5600_Sensor->Velocity = vel_M0_flit;
+  return vel_M0_flit;   //考虑方向
+}
+
+/// @brief 通过Ia,Ib,Ic计算Iq,Id(目前仅输出Iq)
+/// @param Sensor 
+/// @param angle_el 
+/// @return 
+float cal_Iq_Id(Inlinecurrent_Typedef *Sensor, float angle_el)
+{
+  float I_alpha = Sensor->I_a;
+  float I_beta = _1_SQRT3 * Sensor->I_a + _2_SQRT3 * Sensor->I_b;
+
+  float ct = cos(angle_el);
+  float st = sin(angle_el);
+  float I_q = I_beta * ct - I_alpha * st;
+	
+  return I_q;
+}
+
+/// @brief 获取电机总电流(带滤波)
+/// @param motor 
+/// @return 
+float Get_Current(Motor* motor)
+{
+  float I_q_M0_ori=cal_Iq_Id(motor->Inlinecurrent,_electricalAngle(motor));
+  float I_q_M0_flit=Lowpass_Filter_calc(motor->Lowpass_Filter_Curr, I_q_M0_ori);
+  motor->Inlinecurrent->I_Q = I_q_M0_flit;
+  return I_q_M0_flit;
+}
+
+
+/// @brief 角度,速度环(电压)
+/// @param motor 
+/// @param target 
+void Set_Velocity_Angle(Motor* motor, float target)
+{
+ setTorque(motor,Pid_clac(motor->Pid_Vel,Pid_clac(motor->Pid_Ang,(target-Get_AS5600_Angle(motor->As5600_Sensor))*180/PI)),_electricalAngle(motor));   //角度,速度双闭环
+}
+
+/// @brief 速度环(电压)
+/// @param motor 
+/// @param target 
+void Set_Velocity(Motor* motor, float target)
+{
+  setTorque(motor,Pid_clac(motor->Pid_Vel,(target-Get_filter_Velocity(motor))*180/PI),_electricalAngle(motor));   //速度闭环
+}
+
+/// @brief 力位(电压)
+/// @param motor 
+/// @param target 
+void Set_Force_Angle(Motor* motor, float target)
+{
+  setTorque(motor,Pid_clac(motor->Pid_Ang,(target-Get_AS5600_Angle(motor->As5600_Sensor))*180/PI),_electricalAngle(motor));     //力位
+}
+
+/// @brief 力矩(电流)
+/// @param motor 
+/// @param Target 
+void setTorque_Curr(Motor* motor, float Target)
+{
+  setTorque(motor,Pid_clac(motor->Pid_Curr,Target-Get_Current(motor)),_electricalAngle(motor));
+}
+
+/// @brief 力位闭环(电流)
+/// @param motor 
+/// @param Target 
+void set_Force_Angle_Curr(Motor* motor, float Target)      //力位闭环
+{
+  setTorque_Curr(motor,Pid_clac(motor->Pid_Ang, (Target-Get_AS5600_Angle(motor->As5600_Sensor))*180/PI));
+}
+
+/// @brief 速度闭环(电流)
+/// @param motor 
+/// @param Target 
+void set_Velocity_Curr(Motor* motor, float Target)          //速度闭环
+{
+  setTorque_Curr(motor,Pid_clac(motor->Pid_Vel,(Target-Get_filter_Velocity(motor))*180/PI)); 
+}
+
+/// @brief 角度-速度-力 位置闭环
+/// @param motor 
+/// @param Target 
+void set_Velocity_Angle_Curr(Motor* motor, float Target)   //角度-速度-力 位置闭环
+{
+  setTorque_Curr(motor,Pid_clac(motor->Pid_Vel,Pid_clac(motor->Pid_Ang,(Target-Get_AS5600_Angle(motor->As5600_Sensor))*180/PI)-Get_filter_Velocity(motor))); 
+}
+
 
 
 

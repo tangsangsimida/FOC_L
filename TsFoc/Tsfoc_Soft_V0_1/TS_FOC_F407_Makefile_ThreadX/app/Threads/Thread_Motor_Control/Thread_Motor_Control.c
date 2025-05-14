@@ -15,7 +15,9 @@
 
 
 TX_THREAD Thread_Motor_Control;						//实例化线程句柄,线程相关信息
-Thread_Motor_Control_parama Thread_Motor_Control_parama1;	//实例化入口函数的参数
+Thread_Motor_Control_parama Thread_Motor_Control_parama1={
+   .Thread_param1_handle = &Thread_Cmd_parama1,
+};	//实例化入口函数的参数
 
 
 
@@ -32,26 +34,33 @@ void Thread_Motor_Control_Entry(ULONG thread_input)
 {
     Thread_Motor_Control_parama * thread_param = (Thread_Motor_Control_parama *)thread_input;
     Motor* motor1 = (Motor*)thread_param->Motor1_handle;
-    float Kp = 0.133; //位置环比例系数
-    setTorque(motor1,2, _3PI_2);
-    tx_thread_sleep(500);  
-    Read_AS5600_Angle(motor1->As5600_Sensor);
-    motor1->zero_electric_angle = _electricalAngle(motor1);
-    setTorque(motor1,0, _3PI_2);
-    printf("0电角度:%d\r\n",(int)(motor1->zero_electric_angle*1000));
-    tx_thread_sleep(500);
-    printf("init_ok\r\n");
-
+    Thread_Cmd_parama * thread_cmd_param = (Thread_Cmd_parama *)thread_param->Thread_param1_handle;
+    // 计算电机零角度
+    aligns_Motor_Zero_Angle(motor1);
     int count = 0;
 
     while(1)
     {
       Read_AS5600_Angle(motor1->As5600_Sensor);
-      setTorque(motor1,Kp*(0-motor1->DIR*Get_AS5600_Angle(motor1->As5600_Sensor))*180.f/PI,_electricalAngle(motor1));   //位置闭环
-      if(count++>100)
+      // Current_Update(motor1->Inlinecurrent);
+      // 位置闭环
+      // setTorque(motor1,.133*(thread_cmd_param->Cmd_Param_last-motor1->DIR*Get_AS5600_Angle(motor1->As5600_Sensor))*180.f/PI,_electricalAngle(motor1));   //位置闭环
+      //力矩闭环
+      // setTorque(motor1, thread_cmd_param->Cmd_Param_last, _electricalAngle(motor1));   
+      // 电压速度环
+      Set_Velocity(motor1, thread_cmd_param->Cmd_Param_last);
+      // 电压力矩角度环
+      // Set_Force_Angle(motor1, thread_cmd_param->Cmd_Param_last);
+      // 电压角度速度环
+      // Set_Velocity_Angle(motor1, thread_cmd_param->Cmd_Param_last);
+      if(count++>10)
       {
         count = 0;
-        printf("%.2f,%4d\r\n",motor1->As5600_Sensor->Angle,motor1->As5600_Sensor->Rotations);
+        printf("%f,", Get_AS5600_Angle(motor1->As5600_Sensor));
+        printf("%f,", motor1->As5600_Sensor->Angle);
+        printf("%f,", motor1->As5600_Sensor->Velocity);
+        printf("%f\r\n",thread_cmd_param->Cmd_Param_last);
+        // printf("%f,%f,%f\r\n",motor1->Inlinecurrent->I_a, motor1->Inlinecurrent->I_b, motor1->Inlinecurrent->I_a+motor1->Inlinecurrent->I_b);
       }
       // printf("Motor1 Angle: %f\n", motor1->As5600_Sensor->Angle);
       tx_thread_sleep(1);

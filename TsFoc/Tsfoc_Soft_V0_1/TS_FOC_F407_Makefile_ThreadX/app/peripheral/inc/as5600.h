@@ -19,11 +19,16 @@
 /// @brief AS5600传感器对象
 typedef struct AS5600_SENSOR
 {
-    float Velocity;                                 //电机速度
-    float Angle;                                    //电机角度
-    uint32_t angle_ts;                              //上次调用获取角度时间戳
-    uint32_t vel_ts;                                //上次调用获取速度时间戳
-    int Rotations;                                  //电机旋转圈数
+    float Velocity_old;                             //上一次的电机速度;
+    float Velocity;                                 //当前的电机速度;
+    float Angle_old;                                //上一次的角度;  
+    float Angle;                                    //当前的角度;                               
+    uint32_t angle_ts_old;                          //上次调用获取角度时间戳
+    uint32_t angle_ts;                              //当前调用获取角度时间戳
+    uint32_t Velocity_ts_old;                            //上次调用获取速度时间戳
+    uint32_t Velocity_ts;                                //当前调用获取速度时间戳
+    int Rotations_old;                              //上一次电机旋转圈数
+    int Rotations;                                  //当前电机旋转圈数
     I2C_HandleTypeDef *i2c_handle;                  //IIC句柄
 }As5600_Sensor_Typedef;
 
@@ -32,6 +37,6 @@ typedef struct AS5600_SENSOR
 
 float Read_AS5600_Angle(As5600_Sensor_Typedef* as5600);
 float Get_AS5600_Angle(As5600_Sensor_Typedef* as5600);
-
+float Get_AS5600_Velocity(As5600_Sensor_Typedef* as5600);
 
 #endif /* _AS5600_H_ */

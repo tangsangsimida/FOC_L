@@ -12,7 +12,9 @@
 #include "Thread_cmd.h"
 
 TX_THREAD Thread_Cmd;						//实例化线程句柄,线程相关信息
-Thread_Cmd_parama Thread_Cmd_parama1;	//实例化入口函数的参数
+Thread_Cmd_parama Thread_Cmd_parama1 = {
+    .Cmd_Param_last = 0,
+};	//实例化入口函数的参数
 
 
 

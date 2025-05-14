@@ -5,7 +5,7 @@
 #include "tx_api.h"
 #include "stdint.h"
 #include "ts_foc.h"
-
+#include "Thread_cmd.h"
 
 
 
@@ -18,9 +18,8 @@
 
 typedef struct							//线程执行函数的参数结构体
 {
-	char Motor_Control_Name_last[32];				//命令名称
-	double Motor_Control_Param_last;				//命令参数
-    ULONG Motor1_handle;							    //电机句柄
+	ULONG Thread_param1_handle;						//线程参数1句柄
+    ULONG Motor1_handle;							//电机句柄
 	//将参数定义成结构体,可以通过结构体一次性传入多个参数
 }Thread_Motor_Control_parama;
 

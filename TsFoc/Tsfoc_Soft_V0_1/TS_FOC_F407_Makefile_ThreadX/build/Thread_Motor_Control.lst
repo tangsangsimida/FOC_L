@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cclLOYBG.s 			page 1
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccve0uxO.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,34 +19,26 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cclLOYBG.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.rodata.Thread_Motor_Control_Entry.str1.4,"aMS",%progbits,1
-  20              		.align	2
-  21              	.LC0:
-  22 0000 30E794B5 		.ascii	"0\347\224\265\350\247\222\345\272\246:%d\015\012\000"
-  22      E8A792E5 
-  22      BAA63A25 
-  22      640D0A00 
-  23              		.align	2
-  24              	.LC1:
-  25 0010 696E6974 		.ascii	"init_ok\015\000"
-  25      5F6F6B0D 
-  25      00
-  26              		.global	__aeabi_f2d
-  27 0019 000000   		.align	2
-  28              	.LC2:
-  29 001c 252E3266 		.ascii	"%.2f,%4d\015\012\000"
-  29      2C253464 
-  29      0D0A00
-  30              		.section	.text.Thread_Motor_Control_Entry,"ax",%progbits
-  31              		.align	1
-  32              		.global	Thread_Motor_Control_Entry
-  33              		.syntax unified
-  34              		.thumb
-  35              		.thumb_func
-  37              	Thread_Motor_Control_Entry:
-  38              	.LVL0:
-  39              	.LFB250:
-  40              		.file 1 "./app/threads/Thread_Motor_Control/Thread_Motor_Control.c"
+  19              		.global	__aeabi_d2f
+  20              		.global	__aeabi_f2d
+  21              		.section	.rodata.Thread_Motor_Control_Entry.str1.4,"aMS",%progbits,1
+  22              		.align	2
+  23              	.LC0:
+  24 0000 25662C00 		.ascii	"%f,\000"
+  25              		.align	2
+  26              	.LC1:
+  27 0004 25660D0A 		.ascii	"%f\015\012\000"
+  27      00
+  28              		.section	.text.Thread_Motor_Control_Entry,"ax",%progbits
+  29              		.align	1
+  30              		.global	Thread_Motor_Control_Entry
+  31              		.syntax unified
+  32              		.thumb
+  33              		.thumb_func
+  35              	Thread_Motor_Control_Entry:
+  36              	.LVL0:
+  37              	.LFB250:
+  38              		.file 1 "./app/threads/Thread_Motor_Control/Thread_Motor_Control.c"
    1:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** /**
    2:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****   ******************************************************************************
    3:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****   * @file           : Thread_template.c
@@ -58,301 +50,255 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cclLOYBG.s 			page 1
    9:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****   * 						   	Copyright (c) 2021 Dennis_Re_Yoonjiho
   10:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****   ******************************************************************************
   11:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****   */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cclLOYBG.s 			page 2
-
-
   12:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** 
   13:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** 
   14:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** #include "Thread_Motor_Control.h"
   15:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** 
   16:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** 
   17:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** TX_THREAD Thread_Motor_Control;						//实例化线程句柄,线程相关信息
-  18:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** Thread_Motor_Control_parama Thread_Motor_Control_parama1;	//实例化入口函数的参数
-  19:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** 
-  20:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** 
+  18:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** Thread_Motor_Control_parama Thread_Motor_Control_parama1={
+  19:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****    .Thread_param1_handle = &Thread_Cmd_parama1,
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccve0uxO.s 			page 2
+
+
+  20:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** };	//实例化入口函数的参数
   21:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** 
   22:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** 
-  23:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** /*******************************************************************************
-  24:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** * Function Name  : Thread_Motor_Control_Entry
-  25:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** * Description    : Thread_Motor_Control_Entry线程
-  26:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** * Input          : ULONG thread_input
-  27:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** * Output         : None
-  28:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** * Return         : None
-  29:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** * Note			 : 快速创建线程demo
-  30:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** *******************************************************************************/
-  31:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** void Thread_Motor_Control_Entry(ULONG thread_input)
-  32:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** {
-  41              		.loc 1 32 1 view -0
-  42              		.cfi_startproc
-  43              		@ args = 0, pretend = 0, frame = 0
-  44              		@ frame_needed = 0, uses_anonymous_args = 0
-  45              		.loc 1 32 1 is_stmt 0 view .LVU1
-  46 0000 30B5     		push	{r4, r5, lr}
-  47              	.LCFI0:
-  48              		.cfi_def_cfa_offset 12
-  49              		.cfi_offset 4, -12
-  50              		.cfi_offset 5, -8
-  51              		.cfi_offset 14, -4
-  52 0002 2DED028B 		vpush.64	{d8}
-  53              	.LCFI1:
-  54              		.cfi_def_cfa_offset 20
-  55              		.cfi_offset 80, -20
-  56              		.cfi_offset 81, -16
-  57 0006 83B0     		sub	sp, sp, #12
-  58              	.LCFI2:
-  59              		.cfi_def_cfa_offset 32
-  33:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****     Thread_Motor_Control_parama * thread_param = (Thread_Motor_Control_parama *)thread_input;
-  60              		.loc 1 33 5 is_stmt 1 view .LVU2
-  61              	.LVL1:
-  34:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****     Motor* motor1 = (Motor*)thread_param->Motor1_handle;
-  62              		.loc 1 34 5 view .LVU3
-  63              		.loc 1 34 41 is_stmt 0 view .LVU4
-  64 0008 846A     		ldr	r4, [r0, #40]
-  65              	.LVL2:
-  35:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****     float Kp = 0.133; //位置环比例系数
-  66              		.loc 1 35 5 is_stmt 1 view .LVU5
-  36:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****     setTorque(motor1,2, _3PI_2);
-  67              		.loc 1 36 5 view .LVU6
-  68 000a 9FED338A 		vldr.32	s16, .L7
-  69 000e F0EE480A 		vmov.f32	s1, s16
-  70 0012 B0EE000A 		vmov.f32	s0, #2.0e+0
-  71 0016 2046     		mov	r0, r4
-  72              	.LVL3:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cclLOYBG.s 			page 3
+  23:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** 
+  24:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** 
+  25:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** /*******************************************************************************
+  26:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** * Function Name  : Thread_Motor_Control_Entry
+  27:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** * Description    : Thread_Motor_Control_Entry线程
+  28:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** * Input          : ULONG thread_input
+  29:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** * Output         : None
+  30:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** * Return         : None
+  31:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** * Note			 : 快速创建线程demo
+  32:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** *******************************************************************************/
+  33:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** void Thread_Motor_Control_Entry(ULONG thread_input)
+  34:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** {
+  39              		.loc 1 34 1 view -0
+  40              		.cfi_startproc
+  41              		@ args = 0, pretend = 0, frame = 0
+  42              		@ frame_needed = 0, uses_anonymous_args = 0
+  43              		.loc 1 34 1 is_stmt 0 view .LVU1
+  44 0000 70B5     		push	{r4, r5, r6, lr}
+  45              	.LCFI0:
+  46              		.cfi_def_cfa_offset 16
+  47              		.cfi_offset 4, -16
+  48              		.cfi_offset 5, -12
+  49              		.cfi_offset 6, -8
+  50              		.cfi_offset 14, -4
+  35:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****     Thread_Motor_Control_parama * thread_param = (Thread_Motor_Control_parama *)thread_input;
+  51              		.loc 1 35 5 is_stmt 1 view .LVU2
+  52              	.LVL1:
+  36:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****     Motor* motor1 = (Motor*)thread_param->Motor1_handle;
+  53              		.loc 1 36 5 view .LVU3
+  54              		.loc 1 36 41 is_stmt 0 view .LVU4
+  55 0002 4468     		ldr	r4, [r0, #4]
+  56              	.LVL2:
+  37:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****     Thread_Cmd_parama * thread_cmd_param = (Thread_Cmd_parama *)thread_param->Thread_param1_handle;
+  57              		.loc 1 37 5 is_stmt 1 view .LVU5
+  58              		.loc 1 37 77 is_stmt 0 view .LVU6
+  59 0004 0668     		ldr	r6, [r0]
+  60              	.LVL3:
+  38:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****     // 计算电机零角度
+  39:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****     aligns_Motor_Zero_Angle(motor1);
+  61              		.loc 1 39 5 is_stmt 1 view .LVU7
+  62 0006 2046     		mov	r0, r4
+  63              	.LVL4:
+  64              		.loc 1 39 5 is_stmt 0 view .LVU8
+  65 0008 FFF7FEFF 		bl	aligns_Motor_Zero_Angle
+  66              	.LVL5:
+  40:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****     int count = 0;
+  67              		.loc 1 40 5 is_stmt 1 view .LVU9
+  68              		.loc 1 40 9 is_stmt 0 view .LVU10
+  69 000c 0025     		movs	r5, #0
+  70 000e 27E0     		b	.L3
+  71              	.LVL6:
+  72              	.L6:
+  41:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** 
+  42:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****     while(1)
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccve0uxO.s 			page 3
 
 
-  73              		.loc 1 36 5 is_stmt 0 view .LVU7
-  74 0018 FFF7FEFF 		bl	setTorque
-  75              	.LVL4:
-  37:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****     tx_thread_sleep(500);  
-  76              		.loc 1 37 5 is_stmt 1 view .LVU8
-  77 001c 4FF4FA70 		mov	r0, #500
-  78 0020 FFF7FEFF 		bl	_tx_thread_sleep
-  79              	.LVL5:
-  38:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****     Read_AS5600_Angle(motor1->As5600_Sensor);
-  80              		.loc 1 38 5 view .LVU9
-  81 0024 A06A     		ldr	r0, [r4, #40]
-  82 0026 FFF7FEFF 		bl	Read_AS5600_Angle
-  83              	.LVL6:
-  39:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****     motor1->zero_electric_angle = _electricalAngle(motor1);
-  84              		.loc 1 39 5 view .LVU10
-  85              		.loc 1 39 35 is_stmt 0 view .LVU11
-  86 002a 2046     		mov	r0, r4
-  87 002c FFF7FEFF 		bl	_electricalAngle
-  88              	.LVL7:
-  89              		.loc 1 39 33 view .LVU12
-  90 0030 BDEEC00A 		vcvt.s32.f32	s0, s0
-  91 0034 84ED040A 		vstr.32	s0, [r4, #16]	@ int
-  40:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****     setTorque(motor1,0, _3PI_2);
-  92              		.loc 1 40 5 is_stmt 1 view .LVU13
-  93 0038 F0EE480A 		vmov.f32	s1, s16
-  94 003c 9FED270A 		vldr.32	s0, .L7+4
-  95 0040 2046     		mov	r0, r4
-  96 0042 FFF7FEFF 		bl	setTorque
-  97              	.LVL8:
-  41:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****     printf("0电角度:%d\r\n",(int)(motor1->zero_electric_angle*1000));
-  98              		.loc 1 41 5 view .LVU14
-  99              		.loc 1 41 44 is_stmt 0 view .LVU15
- 100 0046 2369     		ldr	r3, [r4, #16]
- 101              		.loc 1 41 5 view .LVU16
- 102 0048 4FF47A71 		mov	r1, #1000
- 103 004c 03FB01F1 		mul	r1, r3, r1
- 104 0050 2348     		ldr	r0, .L7+8
- 105 0052 FFF7FEFF 		bl	printf
- 106              	.LVL9:
-  42:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****     tx_thread_sleep(500);
- 107              		.loc 1 42 5 is_stmt 1 view .LVU17
- 108 0056 4FF4FA70 		mov	r0, #500
- 109 005a FFF7FEFF 		bl	_tx_thread_sleep
- 110              	.LVL10:
-  43:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****     printf("init_ok\r\n");
- 111              		.loc 1 43 5 view .LVU18
- 112 005e 2148     		ldr	r0, .L7+12
- 113 0060 FFF7FEFF 		bl	puts
- 114              	.LVL11:
-  44:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** 
-  45:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****     int count = 0;
- 115              		.loc 1 45 5 view .LVU19
- 116              		.loc 1 45 9 is_stmt 0 view .LVU20
- 117 0064 0025     		movs	r5, #0
- 118 0066 0EE0     		b	.L3
- 119              	.LVL12:
- 120              	.L6:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cclLOYBG.s 			page 4
+  43:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****     {
+  44:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****       Read_AS5600_Angle(motor1->As5600_Sensor);
+  45:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****       // Current_Update(motor1->Inlinecurrent);
+  46:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****       // 位置闭环
+  47:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****       // setTorque(motor1,.133*(thread_cmd_param->Cmd_Param_last-motor1->DIR*Get_AS5600_Angle(motor
+  48:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****       //力矩闭环
+  49:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****       // setTorque(motor1, thread_cmd_param->Cmd_Param_last, _electricalAngle(motor1));   
+  50:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****       // 电压速度环
+  51:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****       Set_Velocity(motor1, thread_cmd_param->Cmd_Param_last);
+  52:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****       // 电压力矩角度环
+  53:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****       // Set_Force_Angle(motor1, thread_cmd_param->Cmd_Param_last);
+  54:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****       // 电压角度速度环
+  55:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****       // Set_Velocity_Angle(motor1, thread_cmd_param->Cmd_Param_last);
+  56:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****       if(count++>10)
+  57:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****       {
+  58:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****         count = 0;
+  73              		.loc 1 58 9 is_stmt 1 view .LVU11
+  59:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****         printf("%f,", Get_AS5600_Angle(motor1->As5600_Sensor));
+  74              		.loc 1 59 9 view .LVU12
+  75              		.loc 1 59 23 is_stmt 0 view .LVU13
+  76 0010 A06A     		ldr	r0, [r4, #40]
+  77 0012 FFF7FEFF 		bl	Get_AS5600_Angle
+  78              	.LVL7:
+  79 0016 10EE100A 		vmov	r0, s0
+  80              		.loc 1 59 9 view .LVU14
+  81 001a FFF7FEFF 		bl	__aeabi_f2d
+  82              	.LVL8:
+  83 001e 0246     		mov	r2, r0
+  84 0020 0B46     		mov	r3, r1
+  85 0022 184D     		ldr	r5, .L7
+  86 0024 2846     		mov	r0, r5
+  87 0026 FFF7FEFF 		bl	printf
+  88              	.LVL9:
+  60:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****         printf("%f,", motor1->As5600_Sensor->Angle);
+  89              		.loc 1 60 9 is_stmt 1 view .LVU15
+  90              		.loc 1 60 29 is_stmt 0 view .LVU16
+  91 002a A36A     		ldr	r3, [r4, #40]
+  92              		.loc 1 60 9 view .LVU17
+  93 002c D868     		ldr	r0, [r3, #12]	@ float
+  94 002e FFF7FEFF 		bl	__aeabi_f2d
+  95              	.LVL10:
+  96 0032 0246     		mov	r2, r0
+  97 0034 0B46     		mov	r3, r1
+  98 0036 2846     		mov	r0, r5
+  99 0038 FFF7FEFF 		bl	printf
+ 100              	.LVL11:
+  61:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****         printf("%f,", motor1->As5600_Sensor->Velocity);
+ 101              		.loc 1 61 9 is_stmt 1 view .LVU18
+ 102              		.loc 1 61 29 is_stmt 0 view .LVU19
+ 103 003c A36A     		ldr	r3, [r4, #40]
+ 104              		.loc 1 61 9 view .LVU20
+ 105 003e 5868     		ldr	r0, [r3, #4]	@ float
+ 106 0040 FFF7FEFF 		bl	__aeabi_f2d
+ 107              	.LVL12:
+ 108 0044 0246     		mov	r2, r0
+ 109 0046 0B46     		mov	r3, r1
+ 110 0048 2846     		mov	r0, r5
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccve0uxO.s 			page 4
 
 
-  46:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c **** 
-  47:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****     while(1)
-  48:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****     {
-  49:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****       Read_AS5600_Angle(motor1->As5600_Sensor);
-  50:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****       setTorque(motor1,Kp*(0-motor1->DIR*Get_AS5600_Angle(motor1->As5600_Sensor))*180.f/PI,_electri
-  51:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****       if(count++>100)
-  52:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****       {
-  53:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****         count = 0;
- 121              		.loc 1 53 9 is_stmt 1 view .LVU21
-  54:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****         printf("%.2f,%4d\r\n",motor1->As5600_Sensor->Angle,motor1->As5600_Sensor->Rotations);
- 122              		.loc 1 54 9 view .LVU22
- 123              		.loc 1 54 37 is_stmt 0 view .LVU23
- 124 0068 A56A     		ldr	r5, [r4, #40]
- 125              		.loc 1 54 9 view .LVU24
- 126 006a 6868     		ldr	r0, [r5, #4]	@ float
- 127 006c FFF7FEFF 		bl	__aeabi_f2d
- 128              	.LVL13:
- 129 0070 0246     		mov	r2, r0
- 130 0072 0B46     		mov	r3, r1
- 131 0074 2969     		ldr	r1, [r5, #16]
- 132 0076 0091     		str	r1, [sp]
- 133 0078 1B48     		ldr	r0, .L7+16
- 134 007a FFF7FEFF 		bl	printf
- 135              	.LVL14:
-  53:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****         printf("%.2f,%4d\r\n",motor1->As5600_Sensor->Angle,motor1->As5600_Sensor->Rotations);
- 136              		.loc 1 53 15 view .LVU25
- 137 007e 0025     		movs	r5, #0
- 138              	.LVL15:
- 139              	.L2:
-  55:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****       }
-  56:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****       // printf("Motor1 Angle: %f\n", motor1->As5600_Sensor->Angle);
-  57:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****       tx_thread_sleep(1);
- 140              		.loc 1 57 7 is_stmt 1 view .LVU26
- 141 0080 0120     		movs	r0, #1
- 142 0082 FFF7FEFF 		bl	_tx_thread_sleep
- 143              	.LVL16:
-  47:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****     {
- 144              		.loc 1 47 10 view .LVU27
- 145              	.L3:
-  47:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****     {
- 146              		.loc 1 47 5 view .LVU28
-  49:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****       setTorque(motor1,Kp*(0-motor1->DIR*Get_AS5600_Angle(motor1->As5600_Sensor))*180.f/PI,_electri
- 147              		.loc 1 49 7 view .LVU29
- 148 0086 A06A     		ldr	r0, [r4, #40]
- 149 0088 FFF7FEFF 		bl	Read_AS5600_Angle
- 150              	.LVL17:
-  50:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****       if(count++>100)
- 151              		.loc 1 50 7 view .LVU30
-  50:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****       if(count++>100)
- 152              		.loc 1 50 36 is_stmt 0 view .LVU31
- 153 008c 94ED028A 		vldr.32	s16, [r4, #8]	@ int
-  50:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****       if(count++>100)
- 154              		.loc 1 50 42 view .LVU32
- 155 0090 A06A     		ldr	r0, [r4, #40]
- 156 0092 FFF7FEFF 		bl	Get_AS5600_Angle
- 157              	.LVL18:
-  50:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****       if(count++>100)
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cclLOYBG.s 			page 5
+ 111 004a FFF7FEFF 		bl	printf
+ 112              	.LVL13:
+  62:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****         printf("%f\r\n",thread_cmd_param->Cmd_Param_last);
+ 113              		.loc 1 62 9 is_stmt 1 view .LVU21
+ 114 004e D6E90823 		ldrd	r2, [r6, #32]
+ 115 0052 0D48     		ldr	r0, .L7+4
+ 116 0054 FFF7FEFF 		bl	printf
+ 117              	.LVL14:
+  58:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****         printf("%f,", Get_AS5600_Angle(motor1->As5600_Sensor));
+ 118              		.loc 1 58 15 is_stmt 0 view .LVU22
+ 119 0058 0025     		movs	r5, #0
+ 120              	.LVL15:
+ 121              	.L2:
+  63:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****         // printf("%f,%f,%f\r\n",motor1->Inlinecurrent->I_a, motor1->Inlinecurrent->I_b, motor1->In
+  64:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****       }
+  65:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****       // printf("Motor1 Angle: %f\n", motor1->As5600_Sensor->Angle);
+  66:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****       tx_thread_sleep(1);
+ 122              		.loc 1 66 7 is_stmt 1 view .LVU23
+ 123 005a 0120     		movs	r0, #1
+ 124 005c FFF7FEFF 		bl	_tx_thread_sleep
+ 125              	.LVL16:
+  42:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****     {
+ 126              		.loc 1 42 10 view .LVU24
+ 127              	.L3:
+  42:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****     {
+ 128              		.loc 1 42 5 view .LVU25
+  44:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****       // Current_Update(motor1->Inlinecurrent);
+ 129              		.loc 1 44 7 view .LVU26
+ 130 0060 A06A     		ldr	r0, [r4, #40]
+ 131 0062 FFF7FEFF 		bl	Read_AS5600_Angle
+ 132              	.LVL17:
+  51:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****       // 电压力矩角度环
+ 133              		.loc 1 51 7 view .LVU27
+ 134 0066 D6E90801 		ldrd	r0, [r6, #32]
+ 135 006a FFF7FEFF 		bl	__aeabi_d2f
+ 136              	.LVL18:
+ 137 006e 00EE100A 		vmov	s0, r0
+ 138 0072 2046     		mov	r0, r4
+ 139 0074 FFF7FEFF 		bl	Set_Velocity
+ 140              	.LVL19:
+  56:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****       {
+ 141              		.loc 1 56 7 view .LVU28
+  56:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****       {
+ 142              		.loc 1 56 15 is_stmt 0 view .LVU29
+ 143 0078 6B1C     		adds	r3, r5, #1
+ 144              	.LVL20:
+  56:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****       {
+ 145              		.loc 1 56 9 view .LVU30
+ 146 007a 0A2D     		cmp	r5, #10
+ 147 007c C8DC     		bgt	.L6
+  56:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****       {
+ 148              		.loc 1 56 15 view .LVU31
+ 149 007e 1D46     		mov	r5, r3
+ 150 0080 EBE7     		b	.L2
+ 151              	.L8:
+ 152 0082 00BF     		.align	2
+ 153              	.L7:
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccve0uxO.s 			page 5
 
 
- 158              		.loc 1 50 41 view .LVU33
- 159 0096 B8EEC88A 		vcvt.f32.s32	s16, s16
- 160 009a 28EE000A 		vmul.f32	s0, s16, s0
-  50:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****       if(count++>100)
- 161              		.loc 1 50 29 view .LVU34
- 162 009e 9FED0F8A 		vldr.32	s16, .L7+4
- 163 00a2 38EE408A 		vsub.f32	s16, s16, s0
-  50:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****       if(count++>100)
- 164              		.loc 1 50 26 view .LVU35
- 165 00a6 9FED110A 		vldr.32	s0, .L7+20
- 166 00aa 28EE008A 		vmul.f32	s16, s16, s0
-  50:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****       if(count++>100)
- 167              		.loc 1 50 82 view .LVU36
- 168 00ae DFED107A 		vldr.32	s15, .L7+24
- 169 00b2 28EE278A 		vmul.f32	s16, s16, s15
-  50:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****       if(count++>100)
- 170              		.loc 1 50 7 view .LVU37
- 171 00b6 2046     		mov	r0, r4
- 172 00b8 FFF7FEFF 		bl	_electricalAngle
- 173              	.LVL19:
- 174 00bc F0EE400A 		vmov.f32	s1, s0
- 175 00c0 9FED0C0A 		vldr.32	s0, .L7+28
- 176 00c4 88EE000A 		vdiv.f32	s0, s16, s0
- 177 00c8 2046     		mov	r0, r4
- 178 00ca FFF7FEFF 		bl	setTorque
- 179              	.LVL20:
-  51:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****       {
- 180              		.loc 1 51 7 is_stmt 1 view .LVU38
-  51:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****       {
- 181              		.loc 1 51 15 is_stmt 0 view .LVU39
- 182 00ce 6B1C     		adds	r3, r5, #1
- 183              	.LVL21:
-  51:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****       {
- 184              		.loc 1 51 9 view .LVU40
- 185 00d0 642D     		cmp	r5, #100
- 186 00d2 C9DC     		bgt	.L6
-  51:./app/threads/Thread_Motor_Control/Thread_Motor_Control.c ****       {
- 187              		.loc 1 51 15 view .LVU41
- 188 00d4 1D46     		mov	r5, r3
- 189 00d6 D3E7     		b	.L2
- 190              	.L8:
- 191              		.align	2
- 192              	.L7:
- 193 00d8 E4CB9640 		.word	1083624420
- 194 00dc 00000000 		.word	0
- 195 00e0 00000000 		.word	.LC0
- 196 00e4 10000000 		.word	.LC1
- 197 00e8 1C000000 		.word	.LC2
- 198 00ec 2731083E 		.word	1040724263
- 199 00f0 00003443 		.word	1127481344
- 200 00f4 DB0F4940 		.word	1078530011
- 201              		.cfi_endproc
- 202              	.LFE250:
- 204              		.global	Thread_Motor_Control_parama1
- 205              		.global	Thread_Motor_Control
- 206              		.section	.bss.Thread_Motor_Control,"aw",%nobits
- 207              		.align	2
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cclLOYBG.s 			page 6
-
-
- 210              	Thread_Motor_Control:
- 211 0000 00000000 		.space	176
- 211      00000000 
- 211      00000000 
- 211      00000000 
- 211      00000000 
- 212              		.section	.bss.Thread_Motor_Control_parama1,"aw",%nobits
- 213              		.align	3
- 216              	Thread_Motor_Control_parama1:
- 217 0000 00000000 		.space	48
- 217      00000000 
- 217      00000000 
- 217      00000000 
- 217      00000000 
- 218              		.text
- 219              	.Letext0:
- 220              		.file 2 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\machine\\_default_types.h"
- 221              		.file 3 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
- 222              		.file 4 "./Middlewares/ST/threadx/common/inc/tx_api.h"
- 223              		.file 5 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\sys\\_stdint.h"
- 224              		.file 6 "./Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h"
- 225              		.file 7 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
- 226              		.file 8 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
- 227              		.file 9 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h"
- 228              		.file 10 "./app/peripheral/inc/as5600.h"
- 229              		.file 11 "./app/algorithm/inc/pid.h"
- 230              		.file 12 "./app/algorithm/inc/lowpass_filter.h"
- 231              		.file 13 "./app/peripheral/inc/inlinecurrent.h"
- 232              		.file 14 "./app/algorithm/inc/ts_foc.h"
- 233              		.file 15 "./app/threads/Thread_Motor_Control/Thread_Motor_Control.h"
- 234              		.file 16 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\stdio.h"
- 235              		.file 17 "<built-in>"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cclLOYBG.s 			page 7
+ 154 0084 00000000 		.word	.LC0
+ 155 0088 04000000 		.word	.LC1
+ 156              		.cfi_endproc
+ 157              	.LFE250:
+ 159              		.global	Thread_Motor_Control_parama1
+ 160              		.global	Thread_Motor_Control
+ 161              		.section	.bss.Thread_Motor_Control,"aw",%nobits
+ 162              		.align	2
+ 165              	Thread_Motor_Control:
+ 166 0000 00000000 		.space	176
+ 166      00000000 
+ 166      00000000 
+ 166      00000000 
+ 166      00000000 
+ 167              		.section	.data.Thread_Motor_Control_parama1,"aw"
+ 168              		.align	2
+ 171              	Thread_Motor_Control_parama1:
+ 172 0000 00000000 		.word	Thread_Cmd_parama1
+ 173 0004 00000000 		.space	4
+ 174              		.text
+ 175              	.Letext0:
+ 176              		.file 2 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 177              		.file 3 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
+ 178              		.file 4 "./Middlewares/ST/threadx/common/inc/tx_api.h"
+ 179              		.file 5 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 180              		.file 6 "./Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h"
+ 181              		.file 7 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
+ 182              		.file 8 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
+ 183              		.file 9 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h"
+ 184              		.file 10 "./app/peripheral/inc/as5600.h"
+ 185              		.file 11 "./app/algorithm/inc/pid.h"
+ 186              		.file 12 "./app/algorithm/inc/lowpass_filter.h"
+ 187              		.file 13 "./app/peripheral/inc/inlinecurrent.h"
+ 188              		.file 14 "./app/algorithm/inc/ts_foc.h"
+ 189              		.file 15 "./app/Threads/Thread_cmd/Thread_cmd.h"
+ 190              		.file 16 "./app/threads/Thread_Motor_Control/Thread_Motor_Control.h"
+ 191              		.file 17 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\stdio.h"
+ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccve0uxO.s 			page 6
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 Thread_Motor_Control.c
-C:\Users\Dennis\AppData\Local\Temp\cclLOYBG.s:20     .rodata.Thread_Motor_Control_Entry.str1.4:00000000 $d
-C:\Users\Dennis\AppData\Local\Temp\cclLOYBG.s:31     .text.Thread_Motor_Control_Entry:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\cclLOYBG.s:37     .text.Thread_Motor_Control_Entry:00000000 Thread_Motor_Control_Entry
-C:\Users\Dennis\AppData\Local\Temp\cclLOYBG.s:193    .text.Thread_Motor_Control_Entry:000000d8 $d
-C:\Users\Dennis\AppData\Local\Temp\cclLOYBG.s:216    .bss.Thread_Motor_Control_parama1:00000000 Thread_Motor_Control_parama1
-C:\Users\Dennis\AppData\Local\Temp\cclLOYBG.s:210    .bss.Thread_Motor_Control:00000000 Thread_Motor_Control
-C:\Users\Dennis\AppData\Local\Temp\cclLOYBG.s:207    .bss.Thread_Motor_Control:00000000 $d
-C:\Users\Dennis\AppData\Local\Temp\cclLOYBG.s:213    .bss.Thread_Motor_Control_parama1:00000000 $d
+C:\Users\Dennis\AppData\Local\Temp\ccve0uxO.s:22     .rodata.Thread_Motor_Control_Entry.str1.4:00000000 $d
+C:\Users\Dennis\AppData\Local\Temp\ccve0uxO.s:29     .text.Thread_Motor_Control_Entry:00000000 $t
+C:\Users\Dennis\AppData\Local\Temp\ccve0uxO.s:35     .text.Thread_Motor_Control_Entry:00000000 Thread_Motor_Control_Entry
+C:\Users\Dennis\AppData\Local\Temp\ccve0uxO.s:154    .text.Thread_Motor_Control_Entry:00000084 $d
+C:\Users\Dennis\AppData\Local\Temp\ccve0uxO.s:171    .data.Thread_Motor_Control_parama1:00000000 Thread_Motor_Control_parama1
+C:\Users\Dennis\AppData\Local\Temp\ccve0uxO.s:165    .bss.Thread_Motor_Control:00000000 Thread_Motor_Control
+C:\Users\Dennis\AppData\Local\Temp\ccve0uxO.s:162    .bss.Thread_Motor_Control:00000000 $d
+C:\Users\Dennis\AppData\Local\Temp\ccve0uxO.s:168    .data.Thread_Motor_Control_parama1:00000000 $d
 
 UNDEFINED SYMBOLS
+__aeabi_d2f
 __aeabi_f2d
-setTorque
+aligns_Motor_Zero_Angle
+Get_AS5600_Angle
+printf
 _tx_thread_sleep
 Read_AS5600_Angle
-_electricalAngle
-printf
-puts
-Get_AS5600_Angle
+Set_Velocity
+Thread_Cmd_parama1

@@ -18,6 +18,7 @@ void Thread_oled_Entry(ULONG thread_input)
     Thread_oled_parama * thread_param = (Thread_oled_parama *)thread_input;
 
     OLED_Init();  //OLED初始化
+    tx_thread_sleep(500);
     OLED_ShowStr(0,0,"OLED-TEXT",1);
     unsigned char temp[100];
     while(1)

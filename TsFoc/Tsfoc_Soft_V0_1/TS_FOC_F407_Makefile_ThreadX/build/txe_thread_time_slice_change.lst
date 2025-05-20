@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccNfxsu8.s 			page 1
+ARM GAS  /tmp/ccs7rieJ.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,16 +19,16 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccNfxsu8.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text._txe_thread_time_slice_change,"ax",%progbits
-  20              		.align	1
-  21              		.global	_txe_thread_time_slice_change
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
-  26              	_txe_thread_time_slice_change:
-  27              	.LVL0:
-  28              	.LFB8:
-  29              		.file 1 "./Middlewares/ST/threadx/common/src/txe_thread_time_slice_change.c"
+  19              		.file 1 "./Middlewares/ST/threadx/common/src/txe_thread_time_slice_change.c"
+  20              		.section	.text._txe_thread_time_slice_change,"ax",%progbits
+  21              		.align	1
+  22              		.global	_txe_thread_time_slice_change
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	_txe_thread_time_slice_change:
+  28              	.LVL0:
+  29              	.LFB8:
    1:./Middlewares/ST/threadx/common/src/txe_thread_time_slice_change.c **** /**************************************************************************/
    2:./Middlewares/ST/threadx/common/src/txe_thread_time_slice_change.c **** /*                                                                        */
    3:./Middlewares/ST/threadx/common/src/txe_thread_time_slice_change.c **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccNfxsu8.s 			page 1
   27:./Middlewares/ST/threadx/common/src/txe_thread_time_slice_change.c **** 
   28:./Middlewares/ST/threadx/common/src/txe_thread_time_slice_change.c **** #include "tx_api.h"
   29:./Middlewares/ST/threadx/common/src/txe_thread_time_slice_change.c **** #include "tx_thread.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccNfxsu8.s 			page 2
+ARM GAS  /tmp/ccs7rieJ.s 			page 2
 
 
   30:./Middlewares/ST/threadx/common/src/txe_thread_time_slice_change.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccNfxsu8.s 			page 1
   80:./Middlewares/ST/threadx/common/src/txe_thread_time_slice_change.c **** UINT        status;
   34              		.loc 1 80 1 view .LVU1
   81:./Middlewares/ST/threadx/common/src/txe_thread_time_slice_change.c **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccNfxsu8.s 			page 3
+ARM GAS  /tmp/ccs7rieJ.s 			page 3
 
 
   82:./Middlewares/ST/threadx/common/src/txe_thread_time_slice_change.c **** 
@@ -126,7 +126,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccNfxsu8.s 			page 1
   84:./Middlewares/ST/threadx/common/src/txe_thread_time_slice_change.c ****     if (thread_ptr == TX_NULL)
   35              		.loc 1 84 5 view .LVU2
   36              		.loc 1 84 8 is_stmt 0 view .LVU3
-  37 0000 A0B1     		cbz	r0, .L3
+  37 0000 A8B1     		cbz	r0, .L3
   78:./Middlewares/ST/threadx/common/src/txe_thread_time_slice_change.c **** 
   38              		.loc 1 78 1 view .LVU4
   39 0002 10B5     		push	{r4, lr}
@@ -145,7 +145,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccNfxsu8.s 			page 1
   92:./Middlewares/ST/threadx/common/src/txe_thread_time_slice_change.c ****     else if (thread_ptr -> tx_thread_id != TX_THREAD_ID)
   45              		.loc 1 92 10 is_stmt 1 view .LVU5
   46              		.loc 1 92 13 is_stmt 0 view .LVU6
-  47 0006 0B48     		ldr	r0, .L13
+  47 0006 0C48     		ldr	r0, .L13
   48              	.LVL1:
   49              		.loc 1 92 13 view .LVU7
   50 0008 1C68     		ldr	r4, [r3]
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccNfxsu8.s 			page 1
  113:./Middlewares/ST/threadx/common/src/txe_thread_time_slice_change.c ****     }
  114:./Middlewares/ST/threadx/common/src/txe_thread_time_slice_change.c ****     else
  115:./Middlewares/ST/threadx/common/src/txe_thread_time_slice_change.c ****     {
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccNfxsu8.s 			page 4
+ARM GAS  /tmp/ccs7rieJ.s 			page 4
 
 
  116:./Middlewares/ST/threadx/common/src/txe_thread_time_slice_change.c **** 
@@ -197,7 +197,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccNfxsu8.s 			page 1
   61              		.loc 1 100 10 is_stmt 1 view .LVU10
  100:./Middlewares/ST/threadx/common/src/txe_thread_time_slice_change.c ****     {
   62              		.loc 1 100 13 is_stmt 0 view .LVU11
-  63 0012 6AB1     		cbz	r2, .L5
+  63 0012 72B1     		cbz	r2, .L5
  108:./Middlewares/ST/threadx/common/src/txe_thread_time_slice_change.c ****     {
   64              		.loc 1 108 10 is_stmt 1 view .LVU12
   65              	.LBB4:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccNfxsu8.s 			page 1
   33:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*    Scott Larson, Microsoft Corporation                                 */
   34:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*                                                                        */
   35:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*  DESCRIPTION                                                           */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccNfxsu8.s 			page 5
+ARM GAS  /tmp/ccs7rieJ.s 			page 5
 
 
   36:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*                                                                        */
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccNfxsu8.s 			page 1
   90:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifdef __ghs__
   91:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #include <arm_ghs.h>
   92:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #include "tx_ghs.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccNfxsu8.s 			page 6
+ARM GAS  /tmp/ccs7rieJ.s 			page 6
 
 
   93:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif  /* __ghs__ */
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccNfxsu8.s 			page 1
  147:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /* Define various constants for the ThreadX Cortex-M port.  */
  148:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  149:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_INT_DISABLE                          1           /* Disable interrupts               */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccNfxsu8.s 			page 7
+ARM GAS  /tmp/ccs7rieJ.s 			page 7
 
 
  150:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_INT_ENABLE                           0           /* Enable interrupts                */
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccNfxsu8.s 			page 1
  204:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
  205:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  206:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccNfxsu8.s 			page 8
+ARM GAS  /tmp/ccs7rieJ.s 			page 8
 
 
  207:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /* Determine whether or not stack checking is enabled. By default, ThreadX stack checking is
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccNfxsu8.s 			page 1
  261:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****    tx_thread_shell_entry, and tx_thread_terminate.  */
  262:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  263:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccNfxsu8.s 			page 9
+ARM GAS  /tmp/ccs7rieJ.s 			page 9
 
 
  264:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifdef  TX_ENABLE_IAR_LIBRARY_SUPPORT
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccNfxsu8.s 			page 1
  318:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** ULONG  control_value;
  319:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  320:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     __asm volatile ("MRS control_value,CONTROL");
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccNfxsu8.s 			page 10
+ARM GAS  /tmp/ccs7rieJ.s 			page 10
 
 
  321:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     return(control_value);
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccNfxsu8.s 			page 1
  375:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                             _tx_vfp_state =  _tx_vfp_state & ~((ULO
  376:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                             __set_control_value(_tx_vfp_state);    
  377:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                         }                                          
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccNfxsu8.s 			page 11
+ARM GAS  /tmp/ccs7rieJ.s 			page 11
 
 
  378:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                         else                                       
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccNfxsu8.s 			page 1
  432:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #else   /* No VFP in use */
  433:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  434:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_THREAD_COMPLETED_EXTENSION(thread_ptr)
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccNfxsu8.s 			page 12
+ARM GAS  /tmp/ccs7rieJ.s 			page 12
 
 
  435:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_THREAD_TERMINATED_EXTENSION(thread_ptr)
@@ -710,7 +710,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccNfxsu8.s 			page 1
   71              		.loc 2 477 5 view .LVU15
   72              		.syntax unified
   73              	@ 477 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
-  74 0014 EFF30580 		 MRS  r0,IPSR 
+  74 0014 EFF3058C 		 MRS  ip,IPSR 
   75              	@ 0 "" 2
   76              	.LVL4:
  478:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     return(ipsr_value);
@@ -718,40 +718,40 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccNfxsu8.s 			page 1
   78              		.loc 2 478 5 is_stmt 0 view .LVU17
   79              		.thumb
   80              		.syntax unified
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccNfxsu8.s 			page 13
+ARM GAS  /tmp/ccs7rieJ.s 			page 13
 
 
   81              	.LBE5:
   82              	.LBE4:
  108:./Middlewares/ST/threadx/common/src/txe_thread_time_slice_change.c ****     {
-  83              		.loc 1 108 14 view .LVU18
-  84 0018 074C     		ldr	r4, .L13+4
-  85 001a 2468     		ldr	r4, [r4]
+  83              		.loc 1 108 14 discriminator 1 view .LVU18
+  84 0018 0848     		ldr	r0, .L13+4
+  85 001a 0068     		ldr	r0, [r0]
  108:./Middlewares/ST/threadx/common/src/txe_thread_time_slice_change.c ****     {
-  86              		.loc 1 108 13 view .LVU19
-  87 001c 2043     		orrs	r0, r4, r0
-  88 001e 01D0     		beq	.L12
+  86              		.loc 1 108 13 discriminator 1 view .LVU19
+  87 001c 50EA0C00 		orrs	r0, r0, ip
+  88 0020 01D0     		beq	.L12
  112:./Middlewares/ST/threadx/common/src/txe_thread_time_slice_change.c ****     }
   89              		.loc 1 112 16 view .LVU20
-  90 0020 1320     		movs	r0, #19
+  90 0022 1320     		movs	r0, #19
   91              	.LVL5:
  122:./Middlewares/ST/threadx/common/src/txe_thread_time_slice_change.c **** }
   92              		.loc 1 122 5 is_stmt 1 view .LVU21
  122:./Middlewares/ST/threadx/common/src/txe_thread_time_slice_change.c **** }
   93              		.loc 1 122 11 is_stmt 0 view .LVU22
-  94 0022 F5E7     		b	.L1
+  94 0024 F4E7     		b	.L1
   95              	.LVL6:
   96              	.L12:
  118:./Middlewares/ST/threadx/common/src/txe_thread_time_slice_change.c ****     }
   97              		.loc 1 118 9 is_stmt 1 view .LVU23
  118:./Middlewares/ST/threadx/common/src/txe_thread_time_slice_change.c ****     }
   98              		.loc 1 118 19 is_stmt 0 view .LVU24
-  99 0024 1846     		mov	r0, r3
- 100 0026 FFF7FEFF 		bl	_tx_thread_time_slice_change
+  99 0026 1846     		mov	r0, r3
+ 100 0028 FFF7FEFF 		bl	_tx_thread_time_slice_change
  101              	.LVL7:
  118:./Middlewares/ST/threadx/common/src/txe_thread_time_slice_change.c ****     }
  102              		.loc 1 118 19 view .LVU25
- 103 002a F1E7     		b	.L1
+ 103 002c F0E7     		b	.L1
  104              	.LVL8:
  105              	.L3:
  106              	.LCFI1:
@@ -760,10 +760,10 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccNfxsu8.s 			page 1
  109              		.cfi_restore 14
   88:./Middlewares/ST/threadx/common/src/txe_thread_time_slice_change.c ****     }
  110              		.loc 1 88 16 view .LVU26
- 111 002c 0E20     		movs	r0, #14
+ 111 002e 0E20     		movs	r0, #14
  112              	.LVL9:
  113              		.loc 1 123 1 view .LVU27
- 114 002e 7047     		bx	lr
+ 114 0030 7047     		bx	lr
  115              	.LVL10:
  116              	.L5:
  117              	.LCFI2:
@@ -772,30 +772,30 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccNfxsu8.s 			page 1
  120              		.cfi_offset 14, -4
  104:./Middlewares/ST/threadx/common/src/txe_thread_time_slice_change.c ****     }
  121              		.loc 1 104 16 view .LVU28
- 122 0030 0320     		movs	r0, #3
- 123 0032 EDE7     		b	.L1
+ 122 0032 0320     		movs	r0, #3
+ 123 0034 ECE7     		b	.L1
  124              	.L14:
- 125              		.align	2
+ 125 0036 00BF     		.align	2
  126              	.L13:
- 127 0034 44524854 		.word	1414025796
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccNfxsu8.s 			page 14
+ 127 0038 44524854 		.word	1414025796
+ARM GAS  /tmp/ccs7rieJ.s 			page 14
 
 
- 128 0038 00000000 		.word	_tx_thread_system_state
+ 128 003c 00000000 		.word	_tx_thread_system_state
  129              		.cfi_endproc
  130              	.LFE8:
  132              		.text
  133              	.Letext0:
  134              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
  135              		.file 4 "./Middlewares/ST/threadx/common/inc/tx_thread.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccNfxsu8.s 			page 15
+ARM GAS  /tmp/ccs7rieJ.s 			page 15
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 txe_thread_time_slice_change.c
-C:\Users\Dennis\AppData\Local\Temp\ccNfxsu8.s:20     .text._txe_thread_time_slice_change:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccNfxsu8.s:26     .text._txe_thread_time_slice_change:00000000 _txe_thread_time_slice_change
-C:\Users\Dennis\AppData\Local\Temp\ccNfxsu8.s:127    .text._txe_thread_time_slice_change:00000034 $d
+     /tmp/ccs7rieJ.s:21     .text._txe_thread_time_slice_change:00000000 $t
+     /tmp/ccs7rieJ.s:27     .text._txe_thread_time_slice_change:00000000 _txe_thread_time_slice_change
+     /tmp/ccs7rieJ.s:127    .text._txe_thread_time_slice_change:00000038 $d
 
 UNDEFINED SYMBOLS
 _tx_thread_time_slice_change

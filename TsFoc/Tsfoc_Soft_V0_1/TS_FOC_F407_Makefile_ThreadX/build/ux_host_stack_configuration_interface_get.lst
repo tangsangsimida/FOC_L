@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccQolAUd.s 			page 1
+ARM GAS  /tmp/ccG3ND1F.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,16 +19,16 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccQolAUd.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text._ux_host_stack_configuration_interface_get,"ax",%progbits
-  20              		.align	1
-  21              		.global	_ux_host_stack_configuration_interface_get
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
-  26              	_ux_host_stack_configuration_interface_get:
-  27              	.LVL0:
-  28              	.LFB11:
-  29              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c"
+  19              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c"
+  20              		.section	.text._ux_host_stack_configuration_interface_get,"ax",%progbits
+  21              		.align	1
+  22              		.global	_ux_host_stack_configuration_interface_get
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	_ux_host_stack_configuration_interface_get:
+  28              	.LVL0:
+  29              	.LFB11:
    1:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c **** /**************************************************************************/
    2:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c **** /*                                                                        */
    3:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccQolAUd.s 			page 1
   27:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c **** 
   28:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c **** #include "ux_api.h"
   29:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c **** #include "ux_host_stack.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccQolAUd.s 			page 2
+ARM GAS  /tmp/ccG3ND1F.s 			page 2
 
 
   30:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccQolAUd.s 			page 1
   32              		@ args = 0, pretend = 0, frame = 0
   33              		@ frame_needed = 0, uses_anonymous_args = 0
   34              		.loc 1 81 1 is_stmt 0 view .LVU1
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccQolAUd.s 			page 3
+ARM GAS  /tmp/ccG3ND1F.s 			page 3
 
 
   35 0000 38B5     		push	{r3, r4, r5, lr}
@@ -144,7 +144,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccQolAUd.s 			page 1
   47 0002 0468     		ldr	r4, [r0]
   48              		.loc 1 89 8 view .LVU7
   49 0004 8442     		cmp	r4, r0
-  50 0006 2BD1     		bne	.L10
+  50 0006 2AD1     		bne	.L10
   90:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****     {
   91:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c **** 
   92:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****         /* If trace is enabled, insert this event into the trace buffer.  */
@@ -175,10 +175,10 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccQolAUd.s 			page 1
   58              		.loc 1 102 21 is_stmt 0 view .LVU13
   59 000a 4FF0000C 		mov	ip, #0
   60              		.loc 1 108 11 view .LVU14
-  61 000e 03E0     		b	.L8
+  61 000e 06E0     		b	.L3
   62              	.LVL2:
-  63              	.L14:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccQolAUd.s 			page 4
+  63              	.L12:
+ARM GAS  /tmp/ccG3ND1F.s 			page 4
 
 
  109:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****     {
@@ -215,7 +215,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccQolAUd.s 			page 1
   69 0012 0020     		movs	r0, #0
   70              	.LVL3:
   71              		.loc 1 134 27 view .LVU19
-  72 0014 25E0     		b	.L1
+  72 0014 24E0     		b	.L1
   73              	.LVL4:
   74              	.L4:
  135:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****                 }
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccQolAUd.s 			page 1
  152:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****                         /* Error trap. */
  153:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****                         _ux_system_error_handler(UX_SYSTEM_LEVEL_THREAD, UX_SYSTEM_CONTEXT_ENUMERAT
  154:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccQolAUd.s 			page 5
+ARM GAS  /tmp/ccG3ND1F.s 			page 5
 
 
  155:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****                         /* If trace is enabled, insert this event into the trace buffer.  */
@@ -254,168 +254,162 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccQolAUd.s 			page 1
  165:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****         if (current_interface != UX_NULL)
   75              		.loc 1 165 9 is_stmt 1 view .LVU20
   76              		.loc 1 165 12 is_stmt 0 view .LVU21
-  77 0016 C0B9     		cbnz	r0, .L12
-  78              	.LVL5:
-  79              	.L8:
- 108:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****     {
-  80              		.loc 1 108 11 is_stmt 1 view .LVU22
-  81 0018 D8B1     		cbz	r0, .L13
- 112:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****         {
-  82              		.loc 1 112 9 view .LVU23
- 112:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****         {
-  83              		.loc 1 112 12 is_stmt 0 view .LVU24
-  84 001a 8C45     		cmp	ip, r1
-  85 001c FBD1     		bne	.L4
- 116:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c **** 
-  86              		.loc 1 116 13 is_stmt 1 view .LVU25
- 116:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c **** 
-  87              		.loc 1 116 38 is_stmt 0 view .LVU26
-  88 001e 4469     		ldr	r4, [r0, #20]
-  89              	.LVL6:
- 119:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c **** 
-  90              		.loc 1 119 13 is_stmt 1 view .LVU27
- 122:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****             {
-  91              		.loc 1 122 13 view .LVU28
- 119:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c **** 
-  92              		.loc 1 119 29 is_stmt 0 view .LVU29
-  93 0020 4FF0000C 		mov	ip, #0
-  94              	.LVL7:
-  95              	.L5:
- 122:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****             {
-  96              		.loc 1 122 19 is_stmt 1 view .LVU30
-  97 0024 0028     		cmp	r0, #0
-  98 0026 F6D0     		beq	.L4
- 126:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****                 {
-  99              		.loc 1 126 17 view .LVU31
- 126:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****                 {
- 100              		.loc 1 126 20 is_stmt 0 view .LVU32
- 101 0028 9445     		cmp	ip, r2
- 102 002a F1D0     		beq	.L14
- 138:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c **** 
- 103              		.loc 1 138 17 is_stmt 1 view .LVU33
- 138:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c **** 
- 104              		.loc 1 138 32 is_stmt 0 view .LVU34
- 105 002c 0CF1010C 		add	ip, ip, #1
- 106              	.LVL8:
- 141:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccQolAUd.s 			page 6
-
-
- 107              		.loc 1 141 17 is_stmt 1 view .LVU35
- 141:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c **** 
- 108              		.loc 1 141 35 is_stmt 0 view .LVU36
- 109 0030 C06B     		ldr	r0, [r0, #60]
- 110              	.LVL9:
- 145:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****                 {
- 111              		.loc 1 145 17 is_stmt 1 view .LVU37
- 145:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****                 {
- 112              		.loc 1 145 20 is_stmt 0 view .LVU38
- 113 0032 0028     		cmp	r0, #0
- 114 0034 F6D0     		beq	.L5
- 149:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****                     {
- 115              		.loc 1 149 21 is_stmt 1 view .LVU39
- 149:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****                     {
- 116              		.loc 1 149 24 is_stmt 0 view .LVU40
- 117 0036 4569     		ldr	r5, [r0, #20]
- 118 0038 A542     		cmp	r5, r4
- 119 003a F3D0     		beq	.L5
- 153:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c **** 
- 120              		.loc 1 153 25 is_stmt 1 view .LVU41
- 121 003c 5222     		movs	r2, #82
- 122              	.LVL10:
- 153:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c **** 
- 123              		.loc 1 153 25 is_stmt 0 view .LVU42
- 124 003e 0421     		movs	r1, #4
- 125              	.LVL11:
- 153:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c **** 
- 126              		.loc 1 153 25 view .LVU43
- 127 0040 0220     		movs	r0, #2
- 128              	.LVL12:
- 153:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c **** 
- 129              		.loc 1 153 25 view .LVU44
- 130 0042 FFF7FEFF 		bl	_ux_system_error_handler
- 131              	.LVL13:
- 158:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****                     }                    
- 132              		.loc 1 158 25 is_stmt 1 view .LVU45
- 158:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****                     }                    
- 133              		.loc 1 158 31 is_stmt 0 view .LVU46
- 134 0046 5220     		movs	r0, #82
- 135 0048 0BE0     		b	.L1
- 136              	.LVL14:
- 137              	.L12:
+  77 0016 D8B1     		cbz	r0, .L8
  166:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****         {
  167:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****         
  168:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****             /* Move to the next interface.  */
  169:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****             current_interface =  current_interface -> ux_interface_next_interface;
- 138              		.loc 1 169 13 is_stmt 1 view .LVU47
- 139              		.loc 1 169 31 is_stmt 0 view .LVU48
- 140 004a C06B     		ldr	r0, [r0, #60]
- 141              	.LVL15:
+  78              		.loc 1 169 13 is_stmt 1 view .LVU22
+  79              		.loc 1 169 31 is_stmt 0 view .LVU23
+  80 0018 C06B     		ldr	r0, [r0, #60]
+  81              	.LVL5:
  170:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****         
  171:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****             /* Move to the next interface index. */
  172:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****             container_index++;
- 142              		.loc 1 172 13 is_stmt 1 view .LVU49
- 143              		.loc 1 172 28 is_stmt 0 view .LVU50
- 144 004c 0CF1010C 		add	ip, ip, #1
- 145              	.LVL16:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccQolAUd.s 			page 7
+  82              		.loc 1 172 13 is_stmt 1 view .LVU24
+  83              		.loc 1 172 28 is_stmt 0 view .LVU25
+  84 001a 0CF1010C 		add	ip, ip, #1
+  85              	.LVL6:
+  86              	.L3:
+ 108:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****     {
+  87              		.loc 1 108 30 is_stmt 1 view .LVU26
+  88 001e B8B1     		cbz	r0, .L8
+ 112:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****         {
+  89              		.loc 1 112 9 view .LVU27
+ 112:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****         {
+  90              		.loc 1 112 12 is_stmt 0 view .LVU28
+  91 0020 8C45     		cmp	ip, r1
+  92 0022 F8D1     		bne	.L4
+ 116:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c **** 
+  93              		.loc 1 116 13 is_stmt 1 view .LVU29
+ 116:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c **** 
+  94              		.loc 1 116 38 is_stmt 0 view .LVU30
+  95 0024 4469     		ldr	r4, [r0, #20]
+  96              	.LVL7:
+ 119:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c **** 
+  97              		.loc 1 119 13 is_stmt 1 view .LVU31
+ 122:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****             {
+  98              		.loc 1 122 13 view .LVU32
+ 119:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c **** 
+  99              		.loc 1 119 29 is_stmt 0 view .LVU33
+ 100 0026 4FF0000C 		mov	ip, #0
+ 101              	.LVL8:
+ 102              	.L5:
+ 122:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****             {
+ 103              		.loc 1 122 38 is_stmt 1 view .LVU34
+ 104 002a 0028     		cmp	r0, #0
+ARM GAS  /tmp/ccG3ND1F.s 			page 6
 
 
- 146              		.loc 1 172 28 view .LVU51
- 147 0050 E2E7     		b	.L8
- 148              	.L13:
+ 105 002c F3D0     		beq	.L4
+ 126:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****                 {
+ 106              		.loc 1 126 17 view .LVU35
+ 126:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****                 {
+ 107              		.loc 1 126 20 is_stmt 0 view .LVU36
+ 108 002e 9445     		cmp	ip, r2
+ 109 0030 EED0     		beq	.L12
+ 138:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c **** 
+ 110              		.loc 1 138 17 is_stmt 1 view .LVU37
+ 138:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c **** 
+ 111              		.loc 1 138 32 is_stmt 0 view .LVU38
+ 112 0032 0CF1010C 		add	ip, ip, #1
+ 113              	.LVL9:
+ 141:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c **** 
+ 114              		.loc 1 141 17 is_stmt 1 view .LVU39
+ 141:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c **** 
+ 115              		.loc 1 141 35 is_stmt 0 view .LVU40
+ 116 0036 C06B     		ldr	r0, [r0, #60]
+ 117              	.LVL10:
+ 145:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****                 {
+ 118              		.loc 1 145 17 is_stmt 1 view .LVU41
+ 145:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****                 {
+ 119              		.loc 1 145 20 is_stmt 0 view .LVU42
+ 120 0038 0028     		cmp	r0, #0
+ 121 003a ECD0     		beq	.L4
+ 149:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****                     {
+ 122              		.loc 1 149 21 is_stmt 1 view .LVU43
+ 149:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****                     {
+ 123              		.loc 1 149 24 is_stmt 0 view .LVU44
+ 124 003c 4569     		ldr	r5, [r0, #20]
+ 125 003e A542     		cmp	r5, r4
+ 126 0040 F3D0     		beq	.L5
+ 153:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c **** 
+ 127              		.loc 1 153 25 is_stmt 1 view .LVU45
+ 128 0042 5222     		movs	r2, #82
+ 129              	.LVL11:
+ 153:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c **** 
+ 130              		.loc 1 153 25 is_stmt 0 view .LVU46
+ 131 0044 0421     		movs	r1, #4
+ 132              	.LVL12:
+ 153:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c **** 
+ 133              		.loc 1 153 25 view .LVU47
+ 134 0046 0220     		movs	r0, #2
+ 135              	.LVL13:
+ 153:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c **** 
+ 136              		.loc 1 153 25 view .LVU48
+ 137 0048 FFF7FEFF 		bl	_ux_system_error_handler
+ 138              	.LVL14:
+ 158:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****                     }                    
+ 139              		.loc 1 158 25 is_stmt 1 view .LVU49
+ 158:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****                     }                    
+ 140              		.loc 1 158 31 is_stmt 0 view .LVU50
+ 141 004c 5220     		movs	r0, #82
+ 142 004e 07E0     		b	.L1
+ 143              	.LVL15:
+ 144              	.L8:
  173:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****         }            
+ARM GAS  /tmp/ccG3ND1F.s 			page 7
+
+
  174:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****     }
  175:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****     
  176:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****     /* Error trap. */
  177:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****     _ux_system_error_handler(UX_SYSTEM_LEVEL_THREAD, UX_SYSTEM_CONTEXT_ENUMERATOR, UX_INTERFACE_HAN
- 149              		.loc 1 177 5 is_stmt 1 view .LVU52
- 150 0052 5222     		movs	r2, #82
- 151              	.LVL17:
- 152              		.loc 1 177 5 is_stmt 0 view .LVU53
- 153 0054 0421     		movs	r1, #4
+ 145              		.loc 1 177 5 is_stmt 1 view .LVU51
+ 146 0050 5222     		movs	r2, #82
+ 147              	.LVL16:
+ 148              		.loc 1 177 5 is_stmt 0 view .LVU52
+ 149 0052 0421     		movs	r1, #4
+ 150              	.LVL17:
+ 151              		.loc 1 177 5 view .LVU53
+ 152 0054 0220     		movs	r0, #2
+ 153 0056 FFF7FEFF 		bl	_ux_system_error_handler
  154              	.LVL18:
- 155              		.loc 1 177 5 view .LVU54
- 156 0056 0220     		movs	r0, #2
- 157              	.LVL19:
- 158              		.loc 1 177 5 view .LVU55
- 159 0058 FFF7FEFF 		bl	_ux_system_error_handler
- 160              	.LVL20:
  178:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c **** 
  179:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****     /* If trace is enabled, insert this event into the trace buffer.  */
  180:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****     UX_TRACE_IN_LINE_INSERT(UX_TRACE_ERROR, UX_INTERFACE_HANDLE_UNKNOWN, interface, 0, 0, UX_TRACE_
  181:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c **** 
  182:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****     /* Didn't find the right interface/alternate setting, return an error!  */
  183:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****     return(UX_INTERFACE_HANDLE_UNKNOWN);
- 161              		.loc 1 183 5 is_stmt 1 view .LVU56
- 162              		.loc 1 183 11 is_stmt 0 view .LVU57
- 163 005c 5220     		movs	r0, #82
- 164 005e 00E0     		b	.L1
- 165              	.LVL21:
- 166              	.L10:
+ 155              		.loc 1 183 5 is_stmt 1 view .LVU54
+ 156              		.loc 1 183 11 is_stmt 0 view .LVU55
+ 157 005a 5220     		movs	r0, #82
+ 158 005c 00E0     		b	.L1
+ 159              	.LVL19:
+ 160              	.L10:
   95:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c ****     }
- 167              		.loc 1 95 15 view .LVU58
- 168 0060 5120     		movs	r0, #81
- 169              	.LVL22:
- 170              	.L1:
+ 161              		.loc 1 95 15 view .LVU56
+ 162 005e 5120     		movs	r0, #81
+ 163              	.LVL20:
+ 164              	.L1:
  184:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_interface_get.c **** }
- 171              		.loc 1 184 1 view .LVU59
- 172 0062 38BD     		pop	{r3, r4, r5, pc}
- 173              		.cfi_endproc
- 174              	.LFE11:
- 176              		.text
- 177              	.Letext0:
- 178              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
- 179              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
- 180              		.file 4 "./Middlewares/ST/usbx/common/core/inc/ux_api.h"
- 181              		.file 5 "./Middlewares/ST/usbx/common/core/inc/ux_utility.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccQolAUd.s 			page 8
+ 165              		.loc 1 184 1 view .LVU57
+ 166 0060 38BD     		pop	{r3, r4, r5, pc}
+ 167              		.cfi_endproc
+ 168              	.LFE11:
+ 170              		.text
+ 171              	.Letext0:
+ 172              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
+ 173              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
+ 174              		.file 4 "./Middlewares/ST/usbx/common/core/inc/ux_api.h"
+ 175              		.file 5 "./Middlewares/ST/usbx/common/core/inc/ux_utility.h"
+ARM GAS  /tmp/ccG3ND1F.s 			page 8
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 ux_host_stack_configuration_interface_get.c
-C:\Users\Dennis\AppData\Local\Temp\ccQolAUd.s:20     .text._ux_host_stack_configuration_interface_get:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccQolAUd.s:26     .text._ux_host_stack_configuration_interface_get:00000000 _ux_host_stack_configuration_interface_get
+     /tmp/ccG3ND1F.s:21     .text._ux_host_stack_configuration_interface_get:00000000 $t
+     /tmp/ccG3ND1F.s:27     .text._ux_host_stack_configuration_interface_get:00000000 _ux_host_stack_configuration_interface_get
 
 UNDEFINED SYMBOLS
 _ux_system_error_handler

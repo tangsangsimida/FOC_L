@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPooDei.s 			page 1
+ARM GAS  /tmp/cczf4CQd.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,15 +19,15 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPooDei.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text.MX_CRC_Init,"ax",%progbits
-  20              		.align	1
-  21              		.global	MX_CRC_Init
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
-  26              	MX_CRC_Init:
-  27              	.LFB239:
-  28              		.file 1 "./Core/Src/crc.c"
+  19              		.file 1 "./Core/Src/crc.c"
+  20              		.section	.text.MX_CRC_Init,"ax",%progbits
+  21              		.align	1
+  22              		.global	MX_CRC_Init
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	MX_CRC_Init:
+  28              	.LFB239:
    1:./Core/Src/crc.c **** /* USER CODE BEGIN Header */
    2:./Core/Src/crc.c **** /**
    3:./Core/Src/crc.c ****   ******************************************************************************
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPooDei.s 			page 1
   28:./Core/Src/crc.c **** 
   29:./Core/Src/crc.c **** /* CRC init function */
   30:./Core/Src/crc.c **** void MX_CRC_Init(void)
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPooDei.s 			page 2
+ARM GAS  /tmp/cczf4CQd.s 			page 2
 
 
   31:./Core/Src/crc.c **** {
@@ -90,7 +90,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPooDei.s 			page 1
   44              		.loc 1 41 7 is_stmt 0 view .LVU4
   45 0008 FFF7FEFF 		bl	HAL_CRC_Init
   46              	.LVL0:
-  47              		.loc 1 41 6 view .LVU5
+  47              		.loc 1 41 6 discriminator 1 view .LVU5
   48 000c 00B9     		cbnz	r0, .L4
   49              	.L1:
   42:./Core/Src/crc.c ****   {
@@ -113,12 +113,12 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPooDei.s 			page 1
   58              	.L6:
   59 0016 00BF     		.align	2
   60              	.L5:
-  61 0018 00000000 		.word	.LANCHOR0
+  61 0018 00000000 		.word	hcrc
   62 001c 00300240 		.word	1073885184
   63              		.cfi_endproc
   64              	.LFE239:
   66              		.section	.text.HAL_CRC_MspInit,"ax",%progbits
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPooDei.s 			page 3
+ARM GAS  /tmp/cczf4CQd.s 			page 3
 
 
   67              		.align	1
@@ -176,9 +176,9 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPooDei.s 			page 1
  108              		.loc 1 60 5 view .LVU18
  109 0022 019B     		ldr	r3, [sp, #4]
  110              	.LBE2:
- 111              		.loc 1 60 5 view .LVU19
+ 111              		.loc 1 60 5 discriminator 1 view .LVU19
   61:./Core/Src/crc.c ****   /* USER CODE BEGIN CRC_MspInit 1 */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPooDei.s 			page 4
+ARM GAS  /tmp/cczf4CQd.s 			page 4
 
 
   62:./Core/Src/crc.c **** 
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPooDei.s 			page 1
   81:./Core/Src/crc.c **** }
  149              		.loc 1 81 1 view .LVU25
  150 0008 7047     		bx	lr
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPooDei.s 			page 5
+ARM GAS  /tmp/cczf4CQd.s 			page 5
 
 
  151              	.L18:
@@ -260,35 +260,33 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPooDei.s 			page 1
  167              		.global	hcrc
  168              		.section	.bss.hcrc,"aw",%nobits
  169              		.align	2
- 170              		.set	.LANCHOR0,. + 0
- 173              	hcrc:
- 174 0000 00000000 		.space	8
- 174      00000000 
- 175              		.text
- 176              	.Letext0:
- 177              		.file 2 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\machine\\_default_types.h"
- 178              		.file 3 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\sys\\_stdint.h"
- 179              		.file 4 "./Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h"
- 180              		.file 5 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
- 181              		.file 6 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h"
- 182              		.file 7 "./Core/Inc/main.h"
- 183              		.file 8 "./Core/Inc/crc.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPooDei.s 			page 6
+ 172              	hcrc:
+ 173 0000 00000000 		.space	8
+ 173      00000000 
+ 174              		.text
+ 175              	.Letext0:
+ 176              		.file 2 "/usr/lib/gcc/arm-none-eabi/13.2.1/include/stdint.h"
+ 177              		.file 3 "./Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h"
+ 178              		.file 4 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
+ 179              		.file 5 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h"
+ 180              		.file 6 "./Core/Inc/crc.h"
+ 181              		.file 7 "./Core/Inc/main.h"
+ARM GAS  /tmp/cczf4CQd.s 			page 6
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 crc.c
-C:\Users\Dennis\AppData\Local\Temp\ccPooDei.s:20     .text.MX_CRC_Init:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccPooDei.s:26     .text.MX_CRC_Init:00000000 MX_CRC_Init
-C:\Users\Dennis\AppData\Local\Temp\ccPooDei.s:61     .text.MX_CRC_Init:00000018 $d
-C:\Users\Dennis\AppData\Local\Temp\ccPooDei.s:67     .text.HAL_CRC_MspInit:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccPooDei.s:73     .text.HAL_CRC_MspInit:00000000 HAL_CRC_MspInit
-C:\Users\Dennis\AppData\Local\Temp\ccPooDei.s:121    .text.HAL_CRC_MspInit:00000028 $d
-C:\Users\Dennis\AppData\Local\Temp\ccPooDei.s:127    .text.HAL_CRC_MspDeInit:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccPooDei.s:133    .text.HAL_CRC_MspDeInit:00000000 HAL_CRC_MspDeInit
-C:\Users\Dennis\AppData\Local\Temp\ccPooDei.s:162    .text.HAL_CRC_MspDeInit:00000018 $d
-C:\Users\Dennis\AppData\Local\Temp\ccPooDei.s:173    .bss.hcrc:00000000 hcrc
-C:\Users\Dennis\AppData\Local\Temp\ccPooDei.s:169    .bss.hcrc:00000000 $d
+     /tmp/cczf4CQd.s:21     .text.MX_CRC_Init:00000000 $t
+     /tmp/cczf4CQd.s:27     .text.MX_CRC_Init:00000000 MX_CRC_Init
+     /tmp/cczf4CQd.s:61     .text.MX_CRC_Init:00000018 $d
+     /tmp/cczf4CQd.s:172    .bss.hcrc:00000000 hcrc
+     /tmp/cczf4CQd.s:67     .text.HAL_CRC_MspInit:00000000 $t
+     /tmp/cczf4CQd.s:73     .text.HAL_CRC_MspInit:00000000 HAL_CRC_MspInit
+     /tmp/cczf4CQd.s:121    .text.HAL_CRC_MspInit:00000028 $d
+     /tmp/cczf4CQd.s:127    .text.HAL_CRC_MspDeInit:00000000 $t
+     /tmp/cczf4CQd.s:133    .text.HAL_CRC_MspDeInit:00000000 HAL_CRC_MspDeInit
+     /tmp/cczf4CQd.s:162    .text.HAL_CRC_MspDeInit:00000018 $d
+     /tmp/cczf4CQd.s:169    .bss.hcrc:00000000 $d
 
 UNDEFINED SYMBOLS
 HAL_CRC_Init

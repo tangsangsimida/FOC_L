@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 1
+ARM GAS  /tmp/cczVOKDx.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,16 +19,16 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text._tx_thread_suspend,"ax",%progbits
-  20              		.align	1
-  21              		.global	_tx_thread_suspend
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
-  26              	_tx_thread_suspend:
-  27              	.LVL0:
-  28              	.LFB8:
-  29              		.file 1 "./Middlewares/ST/threadx/common/src/tx_thread_suspend.c"
+  19              		.file 1 "./Middlewares/ST/threadx/common/src/tx_thread_suspend.c"
+  20              		.section	.text._tx_thread_suspend,"ax",%progbits
+  21              		.align	1
+  22              		.global	_tx_thread_suspend
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	_tx_thread_suspend:
+  28              	.LVL0:
+  29              	.LFB8:
    1:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** /**************************************************************************/
    2:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** /*                                                                        */
    3:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 1
   27:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** #include "tx_thread.h"
   28:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** #ifdef TX_INLINE_THREAD_RESUME_SUSPEND
   29:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** #ifndef TX_NO_TIMER
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 2
+ARM GAS  /tmp/cczVOKDx.s 			page 2
 
 
   30:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** #include "tx_timer.h"
@@ -117,34 +117,32 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 1
   32              		@ args = 0, pretend = 0, frame = 0
   33              		@ frame_needed = 0, uses_anonymous_args = 0
   34              		.loc 1 80 1 is_stmt 0 view .LVU1
-  35 0000 38B5     		push	{r3, r4, r5, lr}
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 3
+  35 0000 10B5     		push	{r4, lr}
+ARM GAS  /tmp/cczVOKDx.s 			page 3
 
 
   36              	.LCFI0:
-  37              		.cfi_def_cfa_offset 16
-  38              		.cfi_offset 3, -16
-  39              		.cfi_offset 4, -12
-  40              		.cfi_offset 5, -8
-  41              		.cfi_offset 14, -4
+  37              		.cfi_def_cfa_offset 8
+  38              		.cfi_offset 4, -8
+  39              		.cfi_offset 14, -4
   81:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
   82:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** TX_INTERRUPT_SAVE_AREA
-  42              		.loc 1 82 1 is_stmt 1 view .LVU2
+  40              		.loc 1 82 1 is_stmt 1 view .LVU2
   83:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
   84:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** TX_THREAD  *current_thread;
-  43              		.loc 1 84 1 view .LVU3
+  41              		.loc 1 84 1 view .LVU3
   85:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** UINT        status;
-  44              		.loc 1 85 1 view .LVU4
+  42              		.loc 1 85 1 view .LVU4
   86:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
   87:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
   88:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** #ifndef TX_INLINE_THREAD_RESUME_SUSPEND
   89:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
   90:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****     /* Lockout interrupts while the thread is being suspended.  */
   91:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****     TX_DISABLE
-  45              		.loc 1 91 5 view .LVU5
-  46              	.LBB14:
-  47              	.LBI14:
-  48              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
+  43              		.loc 1 91 5 view .LVU5
+  44              	.LBB14:
+  45              	.LBI14:
+  46              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
    1:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /**************************************************************************/
    2:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*                                                                        */
    3:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
@@ -178,11 +176,11 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 1
   31:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*  AUTHOR                                                                */
   32:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*                                                                        */
   33:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*    Scott Larson, Microsoft Corporation                                 */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 4
-
-
   34:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*                                                                        */
   35:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*  DESCRIPTION                                                           */
+ARM GAS  /tmp/cczVOKDx.s 			page 4
+
+
   36:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*                                                                        */
   37:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*    This file contains data type definitions that make the ThreadX      */
   38:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*    real-time kernel function identically on a variety of different     */
@@ -238,11 +236,11 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 1
   88:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif /* __ICCARM__ */
   89:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
   90:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifdef __ghs__
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 5
-
-
   91:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #include <arm_ghs.h>
   92:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #include "tx_ghs.h"
+ARM GAS  /tmp/cczVOKDx.s 			page 5
+
+
   93:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif  /* __ghs__ */
   94:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
   95:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
@@ -298,11 +296,11 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 1
  145:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  146:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  147:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /* Define various constants for the ThreadX Cortex-M port.  */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 6
-
-
  148:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  149:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_INT_DISABLE                          1           /* Disable interrupts               */
+ARM GAS  /tmp/cczVOKDx.s 			page 6
+
+
  150:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_INT_ENABLE                           0           /* Enable interrupts                */
  151:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  152:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
@@ -358,11 +356,11 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 1
  202:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #else
  203:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_INLINE_INITIALIZATION
  204:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 7
-
-
  205:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  206:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
+ARM GAS  /tmp/cczVOKDx.s 			page 7
+
+
  207:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /* Determine whether or not stack checking is enabled. By default, ThreadX stack checking is
  208:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****    disabled. When the following is defined, ThreadX thread stack checking is enabled.  If stack
  209:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****    checking is enabled (TX_ENABLE_STACK_CHECKING is defined), the TX_DISABLE_STACK_FILLING
@@ -418,11 +416,11 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 1
  259:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  260:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /* Define the macros for processing extensions in tx_thread_create, tx_thread_delete,
  261:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****    tx_thread_shell_entry, and tx_thread_terminate.  */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 8
-
-
  262:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  263:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
+ARM GAS  /tmp/cczVOKDx.s 			page 8
+
+
  264:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifdef  TX_ENABLE_IAR_LIBRARY_SUPPORT
  265:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #if (__VER__ < 8000000)
  266:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_THREAD_CREATE_EXTENSION(thread_ptr)                      thread_ptr -> tx_thread_iar_tls
@@ -478,11 +476,11 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 1
  316:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** __attribute__( ( always_inline ) ) ULONG __get_control_value(void)
  317:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
  318:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** ULONG  control_value;
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 9
-
-
  319:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  320:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     __asm volatile ("MRS control_value,CONTROL");
+ARM GAS  /tmp/cczVOKDx.s 			page 9
+
+
  321:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     return(control_value);
  322:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
  323:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
@@ -538,11 +536,11 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 1
  373:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                         ULONG  _tx_vfp_state;                      
  374:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                             _tx_vfp_state =  __get_control_value();
  375:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                             _tx_vfp_state =  _tx_vfp_state & ~((ULO
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 10
-
-
  376:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                             __set_control_value(_tx_vfp_state);    
  377:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                         }                                          
+ARM GAS  /tmp/cczVOKDx.s 			page 10
+
+
  378:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                         else                                       
  379:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                         {                                          
  380:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                         ULONG  _tx_fpccr;                          
@@ -598,11 +596,11 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 1
  430:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
  431:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  432:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #else   /* No VFP in use */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 11
-
-
  433:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  434:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_THREAD_COMPLETED_EXTENSION(thread_ptr)
+ARM GAS  /tmp/cczVOKDx.s 			page 11
+
+
  435:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_THREAD_TERMINATED_EXTENSION(thread_ptr)
  436:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  437:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif  /* defined(__ARMVFP__) || defined(__ARM_PCS_VFP) || defined(__ARM_FP) || defined(__TARGET_F
@@ -658,11 +656,11 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 1
  487:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif  /* TX_THREAD_GET_SYSTEM_STATE for different compilers */
  488:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  489:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #else   /* TX_MISRA_ENABLE is defined, use MISRA function. */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 12
-
-
  490:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** ULONG   _tx_misra_ipsr_get(VOID);
  491:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_THREAD_GET_SYSTEM_STATE()        (_tx_thread_system_state | _tx_misra_ipsr_get())
+ARM GAS  /tmp/cczVOKDx.s 			page 12
+
+
  492:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif  /* TX_MISRA_ENABLE */
  493:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif  /* TX_THREAD_GET_SYSTEM_STATE */
  494:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
@@ -718,11 +716,11 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 1
  544:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifdef TX_PORT_USE_BASEPRI
  545:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** __attribute__( ( always_inline ) ) static inline void __set_basepri_value(unsigned int basepri_valu
  546:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 13
-
-
  547:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     __asm__ volatile ("MSR  BASEPRI,%0 ": : "r" (basepri_value));
  548:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
+ARM GAS  /tmp/cczVOKDx.s 			page 13
+
+
  549:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #else
  550:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** __attribute__( ( always_inline ) ) static inline void __enable_interrupts(void)
  551:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
@@ -741,65 +739,65 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 1
  564:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
  565:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  566:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** __attribute__( ( always_inline ) ) static inline unsigned int __disable_interrupts(void)
-  49              		.loc 2 566 63 view .LVU6
-  50              	.LBB15:
+  47              		.loc 2 566 63 view .LVU6
+  48              	.LBB15:
  567:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
  568:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** unsigned int int_posture;
-  51              		.loc 2 568 1 view .LVU7
+  49              		.loc 2 568 1 view .LVU7
  569:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  570:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     int_posture = __get_interrupt_posture();
-  52              		.loc 2 570 5 view .LVU8
-  53              	.LBB16:
-  54              	.LBI16:
+  50              		.loc 2 570 5 view .LVU8
+  51              	.LBB16:
+  52              	.LBI16:
  533:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
-  55              		.loc 2 533 63 view .LVU9
-  56              	.LBB17:
+  53              		.loc 2 533 63 view .LVU9
+  54              	.LBB17:
  535:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifdef TX_PORT_USE_BASEPRI
-  57              		.loc 2 535 1 view .LVU10
+  55              		.loc 2 535 1 view .LVU10
  539:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
-  58              		.loc 2 539 5 view .LVU11
-  59              		.syntax unified
-  60              	@ 539 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
-  61 0002 EFF31082 		MRS  r2, PRIMASK 
-  62              	@ 0 "" 2
-  63              	.LVL1:
+  56              		.loc 2 539 5 view .LVU11
+  57              		.syntax unified
+  58              	@ 539 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+  59 0002 EFF31082 		MRS  r2, PRIMASK 
+  60              	@ 0 "" 2
+  61              	.LVL1:
  541:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
-  64              		.loc 2 541 5 view .LVU12
+  62              		.loc 2 541 5 view .LVU12
  541:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
-  65              		.loc 2 541 5 is_stmt 0 view .LVU13
-  66              		.thumb
-  67              		.syntax unified
-  68              	.LBE17:
-  69              	.LBE16:
+  63              		.loc 2 541 5 is_stmt 0 view .LVU13
+  64              		.thumb
+  65              		.syntax unified
+  66              	.LBE17:
+  67              	.LBE16:
  571:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  572:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifdef TX_PORT_USE_BASEPRI
  573:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     __set_basepri_value(TX_PORT_BASEPRI);
  574:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #else
  575:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     __asm__ volatile ("CPSID i" : : : "memory");
-  70              		.loc 2 575 5 is_stmt 1 view .LVU14
-  71              		.syntax unified
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 14
+  68              		.loc 2 575 5 is_stmt 1 view .LVU14
+  69              		.syntax unified
+  70              	@ 575 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+  71 0006 72B6     		CPSID i
+ARM GAS  /tmp/cczVOKDx.s 			page 14
 
 
-  72              	@ 575 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
-  73 0006 72B6     		CPSID i
-  74              	@ 0 "" 2
+  72              	@ 0 "" 2
  576:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
  577:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     return(int_posture);
-  75              		.loc 2 577 5 view .LVU15
-  76              	.LVL2:
-  77              		.loc 2 577 5 is_stmt 0 view .LVU16
-  78              		.thumb
-  79              		.syntax unified
-  80              	.LBE15:
-  81              	.LBE14:
+  73              		.loc 2 577 5 view .LVU15
+  74              	.LVL2:
+  75              		.loc 2 577 5 is_stmt 0 view .LVU16
+  76              		.thumb
+  77              		.syntax unified
+  78              	.LBE15:
+  79              	.LBE14:
   92:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
   93:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****     /* Pickup thread pointer.  */
   94:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****     TX_THREAD_GET_CURRENT(current_thread)
-  82              		.loc 1 94 5 is_stmt 1 view .LVU17
-  83 0008 194B     		ldr	r3, .L12
-  84 000a 1B68     		ldr	r3, [r3]
-  85              	.LVL3:
+  80              		.loc 1 94 5 is_stmt 1 view .LVU17
+  81 0008 184B     		ldr	r3, .L13
+  82 000a 1B68     		ldr	r3, [r3]
+  83              	.LVL3:
   95:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
   96:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****     /* If trace is enabled, insert this event into the trace buffer.  */
   97:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****     TX_TRACE_IN_LINE_INSERT(TX_TRACE_THREAD_SUSPEND_API, thread_ptr, thread_ptr -> tx_thread_state,
@@ -809,64 +807,66 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 1
  101:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
  102:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****     /* Check the specified thread's current status.  */
  103:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****     if (thread_ptr -> tx_thread_state == TX_READY)
-  86              		.loc 1 103 5 view .LVU18
-  87              		.loc 1 103 20 is_stmt 0 view .LVU19
-  88 000c 046B     		ldr	r4, [r0, #48]
-  89              		.loc 1 103 8 view .LVU20
-  90 000e E4B9     		cbnz	r4, .L2
+  84              		.loc 1 103 5 view .LVU18
+  85              		.loc 1 103 20 is_stmt 0 view .LVU19
+  86 000c 046B     		ldr	r4, [r0, #48]
+  87 000e 022C     		cmp	r4, #2
+  88 0010 19D8     		bhi	.L2
+  89 0012 4CBB     		cbnz	r4, .L8
+  90 0014 0CBB     		cbnz	r4, .L5
  104:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****     {
  105:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
  106:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****         /* Initialize status to success.  */
  107:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****         status =  TX_SUCCESS;
-  91              		.loc 1 107 9 is_stmt 1 view .LVU21
+  91              		.loc 1 107 9 is_stmt 1 view .LVU20
   92              	.LVL4:
  108:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
  109:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****         /* Determine if we are in a thread context.  */
  110:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****         if (TX_THREAD_GET_SYSTEM_STATE() == ((ULONG) 0))
-  93              		.loc 1 110 9 view .LVU22
+  93              		.loc 1 110 9 view .LVU21
   94              	.LBB18:
   95              	.LBI18:
  474:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
-  96              		.loc 2 474 63 view .LVU23
+  96              		.loc 2 474 63 view .LVU22
   97              	.LBB19:
  476:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     __asm__ volatile (" MRS  %0,IPSR ": "=r" (ipsr_value) );
-  98              		.loc 2 476 1 view .LVU24
+  98              		.loc 2 476 1 view .LVU23
  477:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     return(ipsr_value);
-  99              		.loc 2 477 5 view .LVU25
+  99              		.loc 2 477 5 view .LVU24
  100              		.syntax unified
  101              	@ 477 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
- 102 0010 EFF30581 		 MRS  r1,IPSR 
+ 102 0016 EFF3058C 		 MRS  ip,IPSR 
  103              	@ 0 "" 2
  104              	.LVL5:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 15
+ARM GAS  /tmp/cczVOKDx.s 			page 15
 
 
  478:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
- 105              		.loc 2 478 5 view .LVU26
+ 105              		.loc 2 478 5 view .LVU25
  478:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
- 106              		.loc 2 478 5 is_stmt 0 view .LVU27
+ 106              		.loc 2 478 5 is_stmt 0 view .LVU26
  107              		.thumb
  108              		.syntax unified
  109              	.LBE19:
  110              	.LBE18:
- 111              		.loc 1 110 13 view .LVU28
- 112 0014 174D     		ldr	r5, .L12+4
- 113 0016 2D68     		ldr	r5, [r5]
- 114              		.loc 1 110 12 view .LVU29
- 115 0018 2943     		orrs	r1, r5, r1
- 116 001a 01D1     		bne	.L3
+ 111              		.loc 1 110 13 discriminator 1 view .LVU27
+ 112 001a 1549     		ldr	r1, .L13+4
+ 113 001c 0968     		ldr	r1, [r1]
+ 114              		.loc 1 110 12 discriminator 1 view .LVU28
+ 115 001e 51EA0C01 		orrs	r1, r1, ip
+ 116 0022 01D1     		bne	.L6
  111:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****         {
  112:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
  113:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****             /* Yes, we are in a thread context.  */
  114:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
  115:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****             /* Determine if the current thread is also the suspending thread.  */
  116:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****             if (current_thread == thread_ptr)
- 117              		.loc 1 116 13 is_stmt 1 view .LVU30
- 118              		.loc 1 116 16 is_stmt 0 view .LVU31
- 119 001c 8342     		cmp	r3, r0
- 120 001e 0ED0     		beq	.L11
+ 117              		.loc 1 116 13 is_stmt 1 view .LVU29
+ 118              		.loc 1 116 16 is_stmt 0 view .LVU30
+ 119 0024 8342     		cmp	r3, r0
+ 120 0026 12D0     		beq	.L12
  121              	.LVL6:
- 122              	.L3:
+ 122              	.L6:
  117:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****             {
  118:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
  119:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                 /* Now determine if the preempt disable flag is non-zero.  */
@@ -886,10 +886,10 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 1
  133:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
  134:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****             /* Set the state to suspended.  */
  135:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****             thread_ptr -> tx_thread_state =    TX_SUSPENDED;
- 123              		.loc 1 135 13 is_stmt 1 view .LVU32
- 124              		.loc 1 135 43 is_stmt 0 view .LVU33
- 125 0020 0323     		movs	r3, #3
- 126 0022 0363     		str	r3, [r0, #48]
+ 123              		.loc 1 135 13 is_stmt 1 view .LVU31
+ 124              		.loc 1 135 43 is_stmt 0 view .LVU32
+ 125 0028 0323     		movs	r3, #3
+ 126 002a 0363     		str	r3, [r0, #48]
  136:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
  137:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** #ifdef TX_NOT_INTERRUPTABLE
  138:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
@@ -898,52 +898,52 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 1
  141:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
  142:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****             /* Restore interrupts.  */
  143:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****             TX_RESTORE
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 16
+ARM GAS  /tmp/cczVOKDx.s 			page 16
 
 
  144:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** #else
  145:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
  146:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****             /* Set the suspending flag. */
  147:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****             thread_ptr -> tx_thread_suspending =  TX_TRUE;
- 127              		.loc 1 147 13 is_stmt 1 view .LVU34
- 128              		.loc 1 147 48 is_stmt 0 view .LVU35
- 129 0024 0123     		movs	r3, #1
- 130 0026 8363     		str	r3, [r0, #56]
+ 127              		.loc 1 147 13 is_stmt 1 view .LVU33
+ 128              		.loc 1 147 48 is_stmt 0 view .LVU34
+ 129 002c 0123     		movs	r3, #1
+ 130 002e 8363     		str	r3, [r0, #56]
  148:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
  149:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****             /* Setup for no timeout period.  */
  150:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****             thread_ptr -> tx_thread_timer.tx_timer_internal_remaining_ticks =  ((ULONG) 0);
- 131              		.loc 1 150 13 is_stmt 1 view .LVU36
- 132              		.loc 1 150 77 is_stmt 0 view .LVU37
- 133 0028 0023     		movs	r3, #0
- 134 002a C364     		str	r3, [r0, #76]
+ 131              		.loc 1 150 13 is_stmt 1 view .LVU35
+ 132              		.loc 1 150 77 is_stmt 0 view .LVU36
+ 133 0030 0023     		movs	r3, #0
+ 134 0032 C364     		str	r3, [r0, #76]
  151:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
  152:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****             /* Temporarily disable preemption.  */
  153:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****             _tx_thread_preempt_disable++;
- 135              		.loc 1 153 13 is_stmt 1 view .LVU38
- 136              		.loc 1 153 39 is_stmt 0 view .LVU39
- 137 002c 1249     		ldr	r1, .L12+8
- 138 002e 0B68     		ldr	r3, [r1]
- 139 0030 0133     		adds	r3, r3, #1
- 140 0032 0B60     		str	r3, [r1]
+ 135              		.loc 1 153 13 is_stmt 1 view .LVU37
+ 136              		.loc 1 153 39 is_stmt 0 view .LVU38
+ 137 0034 0F49     		ldr	r1, .L13+8
+ 138 0036 0B68     		ldr	r3, [r1]
+ 139 0038 0133     		adds	r3, r3, #1
+ 140 003a 0B60     		str	r3, [r1]
  154:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
  155:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****             /* Restore interrupts.  */
  156:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****             TX_RESTORE
- 141              		.loc 1 156 13 is_stmt 1 view .LVU40
+ 141              		.loc 1 156 13 is_stmt 1 view .LVU39
  142              	.LVL7:
  143              	.LBB20:
  144              	.LBI20:
  556:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 145              		.loc 2 556 55 view .LVU41
+ 145              		.loc 2 556 55 view .LVU40
  146              	.LBB21:
  562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 147              		.loc 2 562 5 view .LVU42
+ 147              		.loc 2 562 5 view .LVU41
  148              		.syntax unified
  149              	@ 562 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
- 150 0034 82F31088 		MSR  PRIMASK,r2
+ 150 003c 82F31088 		MSR  PRIMASK,r2
  151              	@ 0 "" 2
  152              	.LVL8:
  562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 153              		.loc 2 562 5 is_stmt 0 view .LVU43
+ 153              		.loc 2 562 5 is_stmt 0 view .LVU42
  154              		.thumb
  155              		.syntax unified
  156              	.LBE21:
@@ -951,14 +951,14 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 1
  157:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
  158:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****             /* Call actual thread suspension routine.  */
  159:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****             _tx_thread_system_suspend(thread_ptr);
- 158              		.loc 1 159 13 is_stmt 1 view .LVU44
- 159 0038 FFF7FEFF 		bl	_tx_thread_system_suspend
+ 158              		.loc 1 159 13 is_stmt 1 view .LVU43
+ 159 0040 FFF7FEFF 		bl	_tx_thread_system_suspend
  160              	.LVL9:
  160:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** #endif
  161:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
  162:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** #ifdef TX_MISRA_ENABLE
  163:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 17
+ARM GAS  /tmp/cczVOKDx.s 			page 17
 
 
  164:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****             /* Disable interrupts.  */
@@ -970,61 +970,58 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 1
  170:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
  171:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****             /* If MISRA is not enabled, return directly.  */
  172:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****             return(TX_SUCCESS);
- 161              		.loc 1 172 13 view .LVU45
- 162              		.loc 1 172 19 is_stmt 0 view .LVU46
- 163 003c 12E0     		b	.L1
+ 161              		.loc 1 172 13 view .LVU44
+ 162              		.loc 1 172 19 is_stmt 0 view .LVU45
+ 163 0044 0EE0     		b	.L1
  164              	.LVL10:
- 165              	.L11:
+ 165              	.L2:
+ 166              		.loc 1 172 19 view .LVU46
+ 167 0046 032C     		cmp	r4, #3
+ 168 0048 07D1     		bne	.L5
+ 103:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****     {
+ 169              		.loc 1 103 20 view .LVU47
+ 170 004a 0024     		movs	r4, #0
+ 171 004c 08E0     		b	.L3
+ 172              	.LVL11:
+ 173              	.L12:
  120:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                 {
- 166              		.loc 1 120 17 is_stmt 1 view .LVU47
+ 174              		.loc 1 120 17 is_stmt 1 view .LVU48
  120:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                 {
- 167              		.loc 1 120 48 is_stmt 0 view .LVU48
- 168 003e 0E4B     		ldr	r3, .L12+8
- 169              	.LVL11:
+ 175              		.loc 1 120 48 is_stmt 0 view .LVU49
+ 176 004e 094B     		ldr	r3, .L13+8
+ 177              	.LVL12:
  120:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                 {
- 170              		.loc 1 120 48 view .LVU49
- 171 0040 1B68     		ldr	r3, [r3]
+ 178              		.loc 1 120 48 view .LVU50
+ 179 0050 1B68     		ldr	r3, [r3]
  120:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                 {
- 172              		.loc 1 120 20 view .LVU50
- 173 0042 002B     		cmp	r3, #0
- 174 0044 ECD0     		beq	.L3
+ 180              		.loc 1 120 20 view .LVU51
+ 181 0052 002B     		cmp	r3, #0
+ 182 0054 E8D0     		beq	.L6
  125:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                 }
- 175              		.loc 1 125 28 view .LVU51
- 176 0046 1424     		movs	r4, #20
- 177 0048 0AE0     		b	.L4
- 178              	.LVL12:
- 179              	.L2:
+ 183              		.loc 1 125 28 view .LVU52
+ 184 0056 1424     		movs	r4, #20
+ 185 0058 02E0     		b	.L3
+ 186              	.LVL13:
+ 187              	.L5:
  173:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** #endif
  174:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****         }
  175:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****     }
  176:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****     else if (thread_ptr -> tx_thread_state == TX_TERMINATED)
- 180              		.loc 1 176 10 is_stmt 1 view .LVU52
- 181              		.loc 1 176 13 is_stmt 0 view .LVU53
- 182 004a 022C     		cmp	r4, #2
- 183 004c 07D0     		beq	.L7
  177:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****     {
  178:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
  179:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****         /* Thread is terminated.  */
  180:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****         status =  TX_SUSPEND_ERROR;
  181:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****     }
  182:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****     else if (thread_ptr -> tx_thread_state == TX_COMPLETED)
- 184              		.loc 1 182 10 is_stmt 1 view .LVU54
- 185              		.loc 1 182 13 is_stmt 0 view .LVU55
- 186 004e 012C     		cmp	r4, #1
- 187 0050 0AD0     		beq	.L8
  183:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****     {
  184:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
  185:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****         /* Thread is completed.  */
  186:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****         status =  TX_SUSPEND_ERROR;
  187:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****     }
+ARM GAS  /tmp/cczVOKDx.s 			page 18
+
+
  188:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****     else if (thread_ptr -> tx_thread_state == TX_SUSPENDED)
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 18
-
-
- 188              		.loc 1 188 10 is_stmt 1 view .LVU56
- 189              		.loc 1 188 13 is_stmt 0 view .LVU57
- 190 0052 032C     		cmp	r4, #3
- 191 0054 0AD0     		beq	.L9
  189:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****     {
  190:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
  191:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****         /* Already suspended, just set status to success.  */
@@ -1035,61 +1032,55 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 1
  196:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
  197:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****         /* Just set the delayed suspension flag.  */
  198:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****         thread_ptr -> tx_thread_delayed_suspend =  TX_TRUE;
- 192              		.loc 1 198 9 is_stmt 1 view .LVU58
- 193              		.loc 1 198 49 is_stmt 0 view .LVU59
- 194 0056 0123     		movs	r3, #1
- 195              	.LVL13:
- 196              		.loc 1 198 49 view .LVU60
- 197 0058 4363     		str	r3, [r0, #52]
+ 188              		.loc 1 198 9 is_stmt 1 view .LVU53
+ 189              		.loc 1 198 49 is_stmt 0 view .LVU54
+ 190 005a 0123     		movs	r3, #1
+ 191              	.LVL14:
+ 192              		.loc 1 198 49 view .LVU55
+ 193 005c 4363     		str	r3, [r0, #52]
  199:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
  200:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****         /* Set status to success.  */
  201:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****         status =  TX_SUCCESS;
- 198              		.loc 1 201 9 is_stmt 1 view .LVU61
- 199              	.LVL14:
- 200              		.loc 1 201 16 is_stmt 0 view .LVU62
- 201 005a 0024     		movs	r4, #0
- 202 005c 00E0     		b	.L4
- 203              	.LVL15:
- 204              	.L7:
- 180:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****     }
- 205              		.loc 1 180 16 view .LVU63
- 206 005e 1424     		movs	r4, #20
- 207              	.LVL16:
- 208              	.L4:
+ 194              		.loc 1 201 9 is_stmt 1 view .LVU56
+ 195              	.LVL15:
+ 196              		.loc 1 201 16 is_stmt 0 view .LVU57
+ 197 005e 0024     		movs	r4, #0
+ 198              	.LVL16:
+ 199              	.L3:
  202:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****     }
  203:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
  204:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****     /* Restore interrupts.  */
  205:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****     TX_RESTORE
- 209              		.loc 1 205 5 is_stmt 1 view .LVU64
- 210              	.LBB22:
- 211              	.LBI22:
+ 200              		.loc 1 205 5 is_stmt 1 view .LVU58
+ 201              	.LBB22:
+ 202              	.LBI22:
  556:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 212              		.loc 2 556 55 view .LVU65
- 213              	.LBB23:
+ 203              		.loc 2 556 55 view .LVU59
+ 204              	.LBB23:
  562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 214              		.loc 2 562 5 view .LVU66
- 215              		.syntax unified
- 216              	@ 562 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
- 217 0060 82F31088 		MSR  PRIMASK,r2
- 218              	@ 0 "" 2
- 219              	.LVL17:
+ 205              		.loc 2 562 5 view .LVU60
+ 206              		.syntax unified
+ 207              	@ 562 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+ 208 0060 82F31088 		MSR  PRIMASK,r2
+ 209              	@ 0 "" 2
+ 210              	.LVL17:
  562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 220              		.loc 2 562 5 is_stmt 0 view .LVU67
- 221              		.thumb
- 222              		.syntax unified
- 223              	.LBE23:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 19
-
-
- 224              	.LBE22:
+ 211              		.loc 2 562 5 is_stmt 0 view .LVU61
+ 212              		.thumb
+ 213              		.syntax unified
+ 214              	.LBE23:
+ 215              	.LBE22:
  206:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
  207:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****     /* Always return success, since this function does not perform error
  208:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****        checking.  */
  209:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****     return(status);
- 225              		.loc 1 209 5 is_stmt 1 view .LVU68
- 226              	.L1:
+ 216              		.loc 1 209 5 is_stmt 1 view .LVU62
+ 217              	.L1:
  210:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
  211:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** #else
+ARM GAS  /tmp/cczVOKDx.s 			page 19
+
+
  212:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
  213:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****     /* In-line thread suspension processing follows, which is effectively just taking the
  214:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****        logic in tx_thread_system_suspend.c and placing it here!  */
@@ -1138,9 +1129,6 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 1
  257:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****     /* If trace is enabled, insert this event into the trace buffer.  */
  258:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****     TX_TRACE_IN_LINE_INSERT(TX_TRACE_THREAD_SUSPEND_API, thread_ptr, thread_ptr -> tx_thread_state,
  259:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 20
-
-
  260:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****     /* Log this kernel call.  */
  261:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****     TX_EL_THREAD_SUSPEND_INSERT
  262:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
@@ -1150,6 +1138,9 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 1
  266:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
  267:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****         /* Initialize status to success.  */
  268:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****         status =  TX_SUCCESS;
+ARM GAS  /tmp/cczVOKDx.s 			page 20
+
+
  269:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
  270:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****         /* Determine if we are in a thread context.  */
  271:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****         if (TX_THREAD_GET_SYSTEM_STATE() == ((ULONG) 0))
@@ -1198,9 +1189,6 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 1
  314:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
  315:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****             /* If trace is enabled, save the current event pointer.  */
  316:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****             entry_ptr =  _tx_trace_buffer_current_ptr;
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 21
-
-
  317:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** #endif
  318:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
  319:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****             /* Log the thread status change.  */
@@ -1210,6 +1198,9 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 1
  323:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
  324:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****             /* Save the time stamp for later comparison to verify that
  325:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                the event hasn't been overwritten by the time we have
+ARM GAS  /tmp/cczVOKDx.s 			page 21
+
+
  326:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                computed the next thread to execute.  */
  327:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****             if (entry_ptr != TX_NULL)
  328:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****             {
@@ -1258,9 +1249,6 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 1
  371:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
  372:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                         /* Ensure that this thread's priority is clear in the preempt map.  */
  373:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                         TX_MOD32_BIT_SET(priority, priority_bit)
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 22
-
-
  374:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                         _tx_thread_preempted_maps[MAP_INDEX] =  _tx_thread_preempted_maps[MAP_INDEX
  375:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
  376:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** #if TX_MAX_PRIORITIES > 32
@@ -1270,6 +1258,9 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 1
  380:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                         {
  381:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
  382:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                             /* No, clear the active bit to signify this preempt map has nothing set
+ARM GAS  /tmp/cczVOKDx.s 			page 22
+
+
  383:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                             TX_DIV32_BIT_SET(priority, priority_bit)
  384:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                             _tx_thread_preempted_map_active =  _tx_thread_preempted_map_active & (~
  385:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                         }
@@ -1318,9 +1309,6 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 1
  428:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                     _tx_thread_preempted_maps[MAP_INDEX] =  _tx_thread_preempted_maps[MAP_INDEX] & 
  429:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
  430:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** #if TX_MAX_PRIORITIES > 32
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 23
-
-
  431:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
  432:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                     /* Determine if there are any other bits set in this preempt map.  */
  433:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                     if (_tx_thread_preempted_maps[MAP_INDEX] == ((ULONG) 0))
@@ -1330,6 +1318,9 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 1
  437:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                         TX_DIV32_BIT_SET(priority, priority_bit)
  438:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                         _tx_thread_preempted_map_active =  _tx_thread_preempted_map_active & (~(pri
  439:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                     }
+ARM GAS  /tmp/cczVOKDx.s 			page 23
+
+
  440:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** #endif
  441:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                 }
  442:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** #endif
@@ -1378,9 +1369,6 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 1
  485:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                     {
  486:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
  487:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                         /* Is the timestamp the same?  */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 24
-
-
  488:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                         if (time_stamp == entry_ptr -> tx_trace_buffer_entry_time_stamp)
  489:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                         {
  490:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
@@ -1390,6 +1378,9 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 1
  494:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                             entry_ptr -> tx_trace_buffer_entry_information_field_4 =  0;
  495:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                         }
  496:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                     }
+ARM GAS  /tmp/cczVOKDx.s 			page 24
+
+
  497:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** #endif
  498:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
  499:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                     /* Restore interrupts.  */
@@ -1438,9 +1429,6 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 1
  542:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                 /* Determine if a previous thread with preemption-threshold was preempted.  */
  543:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** #if TX_MAX_PRIORITIES > 32
  544:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                 if (_tx_thread_preempted_map_active != ((ULONG) 0))
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 25
-
-
  545:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** #else
  546:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                 if (_tx_thread_preempted_maps[MAP_INDEX] != ((ULONG) 0))
  547:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** #endif
@@ -1450,6 +1438,9 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 1
  551:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
  552:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** #ifndef TX_NOT_INTERRUPTABLE
  553:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
+ARM GAS  /tmp/cczVOKDx.s 			page 25
+
+
  554:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                     /* Disable preemption.  */
  555:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                     _tx_thread_preempt_disable++;
  556:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
@@ -1498,9 +1489,6 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 1
  599:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                     if (_tx_thread_highest_priority >= (_tx_thread_priority_list[priority] -> tx_th
  600:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                     {
  601:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 26
-
-
  602:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                         /* Thread not allowed to execute until earlier preempted thread finishes or
  603:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                            preemption-threshold.  */
  604:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                         _tx_thread_execute_ptr =  _tx_thread_priority_list[priority];
@@ -1510,6 +1498,9 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 1
  608:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                         /* Check that the event time stamp is unchanged.  A different
  609:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                            timestamp means that a later event wrote over the thread
  610:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                            suspend event. In that case, do nothing here.  */
+ARM GAS  /tmp/cczVOKDx.s 			page 26
+
+
  611:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                         if (entry_ptr != TX_NULL)
  612:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                         {
  613:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
@@ -1558,9 +1549,6 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 1
  656:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
  657:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                     /* Move to next entry.  */
  658:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                     _tx_thread_performance__execute_log_index++;
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 27
-
-
  659:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
  660:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                     /* Check for wrap condition.  */
  661:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                     if (_tx_thread_performance__execute_log_index >= TX_THREAD_EXECUTE_LOG_SIZE)
@@ -1570,6 +1558,9 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 1
  665:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                         _tx_thread_performance__execute_log_index =  ((UINT) 0);
  666:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                     }
  667:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
+ARM GAS  /tmp/cczVOKDx.s 			page 27
+
+
  668:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                     /* Log the new execute pointer.  */
  669:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                     _tx_thread_performance_execute_log[_tx_thread_performance__execute_log_index] =
  670:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                 }
@@ -1618,9 +1609,6 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 1
  713:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                 return(TX_SUCCESS);
  714:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** #endif
  715:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****             }
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 28
-
-
  716:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
  717:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** #ifdef TX_THREAD_ENABLE_PERFORMANCE_INFO
  718:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
@@ -1630,6 +1618,9 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 1
  722:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
  723:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                 /* Move to next entry.  */
  724:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                 _tx_thread_performance__execute_log_index++;
+ARM GAS  /tmp/cczVOKDx.s 			page 28
+
+
  725:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
  726:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                 /* Check for wrap condition.  */
  727:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                 if (_tx_thread_performance__execute_log_index >= TX_THREAD_EXECUTE_LOG_SIZE)
@@ -1678,9 +1669,6 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 1
  770:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** #ifdef TX_ENABLE_STACK_CHECKING
  771:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
  772:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                 /* Pickup the next execute pointer.  */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 29
-
-
  773:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                 thread_ptr =  _tx_thread_execute_ptr;
  774:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
  775:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                 /* Check this thread's stack.  */
@@ -1690,6 +1678,9 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 1
  779:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                 /* Determine if preemption should take place. This is only possible if the current 
  780:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                    not the same as the execute thread pointer AND the system state and preempt disa
  781:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                 TX_THREAD_SYSTEM_RETURN_CHECK(combined_flags)
+ARM GAS  /tmp/cczVOKDx.s 			page 29
+
+
  782:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                 if (combined_flags == ((ULONG) 0))
  783:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****                 {
  784:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
@@ -1738,9 +1729,6 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 1
  827:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****     {
  828:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
  829:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****         /* Already suspended, just set status to success.  */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 30
-
-
  830:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****         status =  TX_SUCCESS;
  831:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****     }
  832:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****     else
@@ -1750,6 +1738,9 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 1
  836:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****         thread_ptr -> tx_thread_delayed_suspend =  TX_TRUE;
  837:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
  838:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****         /* Set status to success.  */
+ARM GAS  /tmp/cczVOKDx.s 			page 30
+
+
  839:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****         status =  TX_SUCCESS;
  840:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****     }
  841:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** 
@@ -1760,40 +1751,35 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 1
  846:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****     return(status);
  847:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** #endif
  848:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c **** }
- 227              		.loc 1 848 1 is_stmt 0 view .LVU69
- 228 0064 2046     		mov	r0, r4
- 229 0066 38BD     		pop	{r3, r4, r5, pc}
- 230              	.LVL18:
- 231              	.L8:
- 186:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****     }
- 232              		.loc 1 186 16 view .LVU70
- 233 0068 1424     		movs	r4, #20
- 234 006a F9E7     		b	.L4
- 235              	.L9:
- 192:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****     }
- 236              		.loc 1 192 16 view .LVU71
- 237 006c 0024     		movs	r4, #0
- 238 006e F7E7     		b	.L4
- 239              	.L13:
- 240              		.align	2
- 241              	.L12:
- 242 0070 00000000 		.word	_tx_thread_current_ptr
- 243 0074 00000000 		.word	_tx_thread_system_state
- 244 0078 00000000 		.word	_tx_thread_preempt_disable
- 245              		.cfi_endproc
- 246              	.LFE8:
- 248              		.text
- 249              	.Letext0:
- 250              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
- 251              		.file 4 "./Middlewares/ST/threadx/common/inc/tx_thread.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s 			page 31
+ 218              		.loc 1 848 1 is_stmt 0 view .LVU63
+ 219 0064 2046     		mov	r0, r4
+ 220 0066 10BD     		pop	{r4, pc}
+ 221              	.LVL18:
+ 222              	.L8:
+ 103:./Middlewares/ST/threadx/common/src/tx_thread_suspend.c ****     {
+ 223              		.loc 1 103 20 view .LVU64
+ 224 0068 1424     		movs	r4, #20
+ 225 006a F9E7     		b	.L3
+ 226              	.L14:
+ 227              		.align	2
+ 228              	.L13:
+ 229 006c 00000000 		.word	_tx_thread_current_ptr
+ 230 0070 00000000 		.word	_tx_thread_system_state
+ 231 0074 00000000 		.word	_tx_thread_preempt_disable
+ 232              		.cfi_endproc
+ 233              	.LFE8:
+ 235              		.text
+ 236              	.Letext0:
+ 237              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
+ 238              		.file 4 "./Middlewares/ST/threadx/common/inc/tx_thread.h"
+ARM GAS  /tmp/cczVOKDx.s 			page 31
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 tx_thread_suspend.c
-C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s:20     .text._tx_thread_suspend:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s:26     .text._tx_thread_suspend:00000000 _tx_thread_suspend
-C:\Users\Dennis\AppData\Local\Temp\ccGfDI8C.s:242    .text._tx_thread_suspend:00000070 $d
+     /tmp/cczVOKDx.s:21     .text._tx_thread_suspend:00000000 $t
+     /tmp/cczVOKDx.s:27     .text._tx_thread_suspend:00000000 _tx_thread_suspend
+     /tmp/cczVOKDx.s:229    .text._tx_thread_suspend:0000006c $d
 
 UNDEFINED SYMBOLS
 _tx_thread_system_suspend

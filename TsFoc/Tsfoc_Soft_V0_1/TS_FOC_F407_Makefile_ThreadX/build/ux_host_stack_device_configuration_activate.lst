@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc1FnAcv.s 			page 1
+ARM GAS  /tmp/ccu7lNBq.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,16 +19,16 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc1FnAcv.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text._ux_host_stack_device_configuration_activate,"ax",%progbits
-  20              		.align	1
-  21              		.global	_ux_host_stack_device_configuration_activate
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
-  26              	_ux_host_stack_device_configuration_activate:
-  27              	.LVL0:
-  28              	.LFB11:
-  29              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_configuration_activate.c"
+  19              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_configuration_activate.c"
+  20              		.section	.text._ux_host_stack_device_configuration_activate,"ax",%progbits
+  21              		.align	1
+  22              		.global	_ux_host_stack_device_configuration_activate
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	_ux_host_stack_device_configuration_activate:
+  28              	.LVL0:
+  29              	.LFB11:
    1:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_configuration_activate.c **** /**************************************************************************/
    2:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_configuration_activate.c **** /*                                                                        */
    3:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_configuration_activate.c **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc1FnAcv.s 			page 1
   27:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_configuration_activate.c **** 
   28:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_configuration_activate.c **** #include "ux_api.h"
   29:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_configuration_activate.c **** #include "ux_host_stack.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc1FnAcv.s 			page 2
+ARM GAS  /tmp/ccu7lNBq.s 			page 2
 
 
   30:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_configuration_activate.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc1FnAcv.s 			page 1
   30              		.loc 1 83 1 view -0
   31              		.cfi_startproc
   32              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc1FnAcv.s 			page 3
+ARM GAS  /tmp/ccu7lNBq.s 			page 3
 
 
   33              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc1FnAcv.s 			page 1
  114:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_configuration_activate.c ****     if (device -> ux_device_flags & UX_DEVICE_FLAG_LOCK)
  115:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_configuration_activate.c ****     {
  116:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_configuration_activate.c ****         UX_RESTORE
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc1FnAcv.s 			page 4
+ARM GAS  /tmp/ccu7lNBq.s 			page 4
 
 
  117:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_configuration_activate.c ****         return(UX_BUSY);
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc1FnAcv.s 			page 1
  152:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_configuration_activate.c **** #else
  153:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_configuration_activate.c ****         _ux_host_semaphore_put(&device -> ux_device_protection_semaphore);
  154:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_configuration_activate.c **** #endif
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc1FnAcv.s 			page 5
+ARM GAS  /tmp/ccu7lNBq.s 			page 5
 
 
  155:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_configuration_activate.c ****         return(status);
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc1FnAcv.s 			page 1
   96:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_configuration_activate.c **** 
   97              		.loc 1 96 9 is_stmt 0 view .LVU23
   98 0036 FFF7FEFF 		bl	_ux_system_error_handler
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc1FnAcv.s 			page 6
+ARM GAS  /tmp/ccu7lNBq.s 			page 6
 
 
   99              	.LVL9:
@@ -340,38 +340,40 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc1FnAcv.s 			page 1
  125              		.loc 1 149 32 view .LVU33
  126 004e A342     		cmp	r3, r4
  127 0050 00D0     		beq	.L6
- 128 0052 1C25     		movs	r5, #28
- 129              	.L6:
- 130              	.LVL15:
+ 149:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_configuration_activate.c **** #if defined(UX_HOST_STANDALONE)
+ 128              		.loc 1 149 32 discriminator 2 view .LVU34
+ 129 0052 1C25     		movs	r5, #28
+ 130              	.L6:
+ 131              	.LVL15:
  153:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_configuration_activate.c **** #endif
- 131              		.loc 1 153 9 is_stmt 1 view .LVU34
- 132 0054 3846     		mov	r0, r7
- 133 0056 FFF7FEFF 		bl	_ux_utility_semaphore_put
- 134              	.LVL16:
+ 132              		.loc 1 153 9 is_stmt 1 view .LVU35
+ 133 0054 3846     		mov	r0, r7
+ 134 0056 FFF7FEFF 		bl	_ux_utility_semaphore_put
+ 135              	.LVL16:
  155:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_configuration_activate.c ****     }
- 135              		.loc 1 155 9 view .LVU35
+ 136              		.loc 1 155 9 view .LVU36
  155:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_configuration_activate.c ****     }
- 136              		.loc 1 155 15 is_stmt 0 view .LVU36
- 137 005a E7E7     		b	.L1
- 138              		.cfi_endproc
- 139              	.LFE11:
- 141              		.text
- 142              	.Letext0:
- 143              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc1FnAcv.s 			page 7
+ 137              		.loc 1 155 15 is_stmt 0 view .LVU37
+ 138 005a E7E7     		b	.L1
+ 139              		.cfi_endproc
+ 140              	.LFE11:
+ 142              		.text
+ARM GAS  /tmp/ccu7lNBq.s 			page 7
 
 
- 144              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
- 145              		.file 4 "./Middlewares/ST/usbx/common/core/inc/ux_api.h"
- 146              		.file 5 "./Middlewares/ST/usbx/common/core/inc/ux_utility.h"
- 147              		.file 6 "./Middlewares/ST/usbx/common/core/inc/ux_host_stack.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc1FnAcv.s 			page 8
+ 143              	.Letext0:
+ 144              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
+ 145              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
+ 146              		.file 4 "./Middlewares/ST/usbx/common/core/inc/ux_api.h"
+ 147              		.file 5 "./Middlewares/ST/usbx/common/core/inc/ux_host_stack.h"
+ 148              		.file 6 "./Middlewares/ST/usbx/common/core/inc/ux_utility.h"
+ARM GAS  /tmp/ccu7lNBq.s 			page 8
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 ux_host_stack_device_configuration_activate.c
-C:\Users\Dennis\AppData\Local\Temp\cc1FnAcv.s:20     .text._ux_host_stack_device_configuration_activate:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\cc1FnAcv.s:26     .text._ux_host_stack_device_configuration_activate:00000000 _ux_host_stack_device_configuration_activate
+     /tmp/ccu7lNBq.s:21     .text._ux_host_stack_device_configuration_activate:00000000 $t
+     /tmp/ccu7lNBq.s:27     .text._ux_host_stack_device_configuration_activate:00000000 _ux_host_stack_device_configuration_activate
 
 UNDEFINED SYMBOLS
 _ux_utility_semaphore_get

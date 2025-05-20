@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccKviAQb.s 			page 1
+ARM GAS  /tmp/ccttbnWJ.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,31 +19,31 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccKviAQb.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.rodata.tx_application_define.str1.4,"aMS",%progbits,1
-  20              		.align	2
-  21              	.LC0:
-  22 0000 54782041 		.ascii	"Tx App memory pool\000"
-  22      7070206D 
-  22      656D6F72 
-  22      7920706F 
-  22      6F6C00
-  23 0013 00       		.align	2
-  24              	.LC1:
-  25 0014 55782041 		.ascii	"Ux App memory pool\000"
-  25      7070206D 
-  25      656D6F72 
-  25      7920706F 
-  25      6F6C00
-  26              		.section	.text.tx_application_define,"ax",%progbits
-  27              		.align	1
-  28              		.global	tx_application_define
-  29              		.syntax unified
-  30              		.thumb
-  31              		.thumb_func
-  33              	tx_application_define:
-  34              	.LVL0:
-  35              	.LFB250:
-  36              		.file 1 "./AZURE_RTOS/App/app_azure_rtos.c"
+  19              		.file 1 "./AZURE_RTOS/App/app_azure_rtos.c"
+  20              		.section	.rodata.tx_application_define.str1.4,"aMS",%progbits,1
+  21              		.align	2
+  22              	.LC0:
+  23 0000 54782041 		.ascii	"Tx App memory pool\000"
+  23      7070206D 
+  23      656D6F72 
+  23      7920706F 
+  23      6F6C00
+  24 0013 00       		.align	2
+  25              	.LC1:
+  26 0014 55782041 		.ascii	"Ux App memory pool\000"
+  26      7070206D 
+  26      656D6F72 
+  26      7920706F 
+  26      6F6C00
+  27              		.section	.text.tx_application_define,"ax",%progbits
+  28              		.align	1
+  29              		.global	tx_application_define
+  30              		.syntax unified
+  31              		.thumb
+  32              		.thumb_func
+  34              	tx_application_define:
+  35              	.LVL0:
+  36              	.LFB250:
    1:./AZURE_RTOS/App/app_azure_rtos.c **** 
    2:./AZURE_RTOS/App/app_azure_rtos.c **** /* USER CODE BEGIN Header */
    3:./AZURE_RTOS/App/app_azure_rtos.c **** /**
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccKviAQb.s 			page 1
   12:./AZURE_RTOS/App/app_azure_rtos.c ****   * All rights reserved.
   13:./AZURE_RTOS/App/app_azure_rtos.c ****   *
   14:./AZURE_RTOS/App/app_azure_rtos.c ****   * This software is licensed under terms that can be found in the LICENSE file
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccKviAQb.s 			page 2
+ARM GAS  /tmp/ccttbnWJ.s 			page 2
 
 
   15:./AZURE_RTOS/App/app_azure_rtos.c ****   * in the root directory of this software component.
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccKviAQb.s 			page 1
   69:./AZURE_RTOS/App/app_azure_rtos.c **** /* USER CODE END PFP */
   70:./AZURE_RTOS/App/app_azure_rtos.c **** 
   71:./AZURE_RTOS/App/app_azure_rtos.c **** /**
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccKviAQb.s 			page 3
+ARM GAS  /tmp/ccttbnWJ.s 			page 3
 
 
   72:./AZURE_RTOS/App/app_azure_rtos.c ****   * @brief  Define the initial system.
@@ -159,7 +159,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccKviAQb.s 			page 1
   59              		.loc 1 84 7 view .LVU5
   60 0012 FFF7FEFF 		bl	_txe_byte_pool_create
   61              	.LVL2:
-  62              		.loc 1 84 6 view .LVU6
+  62              		.loc 1 84 6 discriminator 1 view .LVU6
   63 0016 B0B1     		cbz	r0, .L6
   64              	.L2:
   85:./AZURE_RTOS/App/app_azure_rtos.c ****   {
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccKviAQb.s 			page 1
   98:./AZURE_RTOS/App/app_azure_rtos.c ****     if (App_ThreadX_Init(memory_ptr) != TX_SUCCESS)
   99:./AZURE_RTOS/App/app_azure_rtos.c ****     {
  100:./AZURE_RTOS/App/app_azure_rtos.c ****       /* USER CODE BEGIN  App_ThreadX_Init_Error */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccKviAQb.s 			page 4
+ARM GAS  /tmp/ccttbnWJ.s 			page 4
 
 
  101:./AZURE_RTOS/App/app_azure_rtos.c **** 
@@ -203,7 +203,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccKviAQb.s 			page 1
   73 0024 1348     		ldr	r0, .L9+20
   74 0026 FFF7FEFF 		bl	_txe_byte_pool_create
   75              	.LVL3:
-  76              		.loc 1 111 6 view .LVU10
+  76              		.loc 1 111 6 discriminator 1 view .LVU10
   77 002a 80B1     		cbz	r0, .L7
   78              	.L3:
  112:./AZURE_RTOS/App/app_azure_rtos.c ****   {
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccKviAQb.s 			page 1
   82 002c 3423     		movs	r3, #52
   83 002e 0093     		str	r3, [sp]
   84 0030 4FF48063 		mov	r3, #1024
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccKviAQb.s 			page 5
+ARM GAS  /tmp/ccttbnWJ.s 			page 5
 
 
   85 0034 104A     		ldr	r2, .L9+24
@@ -246,7 +246,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccKviAQb.s 			page 1
   87 0038 1048     		ldr	r0, .L9+28
   88 003a FFF7FEFF 		bl	_txe_byte_pool_create
   89              	.LVL4:
-  90              		.loc 1 137 6 view .LVU14
+  90              		.loc 1 137 6 discriminator 1 view .LVU14
   91 003e 50B1     		cbz	r0, .L8
   92              	.L1:
  138:./AZURE_RTOS/App/app_azure_rtos.c ****   {
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccKviAQb.s 			page 1
  111              	.LVL7:
  112              	.L7:
  123:./AZURE_RTOS/App/app_azure_rtos.c **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccKviAQb.s 			page 6
+ARM GAS  /tmp/ccttbnWJ.s 			page 6
 
 
  113              		.loc 1 123 5 is_stmt 1 view .LVU19
@@ -330,99 +330,94 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccKviAQb.s 			page 1
  133              	.L9:
  134 0060 00000000 		.word	tx_byte_pool_buffer
  135 0064 00000000 		.word	.LC0
- 136 0068 00000000 		.word	.LANCHOR0
- 137 006c 00000000 		.word	.LANCHOR1
+ 136 0068 00000000 		.word	tx_app_byte_pool
+ 137 006c 00000000 		.word	ux_host_byte_pool_buffer
  138 0070 14000000 		.word	.LC1
- 139 0074 00000000 		.word	.LANCHOR2
- 140 0078 00000000 		.word	.LANCHOR3
- 141 007c 00000000 		.word	.LANCHOR4
+ 139 0074 00000000 		.word	ux_host_app_byte_pool
+ 140 0078 00000000 		.word	ux_device_byte_pool_buffer
+ 141 007c 00000000 		.word	ux_device_app_byte_pool
  142              		.cfi_endproc
  143              	.LFE250:
- 145              		.section	.bss.tx_app_byte_pool,"aw",%nobits
+ 145              		.section	.bss.ux_device_app_byte_pool,"aw",%nobits
  146              		.align	2
- 147              		.set	.LANCHOR0,. + 0
- 150              	tx_app_byte_pool:
- 151 0000 00000000 		.space	52
- 151      00000000 
- 151      00000000 
- 151      00000000 
- 151      00000000 
- 152              		.section	.bss.tx_byte_pool_buffer,"aw",%nobits
- 153              		.align	2
- 156              	tx_byte_pool_buffer:
- 157 0000 00000000 		.space	20480
- 157      00000000 
- 157      00000000 
- 157      00000000 
- 157      00000000 
- 158              		.section	.bss.ux_device_app_byte_pool,"aw",%nobits
- 159              		.align	2
- 160              		.set	.LANCHOR4,. + 0
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccKviAQb.s 			page 7
+ 149              	ux_device_app_byte_pool:
+ 150 0000 00000000 		.space	52
+ 150      00000000 
+ 150      00000000 
+ 150      00000000 
+ 150      00000000 
+ 151              		.section	.bss.ux_device_byte_pool_buffer,"aw",%nobits
+ 152              		.align	2
+ 155              	ux_device_byte_pool_buffer:
+ 156 0000 00000000 		.space	1024
+ 156      00000000 
+ 156      00000000 
+ 156      00000000 
+ 156      00000000 
+ 157              		.section	.bss.ux_host_app_byte_pool,"aw",%nobits
+ 158              		.align	2
+ 161              	ux_host_app_byte_pool:
+ 162 0000 00000000 		.space	52
+ARM GAS  /tmp/ccttbnWJ.s 			page 7
 
 
- 163              	ux_device_app_byte_pool:
- 164 0000 00000000 		.space	52
- 164      00000000 
- 164      00000000 
- 164      00000000 
- 164      00000000 
- 165              		.section	.bss.ux_device_byte_pool_buffer,"aw",%nobits
- 166              		.align	2
- 167              		.set	.LANCHOR3,. + 0
- 170              	ux_device_byte_pool_buffer:
- 171 0000 00000000 		.space	1024
- 171      00000000 
- 171      00000000 
- 171      00000000 
- 171      00000000 
- 172              		.section	.bss.ux_host_app_byte_pool,"aw",%nobits
- 173              		.align	2
- 174              		.set	.LANCHOR2,. + 0
- 177              	ux_host_app_byte_pool:
- 178 0000 00000000 		.space	52
- 178      00000000 
- 178      00000000 
- 178      00000000 
- 178      00000000 
- 179              		.section	.bss.ux_host_byte_pool_buffer,"aw",%nobits
- 180              		.align	2
- 181              		.set	.LANCHOR1,. + 0
- 184              	ux_host_byte_pool_buffer:
- 185 0000 00000000 		.space	1024
- 185      00000000 
- 185      00000000 
- 185      00000000 
- 185      00000000 
- 186              		.text
- 187              	.Letext0:
- 188              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
- 189              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
- 190              		.file 4 "./app/peripheral/inc/OLED_Front.h"
- 191              		.file 5 "./Core/Inc/app_threadx.h"
- 192              		.file 6 "./USBX/App/app_usbx_host.h"
- 193              		.file 7 "./USBX/App/app_usbx_device.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccKviAQb.s 			page 8
+ 162      00000000 
+ 162      00000000 
+ 162      00000000 
+ 162      00000000 
+ 163              		.section	.bss.ux_host_byte_pool_buffer,"aw",%nobits
+ 164              		.align	2
+ 167              	ux_host_byte_pool_buffer:
+ 168 0000 00000000 		.space	1024
+ 168      00000000 
+ 168      00000000 
+ 168      00000000 
+ 168      00000000 
+ 169              		.section	.bss.tx_app_byte_pool,"aw",%nobits
+ 170              		.align	2
+ 173              	tx_app_byte_pool:
+ 174 0000 00000000 		.space	52
+ 174      00000000 
+ 174      00000000 
+ 174      00000000 
+ 174      00000000 
+ 175              		.section	.bss.tx_byte_pool_buffer,"aw",%nobits
+ 176              		.align	2
+ 179              	tx_byte_pool_buffer:
+ 180 0000 00000000 		.space	20480
+ 180      00000000 
+ 180      00000000 
+ 180      00000000 
+ 180      00000000 
+ 181              		.text
+ 182              	.Letext0:
+ 183              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
+ 184              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
+ 185              		.file 4 "./app/peripheral/inc/OLED_Front.h"
+ 186              		.file 5 "./USBX/App/app_usbx_device.h"
+ 187              		.file 6 "./USBX/App/app_usbx_host.h"
+ 188              		.file 7 "./Core/Inc/app_threadx.h"
+ARM GAS  /tmp/ccttbnWJ.s 			page 8
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 app_azure_rtos.c
-C:\Users\Dennis\AppData\Local\Temp\ccKviAQb.s:20     .rodata.tx_application_define.str1.4:00000000 $d
-C:\Users\Dennis\AppData\Local\Temp\ccKviAQb.s:27     .text.tx_application_define:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccKviAQb.s:33     .text.tx_application_define:00000000 tx_application_define
-C:\Users\Dennis\AppData\Local\Temp\ccKviAQb.s:134    .text.tx_application_define:00000060 $d
-C:\Users\Dennis\AppData\Local\Temp\ccKviAQb.s:156    .bss.tx_byte_pool_buffer:00000000 tx_byte_pool_buffer
-C:\Users\Dennis\AppData\Local\Temp\ccKviAQb.s:146    .bss.tx_app_byte_pool:00000000 $d
-C:\Users\Dennis\AppData\Local\Temp\ccKviAQb.s:150    .bss.tx_app_byte_pool:00000000 tx_app_byte_pool
-C:\Users\Dennis\AppData\Local\Temp\ccKviAQb.s:153    .bss.tx_byte_pool_buffer:00000000 $d
-C:\Users\Dennis\AppData\Local\Temp\ccKviAQb.s:159    .bss.ux_device_app_byte_pool:00000000 $d
-C:\Users\Dennis\AppData\Local\Temp\ccKviAQb.s:163    .bss.ux_device_app_byte_pool:00000000 ux_device_app_byte_pool
-C:\Users\Dennis\AppData\Local\Temp\ccKviAQb.s:166    .bss.ux_device_byte_pool_buffer:00000000 $d
-C:\Users\Dennis\AppData\Local\Temp\ccKviAQb.s:170    .bss.ux_device_byte_pool_buffer:00000000 ux_device_byte_pool_buffer
-C:\Users\Dennis\AppData\Local\Temp\ccKviAQb.s:173    .bss.ux_host_app_byte_pool:00000000 $d
-C:\Users\Dennis\AppData\Local\Temp\ccKviAQb.s:177    .bss.ux_host_app_byte_pool:00000000 ux_host_app_byte_pool
-C:\Users\Dennis\AppData\Local\Temp\ccKviAQb.s:180    .bss.ux_host_byte_pool_buffer:00000000 $d
-C:\Users\Dennis\AppData\Local\Temp\ccKviAQb.s:184    .bss.ux_host_byte_pool_buffer:00000000 ux_host_byte_pool_buffer
+     /tmp/ccttbnWJ.s:21     .rodata.tx_application_define.str1.4:00000000 $d
+     /tmp/ccttbnWJ.s:28     .text.tx_application_define:00000000 $t
+     /tmp/ccttbnWJ.s:34     .text.tx_application_define:00000000 tx_application_define
+     /tmp/ccttbnWJ.s:134    .text.tx_application_define:00000060 $d
+     /tmp/ccttbnWJ.s:179    .bss.tx_byte_pool_buffer:00000000 tx_byte_pool_buffer
+     /tmp/ccttbnWJ.s:173    .bss.tx_app_byte_pool:00000000 tx_app_byte_pool
+     /tmp/ccttbnWJ.s:167    .bss.ux_host_byte_pool_buffer:00000000 ux_host_byte_pool_buffer
+     /tmp/ccttbnWJ.s:161    .bss.ux_host_app_byte_pool:00000000 ux_host_app_byte_pool
+     /tmp/ccttbnWJ.s:155    .bss.ux_device_byte_pool_buffer:00000000 ux_device_byte_pool_buffer
+     /tmp/ccttbnWJ.s:149    .bss.ux_device_app_byte_pool:00000000 ux_device_app_byte_pool
+     /tmp/ccttbnWJ.s:146    .bss.ux_device_app_byte_pool:00000000 $d
+     /tmp/ccttbnWJ.s:152    .bss.ux_device_byte_pool_buffer:00000000 $d
+     /tmp/ccttbnWJ.s:158    .bss.ux_host_app_byte_pool:00000000 $d
+     /tmp/ccttbnWJ.s:164    .bss.ux_host_byte_pool_buffer:00000000 $d
+     /tmp/ccttbnWJ.s:170    .bss.tx_app_byte_pool:00000000 $d
+     /tmp/ccttbnWJ.s:176    .bss.tx_byte_pool_buffer:00000000 $d
 
 UNDEFINED SYMBOLS
 _txe_byte_pool_create

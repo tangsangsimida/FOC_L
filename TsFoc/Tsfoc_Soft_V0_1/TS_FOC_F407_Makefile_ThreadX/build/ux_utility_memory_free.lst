@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccClEKh8.s 			page 1
+ARM GAS  /tmp/ccSO8AmG.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,16 +19,16 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccClEKh8.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text._ux_utility_memory_free,"ax",%progbits
-  20              		.align	1
-  21              		.global	_ux_utility_memory_free
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
-  26              	_ux_utility_memory_free:
-  27              	.LVL0:
-  28              	.LFB11:
-  29              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c"
+  19              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c"
+  20              		.section	.text._ux_utility_memory_free,"ax",%progbits
+  21              		.align	1
+  22              		.global	_ux_utility_memory_free
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	_ux_utility_memory_free:
+  28              	.LVL0:
+  29              	.LFB11:
    1:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c **** /**************************************************************************/
    2:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c **** /*                                                                        */
    3:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccClEKh8.s 			page 1
   27:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c **** 
   28:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c **** #include "ux_api.h"
   29:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccClEKh8.s 			page 2
+ARM GAS  /tmp/ccSO8AmG.s 			page 2
 
 
   30:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccClEKh8.s 			page 1
   38              		.cfi_offset 4, -8
   39              		.cfi_offset 14, -4
   40 0002 0446     		mov	r4, r0
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccClEKh8.s 			page 3
+ARM GAS  /tmp/ccSO8AmG.s 			page 3
 
 
   76:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c **** 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccClEKh8.s 			page 1
  117:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c ****     memory_block =  (UX_MEMORY_BLOCK *) (((UCHAR *) memory) - sizeof(UX_MEMORY_BLOCK));
   54              		.loc 1 117 5 is_stmt 1 view .LVU9
  118:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c ****     
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccClEKh8.s 			page 4
+ARM GAS  /tmp/ccSO8AmG.s 			page 4
 
 
  119:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c ****     /* Keep track of the memory returned to the pool.  */
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccClEKh8.s 			page 1
   71              		.loc 1 156 5 is_stmt 1 view .LVU17
   72              		.loc 1 156 44 is_stmt 0 view .LVU18
   73 0026 0022     		movs	r2, #0
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccClEKh8.s 			page 5
+ARM GAS  /tmp/ccSO8AmG.s 			page 5
 
 
   74 0028 44F80C2C 		str	r2, [r4, #-12]
@@ -251,12 +251,12 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccClEKh8.s 			page 1
   75              		.loc 1 162 6 is_stmt 1 view .LVU19
   76              	.LVL5:
   77              	.L4:
-  78              		.loc 1 162 12 view .LVU20
+  78              		.loc 1 162 54 view .LVU20
   79 002c 1946     		mov	r1, r3
   80              		.loc 1 162 26 is_stmt 0 view .LVU21
   81 002e DB68     		ldr	r3, [r3, #12]
   82              	.LVL6:
-  83              		.loc 1 162 12 view .LVU22
+  83              		.loc 1 162 54 view .LVU22
   84 0030 13B1     		cbz	r3, .L5
  163:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c ****      {
  164:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c **** 
@@ -290,7 +290,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccClEKh8.s 			page 1
  181:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c ****     while (next_block != UX_NULL)
   96              		.loc 1 181 5 is_stmt 1 view .LVU28
   97              	.L7:
-  98              		.loc 1 181 11 view .LVU29
+  98              		.loc 1 181 23 view .LVU29
   99 003a BBB1     		cbz	r3, .L9
  182:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c ****     {
  183:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c **** 
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccClEKh8.s 			page 1
  185:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c ****         if (next_block -> ux_memory_block_status != UX_MEMORY_UNUSED)
  100              		.loc 1 185 9 view .LVU30
  101              		.loc 1 185 24 is_stmt 0 view .LVU31
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccClEKh8.s 			page 6
+ARM GAS  /tmp/ccSO8AmG.s 			page 6
 
 
  102 003c 5A68     		ldr	r2, [r3, #4]
@@ -320,78 +320,79 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccClEKh8.s 			page 1
  109 0042 8A60     		str	r2, [r1, #8]
  195:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c ****         memory_block -> ux_memory_block_size +=  next_block -> ux_memory_block_size + (ULONG)sizeof
  110              		.loc 1 195 9 is_stmt 1 view .LVU36
- 111              		.loc 1 195 61 is_stmt 0 view .LVU37
- 112 0044 1A68     		ldr	r2, [r3]
- 113              		.loc 1 195 46 view .LVU38
- 114 0046 0868     		ldr	r0, [r1]
- 115 0048 0244     		add	r2, r2, r0
- 116 004a 1032     		adds	r2, r2, #16
- 117 004c 0A60     		str	r2, [r1]
+ 111              		.loc 1 195 22 is_stmt 0 view .LVU37
+ 112 0044 0A68     		ldr	r2, [r1]
+ 113              		.loc 1 195 61 view .LVU38
+ 114 0046 1868     		ldr	r0, [r3]
+ 115              		.loc 1 195 46 view .LVU39
+ 116 0048 0244     		add	r2, r2, r0
+ 117 004a 1032     		adds	r2, r2, #16
+ 118 004c 0A60     		str	r2, [r1]
  196:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c ****         next_block =  next_block -> ux_memory_block_next;                       
- 118              		.loc 1 196 9 is_stmt 1 view .LVU39
- 119              		.loc 1 196 20 is_stmt 0 view .LVU40
- 120 004e 9B68     		ldr	r3, [r3, #8]
- 121              	.LVL8:
- 122              		.loc 1 196 20 view .LVU41
- 123 0050 F3E7     		b	.L7
- 124              	.LVL9:
- 125              	.L15:
+ 119              		.loc 1 196 9 is_stmt 1 view .LVU40
+ 120              		.loc 1 196 20 is_stmt 0 view .LVU41
+ 121 004e 9B68     		ldr	r3, [r3, #8]
+ 122              	.LVL8:
+ 123              		.loc 1 196 20 view .LVU42
+ 124 0050 F3E7     		b	.L7
+ 125              	.LVL9:
+ 126              	.L15:
  128:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c **** 
- 126              		.loc 1 128 9 is_stmt 1 view .LVU42
+ 127              		.loc 1 128 9 is_stmt 1 view .LVU43
  128:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c **** 
- 127              		.loc 1 128 42 is_stmt 0 view .LVU43
- 128 0052 144B     		ldr	r3, .L18
- 129 0054 1868     		ldr	r0, [r3]
+ 128              		.loc 1 128 42 is_stmt 0 view .LVU44
+ 129 0052 144B     		ldr	r3, .L18
+ 130 0054 1868     		ldr	r0, [r3]
  128:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c **** 
- 130              		.loc 1 128 9 view .LVU44
- 131 0056 1C30     		adds	r0, r0, #28
- 132 0058 FFF7FEFF 		bl	_ux_utility_mutex_off
- 133              	.LVL10:
+ 131              		.loc 1 128 9 view .LVU45
+ 132 0056 1C30     		adds	r0, r0, #28
+ 133 0058 FFF7FEFF 		bl	_ux_utility_mutex_off
+ 134              	.LVL10:
  131:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c **** 
- 134              		.loc 1 131 9 is_stmt 1 view .LVU45
- 135 005c 1922     		movs	r2, #25
- 136 005e 0821     		movs	r1, #8
- 137 0060 0220     		movs	r0, #2
- 138 0062 FFF7FEFF 		bl	_ux_system_error_handler
- 139              	.LVL11:
+ 135              		.loc 1 131 9 is_stmt 1 view .LVU46
+ 136 005c 1922     		movs	r2, #25
+ 137 005e 0821     		movs	r1, #8
+ 138 0060 0220     		movs	r0, #2
+ 139 0062 FFF7FEFF 		bl	_ux_system_error_handler
+ 140              	.LVL11:
  137:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c ****     }
- 140              		.loc 1 137 9 view .LVU46
- 141 0066 1BE0     		b	.L1
- 142              	.LVL12:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccClEKh8.s 			page 7
+ 141              		.loc 1 137 9 view .LVU47
+ 142 0066 1BE0     		b	.L1
+ARM GAS  /tmp/ccSO8AmG.s 			page 7
 
 
- 143              	.L16:
+ 143              	.LVL12:
+ 144              	.L16:
  189:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c ****             next_block -> ux_memory_block_previous =  memory_block;
- 144              		.loc 1 189 13 view .LVU47
+ 145              		.loc 1 189 13 view .LVU48
  189:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c ****             next_block -> ux_memory_block_previous =  memory_block;
- 145              		.loc 1 189 50 is_stmt 0 view .LVU48
- 146 0068 8B60     		str	r3, [r1, #8]
+ 146              		.loc 1 189 50 is_stmt 0 view .LVU49
+ 147 0068 8B60     		str	r3, [r1, #8]
  190:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c ****             break;
- 147              		.loc 1 190 13 is_stmt 1 view .LVU49
+ 148              		.loc 1 190 13 is_stmt 1 view .LVU50
  190:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c ****             break;
- 148              		.loc 1 190 52 is_stmt 0 view .LVU50
- 149 006a D960     		str	r1, [r3, #12]
+ 149              		.loc 1 190 52 is_stmt 0 view .LVU51
+ 150 006a D960     		str	r1, [r3, #12]
  191:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c ****         }
- 150              		.loc 1 191 13 is_stmt 1 view .LVU51
- 151              	.L9:
+ 151              		.loc 1 191 13 is_stmt 1 view .LVU52
+ 152              	.L9:
  197:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c ****     }
  198:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c **** 
  199:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c ****     /* Update the memory free in the appropriate pool.  We need to know if this 
  200:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c ****        block is in regular memory or cache safe memory.  */
  201:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c ****     if(_ux_system -> ux_system_cache_safe_memory_pool_start == _ux_system -> ux_system_regular_memo
- 152              		.loc 1 201 5 view .LVU52
- 153              		.loc 1 201 19 is_stmt 0 view .LVU53
- 154 006c 0D4B     		ldr	r3, .L18
- 155              	.LVL13:
- 156              		.loc 1 201 19 view .LVU54
- 157 006e 1868     		ldr	r0, [r3]
- 158 0070 C268     		ldr	r2, [r0, #12]
- 159              		.loc 1 201 75 view .LVU55
- 160 0072 0368     		ldr	r3, [r0]
- 161              		.loc 1 201 7 view .LVU56
- 162 0074 9A42     		cmp	r2, r3
- 163 0076 09D0     		beq	.L17
+ 153              		.loc 1 201 5 view .LVU53
+ 154              		.loc 1 201 19 is_stmt 0 view .LVU54
+ 155 006c 0D4B     		ldr	r3, .L18
+ 156              	.LVL13:
+ 157              		.loc 1 201 19 view .LVU55
+ 158 006e 1868     		ldr	r0, [r3]
+ 159 0070 C268     		ldr	r2, [r0, #12]
+ 160              		.loc 1 201 75 view .LVU56
+ 161 0072 0368     		ldr	r3, [r0]
+ 162              		.loc 1 201 7 view .LVU57
+ 163 0074 9A42     		cmp	r2, r3
+ 164 0076 09D0     		beq	.L17
  202:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c ****     {
  203:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c **** 
  204:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c ****         /* There is only one regular memory pool.  */
@@ -403,102 +404,106 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccClEKh8.s 			page 1
  210:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c **** 
  211:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c ****         /* Which pool is this memory in ?  */
  212:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c ****         memory_address = (UCHAR *) _ux_system -> ux_system_regular_memory_pool_start;
- 164              		.loc 1 212 9 is_stmt 1 view .LVU57
- 165              	.LVL14:
+ 165              		.loc 1 212 9 is_stmt 1 view .LVU58
+ 166              	.LVL14:
  213:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c ****         
  214:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c ****         /* If the memory address is in this range, we are in the regular memory pool.  */
  215:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c ****         if ((UCHAR *) memory_block >= memory_address && (UCHAR *) memory_block < (memory_address + 
- 166              		.loc 1 215 9 view .LVU58
- 167              		.loc 1 215 12 is_stmt 0 view .LVU59
- 168 0078 8B42     		cmp	r3, r1
- 169 007a 0BD8     		bhi	.L13
- 170              		.loc 1 215 111 discriminator 1 view .LVU60
- 171 007c 4268     		ldr	r2, [r0, #4]
- 172              		.loc 1 215 98 discriminator 1 view .LVU61
- 173 007e 1344     		add	r3, r3, r2
- 174              	.LVL15:
- 175              		.loc 1 215 54 discriminator 1 view .LVU62
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccClEKh8.s 			page 8
+ 167              		.loc 1 215 9 view .LVU59
+ 168              		.loc 1 215 12 is_stmt 0 view .LVU60
+ 169 0078 8B42     		cmp	r3, r1
+ 170 007a 0BD8     		bhi	.L13
+ 171              		.loc 1 215 111 discriminator 1 view .LVU61
+ 172 007c 4268     		ldr	r2, [r0, #4]
+ 173              		.loc 1 215 98 discriminator 1 view .LVU62
+ 174 007e 1344     		add	r3, r3, r2
+ 175              	.LVL15:
+ARM GAS  /tmp/ccSO8AmG.s 			page 8
 
 
- 176 0080 8B42     		cmp	r3, r1
- 177 0082 07D9     		bls	.L13
+ 176              		.loc 1 215 54 discriminator 1 view .LVU63
+ 177 0080 8B42     		cmp	r3, r1
+ 178 0082 07D9     		bls	.L13
  216:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c **** 
  217:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c ****             /* Update the regular memory pool.  */
  218:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c ****             _ux_system -> ux_system_regular_memory_pool_free += memory_size_returned;
- 178              		.loc 1 218 13 is_stmt 1 view .LVU63
- 179              		.loc 1 218 62 is_stmt 0 view .LVU64
- 180 0084 8368     		ldr	r3, [r0, #8]
- 181 0086 6344     		add	r3, r3, ip
- 182 0088 8360     		str	r3, [r0, #8]
- 183 008a 06E0     		b	.L12
- 184              	.LVL16:
- 185              	.L17:
+ 179              		.loc 1 218 13 is_stmt 1 view .LVU64
+ 180              		.loc 1 218 24 is_stmt 0 view .LVU65
+ 181 0084 8368     		ldr	r3, [r0, #8]
+ 182              		.loc 1 218 62 view .LVU66
+ 183 0086 6344     		add	r3, r3, ip
+ 184 0088 8360     		str	r3, [r0, #8]
+ 185 008a 06E0     		b	.L12
+ 186              	.LVL16:
+ 187              	.L17:
  205:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c ****         
- 186              		.loc 1 205 9 is_stmt 1 view .LVU65
+ 188              		.loc 1 205 9 is_stmt 1 view .LVU67
  205:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c ****         
- 187              		.loc 1 205 58 is_stmt 0 view .LVU66
- 188 008c 8368     		ldr	r3, [r0, #8]
- 189 008e 6344     		add	r3, r3, ip
- 190 0090 8360     		str	r3, [r0, #8]
- 191 0092 02E0     		b	.L12
- 192              	.LVL17:
- 193              	.L13:
+ 189              		.loc 1 205 20 is_stmt 0 view .LVU68
+ 190 008c 8368     		ldr	r3, [r0, #8]
+ 205:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c ****         
+ 191              		.loc 1 205 58 view .LVU69
+ 192 008e 6344     		add	r3, r3, ip
+ 193 0090 8360     		str	r3, [r0, #8]
+ 194 0092 02E0     		b	.L12
+ 195              	.LVL17:
+ 196              	.L13:
  219:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c **** 
  220:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c ****         else
  221:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c ****         
  222:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c ****             /* Update the cache safe memory pool.  */
  223:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c ****             _ux_system -> ux_system_cache_safe_memory_pool_free += memory_size_returned;
- 194              		.loc 1 223 13 is_stmt 1 view .LVU67
- 195              		.loc 1 223 65 is_stmt 0 view .LVU68
- 196 0094 4369     		ldr	r3, [r0, #20]
- 197 0096 6344     		add	r3, r3, ip
- 198 0098 4361     		str	r3, [r0, #20]
- 199              	.LVL18:
- 200              	.L12:
+ 197              		.loc 1 223 13 is_stmt 1 view .LVU70
+ 198              		.loc 1 223 24 is_stmt 0 view .LVU71
+ 199 0094 4369     		ldr	r3, [r0, #20]
+ 200              		.loc 1 223 65 view .LVU72
+ 201 0096 6344     		add	r3, r3, ip
+ 202 0098 4361     		str	r3, [r0, #20]
+ 203              	.LVL18:
+ 204              	.L12:
  224:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c ****         
  225:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c ****     }
  226:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c **** 
  227:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c ****     /* Release the protection.  */
  228:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c ****     _ux_system_mutex_off(&_ux_system -> ux_system_mutex);
- 201              		.loc 1 228 5 is_stmt 1 view .LVU69
- 202 009a 1C30     		adds	r0, r0, #28
- 203 009c FFF7FEFF 		bl	_ux_utility_mutex_off
- 204              	.LVL19:
+ 205              		.loc 1 228 5 is_stmt 1 view .LVU73
+ 206 009a 1C30     		adds	r0, r0, #28
+ 207 009c FFF7FEFF 		bl	_ux_utility_mutex_off
+ 208              	.LVL19:
  229:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c **** 
  230:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c ****     /* Return to caller.  */
  231:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c ****     return;
- 205              		.loc 1 231 5 view .LVU70
- 206              	.L1:
+ 209              		.loc 1 231 5 view .LVU74
+ 210              	.L1:
  232:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free.c **** }
- 207              		.loc 1 232 1 is_stmt 0 view .LVU71
- 208 00a0 10BD     		pop	{r4, pc}
- 209              	.LVL20:
- 210              	.L19:
- 211              		.loc 1 232 1 view .LVU72
- 212 00a2 00BF     		.align	2
- 213              	.L18:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccClEKh8.s 			page 9
+ 211              		.loc 1 232 1 is_stmt 0 view .LVU75
+ 212 00a0 10BD     		pop	{r4, pc}
+ARM GAS  /tmp/ccSO8AmG.s 			page 9
 
 
- 214 00a4 00000000 		.word	_ux_system
- 215              		.cfi_endproc
- 216              	.LFE11:
- 218              		.text
- 219              	.Letext0:
- 220              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
- 221              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
- 222              		.file 4 "./Middlewares/ST/usbx/common/core/inc/ux_api.h"
- 223              		.file 5 "./Middlewares/ST/usbx/common/core/inc/ux_system.h"
- 224              		.file 6 "./Middlewares/ST/usbx/common/core/inc/ux_utility.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccClEKh8.s 			page 10
+ 213              	.LVL20:
+ 214              	.L19:
+ 215              		.loc 1 232 1 view .LVU76
+ 216 00a2 00BF     		.align	2
+ 217              	.L18:
+ 218 00a4 00000000 		.word	_ux_system
+ 219              		.cfi_endproc
+ 220              	.LFE11:
+ 222              		.text
+ 223              	.Letext0:
+ 224              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
+ 225              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
+ 226              		.file 4 "./Middlewares/ST/usbx/common/core/inc/ux_api.h"
+ 227              		.file 5 "./Middlewares/ST/usbx/common/core/inc/ux_utility.h"
+ 228              		.file 6 "./Middlewares/ST/usbx/common/core/inc/ux_system.h"
+ARM GAS  /tmp/ccSO8AmG.s 			page 10
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 ux_utility_memory_free.c
-C:\Users\Dennis\AppData\Local\Temp\ccClEKh8.s:20     .text._ux_utility_memory_free:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccClEKh8.s:26     .text._ux_utility_memory_free:00000000 _ux_utility_memory_free
-C:\Users\Dennis\AppData\Local\Temp\ccClEKh8.s:214    .text._ux_utility_memory_free:000000a4 $d
+     /tmp/ccSO8AmG.s:21     .text._ux_utility_memory_free:00000000 $t
+     /tmp/ccSO8AmG.s:27     .text._ux_utility_memory_free:00000000 _ux_utility_memory_free
+     /tmp/ccSO8AmG.s:218    .text._ux_utility_memory_free:000000a4 $d
 
 UNDEFINED SYMBOLS
 _ux_utility_mutex_on

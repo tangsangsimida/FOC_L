@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cctS5sbk.s 			page 1
+ARM GAS  /tmp/ccRygarH.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,16 +19,16 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cctS5sbk.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text._txe_mutex_create,"ax",%progbits
-  20              		.align	1
-  21              		.global	_txe_mutex_create
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
-  26              	_txe_mutex_create:
-  27              	.LVL0:
-  28              	.LFB8:
-  29              		.file 1 "./Middlewares/ST/threadx/common/src/txe_mutex_create.c"
+  19              		.file 1 "./Middlewares/ST/threadx/common/src/txe_mutex_create.c"
+  20              		.section	.text._txe_mutex_create,"ax",%progbits
+  21              		.align	1
+  22              		.global	_txe_mutex_create
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	_txe_mutex_create:
+  28              	.LVL0:
+  29              	.LFB8:
    1:./Middlewares/ST/threadx/common/src/txe_mutex_create.c **** /**************************************************************************/
    2:./Middlewares/ST/threadx/common/src/txe_mutex_create.c **** /*                                                                        */
    3:./Middlewares/ST/threadx/common/src/txe_mutex_create.c **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cctS5sbk.s 			page 1
   27:./Middlewares/ST/threadx/common/src/txe_mutex_create.c **** 
   28:./Middlewares/ST/threadx/common/src/txe_mutex_create.c **** #include "tx_api.h"
   29:./Middlewares/ST/threadx/common/src/txe_mutex_create.c **** #include "tx_initialize.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cctS5sbk.s 			page 2
+ARM GAS  /tmp/ccRygarH.s 			page 2
 
 
   30:./Middlewares/ST/threadx/common/src/txe_mutex_create.c **** #include "tx_thread.h"
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cctS5sbk.s 			page 1
   30              		.loc 1 83 1 view -0
   31              		.cfi_startproc
   32              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cctS5sbk.s 			page 3
+ARM GAS  /tmp/ccRygarH.s 			page 3
 
 
   33              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -132,8 +132,8 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cctS5sbk.s 			page 1
   41              		.cfi_offset 6, -12
   42              		.cfi_offset 7, -8
   43              		.cfi_offset 14, -4
-  44 0002 0E46     		mov	r6, r1
-  45 0004 1546     		mov	r5, r2
+  44 0002 0F46     		mov	r7, r1
+  45 0004 1646     		mov	r6, r2
   84:./Middlewares/ST/threadx/common/src/txe_mutex_create.c **** 
   85:./Middlewares/ST/threadx/common/src/txe_mutex_create.c **** TX_INTERRUPT_SAVE_AREA
   46              		.loc 1 85 1 is_stmt 1 view .LVU2
@@ -159,9 +159,9 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cctS5sbk.s 			page 1
   99:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****     if (mutex_ptr == TX_NULL)
   53              		.loc 1 99 5 view .LVU8
   54              		.loc 1 99 8 is_stmt 0 view .LVU9
-  55 0006 0746     		mov	r7, r0
+  55 0006 0546     		mov	r5, r0
   56 0008 0028     		cmp	r0, #0
-  57 000a 42D0     		beq	.L9
+  57 000a 40D0     		beq	.L9
  100:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****     {
  101:./Middlewares/ST/threadx/common/src/txe_mutex_create.c **** 
  102:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****         /* Mutex pointer is invalid, return appropriate error code.  */
@@ -173,18 +173,18 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cctS5sbk.s 			page 1
   58              		.loc 1 107 10 is_stmt 1 view .LVU10
   59              		.loc 1 107 13 is_stmt 0 view .LVU11
   60 000c 342B     		cmp	r3, #52
-  61 000e 03D0     		beq	.L16
+  61 000e 01D0     		beq	.L16
  108:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****     {
  109:./Middlewares/ST/threadx/common/src/txe_mutex_create.c **** 
  110:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****         /* Mutex pointer is invalid, return appropriate error code.  */
  111:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****         status =  TX_MUTEX_ERROR;
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cctS5sbk.s 			page 4
+ARM GAS  /tmp/ccRygarH.s 			page 4
 
 
   62              		.loc 1 111 16 view .LVU12
   63 0010 1C20     		movs	r0, #28
   64              	.LVL2:
-  65              	.L2:
+  65              	.L1:
  112:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****     }
  113:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****     else
  114:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****     {
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cctS5sbk.s 			page 1
  162:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****         }
  163:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****         else
  164:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****         {
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cctS5sbk.s 			page 5
+ARM GAS  /tmp/ccRygarH.s 			page 5
 
 
  165:./Middlewares/ST/threadx/common/src/txe_mutex_create.c **** 
@@ -290,33 +290,27 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cctS5sbk.s 			page 1
  211:./Middlewares/ST/threadx/common/src/txe_mutex_create.c **** 
  212:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****     /* Determine if everything is okay.  */
  213:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****     if (status == TX_SUCCESS)
-  66              		.loc 1 213 5 is_stmt 1 view .LVU13
-  67              		.loc 1 213 8 is_stmt 0 view .LVU14
-  68 0012 0028     		cmp	r0, #0
-  69 0014 43D0     		beq	.L17
-  70              	.LVL3:
-  71              	.L1:
  214:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****     {
  215:./Middlewares/ST/threadx/common/src/txe_mutex_create.c **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cctS5sbk.s 			page 6
-
-
  216:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****         /* Call actual mutex create function.  */
  217:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****         status =  _tx_mutex_create(mutex_ptr, name_ptr, inherit);
  218:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****     }
  219:./Middlewares/ST/threadx/common/src/txe_mutex_create.c **** 
  220:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****     /* Return completion status.  */
  221:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****     return(status);
+ARM GAS  /tmp/ccRygarH.s 			page 6
+
+
  222:./Middlewares/ST/threadx/common/src/txe_mutex_create.c **** }
-  72              		.loc 1 222 1 view .LVU15
-  73 0016 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
-  74              	.LVL4:
-  75              	.L16:
+  66              		.loc 1 222 1 view .LVU13
+  67 0012 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+  68              	.LVL3:
+  69              	.L16:
  117:./Middlewares/ST/threadx/common/src/txe_mutex_create.c **** 
-  76              		.loc 1 117 9 is_stmt 1 view .LVU16
-  77              	.LBB20:
-  78              	.LBI20:
-  79              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
+  70              		.loc 1 117 9 is_stmt 1 view .LVU14
+  71              	.LBB20:
+  72              	.LBI20:
+  73              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
    1:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /**************************************************************************/
    2:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*                                                                        */
    3:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
@@ -358,15 +352,15 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cctS5sbk.s 			page 1
   39:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*    processor architectures.  For example, the size or number of bits   */
   40:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*    in an "int" data type vary between microprocessor architectures and */
   41:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*    even C compilers for the same microprocessor.  ThreadX does not     */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cctS5sbk.s 			page 7
-
-
   42:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*    directly use native C data types.  Instead, ThreadX creates its     */
   43:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*    own special types that can be mapped to actual data types by this   */
   44:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*    file to guarantee consistency in the interface and functionality.   */
   45:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*                                                                        */
   46:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*    This file replaces the previous Cortex-M3/M4/M7 files. It unifies   */
   47:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*    the ARMv7-M architecture and compilers into one common file.        */
+ARM GAS  /tmp/ccRygarH.s 			page 7
+
+
   48:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*                                                                        */
   49:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*  RELEASE HISTORY                                                       */
   50:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*                                                                        */
@@ -418,15 +412,15 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cctS5sbk.s 			page 1
   96:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #if !defined(__GNUC__) && !defined(__CC_ARM)
   97:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define __get_control_value __get_CONTROL
   98:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define __set_control_value __set_CONTROL
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cctS5sbk.s 			page 8
-
-
   99:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
  100:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  101:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifndef __GNUC__
  102:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define __get_ipsr_value __get_IPSR
  103:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
  104:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
+ARM GAS  /tmp/ccRygarH.s 			page 8
+
+
  105:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /* Define ThreadX basic types for this port.  */
  106:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  107:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define VOID                                    void
@@ -478,15 +472,15 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cctS5sbk.s 			page 1
  153:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /* Define the clock source for trace event entry time stamp. The following two item are port specif
  154:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****    For example, if the time source is at the address 0x0a800024 and is 16-bits in size, the clock
  155:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****    source constants would be:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cctS5sbk.s 			page 9
-
-
  156:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  157:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_TRACE_TIME_SOURCE                    *((ULONG *) 0x0a800024)
  158:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_TRACE_TIME_MASK                      0x0000FFFFUL
  159:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  160:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** */
  161:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
+ARM GAS  /tmp/ccRygarH.s 			page 9
+
+
  162:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifndef TX_MISRA_ENABLE
  163:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifndef TX_TRACE_TIME_SOURCE
  164:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_TRACE_TIME_SOURCE                    *((ULONG *) 0xE0001004)
@@ -538,15 +532,15 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cctS5sbk.s 			page 1
  210:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****    define is negated, thereby forcing the stack fill which is necessary for the stack checking
  211:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****    logic.  */
  212:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cctS5sbk.s 			page 10
-
-
  213:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifndef TX_MISRA_ENABLE
  214:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifdef TX_ENABLE_STACK_CHECKING
  215:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #undef TX_DISABLE_STACK_FILLING
  216:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
  217:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
  218:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
+ARM GAS  /tmp/ccRygarH.s 			page 10
+
+
  219:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  220:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /* Define the TX_THREAD control block extensions for this port. The main reason
  221:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****    for the multiple macros is so that backward compatibility can be maintained with
@@ -598,15 +592,15 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cctS5sbk.s 			page 1
  267:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_THREAD_DELETE_EXTENSION(thread_ptr)                      __iar_dlib_perthread_deallocate
  268:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                                     thread_ptr -> tx_thread_iar_tls
  269:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_PORT_SPECIFIC_PRE_SCHEDULER_INITIALIZATION               __iar_dlib_perthread_access(0);
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cctS5sbk.s 			page 11
-
-
  270:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #else
  271:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** void    *_tx_iar_create_per_thread_tls_area(void);
  272:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** void    _tx_iar_destroy_per_thread_tls_area(void *tls_ptr);
  273:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** void    __iar_Initlocks(void);
  274:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  275:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_THREAD_CREATE_EXTENSION(thread_ptr)                      thread_ptr -> tx_thread_iar_tls
+ARM GAS  /tmp/ccRygarH.s 			page 11
+
+
  276:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_THREAD_DELETE_EXTENSION(thread_ptr)                      do {_tx_iar_destroy_per_thread_
  277:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                                         thread_ptr -> tx_thread_iar
  278:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_PORT_SPECIFIC_PRE_SCHEDULER_INITIALIZATION               do {__iar_Initlocks();} while(0
@@ -658,15 +652,15 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cctS5sbk.s 			page 1
  324:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** __attribute__( ( always_inline ) ) void __set_control_value(ULONG control_value)
  325:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
  326:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     __asm__ volatile ("MSR CONTROL,control_value");
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cctS5sbk.s 			page 12
-
-
  327:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
  328:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /* Can't access VFP registers with inline asm, so define this in tx_thread_schedule.  */
  329:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** void _tx_vfp_access(void);
  330:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_VFP_TOUCH()  _tx_vfp_access();
  331:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  332:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #elif defined(__ICCARM__)  /* IAR */
+ARM GAS  /tmp/ccRygarH.s 			page 12
+
+
  333:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_VFP_TOUCH()  __asm__ volatile ("VMOV.F32 s0, s0");
  334:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif  /* Helper functions for different compilers */
  335:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
@@ -718,15 +712,15 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cctS5sbk.s 			page 1
  381:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                             _tx_fpccr =  *((ULONG *) 0xE000EF34);  
  382:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                             _tx_fpccr =  _tx_fpccr & ((ULONG) 0x01)
  383:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                             if (_tx_fpccr == ((ULONG) 0x01))       
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cctS5sbk.s 			page 13
-
-
  384:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                             {                                      
  385:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                             ULONG _tx_vfp_state;                   
  386:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                                 _tx_vfp_state = __get_control_value
  387:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                                 _tx_vfp_state =  _tx_vfp_state & ((
  388:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                                 TX_VFP_TOUCH();                    
  389:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                                 if (_tx_vfp_state == ((ULONG) 0))  
+ARM GAS  /tmp/ccRygarH.s 			page 13
+
+
  390:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                                 {                                  
  391:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                                     _tx_vfp_state =  __get_control_
  392:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                                     _tx_vfp_state =  _tx_vfp_state 
@@ -778,15 +772,15 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cctS5sbk.s 			page 1
  438:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  439:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  440:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /* Define the ThreadX object creation extensions for the remaining objects.  */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cctS5sbk.s 			page 14
-
-
  441:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  442:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_BLOCK_POOL_CREATE_EXTENSION(pool_ptr)
  443:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_BYTE_POOL_CREATE_EXTENSION(pool_ptr)
  444:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_EVENT_FLAGS_GROUP_CREATE_EXTENSION(group_ptr)
  445:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_MUTEX_CREATE_EXTENSION(mutex_ptr)
  446:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_QUEUE_CREATE_EXTENSION(queue_ptr)
+ARM GAS  /tmp/ccRygarH.s 			page 14
+
+
  447:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_SEMAPHORE_CREATE_EXTENSION(semaphore_ptr)
  448:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_TIMER_CREATE_EXTENSION(timer_ptr)
  449:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
@@ -838,15 +832,15 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cctS5sbk.s 			page 1
  495:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  496:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /* Define the check for whether or not to call the _tx_thread_system_return function.  A non-zero v
  497:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****    indicates that _tx_thread_system_return should not be called. This overrides the definition in t
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cctS5sbk.s 			page 15
-
-
  498:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****    for Cortex-M since so we don't waste time checking the _tx_thread_system_state variable that is 
  499:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****    zero after initialization for Cortex-M ports. */
  500:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  501:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifndef TX_THREAD_SYSTEM_RETURN_CHECK
  502:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_THREAD_SYSTEM_RETURN_CHECK(c)    (c) = ((ULONG) _tx_thread_preempt_disable);
  503:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
+ARM GAS  /tmp/ccRygarH.s 			page 15
+
+
  504:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  505:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /* Define the macro to ensure _tx_thread_preempt_disable is set early in initialization in order to
  506:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****    prevent early scheduling on Cortex-M parts.  */
@@ -898,430 +892,424 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cctS5sbk.s 			page 1
  552:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     __asm__ volatile ("CPSIE  i": : : "memory");
  553:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
  554:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cctS5sbk.s 			page 16
-
-
  555:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  556:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** __attribute__( ( always_inline ) ) static inline void __restore_interrupt(unsigned int int_posture)
  557:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
  558:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifdef TX_PORT_USE_BASEPRI
  559:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     __set_basepri_value(int_posture);
  560:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     //__asm__ volatile ("MSR  BASEPRI,%0": : "r" (int_posture): "memory");
+ARM GAS  /tmp/ccRygarH.s 			page 16
+
+
  561:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #else
  562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     __asm__ volatile ("MSR  PRIMASK,%0": : "r" (int_posture): "memory");
  563:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
  564:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
  565:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  566:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** __attribute__( ( always_inline ) ) static inline unsigned int __disable_interrupts(void)
-  80              		.loc 2 566 63 view .LVU17
-  81              	.LBB21:
+  74              		.loc 2 566 63 view .LVU15
+  75              	.LBB21:
  567:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
  568:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** unsigned int int_posture;
-  82              		.loc 2 568 1 view .LVU18
+  76              		.loc 2 568 1 view .LVU16
  569:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  570:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     int_posture = __get_interrupt_posture();
-  83              		.loc 2 570 5 view .LVU19
-  84              	.LBB22:
-  85              	.LBI22:
+  77              		.loc 2 570 5 view .LVU17
+  78              	.LBB22:
+  79              	.LBI22:
  533:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
-  86              		.loc 2 533 63 view .LVU20
-  87              	.LBB23:
+  80              		.loc 2 533 63 view .LVU18
+  81              	.LBB23:
  535:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifdef TX_PORT_USE_BASEPRI
-  88              		.loc 2 535 1 view .LVU21
+  82              		.loc 2 535 1 view .LVU19
  539:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
-  89              		.loc 2 539 5 view .LVU22
-  90              		.syntax unified
-  91              	@ 539 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
-  92 0018 EFF31081 		MRS  r1, PRIMASK 
-  93              	@ 0 "" 2
-  94              	.LVL5:
+  83              		.loc 2 539 5 view .LVU20
+  84              		.syntax unified
+  85              	@ 539 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+  86 0014 EFF31081 		MRS  r1, PRIMASK 
+  87              	@ 0 "" 2
+  88              	.LVL4:
  541:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
-  95              		.loc 2 541 5 view .LVU23
+  89              		.loc 2 541 5 view .LVU21
  541:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
-  96              		.loc 2 541 5 is_stmt 0 view .LVU24
-  97              		.thumb
-  98              		.syntax unified
-  99              	.LBE23:
- 100              	.LBE22:
+  90              		.loc 2 541 5 is_stmt 0 view .LVU22
+  91              		.thumb
+  92              		.syntax unified
+  93              	.LBE23:
+  94              	.LBE22:
  571:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  572:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifdef TX_PORT_USE_BASEPRI
  573:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     __set_basepri_value(TX_PORT_BASEPRI);
  574:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #else
  575:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     __asm__ volatile ("CPSID i" : : : "memory");
- 101              		.loc 2 575 5 is_stmt 1 view .LVU25
- 102              		.syntax unified
- 103              	@ 575 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
- 104 001c 72B6     		CPSID i
- 105              	@ 0 "" 2
+  95              		.loc 2 575 5 is_stmt 1 view .LVU23
+  96              		.syntax unified
+  97              	@ 575 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+  98 0018 72B6     		CPSID i
+  99              	@ 0 "" 2
  576:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
  577:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     return(int_posture);
- 106              		.loc 2 577 5 view .LVU26
- 107              	.LVL6:
- 108              		.loc 2 577 5 is_stmt 0 view .LVU27
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cctS5sbk.s 			page 17
+ 100              		.loc 2 577 5 view .LVU24
+ 101              	.LVL5:
+ 102              		.loc 2 577 5 is_stmt 0 view .LVU25
+ 103              		.thumb
+ 104              		.syntax unified
+ 105              	.LBE21:
+ 106              	.LBE20:
+ 120:./Middlewares/ST/threadx/common/src/txe_mutex_create.c **** 
+ 107              		.loc 1 120 9 is_stmt 1 view .LVU26
+ARM GAS  /tmp/ccRygarH.s 			page 17
 
 
- 109              		.thumb
- 110              		.syntax unified
- 111              	.LBE21:
- 112              	.LBE20:
  120:./Middlewares/ST/threadx/common/src/txe_mutex_create.c **** 
- 113              		.loc 1 120 9 is_stmt 1 view .LVU28
+ 108              		.loc 1 120 35 is_stmt 0 view .LVU27
+ 109 001a 234A     		ldr	r2, .L18
+ 110              	.LVL6:
  120:./Middlewares/ST/threadx/common/src/txe_mutex_create.c **** 
- 114              		.loc 1 120 35 is_stmt 0 view .LVU29
- 115 001e 234A     		ldr	r2, .L18
- 116              	.LVL7:
+ 111              		.loc 1 120 35 view .LVU28
+ 112 001c 1368     		ldr	r3, [r2]
+ 113              	.LVL7:
  120:./Middlewares/ST/threadx/common/src/txe_mutex_create.c **** 
- 117              		.loc 1 120 35 view .LVU30
- 118 0020 1368     		ldr	r3, [r2]
- 119              	.LVL8:
- 120:./Middlewares/ST/threadx/common/src/txe_mutex_create.c **** 
- 120              		.loc 1 120 35 view .LVU31
- 121 0022 0133     		adds	r3, r3, #1
- 122 0024 1360     		str	r3, [r2]
+ 114              		.loc 1 120 35 view .LVU29
+ 115 001e 0133     		adds	r3, r3, #1
+ 116 0020 1360     		str	r3, [r2]
  123:./Middlewares/ST/threadx/common/src/txe_mutex_create.c **** 
- 123              		.loc 1 123 9 is_stmt 1 view .LVU32
- 124              	.LVL9:
- 125              	.LBB24:
- 126              	.LBI24:
+ 117              		.loc 1 123 9 is_stmt 1 view .LVU30
+ 118              	.LVL8:
+ 119              	.LBB24:
+ 120              	.LBI24:
  556:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 127              		.loc 2 556 55 view .LVU33
- 128              	.LBB25:
+ 121              		.loc 2 556 55 view .LVU31
+ 122              	.LBB25:
  562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 129              		.loc 2 562 5 view .LVU34
- 130              		.syntax unified
- 131              	@ 562 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
- 132 0026 81F31088 		MSR  PRIMASK,r1
- 133              	@ 0 "" 2
- 134              	.LVL10:
+ 123              		.loc 2 562 5 view .LVU32
+ 124              		.syntax unified
+ 125              	@ 562 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+ 126 0022 81F31088 		MSR  PRIMASK,r1
+ 127              	@ 0 "" 2
+ 128              	.LVL9:
  562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 135              		.loc 2 562 5 is_stmt 0 view .LVU35
- 136              		.thumb
- 137              		.syntax unified
- 138              	.LBE25:
- 139              	.LBE24:
+ 129              		.loc 2 562 5 is_stmt 0 view .LVU33
+ 130              		.thumb
+ 131              		.syntax unified
+ 132              	.LBE25:
+ 133              	.LBE24:
  126:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****         for (i = ((ULONG) 0); i < _tx_mutex_created_count; i++)
- 140              		.loc 1 126 9 is_stmt 1 view .LVU36
+ 134              		.loc 1 126 9 is_stmt 1 view .LVU34
  126:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****         for (i = ((ULONG) 0); i < _tx_mutex_created_count; i++)
- 141              		.loc 1 126 20 is_stmt 0 view .LVU37
- 142 002a 214B     		ldr	r3, .L18+4
- 143 002c 1C68     		ldr	r4, [r3]
+ 135              		.loc 1 126 20 is_stmt 0 view .LVU35
+ 136 0026 214B     		ldr	r3, .L18+4
+ 137 0028 1C68     		ldr	r4, [r3]
+ 138              	.LVL10:
+ 127:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****         {
+ 139              		.loc 1 127 9 is_stmt 1 view .LVU36
+ 127:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****         {
+ 140              		.loc 1 127 16 is_stmt 0 view .LVU37
+ 141 002a 0023     		movs	r3, #0
+ 127:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****         {
+ 142              		.loc 1 127 9 view .LVU38
+ 143 002c 01E0     		b	.L4
  144              	.LVL11:
+ 145              	.L17:
+ 140:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****             }
+ 146              		.loc 1 140 17 is_stmt 1 view .LVU39
+ 140:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****             }
+ 147              		.loc 1 140 28 is_stmt 0 view .LVU40
+ 148 002e 246A     		ldr	r4, [r4, #32]
+ 149              	.LVL12:
  127:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****         {
- 145              		.loc 1 127 9 is_stmt 1 view .LVU38
- 127:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****         {
- 146              		.loc 1 127 16 is_stmt 0 view .LVU39
- 147 002e 0023     		movs	r3, #0
- 148              	.LVL12:
- 149              	.L3:
- 127:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****         {
- 150              		.loc 1 127 31 is_stmt 1 discriminator 1 view .LVU40
- 127:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****         {
- 151              		.loc 1 127 33 is_stmt 0 discriminator 1 view .LVU41
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cctS5sbk.s 			page 18
+ARM GAS  /tmp/ccRygarH.s 			page 18
 
 
- 152 0030 2048     		ldr	r0, .L18+8
- 153 0032 0068     		ldr	r0, [r0]
+ 150              		.loc 1 127 61 is_stmt 1 discriminator 2 view .LVU41
+ 151 0030 0133     		adds	r3, r3, #1
+ 152              	.LVL13:
+ 153              	.L4:
  127:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****         {
- 154              		.loc 1 127 9 discriminator 1 view .LVU42
- 155 0034 9842     		cmp	r0, r3
- 156 0036 04D9     		bls	.L4
+ 154              		.loc 1 127 33 discriminator 1 view .LVU42
+ 155 0032 1F48     		ldr	r0, .L18+8
+ 156 0034 0068     		ldr	r0, [r0]
+ 157 0036 9842     		cmp	r0, r3
+ 158 0038 01D9     		bls	.L5
  131:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****             {
- 157              		.loc 1 131 13 is_stmt 1 view .LVU43
+ 159              		.loc 1 131 13 view .LVU43
  131:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****             {
- 158              		.loc 1 131 16 is_stmt 0 view .LVU44
- 159 0038 BC42     		cmp	r4, r7
- 160 003a 02D0     		beq	.L4
- 140:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****             }
- 161              		.loc 1 140 17 is_stmt 1 discriminator 2 view .LVU45
- 140:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****             }
- 162              		.loc 1 140 28 is_stmt 0 discriminator 2 view .LVU46
- 163 003c 246A     		ldr	r4, [r4, #32]
- 164              	.LVL13:
- 127:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****         {
- 165              		.loc 1 127 60 is_stmt 1 discriminator 2 view .LVU47
- 127:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****         {
- 166              		.loc 1 127 61 is_stmt 0 discriminator 2 view .LVU48
- 167 003e 0133     		adds	r3, r3, #1
- 168              	.LVL14:
- 127:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****         {
- 169              		.loc 1 127 61 discriminator 2 view .LVU49
- 170 0040 F6E7     		b	.L3
- 171              	.L4:
+ 160              		.loc 1 131 16 is_stmt 0 view .LVU44
+ 161 003a AC42     		cmp	r4, r5
+ 162 003c F7D1     		bne	.L17
+ 163              	.L5:
  145:./Middlewares/ST/threadx/common/src/txe_mutex_create.c **** 
- 172              		.loc 1 145 9 is_stmt 1 view .LVU50
- 173              	.LBB26:
- 174              	.LBI26:
+ 164              		.loc 1 145 9 is_stmt 1 view .LVU45
+ 165              	.LBB26:
+ 166              	.LBI26:
  566:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 175              		.loc 2 566 63 view .LVU51
- 176              	.LBB27:
+ 167              		.loc 2 566 63 view .LVU46
+ 168              	.LBB27:
  568:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
- 177              		.loc 2 568 1 view .LVU52
+ 169              		.loc 2 568 1 view .LVU47
  570:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
- 178              		.loc 2 570 5 view .LVU53
- 179              	.LBB28:
- 180              	.LBI28:
+ 170              		.loc 2 570 5 view .LVU48
+ 171              	.LBB28:
+ 172              	.LBI28:
  533:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 181              		.loc 2 533 63 view .LVU54
- 182              	.LBB29:
+ 173              		.loc 2 533 63 view .LVU49
+ 174              	.LBB29:
  535:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifdef TX_PORT_USE_BASEPRI
- 183              		.loc 2 535 1 view .LVU55
+ 175              		.loc 2 535 1 view .LVU50
  539:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 184              		.loc 2 539 5 view .LVU56
+ 176              		.loc 2 539 5 view .LVU51
+ 177              		.syntax unified
+ 178              	@ 539 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+ 179 003e EFF31081 		MRS  r1, PRIMASK 
+ 180              	@ 0 "" 2
+ 181              	.LVL14:
+ 541:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
+ 182              		.loc 2 541 5 view .LVU52
+ 541:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
+ 183              		.loc 2 541 5 is_stmt 0 view .LVU53
+ 184              		.thumb
  185              		.syntax unified
- 186              	@ 539 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
- 187 0042 EFF31081 		MRS  r1, PRIMASK 
- 188              	@ 0 "" 2
- 189              	.LVL15:
- 541:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
- 190              		.loc 2 541 5 view .LVU57
- 541:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
- 191              		.loc 2 541 5 is_stmt 0 view .LVU58
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cctS5sbk.s 			page 19
-
-
- 192              		.thumb
- 193              		.syntax unified
- 194              	.LBE29:
- 195              	.LBE28:
+ 186              	.LBE29:
+ 187              	.LBE28:
  575:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 196              		.loc 2 575 5 is_stmt 1 view .LVU59
+ 188              		.loc 2 575 5 is_stmt 1 view .LVU54
+ 189              		.syntax unified
+ 190              	@ 575 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+ 191 0042 72B6     		CPSID i
+ 192              	@ 0 "" 2
+ 193              		.loc 2 577 5 view .LVU55
+ARM GAS  /tmp/ccRygarH.s 			page 19
+
+
+ 194              	.LVL15:
+ 195              		.loc 2 577 5 is_stmt 0 view .LVU56
+ 196              		.thumb
  197              		.syntax unified
- 198              	@ 575 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
- 199 0046 72B6     		CPSID i
- 200              	@ 0 "" 2
- 201              		.loc 2 577 5 view .LVU60
- 202              	.LVL16:
- 203              		.loc 2 577 5 is_stmt 0 view .LVU61
- 204              		.thumb
- 205              		.syntax unified
- 206              	.LBE27:
- 207              	.LBE26:
+ 198              	.LBE27:
+ 199              	.LBE26:
  148:./Middlewares/ST/threadx/common/src/txe_mutex_create.c **** 
- 208              		.loc 1 148 9 is_stmt 1 view .LVU62
+ 200              		.loc 1 148 9 is_stmt 1 view .LVU57
  148:./Middlewares/ST/threadx/common/src/txe_mutex_create.c **** 
- 209              		.loc 1 148 35 is_stmt 0 view .LVU63
- 210 0048 184A     		ldr	r2, .L18
- 211 004a 1368     		ldr	r3, [r2]
- 212              	.LVL17:
+ 201              		.loc 1 148 35 is_stmt 0 view .LVU58
+ 202 0044 184A     		ldr	r2, .L18
+ 203 0046 1368     		ldr	r3, [r2]
+ 204              	.LVL16:
  148:./Middlewares/ST/threadx/common/src/txe_mutex_create.c **** 
- 213              		.loc 1 148 35 view .LVU64
- 214 004c 013B     		subs	r3, r3, #1
- 215 004e 1360     		str	r3, [r2]
+ 205              		.loc 1 148 35 view .LVU59
+ 206 0048 013B     		subs	r3, r3, #1
+ 207 004a 1360     		str	r3, [r2]
  151:./Middlewares/ST/threadx/common/src/txe_mutex_create.c **** 
- 216              		.loc 1 151 9 is_stmt 1 view .LVU65
- 217              	.LVL18:
- 218              	.LBB30:
- 219              	.LBI30:
+ 208              		.loc 1 151 9 is_stmt 1 view .LVU60
+ 209              	.LVL17:
+ 210              	.LBB30:
+ 211              	.LBI30:
  556:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 220              		.loc 2 556 55 view .LVU66
- 221              	.LBB31:
+ 212              		.loc 2 556 55 view .LVU61
+ 213              	.LBB31:
  562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 222              		.loc 2 562 5 view .LVU67
- 223              		.syntax unified
- 224              	@ 562 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
- 225 0050 81F31088 		MSR  PRIMASK,r1
- 226              	@ 0 "" 2
- 227              	.LVL19:
+ 214              		.loc 2 562 5 view .LVU62
+ 215              		.syntax unified
+ 216              	@ 562 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+ 217 004c 81F31088 		MSR  PRIMASK,r1
+ 218              	@ 0 "" 2
+ 219              	.LVL18:
  562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 228              		.loc 2 562 5 is_stmt 0 view .LVU68
- 229              		.thumb
- 230              		.syntax unified
- 231              	.LBE31:
- 232              	.LBE30:
+ 220              		.loc 2 562 5 is_stmt 0 view .LVU63
+ 221              		.thumb
+ 222              		.syntax unified
+ 223              	.LBE31:
+ 224              	.LBE30:
  154:./Middlewares/ST/threadx/common/src/txe_mutex_create.c **** 
- 233              		.loc 1 154 9 is_stmt 1 view .LVU69
- 234 0054 FFF7FEFF 		bl	_tx_thread_system_preempt_check
- 235              	.LVL20:
+ 225              		.loc 1 154 9 is_stmt 1 view .LVU64
+ 226 0050 FFF7FEFF 		bl	_tx_thread_system_preempt_check
+ 227              	.LVL19:
  157:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****         {
- 236              		.loc 1 157 9 view .LVU70
+ 228              		.loc 1 157 9 view .LVU65
  157:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****         {
- 237              		.loc 1 157 12 is_stmt 0 view .LVU71
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cctS5sbk.s 			page 20
+ 229              		.loc 1 157 12 is_stmt 0 view .LVU66
+ 230 0054 AC42     		cmp	r4, r5
+ 231 0056 23D0     		beq	.L11
+ 167:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****             {
+ 232              		.loc 1 167 13 is_stmt 1 view .LVU67
+ 167:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****             {
+ 233              		.loc 1 167 16 is_stmt 0 view .LVU68
+ 234 0058 012E     		cmp	r6, #1
+ 235 005a 00D0     		beq	.L7
+ 170:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****                 {
+ 236              		.loc 1 170 17 is_stmt 1 view .LVU69
+ 170:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****                 {
+ARM GAS  /tmp/ccRygarH.s 			page 20
 
 
- 238 0058 BC42     		cmp	r4, r7
- 239 005a 1CD0     		beq	.L11
- 167:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****             {
- 240              		.loc 1 167 13 is_stmt 1 view .LVU72
- 167:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****             {
- 241              		.loc 1 167 16 is_stmt 0 view .LVU73
- 242 005c 012D     		cmp	r5, #1
- 243 005e 00D0     		beq	.L6
- 170:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****                 {
- 244              		.loc 1 170 17 is_stmt 1 view .LVU74
- 170:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****                 {
- 245              		.loc 1 170 20 is_stmt 0 view .LVU75
- 246 0060 DDB9     		cbnz	r5, .L12
- 247              	.L6:
- 248              	.LVL21:
+ 237              		.loc 1 170 20 is_stmt 0 view .LVU70
+ 238 005c 16BB     		cbnz	r6, .L12
+ 239              	.L7:
+ 240              	.LVL20:
  187:./Middlewares/ST/threadx/common/src/txe_mutex_create.c **** 
- 249              		.loc 1 187 9 is_stmt 1 view .LVU76
- 250 0062 154B     		ldr	r3, .L18+12
- 251 0064 1A68     		ldr	r2, [r3]
+ 241              		.loc 1 187 9 is_stmt 1 view .LVU71
+ 242 005e 154B     		ldr	r3, .L18+12
+ 243 0060 1A68     		ldr	r2, [r3]
+ 244              	.LVL21:
+ 190:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****         {
+ 245              		.loc 1 190 9 view .LVU72
+ 190:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****         {
+ 246              		.loc 1 190 12 is_stmt 0 view .LVU73
+ 247 0062 154B     		ldr	r3, .L18+16
+ 248 0064 9A42     		cmp	r2, r3
+ 249 0066 10D0     		beq	.L13
+ 250 0068 0020     		movs	r0, #0
+ 251              	.L8:
  252              	.LVL22:
- 190:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****         {
- 253              		.loc 1 190 9 view .LVU77
- 190:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****         {
- 254              		.loc 1 190 12 is_stmt 0 view .LVU78
- 255 0066 154B     		ldr	r3, .L18+16
- 256 0068 9A42     		cmp	r2, r3
- 257 006a 10D0     		beq	.L13
- 258 006c 0020     		movs	r0, #0
- 259              	.L7:
- 260              	.LVL23:
  199:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****         {
- 261              		.loc 1 199 9 is_stmt 1 view .LVU79
- 262              	.LBB32:
- 263              	.LBI32:
+ 253              		.loc 1 199 9 is_stmt 1 view .LVU74
+ 254              	.LBB32:
+ 255              	.LBI32:
  474:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 264              		.loc 2 474 63 view .LVU80
- 265              	.LBB33:
+ 256              		.loc 2 474 63 view .LVU75
+ 257              	.LBB33:
  476:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     __asm__ volatile (" MRS  %0,IPSR ": "=r" (ipsr_value) );
- 266              		.loc 2 476 1 view .LVU81
+ 258              		.loc 2 476 1 view .LVU76
  477:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     return(ipsr_value);
- 267              		.loc 2 477 5 view .LVU82
+ 259              		.loc 2 477 5 view .LVU77
+ 260              		.syntax unified
+ 261              	@ 477 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+ 262 006a EFF30582 		 MRS  r2,IPSR 
+ 263              	@ 0 "" 2
+ 264              	.LVL23:
+ 478:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
+ 265              		.loc 2 478 5 view .LVU78
+ 478:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
+ 266              		.loc 2 478 5 is_stmt 0 view .LVU79
+ 267              		.thumb
  268              		.syntax unified
- 269              	@ 477 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
- 270 006e EFF30583 		 MRS  r3,IPSR 
- 271              	@ 0 "" 2
- 272              	.LVL24:
- 478:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
- 273              		.loc 2 478 5 view .LVU83
- 478:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
- 274              		.loc 2 478 5 is_stmt 0 view .LVU84
- 275              		.thumb
- 276              		.syntax unified
- 277              	.LBE33:
- 278              	.LBE32:
+ 269              	.LBE33:
+ 270              	.LBE32:
  199:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****         {
- 279              		.loc 1 199 13 view .LVU85
- 280 0072 134A     		ldr	r2, .L18+20
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cctS5sbk.s 			page 21
-
-
- 281              	.LVL25:
+ 271              		.loc 1 199 13 discriminator 1 view .LVU80
+ 272 006e 134B     		ldr	r3, .L18+20
+ 273 0070 1B68     		ldr	r3, [r3]
  199:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****         {
- 282              		.loc 1 199 13 view .LVU86
- 283 0074 1268     		ldr	r2, [r2]
- 199:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****         {
- 284              		.loc 1 199 12 view .LVU87
- 285 0076 1343     		orrs	r3, r2, r3
- 286 0078 CBD0     		beq	.L2
+ 274              		.loc 1 199 12 discriminator 1 view .LVU81
+ 275 0072 1343     		orrs	r3, r3, r2
+ 276 0074 0CD0     		beq	.L2
  203:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****             {
- 287              		.loc 1 203 13 is_stmt 1 view .LVU88
- 288              	.LBB34:
- 289              	.LBI34:
+ 277              		.loc 1 203 13 is_stmt 1 view .LVU82
+ 278              	.LBB34:
+ 279              	.LBI34:
  474:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 290              		.loc 2 474 63 view .LVU89
- 291              	.LBB35:
+ 280              		.loc 2 474 63 view .LVU83
+ARM GAS  /tmp/ccRygarH.s 			page 21
+
+
+ 281              	.LBB35:
  476:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     __asm__ volatile (" MRS  %0,IPSR ": "=r" (ipsr_value) );
- 292              		.loc 2 476 1 view .LVU90
+ 282              		.loc 2 476 1 view .LVU84
  477:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     return(ipsr_value);
- 293              		.loc 2 477 5 view .LVU91
- 294              		.syntax unified
- 295              	@ 477 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
- 296 007a EFF30582 		 MRS  r2,IPSR 
- 297              	@ 0 "" 2
- 298              	.LVL26:
+ 283              		.loc 2 477 5 view .LVU85
+ 284              		.syntax unified
+ 285              	@ 477 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+ 286 0076 EFF30582 		 MRS  r2,IPSR 
+ 287              	@ 0 "" 2
+ 288              	.LVL24:
  478:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
- 299              		.loc 2 478 5 view .LVU92
+ 289              		.loc 2 478 5 view .LVU86
  478:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
- 300              		.loc 2 478 5 is_stmt 0 view .LVU93
- 301              		.thumb
- 302              		.syntax unified
- 303              	.LBE35:
- 304              	.LBE34:
+ 290              		.loc 2 478 5 is_stmt 0 view .LVU87
+ 291              		.thumb
+ 292              		.syntax unified
+ 293              	.LBE35:
+ 294              	.LBE34:
  203:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****             {
- 305              		.loc 1 203 17 view .LVU94
- 306 007e 104B     		ldr	r3, .L18+20
- 307 0080 1B68     		ldr	r3, [r3]
- 308 0082 1343     		orrs	r3, r3, r2
+ 295              		.loc 1 203 17 discriminator 1 view .LVU88
+ 296 007a 104B     		ldr	r3, .L18+20
+ 297 007c 1B68     		ldr	r3, [r3]
+ 298 007e 1343     		orrs	r3, r3, r2
  203:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****             {
- 309              		.loc 1 203 16 view .LVU95
- 310 0084 B3F1F03F 		cmp	r3, #-252645136
- 311 0088 C3D2     		bcs	.L2
+ 299              		.loc 1 203 16 discriminator 1 view .LVU89
+ 300 0080 B3F1F03F 		cmp	r3, #-252645136
+ 301 0084 04D2     		bcs	.L2
  207:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****             }
- 312              		.loc 1 207 24 view .LVU96
- 313 008a 1320     		movs	r0, #19
- 314              	.LVL27:
+ 302              		.loc 1 207 24 view .LVU90
+ 303 0086 1320     		movs	r0, #19
+ 304              	.LVL25:
  221:./Middlewares/ST/threadx/common/src/txe_mutex_create.c **** }
- 315              		.loc 1 221 5 is_stmt 1 view .LVU97
+ 305              		.loc 1 221 5 is_stmt 1 view .LVU91
  221:./Middlewares/ST/threadx/common/src/txe_mutex_create.c **** }
- 316              		.loc 1 221 11 is_stmt 0 view .LVU98
- 317 008c C3E7     		b	.L1
- 318              	.LVL28:
- 319              	.L13:
+ 306              		.loc 1 221 11 is_stmt 0 view .LVU92
+ 307 0088 C3E7     		b	.L1
+ 308              	.LVL26:
+ 309              	.L13:
  194:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****         }
- 320              		.loc 1 194 20 view .LVU99
- 321 008e 1320     		movs	r0, #19
- 322 0090 EDE7     		b	.L7
- 323              	.LVL29:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cctS5sbk.s 			page 22
+ 310              		.loc 1 194 20 view .LVU93
+ 311 008a 1320     		movs	r0, #19
+ 312 008c EDE7     		b	.L8
+ 313              	.LVL27:
+ 314              	.L9:
+ 103:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****     }
+ 315              		.loc 1 103 16 view .LVU94
+ 316 008e 1C20     		movs	r0, #28
+ 317              	.LVL28:
+ 318              	.L2:
+ 213:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****     {
+ 319              		.loc 1 213 5 is_stmt 1 view .LVU95
+ 213:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****     {
+ 320              		.loc 1 213 8 is_stmt 0 view .LVU96
+ 321 0090 0028     		cmp	r0, #0
+ 322 0092 BED1     		bne	.L1
+ 217:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****     }
+ 323              		.loc 1 217 9 is_stmt 1 view .LVU97
+ARM GAS  /tmp/ccRygarH.s 			page 22
 
 
- 324              	.L9:
- 103:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****     }
- 325              		.loc 1 103 16 view .LVU100
- 326 0092 1C20     		movs	r0, #28
- 327              	.LVL30:
- 103:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****     }
- 328              		.loc 1 103 16 view .LVU101
- 329 0094 BDE7     		b	.L2
- 330              	.LVL31:
- 331              	.L11:
+ 217:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****     }
+ 324              		.loc 1 217 19 is_stmt 0 view .LVU98
+ 325 0094 3246     		mov	r2, r6
+ 326 0096 3946     		mov	r1, r7
+ 327 0098 2846     		mov	r0, r5
+ 328              	.LVL29:
+ 217:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****     }
+ 329              		.loc 1 217 19 view .LVU99
+ 330 009a FFF7FEFF 		bl	_tx_mutex_create
+ 331              	.LVL30:
+ 217:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****     }
+ 332              		.loc 1 217 19 view .LVU100
+ 333 009e B8E7     		b	.L1
+ 334              	.LVL31:
+ 335              	.L11:
  161:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****         }
- 332              		.loc 1 161 20 view .LVU102
- 333 0096 1C20     		movs	r0, #28
- 334 0098 BBE7     		b	.L2
- 335              	.L12:
+ 336              		.loc 1 161 20 view .LVU101
+ 337 00a0 1C20     		movs	r0, #28
+ 338 00a2 B6E7     		b	.L1
+ 339              	.L12:
  174:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****                 }
- 336              		.loc 1 174 28 view .LVU103
- 337 009a 1F20     		movs	r0, #31
- 338 009c B9E7     		b	.L2
- 339              	.LVL32:
- 340              	.L17:
- 217:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****     }
- 341              		.loc 1 217 9 is_stmt 1 view .LVU104
- 217:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****     }
- 342              		.loc 1 217 19 is_stmt 0 view .LVU105
- 343 009e 2A46     		mov	r2, r5
- 344 00a0 3146     		mov	r1, r6
- 345 00a2 3846     		mov	r0, r7
- 346              	.LVL33:
- 217:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****     }
- 347              		.loc 1 217 19 view .LVU106
- 348 00a4 FFF7FEFF 		bl	_tx_mutex_create
- 349              	.LVL34:
- 217:./Middlewares/ST/threadx/common/src/txe_mutex_create.c ****     }
- 350              		.loc 1 217 19 view .LVU107
- 351 00a8 B5E7     		b	.L1
- 352              	.L19:
- 353 00aa 00BF     		.align	2
- 354              	.L18:
- 355 00ac 00000000 		.word	_tx_thread_preempt_disable
- 356 00b0 00000000 		.word	_tx_mutex_created_ptr
- 357 00b4 00000000 		.word	_tx_mutex_created_count
- 358 00b8 00000000 		.word	_tx_thread_current_ptr
- 359 00bc 00000000 		.word	_tx_timer_thread
- 360 00c0 00000000 		.word	_tx_thread_system_state
- 361              		.cfi_endproc
- 362              	.LFE8:
- 364              		.text
- 365              	.Letext0:
- 366              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
- 367              		.file 4 "./Middlewares/ST/threadx/common/inc/tx_thread.h"
- 368              		.file 5 "./Middlewares/ST/threadx/common/inc/tx_timer.h"
- 369              		.file 6 "./Middlewares/ST/threadx/common/inc/tx_mutex.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cctS5sbk.s 			page 23
+ 340              		.loc 1 174 28 view .LVU102
+ 341 00a4 1F20     		movs	r0, #31
+ 342 00a6 B4E7     		b	.L1
+ 343              	.L19:
+ 344              		.align	2
+ 345              	.L18:
+ 346 00a8 00000000 		.word	_tx_thread_preempt_disable
+ 347 00ac 00000000 		.word	_tx_mutex_created_ptr
+ 348 00b0 00000000 		.word	_tx_mutex_created_count
+ 349 00b4 00000000 		.word	_tx_thread_current_ptr
+ 350 00b8 00000000 		.word	_tx_timer_thread
+ 351 00bc 00000000 		.word	_tx_thread_system_state
+ 352              		.cfi_endproc
+ 353              	.LFE8:
+ 355              		.text
+ 356              	.Letext0:
+ 357              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
+ 358              		.file 4 "./Middlewares/ST/threadx/common/inc/tx_thread.h"
+ 359              		.file 5 "./Middlewares/ST/threadx/common/inc/tx_timer.h"
+ 360              		.file 6 "./Middlewares/ST/threadx/common/inc/tx_mutex.h"
+ARM GAS  /tmp/ccRygarH.s 			page 23
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 txe_mutex_create.c
-C:\Users\Dennis\AppData\Local\Temp\cctS5sbk.s:20     .text._txe_mutex_create:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\cctS5sbk.s:26     .text._txe_mutex_create:00000000 _txe_mutex_create
-C:\Users\Dennis\AppData\Local\Temp\cctS5sbk.s:355    .text._txe_mutex_create:000000ac $d
+     /tmp/ccRygarH.s:21     .text._txe_mutex_create:00000000 $t
+     /tmp/ccRygarH.s:27     .text._txe_mutex_create:00000000 _txe_mutex_create
+     /tmp/ccRygarH.s:346    .text._txe_mutex_create:000000a8 $d
 
 UNDEFINED SYMBOLS
 _tx_thread_system_preempt_check

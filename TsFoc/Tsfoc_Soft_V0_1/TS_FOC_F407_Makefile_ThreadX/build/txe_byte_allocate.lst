@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjDj2lv.s 			page 1
+ARM GAS  /tmp/cc4ONLvy.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,16 +19,16 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjDj2lv.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text._txe_byte_allocate,"ax",%progbits
-  20              		.align	1
-  21              		.global	_txe_byte_allocate
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
-  26              	_txe_byte_allocate:
-  27              	.LVL0:
-  28              	.LFB8:
-  29              		.file 1 "./Middlewares/ST/threadx/common/src/txe_byte_allocate.c"
+  19              		.file 1 "./Middlewares/ST/threadx/common/src/txe_byte_allocate.c"
+  20              		.section	.text._txe_byte_allocate,"ax",%progbits
+  21              		.align	1
+  22              		.global	_txe_byte_allocate
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	_txe_byte_allocate:
+  28              	.LVL0:
+  29              	.LFB8:
    1:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c **** /**************************************************************************/
    2:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c **** /*                                                                        */
    3:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjDj2lv.s 			page 1
   27:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c **** 
   28:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c **** #include "tx_api.h"
   29:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c **** #include "tx_initialize.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjDj2lv.s 			page 2
+ARM GAS  /tmp/cc4ONLvy.s 			page 2
 
 
   30:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c **** #include "tx_thread.h"
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjDj2lv.s 			page 1
   84:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****                                     ULONG memory_size,  ULONG wait_option)
   85:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c **** {
   30              		.loc 1 85 1 view -0
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjDj2lv.s 			page 3
+ARM GAS  /tmp/cc4ONLvy.s 			page 3
 
 
   31              		.cfi_startproc
@@ -149,7 +149,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjDj2lv.s 			page 1
   44              		.loc 1 97 5 view .LVU5
   45              		.loc 1 97 8 is_stmt 0 view .LVU6
   46 0002 8446     		mov	ip, r0
-  47 0004 60B3     		cbz	r0, .L6
+  47 0004 D0B1     		cbz	r0, .L6
   98:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     {
   99:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c **** 
  100:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****         /* Byte pool pointer is invalid, return appropriate error code.  */
@@ -160,12 +160,12 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjDj2lv.s 			page 1
  105:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     else if  (pool_ptr -> tx_byte_pool_id != TX_BYTE_POOL_ID)
   48              		.loc 1 105 10 is_stmt 1 view .LVU7
   49              		.loc 1 105 14 is_stmt 0 view .LVU8
-  50 0006 1F48     		ldr	r0, .L18
+  50 0006 1F48     		ldr	r0, .L16
   51              	.LVL2:
   52              		.loc 1 105 14 view .LVU9
   53 0008 DCF80040 		ldr	r4, [ip]
   54 000c 8442     		cmp	r4, r0
-  55 000e 13D0     		beq	.L15
+  55 000e 01D0     		beq	.L15
  106:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     {
  107:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c **** 
  108:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****         /* Byte pool pointer is invalid, return appropriate error code.  */
@@ -173,12 +173,12 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjDj2lv.s 			page 1
   56              		.loc 1 109 16 view .LVU10
   57 0010 0220     		movs	r0, #2
   58              	.LVL3:
-  59              	.L2:
+  59              	.L1:
  110:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     }
  111:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c **** 
  112:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     /* Check for an invalid destination for return pointer.  */
  113:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     else if (memory_ptr == TX_NULL)
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjDj2lv.s 			page 4
+ARM GAS  /tmp/cc4ONLvy.s 			page 4
 
 
  114:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     {
@@ -238,23 +238,75 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjDj2lv.s 			page 1
  168:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****         }
  169:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     }
  170:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c **** #endif
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjDj2lv.s 			page 5
+ARM GAS  /tmp/cc4ONLvy.s 			page 5
 
 
  171:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c **** 
  172:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     /* Is everything still okay?  */
  173:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     if (status == TX_SUCCESS)
-  60              		.loc 1 173 5 is_stmt 1 view .LVU11
-  61              		.loc 1 173 8 is_stmt 0 view .LVU12
-  62 0012 78B9     		cbnz	r0, .L4
  174:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     {
  175:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c **** 
  176:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****         /* Check for interrupt call.  */
  177:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****         if (TX_THREAD_GET_SYSTEM_STATE() != ((ULONG) 0))
-  63              		.loc 1 177 9 is_stmt 1 view .LVU13
-  64              	.LBB8:
-  65              	.LBI8:
-  66              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
+ 178:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****         {
+ 179:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c **** 
+ 180:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****             /* Now, make sure the call is from an interrupt and not initialization.  */
+ 181:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****             if (TX_THREAD_GET_SYSTEM_STATE() < TX_INITIALIZE_IN_PROGRESS)
+ 182:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****             {
+ 183:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c **** 
+ 184:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****                 /* Invalid caller of this function, return appropriate error code.  */
+ 185:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****                 status =  TX_CALLER_ERROR;
+ 186:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****             }
+ 187:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****         }
+ 188:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     }
+ 189:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c **** 
+ 190:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     /* Determine if everything is okay.  */
+ 191:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     if (status == TX_SUCCESS)
+ 192:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     {
+ 193:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c **** 
+ 194:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****         /* Call actual byte memory allocate function.  */
+ 195:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****         status =  _tx_byte_allocate(pool_ptr, memory_ptr, memory_size,  wait_option);
+ 196:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     }
+ 197:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c **** 
+ 198:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     /* Return completion status.  */
+ 199:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     return(status);
+ 200:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c **** }
+  60              		.loc 1 200 1 view .LVU11
+  61 0012 10BD     		pop	{r4, pc}
+  62              	.LVL4:
+  63              	.L15:
+ 113:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     {
+  64              		.loc 1 113 10 is_stmt 1 view .LVU12
+ 113:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     {
+  65              		.loc 1 113 13 is_stmt 0 view .LVU13
+  66 0014 49B3     		cbz	r1, .L8
+ 121:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     {
+  67              		.loc 1 121 10 is_stmt 1 view .LVU14
+ 121:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     {
+  68              		.loc 1 121 13 is_stmt 0 view .LVU15
+  69 0016 52B3     		cbz	r2, .L9
+ 129:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     {
+  70              		.loc 1 129 10 is_stmt 1 view .LVU16
+ 129:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     {
+  71              		.loc 1 129 37 is_stmt 0 view .LVU17
+  72 0018 DCF81C00 		ldr	r0, [ip, #28]
+ 129:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     {
+  73              		.loc 1 129 13 view .LVU18
+  74 001c 9042     		cmp	r0, r2
+  75 001e 28D3     		bcc	.L10
+ 141:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****         {
+  76              		.loc 1 141 9 is_stmt 1 view .LVU19
+ 141:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****         {
+  77              		.loc 1 141 12 is_stmt 0 view .LVU20
+ARM GAS  /tmp/cc4ONLvy.s 			page 6
+
+
+  78 0020 2BB1     		cbz	r3, .L4
+ 145:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****             {
+  79              		.loc 1 145 13 is_stmt 1 view .LVU21
+  80              	.LBB8:
+  81              	.LBI8:
+  82              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
    1:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /**************************************************************************/
    2:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*                                                                        */
    3:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
@@ -298,9 +350,6 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjDj2lv.s 			page 1
   41:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*    even C compilers for the same microprocessor.  ThreadX does not     */
   42:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*    directly use native C data types.  Instead, ThreadX creates its     */
   43:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*    own special types that can be mapped to actual data types by this   */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjDj2lv.s 			page 6
-
-
   44:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*    file to guarantee consistency in the interface and functionality.   */
   45:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*                                                                        */
   46:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*    This file replaces the previous Cortex-M3/M4/M7 files. It unifies   */
@@ -309,6 +358,9 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjDj2lv.s 			page 1
   49:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*  RELEASE HISTORY                                                       */
   50:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*                                                                        */
   51:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*    DATE              NAME                      DESCRIPTION             */
+ARM GAS  /tmp/cc4ONLvy.s 			page 7
+
+
   52:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*                                                                        */
   53:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*  06-02-2021      Scott Larson            Initial Version 6.1.7         */
   54:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*  01-31-2022      Scott Larson            Modified comments, updated    */
@@ -358,9 +410,6 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjDj2lv.s 			page 1
   98:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define __set_control_value __set_CONTROL
   99:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
  100:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjDj2lv.s 			page 7
-
-
  101:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifndef __GNUC__
  102:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define __get_ipsr_value __get_IPSR
  103:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
@@ -369,6 +418,9 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjDj2lv.s 			page 1
  106:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  107:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define VOID                                    void
  108:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** typedef char                                    CHAR;
+ARM GAS  /tmp/cc4ONLvy.s 			page 8
+
+
  109:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** typedef unsigned char                           UCHAR;
  110:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** typedef int                                     INT;
  111:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** typedef unsigned int                            UINT;
@@ -418,9 +470,6 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjDj2lv.s 			page 1
  155:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****    source constants would be:
  156:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  157:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_TRACE_TIME_SOURCE                    *((ULONG *) 0x0a800024)
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjDj2lv.s 			page 8
-
-
  158:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_TRACE_TIME_MASK                      0x0000FFFFUL
  159:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  160:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** */
@@ -429,6 +478,9 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjDj2lv.s 			page 1
  163:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifndef TX_TRACE_TIME_SOURCE
  164:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_TRACE_TIME_SOURCE                    *((ULONG *) 0xE0001004)
  165:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
+ARM GAS  /tmp/cc4ONLvy.s 			page 9
+
+
  166:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #else
  167:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** ULONG   _tx_misra_time_stamp_get(VOID);
  168:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_TRACE_TIME_SOURCE                    _tx_misra_time_stamp_get()
@@ -478,9 +530,6 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjDj2lv.s 			page 1
  212:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  213:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifndef TX_MISRA_ENABLE
  214:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifdef TX_ENABLE_STACK_CHECKING
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjDj2lv.s 			page 9
-
-
  215:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #undef TX_DISABLE_STACK_FILLING
  216:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
  217:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
@@ -489,6 +538,9 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjDj2lv.s 			page 1
  220:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /* Define the TX_THREAD control block extensions for this port. The main reason
  221:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****    for the multiple macros is so that backward compatibility can be maintained with
  222:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****    existing ThreadX kernel awareness modules.  */
+ARM GAS  /tmp/cc4ONLvy.s 			page 10
+
+
  223:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  224:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_THREAD_EXTENSION_0
  225:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_THREAD_EXTENSION_1
@@ -538,9 +590,6 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjDj2lv.s 			page 1
  269:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_PORT_SPECIFIC_PRE_SCHEDULER_INITIALIZATION               __iar_dlib_perthread_access(0);
  270:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #else
  271:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** void    *_tx_iar_create_per_thread_tls_area(void);
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjDj2lv.s 			page 10
-
-
  272:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** void    _tx_iar_destroy_per_thread_tls_area(void *tls_ptr);
  273:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** void    __iar_Initlocks(void);
  274:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
@@ -549,6 +598,9 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjDj2lv.s 			page 1
  277:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                                         thread_ptr -> tx_thread_iar
  278:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_PORT_SPECIFIC_PRE_SCHEDULER_INITIALIZATION               do {__iar_Initlocks();} while(0
  279:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
+ARM GAS  /tmp/cc4ONLvy.s 			page 11
+
+
  280:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #else
  281:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_THREAD_CREATE_EXTENSION(thread_ptr)
  282:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_THREAD_DELETE_EXTENSION(thread_ptr)
@@ -598,9 +650,6 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjDj2lv.s 			page 1
  326:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     __asm__ volatile ("MSR CONTROL,control_value");
  327:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
  328:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /* Can't access VFP registers with inline asm, so define this in tx_thread_schedule.  */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjDj2lv.s 			page 11
-
-
  329:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** void _tx_vfp_access(void);
  330:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_VFP_TOUCH()  _tx_vfp_access();
  331:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
@@ -609,6 +658,9 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjDj2lv.s 			page 1
  334:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif  /* Helper functions for different compilers */
  335:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  336:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif  /* TX_MISRA_ENABLE */
+ARM GAS  /tmp/cc4ONLvy.s 			page 12
+
+
  337:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  338:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  339:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /* A completed thread falls into _thread_shell_entry and we can simply deactivate the FPU via CONTR
@@ -658,9 +710,6 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjDj2lv.s 			page 1
  383:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                             if (_tx_fpccr == ((ULONG) 0x01))       
  384:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                             {                                      
  385:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                             ULONG _tx_vfp_state;                   
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjDj2lv.s 			page 12
-
-
  386:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                                 _tx_vfp_state = __get_control_value
  387:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                                 _tx_vfp_state =  _tx_vfp_state & ((
  388:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                                 TX_VFP_TOUCH();                    
@@ -669,6 +718,9 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjDj2lv.s 			page 1
  391:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                                     _tx_vfp_state =  __get_control_
  392:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                                     _tx_vfp_state =  _tx_vfp_state 
  393:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                                     __set_control_value(_tx_vfp_sta
+ARM GAS  /tmp/cc4ONLvy.s 			page 13
+
+
  394:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                                 }                                  
  395:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                             }                                      
  396:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                         }                                          
@@ -718,9 +770,6 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjDj2lv.s 			page 1
  440:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /* Define the ThreadX object creation extensions for the remaining objects.  */
  441:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  442:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_BLOCK_POOL_CREATE_EXTENSION(pool_ptr)
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjDj2lv.s 			page 13
-
-
  443:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_BYTE_POOL_CREATE_EXTENSION(pool_ptr)
  444:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_EVENT_FLAGS_GROUP_CREATE_EXTENSION(group_ptr)
  445:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_MUTEX_CREATE_EXTENSION(mutex_ptr)
@@ -729,6 +778,9 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjDj2lv.s 			page 1
  448:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_TIMER_CREATE_EXTENSION(timer_ptr)
  449:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  450:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
+ARM GAS  /tmp/cc4ONLvy.s 			page 14
+
+
  451:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /* Define the ThreadX object deletion extensions for the remaining objects.  */
  452:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  453:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_BLOCK_POOL_DELETE_EXTENSION(pool_ptr)
@@ -753,258 +805,204 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjDj2lv.s 			page 1
  472:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #elif defined(__GNUC__) /* GCC and ARM Compiler 6 */
  473:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  474:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** __attribute__( ( always_inline ) ) static inline unsigned int __get_ipsr_value(void)
-  67              		.loc 2 474 63 view .LVU14
-  68              	.LBB9:
+  83              		.loc 2 474 63 view .LVU22
+  84              	.LBB9:
  475:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
  476:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** unsigned int  ipsr_value;
-  69              		.loc 2 476 1 view .LVU15
+  85              		.loc 2 476 1 view .LVU23
  477:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     __asm__ volatile (" MRS  %0,IPSR ": "=r" (ipsr_value) );
-  70              		.loc 2 477 5 view .LVU16
-  71              		.syntax unified
-  72              	@ 477 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
-  73 0014 EFF3058E 		 MRS  lr,IPSR 
-  74              	@ 0 "" 2
-  75              	.LVL4:
+  86              		.loc 2 477 5 view .LVU24
+  87              		.syntax unified
+  88              	@ 477 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+  89 0022 EFF30584 		 MRS  r4,IPSR 
+  90              	@ 0 "" 2
+  91              	.LVL5:
  478:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     return(ipsr_value);
-  76              		.loc 2 478 5 view .LVU17
-  77              		.loc 2 478 5 is_stmt 0 view .LVU18
-  78              		.thumb
-  79              		.syntax unified
-  80              	.LBE9:
-  81              	.LBE8:
-  82              		.loc 1 177 13 view .LVU19
-  83 0018 1B4C     		ldr	r4, .L18+4
-  84 001a 2468     		ldr	r4, [r4]
-  85              		.loc 1 177 12 view .LVU20
-  86 001c 54EA0E04 		orrs	r4, r4, lr
-  87 0020 08D0     		beq	.L4
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjDj2lv.s 			page 14
-
-
- 178:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****         {
- 179:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c **** 
- 180:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****             /* Now, make sure the call is from an interrupt and not initialization.  */
- 181:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****             if (TX_THREAD_GET_SYSTEM_STATE() < TX_INITIALIZE_IN_PROGRESS)
-  88              		.loc 1 181 13 is_stmt 1 view .LVU21
-  89              	.LBB10:
-  90              	.LBI10:
- 474:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
-  91              		.loc 2 474 63 view .LVU22
-  92              	.LBB11:
- 476:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     __asm__ volatile (" MRS  %0,IPSR ": "=r" (ipsr_value) );
-  93              		.loc 2 476 1 view .LVU23
- 477:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     return(ipsr_value);
-  94              		.loc 2 477 5 view .LVU24
+  92              		.loc 2 478 5 view .LVU25
+  93              		.loc 2 478 5 is_stmt 0 view .LVU26
+  94              		.thumb
   95              		.syntax unified
-  96              	@ 477 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
-  97 0022 EFF3058E 		 MRS  lr,IPSR 
-  98              	@ 0 "" 2
-  99              	.LVL5:
- 100              		.loc 2 478 5 view .LVU25
- 101              		.loc 2 478 5 is_stmt 0 view .LVU26
- 102              		.thumb
- 103              		.syntax unified
- 104              	.LBE11:
- 105              	.LBE10:
- 106              		.loc 1 181 17 view .LVU27
- 107 0026 184C     		ldr	r4, .L18+4
- 108 0028 2468     		ldr	r4, [r4]
- 109 002a 44EA0E04 		orr	r4, r4, lr
- 110              		.loc 1 181 16 view .LVU28
- 111 002e B4F1F03F 		cmp	r4, #-252645136
- 112 0032 25D3     		bcc	.L16
- 113              	.LVL6:
- 114              	.L4:
- 182:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****             {
- 183:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c **** 
- 184:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****                 /* Invalid caller of this function, return appropriate error code.  */
- 185:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****                 status =  TX_CALLER_ERROR;
- 186:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****             }
- 187:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****         }
- 188:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     }
- 189:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c **** 
- 190:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     /* Determine if everything is okay.  */
- 191:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     if (status == TX_SUCCESS)
- 115              		.loc 1 191 5 is_stmt 1 view .LVU29
- 116              		.loc 1 191 8 is_stmt 0 view .LVU30
- 117 0034 00B3     		cbz	r0, .L17
- 118              	.LVL7:
- 119              	.L1:
- 192:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     {
- 193:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c **** 
- 194:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****         /* Call actual byte memory allocate function.  */
- 195:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****         status =  _tx_byte_allocate(pool_ptr, memory_ptr, memory_size,  wait_option);
- 196:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     }
- 197:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c **** 
- 198:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     /* Return completion status.  */
- 199:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     return(status);
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjDj2lv.s 			page 15
-
-
- 200:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c **** }
- 120              		.loc 1 200 1 view .LVU31
- 121 0036 10BD     		pop	{r4, pc}
- 122              	.LVL8:
- 123              	.L15:
- 113:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     {
- 124              		.loc 1 113 10 is_stmt 1 view .LVU32
- 113:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     {
- 125              		.loc 1 113 13 is_stmt 0 view .LVU33
- 126 0038 A1B1     		cbz	r1, .L8
- 121:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     {
- 127              		.loc 1 121 10 is_stmt 1 view .LVU34
- 121:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     {
- 128              		.loc 1 121 13 is_stmt 0 view .LVU35
- 129 003a AAB1     		cbz	r2, .L9
- 129:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     {
- 130              		.loc 1 129 10 is_stmt 1 view .LVU36
- 129:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     {
- 131              		.loc 1 129 37 is_stmt 0 view .LVU37
- 132 003c DCF81C00 		ldr	r0, [ip, #28]
- 129:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     {
- 133              		.loc 1 129 13 view .LVU38
- 134 0040 9042     		cmp	r0, r2
- 135 0042 13D3     		bcc	.L10
- 141:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****         {
- 136              		.loc 1 141 9 is_stmt 1 view .LVU39
- 141:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****         {
- 137              		.loc 1 141 12 is_stmt 0 view .LVU40
- 138 0044 2BB1     		cbz	r3, .L3
+  96              	.LBE9:
+  97              	.LBE8:
  145:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****             {
- 139              		.loc 1 145 13 is_stmt 1 view .LVU41
- 140              	.LBB12:
- 141              	.LBI12:
- 474:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 142              		.loc 2 474 63 view .LVU42
- 143              	.LBB13:
- 476:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     __asm__ volatile (" MRS  %0,IPSR ": "=r" (ipsr_value) );
- 144              		.loc 2 476 1 view .LVU43
- 477:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     return(ipsr_value);
- 145              		.loc 2 477 5 view .LVU44
- 146              		.syntax unified
- 147              	@ 477 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
- 148 0046 EFF30580 		 MRS  r0,IPSR 
- 149              	@ 0 "" 2
- 150              	.LVL9:
- 151              		.loc 2 478 5 view .LVU45
- 152              		.loc 2 478 5 is_stmt 0 view .LVU46
- 153              		.thumb
- 154              		.syntax unified
- 155              	.LBE13:
- 156              	.LBE12:
+  98              		.loc 1 145 17 discriminator 1 view .LVU27
+  99 0026 1848     		ldr	r0, .L16+4
+ 100 0028 0068     		ldr	r0, [r0]
  145:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****             {
- 157              		.loc 1 145 17 view .LVU47
- 158 004a 0F4C     		ldr	r4, .L18+4
- 159 004c 2468     		ldr	r4, [r4]
- 145:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****             {
- 160              		.loc 1 145 16 view .LVU48
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjDj2lv.s 			page 16
-
-
- 161 004e 2043     		orrs	r0, r4, r0
- 162 0050 0ED1     		bne	.L11
- 163              	.L3:
- 164              	.LVL10:
+ 101              		.loc 1 145 16 discriminator 1 view .LVU28
+ 102 002a 2043     		orrs	r0, r0, r4
+ 103 002c 23D1     		bne	.L11
+ 104              	.L4:
+ 105              	.LVL6:
  160:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c **** 
- 165              		.loc 1 160 9 is_stmt 1 view .LVU49
- 166 0052 0E48     		ldr	r0, .L18+8
- 167 0054 0468     		ldr	r4, [r0]
- 168              	.LVL11:
+ 106              		.loc 1 160 9 is_stmt 1 view .LVU29
+ 107 002e 1748     		ldr	r0, .L16+8
+ 108 0030 0468     		ldr	r4, [r0]
+ARM GAS  /tmp/cc4ONLvy.s 			page 15
+
+
+ 109              	.LVL7:
  163:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****         {
- 169              		.loc 1 163 9 view .LVU50
+ 110              		.loc 1 163 9 view .LVU30
  163:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****         {
- 170              		.loc 1 163 12 is_stmt 0 view .LVU51
- 171 0056 0E48     		ldr	r0, .L18+12
- 172 0058 8442     		cmp	r4, r0
- 173 005a 0BD0     		beq	.L12
- 174 005c 0020     		movs	r0, #0
- 175 005e D8E7     		b	.L2
- 176              	.LVL12:
- 177              	.L6:
+ 111              		.loc 1 163 12 is_stmt 0 view .LVU31
+ 112 0032 1748     		ldr	r0, .L16+12
+ 113 0034 8442     		cmp	r4, r0
+ 114 0036 20D0     		beq	.L12
+ 115 0038 0020     		movs	r0, #0
+ 116 003a 00E0     		b	.L2
+ 117              	.LVL8:
+ 118              	.L6:
  101:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     }
- 178              		.loc 1 101 16 view .LVU52
- 179 0060 0220     		movs	r0, #2
- 180              	.LVL13:
- 101:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     }
- 181              		.loc 1 101 16 view .LVU53
- 182 0062 D6E7     		b	.L2
- 183              	.L8:
+ 119              		.loc 1 101 16 view .LVU32
+ 120 003c 0220     		movs	r0, #2
+ 121              	.LVL9:
+ 122              	.L2:
+ 173:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     {
+ 123              		.loc 1 173 5 is_stmt 1 view .LVU33
+ 173:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     {
+ 124              		.loc 1 173 8 is_stmt 0 view .LVU34
+ 125 003e 0028     		cmp	r0, #0
+ 126 0040 E7D1     		bne	.L1
+ 177:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****         {
+ 127              		.loc 1 177 9 is_stmt 1 view .LVU35
+ 128              	.LBB10:
+ 129              	.LBI10:
+ 474:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
+ 130              		.loc 2 474 63 view .LVU36
+ 131              	.LBB11:
+ 476:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     __asm__ volatile (" MRS  %0,IPSR ": "=r" (ipsr_value) );
+ 132              		.loc 2 476 1 view .LVU37
+ 477:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     return(ipsr_value);
+ 133              		.loc 2 477 5 view .LVU38
+ 134              		.syntax unified
+ 135              	@ 477 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+ 136 0042 EFF3058E 		 MRS  lr,IPSR 
+ 137              	@ 0 "" 2
+ 138              	.LVL10:
+ 139              		.loc 2 478 5 view .LVU39
+ 140              		.loc 2 478 5 is_stmt 0 view .LVU40
+ 141              		.thumb
+ 142              		.syntax unified
+ 143              	.LBE11:
+ 144              	.LBE10:
+ 177:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****         {
+ 145              		.loc 1 177 13 discriminator 1 view .LVU41
+ 146 0046 1048     		ldr	r0, .L16+4
+ 147 0048 0068     		ldr	r0, [r0]
+ 177:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****         {
+ 148              		.loc 1 177 12 discriminator 1 view .LVU42
+ 149 004a 50EA0E00 		orrs	r0, r0, lr
+ 150 004e 08D0     		beq	.L5
+ 181:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****             {
+ 151              		.loc 1 181 13 is_stmt 1 view .LVU43
+ 152              	.LBB12:
+ 153              	.LBI12:
+ARM GAS  /tmp/cc4ONLvy.s 			page 16
+
+
+ 474:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
+ 154              		.loc 2 474 63 view .LVU44
+ 155              	.LBB13:
+ 476:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     __asm__ volatile (" MRS  %0,IPSR ": "=r" (ipsr_value) );
+ 156              		.loc 2 476 1 view .LVU45
+ 477:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     return(ipsr_value);
+ 157              		.loc 2 477 5 view .LVU46
+ 158              		.syntax unified
+ 159              	@ 477 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+ 160 0050 EFF3058E 		 MRS  lr,IPSR 
+ 161              	@ 0 "" 2
+ 162              	.LVL11:
+ 163              		.loc 2 478 5 view .LVU47
+ 164              		.loc 2 478 5 is_stmt 0 view .LVU48
+ 165              		.thumb
+ 166              		.syntax unified
+ 167              	.LBE13:
+ 168              	.LBE12:
+ 181:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****             {
+ 169              		.loc 1 181 17 discriminator 1 view .LVU49
+ 170 0054 0C48     		ldr	r0, .L16+4
+ 171 0056 0068     		ldr	r0, [r0]
+ 172 0058 40EA0E00 		orr	r0, r0, lr
+ 181:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****             {
+ 173              		.loc 1 181 16 discriminator 1 view .LVU50
+ 174 005c B0F1F03F 		cmp	r0, #-252645136
+ 175 0060 0DD3     		bcc	.L13
+ 176              	.L5:
+ 191:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     {
+ 177              		.loc 1 191 5 is_stmt 1 view .LVU51
+ 195:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     }
+ 178              		.loc 1 195 9 view .LVU52
+ 195:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     }
+ 179              		.loc 1 195 19 is_stmt 0 view .LVU53
+ 180 0062 6046     		mov	r0, ip
+ 181 0064 FFF7FEFF 		bl	_tx_byte_allocate
+ 182              	.LVL12:
+ 195:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     }
+ 183              		.loc 1 195 19 view .LVU54
+ 184 0068 D3E7     		b	.L1
+ 185              	.LVL13:
+ 186              	.L8:
  117:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     }
- 184              		.loc 1 117 16 view .LVU54
- 185 0064 0320     		movs	r0, #3
- 186 0066 D4E7     		b	.L2
- 187              	.L9:
+ 187              		.loc 1 117 16 view .LVU55
+ 188 006a 0320     		movs	r0, #3
+ 189 006c D1E7     		b	.L1
+ 190              	.L9:
  125:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     }
- 188              		.loc 1 125 16 view .LVU55
- 189 0068 0520     		movs	r0, #5
- 190 006a D2E7     		b	.L2
- 191              	.L10:
+ 191              		.loc 1 125 16 view .LVU56
+ 192 006e 0520     		movs	r0, #5
+ 193 0070 CFE7     		b	.L1
+ 194              	.L10:
  133:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     }
- 192              		.loc 1 133 16 view .LVU56
- 193 006c 0520     		movs	r0, #5
- 194 006e D0E7     		b	.L2
- 195              	.L11:
+ 195              		.loc 1 133 16 view .LVU57
+ 196 0072 0520     		movs	r0, #5
+ 197 0074 CDE7     		b	.L1
+ 198              	.L11:
+ARM GAS  /tmp/cc4ONLvy.s 			page 17
+
+
  149:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****             }
- 196              		.loc 1 149 24 view .LVU57
- 197 0070 0420     		movs	r0, #4
- 198 0072 CEE7     		b	.L2
- 199              	.LVL14:
- 200              	.L12:
+ 199              		.loc 1 149 24 view .LVU58
+ 200 0076 0420     		movs	r0, #4
+ 201 0078 CBE7     		b	.L1
+ 202              	.LVL14:
+ 203              	.L12:
  167:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****         }
- 201              		.loc 1 167 20 view .LVU58
- 202 0074 1320     		movs	r0, #19
- 203 0076 DDE7     		b	.L4
- 204              	.LVL15:
- 205              	.L17:
- 195:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     }
- 206              		.loc 1 195 9 is_stmt 1 view .LVU59
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjDj2lv.s 			page 17
-
-
- 195:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     }
- 207              		.loc 1 195 19 is_stmt 0 view .LVU60
- 208 0078 6046     		mov	r0, ip
- 209              	.LVL16:
- 195:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     }
- 210              		.loc 1 195 19 view .LVU61
- 211 007a FFF7FEFF 		bl	_tx_byte_allocate
- 212              	.LVL17:
- 195:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****     }
- 213              		.loc 1 195 19 view .LVU62
- 214 007e DAE7     		b	.L1
- 215              	.LVL18:
- 216              	.L16:
+ 204              		.loc 1 167 20 view .LVU59
+ 205 007a 1320     		movs	r0, #19
+ 206 007c C9E7     		b	.L1
+ 207              	.LVL15:
+ 208              	.L13:
  185:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c ****             }
- 217              		.loc 1 185 24 view .LVU63
- 218 0080 1320     		movs	r0, #19
- 219              	.LVL19:
+ 209              		.loc 1 185 24 view .LVU60
+ 210 007e 1320     		movs	r0, #19
  199:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c **** }
- 220              		.loc 1 199 5 is_stmt 1 view .LVU64
+ 211              		.loc 1 199 5 is_stmt 1 view .LVU61
  199:./Middlewares/ST/threadx/common/src/txe_byte_allocate.c **** }
- 221              		.loc 1 199 11 is_stmt 0 view .LVU65
- 222 0082 D8E7     		b	.L1
- 223              	.L19:
- 224              		.align	2
- 225              	.L18:
- 226 0084 45545942 		.word	1113150533
- 227 0088 00000000 		.word	_tx_thread_system_state
- 228 008c 00000000 		.word	_tx_thread_current_ptr
- 229 0090 00000000 		.word	_tx_timer_thread
- 230              		.cfi_endproc
- 231              	.LFE8:
- 233              		.text
- 234              	.Letext0:
- 235              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
- 236              		.file 4 "./Middlewares/ST/threadx/common/inc/tx_thread.h"
- 237              		.file 5 "./Middlewares/ST/threadx/common/inc/tx_timer.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjDj2lv.s 			page 18
+ 212              		.loc 1 199 11 is_stmt 0 view .LVU62
+ 213 0080 C7E7     		b	.L1
+ 214              	.L17:
+ 215 0082 00BF     		.align	2
+ 216              	.L16:
+ 217 0084 45545942 		.word	1113150533
+ 218 0088 00000000 		.word	_tx_thread_system_state
+ 219 008c 00000000 		.word	_tx_thread_current_ptr
+ 220 0090 00000000 		.word	_tx_timer_thread
+ 221              		.cfi_endproc
+ 222              	.LFE8:
+ 224              		.text
+ 225              	.Letext0:
+ 226              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
+ 227              		.file 4 "./Middlewares/ST/threadx/common/inc/tx_thread.h"
+ 228              		.file 5 "./Middlewares/ST/threadx/common/inc/tx_timer.h"
+ARM GAS  /tmp/cc4ONLvy.s 			page 18
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 txe_byte_allocate.c
-C:\Users\Dennis\AppData\Local\Temp\ccjDj2lv.s:20     .text._txe_byte_allocate:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccjDj2lv.s:26     .text._txe_byte_allocate:00000000 _txe_byte_allocate
-C:\Users\Dennis\AppData\Local\Temp\ccjDj2lv.s:226    .text._txe_byte_allocate:00000084 $d
+     /tmp/cc4ONLvy.s:21     .text._txe_byte_allocate:00000000 $t
+     /tmp/cc4ONLvy.s:27     .text._txe_byte_allocate:00000000 _txe_byte_allocate
+     /tmp/cc4ONLvy.s:217    .text._txe_byte_allocate:00000084 $d
 
 UNDEFINED SYMBOLS
 _tx_byte_allocate

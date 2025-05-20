@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccqQak7j.s 			page 1
+ARM GAS  /tmp/ccw9pkr6.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,25 +19,25 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccqQak7j.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.rodata.Thread_oled_Entry.str1.4,"aMS",%progbits,1
-  20              		.align	2
-  21              	.LC0:
-  22 0000 4F4C4544 		.ascii	"OLED-TEXT\000"
-  22      2D544558 
-  22      5400
-  23 000a 0000     		.align	2
-  24              	.LC1:
-  25 000c 256C6400 		.ascii	"%ld\000"
-  26              		.section	.text.Thread_oled_Entry,"ax",%progbits
-  27              		.align	1
-  28              		.global	Thread_oled_Entry
-  29              		.syntax unified
-  30              		.thumb
-  31              		.thumb_func
-  33              	Thread_oled_Entry:
-  34              	.LVL0:
-  35              	.LFB247:
-  36              		.file 1 "./app/Threads/Thread_oled/Thread_oled.c"
+  19              		.file 1 "./app/Threads/Thread_oled/Thread_oled.c"
+  20              		.section	.rodata.Thread_oled_Entry.str1.4,"aMS",%progbits,1
+  21              		.align	2
+  22              	.LC0:
+  23 0000 4F4C4544 		.ascii	"OLED-TEXT\000"
+  23      2D544558 
+  23      5400
+  24 000a 0000     		.align	2
+  25              	.LC1:
+  26 000c 256C6400 		.ascii	"%ld\000"
+  27              		.section	.text.Thread_oled_Entry,"ax",%progbits
+  28              		.align	1
+  29              		.global	Thread_oled_Entry
+  30              		.syntax unified
+  31              		.thumb
+  32              		.thumb_func
+  34              	Thread_oled_Entry:
+  35              	.LVL0:
+  36              	.LFB247:
    1:./app/Threads/Thread_oled/Thread_oled.c **** #include "Thread_oled.h"
    2:./app/Threads/Thread_oled/Thread_oled.c **** 
    3:./app/Threads/Thread_oled/Thread_oled.c **** 
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccqQak7j.s 			page 1
   37              		.loc 1 17 1 view -0
   38              		.cfi_startproc
   39              		@ args = 0, pretend = 0, frame = 104
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccqQak7j.s 			page 2
+ARM GAS  /tmp/ccw9pkr6.s 			page 2
 
 
   40              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -93,87 +93,87 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccqQak7j.s 			page 1
   64              	.LVL4:
   65              	.L2:
   23:./app/Threads/Thread_oled/Thread_oled.c ****     unsigned char temp[100];
-  66              		.loc 1 23 5 discriminator 1 view .LVU6
+  66              		.loc 1 23 5 view .LVU6
   24:./app/Threads/Thread_oled/Thread_oled.c ****     while(1)
-  67              		.loc 1 24 5 discriminator 1 view .LVU7
+  67              		.loc 1 24 5 view .LVU7
   68              	.LBB2:
   25:./app/Threads/Thread_oled/Thread_oled.c ****     {
   26:./app/Threads/Thread_oled/Thread_oled.c ****       sprintf((char *)temp,"%ld",HAL_GetTick());
-  69              		.loc 1 26 7 discriminator 1 view .LVU8
+  69              		.loc 1 26 7 view .LVU8
   70 001c FFF7FEFF 		bl	HAL_GetTick
   71              	.LVL5:
   72 0020 0246     		mov	r2, r0
-  73 0022 0849     		ldr	r1, .L4+4
-  74 0024 01A8     		add	r0, sp, #4
-  75 0026 FFF7FEFF 		bl	sprintf
-  76              	.LVL6:
+  73              		.loc 1 26 7 is_stmt 0 discriminator 1 view .LVU9
+  74 0022 0849     		ldr	r1, .L4+4
+  75 0024 01A8     		add	r0, sp, #4
+  76 0026 FFF7FEFF 		bl	sprintf
+  77              	.LVL6:
   27:./app/Threads/Thread_oled/Thread_oled.c ****       OLED_ShowStr(0,10,temp,2);
-  77              		.loc 1 27 7 discriminator 1 view .LVU9
-  78 002a 0223     		movs	r3, #2
-  79 002c 01AA     		add	r2, sp, #4
-  80 002e 0A21     		movs	r1, #10
-  81 0030 0020     		movs	r0, #0
-  82 0032 FFF7FEFF 		bl	OLED_ShowStr
-  83              	.LVL7:
+  78              		.loc 1 27 7 is_stmt 1 view .LVU10
+  79 002a 0223     		movs	r3, #2
+  80 002c 01AA     		add	r2, sp, #4
+  81 002e 0A21     		movs	r1, #10
+  82 0030 0020     		movs	r0, #0
+  83 0032 FFF7FEFF 		bl	OLED_ShowStr
+  84              	.LVL7:
   28:./app/Threads/Thread_oled/Thread_oled.c ****       
   29:./app/Threads/Thread_oled/Thread_oled.c ****       tx_thread_sleep(1);
-  84              		.loc 1 29 7 discriminator 1 view .LVU10
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccqQak7j.s 			page 3
+ARM GAS  /tmp/ccw9pkr6.s 			page 3
 
 
-  85 0036 0120     		movs	r0, #1
-  86 0038 FFF7FEFF 		bl	_tx_thread_sleep
-  87              	.LVL8:
-  88              	.LBE2:
+  85              		.loc 1 29 7 discriminator 1 view .LVU11
+  86 0036 0120     		movs	r0, #1
+  87 0038 FFF7FEFF 		bl	_tx_thread_sleep
+  88              	.LVL8:
+  89              	.LBE2:
   24:./app/Threads/Thread_oled/Thread_oled.c ****     {
-  89              		.loc 1 24 10 discriminator 1 view .LVU11
-  90 003c EEE7     		b	.L2
-  91              	.L5:
-  92 003e 00BF     		.align	2
-  93              	.L4:
-  94 0040 00000000 		.word	.LC0
-  95 0044 0C000000 		.word	.LC1
-  96              		.cfi_endproc
-  97              	.LFE247:
-  99              		.global	Thread_oled_parama1
- 100              		.global	Thread_oled
- 101              		.section	.bss.Thread_oled,"aw",%nobits
+  90              		.loc 1 24 10 view .LVU12
+  91 003c EEE7     		b	.L2
+  92              	.L5:
+  93 003e 00BF     		.align	2
+  94              	.L4:
+  95 0040 00000000 		.word	.LC0
+  96 0044 0C000000 		.word	.LC1
+  97              		.cfi_endproc
+  98              	.LFE247:
+ 100              		.global	Thread_oled_parama1
+ 101              		.section	.bss.Thread_oled_parama1,"aw",%nobits
  102              		.align	2
- 105              	Thread_oled:
- 106 0000 00000000 		.space	176
- 106      00000000 
- 106      00000000 
- 106      00000000 
- 106      00000000 
- 107              		.section	.bss.Thread_oled_parama1,"aw",%nobits
- 108              		.align	2
- 111              	Thread_oled_parama1:
- 112 0000 00       		.space	1
- 113              		.text
- 114              	.Letext0:
- 115              		.file 2 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\machine\\_default_types.h"
- 116              		.file 3 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
- 117              		.file 4 "./Middlewares/ST/threadx/common/inc/tx_api.h"
- 118              		.file 5 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\sys\\_stdint.h"
- 119              		.file 6 "./app/peripheral/inc/OLED_Front.h"
- 120              		.file 7 "./app/Threads/Thread_oled/Thread_oled.h"
- 121              		.file 8 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
- 122              		.file 9 "./app/peripheral/inc/OLED_Function.h"
- 123              		.file 10 "./app/peripheral/inc/OLED_IIC_Config.h"
- 124              		.file 11 "<built-in>"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccqQak7j.s 			page 4
+ 105              	Thread_oled_parama1:
+ 106 0000 00       		.space	1
+ 107              		.global	Thread_oled
+ 108              		.section	.bss.Thread_oled,"aw",%nobits
+ 109              		.align	2
+ 112              	Thread_oled:
+ 113 0000 00000000 		.space	176
+ 113      00000000 
+ 113      00000000 
+ 113      00000000 
+ 113      00000000 
+ 114              		.text
+ 115              	.Letext0:
+ 116              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
+ 117              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
+ 118              		.file 4 "/usr/lib/gcc/arm-none-eabi/13.2.1/include/stdint.h"
+ 119              		.file 5 "./app/peripheral/inc/OLED_Front.h"
+ 120              		.file 6 "./app/Threads/Thread_oled/Thread_oled.h"
+ 121              		.file 7 "./app/peripheral/inc/OLED_Function.h"
+ 122              		.file 8 "<built-in>"
+ 123              		.file 9 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
+ 124              		.file 10 "./app/peripheral/inc/OLED_IIC_Config.h"
+ARM GAS  /tmp/ccw9pkr6.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 Thread_oled.c
-C:\Users\Dennis\AppData\Local\Temp\ccqQak7j.s:20     .rodata.Thread_oled_Entry.str1.4:00000000 $d
-C:\Users\Dennis\AppData\Local\Temp\ccqQak7j.s:27     .text.Thread_oled_Entry:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccqQak7j.s:33     .text.Thread_oled_Entry:00000000 Thread_oled_Entry
-C:\Users\Dennis\AppData\Local\Temp\ccqQak7j.s:94     .text.Thread_oled_Entry:00000040 $d
-C:\Users\Dennis\AppData\Local\Temp\ccqQak7j.s:111    .bss.Thread_oled_parama1:00000000 Thread_oled_parama1
-C:\Users\Dennis\AppData\Local\Temp\ccqQak7j.s:105    .bss.Thread_oled:00000000 Thread_oled
-C:\Users\Dennis\AppData\Local\Temp\ccqQak7j.s:102    .bss.Thread_oled:00000000 $d
-C:\Users\Dennis\AppData\Local\Temp\ccqQak7j.s:108    .bss.Thread_oled_parama1:00000000 $d
+     /tmp/ccw9pkr6.s:21     .rodata.Thread_oled_Entry.str1.4:00000000 $d
+     /tmp/ccw9pkr6.s:28     .text.Thread_oled_Entry:00000000 $t
+     /tmp/ccw9pkr6.s:34     .text.Thread_oled_Entry:00000000 Thread_oled_Entry
+     /tmp/ccw9pkr6.s:95     .text.Thread_oled_Entry:00000040 $d
+     /tmp/ccw9pkr6.s:105    .bss.Thread_oled_parama1:00000000 Thread_oled_parama1
+     /tmp/ccw9pkr6.s:102    .bss.Thread_oled_parama1:00000000 $d
+     /tmp/ccw9pkr6.s:112    .bss.Thread_oled:00000000 Thread_oled
+     /tmp/ccw9pkr6.s:109    .bss.Thread_oled:00000000 $d
 
 UNDEFINED SYMBOLS
 OLED_Init

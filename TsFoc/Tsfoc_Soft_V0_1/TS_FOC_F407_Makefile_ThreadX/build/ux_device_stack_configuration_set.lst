@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccU5z1Xs.s 			page 1
+ARM GAS  /tmp/cczaVn4d.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,16 +19,16 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccU5z1Xs.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text._ux_device_stack_configuration_set,"ax",%progbits
-  20              		.align	1
-  21              		.global	_ux_device_stack_configuration_set
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
-  26              	_ux_device_stack_configuration_set:
-  27              	.LVL0:
-  28              	.LFB11:
-  29              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c"
+  19              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c"
+  20              		.section	.text._ux_device_stack_configuration_set,"ax",%progbits
+  21              		.align	1
+  22              		.global	_ux_device_stack_configuration_set
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	_ux_device_stack_configuration_set:
+  28              	.LVL0:
+  29              	.LFB11:
    1:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** /**************************************************************************/
    2:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** /*                                                                        */
    3:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccU5z1Xs.s 			page 1
   27:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
   28:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** #include "ux_api.h"
   29:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** #include "ux_device_stack.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccU5z1Xs.s 			page 2
+ARM GAS  /tmp/cczaVn4d.s 			page 2
 
 
   30:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccU5z1Xs.s 			page 1
   31              		.cfi_startproc
   32              		@ args = 0, pretend = 0, frame = 120
   33              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccU5z1Xs.s 			page 3
+ARM GAS  /tmp/cczaVn4d.s 			page 3
 
 
   34              		.loc 1 82 1 is_stmt 0 view .LVU1
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccU5z1Xs.s 			page 1
   99:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** ULONG                           iad_flag;
   72              		.loc 1 99 1 view .LVU17
  100:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** ULONG                           iad_first_interface =  0;
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccU5z1Xs.s 			page 4
+ARM GAS  /tmp/cczaVn4d.s 			page 4
 
 
   73              		.loc 1 100 1 view .LVU18
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccU5z1Xs.s 			page 1
   98 0028 01E0     		b	.L3
   99              	.LVL6:
  100              	.L4:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccU5z1Xs.s 			page 5
+ARM GAS  /tmp/cczaVn4d.s 			page 5
 
 
  130:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****     {
@@ -278,7 +278,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccU5z1Xs.s 			page 1
  108              	.LVL8:
  109              	.L3:
  129:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****     {
- 110              		.loc 1 129 11 is_stmt 1 view .LVU37
+ 110              		.loc 1 129 36 is_stmt 1 view .LVU37
  111 002e 65B1     		cbz	r5, .L5
  132:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
  112              		.loc 1 132 9 view .LVU38
@@ -298,72 +298,69 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccU5z1Xs.s 			page 1
  121              		.loc 1 138 12 is_stmt 0 view .LVU43
  122 0034 022B     		cmp	r3, #2
  123 0036 F8D1     		bne	.L4
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccU5z1Xs.s 			page 6
+ARM GAS  /tmp/cczaVn4d.s 			page 6
 
 
  141:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****                         _ux_system_configuration_descriptor_structure,
  124              		.loc 1 141 13 is_stmt 1 view .LVU44
  125 0038 16AB     		add	r3, sp, #88
- 126              	.LVL11:
- 141:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****                         _ux_system_configuration_descriptor_structure,
- 127              		.loc 1 141 13 is_stmt 0 view .LVU45
- 128 003a 0822     		movs	r2, #8
- 129 003c 5E49     		ldr	r1, .L33+4
- 130 003e 2046     		mov	r0, r4
- 131 0040 FFF7FEFF 		bl	_ux_utility_descriptor_parse
- 132              	.LVL12:
+ 126 003a 0822     		movs	r2, #8
+ 127 003c 5E49     		ldr	r1, .L33+4
+ 128 003e 2046     		mov	r0, r4
+ 129 0040 FFF7FEFF 		bl	_ux_utility_descriptor_parse
+ 130              	.LVL11:
  148:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****                 /* The configuration is found. */
- 133              		.loc 1 148 13 is_stmt 1 view .LVU46
+ 131              		.loc 1 148 13 view .LVU45
  148:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****                 /* The configuration is found. */
- 134              		.loc 1 148 41 is_stmt 0 view .LVU47
- 135 0044 1A9B     		ldr	r3, [sp, #104]
+ 132              		.loc 1 148 41 is_stmt 0 view .LVU46
+ 133 0044 1A9B     		ldr	r3, [sp, #104]
  148:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****                 /* The configuration is found. */
- 136              		.loc 1 148 16 view .LVU48
- 137 0046 4345     		cmp	r3, r8
- 138 0048 EFD1     		bne	.L4
- 139              	.LVL13:
- 140              	.L5:
+ 134              		.loc 1 148 16 view .LVU47
+ 135 0046 4345     		cmp	r3, r8
+ 136 0048 EFD1     		bne	.L4
+ 137              	.LVL12:
+ 138              	.L5:
  157:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****     }
  158:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
  159:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****     /* Configuration not found. */
  160:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****     if (device_framework_length == 0 && configuration_value != 0)
- 141              		.loc 1 160 5 is_stmt 1 view .LVU49
- 142              		.loc 1 160 8 is_stmt 0 view .LVU50
- 143 004a 1DB9     		cbnz	r5, .L7
- 144              		.loc 1 160 38 discriminator 1 view .LVU51
- 145 004c B8F1000F 		cmp	r8, #0
- 146 0050 40F0AD80 		bne	.L22
- 147              	.L7:
+ 139              		.loc 1 160 5 is_stmt 1 view .LVU48
+ 140              		.loc 1 160 8 is_stmt 0 view .LVU49
+ 141 004a 1DB9     		cbnz	r5, .L7
+ 142              		.loc 1 160 38 discriminator 1 view .LVU50
+ 143 004c B8F1000F 		cmp	r8, #0
+ 144 0050 40F0AD80 		bne	.L22
+ 145              	.L7:
  161:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****         return(UX_ERROR);
  162:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
  163:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****     /* We unmount the configuration if there is previous configuration selected. */
  164:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****     if (device -> ux_slave_device_configuration_selected)
- 148              		.loc 1 164 5 is_stmt 1 view .LVU52
- 149              		.loc 1 164 16 is_stmt 0 view .LVU53
- 150 0054 D6F8EC30 		ldr	r3, [r6, #236]
- 151              		.loc 1 164 8 view .LVU54
- 152 0058 9BB1     		cbz	r3, .L8
+ 146              		.loc 1 164 5 is_stmt 1 view .LVU51
+ 147              		.loc 1 164 16 is_stmt 0 view .LVU52
+ 148 0054 D6F8EC30 		ldr	r3, [r6, #236]
+ 149              		.loc 1 164 8 view .LVU53
+ 150 0058 9BB1     		cbz	r3, .L8
  165:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****     {
  166:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
  167:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****         /* Get the pointer to the first interface.  */
  168:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****         interface =  device -> ux_slave_device_first_interface;
- 153              		.loc 1 168 9 is_stmt 1 view .LVU55
- 154              		.loc 1 168 19 is_stmt 0 view .LVU56
- 155 005a D6F81051 		ldr	r5, [r6, #272]
- 156              	.LVL14:
+ 151              		.loc 1 168 9 is_stmt 1 view .LVU54
+ 152              		.loc 1 168 19 is_stmt 0 view .LVU55
+ 153 005a D6F81051 		ldr	r5, [r6, #272]
+ 154              	.LVL13:
  169:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
  170:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** #if !defined(UX_DEVICE_INITIALIZE_FRAMEWORK_SCAN_DISABLE) || UX_MAX_DEVICE_INTERFACES > 1
  171:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****         /* Deactivate all the interfaces if any.  */
  172:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****         while (interface != UX_NULL)
- 157              		.loc 1 172 9 is_stmt 1 view .LVU57
- 158              		.loc 1 172 15 is_stmt 0 view .LVU58
- 159 005e 04E0     		b	.L9
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccU5z1Xs.s 			page 7
-
-
- 160              	.LVL15:
- 161              	.L10:
+ 155              		.loc 1 172 9 is_stmt 1 view .LVU56
+ 156              		.loc 1 172 15 is_stmt 0 view .LVU57
+ 157 005e 04E0     		b	.L9
+ 158              	.LVL14:
+ 159              	.L10:
  173:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****         {
+ARM GAS  /tmp/cczaVn4d.s 			page 7
+
+
  174:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** #endif
  175:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****             /* Build all the fields of the Class Command.  */
  176:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****             class_command.ux_slave_class_command_request =   UX_SLAVE_CLASS_COMMAND_DEACTIVATE;
@@ -384,77 +381,77 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccU5z1Xs.s 			page 1
  191:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** #if !defined(UX_DEVICE_INITIALIZE_FRAMEWORK_SCAN_DISABLE) || UX_MAX_DEVICE_INTERFACES > 1
  192:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****             /* Get the next interface.  */
  193:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****             next_interface =  interface -> ux_slave_interface_next_interface;
- 162              		.loc 1 193 13 is_stmt 1 view .LVU59
- 163              		.loc 1 193 28 is_stmt 0 view .LVU60
- 164 0060 2F6B     		ldr	r7, [r5, #48]
- 165              	.LVL16:
+ 160              		.loc 1 193 13 is_stmt 1 view .LVU58
+ 161              		.loc 1 193 28 is_stmt 0 view .LVU59
+ 162 0060 2F6B     		ldr	r7, [r5, #48]
+ 163              	.LVL15:
  194:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** #endif
  195:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
  196:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****             /* Remove the interface and all endpoints associated with it.  */
  197:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****             _ux_device_stack_interface_delete(interface);
- 166              		.loc 1 197 13 is_stmt 1 view .LVU61
- 167 0062 2846     		mov	r0, r5
- 168 0064 FFF7FEFF 		bl	_ux_device_stack_interface_delete
- 169              	.LVL17:
+ 164              		.loc 1 197 13 is_stmt 1 view .LVU60
+ 165 0062 2846     		mov	r0, r5
+ 166 0064 FFF7FEFF 		bl	_ux_device_stack_interface_delete
+ 167              	.LVL16:
  198:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
  199:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** #if !defined(UX_DEVICE_INITIALIZE_FRAMEWORK_SCAN_DISABLE) || UX_MAX_DEVICE_INTERFACES > 1
  200:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****             /* Now we refresh the interface pointer.  */
  201:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****             interface =  next_interface;
- 170              		.loc 1 201 13 view .LVU62
- 171              		.loc 1 201 23 is_stmt 0 view .LVU63
- 172 0068 3D46     		mov	r5, r7
- 173              	.LVL18:
- 174              	.L9:
+ 168              		.loc 1 201 13 view .LVU61
+ 169              		.loc 1 201 23 is_stmt 0 view .LVU62
+ 170 0068 3D46     		mov	r5, r7
+ 171              	.LVL17:
+ 172              	.L9:
  172:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****         {
- 175              		.loc 1 172 15 is_stmt 1 view .LVU64
- 176 006a 55B1     		cbz	r5, .L8
+ 173              		.loc 1 172 26 is_stmt 1 view .LVU63
+ 174 006a 55B1     		cbz	r5, .L8
  176:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****             class_command.ux_slave_class_command_interface =  (VOID *) interface;
- 177              		.loc 1 176 13 view .LVU65
+ 175              		.loc 1 176 13 view .LVU64
  176:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****             class_command.ux_slave_class_command_interface =  (VOID *) interface;
- 178              		.loc 1 176 58 is_stmt 0 view .LVU66
- 179 006c 0323     		movs	r3, #3
- 180 006e 0293     		str	r3, [sp, #8]
+ 176              		.loc 1 176 58 is_stmt 0 view .LVU65
+ 177 006c 0323     		movs	r3, #3
+ 178 006e 0293     		str	r3, [sp, #8]
  177:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 181              		.loc 1 177 13 is_stmt 1 view .LVU67
+ 179              		.loc 1 177 13 is_stmt 1 view .LVU66
  177:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 182              		.loc 1 177 60 is_stmt 0 view .LVU68
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccU5z1Xs.s 			page 8
+ 180              		.loc 1 177 60 is_stmt 0 view .LVU67
+ 181 0070 0495     		str	r5, [sp, #16]
+ 180:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
+ 182              		.loc 1 180 13 is_stmt 1 view .LVU68
+ARM GAS  /tmp/cczaVn4d.s 			page 8
 
 
- 183 0070 0495     		str	r5, [sp, #16]
  180:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 184              		.loc 1 180 13 is_stmt 1 view .LVU69
- 180:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 185              		.loc 1 180 24 is_stmt 0 view .LVU70
- 186 0072 6B68     		ldr	r3, [r5, #4]
- 187              	.LVL19:
+ 183              		.loc 1 180 24 is_stmt 0 view .LVU69
+ 184 0072 6B68     		ldr	r3, [r5, #4]
+ 185              	.LVL18:
  183:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 188              		.loc 1 183 13 is_stmt 1 view .LVU71
+ 186              		.loc 1 183 13 is_stmt 1 view .LVU70
  183:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 189              		.loc 1 183 60 is_stmt 0 view .LVU72
- 190 0074 0A93     		str	r3, [sp, #40]
+ 187              		.loc 1 183 60 is_stmt 0 view .LVU71
+ 188 0074 0A93     		str	r3, [sp, #40]
  186:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 191              		.loc 1 186 13 is_stmt 1 view .LVU73
+ 189              		.loc 1 186 13 is_stmt 1 view .LVU72
  186:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 192              		.loc 1 186 16 is_stmt 0 view .LVU74
- 193 0076 002B     		cmp	r3, #0
- 194 0078 F2D0     		beq	.L10
+ 190              		.loc 1 186 16 is_stmt 0 view .LVU73
+ 191 0076 002B     		cmp	r3, #0
+ 192 0078 F2D0     		beq	.L10
  189:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 195              		.loc 1 189 17 is_stmt 1 view .LVU75
+ 193              		.loc 1 189 17 is_stmt 1 view .LVU74
  189:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 196              		.loc 1 189 28 is_stmt 0 view .LVU76
- 197 007a 5B6C     		ldr	r3, [r3, #68]
- 198              	.LVL20:
+ 194              		.loc 1 189 28 is_stmt 0 view .LVU75
+ 195 007a 5B6C     		ldr	r3, [r3, #68]
+ 196              	.LVL19:
  189:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 199              		.loc 1 189 17 view .LVU77
- 200 007c 02A8     		add	r0, sp, #8
- 201 007e 9847     		blx	r3
- 202              	.LVL21:
+ 197              		.loc 1 189 17 view .LVU76
+ 198 007c 02A8     		add	r0, sp, #8
+ 199 007e 9847     		blx	r3
+ 200              	.LVL20:
  189:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 203              		.loc 1 189 17 view .LVU78
- 204 0080 EEE7     		b	.L10
- 205              	.LVL22:
- 206              	.L8:
+ 201              		.loc 1 189 17 view .LVU77
+ 202 0080 EEE7     		b	.L10
+ 203              	.LVL21:
+ 204              	.L8:
  202:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****         }
  203:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** #endif
  204:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
@@ -462,43 +459,43 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccU5z1Xs.s 			page 1
  206:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
  207:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****     /* No configuration is selected.  */
  208:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****     device -> ux_slave_device_configuration_selected =  0;
- 207              		.loc 1 208 5 is_stmt 1 view .LVU79
- 208              		.loc 1 208 54 is_stmt 0 view .LVU80
- 209 0082 0023     		movs	r3, #0
- 210 0084 C6F8EC30 		str	r3, [r6, #236]
+ 205              		.loc 1 208 5 is_stmt 1 view .LVU78
+ 206              		.loc 1 208 54 is_stmt 0 view .LVU79
+ 207 0082 0023     		movs	r3, #0
+ 208 0084 C6F8EC30 		str	r3, [r6, #236]
  209:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
  210:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****     /* Mark the device as attached now. */
  211:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****     device -> ux_slave_device_state =  UX_DEVICE_ATTACHED;
- 211              		.loc 1 211 5 is_stmt 1 view .LVU81
- 212              		.loc 1 211 37 is_stmt 0 view .LVU82
- 213 0088 0122     		movs	r2, #1
- 214 008a 3262     		str	r2, [r6, #32]
+ 209              		.loc 1 211 5 is_stmt 1 view .LVU80
+ 210              		.loc 1 211 37 is_stmt 0 view .LVU81
+ 211 0088 0122     		movs	r2, #1
+ 212 008a 3262     		str	r2, [r6, #32]
  212:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
  213:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****     /* The DCD needs to update the device state too.  */
  214:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****     dcd -> ux_slave_dcd_function(dcd, UX_DCD_CHANGE_STATE, (VOID *) UX_DEVICE_ATTACHED);
- 215              		.loc 1 214 5 is_stmt 1 view .LVU83
- 216              		.loc 1 214 9 is_stmt 0 view .LVU84
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccU5z1Xs.s 			page 9
+ 213              		.loc 1 214 5 is_stmt 1 view .LVU82
+ 214              		.loc 1 214 9 is_stmt 0 view .LVU83
+ 215 008c B369     		ldr	r3, [r6, #24]
+ 216              		.loc 1 214 5 view .LVU84
+ 217 008e 1321     		movs	r1, #19
+ARM GAS  /tmp/cczaVn4d.s 			page 9
 
 
- 217 008c B369     		ldr	r3, [r6, #24]
- 218              		.loc 1 214 5 view .LVU85
- 219 008e 1321     		movs	r1, #19
- 220 0090 3046     		mov	r0, r6
- 221 0092 9847     		blx	r3
- 222              	.LVL23:
+ 218 0090 3046     		mov	r0, r6
+ 219 0092 9847     		blx	r3
+ 220              	.LVL22:
  215:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
  216:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****     /* If the host tries to unconfigure, we are done. */
  217:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****     if (configuration_value == 0)
- 223              		.loc 1 217 5 is_stmt 1 view .LVU86
- 224              		.loc 1 217 8 is_stmt 0 view .LVU87
- 225 0094 B8F1000F 		cmp	r8, #0
- 226 0098 04D1     		bne	.L27
+ 221              		.loc 1 217 5 is_stmt 1 view .LVU85
+ 222              		.loc 1 217 8 is_stmt 0 view .LVU86
+ 223 0094 B8F1000F 		cmp	r8, #0
+ 224 0098 04D1     		bne	.L27
  218:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****         return(UX_SUCCESS);
- 227              		.loc 1 218 15 view .LVU88
- 228 009a 4546     		mov	r5, r8
- 229              	.LVL24:
- 230              	.L1:
+ 225              		.loc 1 218 15 view .LVU87
+ 226 009a 4546     		mov	r5, r8
+ 227              	.LVL23:
+ 228              	.L1:
  219:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
  220:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****     /* Memorize the configuration selected.  */
  221:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****     device -> ux_slave_device_configuration_selected =  configuration_value;
@@ -538,12 +535,12 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccU5z1Xs.s 			page 1
  255:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****             /* Set the IAD flag.  */
  256:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****             iad_flag = UX_TRUE;
  257:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccU5z1Xs.s 			page 10
-
-
  258:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****             /* Get the first interface we have in the IAD. */
  259:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****             iad_first_interface = (ULONG)  *(device_framework + 2);
  260:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
+ARM GAS  /tmp/cczaVn4d.s 			page 10
+
+
  261:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****             /* Get the number of interfaces we have in the IAD. */
  262:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****             iad_number_interfaces = (ULONG)  *(device_framework + 3);
  263:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****         }
@@ -598,12 +595,12 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccU5z1Xs.s 			page 1
  312:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
  313:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** #if UX_MAX_SLAVE_CLASS_DRIVER > 1
  314:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****                                     /* We are done here.  */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccU5z1Xs.s 			page 11
-
-
  315:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****                                     break;
  316:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** #endif
  317:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****                                 }
+ARM GAS  /tmp/cczaVn4d.s 			page 11
+
+
  318:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****                             }
  319:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
  320:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** #if UX_MAX_SLAVE_CLASS_DRIVER > 1
@@ -658,12 +655,12 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccU5z1Xs.s 			page 1
  369:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****                             }
  370:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****                         }
  371:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccU5z1Xs.s 			page 12
-
-
  372:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** #if UX_MAX_SLAVE_CLASS_DRIVER > 1
  373:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****                         /* Move to the next registered class.  */
  374:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****                         class_inst ++;
+ARM GAS  /tmp/cczaVn4d.s 			page 12
+
+
  375:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****                     }
  376:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** #endif
  377:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****                 }
@@ -689,414 +686,416 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccU5z1Xs.s 			page 1
  397:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****     /* Configuration mounted. */
  398:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****     return(UX_SUCCESS);
  399:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** }
- 231              		.loc 1 399 1 view .LVU89
- 232 009c 2846     		mov	r0, r5
- 233 009e 1FB0     		add	sp, sp, #124
- 234              	.LCFI2:
- 235              		.cfi_remember_state
- 236              		.cfi_def_cfa_offset 36
- 237              		@ sp needed
- 238 00a0 BDE8F08F 		pop	{r4, r5, r6, r7, r8, r9, r10, fp, pc}
- 239              	.LVL25:
- 240              	.L27:
- 241              	.LCFI3:
- 242              		.cfi_restore_state
+ 229              		.loc 1 399 1 view .LVU88
+ 230 009c 2846     		mov	r0, r5
+ 231 009e 1FB0     		add	sp, sp, #124
+ 232              	.LCFI2:
+ 233              		.cfi_remember_state
+ 234              		.cfi_def_cfa_offset 36
+ 235              		@ sp needed
+ 236 00a0 BDE8F08F 		pop	{r4, r5, r6, r7, r8, r9, r10, fp, pc}
+ 237              	.LVL24:
+ 238              	.L27:
+ 239              	.LCFI3:
+ 240              		.cfi_restore_state
  221:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 243              		.loc 1 221 5 is_stmt 1 view .LVU90
+ 241              		.loc 1 221 5 is_stmt 1 view .LVU89
  221:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 244              		.loc 1 221 54 is_stmt 0 view .LVU91
- 245 00a4 C6F8EC80 		str	r8, [r6, #236]
+ 242              		.loc 1 221 54 is_stmt 0 view .LVU90
+ 243 00a4 C6F8EC80 		str	r8, [r6, #236]
  225:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****                 _ux_system_configuration_descriptor_structure,
- 246              		.loc 1 225 5 is_stmt 1 view .LVU92
- 247 00a8 06F1F003 		add	r3, r6, #240
- 248 00ac 0822     		movs	r2, #8
- 249 00ae 4249     		ldr	r1, .L33+4
- 250 00b0 2046     		mov	r0, r4
- 251 00b2 FFF7FEFF 		bl	_ux_utility_descriptor_parse
- 252              	.LVL26:
+ 244              		.loc 1 225 5 is_stmt 1 view .LVU91
+ 245 00a8 06F1F003 		add	r3, r6, #240
+ 246 00ac 0822     		movs	r2, #8
+ 247 00ae 4249     		ldr	r1, .L33+4
+ 248 00b0 2046     		mov	r0, r4
+ 249 00b2 FFF7FEFF 		bl	_ux_utility_descriptor_parse
+ 250              	.LVL25:
  231:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 253              		.loc 1 231 5 view .LVU93
+ 251              		.loc 1 231 5 view .LVU92
  231:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 254              		.loc 1 231 80 is_stmt 0 view .LVU94
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccU5z1Xs.s 			page 13
+ 252              		.loc 1 231 80 is_stmt 0 view .LVU93
+ 253 00b6 1C9B     		ldr	r3, [sp, #112]
+ 231:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
+ 254              		.loc 1 231 127 view .LVU94
+ARM GAS  /tmp/cczaVn4d.s 			page 13
 
 
- 255 00b6 1C9B     		ldr	r3, [sp, #112]
+ 255 00b8 13F0400F 		tst	r3, #64
+ 256 00bc 10D0     		beq	.L24
  231:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 256              		.loc 1 231 127 view .LVU95
- 257 00b8 13F0400F 		tst	r3, #64
- 258 00bc 10D0     		beq	.L24
- 259 00be 0221     		movs	r1, #2
- 260              	.L12:
+ 257              		.loc 1 231 127 discriminator 1 view .LVU95
+ 258 00be 0221     		movs	r1, #2
+ 259              	.L12:
  231:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 261              		.loc 1 231 22 discriminator 4 view .LVU96
- 262 00c0 3C4A     		ldr	r2, .L33
- 263 00c2 1268     		ldr	r2, [r2]
+ 260              		.loc 1 231 22 discriminator 4 view .LVU96
+ 261 00c0 3C4A     		ldr	r2, .L33
+ 262 00c2 1268     		ldr	r2, [r2]
  231:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 264              		.loc 1 231 53 discriminator 4 view .LVU97
- 265 00c4 C2F8A011 		str	r1, [r2, #416]
+ 263              		.loc 1 231 53 discriminator 4 view .LVU97
+ 264 00c4 C2F8A011 		str	r1, [r2, #416]
  234:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 266              		.loc 1 234 5 is_stmt 1 discriminator 4 view .LVU98
+ 265              		.loc 1 234 5 is_stmt 1 view .LVU98
  234:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 267              		.loc 1 234 125 is_stmt 0 discriminator 4 view .LVU99
- 268 00c8 C3F34013 		ubfx	r3, r3, #5, #1
+ 266              		.loc 1 234 125 is_stmt 0 view .LVU99
+ 267 00c8 C3F34013 		ubfx	r3, r3, #5, #1
  234:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 269              		.loc 1 234 66 discriminator 4 view .LVU100
- 270 00cc C2F8A431 		str	r3, [r2, #420]
+ 268              		.loc 1 234 66 view .LVU100
+ 269 00cc C2F8A431 		str	r3, [r2, #420]
  237:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 271              		.loc 1 237 5 is_stmt 1 discriminator 4 view .LVU101
+ 270              		.loc 1 237 5 is_stmt 1 view .LVU101
  237:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 272              		.loc 1 237 29 is_stmt 0 discriminator 4 view .LVU102
- 273 00d0 189D     		ldr	r5, [sp, #96]
- 274              	.LVL27:
+ 271              		.loc 1 237 29 is_stmt 0 view .LVU102
+ 272 00d0 189D     		ldr	r5, [sp, #96]
+ 273              	.LVL26:
  242:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****     {
- 275              		.loc 1 242 5 is_stmt 1 discriminator 4 view .LVU103
+ 274              		.loc 1 242 5 is_stmt 1 view .LVU103
  101:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** #if UX_MAX_SLAVE_CLASS_DRIVER > 1
- 276              		.loc 1 101 33 is_stmt 0 discriminator 4 view .LVU104
- 277 00d2 4FF00009 		mov	r9, #0
+ 275              		.loc 1 101 33 is_stmt 0 view .LVU104
+ 276 00d2 4FF00009 		mov	r9, #0
  100:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** ULONG                           iad_number_interfaces =  0;
- 278              		.loc 1 100 33 discriminator 4 view .LVU105
- 279 00d6 CB46     		mov	fp, r9
+ 277              		.loc 1 100 33 view .LVU105
+ 278 00d6 CB46     		mov	fp, r9
  117:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 280              		.loc 1 117 14 discriminator 4 view .LVU106
- 281 00d8 CA46     		mov	r10, r9
+ 279              		.loc 1 117 14 view .LVU106
+ 280 00d8 CA46     		mov	r10, r9
   96:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** UX_SLAVE_CLASS_COMMAND          class_command;
- 282              		.loc 1 96 34 discriminator 4 view .LVU107
- 283 00da CDF80490 		str	r9, [sp, #4]
+ 281              		.loc 1 96 34 view .LVU107
+ 282 00da CDF80490 		str	r9, [sp, #4]
  242:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****     {
- 284              		.loc 1 242 11 discriminator 4 view .LVU108
- 285 00de 05E0     		b	.L13
- 286              	.LVL28:
- 287              	.L24:
+ 283              		.loc 1 242 11 view .LVU108
+ 284 00de 05E0     		b	.L13
+ 285              	.LVL27:
+ 286              	.L24:
  231:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 288              		.loc 1 231 127 view .LVU109
- 289 00e0 0121     		movs	r1, #1
- 290 00e2 EDE7     		b	.L12
- 291              	.LVL29:
- 292              	.L14:
+ 287              		.loc 1 231 127 discriminator 2 view .LVU109
+ 288 00e0 0121     		movs	r1, #1
+ 289 00e2 EDE7     		b	.L12
+ 290              	.LVL28:
+ 291              	.L14:
  266:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****         {
- 293              		.loc 1 266 9 is_stmt 1 view .LVU110
+ 292              		.loc 1 266 9 is_stmt 1 view .LVU110
  266:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****         {
- 294              		.loc 1 266 11 is_stmt 0 view .LVU111
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccU5z1Xs.s 			page 14
+ 293              		.loc 1 266 11 is_stmt 0 view .LVU111
+ 294 00e4 042B     		cmp	r3, #4
+ARM GAS  /tmp/cczaVn4d.s 			page 14
 
 
- 295 00e4 042B     		cmp	r3, #4
- 296 00e6 0ED0     		beq	.L28
- 297              	.LVL30:
- 298              	.L15:
+ 295 00e6 0ED0     		beq	.L28
+ 296              	.LVL29:
+ 297              	.L15:
  385:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 299              		.loc 1 385 9 is_stmt 1 view .LVU112
+ 298              		.loc 1 385 9 is_stmt 1 view .LVU112
  385:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 300              		.loc 1 385 33 is_stmt 0 view .LVU113
- 301 00e8 ED1B     		subs	r5, r5, r7
- 302              	.LVL31:
+ 299              		.loc 1 385 33 is_stmt 0 view .LVU113
+ 300 00e8 ED1B     		subs	r5, r5, r7
+ 301              	.LVL30:
  388:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****     }
- 303              		.loc 1 388 9 is_stmt 1 view .LVU114
+ 302              		.loc 1 388 9 is_stmt 1 view .LVU114
  388:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****     }
- 304              		.loc 1 388 26 is_stmt 0 view .LVU115
- 305 00ea 3C44     		add	r4, r4, r7
- 306              	.LVL32:
- 307              	.L13:
+ 303              		.loc 1 388 26 is_stmt 0 view .LVU115
+ 304 00ea 3C44     		add	r4, r4, r7
+ 305              	.LVL31:
+ 306              	.L13:
  242:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****     {
- 308              		.loc 1 242 11 is_stmt 1 view .LVU116
- 309 00ec 002D     		cmp	r5, #0
- 310 00ee 55D0     		beq	.L29
+ 307              		.loc 1 242 36 is_stmt 1 view .LVU116
+ 308 00ec 002D     		cmp	r5, #0
+ 309 00ee 55D0     		beq	.L29
  246:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 311              		.loc 1 246 9 view .LVU117
+ 310              		.loc 1 246 9 view .LVU117
  246:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 312              		.loc 1 246 38 is_stmt 0 view .LVU118
- 313 00f0 2778     		ldrb	r7, [r4]	@ zero_extendqisi2
- 314              	.LVL33:
+ 311              		.loc 1 246 38 is_stmt 0 view .LVU118
+ 312 00f0 2778     		ldrb	r7, [r4]	@ zero_extendqisi2
+ 313              	.LVL32:
  249:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 315              		.loc 1 249 9 is_stmt 1 view .LVU119
+ 314              		.loc 1 249 9 is_stmt 1 view .LVU119
  249:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 316              		.loc 1 249 25 is_stmt 0 view .LVU120
- 317 00f2 6378     		ldrb	r3, [r4, #1]	@ zero_extendqisi2
- 318              	.LVL34:
+ 315              		.loc 1 249 25 is_stmt 0 view .LVU120
+ 316 00f2 6378     		ldrb	r3, [r4, #1]	@ zero_extendqisi2
+ 317              	.LVL33:
  252:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****         {
- 319              		.loc 1 252 9 is_stmt 1 view .LVU121
+ 318              		.loc 1 252 9 is_stmt 1 view .LVU121
  252:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****         {
- 320              		.loc 1 252 11 is_stmt 0 view .LVU122
- 321 00f4 0B2B     		cmp	r3, #11
- 322 00f6 F5D1     		bne	.L14
+ 319              		.loc 1 252 11 is_stmt 0 view .LVU122
+ 320 00f4 0B2B     		cmp	r3, #11
+ 321 00f6 F5D1     		bne	.L14
  256:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 323              		.loc 1 256 13 is_stmt 1 view .LVU123
- 324              	.LVL35:
+ 322              		.loc 1 256 13 is_stmt 1 view .LVU123
+ 323              	.LVL34:
  259:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 325              		.loc 1 259 13 view .LVU124
+ 324              		.loc 1 259 13 view .LVU124
  259:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 326              		.loc 1 259 44 is_stmt 0 view .LVU125
- 327 00f8 94F802B0 		ldrb	fp, [r4, #2]	@ zero_extendqisi2
- 328              	.LVL36:
+ 325              		.loc 1 259 44 is_stmt 0 view .LVU125
+ 326 00f8 94F802B0 		ldrb	fp, [r4, #2]	@ zero_extendqisi2
+ 327              	.LVL35:
  262:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****         }
- 329              		.loc 1 262 13 is_stmt 1 view .LVU126
+ 328              		.loc 1 262 13 is_stmt 1 view .LVU126
  262:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****         }
- 330              		.loc 1 262 46 is_stmt 0 view .LVU127
- 331 00fc 94F80390 		ldrb	r9, [r4, #3]	@ zero_extendqisi2
- 332              	.LVL37:
+ 329              		.loc 1 262 46 is_stmt 0 view .LVU127
+ 330 00fc 94F80390 		ldrb	r9, [r4, #3]	@ zero_extendqisi2
+ 331              	.LVL36:
  256:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 333              		.loc 1 256 22 view .LVU128
- 334 0100 4FF0010A 		mov	r10, #1
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccU5z1Xs.s 			page 15
+ 332              		.loc 1 256 22 view .LVU128
+ 333 0100 4FF0010A 		mov	r10, #1
+ 334 0104 EEE7     		b	.L14
+ARM GAS  /tmp/cczaVn4d.s 			page 15
 
 
- 335 0104 EEE7     		b	.L14
- 336              	.LVL38:
- 337              	.L28:
+ 335              	.LVL37:
+ 336              	.L28:
  270:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****                         _ux_system_interface_descriptor_structure,
- 338              		.loc 1 270 13 is_stmt 1 view .LVU129
- 339 0106 0DAB     		add	r3, sp, #52
- 340              	.LVL39:
+ 337              		.loc 1 270 13 is_stmt 1 view .LVU129
+ 338 0106 0DAB     		add	r3, sp, #52
+ 339              	.LVL38:
  270:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****                         _ux_system_interface_descriptor_structure,
- 341              		.loc 1 270 13 is_stmt 0 view .LVU130
- 342 0108 0922     		movs	r2, #9
- 343 010a 2C49     		ldr	r1, .L33+8
- 344 010c 2046     		mov	r0, r4
- 345 010e FFF7FEFF 		bl	_ux_utility_descriptor_parse
- 346              	.LVL40:
+ 340              		.loc 1 270 13 is_stmt 0 view .LVU130
+ 341 0108 0922     		movs	r2, #9
+ 342 010a 2C49     		ldr	r1, .L33+8
+ 343 010c 2046     		mov	r0, r4
+ 344 010e FFF7FEFF 		bl	_ux_utility_descriptor_parse
+ 345              	.LVL39:
  277:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****             {
- 347              		.loc 1 277 13 is_stmt 1 view .LVU131
+ 346              		.loc 1 277 13 is_stmt 1 view .LVU131
  277:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****             {
- 348              		.loc 1 277 37 is_stmt 0 view .LVU132
- 349 0112 109B     		ldr	r3, [sp, #64]
+ 347              		.loc 1 277 37 is_stmt 0 view .LVU132
+ 348 0112 109B     		ldr	r3, [sp, #64]
  277:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****             {
- 350              		.loc 1 277 16 view .LVU133
- 351 0114 002B     		cmp	r3, #0
- 352 0116 E7D1     		bne	.L15
+ 349              		.loc 1 277 16 view .LVU133
+ 350 0114 002B     		cmp	r3, #0
+ 351 0116 E7D1     		bne	.L15
  281:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****                 {
- 353              		.loc 1 281 17 is_stmt 1 view .LVU134
+ 352              		.loc 1 281 17 is_stmt 1 view .LVU134
  281:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****                 {
- 354              		.loc 1 281 20 is_stmt 0 view .LVU135
- 355 0118 BAF1010F 		cmp	r10, #1
- 356 011c 0CD0     		beq	.L30
+ 353              		.loc 1 281 20 is_stmt 0 view .LVU135
+ 354 0118 BAF1010F 		cmp	r10, #1
+ 355 011c 0CD0     		beq	.L30
  345:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 357              		.loc 1 345 21 is_stmt 1 view .LVU136
+ 356              		.loc 1 345 21 is_stmt 1 view .LVU136
  345:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 358              		.loc 1 345 52 is_stmt 0 view .LVU137
- 359 011e 254B     		ldr	r3, .L33
- 360 0120 1A68     		ldr	r2, [r3]
+ 357              		.loc 1 345 52 is_stmt 0 view .LVU137
+ 358 011e 254B     		ldr	r3, .L33
+ 359 0120 1A68     		ldr	r2, [r3]
  345:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 361              		.loc 1 345 32 view .LVU138
- 362 0122 D2F85831 		ldr	r3, [r2, #344]
- 363              	.LVL41:
+ 360              		.loc 1 345 32 view .LVU138
+ 361 0122 D2F85831 		ldr	r3, [r2, #344]
+ 362              	.LVL40:
  354:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****                         {
- 364              		.loc 1 354 25 is_stmt 1 view .LVU139
+ 363              		.loc 1 354 25 is_stmt 1 view .LVU139
  354:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****                         {
- 365              		.loc 1 354 40 is_stmt 0 view .LVU140
- 366 0126 196C     		ldr	r1, [r3, #64]
+ 364              		.loc 1 354 40 is_stmt 0 view .LVU140
+ 365 0126 196C     		ldr	r1, [r3, #64]
  354:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****                         {
- 367              		.loc 1 354 28 view .LVU141
- 368 0128 0129     		cmp	r1, #1
- 369 012a 29D0     		beq	.L31
- 370              	.LVL42:
- 371              	.L19:
+ 366              		.loc 1 354 28 view .LVU141
+ 367 0128 0129     		cmp	r1, #1
+ 368 012a 29D0     		beq	.L31
+ 369              	.LVL41:
+ 370              	.L19:
  380:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****             }
- 372              		.loc 1 380 17 is_stmt 1 view .LVU142
- 373 012c 0022     		movs	r2, #0
- 374 012e 2946     		mov	r1, r5
- 375 0130 2046     		mov	r0, r4
- 376 0132 FFF7FEFF 		bl	_ux_device_stack_interface_set
- 377              	.LVL43:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccU5z1Xs.s 			page 16
+ 371              		.loc 1 380 17 is_stmt 1 view .LVU142
+ 372 012c 0022     		movs	r2, #0
+ 373 012e 2946     		mov	r1, r5
+ 374 0130 2046     		mov	r0, r4
+ 375 0132 FFF7FEFF 		bl	_ux_device_stack_interface_set
+ 376              	.LVL42:
+ 377 0136 D7E7     		b	.L15
+ARM GAS  /tmp/cczaVn4d.s 			page 16
 
 
- 378 0136 D7E7     		b	.L15
- 379              	.L30:
+ 378              	.L30:
  286:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****                     {
- 380              		.loc 1 286 21 view .LVU143
+ 379              		.loc 1 286 21 view .LVU143
  286:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****                     {
- 381              		.loc 1 286 45 is_stmt 0 view .LVU144
- 382 0138 0F9B     		ldr	r3, [sp, #60]
+ 380              		.loc 1 286 45 is_stmt 0 view .LVU144
+ 381 0138 0F9B     		ldr	r3, [sp, #60]
  286:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****                     {
- 383              		.loc 1 286 24 view .LVU145
- 384 013a 5B45     		cmp	r3, fp
- 385 013c 0BD0     		beq	.L32
+ 382              		.loc 1 286 24 view .LVU145
+ 383 013a 5B45     		cmp	r3, fp
+ 384 013c 0BD0     		beq	.L32
  329:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 386              		.loc 1 329 25 is_stmt 1 view .LVU146
+ 385              		.loc 1 329 25 is_stmt 1 view .LVU146
  329:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 387              		.loc 1 329 42 is_stmt 0 view .LVU147
- 388 013e 1D4A     		ldr	r2, .L33
- 389 0140 1268     		ldr	r2, [r2]
+ 386              		.loc 1 329 42 is_stmt 0 view .LVU147
+ 387 013e 1D4A     		ldr	r2, .L33
+ 388 0140 1268     		ldr	r2, [r2]
  329:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 390              		.loc 1 329 122 view .LVU148
- 391 0142 5633     		adds	r3, r3, #86
- 392 0144 02EB8303 		add	r3, r2, r3, lsl #2
- 393 0148 019A     		ldr	r2, [sp, #4]
- 394 014a 5A60     		str	r2, [r3, #4]
- 395              	.L18:
+ 389              		.loc 1 329 122 view .LVU148
+ 390 0142 5633     		adds	r3, r3, #86
+ 391 0144 02EB8303 		add	r3, r2, r3, lsl #2
+ 392 0148 019A     		ldr	r2, [sp, #4]
+ 393 014a 5A60     		str	r2, [r3, #4]
+ 394              	.L18:
  332:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 396              		.loc 1 332 21 is_stmt 1 view .LVU149
- 397              	.LVL44:
+ 395              		.loc 1 332 21 is_stmt 1 view .LVU149
+ 396              	.LVL43:
  335:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 398              		.loc 1 335 21 view .LVU150
+ 397              		.loc 1 335 21 view .LVU150
  335:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 399              		.loc 1 335 24 is_stmt 0 view .LVU151
- 400 014c B9F10109 		subs	r9, r9, #1
- 401              	.LVL45:
+ 398              		.loc 1 335 24 is_stmt 0 view .LVU151
+ 399 014c B9F10109 		subs	r9, r9, #1
+ 400              	.LVL44:
  335:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 402              		.loc 1 335 24 view .LVU152
- 403 0150 ECD1     		bne	.L19
+ 401              		.loc 1 335 24 view .LVU152
+ 402 0150 ECD1     		bne	.L19
  338:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 404              		.loc 1 338 34 view .LVU153
- 405 0152 CA46     		mov	r10, r9
- 406              	.LVL46:
+ 403              		.loc 1 338 34 view .LVU153
+ 404 0152 CA46     		mov	r10, r9
+ 405              	.LVL45:
  338:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 407              		.loc 1 338 34 view .LVU154
- 408 0154 EAE7     		b	.L19
- 409              	.LVL47:
- 410              	.L32:
+ 406              		.loc 1 338 34 view .LVU154
+ 407 0154 EAE7     		b	.L19
+ 408              	.LVL46:
+ 409              	.L32:
  290:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 411              		.loc 1 290 25 is_stmt 1 view .LVU155
+ 410              		.loc 1 290 25 is_stmt 1 view .LVU155
  290:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 412              		.loc 1 290 56 is_stmt 0 view .LVU156
- 413 0156 174A     		ldr	r2, .L33
- 414 0158 1168     		ldr	r1, [r2]
+ 411              		.loc 1 290 56 is_stmt 0 view .LVU156
+ 412 0156 174A     		ldr	r2, .L33
+ 413 0158 1168     		ldr	r1, [r2]
  290:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 415              		.loc 1 290 36 view .LVU157
- 416 015a D1F85821 		ldr	r2, [r1, #344]
- 417              	.LVL48:
+ 414              		.loc 1 290 36 view .LVU157
+ 415 015a D1F85821 		ldr	r2, [r1, #344]
+ 416              	.LVL47:
  299:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****                             {
- 418              		.loc 1 299 29 is_stmt 1 view .LVU158
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccU5z1Xs.s 			page 17
+ 417              		.loc 1 299 29 is_stmt 1 view .LVU158
+ 299:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****                             {
+ARM GAS  /tmp/cczaVn4d.s 			page 17
 
 
+ 418              		.loc 1 299 44 is_stmt 0 view .LVU159
+ 419 015e 106C     		ldr	r0, [r2, #64]
  299:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****                             {
- 419              		.loc 1 299 44 is_stmt 0 view .LVU159
- 420 015e 106C     		ldr	r0, [r2, #64]
- 299:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****                             {
- 421              		.loc 1 299 32 view .LVU160
- 422 0160 0128     		cmp	r0, #1
- 423 0162 F3D1     		bne	.L18
+ 420              		.loc 1 299 32 view .LVU160
+ 421 0160 0128     		cmp	r0, #1
+ 422 0162 F3D1     		bne	.L18
  303:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****                                     (configuration_value == class_inst -> ux_slave_class_configurat
- 424              		.loc 1 303 33 is_stmt 1 view .LVU161
+ 423              		.loc 1 303 33 is_stmt 1 view .LVU161
  303:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****                                     (configuration_value == class_inst -> ux_slave_class_configurat
- 425              		.loc 1 303 90 is_stmt 0 view .LVU162
- 426 0164 D2F80801 		ldr	r0, [r2, #264]
+ 424              		.loc 1 303 90 is_stmt 0 view .LVU162
+ 425 0164 D2F80801 		ldr	r0, [r2, #264]
  303:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****                                     (configuration_value == class_inst -> ux_slave_class_configurat
- 427              		.loc 1 303 36 view .LVU163
- 428 0168 8342     		cmp	r3, r0
- 429 016a EFD1     		bne	.L18
+ 426              		.loc 1 303 36 view .LVU163
+ 427 0168 8342     		cmp	r3, r0
+ 428 016a EFD1     		bne	.L18
  304:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****                                 {
- 430              		.loc 1 304 72 discriminator 1 view .LVU164
- 431 016c D2F80C01 		ldr	r0, [r2, #268]
+ 429              		.loc 1 304 72 view .LVU164
+ 430 016c D2F80C01 		ldr	r0, [r2, #268]
  303:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****                                     (configuration_value == class_inst -> ux_slave_class_configurat
- 432              		.loc 1 303 126 discriminator 1 view .LVU165
- 433 0170 4045     		cmp	r0, r8
- 434 0172 EBD1     		bne	.L18
+ 431              		.loc 1 303 126 discriminator 1 view .LVU165
+ 432 0170 4045     		cmp	r0, r8
+ 433 0172 EBD1     		bne	.L18
  308:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 435              		.loc 1 308 37 is_stmt 1 view .LVU166
+ 434              		.loc 1 308 37 is_stmt 1 view .LVU166
  308:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 436              		.loc 1 308 134 is_stmt 0 view .LVU167
- 437 0174 5633     		adds	r3, r3, #86
- 438 0176 01EB8301 		add	r1, r1, r3, lsl #2
- 439 017a 4A60     		str	r2, [r1, #4]
+ 435              		.loc 1 308 134 is_stmt 0 view .LVU167
+ 436 0174 5633     		adds	r3, r3, #86
+ 437 0176 01EB8301 		add	r1, r1, r3, lsl #2
+ 438 017a 4A60     		str	r2, [r1, #4]
  311:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 440              		.loc 1 311 37 is_stmt 1 view .LVU168
- 441              	.LVL49:
+ 439              		.loc 1 311 37 is_stmt 1 view .LVU168
+ 440              	.LVL48:
  311:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 442              		.loc 1 311 51 is_stmt 0 view .LVU169
- 443 017c 0192     		str	r2, [sp, #4]
- 444 017e E5E7     		b	.L18
- 445              	.LVL50:
- 446              	.L31:
+ 441              		.loc 1 311 51 is_stmt 0 view .LVU169
+ 442 017c 0192     		str	r2, [sp, #4]
+ 443 017e E5E7     		b	.L18
+ 444              	.LVL49:
+ 445              	.L31:
  358:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****                                     (configuration_value == class_inst -> ux_slave_class_configurat
- 447              		.loc 1 358 29 is_stmt 1 view .LVU170
+ 446              		.loc 1 358 29 is_stmt 1 view .LVU170
  358:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****                                     (configuration_value == class_inst -> ux_slave_class_configurat
- 448              		.loc 1 358 54 is_stmt 0 view .LVU171
- 449 0180 0F99     		ldr	r1, [sp, #60]
+ 447              		.loc 1 358 54 is_stmt 0 view .LVU171
+ 448 0180 0F99     		ldr	r1, [sp, #60]
  358:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****                                     (configuration_value == class_inst -> ux_slave_class_configurat
- 450              		.loc 1 358 86 view .LVU172
- 451 0182 D3F80801 		ldr	r0, [r3, #264]
+ 449              		.loc 1 358 86 view .LVU172
+ 450 0182 D3F80801 		ldr	r0, [r3, #264]
  358:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****                                     (configuration_value == class_inst -> ux_slave_class_configurat
- 452              		.loc 1 358 32 view .LVU173
- 453 0186 8142     		cmp	r1, r0
- 454 0188 D0D1     		bne	.L19
+ 451              		.loc 1 358 32 view .LVU173
+ 452 0186 8142     		cmp	r1, r0
+ 453 0188 D0D1     		bne	.L19
  359:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****                             {
- 455              		.loc 1 359 72 discriminator 1 view .LVU174
- 456 018a D3F80C01 		ldr	r0, [r3, #268]
+ 454              		.loc 1 359 72 view .LVU174
+ 455 018a D3F80C01 		ldr	r0, [r3, #268]
  358:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c ****                                     (configuration_value == class_inst -> ux_slave_class_configurat
- 457              		.loc 1 358 122 discriminator 1 view .LVU175
- 458 018e 4045     		cmp	r0, r8
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccU5z1Xs.s 			page 18
+ 456              		.loc 1 358 122 discriminator 1 view .LVU175
+ 457 018e 4045     		cmp	r0, r8
+ 458 0190 CCD1     		bne	.L19
+ARM GAS  /tmp/cczaVn4d.s 			page 18
 
 
- 459 0190 CCD1     		bne	.L19
  363:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 460              		.loc 1 363 33 is_stmt 1 view .LVU176
+ 459              		.loc 1 363 33 is_stmt 1 view .LVU176
  363:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 461              		.loc 1 363 130 is_stmt 0 view .LVU177
- 462 0192 5631     		adds	r1, r1, #86
- 463 0194 02EB8102 		add	r2, r2, r1, lsl #2
- 464 0198 5360     		str	r3, [r2, #4]
- 465 019a C7E7     		b	.L19
- 466              	.LVL51:
- 467              	.L29:
+ 460              		.loc 1 363 130 is_stmt 0 view .LVU177
+ 461 0192 5631     		adds	r1, r1, #86
+ 462 0194 02EB8102 		add	r2, r2, r1, lsl #2
+ 463 0198 5360     		str	r3, [r2, #4]
+ 464 019a C7E7     		b	.L19
+ 465              	.LVL50:
+ 466              	.L29:
  392:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 468              		.loc 1 392 5 is_stmt 1 view .LVU178
+ 467              		.loc 1 392 5 is_stmt 1 view .LVU178
  392:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 469              		.loc 1 392 37 is_stmt 0 view .LVU179
- 470 019c 0322     		movs	r2, #3
- 471 019e 3262     		str	r2, [r6, #32]
+ 468              		.loc 1 392 37 is_stmt 0 view .LVU179
+ 469 019c 0322     		movs	r2, #3
+ 470 019e 3262     		str	r2, [r6, #32]
  395:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 472              		.loc 1 395 5 is_stmt 1 view .LVU180
+ 471              		.loc 1 395 5 is_stmt 1 view .LVU180
  395:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 473              		.loc 1 395 9 is_stmt 0 view .LVU181
- 474 01a0 B369     		ldr	r3, [r6, #24]
+ 472              		.loc 1 395 9 is_stmt 0 view .LVU181
+ 473 01a0 B369     		ldr	r3, [r6, #24]
  395:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 475              		.loc 1 395 5 view .LVU182
- 476 01a2 1321     		movs	r1, #19
- 477 01a4 3046     		mov	r0, r6
- 478 01a6 9847     		blx	r3
- 479              	.LVL52:
+ 474              		.loc 1 395 5 view .LVU182
+ 475 01a2 1321     		movs	r1, #19
+ 476 01a4 3046     		mov	r0, r6
+ 477 01a6 9847     		blx	r3
+ 478              	.LVL51:
  398:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** }
- 480              		.loc 1 398 5 is_stmt 1 view .LVU183
+ 479              		.loc 1 398 5 is_stmt 1 view .LVU183
  398:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** }
- 481              		.loc 1 398 11 is_stmt 0 view .LVU184
- 482 01a8 78E7     		b	.L1
- 483              	.LVL53:
- 484              	.L21:
+ 480              		.loc 1 398 11 is_stmt 0 view .LVU184
+ 481 01a8 78E7     		b	.L1
+ 482              	.LVL52:
+ 483              	.L21:
  121:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 485              		.loc 1 121 15 view .LVU185
- 486 01aa 0025     		movs	r5, #0
- 487 01ac 76E7     		b	.L1
- 488              	.LVL54:
- 489              	.L22:
+ 484              		.loc 1 121 15 view .LVU185
+ 485 01aa 0025     		movs	r5, #0
+ 486 01ac 76E7     		b	.L1
+ 487              	.LVL53:
+ 488              	.L22:
  161:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 490              		.loc 1 161 15 view .LVU186
- 491 01ae FF25     		movs	r5, #255
- 492              	.LVL55:
+ 489              		.loc 1 161 15 view .LVU186
+ 490 01ae FF25     		movs	r5, #255
+ 491              	.LVL54:
  161:./Middlewares/ST/usbx/common/core/src/ux_device_stack_configuration_set.c **** 
- 493              		.loc 1 161 15 view .LVU187
- 494 01b0 74E7     		b	.L1
- 495              	.L34:
- 496 01b2 00BF     		.align	2
- 497              	.L33:
- 498 01b4 00000000 		.word	_ux_system_slave
- 499 01b8 00000000 		.word	_ux_system_configuration_descriptor_structure
- 500 01bc 00000000 		.word	_ux_system_interface_descriptor_structure
- 501              		.cfi_endproc
- 502              	.LFE11:
- 504              		.text
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccU5z1Xs.s 			page 19
+ 492              		.loc 1 161 15 view .LVU187
+ 493 01b0 74E7     		b	.L1
+ 494              	.L34:
+ 495 01b2 00BF     		.align	2
+ 496              	.L33:
+ 497 01b4 00000000 		.word	_ux_system_slave
+ 498 01b8 00000000 		.word	_ux_system_configuration_descriptor_structure
+ 499 01bc 00000000 		.word	_ux_system_interface_descriptor_structure
+ 500              		.cfi_endproc
+ 501              	.LFE11:
+ 503              		.text
+ 504              	.Letext0:
+ARM GAS  /tmp/cczaVn4d.s 			page 19
 
 
- 505              	.Letext0:
- 506              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
- 507              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
- 508              		.file 4 "./Middlewares/ST/usbx/common/core/inc/ux_api.h"
- 509              		.file 5 "./Middlewares/ST/usbx/common/core/inc/ux_system.h"
- 510              		.file 6 "./Middlewares/ST/usbx/common/core/inc/ux_utility.h"
- 511              		.file 7 "./Middlewares/ST/usbx/common/core/inc/ux_device_stack.h"
- 512              		.file 8 "<built-in>"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccU5z1Xs.s 			page 20
+ 505              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
+ 506              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
+ 507              		.file 4 "./Middlewares/ST/usbx/common/core/inc/ux_api.h"
+ 508              		.file 5 "./Middlewares/ST/usbx/common/core/inc/ux_system.h"
+ 509              		.file 6 "./Middlewares/ST/usbx/common/core/inc/ux_device_stack.h"
+ 510              		.file 7 "./Middlewares/ST/usbx/common/core/inc/ux_utility.h"
+ 511              		.file 8 "<built-in>"
+ARM GAS  /tmp/cczaVn4d.s 			page 20
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 ux_device_stack_configuration_set.c
-C:\Users\Dennis\AppData\Local\Temp\ccU5z1Xs.s:20     .text._ux_device_stack_configuration_set:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccU5z1Xs.s:26     .text._ux_device_stack_configuration_set:00000000 _ux_device_stack_configuration_set
-C:\Users\Dennis\AppData\Local\Temp\ccU5z1Xs.s:498    .text._ux_device_stack_configuration_set:000001b4 $d
+     /tmp/cczaVn4d.s:21     .text._ux_device_stack_configuration_set:00000000 $t
+     /tmp/cczaVn4d.s:27     .text._ux_device_stack_configuration_set:00000000 _ux_device_stack_configuration_set
+     /tmp/cczaVn4d.s:497    .text._ux_device_stack_configuration_set:000001b4 $d
 
 UNDEFINED SYMBOLS
 memset

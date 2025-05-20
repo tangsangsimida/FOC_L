@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 1
+ARM GAS  /tmp/ccu0Aahs.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,16 +19,16 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text._tx_thread_terminate,"ax",%progbits
-  20              		.align	1
-  21              		.global	_tx_thread_terminate
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
-  26              	_tx_thread_terminate:
-  27              	.LVL0:
-  28              	.LFB8:
-  29              		.file 1 "./Middlewares/ST/threadx/common/src/tx_thread_terminate.c"
+  19              		.file 1 "./Middlewares/ST/threadx/common/src/tx_thread_terminate.c"
+  20              		.section	.text._tx_thread_terminate,"ax",%progbits
+  21              		.align	1
+  22              		.global	_tx_thread_terminate
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	_tx_thread_terminate:
+  28              	.LVL0:
+  29              	.LFB8:
    1:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** /**************************************************************************/
    2:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** /*                                                                        */
    3:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 1
   27:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
   28:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** #include "tx_api.h"
   29:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** #include "tx_trace.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 2
+ARM GAS  /tmp/ccu0Aahs.s 			page 2
 
 
   30:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** #include "tx_thread.h"
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 1
   32              		@ args = 0, pretend = 0, frame = 0
   33              		@ frame_needed = 0, uses_anonymous_args = 0
   34              		.loc 1 81 1 is_stmt 0 view .LVU1
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 3
+ARM GAS  /tmp/ccu0Aahs.s 			page 3
 
 
   35 0000 38B5     		push	{r3, r4, r5, lr}
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 1
   21:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /**************************************************************************/
   22:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
   23:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 4
+ARM GAS  /tmp/ccu0Aahs.s 			page 4
 
 
   24:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /**************************************************************************/
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 1
   78:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
   79:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #include <stdlib.h>
   80:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #include <string.h>
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 5
+ARM GAS  /tmp/ccu0Aahs.s 			page 5
 
 
   81:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 1
  135:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /* Define the system timer thread's default stack size and priority.  These are only applicable
  136:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****    if TX_TIMER_PROCESS_IN_ISR is not defined.  */
  137:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 6
+ARM GAS  /tmp/ccu0Aahs.s 			page 6
 
 
  138:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifndef TX_TIMER_THREAD_STACK_SIZE
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 1
  192:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  193:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_PORT_SPECIFIC_BUILD_OPTIONS          (0)
  194:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 7
+ARM GAS  /tmp/ccu0Aahs.s 			page 7
 
 
  195:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 1
  249:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_TIMER_EXTENSION
  250:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  251:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 8
+ARM GAS  /tmp/ccu0Aahs.s 			page 8
 
 
  252:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /* Define the user extension field of the thread control block.  Nothing
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 1
  306:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  307:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** __attribute__( ( always_inline ) ) static inline void __set_control_value(ULONG control_value)
  308:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 9
+ARM GAS  /tmp/ccu0Aahs.s 			page 9
 
 
  309:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     __asm__ volatile (" MSR  CONTROL,%0": : "r" (control_value): "memory" );
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 1
  363:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****    this one, so if the FPCCR.LSPACT bit is set, we need to save the CONTROL.FPCA state, touch the F
  364:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****    the lazy FPU save, then restore the CONTROL.FPCA state. */
  365:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 10
+ARM GAS  /tmp/ccu0Aahs.s 			page 10
 
 
  366:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifndef TX_MISRA_ENABLE
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 1
  420:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                                 _tx_misra_vfp_touch();             
  421:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                                 if (_tx_vfp_state == ((ULONG) 0))  
  422:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                                 {                                  
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 11
+ARM GAS  /tmp/ccu0Aahs.s 			page 11
 
 
  423:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                                     _tx_vfp_state =  _tx_misra_cont
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 1
  477:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     __asm__ volatile (" MRS  %0,IPSR ": "=r" (ipsr_value) );
  478:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     return(ipsr_value);
  479:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 12
+ARM GAS  /tmp/ccu0Aahs.s 			page 12
 
 
  480:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 1
  534:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
  535:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** unsigned int posture;
  536:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifdef TX_PORT_USE_BASEPRI
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 13
+ARM GAS  /tmp/ccu0Aahs.s 			page 13
 
 
  537:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     __asm__ volatile ("MRS  %0, BASEPRI ": "=r" (posture));
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 1
  541:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
   69              		.loc 2 541 5 is_stmt 0 view .LVU15
   70              		.thumb
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 14
+ARM GAS  /tmp/ccu0Aahs.s 			page 14
 
 
   71              		.syntax unified
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 1
  118:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
  119:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c ****     /* Check the specified thread's current status.  */
  120:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c ****     else if (thread_ptr -> tx_thread_state != TX_COMPLETED)
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 15
+ARM GAS  /tmp/ccu0Aahs.s 			page 15
 
 
   98              		.loc 1 120 10 is_stmt 1 view .LVU24
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 1
  157:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** #else
  158:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
  159:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c ****             /* Set the suspending flag.  */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 16
+ARM GAS  /tmp/ccu0Aahs.s 			page 16
 
 
  160:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c ****             thread_ptr -> tx_thread_suspending =  TX_TRUE;
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 1
  474:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
  151              		.loc 2 474 63 view .LVU44
  152              	.LBB78:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 17
+ARM GAS  /tmp/ccu0Aahs.s 			page 17
 
 
  476:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     __asm__ volatile (" MRS  %0,IPSR ": "=r" (ipsr_value) );
@@ -967,7 +967,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 1
  154              		.loc 2 477 5 view .LVU46
  155              		.syntax unified
  156              	@ 477 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
- 157 003e EFF30583 		 MRS  r3,IPSR 
+ 157 003e EFF30582 		 MRS  r2,IPSR 
  158              	@ 0 "" 2
  159              	.LVL8:
  478:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
@@ -978,124 +978,123 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 1
  163              		.syntax unified
  164              	.LBE78:
  165              	.LBE77:
- 166              		.loc 1 175 13 view .LVU49
- 167 0042 404A     		ldr	r2, .L17+4
- 168 0044 1268     		ldr	r2, [r2]
+ 166              		.loc 1 175 13 discriminator 1 view .LVU49
+ 167 0042 404B     		ldr	r3, .L17+4
+ 168 0044 1B68     		ldr	r3, [r3]
  169              	.LVL9:
- 170              		.loc 1 175 13 is_stmt 1 view .LVU50
- 171 0046 1343     		orrs	r3, r2, r3
+ 170              		.loc 1 175 13 is_stmt 1 discriminator 1 view .LVU50
+ 171 0046 1343     		orrs	r3, r3, r2
  172              	.LVL10:
- 173              		.loc 1 175 13 is_stmt 0 view .LVU51
+ 173              		.loc 1 175 13 is_stmt 0 discriminator 1 view .LVU51
  174 0048 03D1     		bne	.L6
- 175              		.loc 1 175 13 discriminator 1 view .LVU52
- 176 004a 3F4B     		ldr	r3, .L17+8
- 177 004c 1B68     		ldr	r3, [r3]
- 178 004e A342     		cmp	r3, r4
- 179 0050 30D0     		beq	.L15
- 180              	.L6:
- 181              	.LBB79:
- 182              		.loc 1 175 13 is_stmt 1 discriminator 4 view .LVU53
- 183              		.loc 1 175 13 discriminator 4 view .LVU54
- 184 0052 4FF0E023 		mov	r3, #-536813568
- 185 0056 D3F8343F 		ldr	r3, [r3, #3892]
- 186              	.LVL11:
+ 175 004a 3F4B     		ldr	r3, .L17+8
+ 176 004c 1B68     		ldr	r3, [r3]
+ 177 004e A342     		cmp	r3, r4
+ 178 0050 30D0     		beq	.L15
+ 179              	.L6:
+ 180              	.LBB79:
+ 181              		.loc 1 175 13 is_stmt 1 discriminator 4 view .LVU52
+ 182              		.loc 1 175 13 discriminator 4 view .LVU53
+ 183 0052 4FF0E023 		mov	r3, #-536813568
+ 184 0056 D3F8343F 		ldr	r3, [r3, #3892]
+ 185              	.LVL11:
+ 186              		.loc 1 175 13 discriminator 4 view .LVU54
  187              		.loc 1 175 13 discriminator 4 view .LVU55
- 188              		.loc 1 175 13 discriminator 4 view .LVU56
- 189 005a 13F0010F 		tst	r3, #1
- 190 005e 0CD0     		beq	.L7
- 191              	.LBB80:
- 192              		.loc 1 175 13 view .LVU57
- 193              		.loc 1 175 13 view .LVU58
- 194              	.LBB81:
- 195              	.LBI81:
+ 188 005a 13F0010F 		tst	r3, #1
+ 189 005e 0CD0     		beq	.L7
+ 190              	.LBB80:
+ 191              		.loc 1 175 13 discriminator 5 view .LVU56
+ 192              		.loc 1 175 13 discriminator 5 view .LVU57
+ 193              	.LBB81:
+ 194              	.LBI81:
  299:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 196              		.loc 2 299 56 view .LVU59
- 197              	.LBB82:
+ 195              		.loc 2 299 56 view .LVU58
+ 196              	.LBB82:
  301:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
- 198              		.loc 2 301 1 view .LVU60
+ 197              		.loc 2 301 1 view .LVU59
  303:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     return(control_value);
- 199              		.loc 2 303 5 view .LVU61
- 200              		.syntax unified
- 201              	@ 303 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
- 202 0060 EFF31483 		 MRS  r3,CONTROL 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 18
+ 198              		.loc 2 303 5 view .LVU60
+ 199              		.syntax unified
+ 200              	@ 303 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+ 201 0060 EFF31483 		 MRS  r3,CONTROL 
+ 202              	@ 0 "" 2
+ARM GAS  /tmp/ccu0Aahs.s 			page 18
 
 
- 203              	@ 0 "" 2
- 204              	.LVL12:
+ 203              	.LVL12:
  304:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
- 205              		.loc 2 304 5 view .LVU62
+ 204              		.loc 2 304 5 view .LVU61
  304:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
- 206              		.loc 2 304 5 is_stmt 0 view .LVU63
- 207              		.thumb
- 208              		.syntax unified
- 209              	.LBE82:
- 210              	.LBE81:
- 211              		.loc 1 175 13 is_stmt 1 view .LVU64
- 212 0064 03F00403 		and	r3, r3, #4
- 213              	.LVL13:
- 214              		.loc 1 175 13 view .LVU65
- 215              		.syntax unified
- 216              	@ 175 "./Middlewares/ST/threadx/common/src/tx_thread_terminate.c" 1
- 217 0068 B0EE400A 		VMOV.F32 s0, s0
- 218              	@ 0 "" 2
- 219              		.loc 1 175 13 view .LVU66
- 220              		.loc 1 175 13 view .LVU67
- 221              		.thumb
- 222              		.syntax unified
- 223 006c 2BB9     		cbnz	r3, .L7
- 224              		.loc 1 175 13 view .LVU68
- 225              	.LBB83:
- 226              	.LBI83:
+ 205              		.loc 2 304 5 is_stmt 0 view .LVU62
+ 206              		.thumb
+ 207              		.syntax unified
+ 208              	.LBE82:
+ 209              	.LBE81:
+ 210              		.loc 1 175 13 is_stmt 1 discriminator 1 view .LVU63
+ 211 0064 03F00403 		and	r3, r3, #4
+ 212              	.LVL13:
+ 213              		.loc 1 175 13 discriminator 1 view .LVU64
+ 214              		.syntax unified
+ 215              	@ 175 "./Middlewares/ST/threadx/common/src/tx_thread_terminate.c" 1
+ 216 0068 B0EE400A 		VMOV.F32 s0, s0
+ 217              	@ 0 "" 2
+ 218              		.loc 1 175 13 discriminator 1 view .LVU65
+ 219              		.loc 1 175 13 discriminator 1 view .LVU66
+ 220              		.thumb
+ 221              		.syntax unified
+ 222 006c 2BB9     		cbnz	r3, .L7
+ 223              		.loc 1 175 13 discriminator 6 view .LVU67
+ 224              	.LBB83:
+ 225              	.LBI83:
  299:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 227              		.loc 2 299 56 view .LVU69
- 228              	.LBB84:
+ 226              		.loc 2 299 56 view .LVU68
+ 227              	.LBB84:
  301:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
- 229              		.loc 2 301 1 view .LVU70
+ 228              		.loc 2 301 1 view .LVU69
  303:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     return(control_value);
- 230              		.loc 2 303 5 view .LVU71
- 231              		.syntax unified
- 232              	@ 303 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
- 233 006e EFF31483 		 MRS  r3,CONTROL 
- 234              	@ 0 "" 2
- 235              	.LVL14:
+ 229              		.loc 2 303 5 view .LVU70
+ 230              		.syntax unified
+ 231              	@ 303 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+ 232 006e EFF31483 		 MRS  r3,CONTROL 
+ 233              	@ 0 "" 2
+ 234              	.LVL14:
  304:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
- 236              		.loc 2 304 5 view .LVU72
+ 235              		.loc 2 304 5 view .LVU71
  304:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
- 237              		.loc 2 304 5 is_stmt 0 view .LVU73
- 238              		.thumb
- 239              		.syntax unified
- 240              	.LBE84:
- 241              	.LBE83:
- 242              		.loc 1 175 13 is_stmt 1 view .LVU74
- 243 0072 23F00403 		bic	r3, r3, #4
- 244              	.LVL15:
- 245              		.loc 1 175 13 view .LVU75
- 246              	.LBB85:
- 247              	.LBI85:
+ 236              		.loc 2 304 5 is_stmt 0 view .LVU72
+ 237              		.thumb
+ 238              		.syntax unified
+ 239              	.LBE84:
+ 240              	.LBE83:
+ 241              		.loc 1 175 13 is_stmt 1 discriminator 1 view .LVU73
+ 242 0072 23F00403 		bic	r3, r3, #4
+ 243              	.LVL15:
+ 244              		.loc 1 175 13 discriminator 1 view .LVU74
+ 245              	.LBB85:
+ 246              	.LBI85:
  307:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 248              		.loc 2 307 55 view .LVU76
- 249              	.LBB86:
+ 247              		.loc 2 307 55 view .LVU75
+ 248              	.LBB86:
  309:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
- 250              		.loc 2 309 5 view .LVU77
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 19
+ 249              		.loc 2 309 5 view .LVU76
+ 250              		.syntax unified
+ARM GAS  /tmp/ccu0Aahs.s 			page 19
 
 
- 251              		.syntax unified
- 252              	@ 309 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
- 253 0076 83F31488 		 MSR  CONTROL,r3
- 254              	@ 0 "" 2
- 255              	.LVL16:
- 256              		.thumb
- 257              		.syntax unified
- 258              	.L7:
+ 251              	@ 309 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+ 252 0076 83F31488 		 MSR  CONTROL,r3
+ 253              	@ 0 "" 2
+ 254              	.LVL16:
+ 255              		.thumb
+ 256              		.syntax unified
+ 257              	.L7:
  309:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
- 259              		.loc 2 309 5 is_stmt 0 view .LVU78
- 260              	.LBE86:
- 261              	.LBE85:
- 262              	.LBE80:
- 263              	.LBE79:
- 264              	.LBE76:
+ 258              		.loc 2 309 5 is_stmt 0 view .LVU77
+ 259              	.LBE86:
+ 260              	.LBE85:
+ 261              	.LBE80:
+ 262              	.LBE79:
+ 263              	.LBE76:
  176:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
  177:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** #ifndef TX_DISABLE_NOTIFY_CALLBACKS
  178:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
@@ -1110,62 +1109,62 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 1
  187:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
  188:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c ****             /* Call actual thread suspension routine.  */
  189:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c ****             _tx_thread_system_suspend(thread_ptr);
- 265              		.loc 1 189 13 is_stmt 1 view .LVU79
- 266 007a 2046     		mov	r0, r4
- 267 007c FFF7FEFF 		bl	_tx_thread_system_suspend
- 268              	.LVL17:
+ 264              		.loc 1 189 13 is_stmt 1 view .LVU78
+ 265 007a 2046     		mov	r0, r4
+ 266 007c FFF7FEFF 		bl	_tx_thread_system_suspend
+ 267              	.LVL17:
  190:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
  191:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c ****             /* Disable interrupts.  */
  192:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c ****             TX_DISABLE
- 269              		.loc 1 192 13 view .LVU80
- 270              	.LBB92:
- 271              	.LBI92:
+ 268              		.loc 1 192 13 view .LVU79
+ 269              	.LBB92:
+ 270              	.LBI92:
  566:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 272              		.loc 2 566 63 view .LVU81
- 273              	.LBB93:
+ 271              		.loc 2 566 63 view .LVU80
+ 272              	.LBB93:
  568:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
- 274              		.loc 2 568 1 view .LVU82
+ 273              		.loc 2 568 1 view .LVU81
  570:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
- 275              		.loc 2 570 5 view .LVU83
- 276              	.LBB94:
- 277              	.LBI94:
+ 274              		.loc 2 570 5 view .LVU82
+ 275              	.LBB94:
+ 276              	.LBI94:
  533:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 278              		.loc 2 533 63 view .LVU84
- 279              	.LBB95:
+ 277              		.loc 2 533 63 view .LVU83
+ 278              	.LBB95:
  535:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifdef TX_PORT_USE_BASEPRI
- 280              		.loc 2 535 1 view .LVU85
+ 279              		.loc 2 535 1 view .LVU84
  539:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 281              		.loc 2 539 5 view .LVU86
- 282              		.syntax unified
- 283              	@ 539 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 20
+ 280              		.loc 2 539 5 view .LVU85
+ 281              		.syntax unified
+ 282              	@ 539 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+ 283 0080 EFF31083 		MRS  r3, PRIMASK 
+ARM GAS  /tmp/ccu0Aahs.s 			page 20
 
 
- 284 0080 EFF31083 		MRS  r3, PRIMASK 
- 285              	@ 0 "" 2
- 286              	.LVL18:
+ 284              	@ 0 "" 2
+ 285              	.LVL18:
  541:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
- 287              		.loc 2 541 5 view .LVU87
+ 286              		.loc 2 541 5 view .LVU86
  541:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
- 288              		.loc 2 541 5 is_stmt 0 view .LVU88
- 289              		.thumb
- 290              		.syntax unified
- 291              	.LBE95:
- 292              	.LBE94:
+ 287              		.loc 2 541 5 is_stmt 0 view .LVU87
+ 288              		.thumb
+ 289              		.syntax unified
+ 290              	.LBE95:
+ 291              	.LBE94:
  575:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 293              		.loc 2 575 5 is_stmt 1 view .LVU89
- 294              		.syntax unified
- 295              	@ 575 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
- 296 0084 72B6     		CPSID i
- 297              	@ 0 "" 2
- 298              		.loc 2 577 5 view .LVU90
- 299              	.LVL19:
- 300              		.thumb
- 301              		.syntax unified
- 302              	.L8:
- 303              		.loc 2 577 5 is_stmt 0 view .LVU91
- 304              	.LBE93:
- 305              	.LBE92:
+ 292              		.loc 2 575 5 is_stmt 1 view .LVU88
+ 293              		.syntax unified
+ 294              	@ 575 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+ 295 0084 72B6     		CPSID i
+ 296              	@ 0 "" 2
+ 297              		.loc 2 577 5 view .LVU89
+ 298              	.LVL19:
+ 299              		.thumb
+ 300              		.syntax unified
+ 301              	.L8:
+ 302              		.loc 2 577 5 is_stmt 0 view .LVU90
+ 303              	.LBE93:
+ 304              	.LBE92:
  193:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** #endif
  194:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c ****         }
  195:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c ****         else
@@ -1198,10 +1197,10 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 1
  222:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** #ifndef TX_NOT_INTERRUPTABLE
  223:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
  224:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c ****             /* Restore interrupts.  */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 21
-
-
  225:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c ****             TX_RESTORE
+ARM GAS  /tmp/ccu0Aahs.s 			page 21
+
+
  226:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** #endif
  227:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
  228:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c ****             /* Call any cleanup routines.  */
@@ -1252,141 +1251,141 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 1
  273:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
  274:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c ****         /* Restore interrupts.  */
  275:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c ****         TX_RESTORE
- 306              		.loc 1 275 9 is_stmt 1 view .LVU92
- 307              	.LBB96:
- 308              	.LBI96:
+ 305              		.loc 1 275 9 is_stmt 1 view .LVU91
+ 306              	.LBB96:
+ 307              	.LBI96:
  556:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 309              		.loc 2 556 55 view .LVU93
- 310              	.LBB97:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 22
+ 308              		.loc 2 556 55 view .LVU92
+ 309              	.LBB97:
+ 562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
+ARM GAS  /tmp/ccu0Aahs.s 			page 22
 
 
+ 310              		.loc 2 562 5 view .LVU93
+ 311              		.syntax unified
+ 312              	@ 562 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+ 313 0086 83F31088 		MSR  PRIMASK,r3
+ 314              	@ 0 "" 2
+ 315              	.LVL20:
  562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 311              		.loc 2 562 5 view .LVU94
- 312              		.syntax unified
- 313              	@ 562 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
- 314 0086 83F31088 		MSR  PRIMASK,r3
- 315              	@ 0 "" 2
- 316              	.LVL20:
- 562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 317              		.loc 2 562 5 is_stmt 0 view .LVU95
- 318              		.thumb
- 319              		.syntax unified
- 320              	.LBE97:
- 321              	.LBE96:
+ 316              		.loc 2 562 5 is_stmt 0 view .LVU94
+ 317              		.thumb
+ 318              		.syntax unified
+ 319              	.LBE97:
+ 320              	.LBE96:
  276:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** #endif
  277:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
  278:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c ****         /* Determine if the application is using mutexes.  */
  279:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c ****         if (_tx_thread_mutex_release != TX_NULL)
- 322              		.loc 1 279 9 is_stmt 1 view .LVU96
- 323              		.loc 1 279 38 is_stmt 0 view .LVU97
- 324 008a 304B     		ldr	r3, .L17+12
- 325              	.LVL21:
- 326              		.loc 1 279 38 view .LVU98
- 327 008c 1B68     		ldr	r3, [r3]
- 328              		.loc 1 279 12 view .LVU99
- 329 008e 0BB1     		cbz	r3, .L12
+ 321              		.loc 1 279 9 is_stmt 1 view .LVU95
+ 322              		.loc 1 279 38 is_stmt 0 view .LVU96
+ 323 008a 304B     		ldr	r3, .L17+12
+ 324              	.LVL21:
+ 325              		.loc 1 279 38 view .LVU97
+ 326 008c 1B68     		ldr	r3, [r3]
+ 327              		.loc 1 279 12 view .LVU98
+ 328 008e 0BB1     		cbz	r3, .L12
  280:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c ****         {
  281:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
  282:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c ****             /* Yes, call the mutex release function via a function pointer that
  283:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c ****                is setup during initialization.  */
  284:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c ****             (_tx_thread_mutex_release)(thread_ptr);
- 330              		.loc 1 284 13 is_stmt 1 view .LVU100
- 331 0090 2046     		mov	r0, r4
- 332 0092 9847     		blx	r3
- 333              	.LVL22:
- 334              	.L12:
+ 329              		.loc 1 284 13 is_stmt 1 view .LVU99
+ 330 0090 2046     		mov	r0, r4
+ 331 0092 9847     		blx	r3
+ 332              	.LVL22:
+ 333              	.L12:
  285:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c ****         }
  286:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
  287:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** #ifndef TX_NOT_INTERRUPTABLE
  288:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
  289:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c ****         /* Disable interrupts.  */
  290:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c ****         TX_DISABLE
- 335              		.loc 1 290 9 view .LVU101
- 336              	.LBB98:
- 337              	.LBI98:
+ 334              		.loc 1 290 9 view .LVU100
+ 335              	.LBB98:
+ 336              	.LBI98:
  566:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 338              		.loc 2 566 63 view .LVU102
- 339              	.LBB99:
+ 337              		.loc 2 566 63 view .LVU101
+ 338              	.LBB99:
  568:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
- 340              		.loc 2 568 1 view .LVU103
+ 339              		.loc 2 568 1 view .LVU102
  570:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
- 341              		.loc 2 570 5 view .LVU104
- 342              	.LBB100:
- 343              	.LBI100:
+ 340              		.loc 2 570 5 view .LVU103
+ 341              	.LBB100:
+ 342              	.LBI100:
  533:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 344              		.loc 2 533 63 view .LVU105
- 345              	.LBB101:
+ 343              		.loc 2 533 63 view .LVU104
+ 344              	.LBB101:
  535:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifdef TX_PORT_USE_BASEPRI
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 23
+ 345              		.loc 2 535 1 view .LVU105
+ARM GAS  /tmp/ccu0Aahs.s 			page 23
 
 
- 346              		.loc 2 535 1 view .LVU106
  539:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 347              		.loc 2 539 5 view .LVU107
- 348              		.syntax unified
- 349              	@ 539 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
- 350 0094 EFF31081 		MRS  r1, PRIMASK 
- 351              	@ 0 "" 2
- 352              	.LVL23:
+ 346              		.loc 2 539 5 view .LVU106
+ 347              		.syntax unified
+ 348              	@ 539 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+ 349 0094 EFF31081 		MRS  r1, PRIMASK 
+ 350              	@ 0 "" 2
+ 351              	.LVL23:
  541:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
- 353              		.loc 2 541 5 view .LVU108
+ 352              		.loc 2 541 5 view .LVU107
  541:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
- 354              		.loc 2 541 5 is_stmt 0 view .LVU109
- 355              		.thumb
- 356              		.syntax unified
- 357              	.LBE101:
- 358              	.LBE100:
+ 353              		.loc 2 541 5 is_stmt 0 view .LVU108
+ 354              		.thumb
+ 355              		.syntax unified
+ 356              	.LBE101:
+ 357              	.LBE100:
  575:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 359              		.loc 2 575 5 is_stmt 1 view .LVU110
- 360              		.syntax unified
- 361              	@ 575 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
- 362 0098 72B6     		CPSID i
- 363              	@ 0 "" 2
- 364              		.loc 2 577 5 view .LVU111
- 365              	.LVL24:
- 366              		.loc 2 577 5 is_stmt 0 view .LVU112
- 367              		.thumb
- 368              		.syntax unified
- 369              	.LBE99:
- 370              	.LBE98:
+ 358              		.loc 2 575 5 is_stmt 1 view .LVU109
+ 359              		.syntax unified
+ 360              	@ 575 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+ 361 0098 72B6     		CPSID i
+ 362              	@ 0 "" 2
+ 363              		.loc 2 577 5 view .LVU110
+ 364              	.LVL24:
+ 365              		.loc 2 577 5 is_stmt 0 view .LVU111
+ 366              		.thumb
+ 367              		.syntax unified
+ 368              	.LBE99:
+ 369              	.LBE98:
  291:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** #endif
  292:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
  293:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c ****         /* Enable preemption.  */
  294:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c ****         _tx_thread_preempt_disable--;
- 371              		.loc 1 294 9 is_stmt 1 view .LVU113
- 372              		.loc 1 294 35 is_stmt 0 view .LVU114
- 373 009a 294A     		ldr	r2, .L17
- 374 009c 1368     		ldr	r3, [r2]
- 375 009e 013B     		subs	r3, r3, #1
- 376 00a0 1360     		str	r3, [r2]
+ 370              		.loc 1 294 9 is_stmt 1 view .LVU112
+ 371              		.loc 1 294 35 is_stmt 0 view .LVU113
+ 372 009a 294A     		ldr	r2, .L17
+ 373 009c 1368     		ldr	r3, [r2]
+ 374 009e 013B     		subs	r3, r3, #1
+ 375 00a0 1360     		str	r3, [r2]
  295:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
  296:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c ****         /* Restore interrupts.  */
  297:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c ****         TX_RESTORE
- 377              		.loc 1 297 9 is_stmt 1 view .LVU115
- 378              	.LVL25:
- 379              	.LBB102:
- 380              	.LBI102:
+ 376              		.loc 1 297 9 is_stmt 1 view .LVU114
+ 377              	.LVL25:
+ 378              	.LBB102:
+ 379              	.LBI102:
  556:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 381              		.loc 2 556 55 view .LVU116
- 382              	.LBB103:
+ 380              		.loc 2 556 55 view .LVU115
+ 381              	.LBB103:
  562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 383              		.loc 2 562 5 view .LVU117
- 384              		.syntax unified
- 385              	@ 562 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
- 386 00a2 81F31088 		MSR  PRIMASK,r1
- 387              	@ 0 "" 2
- 388              	.LVL26:
- 389              		.thumb
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 24
+ 382              		.loc 2 562 5 view .LVU116
+ 383              		.syntax unified
+ 384              	@ 562 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+ 385 00a2 81F31088 		MSR  PRIMASK,r1
+ 386              	@ 0 "" 2
+ 387              	.LVL26:
+ 388              		.thumb
+ 389              		.syntax unified
+ARM GAS  /tmp/ccu0Aahs.s 			page 24
 
 
- 390              		.syntax unified
- 391              	.L3:
+ 390              	.L3:
  562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 392              		.loc 2 562 5 is_stmt 0 view .LVU118
- 393              	.LBE103:
- 394              	.LBE102:
+ 391              		.loc 2 562 5 is_stmt 0 view .LVU117
+ 392              	.LBE103:
+ 393              	.LBE102:
  298:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c ****     }
  299:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c ****     else
  300:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c ****     {
@@ -1397,564 +1396,569 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 1
  305:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
  306:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c ****     /* Check for preemption.  */
  307:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c ****     _tx_thread_system_preempt_check();
- 395              		.loc 1 307 5 is_stmt 1 view .LVU119
- 396 00a6 FFF7FEFF 		bl	_tx_thread_system_preempt_check
- 397              	.LVL27:
+ 394              		.loc 1 307 5 is_stmt 1 view .LVU118
+ 395 00a6 FFF7FEFF 		bl	_tx_thread_system_preempt_check
+ 396              	.LVL27:
  308:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
  309:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c ****     /* Return completion status.  */
  310:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c ****     return(status);
- 398              		.loc 1 310 5 view .LVU120
+ 397              		.loc 1 310 5 view .LVU119
  311:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** }
- 399              		.loc 1 311 1 is_stmt 0 view .LVU121
- 400 00aa 0020     		movs	r0, #0
- 401 00ac 38BD     		pop	{r3, r4, r5, pc}
- 402              	.LVL28:
- 403              	.L14:
+ 398              		.loc 1 311 1 is_stmt 0 view .LVU120
+ 399 00aa 0020     		movs	r0, #0
+ 400 00ac 38BD     		pop	{r3, r4, r5, pc}
+ 401              	.LVL28:
+ 402              	.L14:
  113:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
- 404              		.loc 1 113 9 is_stmt 1 view .LVU122
- 405              	.LBB104:
- 406              	.LBI104:
+ 403              		.loc 1 113 9 is_stmt 1 view .LVU121
+ 404              	.LBB104:
+ 405              	.LBI104:
  556:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 407              		.loc 2 556 55 view .LVU123
- 408              	.LBB105:
+ 406              		.loc 2 556 55 view .LVU122
+ 407              	.LBB105:
  562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 409              		.loc 2 562 5 view .LVU124
- 410              		.syntax unified
- 411              	@ 562 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
- 412 00ae 85F31088 		MSR  PRIMASK,r5
- 413              	@ 0 "" 2
- 414              	.LVL29:
+ 408              		.loc 2 562 5 view .LVU123
+ 409              		.syntax unified
+ 410              	@ 562 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+ 411 00ae 85F31088 		MSR  PRIMASK,r5
+ 412              	@ 0 "" 2
+ 413              	.LVL29:
  562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 415              		.loc 2 562 5 is_stmt 0 view .LVU125
- 416              		.thumb
- 417              		.syntax unified
- 418              	.LBE105:
- 419              	.LBE104:
+ 414              		.loc 2 562 5 is_stmt 0 view .LVU124
+ 415              		.thumb
+ 416              		.syntax unified
+ 417              	.LBE105:
+ 418              	.LBE104:
  116:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c ****     }
- 420              		.loc 1 116 9 is_stmt 1 view .LVU126
+ 419              		.loc 1 116 9 is_stmt 1 view .LVU125
  116:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c ****     }
- 421              		.loc 1 116 9 is_stmt 0 view .LVU127
- 422 00b2 F8E7     		b	.L3
+ 420              		.loc 1 116 9 is_stmt 0 view .LVU126
+ 421 00b2 F8E7     		b	.L3
+ 422              	.LVL30:
  423              	.L15:
  424              	.LBB106:
  425              	.LBB87:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 25
+ARM GAS  /tmp/ccu0Aahs.s 			page 25
 
 
  175:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
- 426              		.loc 1 175 13 is_stmt 1 view .LVU128
+ 426              		.loc 1 175 13 is_stmt 1 discriminator 3 view .LVU127
  175:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
- 427              		.loc 1 175 13 view .LVU129
+ 427              		.loc 1 175 13 discriminator 3 view .LVU128
  428              	.LBB88:
  429              	.LBI88:
  299:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 430              		.loc 2 299 56 view .LVU130
+ 430              		.loc 2 299 56 view .LVU129
  431              	.LBB89:
  301:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
- 432              		.loc 2 301 1 view .LVU131
+ 432              		.loc 2 301 1 view .LVU130
  303:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     return(control_value);
- 433              		.loc 2 303 5 view .LVU132
+ 433              		.loc 2 303 5 view .LVU131
  434              		.syntax unified
  435              	@ 303 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
  436 00b4 EFF31483 		 MRS  r3,CONTROL 
  437              	@ 0 "" 2
- 438              	.LVL30:
+ 438              	.LVL31:
  304:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
- 439              		.loc 2 304 5 view .LVU133
+ 439              		.loc 2 304 5 view .LVU132
  304:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
- 440              		.loc 2 304 5 is_stmt 0 view .LVU134
+ 440              		.loc 2 304 5 is_stmt 0 view .LVU133
  441              		.thumb
  442              		.syntax unified
  443              	.LBE89:
  444              	.LBE88:
  175:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
- 445              		.loc 1 175 13 is_stmt 1 view .LVU135
+ 445              		.loc 1 175 13 is_stmt 1 discriminator 1 view .LVU134
  446 00b8 23F00403 		bic	r3, r3, #4
- 447              	.LVL31:
+ 447              	.LVL32:
  175:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
- 448              		.loc 1 175 13 view .LVU136
+ 448              		.loc 1 175 13 discriminator 1 view .LVU135
  449              	.LBB90:
  450              	.LBI90:
  307:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 451              		.loc 2 307 55 view .LVU137
+ 451              		.loc 2 307 55 view .LVU136
  452              	.LBB91:
  309:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
- 453              		.loc 2 309 5 view .LVU138
+ 453              		.loc 2 309 5 view .LVU137
  454              		.syntax unified
  455              	@ 309 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
  456 00bc 83F31488 		 MSR  CONTROL,r3
  457              	@ 0 "" 2
+ 458              	.LVL33:
  310:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
- 458              		.loc 2 310 1 is_stmt 0 view .LVU139
- 459              		.thumb
- 460              		.syntax unified
- 461 00c0 DBE7     		b	.L7
- 462              	.LVL32:
- 463              	.L5:
+ 459              		.loc 2 310 1 is_stmt 0 view .LVU138
+ 460              		.thumb
+ 461              		.syntax unified
+ 462 00c0 DBE7     		b	.L7
+ 463              	.LVL34:
+ 464              	.L5:
  310:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
- 464              		.loc 2 310 1 view .LVU140
- 465              	.LBE91:
- 466              	.LBE90:
- 467              	.LBE87:
- 468              	.LBE106:
- 199:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 26
+ 465              		.loc 2 310 1 view .LVU139
+ 466              	.LBE91:
+ 467              	.LBE90:
+ 468              	.LBE87:
+ 469              	.LBE106:
+ARM GAS  /tmp/ccu0Aahs.s 			page 26
 
 
- 469              		.loc 1 199 13 is_stmt 1 view .LVU141
  199:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
- 470              		.loc 1 199 43 is_stmt 0 view .LVU142
- 471 00c2 0223     		movs	r3, #2
- 472 00c4 2363     		str	r3, [r4, #48]
+ 470              		.loc 1 199 13 is_stmt 1 view .LVU140
+ 199:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
+ 471              		.loc 1 199 43 is_stmt 0 view .LVU141
+ 472 00c2 0223     		movs	r3, #2
+ 473 00c4 2363     		str	r3, [r4, #48]
  206:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
- 473              		.loc 1 206 13 is_stmt 1 view .LVU143
+ 474              		.loc 1 206 13 is_stmt 1 view .LVU142
  206:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
- 474              		.loc 1 206 48 is_stmt 0 view .LVU144
- 475 00c6 0123     		movs	r3, #1
- 476 00c8 A363     		str	r3, [r4, #56]
+ 475              		.loc 1 206 48 is_stmt 0 view .LVU143
+ 476 00c6 0123     		movs	r3, #1
+ 477 00c8 A363     		str	r3, [r4, #56]
  209:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
- 477              		.loc 1 209 13 is_stmt 1 view .LVU145
+ 478              		.loc 1 209 13 is_stmt 1 view .LVU144
  209:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
- 478              		.loc 1 209 29 is_stmt 0 view .LVU146
- 479 00ca A36E     		ldr	r3, [r4, #104]
- 480              	.LVL33:
+ 479              		.loc 1 209 29 is_stmt 0 view .LVU145
+ 480 00ca A36E     		ldr	r3, [r4, #104]
+ 481              	.LVL35:
  215:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** #else
- 481              		.loc 1 215 13 is_stmt 1 view .LVU147
+ 482              		.loc 1 215 13 is_stmt 1 view .LVU146
  215:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** #else
- 482              		.loc 1 215 33 is_stmt 0 view .LVU148
- 483 00cc D4F8AC10 		ldr	r1, [r4, #172]
- 484              	.LVL34:
+ 483              		.loc 1 215 33 is_stmt 0 view .LVU147
+ 484 00cc D4F8AC10 		ldr	r1, [r4, #172]
+ 485              	.LVL36:
  225:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** #endif
- 485              		.loc 1 225 13 is_stmt 1 view .LVU149
- 486              	.LBB107:
- 487              	.LBI107:
+ 486              		.loc 1 225 13 is_stmt 1 view .LVU148
+ 487              	.LBB107:
+ 488              	.LBI107:
  556:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 488              		.loc 2 556 55 view .LVU150
- 489              	.LBB108:
+ 489              		.loc 2 556 55 view .LVU149
+ 490              	.LBB108:
  562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 490              		.loc 2 562 5 view .LVU151
- 491              		.syntax unified
- 492              	@ 562 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
- 493 00d0 85F31088 		MSR  PRIMASK,r5
- 494              	@ 0 "" 2
- 495              	.LVL35:
+ 491              		.loc 2 562 5 view .LVU150
+ 492              		.syntax unified
+ 493              	@ 562 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+ 494 00d0 85F31088 		MSR  PRIMASK,r5
+ 495              	@ 0 "" 2
+ 496              	.LVL37:
  562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 496              		.loc 2 562 5 is_stmt 0 view .LVU152
- 497              		.thumb
- 498              		.syntax unified
- 499              	.LBE108:
- 500              	.LBE107:
+ 497              		.loc 2 562 5 is_stmt 0 view .LVU151
+ 498              		.thumb
+ 499              		.syntax unified
+ 500              	.LBE108:
+ 501              	.LBE107:
  229:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c ****             {
- 501              		.loc 1 229 13 is_stmt 1 view .LVU153
+ 502              		.loc 1 229 13 is_stmt 1 view .LVU152
  229:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c ****             {
- 502              		.loc 1 229 16 is_stmt 0 view .LVU154
- 503 00d4 0BB1     		cbz	r3, .L9
+ 503              		.loc 1 229 16 is_stmt 0 view .LVU153
+ 504 00d4 0BB1     		cbz	r3, .L9
  233:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c ****             }
- 504              		.loc 1 233 17 is_stmt 1 view .LVU155
- 505 00d6 2046     		mov	r0, r4
- 506 00d8 9847     		blx	r3
- 507              	.LVL36:
- 508              	.L9:
+ 505              		.loc 1 233 17 is_stmt 1 view .LVU154
+ 506 00d6 2046     		mov	r0, r4
+ 507 00d8 9847     		blx	r3
+ 508              	.LVL38:
+ 509              	.L9:
  239:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** #endif
- 509              		.loc 1 239 13 view .LVU156
- 510              	.LBB109:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 27
+ 510              		.loc 1 239 13 view .LVU155
+ARM GAS  /tmp/ccu0Aahs.s 			page 27
 
 
- 511              	.LBI109:
+ 511              	.LBB109:
+ 512              	.LBI109:
  566:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 512              		.loc 2 566 63 view .LVU157
- 513              	.LBB110:
+ 513              		.loc 2 566 63 view .LVU156
+ 514              	.LBB110:
  568:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
- 514              		.loc 2 568 1 view .LVU158
+ 515              		.loc 2 568 1 view .LVU157
  570:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
- 515              		.loc 2 570 5 view .LVU159
- 516              	.LBB111:
- 517              	.LBI111:
+ 516              		.loc 2 570 5 view .LVU158
+ 517              	.LBB111:
+ 518              	.LBI111:
  533:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 518              		.loc 2 533 63 view .LVU160
- 519              	.LBB112:
+ 519              		.loc 2 533 63 view .LVU159
+ 520              	.LBB112:
  535:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifdef TX_PORT_USE_BASEPRI
- 520              		.loc 2 535 1 view .LVU161
+ 521              		.loc 2 535 1 view .LVU160
  539:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 521              		.loc 2 539 5 view .LVU162
- 522              		.syntax unified
- 523              	@ 539 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
- 524 00da EFF31083 		MRS  r3, PRIMASK 
- 525              	@ 0 "" 2
- 526              	.LVL37:
+ 522              		.loc 2 539 5 view .LVU161
+ 523              		.syntax unified
+ 524              	@ 539 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+ 525 00da EFF31083 		MRS  r3, PRIMASK 
+ 526              	@ 0 "" 2
+ 527              	.LVL39:
  541:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
- 527              		.loc 2 541 5 view .LVU163
+ 528              		.loc 2 541 5 view .LVU162
  541:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
- 528              		.loc 2 541 5 is_stmt 0 view .LVU164
- 529              		.thumb
- 530              		.syntax unified
- 531              	.LBE112:
- 532              	.LBE111:
+ 529              		.loc 2 541 5 is_stmt 0 view .LVU163
+ 530              		.thumb
+ 531              		.syntax unified
+ 532              	.LBE112:
+ 533              	.LBE111:
  575:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 533              		.loc 2 575 5 is_stmt 1 view .LVU165
- 534              		.syntax unified
- 535              	@ 575 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
- 536 00de 72B6     		CPSID i
- 537              	@ 0 "" 2
- 538              		.loc 2 577 5 view .LVU166
- 539              	.LVL38:
- 540              		.loc 2 577 5 is_stmt 0 view .LVU167
- 541              		.thumb
- 542              		.syntax unified
- 543              	.LBE110:
- 544              	.LBE109:
+ 534              		.loc 2 575 5 is_stmt 1 view .LVU164
+ 535              		.syntax unified
+ 536              	@ 575 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+ 537 00de 72B6     		CPSID i
+ 538              	@ 0 "" 2
+ 539              		.loc 2 577 5 view .LVU165
+ 540              	.LVL40:
+ 541              		.loc 2 577 5 is_stmt 0 view .LVU166
+ 542              		.thumb
+ 543              		.syntax unified
+ 544              	.LBE110:
+ 545              	.LBE109:
  243:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
- 545              		.loc 1 243 13 is_stmt 1 view .LVU168
+ 546              		.loc 1 243 13 is_stmt 1 view .LVU167
  243:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
- 546              		.loc 1 243 48 is_stmt 0 view .LVU169
- 547 00e0 0022     		movs	r2, #0
- 548 00e2 A263     		str	r2, [r4, #56]
+ 547              		.loc 1 243 48 is_stmt 0 view .LVU168
+ 548 00e0 0022     		movs	r2, #0
+ 549 00e2 A263     		str	r2, [r4, #56]
  248:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** #endif
- 549              		.loc 1 248 13 is_stmt 1 view .LVU170
- 550              	.LVL39:
- 551              	.LBB113:
- 552              	.LBI113:
+ 550              		.loc 1 248 13 is_stmt 1 view .LVU169
+ 551              	.LVL41:
+ 552              	.LBB113:
+ 553              	.LBI113:
  556:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 553              		.loc 2 556 55 view .LVU171
- 554              	.LBB114:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 28
+ 554              		.loc 2 556 55 view .LVU170
+ARM GAS  /tmp/ccu0Aahs.s 			page 28
 
 
+ 555              	.LBB114:
  562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 555              		.loc 2 562 5 view .LVU172
- 556              		.syntax unified
- 557              	@ 562 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
- 558 00e4 83F31088 		MSR  PRIMASK,r3
- 559              	@ 0 "" 2
- 560              	.LVL40:
+ 556              		.loc 2 562 5 view .LVU171
+ 557              		.syntax unified
+ 558              	@ 562 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+ 559 00e4 83F31088 		MSR  PRIMASK,r3
+ 560              	@ 0 "" 2
+ 561              	.LVL42:
  562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 561              		.loc 2 562 5 is_stmt 0 view .LVU173
- 562              		.thumb
- 563              		.syntax unified
- 564              	.LBE114:
- 565              	.LBE113:
- 566              	.LBB115:
+ 562              		.loc 2 562 5 is_stmt 0 view .LVU172
+ 563              		.thumb
+ 564              		.syntax unified
+ 565              	.LBE114:
+ 566              	.LBE113:
+ 567              	.LBB115:
  252:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
- 567              		.loc 1 252 13 is_stmt 1 view .LVU174
+ 568              		.loc 1 252 13 is_stmt 1 view .LVU173
  252:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
- 568              		.loc 1 252 13 view .LVU175
- 569              	.LBB116:
- 570              	.LBI116:
+ 569              		.loc 1 252 13 view .LVU174
+ 570              	.LBB116:
+ 571              	.LBI116:
  474:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 571              		.loc 2 474 63 view .LVU176
- 572              	.LBB117:
+ 572              		.loc 2 474 63 view .LVU175
+ 573              	.LBB117:
  476:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     __asm__ volatile (" MRS  %0,IPSR ": "=r" (ipsr_value) );
- 573              		.loc 2 476 1 view .LVU177
+ 574              		.loc 2 476 1 view .LVU176
  477:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     return(ipsr_value);
- 574              		.loc 2 477 5 view .LVU178
- 575              		.syntax unified
- 576              	@ 477 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
- 577 00e8 EFF30583 		 MRS  r3,IPSR 
- 578              	@ 0 "" 2
- 579              	.LVL41:
+ 575              		.loc 2 477 5 view .LVU177
+ 576              		.syntax unified
+ 577              	@ 477 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+ 578 00e8 EFF30582 		 MRS  r2,IPSR 
+ 579              	@ 0 "" 2
+ 580              	.LVL43:
  478:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
- 580              		.loc 2 478 5 view .LVU179
+ 581              		.loc 2 478 5 view .LVU178
  478:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
- 581              		.loc 2 478 5 is_stmt 0 view .LVU180
- 582              		.thumb
- 583              		.syntax unified
- 584              	.LBE117:
- 585              	.LBE116:
+ 582              		.loc 2 478 5 is_stmt 0 view .LVU179
+ 583              		.thumb
+ 584              		.syntax unified
+ 585              	.LBE117:
+ 586              	.LBE116:
  252:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
- 586              		.loc 1 252 13 view .LVU181
- 587 00ec 154A     		ldr	r2, .L17+4
- 588 00ee 1268     		ldr	r2, [r2]
- 589              	.LVL42:
+ 587              		.loc 1 252 13 discriminator 1 view .LVU180
+ 588 00ec 154B     		ldr	r3, .L17+4
+ 589              	.LVL44:
  252:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
- 590              		.loc 1 252 13 is_stmt 1 view .LVU182
- 591 00f0 1343     		orrs	r3, r2, r3
- 592              	.LVL43:
+ 590              		.loc 1 252 13 discriminator 1 view .LVU181
+ 591 00ee 1B68     		ldr	r3, [r3]
+ 592              	.LVL45:
  252:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
- 593              		.loc 1 252 13 is_stmt 0 view .LVU183
- 594 00f2 03D1     		bne	.L10
+ 593              		.loc 1 252 13 is_stmt 1 discriminator 1 view .LVU182
+ 594 00f0 1343     		orrs	r3, r3, r2
+ 595              	.LVL46:
  252:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
- 595              		.loc 1 252 13 discriminator 1 view .LVU184
- 596 00f4 144B     		ldr	r3, .L17+8
- 597 00f6 1B68     		ldr	r3, [r3]
- 598 00f8 A342     		cmp	r3, r4
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 29
+ 596              		.loc 1 252 13 is_stmt 0 discriminator 1 view .LVU183
+ 597 00f2 03D1     		bne	.L10
+ 598 00f4 144B     		ldr	r3, .L17+8
+ARM GAS  /tmp/ccu0Aahs.s 			page 29
 
 
- 599 00fa 17D0     		beq	.L16
- 600              	.L10:
- 601              	.LBB118:
+ 599 00f6 1B68     		ldr	r3, [r3]
+ 600 00f8 A342     		cmp	r3, r4
+ 601 00fa 17D0     		beq	.L16
+ 602              	.L10:
+ 603              	.LBB118:
  252:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
- 602              		.loc 1 252 13 is_stmt 1 discriminator 4 view .LVU185
+ 604              		.loc 1 252 13 is_stmt 1 discriminator 4 view .LVU184
  252:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
- 603              		.loc 1 252 13 discriminator 4 view .LVU186
- 604 00fc 4FF0E023 		mov	r3, #-536813568
- 605 0100 D3F8343F 		ldr	r3, [r3, #3892]
- 606              	.LVL44:
+ 605              		.loc 1 252 13 discriminator 4 view .LVU185
+ 606 00fc 4FF0E023 		mov	r3, #-536813568
+ 607 0100 D3F8343F 		ldr	r3, [r3, #3892]
+ 608              	.LVL47:
  252:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
- 607              		.loc 1 252 13 discriminator 4 view .LVU187
+ 609              		.loc 1 252 13 discriminator 4 view .LVU186
  252:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
- 608              		.loc 1 252 13 discriminator 4 view .LVU188
- 609 0104 13F0010F 		tst	r3, #1
- 610 0108 0CD0     		beq	.L11
- 611              	.LBB119:
+ 610              		.loc 1 252 13 discriminator 4 view .LVU187
+ 611 0104 13F0010F 		tst	r3, #1
+ 612 0108 0CD0     		beq	.L11
+ 613              	.LBB119:
  252:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
- 612              		.loc 1 252 13 view .LVU189
+ 614              		.loc 1 252 13 discriminator 5 view .LVU188
  252:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
- 613              		.loc 1 252 13 view .LVU190
- 614              	.LBB120:
- 615              	.LBI120:
+ 615              		.loc 1 252 13 discriminator 5 view .LVU189
+ 616              	.LBB120:
+ 617              	.LBI120:
  299:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 616              		.loc 2 299 56 view .LVU191
- 617              	.LBB121:
+ 618              		.loc 2 299 56 view .LVU190
+ 619              	.LBB121:
  301:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
- 618              		.loc 2 301 1 view .LVU192
+ 620              		.loc 2 301 1 view .LVU191
  303:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     return(control_value);
- 619              		.loc 2 303 5 view .LVU193
- 620              		.syntax unified
- 621              	@ 303 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
- 622 010a EFF31483 		 MRS  r3,CONTROL 
- 623              	@ 0 "" 2
- 624              	.LVL45:
+ 621              		.loc 2 303 5 view .LVU192
+ 622              		.syntax unified
+ 623              	@ 303 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+ 624 010a EFF31483 		 MRS  r3,CONTROL 
+ 625              	@ 0 "" 2
+ 626              	.LVL48:
  304:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
- 625              		.loc 2 304 5 view .LVU194
+ 627              		.loc 2 304 5 view .LVU193
  304:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
- 626              		.loc 2 304 5 is_stmt 0 view .LVU195
- 627              		.thumb
- 628              		.syntax unified
- 629              	.LBE121:
- 630              	.LBE120:
+ 628              		.loc 2 304 5 is_stmt 0 view .LVU194
+ 629              		.thumb
+ 630              		.syntax unified
+ 631              	.LBE121:
+ 632              	.LBE120:
  252:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
- 631              		.loc 1 252 13 is_stmt 1 view .LVU196
- 632 010e 03F00403 		and	r3, r3, #4
- 633              	.LVL46:
+ 633              		.loc 1 252 13 is_stmt 1 discriminator 1 view .LVU195
+ 634 010e 03F00403 		and	r3, r3, #4
+ 635              	.LVL49:
  252:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
- 634              		.loc 1 252 13 view .LVU197
- 635              		.syntax unified
- 636              	@ 252 "./Middlewares/ST/threadx/common/src/tx_thread_terminate.c" 1
- 637 0112 B0EE400A 		VMOV.F32 s0, s0
- 638              	@ 0 "" 2
+ 636              		.loc 1 252 13 discriminator 1 view .LVU196
+ 637              		.syntax unified
+ 638              	@ 252 "./Middlewares/ST/threadx/common/src/tx_thread_terminate.c" 1
+ 639 0112 B0EE400A 		VMOV.F32 s0, s0
+ 640              	@ 0 "" 2
  252:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
- 639              		.loc 1 252 13 view .LVU198
- 252:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
- 640              		.loc 1 252 13 view .LVU199
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 30
+ 641              		.loc 1 252 13 discriminator 1 view .LVU197
+ARM GAS  /tmp/ccu0Aahs.s 			page 30
 
 
- 641              		.thumb
- 642              		.syntax unified
- 643 0116 2BB9     		cbnz	r3, .L11
  252:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
- 644              		.loc 1 252 13 view .LVU200
- 645              	.LBB122:
- 646              	.LBI122:
+ 642              		.loc 1 252 13 discriminator 1 view .LVU198
+ 643              		.thumb
+ 644              		.syntax unified
+ 645 0116 2BB9     		cbnz	r3, .L11
+ 252:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
+ 646              		.loc 1 252 13 discriminator 6 view .LVU199
+ 647              	.LBB122:
+ 648              	.LBI122:
  299:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 647              		.loc 2 299 56 view .LVU201
- 648              	.LBB123:
+ 649              		.loc 2 299 56 view .LVU200
+ 650              	.LBB123:
  301:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
- 649              		.loc 2 301 1 view .LVU202
+ 651              		.loc 2 301 1 view .LVU201
  303:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     return(control_value);
- 650              		.loc 2 303 5 view .LVU203
- 651              		.syntax unified
- 652              	@ 303 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
- 653 0118 EFF31483 		 MRS  r3,CONTROL 
- 654              	@ 0 "" 2
- 655              	.LVL47:
+ 652              		.loc 2 303 5 view .LVU202
+ 653              		.syntax unified
+ 654              	@ 303 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+ 655 0118 EFF31483 		 MRS  r3,CONTROL 
+ 656              	@ 0 "" 2
+ 657              	.LVL50:
  304:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
- 656              		.loc 2 304 5 view .LVU204
+ 658              		.loc 2 304 5 view .LVU203
  304:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
- 657              		.loc 2 304 5 is_stmt 0 view .LVU205
- 658              		.thumb
- 659              		.syntax unified
- 660              	.LBE123:
- 661              	.LBE122:
+ 659              		.loc 2 304 5 is_stmt 0 view .LVU204
+ 660              		.thumb
+ 661              		.syntax unified
+ 662              	.LBE123:
+ 663              	.LBE122:
  252:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
- 662              		.loc 1 252 13 is_stmt 1 view .LVU206
- 663 011c 23F00403 		bic	r3, r3, #4
- 664              	.LVL48:
+ 664              		.loc 1 252 13 is_stmt 1 discriminator 1 view .LVU205
+ 665 011c 23F00403 		bic	r3, r3, #4
+ 666              	.LVL51:
  252:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
- 665              		.loc 1 252 13 view .LVU207
- 666              	.LBB124:
- 667              	.LBI124:
+ 667              		.loc 1 252 13 discriminator 1 view .LVU206
+ 668              	.LBB124:
+ 669              	.LBI124:
  307:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 668              		.loc 2 307 55 view .LVU208
- 669              	.LBB125:
+ 670              		.loc 2 307 55 view .LVU207
+ 671              	.LBB125:
  309:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
- 670              		.loc 2 309 5 view .LVU209
- 671              		.syntax unified
- 672              	@ 309 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
- 673 0120 83F31488 		 MSR  CONTROL,r3
- 674              	@ 0 "" 2
- 675              	.LVL49:
- 676              		.thumb
- 677              		.syntax unified
- 678              	.L11:
+ 672              		.loc 2 309 5 view .LVU208
+ 673              		.syntax unified
+ 674              	@ 309 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+ 675 0120 83F31488 		 MSR  CONTROL,r3
+ 676              	@ 0 "" 2
+ 677              	.LVL52:
+ 678              		.thumb
+ 679              		.syntax unified
+ 680              	.L11:
  309:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
- 679              		.loc 2 309 5 is_stmt 0 view .LVU210
- 680              	.LBE125:
- 681              	.LBE124:
- 682              	.LBE119:
- 683              	.LBE118:
- 684              	.LBE115:
+ 681              		.loc 2 309 5 is_stmt 0 view .LVU209
+ 682              	.LBE125:
+ 683              	.LBE124:
+ 684              	.LBE119:
+ 685              	.LBE118:
+ 686              	.LBE115:
+ARM GAS  /tmp/ccu0Aahs.s 			page 31
+
+
  268:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** #endif
- 685              		.loc 1 268 13 is_stmt 1 view .LVU211
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 31
-
-
- 686              	.LBB131:
- 687              	.LBI131:
+ 687              		.loc 1 268 13 is_stmt 1 view .LVU210
+ 688              	.LBB131:
+ 689              	.LBI131:
  566:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 688              		.loc 2 566 63 view .LVU212
- 689              	.LBB132:
+ 690              		.loc 2 566 63 view .LVU211
+ 691              	.LBB132:
  568:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
- 690              		.loc 2 568 1 view .LVU213
+ 692              		.loc 2 568 1 view .LVU212
  570:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
- 691              		.loc 2 570 5 view .LVU214
- 692              	.LBB133:
- 693              	.LBI133:
+ 693              		.loc 2 570 5 view .LVU213
+ 694              	.LBB133:
+ 695              	.LBI133:
  533:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 694              		.loc 2 533 63 view .LVU215
- 695              	.LBB134:
+ 696              		.loc 2 533 63 view .LVU214
+ 697              	.LBB134:
  535:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifdef TX_PORT_USE_BASEPRI
- 696              		.loc 2 535 1 view .LVU216
+ 698              		.loc 2 535 1 view .LVU215
  539:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 697              		.loc 2 539 5 view .LVU217
- 698              		.syntax unified
- 699              	@ 539 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
- 700 0124 EFF31083 		MRS  r3, PRIMASK 
- 701              	@ 0 "" 2
- 702              	.LVL50:
+ 699              		.loc 2 539 5 view .LVU216
+ 700              		.syntax unified
+ 701              	@ 539 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+ 702 0124 EFF31083 		MRS  r3, PRIMASK 
+ 703              	@ 0 "" 2
+ 704              	.LVL53:
  541:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
- 703              		.loc 2 541 5 view .LVU218
+ 705              		.loc 2 541 5 view .LVU217
  541:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
- 704              		.loc 2 541 5 is_stmt 0 view .LVU219
- 705              		.thumb
- 706              		.syntax unified
- 707              	.LBE134:
- 708              	.LBE133:
+ 706              		.loc 2 541 5 is_stmt 0 view .LVU218
+ 707              		.thumb
+ 708              		.syntax unified
+ 709              	.LBE134:
+ 710              	.LBE133:
  575:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 709              		.loc 2 575 5 is_stmt 1 view .LVU220
- 710              		.syntax unified
- 711              	@ 575 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
- 712 0128 72B6     		CPSID i
- 713              	@ 0 "" 2
- 714              		.loc 2 577 5 view .LVU221
- 715              	.LVL51:
- 716              		.loc 2 577 5 is_stmt 0 view .LVU222
- 717              		.thumb
- 718              		.syntax unified
- 719 012a ACE7     		b	.L8
- 720              	.LVL52:
- 721              	.L16:
- 722              		.loc 2 577 5 view .LVU223
- 723              	.LBE132:
- 724              	.LBE131:
- 725              	.LBB135:
- 726              	.LBB126:
+ 711              		.loc 2 575 5 is_stmt 1 view .LVU219
+ 712              		.syntax unified
+ 713              	@ 575 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+ 714 0128 72B6     		CPSID i
+ 715              	@ 0 "" 2
+ 716              		.loc 2 577 5 view .LVU220
+ 717              	.LVL54:
+ 718              		.loc 2 577 5 is_stmt 0 view .LVU221
+ 719              		.thumb
+ 720              		.syntax unified
+ 721 012a ACE7     		b	.L8
+ 722              	.LVL55:
+ 723              	.L16:
+ 724              		.loc 2 577 5 view .LVU222
+ 725              	.LBE132:
+ 726              	.LBE131:
+ 727              	.LBB135:
+ 728              	.LBB126:
  252:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
- 727              		.loc 1 252 13 is_stmt 1 view .LVU224
+ 729              		.loc 1 252 13 is_stmt 1 discriminator 3 view .LVU223
  252:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
- 728              		.loc 1 252 13 view .LVU225
- 729              	.LBB127:
- 730              	.LBI127:
+ 730              		.loc 1 252 13 discriminator 3 view .LVU224
+ 731              	.LBB127:
+ARM GAS  /tmp/ccu0Aahs.s 			page 32
+
+
+ 732              	.LBI127:
  299:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 32
-
-
- 731              		.loc 2 299 56 view .LVU226
- 732              	.LBB128:
+ 733              		.loc 2 299 56 view .LVU225
+ 734              	.LBB128:
  301:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
- 733              		.loc 2 301 1 view .LVU227
+ 735              		.loc 2 301 1 view .LVU226
  303:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     return(control_value);
- 734              		.loc 2 303 5 view .LVU228
- 735              		.syntax unified
- 736              	@ 303 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
- 737 012c EFF31483 		 MRS  r3,CONTROL 
- 738              	@ 0 "" 2
- 739              	.LVL53:
+ 736              		.loc 2 303 5 view .LVU227
+ 737              		.syntax unified
+ 738              	@ 303 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+ 739 012c EFF31483 		 MRS  r3,CONTROL 
+ 740              	@ 0 "" 2
+ 741              	.LVL56:
  304:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
- 740              		.loc 2 304 5 view .LVU229
+ 742              		.loc 2 304 5 view .LVU228
  304:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
- 741              		.loc 2 304 5 is_stmt 0 view .LVU230
- 742              		.thumb
- 743              		.syntax unified
- 744              	.LBE128:
- 745              	.LBE127:
+ 743              		.loc 2 304 5 is_stmt 0 view .LVU229
+ 744              		.thumb
+ 745              		.syntax unified
+ 746              	.LBE128:
+ 747              	.LBE127:
  252:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
- 746              		.loc 1 252 13 is_stmt 1 view .LVU231
- 747 0130 23F00403 		bic	r3, r3, #4
- 748              	.LVL54:
+ 748              		.loc 1 252 13 is_stmt 1 discriminator 1 view .LVU230
+ 749 0130 23F00403 		bic	r3, r3, #4
+ 750              	.LVL57:
  252:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c **** 
- 749              		.loc 1 252 13 view .LVU232
- 750              	.LBB129:
- 751              	.LBI129:
+ 751              		.loc 1 252 13 discriminator 1 view .LVU231
+ 752              	.LBB129:
+ 753              	.LBI129:
  307:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 752              		.loc 2 307 55 view .LVU233
- 753              	.LBB130:
+ 754              		.loc 2 307 55 view .LVU232
+ 755              	.LBB130:
  309:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
- 754              		.loc 2 309 5 view .LVU234
- 755              		.syntax unified
- 756              	@ 309 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
- 757 0134 83F31488 		 MSR  CONTROL,r3
- 758              	@ 0 "" 2
+ 756              		.loc 2 309 5 view .LVU233
+ 757              		.syntax unified
+ 758              	@ 309 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+ 759 0134 83F31488 		 MSR  CONTROL,r3
+ 760              	@ 0 "" 2
+ 761              	.LVL58:
  310:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
- 759              		.loc 2 310 1 is_stmt 0 view .LVU235
- 760              		.thumb
- 761              		.syntax unified
- 762 0138 F4E7     		b	.L11
- 763              	.LVL55:
- 764              	.L4:
+ 762              		.loc 2 310 1 is_stmt 0 view .LVU234
+ 763              		.thumb
+ 764              		.syntax unified
+ 765 0138 F4E7     		b	.L11
+ 766              	.LVL59:
+ 767              	.L4:
  310:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
- 765              		.loc 2 310 1 view .LVU236
- 766              	.LBE130:
- 767              	.LBE129:
- 768              	.LBE126:
- 769              	.LBE135:
+ 768              		.loc 2 310 1 view .LVU235
+ 769              	.LBE130:
+ 770              	.LBE129:
+ 771              	.LBE126:
+ 772              	.LBE135:
  303:./Middlewares/ST/threadx/common/src/tx_thread_terminate.c ****     }
- 770              		.loc 1 303 9 is_stmt 1 view .LVU237
- 771              	.LBB136:
- 772              	.LBI136:
+ 773              		.loc 1 303 9 is_stmt 1 view .LVU236
+ 774              	.LBB136:
+ 775              	.LBI136:
  556:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 773              		.loc 2 556 55 view .LVU238
- 774              	.LBB137:
+ARM GAS  /tmp/ccu0Aahs.s 			page 33
+
+
+ 776              		.loc 2 556 55 view .LVU237
+ 777              	.LBB137:
  562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 33
-
-
- 775              		.loc 2 562 5 view .LVU239
- 776              		.syntax unified
- 777              	@ 562 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
- 778 013a 85F31088 		MSR  PRIMASK,r5
- 779              	@ 0 "" 2
+ 778              		.loc 2 562 5 view .LVU238
+ 779              		.syntax unified
+ 780              	@ 562 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+ 781 013a 85F31088 		MSR  PRIMASK,r5
+ 782              	@ 0 "" 2
+ 783              	.LVL60:
  564:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
- 780              		.loc 2 564 1 is_stmt 0 view .LVU240
- 781              		.thumb
- 782              		.syntax unified
- 783 013e B2E7     		b	.L3
- 784              	.L18:
- 785              		.align	2
- 786              	.L17:
- 787 0140 00000000 		.word	_tx_thread_preempt_disable
- 788 0144 00000000 		.word	_tx_thread_system_state
- 789 0148 00000000 		.word	_tx_thread_current_ptr
- 790 014c 00000000 		.word	_tx_thread_mutex_release
- 791              	.LBE137:
- 792              	.LBE136:
- 793              		.cfi_endproc
- 794              	.LFE8:
- 796              		.text
- 797              	.Letext0:
- 798              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
- 799              		.file 4 "./Middlewares/ST/threadx/common/inc/tx_thread.h"
- 800              		.file 5 "./Middlewares/ST/threadx/common/inc/tx_timer.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s 			page 34
+ 784              		.loc 2 564 1 is_stmt 0 view .LVU239
+ 785              		.thumb
+ 786              		.syntax unified
+ 787 013e B2E7     		b	.L3
+ 788              	.L18:
+ 789              		.align	2
+ 790              	.L17:
+ 791 0140 00000000 		.word	_tx_thread_preempt_disable
+ 792 0144 00000000 		.word	_tx_thread_system_state
+ 793 0148 00000000 		.word	_tx_thread_current_ptr
+ 794 014c 00000000 		.word	_tx_thread_mutex_release
+ 795              	.LBE137:
+ 796              	.LBE136:
+ 797              		.cfi_endproc
+ 798              	.LFE8:
+ 800              		.text
+ 801              	.Letext0:
+ 802              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
+ 803              		.file 4 "./Middlewares/ST/threadx/common/inc/tx_thread.h"
+ 804              		.file 5 "./Middlewares/ST/threadx/common/inc/tx_timer.h"
+ARM GAS  /tmp/ccu0Aahs.s 			page 34
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 tx_thread_terminate.c
-C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s:20     .text._tx_thread_terminate:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s:26     .text._tx_thread_terminate:00000000 _tx_thread_terminate
-C:\Users\Dennis\AppData\Local\Temp\ccSfxaTQ.s:787    .text._tx_thread_terminate:00000140 $d
+     /tmp/ccu0Aahs.s:21     .text._tx_thread_terminate:00000000 $t
+     /tmp/ccu0Aahs.s:27     .text._tx_thread_terminate:00000000 _tx_thread_terminate
+     /tmp/ccu0Aahs.s:791    .text._tx_thread_terminate:00000140 $d
 
 UNDEFINED SYMBOLS
 _tx_timer_system_deactivate

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc5Smz6o.s 			page 1
+ARM GAS  /tmp/ccsOeJpq.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,16 +19,16 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc5Smz6o.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text._tx_semaphore_get,"ax",%progbits
-  20              		.align	1
-  21              		.global	_tx_semaphore_get
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
-  26              	_tx_semaphore_get:
-  27              	.LVL0:
-  28              	.LFB8:
-  29              		.file 1 "./Middlewares/ST/threadx/common/src/tx_semaphore_get.c"
+  19              		.file 1 "./Middlewares/ST/threadx/common/src/tx_semaphore_get.c"
+  20              		.section	.text._tx_semaphore_get,"ax",%progbits
+  21              		.align	1
+  22              		.global	_tx_semaphore_get
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	_tx_semaphore_get:
+  28              	.LVL0:
+  29              	.LFB8:
    1:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c **** /**************************************************************************/
    2:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c **** /*                                                                        */
    3:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc5Smz6o.s 			page 1
   27:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c **** 
   28:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c **** #include "tx_api.h"
   29:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c **** #include "tx_trace.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc5Smz6o.s 			page 2
+ARM GAS  /tmp/ccsOeJpq.s 			page 2
 
 
   30:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c **** #include "tx_thread.h"
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc5Smz6o.s 			page 1
   36              	.LCFI0:
   37              		.cfi_def_cfa_offset 16
   38              		.cfi_offset 3, -16
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc5Smz6o.s 			page 3
+ARM GAS  /tmp/ccsOeJpq.s 			page 3
 
 
   39              		.cfi_offset 4, -12
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc5Smz6o.s 			page 1
   27:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*                                                                        */
   28:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*    tx_port.h                                         Cortex-M4/GNU     */
   29:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*                                                           6.1.10       */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc5Smz6o.s 			page 4
+ARM GAS  /tmp/ccsOeJpq.s 			page 4
 
 
   30:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*                                                                        */
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc5Smz6o.s 			page 1
   84:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define __asm__ __asm                       /* Define to make all inline asm look similar */
   85:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifdef  TX_ENABLE_IAR_LIBRARY_SUPPORT
   86:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #include <yvals.h>
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc5Smz6o.s 			page 5
+ARM GAS  /tmp/ccsOeJpq.s 			page 5
 
 
   87:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc5Smz6o.s 			page 1
  141:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  142:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifndef TX_TIMER_THREAD_PRIORITY
  143:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_TIMER_THREAD_PRIORITY                0           /* Default timer thread priority    */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc5Smz6o.s 			page 6
+ARM GAS  /tmp/ccsOeJpq.s 			page 6
 
 
  144:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc5Smz6o.s 			page 1
  198:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****    a function call.  */
  199:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  200:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifdef TX_MISRA_ENABLE
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc5Smz6o.s 			page 7
+ARM GAS  /tmp/ccsOeJpq.s 			page 7
 
 
  201:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_DISABLE_INLINE
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc5Smz6o.s 			page 1
  255:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifndef TX_THREAD_USER_EXTENSION
  256:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_THREAD_USER_EXTENSION
  257:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc5Smz6o.s 			page 8
+ARM GAS  /tmp/ccsOeJpq.s 			page 8
 
 
  258:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc5Smz6o.s 			page 1
  312:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_VFP_TOUCH()  __asm__ volatile ("VMOV.F32 s0, s0");
  313:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  314:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #elif defined(__CC_ARM) /* ARM Compiler 5 */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc5Smz6o.s 			page 9
+ARM GAS  /tmp/ccsOeJpq.s 			page 9
 
 
  315:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc5Smz6o.s 			page 1
  369:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                     ULONG  _tx_system_state;                       
  370:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                         _tx_system_state =  TX_THREAD_GET_SYSTEM_ST
  371:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                         if ((_tx_system_state == ((ULONG) 0)) && ((
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc5Smz6o.s 			page 10
+ARM GAS  /tmp/ccsOeJpq.s 			page 10
 
 
  372:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                         {                                          
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc5Smz6o.s 			page 1
  426:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                                 }                                  
  427:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                             }                                      
  428:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                         }                                          
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc5Smz6o.s 			page 11
+ARM GAS  /tmp/ccsOeJpq.s 			page 11
 
 
  429:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                     }
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc5Smz6o.s 			page 1
  483:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #elif defined(__ICCARM__)   /* IAR */
  484:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  485:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_THREAD_GET_SYSTEM_STATE()        (_tx_thread_system_state | __get_IPSR())
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc5Smz6o.s 			page 12
+ARM GAS  /tmp/ccsOeJpq.s 			page 12
 
 
  486:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc5Smz6o.s 			page 1
  540:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
  541:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     return(posture);
  542:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc5Smz6o.s 			page 13
+ARM GAS  /tmp/ccsOeJpq.s 			page 13
 
 
  543:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc5Smz6o.s 			page 1
  571:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  572:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifdef TX_PORT_USE_BASEPRI
  573:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     __set_basepri_value(TX_PORT_BASEPRI);
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc5Smz6o.s 			page 14
+ARM GAS  /tmp/ccsOeJpq.s 			page 14
 
 
  574:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #else
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc5Smz6o.s 			page 1
  556:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
   99              		.loc 2 556 55 view .LVU26
  100              	.LBB21:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc5Smz6o.s 			page 15
+ARM GAS  /tmp/ccsOeJpq.s 			page 15
 
 
  562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
@@ -847,15 +847,18 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc5Smz6o.s 			page 1
  103              	@ 562 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
  104 0010 82F31088 		MSR  PRIMASK,r2
  105              	@ 0 "" 2
- 106              		.thumb
- 107              		.syntax unified
- 108              	.LBE21:
- 109              	.LBE20:
+ 106              	.LVL5:
+ 562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
+ 107              		.loc 2 562 5 is_stmt 0 view .LVU28
+ 108              		.thumb
+ 109              		.syntax unified
+ 110              	.LBE21:
+ 111              	.LBE20:
   88:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c **** 
- 110              		.loc 1 88 12 is_stmt 0 view .LVU28
- 111 0014 0020     		movs	r0, #0
- 112              	.LVL5:
- 113              	.L1:
+ 112              		.loc 1 88 12 view .LVU29
+ 113 0014 0020     		movs	r0, #0
+ 114              	.LVL6:
+ 115              	.L1:
  117:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c ****     }
  118:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c **** 
  119:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c ****     /* Determine if the request specifies suspension.  */
@@ -895,12 +898,12 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc5Smz6o.s 			page 1
  153:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c ****             /* Setup cleanup information, i.e. this semaphore control
  154:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c ****                block.  */
  155:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c ****             thread_ptr -> tx_thread_suspend_control_block =  (VOID *) semaphore_ptr;
+ARM GAS  /tmp/ccsOeJpq.s 			page 16
+
+
  156:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c **** 
  157:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c **** #ifndef TX_NOT_INTERRUPTABLE
  158:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc5Smz6o.s 			page 16
-
-
  159:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c ****             /* Increment the suspension sequence number, which is used to identify
  160:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c ****                this suspension event.  */
  161:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c ****             thread_ptr -> tx_thread_suspension_sequence++;
@@ -955,12 +958,12 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc5Smz6o.s 			page 1
  210:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c ****             /* Restore interrupts.  */
  211:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c ****             TX_RESTORE
  212:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c **** 
+ARM GAS  /tmp/ccsOeJpq.s 			page 17
+
+
  213:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c ****             /* Call actual thread suspension routine.  */
  214:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c ****             _tx_thread_system_suspend(thread_ptr);
  215:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c **** #endif
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc5Smz6o.s 			page 17
-
-
  216:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c **** 
  217:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c ****             /* Return the completion status.  */
  218:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c ****             status =  thread_ptr -> tx_thread_suspend_status;
@@ -979,280 +982,281 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc5Smz6o.s 			page 1
  231:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c ****     /* Return completion status.  */
  232:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c ****     return(status);
  233:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c **** }
- 114              		.loc 1 233 1 view .LVU29
- 115 0016 38BD     		pop	{r3, r4, r5, pc}
- 116              	.LVL6:
- 117              	.L2:
+ 116              		.loc 1 233 1 view .LVU30
+ 117 0016 38BD     		pop	{r3, r4, r5, pc}
+ 118              	.LVL7:
+ 119              	.L2:
  120:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c ****     {
- 118              		.loc 1 120 10 is_stmt 1 view .LVU30
+ 120              		.loc 1 120 10 is_stmt 1 view .LVU31
  120:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c ****     {
- 119              		.loc 1 120 13 is_stmt 0 view .LVU31
- 120 0018 0029     		cmp	r1, #0
- 121 001a 30D0     		beq	.L4
+ 121              		.loc 1 120 13 is_stmt 0 view .LVU32
+ 122 0018 0029     		cmp	r1, #0
+ 123 001a 30D0     		beq	.L4
  124:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c ****         {
- 122              		.loc 1 124 9 is_stmt 1 view .LVU32
+ 124              		.loc 1 124 9 is_stmt 1 view .LVU33
  124:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c ****         {
- 123              		.loc 1 124 40 is_stmt 0 view .LVU33
- 124 001c 1A4B     		ldr	r3, .L10
- 125 001e 1B68     		ldr	r3, [r3]
+ 125              		.loc 1 124 40 is_stmt 0 view .LVU34
+ 126 001c 1A4B     		ldr	r3, .L10
+ 127 001e 1B68     		ldr	r3, [r3]
  124:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c ****         {
- 126              		.loc 1 124 12 view .LVU34
- 127 0020 13BB     		cbnz	r3, .L9
+ 128              		.loc 1 124 12 view .LVU35
+ 129 0020 13BB     		cbnz	r3, .L9
  148:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c **** 
- 128              		.loc 1 148 13 is_stmt 1 view .LVU35
- 129 0022 1A4B     		ldr	r3, .L10+4
- 130 0024 1C68     		ldr	r4, [r3]
- 131              	.LVL7:
+ 130              		.loc 1 148 13 is_stmt 1 view .LVU36
+ 131 0022 1A4B     		ldr	r3, .L10+4
+ 132 0024 1C68     		ldr	r4, [r3]
+ 133              	.LVL8:
  151:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c **** 
- 132              		.loc 1 151 13 view .LVU36
+ 134              		.loc 1 151 13 view .LVU37
  151:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c **** 
- 133              		.loc 1 151 53 is_stmt 0 view .LVU37
- 134 0026 1A4B     		ldr	r3, .L10+8
- 135 0028 A366     		str	r3, [r4, #104]
+ 135              		.loc 1 151 53 is_stmt 0 view .LVU38
+ 136 0026 1A4B     		ldr	r3, .L10+8
+ 137 0028 A366     		str	r3, [r4, #104]
  155:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c **** 
- 136              		.loc 1 155 13 is_stmt 1 view .LVU38
+ 138              		.loc 1 155 13 is_stmt 1 view .LVU39
  155:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c **** 
- 137              		.loc 1 155 59 is_stmt 0 view .LVU39
- 138 002a E066     		str	r0, [r4, #108]
+ 139              		.loc 1 155 59 is_stmt 0 view .LVU40
+ 140 002a E066     		str	r0, [r4, #108]
  161:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c **** #endif
- 139              		.loc 1 161 13 is_stmt 1 view .LVU40
- 161:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c **** #endif
- 140              		.loc 1 161 24 is_stmt 0 view .LVU41
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc5Smz6o.s 			page 18
+ARM GAS  /tmp/ccsOeJpq.s 			page 18
 
 
- 141 002c D4F8AC30 		ldr	r3, [r4, #172]
+ 141              		.loc 1 161 13 is_stmt 1 view .LVU41
  161:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c **** #endif
- 142              		.loc 1 161 56 view .LVU42
- 143 0030 0133     		adds	r3, r3, #1
- 144 0032 C4F8AC30 		str	r3, [r4, #172]
+ 142              		.loc 1 161 24 is_stmt 0 view .LVU42
+ 143 002c D4F8AC30 		ldr	r3, [r4, #172]
+ 161:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c **** #endif
+ 144              		.loc 1 161 56 view .LVU43
+ 145 0030 0133     		adds	r3, r3, #1
+ 146 0032 C4F8AC30 		str	r3, [r4, #172]
  165:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c ****             {
- 145              		.loc 1 165 13 is_stmt 1 view .LVU43
+ 147              		.loc 1 165 13 is_stmt 1 view .LVU44
  165:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c ****             {
- 146              		.loc 1 165 31 is_stmt 0 view .LVU44
- 147 0036 0369     		ldr	r3, [r0, #16]
+ 148              		.loc 1 165 31 is_stmt 0 view .LVU45
+ 149 0036 0369     		ldr	r3, [r0, #16]
  165:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c ****             {
- 148              		.loc 1 165 16 view .LVU45
- 149 0038 D3B9     		cbnz	r3, .L6
+ 150              		.loc 1 165 16 view .LVU46
+ 151 0038 D3B9     		cbnz	r3, .L6
  170:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c ****                 thread_ptr -> tx_thread_suspended_next =                thread_ptr;
- 150              		.loc 1 170 17 is_stmt 1 view .LVU46
+ 152              		.loc 1 170 17 is_stmt 1 view .LVU47
  170:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c ****                 thread_ptr -> tx_thread_suspended_next =                thread_ptr;
- 151              		.loc 1 170 63 is_stmt 0 view .LVU47
- 152 003a C460     		str	r4, [r0, #12]
+ 153              		.loc 1 170 63 is_stmt 0 view .LVU48
+ 154 003a C460     		str	r4, [r0, #12]
  171:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c ****                 thread_ptr -> tx_thread_suspended_previous =            thread_ptr;
- 153              		.loc 1 171 17 is_stmt 1 view .LVU48
+ 155              		.loc 1 171 17 is_stmt 1 view .LVU49
  171:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c ****                 thread_ptr -> tx_thread_suspended_previous =            thread_ptr;
- 154              		.loc 1 171 56 is_stmt 0 view .LVU49
- 155 003c 2467     		str	r4, [r4, #112]
+ 156              		.loc 1 171 56 is_stmt 0 view .LVU50
+ 157 003c 2467     		str	r4, [r4, #112]
  172:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c ****             }
- 156              		.loc 1 172 17 is_stmt 1 view .LVU50
+ 158              		.loc 1 172 17 is_stmt 1 view .LVU51
  172:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c ****             }
- 157              		.loc 1 172 60 is_stmt 0 view .LVU51
- 158 003e 6467     		str	r4, [r4, #116]
- 159              	.L7:
+ 159              		.loc 1 172 60 is_stmt 0 view .LVU52
+ 160 003e 6467     		str	r4, [r4, #116]
+ 161              	.L7:
  187:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c **** 
- 160              		.loc 1 187 13 is_stmt 1 view .LVU52
+ 162              		.loc 1 187 13 is_stmt 1 view .LVU53
  187:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c **** 
- 161              		.loc 1 187 27 is_stmt 0 view .LVU53
- 162 0040 0369     		ldr	r3, [r0, #16]
+ 163              		.loc 1 187 27 is_stmt 0 view .LVU54
+ 164 0040 0369     		ldr	r3, [r0, #16]
  187:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c **** 
- 163              		.loc 1 187 58 view .LVU54
- 164 0042 0133     		adds	r3, r3, #1
- 165 0044 0361     		str	r3, [r0, #16]
+ 165              		.loc 1 187 58 view .LVU55
+ 166 0042 0133     		adds	r3, r3, #1
+ 167 0044 0361     		str	r3, [r0, #16]
  190:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c **** 
- 166              		.loc 1 190 13 is_stmt 1 view .LVU55
+ 168              		.loc 1 190 13 is_stmt 1 view .LVU56
  190:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c **** 
- 167              		.loc 1 190 43 is_stmt 0 view .LVU56
- 168 0046 0623     		movs	r3, #6
- 169 0048 2363     		str	r3, [r4, #48]
+ 169              		.loc 1 190 43 is_stmt 0 view .LVU57
+ 170 0046 0623     		movs	r3, #6
+ 171 0048 2363     		str	r3, [r4, #48]
  202:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c **** 
- 170              		.loc 1 202 13 is_stmt 1 view .LVU57
+ 172              		.loc 1 202 13 is_stmt 1 view .LVU58
  202:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c **** 
- 171              		.loc 1 202 48 is_stmt 0 view .LVU58
- 172 004a 0123     		movs	r3, #1
- 173 004c A363     		str	r3, [r4, #56]
+ 173              		.loc 1 202 48 is_stmt 0 view .LVU59
+ 174 004a 0123     		movs	r3, #1
+ 175 004c A363     		str	r3, [r4, #56]
  205:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c **** 
- 174              		.loc 1 205 13 is_stmt 1 view .LVU59
+ 176              		.loc 1 205 13 is_stmt 1 view .LVU60
  205:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c **** 
- 175              		.loc 1 205 77 is_stmt 0 view .LVU60
- 176 004e E164     		str	r1, [r4, #76]
- 208:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c **** 
- 177              		.loc 1 208 13 is_stmt 1 view .LVU61
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc5Smz6o.s 			page 19
+ 177              		.loc 1 205 77 is_stmt 0 view .LVU61
+ARM GAS  /tmp/ccsOeJpq.s 			page 19
 
 
+ 178 004e E164     		str	r1, [r4, #76]
  208:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c **** 
- 178              		.loc 1 208 39 is_stmt 0 view .LVU62
- 179 0050 0D49     		ldr	r1, .L10
- 180              	.LVL8:
+ 179              		.loc 1 208 13 is_stmt 1 view .LVU62
  208:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c **** 
- 181              		.loc 1 208 39 view .LVU63
- 182 0052 0B68     		ldr	r3, [r1]
- 183 0054 0133     		adds	r3, r3, #1
- 184 0056 0B60     		str	r3, [r1]
+ 180              		.loc 1 208 39 is_stmt 0 view .LVU63
+ 181 0050 0D49     		ldr	r1, .L10
+ 182              	.LVL9:
+ 208:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c **** 
+ 183              		.loc 1 208 39 view .LVU64
+ 184 0052 0B68     		ldr	r3, [r1]
+ 185 0054 0133     		adds	r3, r3, #1
+ 186 0056 0B60     		str	r3, [r1]
  211:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c **** 
- 185              		.loc 1 211 13 is_stmt 1 view .LVU64
- 186              	.LVL9:
- 187              	.LBB22:
- 188              	.LBI22:
+ 187              		.loc 1 211 13 is_stmt 1 view .LVU65
+ 188              	.LVL10:
+ 189              	.LBB22:
+ 190              	.LBI22:
  556:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 189              		.loc 2 556 55 view .LVU65
- 190              	.LBB23:
+ 191              		.loc 2 556 55 view .LVU66
+ 192              	.LBB23:
  562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 191              		.loc 2 562 5 view .LVU66
- 192              		.syntax unified
- 193              	@ 562 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
- 194 0058 82F31088 		MSR  PRIMASK,r2
- 195              	@ 0 "" 2
- 196              	.LVL10:
+ 193              		.loc 2 562 5 view .LVU67
+ 194              		.syntax unified
+ 195              	@ 562 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+ 196 0058 82F31088 		MSR  PRIMASK,r2
+ 197              	@ 0 "" 2
+ 198              	.LVL11:
  562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 197              		.loc 2 562 5 is_stmt 0 view .LVU67
- 198              		.thumb
- 199              		.syntax unified
- 200              	.LBE23:
- 201              	.LBE22:
+ 199              		.loc 2 562 5 is_stmt 0 view .LVU68
+ 200              		.thumb
+ 201              		.syntax unified
+ 202              	.LBE23:
+ 203              	.LBE22:
  214:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c **** #endif
- 202              		.loc 1 214 13 is_stmt 1 view .LVU68
- 203 005c 2046     		mov	r0, r4
- 204              	.LVL11:
+ 204              		.loc 1 214 13 is_stmt 1 view .LVU69
+ 205 005c 2046     		mov	r0, r4
+ 206              	.LVL12:
  214:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c **** #endif
- 205              		.loc 1 214 13 is_stmt 0 view .LVU69
- 206 005e FFF7FEFF 		bl	_tx_thread_system_suspend
- 207              	.LVL12:
+ 207              		.loc 1 214 13 is_stmt 0 view .LVU70
+ 208 005e FFF7FEFF 		bl	_tx_thread_system_suspend
+ 209              	.LVL13:
  218:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c ****         }
- 208              		.loc 1 218 13 is_stmt 1 view .LVU70
+ 210              		.loc 1 218 13 is_stmt 1 view .LVU71
  218:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c ****         }
- 209              		.loc 1 218 20 is_stmt 0 view .LVU71
- 210 0062 D4F88400 		ldr	r0, [r4, #132]
- 211              	.LVL13:
+ 211              		.loc 1 218 20 is_stmt 0 view .LVU72
+ 212 0062 D4F88400 		ldr	r0, [r4, #132]
+ 213              	.LVL14:
  218:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c ****         }
- 212              		.loc 1 218 20 view .LVU72
- 213 0066 D6E7     		b	.L1
- 214              	.LVL14:
- 215              	.L9:
+ 214              		.loc 1 218 20 view .LVU73
+ 215 0066 D6E7     		b	.L1
+ 216              	.LVL15:
+ 217              	.L9:
  128:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c **** 
- 216              		.loc 1 128 13 is_stmt 1 view .LVU73
- 217              	.LBB24:
- 218              	.LBI24:
+ 218              		.loc 1 128 13 is_stmt 1 view .LVU74
+ 219              	.LBB24:
+ 220              	.LBI24:
  556:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 219              		.loc 2 556 55 view .LVU74
- 220              	.LBB25:
+ARM GAS  /tmp/ccsOeJpq.s 			page 20
+
+
+ 221              		.loc 2 556 55 view .LVU75
+ 222              	.LBB25:
  562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc5Smz6o.s 			page 20
-
-
- 221              		.loc 2 562 5 view .LVU75
- 222              		.syntax unified
- 223              	@ 562 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
- 224 0068 82F31088 		MSR  PRIMASK,r2
- 225              	@ 0 "" 2
- 226              	.LVL15:
+ 223              		.loc 2 562 5 view .LVU76
+ 224              		.syntax unified
+ 225              	@ 562 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+ 226 0068 82F31088 		MSR  PRIMASK,r2
+ 227              	@ 0 "" 2
+ 228              	.LVL16:
  562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 227              		.loc 2 562 5 is_stmt 0 view .LVU76
- 228              		.thumb
- 229              		.syntax unified
- 230              	.LBE25:
- 231              	.LBE24:
+ 229              		.loc 2 562 5 is_stmt 0 view .LVU77
+ 230              		.thumb
+ 231              		.syntax unified
+ 232              	.LBE25:
+ 233              	.LBE24:
  131:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c ****         }
- 232              		.loc 1 131 13 is_stmt 1 view .LVU77
+ 234              		.loc 1 131 13 is_stmt 1 view .LVU78
  131:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c ****         }
- 233              		.loc 1 131 20 is_stmt 0 view .LVU78
- 234 006c 0D20     		movs	r0, #13
- 235              	.LVL16:
+ 235              		.loc 1 131 20 is_stmt 0 view .LVU79
+ 236 006c 0D20     		movs	r0, #13
+ 237              	.LVL17:
  131:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c ****         }
- 236              		.loc 1 131 20 view .LVU79
- 237 006e D2E7     		b	.L1
- 238              	.LVL17:
- 239              	.L6:
+ 238              		.loc 1 131 20 view .LVU80
+ 239 006e D2E7     		b	.L1
+ 240              	.LVL18:
+ 241              	.L6:
  178:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c ****                 thread_ptr -> tx_thread_suspended_next =        next_thread;
- 240              		.loc 1 178 17 is_stmt 1 view .LVU80
+ 242              		.loc 1 178 17 is_stmt 1 view .LVU81
  178:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c ****                 thread_ptr -> tx_thread_suspended_next =        next_thread;
- 241              		.loc 1 178 29 is_stmt 0 view .LVU81
- 242 0070 C368     		ldr	r3, [r0, #12]
- 243              	.LVL18:
+ 243              		.loc 1 178 29 is_stmt 0 view .LVU82
+ 244 0070 C368     		ldr	r3, [r0, #12]
+ 245              	.LVL19:
  179:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c ****                 previous_thread =                               next_thread -> tx_thread_suspended_
- 244              		.loc 1 179 17 is_stmt 1 view .LVU82
+ 246              		.loc 1 179 17 is_stmt 1 view .LVU83
  179:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c ****                 previous_thread =                               next_thread -> tx_thread_suspended_
- 245              		.loc 1 179 56 is_stmt 0 view .LVU83
- 246 0072 2367     		str	r3, [r4, #112]
+ 247              		.loc 1 179 56 is_stmt 0 view .LVU84
+ 248 0072 2367     		str	r3, [r4, #112]
  180:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c ****                 thread_ptr -> tx_thread_suspended_previous =    previous_thread;
- 247              		.loc 1 180 17 is_stmt 1 view .LVU84
+ 249              		.loc 1 180 17 is_stmt 1 view .LVU85
  180:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c ****                 thread_ptr -> tx_thread_suspended_previous =    previous_thread;
- 248              		.loc 1 180 33 is_stmt 0 view .LVU85
- 249 0074 5D6F     		ldr	r5, [r3, #116]
- 250              	.LVL19:
+ 250              		.loc 1 180 33 is_stmt 0 view .LVU86
+ 251 0074 5D6F     		ldr	r5, [r3, #116]
+ 252              	.LVL20:
  181:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c ****                 previous_thread -> tx_thread_suspended_next =   thread_ptr;
- 251              		.loc 1 181 17 is_stmt 1 view .LVU86
+ 253              		.loc 1 181 17 is_stmt 1 view .LVU87
  181:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c ****                 previous_thread -> tx_thread_suspended_next =   thread_ptr;
- 252              		.loc 1 181 60 is_stmt 0 view .LVU87
- 253 0076 6567     		str	r5, [r4, #116]
+ 254              		.loc 1 181 60 is_stmt 0 view .LVU88
+ 255 0076 6567     		str	r5, [r4, #116]
  182:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c ****                 next_thread -> tx_thread_suspended_previous =   thread_ptr;
- 254              		.loc 1 182 17 is_stmt 1 view .LVU88
+ 256              		.loc 1 182 17 is_stmt 1 view .LVU89
  182:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c ****                 next_thread -> tx_thread_suspended_previous =   thread_ptr;
- 255              		.loc 1 182 61 is_stmt 0 view .LVU89
- 256 0078 2C67     		str	r4, [r5, #112]
+ 257              		.loc 1 182 61 is_stmt 0 view .LVU90
+ 258 0078 2C67     		str	r4, [r5, #112]
  183:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c ****             }
- 257              		.loc 1 183 17 is_stmt 1 view .LVU90
+ 259              		.loc 1 183 17 is_stmt 1 view .LVU91
  183:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c ****             }
- 258              		.loc 1 183 61 is_stmt 0 view .LVU91
- 259 007a 5C67     		str	r4, [r3, #116]
- 260 007c E0E7     		b	.L7
- 261              	.LVL20:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc5Smz6o.s 			page 21
+ 260              		.loc 1 183 61 is_stmt 0 view .LVU92
+ARM GAS  /tmp/ccsOeJpq.s 			page 21
 
 
- 262              	.L4:
+ 261 007a 5C67     		str	r4, [r3, #116]
+ 262 007c E0E7     		b	.L7
+ 263              	.LVL21:
+ 264              	.L4:
  225:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c **** 
- 263              		.loc 1 225 9 is_stmt 1 view .LVU92
- 264              	.LBB26:
- 265              	.LBI26:
+ 265              		.loc 1 225 9 is_stmt 1 view .LVU93
+ 266              	.LBB26:
+ 267              	.LBI26:
  556:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 266              		.loc 2 556 55 view .LVU93
- 267              	.LBB27:
+ 268              		.loc 2 556 55 view .LVU94
+ 269              	.LBB27:
  562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 268              		.loc 2 562 5 view .LVU94
- 269              		.syntax unified
- 270              	@ 562 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
- 271 007e 82F31088 		MSR  PRIMASK,r2
- 272              	@ 0 "" 2
- 273              	.LVL21:
+ 270              		.loc 2 562 5 view .LVU95
+ 271              		.syntax unified
+ 272              	@ 562 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+ 273 007e 82F31088 		MSR  PRIMASK,r2
+ 274              	@ 0 "" 2
+ 275              	.LVL22:
  562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 274              		.loc 2 562 5 is_stmt 0 view .LVU95
- 275              		.thumb
- 276              		.syntax unified
- 277              	.LBE27:
- 278              	.LBE26:
+ 276              		.loc 2 562 5 is_stmt 0 view .LVU96
+ 277              		.thumb
+ 278              		.syntax unified
+ 279              	.LBE27:
+ 280              	.LBE26:
  228:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c ****     }
- 279              		.loc 1 228 9 is_stmt 1 view .LVU96
+ 281              		.loc 1 228 9 is_stmt 1 view .LVU97
  228:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c ****     }
- 280              		.loc 1 228 16 is_stmt 0 view .LVU97
- 281 0082 0D20     		movs	r0, #13
- 282              	.LVL22:
+ 282              		.loc 1 228 16 is_stmt 0 view .LVU98
+ 283 0082 0D20     		movs	r0, #13
+ 284              	.LVL23:
  232:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c **** }
- 283              		.loc 1 232 5 is_stmt 1 view .LVU98
+ 285              		.loc 1 232 5 is_stmt 1 view .LVU99
  232:./Middlewares/ST/threadx/common/src/tx_semaphore_get.c **** }
- 284              		.loc 1 232 11 is_stmt 0 view .LVU99
- 285 0084 C7E7     		b	.L1
- 286              	.L11:
- 287 0086 00BF     		.align	2
- 288              	.L10:
- 289 0088 00000000 		.word	_tx_thread_preempt_disable
- 290 008c 00000000 		.word	_tx_thread_current_ptr
- 291 0090 00000000 		.word	_tx_semaphore_cleanup
- 292              		.cfi_endproc
- 293              	.LFE8:
- 295              		.text
- 296              	.Letext0:
- 297              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
- 298              		.file 4 "./Middlewares/ST/threadx/common/inc/tx_thread.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc5Smz6o.s 			page 22
+ 286              		.loc 1 232 11 is_stmt 0 view .LVU100
+ 287 0084 C7E7     		b	.L1
+ 288              	.L11:
+ 289 0086 00BF     		.align	2
+ 290              	.L10:
+ 291 0088 00000000 		.word	_tx_thread_preempt_disable
+ 292 008c 00000000 		.word	_tx_thread_current_ptr
+ 293 0090 00000000 		.word	_tx_semaphore_cleanup
+ 294              		.cfi_endproc
+ 295              	.LFE8:
+ 297              		.text
+ 298              	.Letext0:
+ 299              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
+ 300              		.file 4 "./Middlewares/ST/threadx/common/inc/tx_thread.h"
+ 301              		.file 5 "./Middlewares/ST/threadx/common/inc/tx_semaphore.h"
+ARM GAS  /tmp/ccsOeJpq.s 			page 22
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 tx_semaphore_get.c
-C:\Users\Dennis\AppData\Local\Temp\cc5Smz6o.s:20     .text._tx_semaphore_get:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\cc5Smz6o.s:26     .text._tx_semaphore_get:00000000 _tx_semaphore_get
-C:\Users\Dennis\AppData\Local\Temp\cc5Smz6o.s:289    .text._tx_semaphore_get:00000088 $d
+     /tmp/ccsOeJpq.s:21     .text._tx_semaphore_get:00000000 $t
+     /tmp/ccsOeJpq.s:27     .text._tx_semaphore_get:00000000 _tx_semaphore_get
+     /tmp/ccsOeJpq.s:291    .text._tx_semaphore_get:00000088 $d
 
 UNDEFINED SYMBOLS
 _tx_thread_system_suspend

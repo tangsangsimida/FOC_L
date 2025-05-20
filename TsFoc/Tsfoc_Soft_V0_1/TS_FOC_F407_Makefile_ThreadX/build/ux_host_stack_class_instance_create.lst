@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccAuav5w.s 			page 1
+ARM GAS  /tmp/ccK9rQyx.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,16 +19,16 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccAuav5w.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text._ux_host_stack_class_instance_create,"ax",%progbits
-  20              		.align	1
-  21              		.global	_ux_host_stack_class_instance_create
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
-  26              	_ux_host_stack_class_instance_create:
-  27              	.LVL0:
-  28              	.LFB11:
-  29              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_create.c"
+  19              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_create.c"
+  20              		.section	.text._ux_host_stack_class_instance_create,"ax",%progbits
+  21              		.align	1
+  22              		.global	_ux_host_stack_class_instance_create
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	_ux_host_stack_class_instance_create:
+  28              	.LVL0:
+  29              	.LFB11:
    1:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_create.c **** /**************************************************************************/
    2:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_create.c **** /*                                                                        */
    3:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_create.c **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccAuav5w.s 			page 1
   27:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_create.c **** 
   28:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_create.c **** #include "ux_api.h"
   29:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_create.c **** #include "ux_host_stack.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccAuav5w.s 			page 2
+ARM GAS  /tmp/ccK9rQyx.s 			page 2
 
 
   30:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_create.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccAuav5w.s 			page 1
   79:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_create.c **** VOID    **current_class_instance;
   35              		.loc 1 79 1 view .LVU1
   80:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_create.c ****     
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccAuav5w.s 			page 3
+ARM GAS  /tmp/ccK9rQyx.s 			page 3
 
 
   81:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_create.c ****     /* If trace is enabled, insert this event into the trace buffer.  */
@@ -152,12 +152,12 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccAuav5w.s 			page 1
  100:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_create.c **** 
  101:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_create.c ****     /* Traverse the list of the class instances until we find the last class.  */        
  102:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_create.c ****     while (*current_class_instance != UX_NULL)
-  45              		.loc 1 102 11 is_stmt 1 view .LVU6
+  45              		.loc 1 102 36 is_stmt 1 view .LVU6
   46 0004 1A46     		mov	r2, r3
   47              		.loc 1 102 12 is_stmt 0 view .LVU7
   48 0006 1B68     		ldr	r3, [r3]
   49              	.LVL3:
-  50              		.loc 1 102 11 view .LVU8
+  50              		.loc 1 102 36 view .LVU8
   51 0008 002B     		cmp	r3, #0
   52 000a FBD1     		bne	.L2
  103:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_create.c ****     {
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccAuav5w.s 			page 1
   56              		.loc 1 114 5 is_stmt 1 view .LVU11
   57              	.LVL4:
   58              	.L3:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccAuav5w.s 			page 4
+ARM GAS  /tmp/ccK9rQyx.s 			page 4
 
 
  115:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_create.c **** }
@@ -205,12 +205,12 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccAuav5w.s 			page 1
   76              	.Letext0:
   77              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
   78              		.file 3 "./Middlewares/ST/usbx/common/core/inc/ux_api.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccAuav5w.s 			page 5
+ARM GAS  /tmp/ccK9rQyx.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 ux_host_stack_class_instance_create.c
-C:\Users\Dennis\AppData\Local\Temp\ccAuav5w.s:20     .text._ux_host_stack_class_instance_create:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccAuav5w.s:26     .text._ux_host_stack_class_instance_create:00000000 _ux_host_stack_class_instance_create
+     /tmp/ccK9rQyx.s:21     .text._ux_host_stack_class_instance_create:00000000 $t
+     /tmp/ccK9rQyx.s:27     .text._ux_host_stack_class_instance_create:00000000 _ux_host_stack_class_instance_create
 
 NO UNDEFINED SYMBOLS

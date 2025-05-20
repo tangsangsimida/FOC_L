@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccVNrDAQ.s 			page 1
+ARM GAS  /tmp/ccACSIIw.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,16 +19,16 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccVNrDAQ.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text._txe_thread_reset,"ax",%progbits
-  20              		.align	1
-  21              		.global	_txe_thread_reset
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
-  26              	_txe_thread_reset:
-  27              	.LVL0:
-  28              	.LFB8:
-  29              		.file 1 "./Middlewares/ST/threadx/common/src/txe_thread_reset.c"
+  19              		.file 1 "./Middlewares/ST/threadx/common/src/txe_thread_reset.c"
+  20              		.section	.text._txe_thread_reset,"ax",%progbits
+  21              		.align	1
+  22              		.global	_txe_thread_reset
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	_txe_thread_reset:
+  28              	.LVL0:
+  29              	.LFB8:
    1:./Middlewares/ST/threadx/common/src/txe_thread_reset.c **** /**************************************************************************/
    2:./Middlewares/ST/threadx/common/src/txe_thread_reset.c **** /*                                                                        */
    3:./Middlewares/ST/threadx/common/src/txe_thread_reset.c **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccVNrDAQ.s 			page 1
   27:./Middlewares/ST/threadx/common/src/txe_thread_reset.c **** 
   28:./Middlewares/ST/threadx/common/src/txe_thread_reset.c **** #include "tx_api.h"
   29:./Middlewares/ST/threadx/common/src/txe_thread_reset.c **** #include "tx_thread.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccVNrDAQ.s 			page 2
+ARM GAS  /tmp/ccACSIIw.s 			page 2
 
 
   30:./Middlewares/ST/threadx/common/src/txe_thread_reset.c **** #include "tx_timer.h"
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccVNrDAQ.s 			page 1
   79:./Middlewares/ST/threadx/common/src/txe_thread_reset.c **** TX_THREAD   *current_thread;
   35              		.loc 1 79 1 view .LVU2
   80:./Middlewares/ST/threadx/common/src/txe_thread_reset.c **** #endif
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccVNrDAQ.s 			page 3
+ARM GAS  /tmp/ccACSIIw.s 			page 3
 
 
   81:./Middlewares/ST/threadx/common/src/txe_thread_reset.c **** 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccVNrDAQ.s 			page 1
  112:./Middlewares/ST/threadx/common/src/txe_thread_reset.c **** 
  113:./Middlewares/ST/threadx/common/src/txe_thread_reset.c ****             /* Invalid caller of this function, return appropriate error code.  */
  114:./Middlewares/ST/threadx/common/src/txe_thread_reset.c ****             status =  TX_CALLER_ERROR;
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccVNrDAQ.s 			page 4
+ARM GAS  /tmp/ccACSIIw.s 			page 4
 
 
  115:./Middlewares/ST/threadx/common/src/txe_thread_reset.c ****         }
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccVNrDAQ.s 			page 1
    6:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*       Terms for Microsoft Azure RTOS. Full text of the license can be  */
    7:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*       found in the LICENSE file at https://aka.ms/AzureRTOS_EULA       */
    8:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*       and in the root directory of this software.                      */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccVNrDAQ.s 			page 5
+ARM GAS  /tmp/ccACSIIw.s 			page 5
 
 
    9:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*                                                                        */
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccVNrDAQ.s 			page 1
   63:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_PORT_H
   64:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
   65:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccVNrDAQ.s 			page 6
+ARM GAS  /tmp/ccACSIIw.s 			page 6
 
 
   66:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /* Determine if the optional ThreadX user define file should be used.  */
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccVNrDAQ.s 			page 1
  120:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****    from 32 to 1024 and MUST be evenly divisible by 32.  */
  121:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  122:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifndef TX_MAX_PRIORITIES
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccVNrDAQ.s 			page 7
+ARM GAS  /tmp/ccACSIIw.s 			page 7
 
 
  123:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_MAX_PRIORITIES                       32
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccVNrDAQ.s 			page 1
  177:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  178:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /* Define the number of ticks per second. This informs the EventAnalyzer what the timestamps
  179:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****    represent.  By default, this is set to 1,000,000 i.e., one tick every microsecond. */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccVNrDAQ.s 			page 8
+ARM GAS  /tmp/ccACSIIw.s 			page 8
 
 
  180:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccVNrDAQ.s 			page 1
  234:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
  235:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  236:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccVNrDAQ.s 			page 9
+ARM GAS  /tmp/ccACSIIw.s 			page 9
 
 
  237:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_THREAD_EXTENSION_3
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccVNrDAQ.s 			page 1
  291:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** ULONG  _tx_misra_fpccr_get(void);
  292:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** void   _tx_misra_vfp_touch(void);
  293:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccVNrDAQ.s 			page 10
+ARM GAS  /tmp/ccACSIIw.s 			page 10
 
 
  294:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #else   /* TX_MISRA_ENABLE not defined */
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccVNrDAQ.s 			page 1
  348:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                         __set_control_value(_tx_vfp_state);        
  349:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                     }
  350:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #else
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccVNrDAQ.s 			page 11
+ARM GAS  /tmp/ccACSIIw.s 			page 11
 
 
  351:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccVNrDAQ.s 			page 1
  405:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                         ULONG  _tx_vfp_state;                      
  406:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                             _tx_vfp_state =  _tx_misra_control_get(
  407:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                             _tx_vfp_state =  _tx_vfp_state & ~((ULO
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccVNrDAQ.s 			page 12
+ARM GAS  /tmp/ccACSIIw.s 			page 12
 
 
  408:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                             _tx_misra_control_set(_tx_vfp_state);  
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccVNrDAQ.s 			page 1
  462:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /* Define the get system state macro.  */
  463:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  464:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifndef TX_THREAD_GET_SYSTEM_STATE
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccVNrDAQ.s 			page 13
+ARM GAS  /tmp/ccACSIIw.s 			page 13
 
 
  465:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifndef TX_MISRA_ENABLE
@@ -740,7 +740,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccVNrDAQ.s 			page 1
   82              		.loc 2 477 5 view .LVU19
   83              		.syntax unified
   84              	@ 477 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
-  85 001e EFF30582 		 MRS  r2,IPSR 
+  85 001e EFF30581 		 MRS  r1,IPSR 
   86              	@ 0 "" 2
   87              	.LVL5:
  478:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     return(ipsr_value);
@@ -751,96 +751,93 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccVNrDAQ.s 			page 1
   92              	.LBE5:
   93              	.LBE4:
  119:./Middlewares/ST/threadx/common/src/txe_thread_reset.c ****         {
-  94              		.loc 1 119 13 view .LVU22
-  95 0022 0B49     		ldr	r1, .L13+12
-  96              	.LVL6:
+  94              		.loc 1 119 13 discriminator 1 view .LVU22
+  95 0022 0B4A     		ldr	r2, .L13+12
+  96 0024 1268     		ldr	r2, [r2]
  119:./Middlewares/ST/threadx/common/src/txe_thread_reset.c ****         {
-  97              		.loc 1 119 13 view .LVU23
-  98 0024 0968     		ldr	r1, [r1]
- 119:./Middlewares/ST/threadx/common/src/txe_thread_reset.c ****         {
-  99              		.loc 1 119 12 view .LVU24
- 100 0026 0A43     		orrs	r2, r1, r2
- 101 0028 09D1     		bne	.L7
+  97              		.loc 1 119 12 discriminator 1 view .LVU23
+  98 0026 0A43     		orrs	r2, r2, r1
+  99 0028 09D1     		bne	.L7
  128:./Middlewares/ST/threadx/common/src/txe_thread_reset.c ****     {
- 102              		.loc 1 128 5 is_stmt 1 view .LVU25
+ 100              		.loc 1 128 5 is_stmt 1 view .LVU24
  128:./Middlewares/ST/threadx/common/src/txe_thread_reset.c ****     {
- 103              		.loc 1 128 8 is_stmt 0 view .LVU26
- 104 002a 0028     		cmp	r0, #0
- 105 002c F0D1     		bne	.L1
+ 101              		.loc 1 128 8 is_stmt 0 view .LVU25
+ 102 002a 0028     		cmp	r0, #0
+ 103 002c F0D1     		bne	.L1
  132:./Middlewares/ST/threadx/common/src/txe_thread_reset.c ****     }
- 106              		.loc 1 132 9 is_stmt 1 view .LVU27
+ 104              		.loc 1 132 9 is_stmt 1 view .LVU26
  132:./Middlewares/ST/threadx/common/src/txe_thread_reset.c ****     }
- 107              		.loc 1 132 19 is_stmt 0 view .LVU28
- 108 002e 1846     		mov	r0, r3
- 109              	.LVL7:
+ 105              		.loc 1 132 19 is_stmt 0 view .LVU27
+ 106 002e 1846     		mov	r0, r3
+ 107              	.LVL6:
  132:./Middlewares/ST/threadx/common/src/txe_thread_reset.c ****     }
- 110              		.loc 1 132 19 view .LVU29
- 111 0030 FFF7FEFF 		bl	_tx_thread_reset
- 112              	.LVL8:
+ 108              		.loc 1 132 19 view .LVU28
+ 109 0030 FFF7FEFF 		bl	_tx_thread_reset
+ 110              	.LVL7:
  132:./Middlewares/ST/threadx/common/src/txe_thread_reset.c ****     }
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccVNrDAQ.s 			page 14
+ 111              		.loc 1 132 19 view .LVU29
+ 112 0034 ECE7     		b	.L1
+ 113              	.LVL8:
+ARM GAS  /tmp/ccACSIIw.s 			page 14
 
 
- 113              		.loc 1 132 19 view .LVU30
- 114 0034 ECE7     		b	.L1
- 115              	.LVL9:
- 116              	.L6:
+ 114              	.L6:
  114:./Middlewares/ST/threadx/common/src/txe_thread_reset.c ****         }
- 117              		.loc 1 114 20 view .LVU31
- 118 0036 1320     		movs	r0, #19
- 119              	.LVL10:
+ 115              		.loc 1 114 20 view .LVU30
+ 116 0036 1320     		movs	r0, #19
+ 117              	.LVL9:
  114:./Middlewares/ST/threadx/common/src/txe_thread_reset.c ****         }
- 120              		.loc 1 114 20 view .LVU32
- 121 0038 F1E7     		b	.L3
- 122              	.LVL11:
- 123              	.L4:
- 124              	.LCFI1:
- 125              		.cfi_def_cfa_offset 0
- 126              		.cfi_restore 3
- 127              		.cfi_restore 14
+ 118              		.loc 1 114 20 view .LVU31
+ 119 0038 F1E7     		b	.L3
+ 120              	.LVL10:
+ 121              	.L4:
+ 122              	.LCFI1:
+ 123              		.cfi_def_cfa_offset 0
+ 124              		.cfi_restore 3
+ 125              		.cfi_restore 14
   91:./Middlewares/ST/threadx/common/src/txe_thread_reset.c ****     }
- 128              		.loc 1 91 16 view .LVU33
- 129 003a 0E20     		movs	r0, #14
- 130              	.LVL12:
- 131              		.loc 1 137 1 view .LVU34
- 132 003c 7047     		bx	lr
- 133              	.LVL13:
- 134              	.L7:
- 135              	.LCFI2:
- 136              		.cfi_def_cfa_offset 8
- 137              		.cfi_offset 3, -8
- 138              		.cfi_offset 14, -4
+ 126              		.loc 1 91 16 view .LVU32
+ 127 003a 0E20     		movs	r0, #14
+ 128              	.LVL11:
+ 129              		.loc 1 137 1 view .LVU33
+ 130 003c 7047     		bx	lr
+ 131              	.LVL12:
+ 132              	.L7:
+ 133              	.LCFI2:
+ 134              		.cfi_def_cfa_offset 8
+ 135              		.cfi_offset 3, -8
+ 136              		.cfi_offset 14, -4
  123:./Middlewares/ST/threadx/common/src/txe_thread_reset.c ****         }
- 139              		.loc 1 123 20 view .LVU35
- 140 003e 1320     		movs	r0, #19
- 141              	.LVL14:
+ 137              		.loc 1 123 20 view .LVU34
+ 138 003e 1320     		movs	r0, #19
+ 139              	.LVL13:
  136:./Middlewares/ST/threadx/common/src/txe_thread_reset.c **** }
- 142              		.loc 1 136 5 is_stmt 1 view .LVU36
+ 140              		.loc 1 136 5 is_stmt 1 view .LVU35
  136:./Middlewares/ST/threadx/common/src/txe_thread_reset.c **** }
- 143              		.loc 1 136 11 is_stmt 0 view .LVU37
- 144 0040 E6E7     		b	.L1
- 145              	.L14:
- 146 0042 00BF     		.align	2
- 147              	.L13:
- 148 0044 44524854 		.word	1414025796
- 149 0048 00000000 		.word	_tx_thread_current_ptr
- 150 004c 00000000 		.word	_tx_timer_thread
- 151 0050 00000000 		.word	_tx_thread_system_state
- 152              		.cfi_endproc
- 153              	.LFE8:
- 155              		.text
- 156              	.Letext0:
- 157              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
- 158              		.file 4 "./Middlewares/ST/threadx/common/inc/tx_thread.h"
- 159              		.file 5 "./Middlewares/ST/threadx/common/inc/tx_timer.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccVNrDAQ.s 			page 15
+ 141              		.loc 1 136 11 is_stmt 0 view .LVU36
+ 142 0040 E6E7     		b	.L1
+ 143              	.L14:
+ 144 0042 00BF     		.align	2
+ 145              	.L13:
+ 146 0044 44524854 		.word	1414025796
+ 147 0048 00000000 		.word	_tx_thread_current_ptr
+ 148 004c 00000000 		.word	_tx_timer_thread
+ 149 0050 00000000 		.word	_tx_thread_system_state
+ 150              		.cfi_endproc
+ 151              	.LFE8:
+ 153              		.text
+ 154              	.Letext0:
+ 155              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
+ 156              		.file 4 "./Middlewares/ST/threadx/common/inc/tx_thread.h"
+ 157              		.file 5 "./Middlewares/ST/threadx/common/inc/tx_timer.h"
+ARM GAS  /tmp/ccACSIIw.s 			page 15
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 txe_thread_reset.c
-C:\Users\Dennis\AppData\Local\Temp\ccVNrDAQ.s:20     .text._txe_thread_reset:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccVNrDAQ.s:26     .text._txe_thread_reset:00000000 _txe_thread_reset
-C:\Users\Dennis\AppData\Local\Temp\ccVNrDAQ.s:148    .text._txe_thread_reset:00000044 $d
+     /tmp/ccACSIIw.s:21     .text._txe_thread_reset:00000000 $t
+     /tmp/ccACSIIw.s:27     .text._txe_thread_reset:00000000 _txe_thread_reset
+     /tmp/ccACSIIw.s:146    .text._txe_thread_reset:00000044 $d
 
 UNDEFINED SYMBOLS
 _tx_thread_reset

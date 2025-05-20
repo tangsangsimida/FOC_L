@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccxz5Xul.s 			page 1
+ARM GAS  /tmp/cc6GzIDb.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,16 +19,16 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccxz5Xul.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text._ux_dcd_stm32_endpoint_stall,"ax",%progbits
-  20              		.align	1
-  21              		.global	_ux_dcd_stm32_endpoint_stall
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
-  26              	_ux_dcd_stm32_endpoint_stall:
-  27              	.LVL0:
-  28              	.LFB251:
-  29              		.file 1 "./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_endpoint_stall.c"
+  19              		.file 1 "./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_endpoint_stall.c"
+  20              		.section	.text._ux_dcd_stm32_endpoint_stall,"ax",%progbits
+  21              		.align	1
+  22              		.global	_ux_dcd_stm32_endpoint_stall
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	_ux_dcd_stm32_endpoint_stall:
+  28              	.LVL0:
+  29              	.LFB251:
    1:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_endpoint_stall.c **** /**************************************************************************/
    2:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_endpoint_stall.c **** /*                                                                        */
    3:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_endpoint_stall.c **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccxz5Xul.s 			page 1
   27:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_endpoint_stall.c **** /* Include necessary system files.  */
   28:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_endpoint_stall.c **** 
   29:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_endpoint_stall.c **** #include "ux_api.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccxz5Xul.s 			page 2
+ARM GAS  /tmp/cc6GzIDb.s 			page 2
 
 
   30:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_endpoint_stall.c **** #include "ux_dcd_stm32.h"
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccxz5Xul.s 			page 1
   36              	.LCFI0:
   37              		.cfi_def_cfa_offset 8
   38              		.cfi_offset 3, -8
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccxz5Xul.s 			page 3
+ARM GAS  /tmp/cc6GzIDb.s 			page 3
 
 
   39              		.cfi_offset 14, -4
@@ -137,59 +137,59 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccxz5Xul.s 			page 1
   85:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_endpoint_stall.c ****     /* Set the endpoint to stall.  */
   86:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_endpoint_stall.c ****     ed -> ux_dcd_stm32_ed_status |=  UX_DCD_STM32_ED_STATUS_STALLED;
   45              		.loc 1 86 5 is_stmt 1 view .LVU5
-  46              		.loc 1 86 34 is_stmt 0 view .LVU6
+  46              		.loc 1 86 8 is_stmt 0 view .LVU6
   47 0004 5A68     		ldr	r2, [r3, #4]
-  48 0006 42F00402 		orr	r2, r2, #4
-  49 000a 5A60     		str	r2, [r3, #4]
+  48              		.loc 1 86 34 view .LVU7
+  49 0006 42F00402 		orr	r2, r2, #4
+  50 000a 5A60     		str	r2, [r3, #4]
   87:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_endpoint_stall.c **** 
   88:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_endpoint_stall.c ****     /* Stall the endpoint.  */
   89:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_endpoint_stall.c ****     HAL_PCD_EP_SetStall(dcd_stm32 -> pcd_handle, endpoint->ux_slave_endpoint_descriptor.bEndpointAd
-  50              		.loc 1 89 5 is_stmt 1 view .LVU7
-  51              		.loc 1 89 88 is_stmt 0 view .LVU8
-  52 000c 4A69     		ldr	r2, [r1, #20]
-  53              		.loc 1 89 111 view .LVU9
-  54 000e 997A     		ldrb	r1, [r3, #10]	@ zero_extendqisi2
-  55              	.LVL2:
-  56              		.loc 1 89 5 view .LVU10
-  57 0010 1143     		orrs	r1, r1, r2
-  58 0012 C9B2     		uxtb	r1, r1
-  59 0014 C06C     		ldr	r0, [r0, #76]
-  60              	.LVL3:
-  61              		.loc 1 89 5 view .LVU11
-  62 0016 FFF7FEFF 		bl	HAL_PCD_EP_SetStall
-  63              	.LVL4:
+  51              		.loc 1 89 5 is_stmt 1 view .LVU8
+  52              		.loc 1 89 88 is_stmt 0 view .LVU9
+  53 000c 4A69     		ldr	r2, [r1, #20]
+  54              		.loc 1 89 111 view .LVU10
+  55 000e 997A     		ldrb	r1, [r3, #10]	@ zero_extendqisi2
+  56              	.LVL2:
+  57              		.loc 1 89 5 view .LVU11
+  58 0010 1143     		orrs	r1, r1, r2
+  59 0012 C9B2     		uxtb	r1, r1
+  60 0014 C06C     		ldr	r0, [r0, #76]
+  61              	.LVL3:
+  62              		.loc 1 89 5 view .LVU12
+  63 0016 FFF7FEFF 		bl	HAL_PCD_EP_SetStall
+  64              	.LVL4:
   90:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_endpoint_stall.c **** 
   91:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_endpoint_stall.c ****     /* This function never fails.  */
   92:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_endpoint_stall.c ****     return(UX_SUCCESS);
-  64              		.loc 1 92 5 is_stmt 1 view .LVU12
+  65              		.loc 1 92 5 is_stmt 1 view .LVU13
   93:./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32_endpoint_stall.c **** }
-  65              		.loc 1 93 1 is_stmt 0 view .LVU13
-  66 001a 0020     		movs	r0, #0
-  67 001c 08BD     		pop	{r3, pc}
-  68              		.cfi_endproc
-  69              	.LFE251:
-  71              		.text
-  72              	.Letext0:
-  73              		.file 2 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\machine\\_default_types.h"
-  74              		.file 3 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\sys\\_stdint.h"
-  75              		.file 4 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
-  76              		.file 5 "./Middlewares/ST/threadx/common/inc/tx_api.h"
-  77              		.file 6 "./Middlewares/ST/usbx/common/core/inc/ux_api.h"
-  78              		.file 7 "./Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h"
-  79              		.file 8 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
-  80              		.file 9 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccxz5Xul.s 			page 4
+  66              		.loc 1 93 1 is_stmt 0 view .LVU14
+  67 001a 0020     		movs	r0, #0
+  68 001c 08BD     		pop	{r3, pc}
+  69              		.cfi_endproc
+  70              	.LFE251:
+  72              		.text
+  73              	.Letext0:
+  74              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
+  75              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
+  76              		.file 4 "./Middlewares/ST/usbx/common/core/inc/ux_api.h"
+  77              		.file 5 "/usr/lib/gcc/arm-none-eabi/13.2.1/include/stdint.h"
+  78              		.file 6 "./Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h"
+  79              		.file 7 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
+  80              		.file 8 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h"
+ARM GAS  /tmp/cc6GzIDb.s 			page 4
 
 
-  81              		.file 10 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h"
-  82              		.file 11 "./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccxz5Xul.s 			page 5
+  81              		.file 9 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h"
+  82              		.file 10 "./Middlewares/ST/usbx/common/usbx_stm32_device_controllers/ux_dcd_stm32.h"
+ARM GAS  /tmp/cc6GzIDb.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 ux_dcd_stm32_endpoint_stall.c
-C:\Users\Dennis\AppData\Local\Temp\ccxz5Xul.s:20     .text._ux_dcd_stm32_endpoint_stall:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccxz5Xul.s:26     .text._ux_dcd_stm32_endpoint_stall:00000000 _ux_dcd_stm32_endpoint_stall
+     /tmp/cc6GzIDb.s:21     .text._ux_dcd_stm32_endpoint_stall:00000000 $t
+     /tmp/cc6GzIDb.s:27     .text._ux_dcd_stm32_endpoint_stall:00000000 _ux_dcd_stm32_endpoint_stall
 
 UNDEFINED SYMBOLS
 HAL_PCD_EP_SetStall

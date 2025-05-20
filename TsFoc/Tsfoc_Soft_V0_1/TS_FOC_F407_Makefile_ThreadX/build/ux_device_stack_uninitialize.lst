@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccxRY9aA.s 			page 1
+ARM GAS  /tmp/cciMxaXs.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,15 +19,15 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccxRY9aA.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text._ux_device_stack_uninitialize,"ax",%progbits
-  20              		.align	1
-  21              		.global	_ux_device_stack_uninitialize
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
-  26              	_ux_device_stack_uninitialize:
-  27              	.LFB11:
-  28              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_device_stack_uninitialize.c"
+  19              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_device_stack_uninitialize.c"
+  20              		.section	.text._ux_device_stack_uninitialize,"ax",%progbits
+  21              		.align	1
+  22              		.global	_ux_device_stack_uninitialize
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	_ux_device_stack_uninitialize:
+  28              	.LFB11:
    1:./Middlewares/ST/usbx/common/core/src/ux_device_stack_uninitialize.c **** /**************************************************************************/
    2:./Middlewares/ST/usbx/common/core/src/ux_device_stack_uninitialize.c **** /*                                                                        */
    3:./Middlewares/ST/usbx/common/core/src/ux_device_stack_uninitialize.c **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccxRY9aA.s 			page 1
   28:./Middlewares/ST/usbx/common/core/src/ux_device_stack_uninitialize.c **** #include "ux_api.h"
   29:./Middlewares/ST/usbx/common/core/src/ux_device_stack_uninitialize.c **** #include "ux_device_stack.h"
   30:./Middlewares/ST/usbx/common/core/src/ux_device_stack_uninitialize.c **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccxRY9aA.s 			page 2
+ARM GAS  /tmp/cciMxaXs.s 			page 2
 
 
   31:./Middlewares/ST/usbx/common/core/src/ux_device_stack_uninitialize.c **** /**************************************************************************/
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccxRY9aA.s 			page 1
   35              		.cfi_def_cfa_offset 16
   36              		.cfi_offset 4, -16
   37              		.cfi_offset 5, -12
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccxRY9aA.s 			page 3
+ARM GAS  /tmp/cciMxaXs.s 			page 3
 
 
   38              		.cfi_offset 6, -8
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccxRY9aA.s 			page 1
  105:./Middlewares/ST/usbx/common/core/src/ux_device_stack_uninitialize.c **** 
  106:./Middlewares/ST/usbx/common/core/src/ux_device_stack_uninitialize.c ****     /* Parse all endpoints and fee memory and semaphore. */
  107:./Middlewares/ST/usbx/common/core/src/ux_device_stack_uninitialize.c ****     while (endpoints_found-- != 0)
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccxRY9aA.s 			page 4
+ARM GAS  /tmp/cciMxaXs.s 			page 4
 
 
   66              		.loc 1 107 5 is_stmt 1 view .LVU14
@@ -213,13 +213,13 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccxRY9aA.s 			page 1
   85              	.LVL9:
   86              	.L2:
  107:./Middlewares/ST/usbx/common/core/src/ux_device_stack_uninitialize.c ****     {
-  87              		.loc 1 107 11 is_stmt 1 view .LVU21
+  87              		.loc 1 107 30 is_stmt 1 view .LVU21
  107:./Middlewares/ST/usbx/common/core/src/ux_device_stack_uninitialize.c ****     {
   88              		.loc 1 107 27 is_stmt 0 view .LVU22
   89 0032 5D1E     		subs	r5, r3, #1
   90              	.LVL10:
  107:./Middlewares/ST/usbx/common/core/src/ux_device_stack_uninitialize.c ****     {
-  91              		.loc 1 107 11 view .LVU23
+  91              		.loc 1 107 30 view .LVU23
   92 0034 002B     		cmp	r3, #0
   93 0036 F3D1     		bne	.L3
  117:./Middlewares/ST/usbx/common/core/src/ux_device_stack_uninitialize.c ****     }
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccxRY9aA.s 			page 1
  102              	.L4:
  122:./Middlewares/ST/usbx/common/core/src/ux_device_stack_uninitialize.c **** 
  123:./Middlewares/ST/usbx/common/core/src/ux_device_stack_uninitialize.c ****     /* Free memory for interface pool.  */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccxRY9aA.s 			page 5
+ARM GAS  /tmp/cciMxaXs.s 			page 5
 
 
  124:./Middlewares/ST/usbx/common/core/src/ux_device_stack_uninitialize.c ****     _ux_utility_memory_free(device -> ux_slave_device_interfaces_pool);
@@ -269,14 +269,14 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccxRY9aA.s 			page 1
  124              		.file 4 "./Middlewares/ST/usbx/common/core/inc/ux_api.h"
  125              		.file 5 "./Middlewares/ST/usbx/common/core/inc/ux_system.h"
  126              		.file 6 "./Middlewares/ST/usbx/common/core/inc/ux_utility.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccxRY9aA.s 			page 6
+ARM GAS  /tmp/cciMxaXs.s 			page 6
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 ux_device_stack_uninitialize.c
-C:\Users\Dennis\AppData\Local\Temp\ccxRY9aA.s:20     .text._ux_device_stack_uninitialize:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccxRY9aA.s:26     .text._ux_device_stack_uninitialize:00000000 _ux_device_stack_uninitialize
-C:\Users\Dennis\AppData\Local\Temp\ccxRY9aA.s:116    .text._ux_device_stack_uninitialize:00000050 $d
+     /tmp/cciMxaXs.s:21     .text._ux_device_stack_uninitialize:00000000 $t
+     /tmp/cciMxaXs.s:27     .text._ux_device_stack_uninitialize:00000000 _ux_device_stack_uninitialize
+     /tmp/cciMxaXs.s:116    .text._ux_device_stack_uninitialize:00000050 $d
 
 UNDEFINED SYMBOLS
 _ux_utility_memory_free

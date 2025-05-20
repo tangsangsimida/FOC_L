@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccY0D1qW.s 			page 1
+ARM GAS  /tmp/ccUJUQLU.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,16 +19,16 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccY0D1qW.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text._ux_utility_memory_allocate_mulv_safe,"ax",%progbits
-  20              		.align	1
-  21              		.global	_ux_utility_memory_allocate_mulv_safe
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
-  26              	_ux_utility_memory_allocate_mulv_safe:
-  27              	.LVL0:
-  28              	.LFB11:
-  29              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_utility_memory_allocate_mulv_safe.c"
+  19              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_utility_memory_allocate_mulv_safe.c"
+  20              		.section	.text._ux_utility_memory_allocate_mulv_safe,"ax",%progbits
+  21              		.align	1
+  22              		.global	_ux_utility_memory_allocate_mulv_safe
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	_ux_utility_memory_allocate_mulv_safe:
+  28              	.LVL0:
+  29              	.LFB11:
    1:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_allocate_mulv_safe.c **** /**************************************************************************/
    2:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_allocate_mulv_safe.c **** /*                                                                        */
    3:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_allocate_mulv_safe.c **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccY0D1qW.s 			page 1
   27:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_allocate_mulv_safe.c **** #include "ux_api.h"
   28:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_allocate_mulv_safe.c **** 
   29:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_allocate_mulv_safe.c **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccY0D1qW.s 			page 2
+ARM GAS  /tmp/ccUJUQLU.s 			page 2
 
 
   30:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_allocate_mulv_safe.c **** /**************************************************************************/
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccY0D1qW.s 			page 1
   33              		@ frame_needed = 0, uses_anonymous_args = 0
   34              		.loc 1 80 1 is_stmt 0 view .LVU1
   35 0000 9446     		mov	ip, r2
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccY0D1qW.s 			page 3
+ARM GAS  /tmp/ccUJUQLU.s 			page 3
 
 
   81:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_allocate_mulv_safe.c ****     return UX_UTILITY_MEMORY_ALLOCATE_MULV_SAFE(align, cache, size_mul_v0, size_mul_v1);
@@ -135,7 +135,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccY0D1qW.s 			page 1
   46 000c 6245     		cmp	r2, ip
   47 000e 03D3     		bcc	.L3
   80:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_allocate_mulv_safe.c ****     return UX_UTILITY_MEMORY_ALLOCATE_MULV_SAFE(align, cache, size_mul_v0, size_mul_v1);
-  48              		.loc 1 80 1 discriminator 1 view .LVU6
+  48              		.loc 1 80 1 view .LVU6
   49 0010 08B5     		push	{r3, lr}
   50              	.LCFI0:
   51              		.cfi_def_cfa_offset 8
@@ -145,7 +145,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccY0D1qW.s 			page 1
   55 0012 FFF7FEFF 		bl	_ux_utility_memory_allocate
   56              	.LVL3:
   82:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_allocate_mulv_safe.c **** }
-  57              		.loc 1 82 1 discriminator 1 view .LVU8
+  57              		.loc 1 82 1 view .LVU8
   58 0016 08BD     		pop	{r3, pc}
   59              	.LVL4:
   60              	.L3:
@@ -154,7 +154,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccY0D1qW.s 			page 1
   63              		.cfi_restore 3
   64              		.cfi_restore 14
   81:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_allocate_mulv_safe.c ****     return UX_UTILITY_MEMORY_ALLOCATE_MULV_SAFE(align, cache, size_mul_v0, size_mul_v1);
-  65              		.loc 1 81 12 view .LVU9
+  65              		.loc 1 81 12 discriminator 2 view .LVU9
   66 0018 0020     		movs	r0, #0
   67              	.LVL5:
   68              		.loc 1 82 1 view .LVU10
@@ -165,13 +165,13 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccY0D1qW.s 			page 1
   74              	.Letext0:
   75              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
   76              		.file 3 "./Middlewares/ST/usbx/common/core/inc/ux_utility.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccY0D1qW.s 			page 4
+ARM GAS  /tmp/ccUJUQLU.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 ux_utility_memory_allocate_mulv_safe.c
-C:\Users\Dennis\AppData\Local\Temp\ccY0D1qW.s:20     .text._ux_utility_memory_allocate_mulv_safe:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccY0D1qW.s:26     .text._ux_utility_memory_allocate_mulv_safe:00000000 _ux_utility_memory_allocate_mulv_safe
+     /tmp/ccUJUQLU.s:21     .text._ux_utility_memory_allocate_mulv_safe:00000000 $t
+     /tmp/ccUJUQLU.s:27     .text._ux_utility_memory_allocate_mulv_safe:00000000 _ux_utility_memory_allocate_mulv_safe
 
 UNDEFINED SYMBOLS
 _ux_utility_memory_allocate

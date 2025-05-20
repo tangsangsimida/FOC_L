@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc6xTbn5.s 			page 1
+ARM GAS  /tmp/cctQBS01.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,15 +19,15 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc6xTbn5.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text.Thread_Template_Entry,"ax",%progbits
-  20              		.align	1
-  21              		.global	Thread_Template_Entry
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
-  26              	Thread_Template_Entry:
-  27              	.LFB250:
-  28              		.file 1 "./app/Threads/Thread_template/Thread_template.c"
+  19              		.file 1 "./app/Threads/Thread_template/Thread_template.c"
+  20              		.section	.text.Thread_Template_Entry,"ax",%progbits
+  21              		.align	1
+  22              		.global	Thread_Template_Entry
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	Thread_Template_Entry:
+  28              	.LFB250:
    1:./app/Threads/Thread_template/Thread_template.c **** /**
    2:./app/Threads/Thread_template/Thread_template.c ****   ******************************************************************************
    3:./app/Threads/Thread_template/Thread_template.c ****   * @file           : Thread_template.c
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc6xTbn5.s 			page 1
   28:./app/Threads/Thread_template/Thread_template.c **** * Note			 : 快速创建线程demo
   29:./app/Threads/Thread_template/Thread_template.c **** *******************************************************************************/
   30:./app/Threads/Thread_template/Thread_template.c **** void Thread_Template_Entry(ULONG thread_input)
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc6xTbn5.s 			page 2
+ARM GAS  /tmp/cctQBS01.s 			page 2
 
 
   31:./app/Threads/Thread_template/Thread_template.c **** {
@@ -78,11 +78,11 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc6xTbn5.s 			page 1
   42              	.L2:
   32:./app/Threads/Thread_template/Thread_template.c **** 
   33:./app/Threads/Thread_template/Thread_template.c **** 	while(1)
-  43              		.loc 1 33 2 is_stmt 1 discriminator 1 view .LVU2
+  43              		.loc 1 33 2 is_stmt 1 view .LVU2
   34:./app/Threads/Thread_template/Thread_template.c **** 	{
   35:./app/Threads/Thread_template/Thread_template.c **** 
   36:./app/Threads/Thread_template/Thread_template.c ****     HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
-  44              		.loc 1 36 5 discriminator 1 view .LVU3
+  44              		.loc 1 36 5 view .LVU3
   45 0002 4FF40051 		mov	r1, #8192
   46 0006 0348     		ldr	r0, .L4
   47 0008 FFF7FEFF 		bl	HAL_GPIO_TogglePin
@@ -93,7 +93,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc6xTbn5.s 			page 1
   51 000e FFF7FEFF 		bl	_tx_thread_sleep
   52              	.LVL3:
   33:./app/Threads/Thread_template/Thread_template.c **** 	{
-  53              		.loc 1 33 7 discriminator 1 view .LVU5
+  53              		.loc 1 33 7 view .LVU5
   54 0012 F6E7     		b	.L2
   55              	.L5:
   56              		.align	2
@@ -102,43 +102,42 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc6xTbn5.s 			page 1
   59              		.cfi_endproc
   60              	.LFE250:
   62              		.global	Thread_Template_parama1
-  63              		.global	Thread_Template
-  64              		.section	.bss.Thread_Template,"aw",%nobits
-  65              		.align	2
-  68              	Thread_Template:
-  69 0000 00000000 		.space	176
-  69      00000000 
-  69      00000000 
-  69      00000000 
-  69      00000000 
-  70              		.section	.bss.Thread_Template_parama1,"aw",%nobits
+  63              		.section	.bss.Thread_Template_parama1,"aw",%nobits
+  64              		.align	2
+  67              	Thread_Template_parama1:
+  68 0000 00       		.space	1
+  69              		.global	Thread_Template
+  70              		.section	.bss.Thread_Template,"aw",%nobits
   71              		.align	2
-  74              	Thread_Template_parama1:
-  75 0000 00       		.space	1
+  74              	Thread_Template:
+  75 0000 00000000 		.space	176
+  75      00000000 
+  75      00000000 
+  75      00000000 
+  75      00000000 
   76              		.text
   77              	.Letext0:
-  78              		.file 2 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\machine\\_default_types.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc6xTbn5.s 			page 3
+  78              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
+ARM GAS  /tmp/cctQBS01.s 			page 3
 
 
-  79              		.file 3 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
-  80              		.file 4 "./Middlewares/ST/threadx/common/inc/tx_api.h"
-  81              		.file 5 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\sys\\_stdint.h"
-  82              		.file 6 "./Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h"
-  83              		.file 7 "./app/Threads/Thread_template/Thread_template.h"
-  84              		.file 8 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc6xTbn5.s 			page 4
+  79              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
+  80              		.file 4 "/usr/lib/gcc/arm-none-eabi/13.2.1/include/stdint.h"
+  81              		.file 5 "./Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h"
+  82              		.file 6 "./app/Threads/Thread_template/Thread_template.h"
+  83              		.file 7 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h"
+ARM GAS  /tmp/cctQBS01.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 Thread_template.c
-C:\Users\Dennis\AppData\Local\Temp\cc6xTbn5.s:20     .text.Thread_Template_Entry:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\cc6xTbn5.s:26     .text.Thread_Template_Entry:00000000 Thread_Template_Entry
-C:\Users\Dennis\AppData\Local\Temp\cc6xTbn5.s:58     .text.Thread_Template_Entry:00000014 $d
-C:\Users\Dennis\AppData\Local\Temp\cc6xTbn5.s:74     .bss.Thread_Template_parama1:00000000 Thread_Template_parama1
-C:\Users\Dennis\AppData\Local\Temp\cc6xTbn5.s:68     .bss.Thread_Template:00000000 Thread_Template
-C:\Users\Dennis\AppData\Local\Temp\cc6xTbn5.s:65     .bss.Thread_Template:00000000 $d
-C:\Users\Dennis\AppData\Local\Temp\cc6xTbn5.s:71     .bss.Thread_Template_parama1:00000000 $d
+     /tmp/cctQBS01.s:21     .text.Thread_Template_Entry:00000000 $t
+     /tmp/cctQBS01.s:27     .text.Thread_Template_Entry:00000000 Thread_Template_Entry
+     /tmp/cctQBS01.s:58     .text.Thread_Template_Entry:00000014 $d
+     /tmp/cctQBS01.s:67     .bss.Thread_Template_parama1:00000000 Thread_Template_parama1
+     /tmp/cctQBS01.s:64     .bss.Thread_Template_parama1:00000000 $d
+     /tmp/cctQBS01.s:74     .bss.Thread_Template:00000000 Thread_Template
+     /tmp/cctQBS01.s:71     .bss.Thread_Template:00000000 $d
 
 UNDEFINED SYMBOLS
 HAL_GPIO_TogglePin

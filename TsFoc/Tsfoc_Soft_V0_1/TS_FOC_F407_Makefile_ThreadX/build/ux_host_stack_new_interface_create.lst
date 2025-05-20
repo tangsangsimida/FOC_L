@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cchnyVwp.s 			page 1
+ARM GAS  /tmp/ccQk6Lip.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,16 +19,16 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cchnyVwp.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text._ux_host_stack_new_interface_create,"ax",%progbits
-  20              		.align	1
-  21              		.global	_ux_host_stack_new_interface_create
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
-  26              	_ux_host_stack_new_interface_create:
-  27              	.LVL0:
-  28              	.LFB11:
-  29              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_interface_create.c"
+  19              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_interface_create.c"
+  20              		.section	.text._ux_host_stack_new_interface_create,"ax",%progbits
+  21              		.align	1
+  22              		.global	_ux_host_stack_new_interface_create
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	_ux_host_stack_new_interface_create:
+  28              	.LVL0:
+  29              	.LFB11:
    1:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_interface_create.c **** /**************************************************************************/
    2:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_interface_create.c **** /*                                                                        */
    3:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_interface_create.c **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cchnyVwp.s 			page 1
   27:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_interface_create.c **** 
   28:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_interface_create.c **** #include "ux_api.h"
   29:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_interface_create.c **** #include "ux_host_stack.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cchnyVwp.s 			page 2
+ARM GAS  /tmp/ccQk6Lip.s 			page 2
 
 
   30:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_interface_create.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cchnyVwp.s 			page 1
   84:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_interface_create.c **** /**************************************************************************/
   85:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_interface_create.c **** UINT  _ux_host_stack_new_interface_create(UX_CONFIGURATION *configuration,
   86:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_interface_create.c ****                                             UCHAR * descriptor, ULONG length)
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cchnyVwp.s 			page 3
+ARM GAS  /tmp/ccQk6Lip.s 			page 3
 
 
   87:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_interface_create.c **** {
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cchnyVwp.s 			page 1
   69              		.loc 1 101 5 is_stmt 1 view .LVU14
   70              		.loc 1 101 8 is_stmt 0 view .LVU15
   71 0014 0028     		cmp	r0, #0
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cchnyVwp.s 			page 4
+ARM GAS  /tmp/ccQk6Lip.s 			page 4
 
 
   72 0016 4ED0     		beq	.L11
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cchnyVwp.s 			page 1
  124:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_interface_create.c ****        if this is the first one, the interface descriptor is hooked
  125:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_interface_create.c ****        to the configuration. If it is not the first one, the interface 
  126:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_interface_create.c ****        is hooked to the end of the chain of interfaces.  */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cchnyVwp.s 			page 5
+ARM GAS  /tmp/ccQk6Lip.s 			page 5
 
 
  127:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_interface_create.c ****     if (configuration -> ux_configuration_first_interface == UX_NULL)
@@ -259,12 +259,12 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cchnyVwp.s 			page 1
  135:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_interface_create.c ****         
  136:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_interface_create.c ****         /* Traverse the list until we reach the end */
  137:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_interface_create.c ****         while (list_interface -> ux_interface_next_interface != UX_NULL)
- 111              		.loc 1 137 15 is_stmt 1 view .LVU34
+ 111              		.loc 1 137 62 is_stmt 1 view .LVU34
  112 0044 1A46     		mov	r2, r3
  113              		.loc 1 137 31 is_stmt 0 view .LVU35
  114 0046 DB6B     		ldr	r3, [r3, #60]
  115              	.LVL8:
- 116              		.loc 1 137 15 view .LVU36
+ 116              		.loc 1 137 62 view .LVU36
  117 0048 002B     		cmp	r3, #0
  118 004a FBD1     		bne	.L3
  138:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_interface_create.c ****         {
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cchnyVwp.s 			page 1
  130              		.loc 1 154 11 is_stmt 0 view .LVU43
  131 0054 5546     		mov	r5, r10
  132 0056 14E0     		b	.L5
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cchnyVwp.s 			page 6
+ARM GAS  /tmp/ccQk6Lip.s 			page 6
 
 
  133              	.LVL11:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cchnyVwp.s 			page 1
  160              	.LVL16:
  180:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_interface_create.c **** 
  181:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_interface_create.c ****             /* Check return status.  */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cchnyVwp.s 			page 7
+ARM GAS  /tmp/ccQk6Lip.s 			page 7
 
 
  182:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_interface_create.c ****             if(status != UX_SUCCESS)
@@ -404,7 +404,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cchnyVwp.s 			page 1
  179              	.LVL20:
  180              	.L5:
  154:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_interface_create.c ****     {
- 181              		.loc 1 154 11 is_stmt 1 view .LVU61
+ 181              		.loc 1 154 19 is_stmt 1 view .LVU61
  182 0082 EEB1     		cbz	r6, .L13
  154:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_interface_create.c ****     {
  183              		.loc 1 154 19 is_stmt 0 discriminator 1 view .LVU62
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cchnyVwp.s 			page 1
  189              	.LVL21:
  159:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_interface_create.c **** 
  190              		.loc 1 159 9 is_stmt 1 view .LVU65
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cchnyVwp.s 			page 8
+ARM GAS  /tmp/ccQk6Lip.s 			page 8
 
 
  159:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_interface_create.c **** 
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cchnyVwp.s 			page 1
  228              	.LVL25:
  229              	.L11:
  102:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_interface_create.c **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cchnyVwp.s 			page 9
+ARM GAS  /tmp/ccQk6Lip.s 			page 9
 
 
  230              		.loc 1 102 15 view .LVU79
@@ -513,17 +513,17 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cchnyVwp.s 			page 1
  256              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
  257              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
  258              		.file 4 "./Middlewares/ST/usbx/common/core/inc/ux_api.h"
- 259              		.file 5 "./Middlewares/ST/usbx/common/core/inc/ux_system.h"
- 260              		.file 6 "./Middlewares/ST/usbx/common/core/inc/ux_utility.h"
- 261              		.file 7 "./Middlewares/ST/usbx/common/core/inc/ux_host_stack.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cchnyVwp.s 			page 10
+ 259              		.file 5 "./Middlewares/ST/usbx/common/core/inc/ux_utility.h"
+ 260              		.file 6 "./Middlewares/ST/usbx/common/core/inc/ux_host_stack.h"
+ 261              		.file 7 "./Middlewares/ST/usbx/common/core/inc/ux_system.h"
+ARM GAS  /tmp/ccQk6Lip.s 			page 10
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 ux_host_stack_new_interface_create.c
-C:\Users\Dennis\AppData\Local\Temp\cchnyVwp.s:20     .text._ux_host_stack_new_interface_create:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\cchnyVwp.s:26     .text._ux_host_stack_new_interface_create:00000000 _ux_host_stack_new_interface_create
-C:\Users\Dennis\AppData\Local\Temp\cchnyVwp.s:250    .text._ux_host_stack_new_interface_create:000000c4 $d
+     /tmp/ccQk6Lip.s:21     .text._ux_host_stack_new_interface_create:00000000 $t
+     /tmp/ccQk6Lip.s:27     .text._ux_host_stack_new_interface_create:00000000 _ux_host_stack_new_interface_create
+     /tmp/ccQk6Lip.s:250    .text._ux_host_stack_new_interface_create:000000c4 $d
 
 UNDEFINED SYMBOLS
 _ux_utility_memory_allocate

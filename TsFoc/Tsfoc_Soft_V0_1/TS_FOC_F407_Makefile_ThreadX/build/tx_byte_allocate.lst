@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s 			page 1
+ARM GAS  /tmp/ccCxXLtt.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,16 +19,16 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text._tx_byte_allocate,"ax",%progbits
-  20              		.align	1
-  21              		.global	_tx_byte_allocate
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
-  26              	_tx_byte_allocate:
-  27              	.LVL0:
-  28              	.LFB8:
-  29              		.file 1 "./Middlewares/ST/threadx/common/src/tx_byte_allocate.c"
+  19              		.file 1 "./Middlewares/ST/threadx/common/src/tx_byte_allocate.c"
+  20              		.section	.text._tx_byte_allocate,"ax",%progbits
+  21              		.align	1
+  22              		.global	_tx_byte_allocate
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	_tx_byte_allocate:
+  28              	.LVL0:
+  29              	.LFB8:
    1:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** /**************************************************************************/
    2:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** /*                                                                        */
    3:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s 			page 1
   27:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
   28:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** #include "tx_api.h"
   29:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** #ifdef TX_ENABLE_EVENT_TRACE
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s 			page 2
+ARM GAS  /tmp/ccCxXLtt.s 			page 2
 
 
   30:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** #include "tx_trace.h"
@@ -118,41 +118,43 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s 			page 1
   30              		.loc 1 83 1 view -0
   31              		.cfi_startproc
   32              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s 			page 3
+ARM GAS  /tmp/ccCxXLtt.s 			page 3
 
 
   33              		@ frame_needed = 0, uses_anonymous_args = 0
   34              		.loc 1 83 1 is_stmt 0 view .LVU1
-  35 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+  35 0000 2DE9F843 		push	{r3, r4, r5, r6, r7, r8, r9, lr}
   36              	.LCFI0:
-  37              		.cfi_def_cfa_offset 24
-  38              		.cfi_offset 4, -24
-  39              		.cfi_offset 5, -20
-  40              		.cfi_offset 6, -16
-  41              		.cfi_offset 7, -12
-  42              		.cfi_offset 8, -8
-  43              		.cfi_offset 14, -4
-  44 0004 0446     		mov	r4, r0
-  45 0006 0F46     		mov	r7, r1
-  46 0008 9846     		mov	r8, r3
+  37              		.cfi_def_cfa_offset 32
+  38              		.cfi_offset 3, -32
+  39              		.cfi_offset 4, -28
+  40              		.cfi_offset 5, -24
+  41              		.cfi_offset 6, -20
+  42              		.cfi_offset 7, -16
+  43              		.cfi_offset 8, -12
+  44              		.cfi_offset 9, -8
+  45              		.cfi_offset 14, -4
+  46 0004 0446     		mov	r4, r0
+  47 0006 8846     		mov	r8, r1
+  48 0008 9946     		mov	r9, r3
   84:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
   85:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** TX_INTERRUPT_SAVE_AREA
-  47              		.loc 1 85 1 is_stmt 1 view .LVU2
+  49              		.loc 1 85 1 is_stmt 1 view .LVU2
   86:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
   87:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** UINT                        status;
-  48              		.loc 1 87 1 view .LVU3
+  50              		.loc 1 87 1 view .LVU3
   88:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** TX_THREAD                   *thread_ptr;
-  49              		.loc 1 88 1 view .LVU4
+  51              		.loc 1 88 1 view .LVU4
   89:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** UCHAR                       *work_ptr;
-  50              		.loc 1 89 1 view .LVU5
+  52              		.loc 1 89 1 view .LVU5
   90:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** UINT                        suspended_count;
-  51              		.loc 1 90 1 view .LVU6
+  53              		.loc 1 90 1 view .LVU6
   91:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** TX_THREAD                   *next_thread;
-  52              		.loc 1 91 1 view .LVU7
+  54              		.loc 1 91 1 view .LVU7
   92:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** TX_THREAD                   *previous_thread;
-  53              		.loc 1 92 1 view .LVU8
+  55              		.loc 1 92 1 view .LVU8
   93:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** UINT                        finished;
-  54              		.loc 1 93 1 view .LVU9
+  56              		.loc 1 93 1 view .LVU9
   94:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** #ifdef TX_ENABLE_EVENT_TRACE
   95:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** TX_TRACE_BUFFER_ENTRY       *entry_ptr;
   96:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** ULONG                       time_stamp =  ((ULONG) 0);
@@ -167,23 +169,23 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s 			page 1
  105:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****     /* Round the memory size up to the next size that is evenly divisible by
  106:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****        an ALIGN_TYPE (this is typically a 32-bit ULONG).  This guarantees proper alignment.  */
  107:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****     memory_size = (((memory_size + (sizeof(ALIGN_TYPE)))-((ALIGN_TYPE) 1))/(sizeof(ALIGN_TYPE))) * 
-  55              		.loc 1 107 5 view .LVU10
-  56              		.loc 1 107 57 is_stmt 0 view .LVU11
-  57 000a 0332     		adds	r2, r2, #3
-  58              	.LVL1:
-  59              		.loc 1 107 17 view .LVU12
-  60 000c 22F00306 		bic	r6, r2, #3
-  61              	.LVL2:
+  57              		.loc 1 107 5 view .LVU10
+  58              		.loc 1 107 57 is_stmt 0 view .LVU11
+  59 000a 0332     		adds	r2, r2, #3
+  60              	.LVL1:
+  61              		.loc 1 107 17 view .LVU12
+  62 000c 22F00307 		bic	r7, r2, #3
+  63              	.LVL2:
  108:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
  109:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****     /* Disable interrupts.  */
+ARM GAS  /tmp/ccCxXLtt.s 			page 4
+
+
  110:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****     TX_DISABLE
-  62              		.loc 1 110 5 is_stmt 1 view .LVU13
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s 			page 4
-
-
-  63              	.LBB22:
-  64              	.LBI22:
-  65              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
+  64              		.loc 1 110 5 is_stmt 1 view .LVU13
+  65              	.LBB22:
+  66              	.LBI22:
+  67              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
    1:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /**************************************************************************/
    2:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*                                                                        */
    3:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
@@ -236,11 +238,11 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s 			page 1
   50:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*                                                                        */
   51:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*    DATE              NAME                      DESCRIPTION             */
   52:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*                                                                        */
+ARM GAS  /tmp/ccCxXLtt.s 			page 5
+
+
   53:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*  06-02-2021      Scott Larson            Initial Version 6.1.7         */
   54:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*  01-31-2022      Scott Larson            Modified comments, updated    */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s 			page 5
-
-
   55:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*                                            typedef to fix misra        */
   56:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*                                            violation,                  */
   57:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*                                            fixed predefined macro,     */
@@ -296,11 +298,11 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s 			page 1
  107:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define VOID                                    void
  108:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** typedef char                                    CHAR;
  109:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** typedef unsigned char                           UCHAR;
+ARM GAS  /tmp/ccCxXLtt.s 			page 6
+
+
  110:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** typedef int                                     INT;
  111:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** typedef unsigned int                            UINT;
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s 			page 6
-
-
  112:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** typedef long                                    LONG;
  113:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** typedef unsigned long                           ULONG;
  114:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** typedef unsigned long long                      ULONG64;
@@ -356,11 +358,11 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s 			page 1
  164:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_TRACE_TIME_SOURCE                    *((ULONG *) 0xE0001004)
  165:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
  166:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #else
+ARM GAS  /tmp/ccCxXLtt.s 			page 7
+
+
  167:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** ULONG   _tx_misra_time_stamp_get(VOID);
  168:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_TRACE_TIME_SOURCE                    _tx_misra_time_stamp_get()
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s 			page 7
-
-
  169:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
  170:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  171:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifndef TX_TRACE_TIME_MASK
@@ -416,11 +418,11 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s 			page 1
  221:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****    for the multiple macros is so that backward compatibility can be maintained with
  222:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****    existing ThreadX kernel awareness modules.  */
  223:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
+ARM GAS  /tmp/ccCxXLtt.s 			page 8
+
+
  224:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_THREAD_EXTENSION_0
  225:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_THREAD_EXTENSION_1
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s 			page 8
-
-
  226:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifdef  TX_ENABLE_IAR_LIBRARY_SUPPORT
  227:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_THREAD_EXTENSION_2           VOID    *tx_thread_iar_tls_pointer;
  228:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #elif defined(__ghs__)
@@ -476,11 +478,11 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s 			page 1
  278:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_PORT_SPECIFIC_PRE_SCHEDULER_INITIALIZATION               do {__iar_Initlocks();} while(0
  279:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
  280:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #else
+ARM GAS  /tmp/ccCxXLtt.s 			page 9
+
+
  281:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_THREAD_CREATE_EXTENSION(thread_ptr)
  282:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_THREAD_DELETE_EXTENSION(thread_ptr)
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s 			page 9
-
-
  283:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
  284:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  285:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #if defined(__ARMVFP__) || defined(__ARM_PCS_VFP) || defined(__ARM_FP) || defined(__TARGET_FPU_VFP)
@@ -536,11 +538,11 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s 			page 1
  335:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  336:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif  /* TX_MISRA_ENABLE */
  337:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
+ARM GAS  /tmp/ccCxXLtt.s 			page 10
+
+
  338:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  339:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /* A completed thread falls into _thread_shell_entry and we can simply deactivate the FPU via CONTR
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s 			page 10
-
-
  340:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****    in order to ensure no lazy stacking will occur. */
  341:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  342:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifndef TX_MISRA_ENABLE
@@ -596,11 +598,11 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s 			page 1
  392:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                                     _tx_vfp_state =  _tx_vfp_state 
  393:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                                     __set_control_value(_tx_vfp_sta
  394:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                                 }                                  
+ARM GAS  /tmp/ccCxXLtt.s 			page 11
+
+
  395:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                             }                                      
  396:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                         }                                          
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s 			page 11
-
-
  397:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                     }
  398:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #else
  399:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
@@ -656,11 +658,11 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s 			page 1
  449:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  450:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  451:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /* Define the ThreadX object deletion extensions for the remaining objects.  */
+ARM GAS  /tmp/ccCxXLtt.s 			page 12
+
+
  452:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  453:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_BLOCK_POOL_DELETE_EXTENSION(pool_ptr)
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s 			page 12
-
-
  454:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_BYTE_POOL_DELETE_EXTENSION(pool_ptr)
  455:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_EVENT_FLAGS_GROUP_DELETE_EXTENSION(group_ptr)
  456:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_MUTEX_DELETE_EXTENSION(mutex_ptr)
@@ -716,11 +718,11 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s 			page 1
  506:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****    prevent early scheduling on Cortex-M parts.  */
  507:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  508:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_PORT_SPECIFIC_POST_INITIALIZATION    _tx_thread_preempt_disable++;
+ARM GAS  /tmp/ccCxXLtt.s 			page 13
+
+
  509:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  510:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s 			page 13
-
-
  511:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  512:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  513:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifndef TX_DISABLE_INLINE
@@ -776,69 +778,67 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s 			page 1
  563:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
  564:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
  565:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
+ARM GAS  /tmp/ccCxXLtt.s 			page 14
+
+
  566:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** __attribute__( ( always_inline ) ) static inline unsigned int __disable_interrupts(void)
-  66              		.loc 2 566 63 view .LVU14
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s 			page 14
-
-
-  67              	.LBB23:
+  68              		.loc 2 566 63 view .LVU14
+  69              	.LBB23:
  567:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
  568:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** unsigned int int_posture;
-  68              		.loc 2 568 1 view .LVU15
+  70              		.loc 2 568 1 view .LVU15
  569:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  570:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     int_posture = __get_interrupt_posture();
-  69              		.loc 2 570 5 view .LVU16
-  70              	.LBB24:
-  71              	.LBI24:
+  71              		.loc 2 570 5 view .LVU16
+  72              	.LBB24:
+  73              	.LBI24:
  533:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
-  72              		.loc 2 533 63 view .LVU17
-  73              	.LBB25:
+  74              		.loc 2 533 63 view .LVU17
+  75              	.LBB25:
  535:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifdef TX_PORT_USE_BASEPRI
-  74              		.loc 2 535 1 view .LVU18
+  76              		.loc 2 535 1 view .LVU18
  539:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
-  75              		.loc 2 539 5 view .LVU19
-  76              		.syntax unified
-  77              	@ 539 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
-  78 0010 EFF31082 		MRS  r2, PRIMASK 
-  79              	@ 0 "" 2
-  80              	.LVL3:
+  77              		.loc 2 539 5 view .LVU19
+  78              		.syntax unified
+  79              	@ 539 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+  80 0010 EFF31083 		MRS  r3, PRIMASK 
+  81              	@ 0 "" 2
+  82              	.LVL3:
  541:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
-  81              		.loc 2 541 5 view .LVU20
+  83              		.loc 2 541 5 view .LVU20
  541:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
-  82              		.loc 2 541 5 is_stmt 0 view .LVU21
-  83              		.thumb
-  84              		.syntax unified
-  85              	.LBE25:
-  86              	.LBE24:
+  84              		.loc 2 541 5 is_stmt 0 view .LVU21
+  85              		.thumb
+  86              		.syntax unified
+  87              	.LBE25:
+  88              	.LBE24:
  571:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  572:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifdef TX_PORT_USE_BASEPRI
  573:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     __set_basepri_value(TX_PORT_BASEPRI);
  574:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #else
  575:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     __asm__ volatile ("CPSID i" : : : "memory");
-  87              		.loc 2 575 5 is_stmt 1 view .LVU22
-  88              		.syntax unified
-  89              	@ 575 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
-  90 0014 72B6     		CPSID i
-  91              	@ 0 "" 2
+  89              		.loc 2 575 5 is_stmt 1 view .LVU22
+  90              		.syntax unified
+  91              	@ 575 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+  92 0014 72B6     		CPSID i
+  93              	@ 0 "" 2
  576:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
  577:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     return(int_posture);
-  92              		.loc 2 577 5 view .LVU23
-  93              	.LVL4:
-  94              		.loc 2 577 5 is_stmt 0 view .LVU24
-  95              		.thumb
-  96              		.syntax unified
-  97              	.LBE23:
-  98              	.LBE22:
+  94              		.loc 2 577 5 view .LVU23
+  95              	.LVL4:
+  96              		.loc 2 577 5 is_stmt 0 view .LVU24
+  97              		.thumb
+  98              		.syntax unified
+  99              	.LBE23:
+ 100              	.LBE22:
  111:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
  112:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****     /* Pickup thread pointer.  */
  113:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****     TX_THREAD_GET_CURRENT(thread_ptr)
-  99              		.loc 1 113 5 is_stmt 1 view .LVU25
- 100 0016 274B     		ldr	r3, .L12
- 101              	.LVL5:
- 102              		.loc 1 113 5 is_stmt 0 view .LVU26
- 103 0018 1D68     		ldr	r5, [r3]
- 104              	.LVL6:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s 			page 15
+ 101              		.loc 1 113 5 is_stmt 1 view .LVU25
+ 102 0016 2C4A     		ldr	r2, .L17
+ 103 0018 1668     		ldr	r6, [r2]
+ 104              	.LVL5:
+ARM GAS  /tmp/ccCxXLtt.s 			page 15
 
 
  114:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
@@ -887,115 +887,38 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s 			page 1
  157:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
  158:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****     /* Set the search finished flag to false.  */
  159:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****     finished =  TX_FALSE;
- 105              		.loc 1 159 5 is_stmt 1 view .LVU27
- 106              	.L3:
+ 105              		.loc 1 159 5 view .LVU26
+ 106              		.loc 1 159 14 is_stmt 0 view .LVU27
+ 107 001a 0025     		movs	r5, #0
+ 108 001c 03E0     		b	.L3
+ 109              	.LVL6:
+ 110              	.L15:
  160:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
  161:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****     /* Loop to handle cases where the owner of the pool changed.  */
  162:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****     do
- 107              		.loc 1 162 5 view .LVU28
  163:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****     {
  164:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
+ARM GAS  /tmp/ccCxXLtt.s 			page 16
+
+
  165:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****         /* Indicate that this thread is the current owner.  */
  166:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****         pool_ptr -> tx_byte_pool_owner =  thread_ptr;
- 108              		.loc 1 166 9 view .LVU29
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s 			page 16
-
-
- 109              		.loc 1 166 40 is_stmt 0 view .LVU30
- 110 001a 2562     		str	r5, [r4, #32]
  167:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
  168:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****         /* Restore interrupts.  */
  169:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****         TX_RESTORE
- 111              		.loc 1 169 9 is_stmt 1 view .LVU31
- 112              	.LVL7:
- 113              	.LBB26:
- 114              	.LBI26:
- 556:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 115              		.loc 2 556 55 view .LVU32
- 116              	.LBB27:
- 562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 117              		.loc 2 562 5 view .LVU33
- 118              		.syntax unified
- 119              	@ 562 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
- 120 001c 82F31088 		MSR  PRIMASK,r2
- 121              	@ 0 "" 2
- 122              	.LVL8:
- 562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 123              		.loc 2 562 5 is_stmt 0 view .LVU34
- 124              		.thumb
- 125              		.syntax unified
- 126              	.LBE27:
- 127              	.LBE26:
  170:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
  171:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****         /* At this point, the executing thread owns the pool and can perform a search
  172:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****            for free memory.  */
  173:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****         work_ptr =  _tx_byte_pool_search(pool_ptr, memory_size);
- 128              		.loc 1 173 9 is_stmt 1 view .LVU35
- 129              		.loc 1 173 21 is_stmt 0 view .LVU36
- 130 0020 3146     		mov	r1, r6
- 131 0022 2046     		mov	r0, r4
- 132 0024 FFF7FEFF 		bl	_tx_byte_pool_search
- 133              	.LVL9:
  174:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
  175:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****         /* Optional processing extension.  */
  176:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****         TX_BYTE_ALLOCATE_EXTENSION
  177:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
  178:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****         /* Lockout interrupts.  */
  179:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****         TX_DISABLE
- 134              		.loc 1 179 9 is_stmt 1 view .LVU37
- 135              	.LBB28:
- 136              	.LBI28:
- 566:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 137              		.loc 2 566 63 view .LVU38
- 138              	.LBB29:
- 568:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
- 139              		.loc 2 568 1 view .LVU39
- 570:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
- 140              		.loc 2 570 5 view .LVU40
- 141              	.LBB30:
- 142              	.LBI30:
- 533:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 143              		.loc 2 533 63 view .LVU41
- 144              	.LBB31:
- 535:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifdef TX_PORT_USE_BASEPRI
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s 			page 17
-
-
- 145              		.loc 2 535 1 view .LVU42
- 539:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 146              		.loc 2 539 5 view .LVU43
- 147              		.syntax unified
- 148              	@ 539 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
- 149 0028 EFF31082 		MRS  r2, PRIMASK 
- 150              	@ 0 "" 2
- 151              	.LVL10:
- 541:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
- 152              		.loc 2 541 5 view .LVU44
- 541:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
- 153              		.loc 2 541 5 is_stmt 0 view .LVU45
- 154              		.thumb
- 155              		.syntax unified
- 156              	.LBE31:
- 157              	.LBE30:
- 575:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 158              		.loc 2 575 5 is_stmt 1 view .LVU46
- 159              		.syntax unified
- 160              	@ 575 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
- 161 002c 72B6     		CPSID i
- 162              	@ 0 "" 2
- 163              		.loc 2 577 5 view .LVU47
- 164              	.LVL11:
- 165              		.loc 2 577 5 is_stmt 0 view .LVU48
- 166              		.thumb
- 167              		.syntax unified
- 168              	.LBE29:
- 169              	.LBE28:
  180:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
  181:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****         /* Determine if we are finished.  */
  182:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****         if (work_ptr != TX_NULL)
- 170              		.loc 1 182 9 is_stmt 1 view .LVU49
- 171              		.loc 1 182 12 is_stmt 0 view .LVU50
- 172 002e 10B9     		cbnz	r0, .L2
  183:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****         {
  184:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
  185:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****             /* Yes, we have found a block the search is finished.  */
@@ -1006,42 +929,158 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s 			page 1
  190:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
  191:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****             /* No block was found, does this thread still own the pool?  */
  192:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****             if (pool_ptr -> tx_byte_pool_owner == thread_ptr)
- 173              		.loc 1 192 13 is_stmt 1 view .LVU51
- 174              		.loc 1 192 26 is_stmt 0 view .LVU52
- 175 0030 236A     		ldr	r3, [r4, #32]
- 176              		.loc 1 192 16 view .LVU53
- 177 0032 AB42     		cmp	r3, r5
- 178 0034 F1D1     		bne	.L3
- 179              	.L2:
- 180              	.LVL12:
+ 111              		.loc 1 192 13 is_stmt 1 view .LVU28
+ 112              		.loc 1 192 26 is_stmt 0 view .LVU29
+ 113 001e 226A     		ldr	r2, [r4, #32]
+ 114              		.loc 1 192 16 view .LVU30
+ 115 0020 B242     		cmp	r2, r6
+ 116 0022 0ED0     		beq	.L13
+ 117              	.LVL7:
+ 118              	.L2:
  193:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****             {
  194:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
  195:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                 /* Yes, then we have looked through the entire pool and haven't found the memory.  
  196:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                 finished =  TX_TRUE;
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s 			page 18
-
-
  197:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****             }
  198:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****         }
  199:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
  200:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****     } while (finished == TX_FALSE);
+ 119              		.loc 1 200 23 is_stmt 1 view .LVU31
+ 120 0024 7DB9     		cbnz	r5, .L14
+ 121              	.LVL8:
+ 122              	.L3:
+ 162:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****     {
+ 123              		.loc 1 162 5 view .LVU32
+ 166:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
+ 124              		.loc 1 166 9 view .LVU33
+ 166:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
+ 125              		.loc 1 166 40 is_stmt 0 view .LVU34
+ 126 0026 2662     		str	r6, [r4, #32]
+ 169:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
+ 127              		.loc 1 169 9 is_stmt 1 view .LVU35
+ARM GAS  /tmp/ccCxXLtt.s 			page 17
+
+
+ 128              	.LVL9:
+ 129              	.LBB26:
+ 130              	.LBI26:
+ 556:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
+ 131              		.loc 2 556 55 view .LVU36
+ 132              	.LBB27:
+ 562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
+ 133              		.loc 2 562 5 view .LVU37
+ 134              		.syntax unified
+ 135              	@ 562 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+ 136 0028 83F31088 		MSR  PRIMASK,r3
+ 137              	@ 0 "" 2
+ 138              	.LVL10:
+ 562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
+ 139              		.loc 2 562 5 is_stmt 0 view .LVU38
+ 140              		.thumb
+ 141              		.syntax unified
+ 142              	.LBE27:
+ 143              	.LBE26:
+ 173:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
+ 144              		.loc 1 173 9 is_stmt 1 view .LVU39
+ 173:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
+ 145              		.loc 1 173 21 is_stmt 0 view .LVU40
+ 146 002c 3946     		mov	r1, r7
+ 147 002e 2046     		mov	r0, r4
+ 148 0030 FFF7FEFF 		bl	_tx_byte_pool_search
+ 149              	.LVL11:
+ 179:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
+ 150              		.loc 1 179 9 is_stmt 1 view .LVU41
+ 151              	.LBB28:
+ 152              	.LBI28:
+ 566:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
+ 153              		.loc 2 566 63 view .LVU42
+ 154              	.LBB29:
+ 568:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
+ 155              		.loc 2 568 1 view .LVU43
+ 570:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
+ 156              		.loc 2 570 5 view .LVU44
+ 157              	.LBB30:
+ 158              	.LBI30:
+ 533:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
+ 159              		.loc 2 533 63 view .LVU45
+ 160              	.LBB31:
+ 535:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifdef TX_PORT_USE_BASEPRI
+ 161              		.loc 2 535 1 view .LVU46
+ 539:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
+ 162              		.loc 2 539 5 view .LVU47
+ 163              		.syntax unified
+ 164              	@ 539 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+ 165 0034 EFF31083 		MRS  r3, PRIMASK 
+ 166              	@ 0 "" 2
+ 167              	.LVL12:
+ 541:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
+ 168              		.loc 2 541 5 view .LVU48
+ 541:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
+ 169              		.loc 2 541 5 is_stmt 0 view .LVU49
+ 170              		.thumb
+ARM GAS  /tmp/ccCxXLtt.s 			page 18
+
+
+ 171              		.syntax unified
+ 172              	.LBE31:
+ 173              	.LBE30:
+ 575:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
+ 174              		.loc 2 575 5 is_stmt 1 view .LVU50
+ 175              		.syntax unified
+ 176              	@ 575 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+ 177 0038 72B6     		CPSID i
+ 178              	@ 0 "" 2
+ 179              		.loc 2 577 5 view .LVU51
+ 180              	.LVL13:
+ 181              		.loc 2 577 5 is_stmt 0 view .LVU52
+ 182              		.thumb
+ 183              		.syntax unified
+ 184              	.LBE29:
+ 185              	.LBE28:
+ 182:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****         {
+ 186              		.loc 1 182 9 is_stmt 1 view .LVU53
+ 182:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****         {
+ 187              		.loc 1 182 12 is_stmt 0 view .LVU54
+ 188 003a 0028     		cmp	r0, #0
+ 189 003c EFD0     		beq	.L15
+ 186:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****         }
+ 190              		.loc 1 186 22 view .LVU55
+ 191 003e 0125     		movs	r5, #1
+ 192              	.LVL14:
+ 186:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****         }
+ 193              		.loc 1 186 22 view .LVU56
+ 194 0040 F0E7     		b	.L2
+ 195              	.LVL15:
+ 196              	.L13:
+ 196:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****             }
+ 197              		.loc 1 196 26 view .LVU57
+ 198 0042 0125     		movs	r5, #1
+ 199              	.LVL16:
+ 196:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****             }
+ 200              		.loc 1 196 26 view .LVU58
+ 201 0044 EEE7     		b	.L2
+ 202              	.LVL17:
+ 203              	.L14:
  201:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
  202:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****     /* Copy the pointer into the return destination.  */
  203:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****     *memory_ptr =  (VOID *) work_ptr;
- 181              		.loc 1 203 5 is_stmt 1 view .LVU54
- 182              		.loc 1 203 17 is_stmt 0 view .LVU55
- 183 0036 3860     		str	r0, [r7]
+ 204              		.loc 1 203 5 is_stmt 1 view .LVU59
+ 205              		.loc 1 203 17 is_stmt 0 view .LVU60
+ 206 0046 C8F80000 		str	r0, [r8]
  204:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
  205:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****     /* Determine if memory was found.  */
  206:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****     if (work_ptr != TX_NULL)
- 184              		.loc 1 206 5 is_stmt 1 view .LVU56
- 185              		.loc 1 206 8 is_stmt 0 view .LVU57
- 186 0038 20B1     		cbz	r0, .L4
+ 207              		.loc 1 206 5 is_stmt 1 view .LVU61
+ 208              		.loc 1 206 8 is_stmt 0 view .LVU62
+ 209 004a 20B1     		cbz	r0, .L4
  207:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****     {
  208:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
  209:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** #ifdef TX_ENABLE_EVENT_TRACE
  210:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
  211:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****         /* Check that the event time stamp is unchanged.  A different
+ARM GAS  /tmp/ccCxXLtt.s 			page 19
+
+
  212:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****            timestamp means that a later event wrote over the byte
  213:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****            allocate event.  In that case, do nothing here.  */
  214:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****         if (entry_ptr != TX_NULL)
@@ -1075,37 +1114,37 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s 			page 1
  242:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
  243:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****         /* Restore interrupts.  */
  244:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****         TX_RESTORE
- 187              		.loc 1 244 9 is_stmt 1 view .LVU58
- 188              	.LVL13:
- 189              	.LBB32:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s 			page 19
-
-
- 190              	.LBI32:
+ 210              		.loc 1 244 9 is_stmt 1 view .LVU63
+ 211              	.LVL18:
+ 212              	.LBB32:
+ 213              	.LBI32:
  556:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 191              		.loc 2 556 55 view .LVU59
- 192              	.LBB33:
+ 214              		.loc 2 556 55 view .LVU64
+ 215              	.LBB33:
  562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 193              		.loc 2 562 5 view .LVU60
- 194              		.syntax unified
- 195              	@ 562 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
- 196 003a 82F31088 		MSR  PRIMASK,r2
- 197              	@ 0 "" 2
- 198              	.LVL14:
+ 216              		.loc 2 562 5 view .LVU65
+ 217              		.syntax unified
+ 218              	@ 562 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+ 219 004c 83F31088 		MSR  PRIMASK,r3
+ 220              	@ 0 "" 2
+ 221              	.LVL19:
  562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 199              		.loc 2 562 5 is_stmt 0 view .LVU61
- 200              		.thumb
- 201              		.syntax unified
- 202              	.LBE33:
- 203              	.LBE32:
+ 222              		.loc 2 562 5 is_stmt 0 view .LVU66
+ 223              		.thumb
+ 224              		.syntax unified
+ 225              	.LBE33:
+ 226              	.LBE32:
  245:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
  246:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****         /* Set the status to success.  */
  247:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****         status =  TX_SUCCESS;
- 204              		.loc 1 247 9 is_stmt 1 view .LVU62
- 205              		.loc 1 247 16 is_stmt 0 view .LVU63
- 206 003e 0020     		movs	r0, #0
- 207              	.LVL15:
- 208              	.L1:
+ 227              		.loc 1 247 9 is_stmt 1 view .LVU67
+ARM GAS  /tmp/ccCxXLtt.s 			page 20
+
+
+ 228              		.loc 1 247 16 is_stmt 0 view .LVU68
+ 229 0050 0020     		movs	r0, #0
+ 230              	.LVL20:
+ 231              	.L1:
  248:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****     }
  249:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****     else
  250:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****     {
@@ -1138,9 +1177,6 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s 			page 1
  277:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
  278:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                 /* Increment the number of suspensions on this pool.  */
  279:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                 pool_ptr -> tx_byte_pool_performance_suspension_count++;
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s 			page 20
-
-
  280:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** #endif
  281:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
  282:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                 /* Setup cleanup routine pointer.  */
@@ -1162,6 +1198,9 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s 			page 1
  298:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                    this suspension event.  */
  299:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                 thread_ptr -> tx_thread_suspension_sequence++;
  300:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** #endif
+ARM GAS  /tmp/ccCxXLtt.s 			page 21
+
+
  301:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
  302:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                 /* Pickup the number of suspended threads.  */
  303:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                 suspended_count =  pool_ptr -> tx_byte_pool_suspended_count;
@@ -1198,9 +1237,6 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s 			page 1
  334:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
  335:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                 /* Call actual non-interruptable thread suspension routine.  */
  336:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                 _tx_thread_system_ni_suspend(thread_ptr, wait_option);
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s 			page 21
-
-
  337:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
  338:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                 /* Restore interrupts.  */
  339:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                 TX_RESTORE
@@ -1222,6 +1258,9 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s 			page 1
  355:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                 _tx_thread_system_suspend(thread_ptr);
  356:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** #endif
  357:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
+ARM GAS  /tmp/ccCxXLtt.s 			page 22
+
+
  358:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** #ifdef TX_ENABLE_EVENT_TRACE
  359:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
  360:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                 /* Check that the event time stamp is unchanged.  A different
@@ -1258,9 +1297,6 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s 			page 1
  391:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** #endif
  392:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
  393:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                 /* Return the completion status.  */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s 			page 22
-
-
  394:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                 status =  thread_ptr -> tx_thread_suspend_status;
  395:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****             }
  396:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****         }
@@ -1278,287 +1314,293 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s 			page 1
  408:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****     /* Return completion status.  */
  409:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****     return(status);
  410:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** }
- 209              		.loc 1 410 1 view .LVU64
- 210 0040 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
- 211              	.LVL16:
- 212              	.L4:
+ 232              		.loc 1 410 1 view .LVU69
+ 233 0052 BDE8F883 		pop	{r3, r4, r5, r6, r7, r8, r9, pc}
+ 234              	.LVL21:
+ 235              	.L4:
+ARM GAS  /tmp/ccCxXLtt.s 			page 23
+
+
  255:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****         {
- 213              		.loc 1 255 9 is_stmt 1 view .LVU65
+ 236              		.loc 1 255 9 is_stmt 1 view .LVU70
  255:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****         {
- 214              		.loc 1 255 12 is_stmt 0 view .LVU66
- 215 0044 B8F1000F 		cmp	r8, #0
- 216 0048 30D0     		beq	.L6
+ 237              		.loc 1 255 12 is_stmt 0 view .LVU71
+ 238 0056 B9F1000F 		cmp	r9, #0
+ 239 005a 31D0     		beq	.L6
  259:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****             {
- 217              		.loc 1 259 13 is_stmt 1 view .LVU67
+ 240              		.loc 1 259 13 is_stmt 1 view .LVU72
  259:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****             {
- 218              		.loc 1 259 44 is_stmt 0 view .LVU68
- 219 004a 1B4B     		ldr	r3, .L12+4
- 220 004c 1B68     		ldr	r3, [r3]
+ 241              		.loc 1 259 44 is_stmt 0 view .LVU73
+ 242 005c 1B4A     		ldr	r2, .L17+4
+ 243 005e 1268     		ldr	r2, [r2]
  259:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****             {
- 221              		.loc 1 259 16 view .LVU69
- 222 004e 13BB     		cbnz	r3, .L11
+ 244              		.loc 1 259 16 view .LVU74
+ 245 0060 1ABB     		cbnz	r2, .L16
  283:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
- 223              		.loc 1 283 17 is_stmt 1 view .LVU70
+ 246              		.loc 1 283 17 is_stmt 1 view .LVU75
  283:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
- 224              		.loc 1 283 57 is_stmt 0 view .LVU71
- 225 0050 1A4B     		ldr	r3, .L12+8
- 226 0052 AB66     		str	r3, [r5, #104]
+ 247              		.loc 1 283 57 is_stmt 0 view .LVU76
+ 248 0062 1B4A     		ldr	r2, .L17+8
+ 249 0064 B266     		str	r2, [r6, #104]
  287:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
- 227              		.loc 1 287 17 is_stmt 1 view .LVU72
+ 250              		.loc 1 287 17 is_stmt 1 view .LVU77
  287:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
- 228              		.loc 1 287 63 is_stmt 0 view .LVU73
- 229 0054 EC66     		str	r4, [r5, #108]
+ 251              		.loc 1 287 63 is_stmt 0 view .LVU78
+ 252 0066 F466     		str	r4, [r6, #108]
  290:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
- 230              		.loc 1 290 17 is_stmt 1 view .LVU74
+ 253              		.loc 1 290 17 is_stmt 1 view .LVU79
  290:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
- 231              		.loc 1 290 65 is_stmt 0 view .LVU75
- 232 0056 EF67     		str	r7, [r5, #124]
+ 254              		.loc 1 290 65 is_stmt 0 view .LVU80
+ 255 0068 C6F87C80 		str	r8, [r6, #124]
  293:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
- 233              		.loc 1 293 17 is_stmt 1 view .LVU76
+ 256              		.loc 1 293 17 is_stmt 1 view .LVU81
  293:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
- 234              		.loc 1 293 54 is_stmt 0 view .LVU77
- 235 0058 AE67     		str	r6, [r5, #120]
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s 			page 23
-
-
+ 257              		.loc 1 293 54 is_stmt 0 view .LVU82
+ 258 006c B767     		str	r7, [r6, #120]
  299:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** #endif
- 236              		.loc 1 299 17 is_stmt 1 view .LVU78
+ 259              		.loc 1 299 17 is_stmt 1 view .LVU83
  299:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** #endif
- 237              		.loc 1 299 28 is_stmt 0 view .LVU79
- 238 005a D5F8AC30 		ldr	r3, [r5, #172]
+ 260              		.loc 1 299 28 is_stmt 0 view .LVU84
+ 261 006e D6F8AC20 		ldr	r2, [r6, #172]
  299:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** #endif
- 239              		.loc 1 299 60 view .LVU80
- 240 005e 0133     		adds	r3, r3, #1
- 241 0060 C5F8AC30 		str	r3, [r5, #172]
+ 262              		.loc 1 299 60 view .LVU85
+ 263 0072 0132     		adds	r2, r2, #1
+ 264 0074 C6F8AC20 		str	r2, [r6, #172]
  303:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
- 242              		.loc 1 303 17 is_stmt 1 view .LVU81
+ 265              		.loc 1 303 17 is_stmt 1 view .LVU86
  303:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
- 243              		.loc 1 303 33 is_stmt 0 view .LVU82
- 244 0064 A36A     		ldr	r3, [r4, #40]
- 245              	.LVL17:
+ 266              		.loc 1 303 33 is_stmt 0 view .LVU87
+ 267 0078 A26A     		ldr	r2, [r4, #40]
+ 268              	.LVL22:
  306:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
- 246              		.loc 1 306 17 is_stmt 1 view .LVU83
+ 269              		.loc 1 306 17 is_stmt 1 view .LVU88
  306:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
- 247              		.loc 1 306 59 is_stmt 0 view .LVU84
- 248 0066 591C     		adds	r1, r3, #1
- 249 0068 A162     		str	r1, [r4, #40]
- 309:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                 {
- 250              		.loc 1 309 17 is_stmt 1 view .LVU85
- 309:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                 {
- 251              		.loc 1 309 20 is_stmt 0 view .LVU86
- 252 006a C3B9     		cbnz	r3, .L8
- 314:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                     thread_ptr -> tx_thread_suspended_next =        thread_ptr;
- 253              		.loc 1 314 21 is_stmt 1 view .LVU87
- 314:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                     thread_ptr -> tx_thread_suspended_next =        thread_ptr;
- 254              		.loc 1 314 62 is_stmt 0 view .LVU88
- 255 006c 6562     		str	r5, [r4, #36]
- 315:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                     thread_ptr -> tx_thread_suspended_previous =    thread_ptr;
- 256              		.loc 1 315 21 is_stmt 1 view .LVU89
- 315:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                     thread_ptr -> tx_thread_suspended_previous =    thread_ptr;
- 257              		.loc 1 315 60 is_stmt 0 view .LVU90
- 258 006e 2D67     		str	r5, [r5, #112]
- 316:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                 }
- 259              		.loc 1 316 21 is_stmt 1 view .LVU91
- 316:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                 }
- 260              		.loc 1 316 64 is_stmt 0 view .LVU92
- 261 0070 6D67     		str	r5, [r5, #116]
- 262              	.LVL18:
- 263              	.L9:
- 331:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
- 264              		.loc 1 331 17 is_stmt 1 view .LVU93
- 331:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
- 265              		.loc 1 331 47 is_stmt 0 view .LVU94
- 266 0072 0923     		movs	r3, #9
- 267 0074 2B63     		str	r3, [r5, #48]
- 343:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
- 268              		.loc 1 343 17 is_stmt 1 view .LVU95
- 343:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
- 269              		.loc 1 343 52 is_stmt 0 view .LVU96
- 270 0076 0123     		movs	r3, #1
- 271 0078 AB63     		str	r3, [r5, #56]
- 346:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
- 272              		.loc 1 346 17 is_stmt 1 view .LVU97
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s 			page 24
+ 270              		.loc 1 306 59 is_stmt 0 view .LVU89
+ 271 007a 511C     		adds	r1, r2, #1
+ 272 007c A162     		str	r1, [r4, #40]
+ARM GAS  /tmp/ccCxXLtt.s 			page 24
 
 
+ 309:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                 {
+ 273              		.loc 1 309 17 is_stmt 1 view .LVU90
+ 309:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                 {
+ 274              		.loc 1 309 20 is_stmt 0 view .LVU91
+ 275 007e C2B9     		cbnz	r2, .L8
+ 314:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                     thread_ptr -> tx_thread_suspended_next =        thread_ptr;
+ 276              		.loc 1 314 21 is_stmt 1 view .LVU92
+ 314:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                     thread_ptr -> tx_thread_suspended_next =        thread_ptr;
+ 277              		.loc 1 314 62 is_stmt 0 view .LVU93
+ 278 0080 6662     		str	r6, [r4, #36]
+ 315:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                     thread_ptr -> tx_thread_suspended_previous =    thread_ptr;
+ 279              		.loc 1 315 21 is_stmt 1 view .LVU94
+ 315:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                     thread_ptr -> tx_thread_suspended_previous =    thread_ptr;
+ 280              		.loc 1 315 60 is_stmt 0 view .LVU95
+ 281 0082 3667     		str	r6, [r6, #112]
+ 316:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                 }
+ 282              		.loc 1 316 21 is_stmt 1 view .LVU96
+ 316:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                 }
+ 283              		.loc 1 316 64 is_stmt 0 view .LVU97
+ 284 0084 7667     		str	r6, [r6, #116]
+ 285              	.LVL23:
+ 286              	.L9:
+ 331:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
+ 287              		.loc 1 331 17 is_stmt 1 view .LVU98
+ 331:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
+ 288              		.loc 1 331 47 is_stmt 0 view .LVU99
+ 289 0086 0922     		movs	r2, #9
+ 290 0088 3263     		str	r2, [r6, #48]
+ 343:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
+ 291              		.loc 1 343 17 is_stmt 1 view .LVU100
+ 343:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
+ 292              		.loc 1 343 52 is_stmt 0 view .LVU101
+ 293 008a 0122     		movs	r2, #1
+ 294 008c B263     		str	r2, [r6, #56]
  346:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
- 273              		.loc 1 346 81 is_stmt 0 view .LVU98
- 274 007a C5F84C80 		str	r8, [r5, #76]
+ 295              		.loc 1 346 17 is_stmt 1 view .LVU102
+ 346:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
+ 296              		.loc 1 346 81 is_stmt 0 view .LVU103
+ 297 008e C6F84C90 		str	r9, [r6, #76]
  349:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
- 275              		.loc 1 349 17 is_stmt 1 view .LVU99
+ 298              		.loc 1 349 17 is_stmt 1 view .LVU104
  349:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
- 276              		.loc 1 349 43 is_stmt 0 view .LVU100
- 277 007e 0E49     		ldr	r1, .L12+4
- 278 0080 0B68     		ldr	r3, [r1]
- 279 0082 0133     		adds	r3, r3, #1
- 280 0084 0B60     		str	r3, [r1]
+ 299              		.loc 1 349 43 is_stmt 0 view .LVU105
+ 300 0092 0E49     		ldr	r1, .L17+4
+ 301 0094 0A68     		ldr	r2, [r1]
+ 302 0096 0132     		adds	r2, r2, #1
+ 303 0098 0A60     		str	r2, [r1]
  352:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
- 281              		.loc 1 352 17 is_stmt 1 view .LVU101
- 282              	.LVL19:
- 283              	.LBB34:
- 284              	.LBI34:
+ 304              		.loc 1 352 17 is_stmt 1 view .LVU106
+ 305              	.LVL24:
+ 306              	.LBB34:
+ 307              	.LBI34:
  556:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 285              		.loc 2 556 55 view .LVU102
- 286              	.LBB35:
+ 308              		.loc 2 556 55 view .LVU107
+ 309              	.LBB35:
  562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 287              		.loc 2 562 5 view .LVU103
- 288              		.syntax unified
- 289              	@ 562 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
- 290 0086 82F31088 		MSR  PRIMASK,r2
- 291              	@ 0 "" 2
- 292              	.LVL20:
+ 310              		.loc 2 562 5 view .LVU108
+ARM GAS  /tmp/ccCxXLtt.s 			page 25
+
+
+ 311              		.syntax unified
+ 312              	@ 562 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+ 313 009a 83F31088 		MSR  PRIMASK,r3
+ 314              	@ 0 "" 2
+ 315              	.LVL25:
  562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 293              		.loc 2 562 5 is_stmt 0 view .LVU104
- 294              		.thumb
- 295              		.syntax unified
- 296              	.LBE35:
- 297              	.LBE34:
+ 316              		.loc 2 562 5 is_stmt 0 view .LVU109
+ 317              		.thumb
+ 318              		.syntax unified
+ 319              	.LBE35:
+ 320              	.LBE34:
  355:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** #endif
- 298              		.loc 1 355 17 is_stmt 1 view .LVU105
- 299 008a 2846     		mov	r0, r5
- 300              	.LVL21:
+ 321              		.loc 1 355 17 is_stmt 1 view .LVU110
+ 322 009e 3046     		mov	r0, r6
+ 323              	.LVL26:
  355:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** #endif
- 301              		.loc 1 355 17 is_stmt 0 view .LVU106
- 302 008c FFF7FEFF 		bl	_tx_thread_system_suspend
- 303              	.LVL22:
+ 324              		.loc 1 355 17 is_stmt 0 view .LVU111
+ 325 00a0 FFF7FEFF 		bl	_tx_thread_system_suspend
+ 326              	.LVL27:
  394:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****             }
- 304              		.loc 1 394 17 is_stmt 1 view .LVU107
+ 327              		.loc 1 394 17 is_stmt 1 view .LVU112
  394:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****             }
- 305              		.loc 1 394 24 is_stmt 0 view .LVU108
- 306 0090 D5F88400 		ldr	r0, [r5, #132]
- 307              	.LVL23:
+ 328              		.loc 1 394 24 is_stmt 0 view .LVU113
+ 329 00a4 D6F88400 		ldr	r0, [r6, #132]
+ 330              	.LVL28:
  394:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****             }
- 308              		.loc 1 394 24 view .LVU109
- 309 0094 D4E7     		b	.L1
- 310              	.LVL24:
- 311              	.L11:
+ 331              		.loc 1 394 24 view .LVU114
+ 332 00a8 D3E7     		b	.L1
+ 333              	.LVL29:
+ 334              	.L16:
  263:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
- 312              		.loc 1 263 17 is_stmt 1 view .LVU110
+ 335              		.loc 1 263 17 is_stmt 1 view .LVU115
  266:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****             }
- 313              		.loc 1 266 17 view .LVU111
- 314              	.LBB36:
- 315              	.LBI36:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s 			page 25
-
-
+ 336              		.loc 1 266 17 view .LVU116
+ 337              	.LBB36:
+ 338              	.LBI36:
  556:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 316              		.loc 2 556 55 view .LVU112
- 317              	.LBB37:
+ 339              		.loc 2 556 55 view .LVU117
+ 340              	.LBB37:
  562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 318              		.loc 2 562 5 view .LVU113
- 319              		.syntax unified
- 320              	@ 562 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
- 321 0096 82F31088 		MSR  PRIMASK,r2
- 322              	@ 0 "" 2
- 323              		.thumb
- 324              		.syntax unified
- 325              	.LBE37:
- 326              	.LBE36:
+ 341              		.loc 2 562 5 view .LVU118
+ 342              		.syntax unified
+ 343              	@ 562 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+ 344 00aa 83F31088 		MSR  PRIMASK,r3
+ 345              	@ 0 "" 2
+ 346              	.LVL30:
+ 562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
+ 347              		.loc 2 562 5 is_stmt 0 view .LVU119
+ 348              		.thumb
+ 349              		.syntax unified
+ 350              	.LBE37:
+ 351              	.LBE36:
  263:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
- 327              		.loc 1 263 24 is_stmt 0 view .LVU114
- 328 009a 1020     		movs	r0, #16
- 329              	.LVL25:
- 330              	.LBB39:
- 331              	.LBB38:
- 564:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
- 332              		.loc 2 564 1 view .LVU115
- 333 009c D0E7     		b	.L1
- 334              	.LVL26:
- 335              	.L8:
- 564:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
- 336              		.loc 2 564 1 view .LVU116
- 337              	.LBE38:
- 338              	.LBE39:
- 322:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                     thread_ptr -> tx_thread_suspended_next =        next_thread;
- 339              		.loc 1 322 21 is_stmt 1 view .LVU117
- 322:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                     thread_ptr -> tx_thread_suspended_next =        next_thread;
- 340              		.loc 1 322 33 is_stmt 0 view .LVU118
- 341 009e 636A     		ldr	r3, [r4, #36]
- 342              	.LVL27:
- 323:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                     previous_thread =                               next_thread -> tx_thread_suspen
- 343              		.loc 1 323 21 is_stmt 1 view .LVU119
- 323:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                     previous_thread =                               next_thread -> tx_thread_suspen
- 344              		.loc 1 323 60 is_stmt 0 view .LVU120
- 345 00a0 2B67     		str	r3, [r5, #112]
- 324:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                     thread_ptr -> tx_thread_suspended_previous =    previous_thread;
- 346              		.loc 1 324 21 is_stmt 1 view .LVU121
- 324:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                     thread_ptr -> tx_thread_suspended_previous =    previous_thread;
- 347              		.loc 1 324 37 is_stmt 0 view .LVU122
- 348 00a2 596F     		ldr	r1, [r3, #116]
- 349              	.LVL28:
- 325:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                     previous_thread -> tx_thread_suspended_next =   thread_ptr;
- 350              		.loc 1 325 21 is_stmt 1 view .LVU123
- 325:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                     previous_thread -> tx_thread_suspended_next =   thread_ptr;
- 351              		.loc 1 325 64 is_stmt 0 view .LVU124
- 352 00a4 6967     		str	r1, [r5, #116]
- 326:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                     next_thread -> tx_thread_suspended_previous =   thread_ptr;
- 353              		.loc 1 326 21 is_stmt 1 view .LVU125
- 326:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                     next_thread -> tx_thread_suspended_previous =   thread_ptr;
- 354              		.loc 1 326 65 is_stmt 0 view .LVU126
- 355 00a6 0D67     		str	r5, [r1, #112]
- 327:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                 }
- 356              		.loc 1 327 21 is_stmt 1 view .LVU127
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s 			page 26
+ 352              		.loc 1 263 24 view .LVU120
+ 353 00ae 1020     		movs	r0, #16
+ 354              	.LVL31:
+ 355              	.LBB39:
+ARM GAS  /tmp/ccCxXLtt.s 			page 26
 
 
+ 356              	.LBB38:
+ 564:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
+ 357              		.loc 2 564 1 view .LVU121
+ 358 00b0 CFE7     		b	.L1
+ 359              	.LVL32:
+ 360              	.L8:
+ 564:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
+ 361              		.loc 2 564 1 view .LVU122
+ 362              	.LBE38:
+ 363              	.LBE39:
+ 322:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                     thread_ptr -> tx_thread_suspended_next =        next_thread;
+ 364              		.loc 1 322 21 is_stmt 1 view .LVU123
+ 322:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                     thread_ptr -> tx_thread_suspended_next =        next_thread;
+ 365              		.loc 1 322 33 is_stmt 0 view .LVU124
+ 366 00b2 626A     		ldr	r2, [r4, #36]
+ 367              	.LVL33:
+ 323:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                     previous_thread =                               next_thread -> tx_thread_suspen
+ 368              		.loc 1 323 21 is_stmt 1 view .LVU125
+ 323:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                     previous_thread =                               next_thread -> tx_thread_suspen
+ 369              		.loc 1 323 60 is_stmt 0 view .LVU126
+ 370 00b4 3267     		str	r2, [r6, #112]
+ 324:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                     thread_ptr -> tx_thread_suspended_previous =    previous_thread;
+ 371              		.loc 1 324 21 is_stmt 1 view .LVU127
+ 324:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                     thread_ptr -> tx_thread_suspended_previous =    previous_thread;
+ 372              		.loc 1 324 37 is_stmt 0 view .LVU128
+ 373 00b6 516F     		ldr	r1, [r2, #116]
+ 374              	.LVL34:
+ 325:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                     previous_thread -> tx_thread_suspended_next =   thread_ptr;
+ 375              		.loc 1 325 21 is_stmt 1 view .LVU129
+ 325:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                     previous_thread -> tx_thread_suspended_next =   thread_ptr;
+ 376              		.loc 1 325 64 is_stmt 0 view .LVU130
+ 377 00b8 7167     		str	r1, [r6, #116]
+ 326:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                     next_thread -> tx_thread_suspended_previous =   thread_ptr;
+ 378              		.loc 1 326 21 is_stmt 1 view .LVU131
+ 326:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                     next_thread -> tx_thread_suspended_previous =   thread_ptr;
+ 379              		.loc 1 326 65 is_stmt 0 view .LVU132
+ 380 00ba 0E67     		str	r6, [r1, #112]
  327:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                 }
- 357              		.loc 1 327 65 is_stmt 0 view .LVU128
- 358 00a8 5D67     		str	r5, [r3, #116]
- 359 00aa E2E7     		b	.L9
- 360              	.LVL29:
- 361              	.L6:
+ 381              		.loc 1 327 21 is_stmt 1 view .LVU133
+ 327:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****                 }
+ 382              		.loc 1 327 65 is_stmt 0 view .LVU134
+ 383 00bc 5667     		str	r6, [r2, #116]
+ 384 00be E2E7     		b	.L9
+ 385              	.LVL35:
+ 386              	.L6:
  401:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** 
- 362              		.loc 1 401 13 is_stmt 1 view .LVU129
- 363              	.LBB40:
- 364              	.LBI40:
+ 387              		.loc 1 401 13 is_stmt 1 view .LVU135
+ 388              	.LBB40:
+ 389              	.LBI40:
  556:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 365              		.loc 2 556 55 view .LVU130
- 366              	.LBB41:
+ 390              		.loc 2 556 55 view .LVU136
+ 391              	.LBB41:
  562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 367              		.loc 2 562 5 view .LVU131
- 368              		.syntax unified
- 369              	@ 562 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
- 370 00ac 82F31088 		MSR  PRIMASK,r2
- 371              	@ 0 "" 2
- 372              	.LVL30:
+ 392              		.loc 2 562 5 view .LVU137
+ 393              		.syntax unified
+ 394              	@ 562 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+ 395 00c0 83F31088 		MSR  PRIMASK,r3
+ARM GAS  /tmp/ccCxXLtt.s 			page 27
+
+
+ 396              	@ 0 "" 2
+ 397              	.LVL36:
  562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 373              		.loc 2 562 5 is_stmt 0 view .LVU132
- 374              		.thumb
- 375              		.syntax unified
- 376              	.LBE41:
- 377              	.LBE40:
+ 398              		.loc 2 562 5 is_stmt 0 view .LVU138
+ 399              		.thumb
+ 400              		.syntax unified
+ 401              	.LBE41:
+ 402              	.LBE40:
  404:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****         }
- 378              		.loc 1 404 13 is_stmt 1 view .LVU133
+ 403              		.loc 1 404 13 is_stmt 1 view .LVU139
  404:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c ****         }
- 379              		.loc 1 404 20 is_stmt 0 view .LVU134
- 380 00b0 1020     		movs	r0, #16
- 381              	.LVL31:
+ 404              		.loc 1 404 20 is_stmt 0 view .LVU140
+ 405 00c4 1020     		movs	r0, #16
+ 406              	.LVL37:
  409:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** }
- 382              		.loc 1 409 5 is_stmt 1 view .LVU135
+ 407              		.loc 1 409 5 is_stmt 1 view .LVU141
  409:./Middlewares/ST/threadx/common/src/tx_byte_allocate.c **** }
- 383              		.loc 1 409 11 is_stmt 0 view .LVU136
- 384 00b2 C5E7     		b	.L1
- 385              	.L13:
- 386              		.align	2
- 387              	.L12:
- 388 00b4 00000000 		.word	_tx_thread_current_ptr
- 389 00b8 00000000 		.word	_tx_thread_preempt_disable
- 390 00bc 00000000 		.word	_tx_byte_pool_cleanup
- 391              		.cfi_endproc
- 392              	.LFE8:
- 394              		.text
- 395              	.Letext0:
- 396              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
- 397              		.file 4 "./Middlewares/ST/threadx/common/inc/tx_thread.h"
- 398              		.file 5 "./Middlewares/ST/threadx/common/inc/tx_byte_pool.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s 			page 27
+ 408              		.loc 1 409 11 is_stmt 0 view .LVU142
+ 409 00c6 C4E7     		b	.L1
+ 410              	.L18:
+ 411              		.align	2
+ 412              	.L17:
+ 413 00c8 00000000 		.word	_tx_thread_current_ptr
+ 414 00cc 00000000 		.word	_tx_thread_preempt_disable
+ 415 00d0 00000000 		.word	_tx_byte_pool_cleanup
+ 416              		.cfi_endproc
+ 417              	.LFE8:
+ 419              		.text
+ 420              	.Letext0:
+ 421              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
+ 422              		.file 4 "./Middlewares/ST/threadx/common/inc/tx_thread.h"
+ 423              		.file 5 "./Middlewares/ST/threadx/common/inc/tx_byte_pool.h"
+ARM GAS  /tmp/ccCxXLtt.s 			page 28
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 tx_byte_allocate.c
-C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s:20     .text._tx_byte_allocate:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s:26     .text._tx_byte_allocate:00000000 _tx_byte_allocate
-C:\Users\Dennis\AppData\Local\Temp\ccPV30db.s:388    .text._tx_byte_allocate:000000b4 $d
+     /tmp/ccCxXLtt.s:21     .text._tx_byte_allocate:00000000 $t
+     /tmp/ccCxXLtt.s:27     .text._tx_byte_allocate:00000000 _tx_byte_allocate
+     /tmp/ccCxXLtt.s:413    .text._tx_byte_allocate:000000c8 $d
 
 UNDEFINED SYMBOLS
 _tx_byte_pool_search

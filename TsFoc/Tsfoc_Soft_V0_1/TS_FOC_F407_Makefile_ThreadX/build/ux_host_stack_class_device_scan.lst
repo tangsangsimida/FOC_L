@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccyNImln.s 			page 1
+ARM GAS  /tmp/ccexPgCX.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,16 +19,16 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccyNImln.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text._ux_host_stack_class_device_scan,"ax",%progbits
-  20              		.align	1
-  21              		.global	_ux_host_stack_class_device_scan
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
-  26              	_ux_host_stack_class_device_scan:
-  27              	.LVL0:
-  28              	.LFB11:
-  29              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c"
+  19              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c"
+  20              		.section	.text._ux_host_stack_class_device_scan,"ax",%progbits
+  21              		.align	1
+  22              		.global	_ux_host_stack_class_device_scan
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	_ux_host_stack_class_device_scan:
+  28              	.LVL0:
+  29              	.LFB11:
    1:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c **** /**************************************************************************/
    2:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c **** /*                                                                        */
    3:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccyNImln.s 			page 1
   27:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c **** 
   28:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c **** #include "ux_api.h"
   29:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c **** #include "ux_host_stack.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccyNImln.s 			page 2
+ARM GAS  /tmp/ccexPgCX.s 			page 2
 
 
   30:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccyNImln.s 			page 1
   84:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c **** /*  01-31-2022     Chaoqiong Xiao           Modified comment(s),          */
   85:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c **** /*                                            added standalone support,   */
   86:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c **** /*                                            resulting in version 6.1.10 */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccyNImln.s 			page 3
+ARM GAS  /tmp/ccexPgCX.s 			page 3
 
 
   87:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c **** /*                                                                        */
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccyNImln.s 			page 1
   68              		.loc 1 102 54 view .LVU17
   69 0016 0793     		str	r3, [sp, #28]
  103:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c ****     class_command.ux_host_class_command_subclass     =   device -> ux_device_descriptor.bDeviceSubC
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccyNImln.s 			page 4
+ARM GAS  /tmp/ccexPgCX.s 			page 4
 
 
   70              		.loc 1 103 5 is_stmt 1 view .LVU18
@@ -228,8 +228,9 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccyNImln.s 			page 1
  100              		.loc 1 117 5 is_stmt 1 view .LVU35
  101              		.loc 1 117 8 is_stmt 0 view .LVU36
  102 0030 0346     		mov	r3, r0
- 103 0032 48B1     		cbz	r0, .L6
+ 103 0032 40B1     		cbz	r0, .L6
  104              	.L2:
+ 105              	.LVL4:
  118:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c ****     {
  119:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c **** 
  120:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c ****         /* It the PID/VID did not work, we continue looking for the Class\Subclass\Protocol match. 
@@ -237,22 +238,19 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccyNImln.s 			page 1
  122:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c ****         class_inst =  _ux_host_stack_class_call(&class_command);
  123:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c **** 
  124:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c ****     }
+ARM GAS  /tmp/ccexPgCX.s 			page 5
+
+
  125:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c **** #endif
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccyNImln.s 			page 5
-
-
  126:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c **** 
  127:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c ****     /* On return, either we have found a class or the device is still an orphan.  */
  128:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c ****     if (class_inst != UX_NULL)
- 105              		.loc 1 128 5 is_stmt 1 view .LVU37
- 106              		.loc 1 128 8 is_stmt 0 view .LVU38
- 107 0034 7BB1     		cbz	r3, .L4
  129:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c ****     {
  130:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c **** 
  131:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c ****         device -> ux_device_class =  class_inst;
- 108              		.loc 1 131 9 is_stmt 1 view .LVU39
- 109              		.loc 1 131 35 is_stmt 0 view .LVU40
- 110 0036 A363     		str	r3, [r4, #56]
+ 106              		.loc 1 131 9 is_stmt 1 view .LVU37
+ 107              		.loc 1 131 35 is_stmt 0 view .LVU38
+ 108 0034 A363     		str	r3, [r4, #56]
  132:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c **** 
  133:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c **** #if defined(UX_HOST_STANDALONE)
  134:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c **** 
@@ -261,29 +259,27 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccyNImln.s 			page 1
  137:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c ****         return(status);
  138:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c **** #else
  139:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c ****         class_command.ux_host_class_command_class_ptr =  class_inst;
- 111              		.loc 1 139 9 is_stmt 1 view .LVU41
- 112              		.loc 1 139 55 is_stmt 0 view .LVU42
- 113 0038 0D93     		str	r3, [sp, #52]
+ 109              		.loc 1 139 9 is_stmt 1 view .LVU39
+ 110              		.loc 1 139 55 is_stmt 0 view .LVU40
+ 111 0036 0D93     		str	r3, [sp, #52]
  140:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c ****         class_command.ux_host_class_command_request =  UX_HOST_CLASS_COMMAND_ACTIVATE;
- 114              		.loc 1 140 9 is_stmt 1 view .LVU43
- 115              		.loc 1 140 53 is_stmt 0 view .LVU44
- 116 003a 0222     		movs	r2, #2
- 117 003c 0192     		str	r2, [sp, #4]
+ 112              		.loc 1 140 9 is_stmt 1 view .LVU41
+ 113              		.loc 1 140 53 is_stmt 0 view .LVU42
+ 114 0038 0222     		movs	r2, #2
+ 115 003a 0192     		str	r2, [sp, #4]
  141:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c ****         status =  device -> ux_device_class ->  ux_host_class_entry_function(&class_command);
- 118              		.loc 1 141 9 is_stmt 1 view .LVU45
- 119              		.loc 1 141 45 is_stmt 0 view .LVU46
- 120 003e 5B6C     		ldr	r3, [r3, #68]
- 121              		.loc 1 141 19 view .LVU47
- 122 0040 01A8     		add	r0, sp, #4
- 123              	.LVL4:
- 124              		.loc 1 141 19 view .LVU48
- 125 0042 9847     		blx	r3
- 126              	.LVL5:
+ 116              		.loc 1 141 9 is_stmt 1 view .LVU43
+ 117              		.loc 1 141 45 is_stmt 0 view .LVU44
+ 118 003c 5B6C     		ldr	r3, [r3, #68]
+ 119              		.loc 1 141 19 view .LVU45
+ 120 003e 01A8     		add	r0, sp, #4
+ 121 0040 9847     		blx	r3
+ 122              	.LVL5:
  142:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c **** 
  143:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c ****         /* Return result of activation.  */
  144:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c ****         return(status);
- 127              		.loc 1 144 9 is_stmt 1 view .LVU49
- 128              	.L1:
+ 123              		.loc 1 144 9 is_stmt 1 view .LVU46
+ 124              	.L1:
  145:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c **** #endif
  146:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c ****     }
  147:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c **** 
@@ -292,64 +288,65 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccyNImln.s 			page 1
  150:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c ****     /* Return an error.  */
  151:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c ****     return(UX_NO_CLASS_MATCH);
  152:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c **** }
- 129              		.loc 1 152 1 is_stmt 0 view .LVU50
- 130 0044 0EB0     		add	sp, sp, #56
- 131              	.LCFI2:
- 132              		.cfi_remember_state
- 133              		.cfi_def_cfa_offset 8
- 134              		@ sp needed
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccyNImln.s 			page 6
+ 125              		.loc 1 152 1 is_stmt 0 view .LVU47
+ 126 0042 0EB0     		add	sp, sp, #56
+ 127              	.LCFI2:
+ 128              		.cfi_remember_state
+ 129              		.cfi_def_cfa_offset 8
+ 130              		@ sp needed
+ 131 0044 10BD     		pop	{r4, pc}
+ 132              	.LVL6:
+ 133              	.L6:
+ 134              	.LCFI3:
+ARM GAS  /tmp/ccexPgCX.s 			page 6
 
 
- 135 0046 10BD     		pop	{r4, pc}
- 136              	.LVL6:
- 137              	.L6:
- 138              	.LCFI3:
- 139              		.cfi_restore_state
+ 135              		.cfi_restore_state
  121:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c ****         class_inst =  _ux_host_stack_class_call(&class_command);
- 140              		.loc 1 121 9 is_stmt 1 view .LVU51
+ 136              		.loc 1 121 9 is_stmt 1 view .LVU48
  121:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c ****         class_inst =  _ux_host_stack_class_call(&class_command);
- 141              		.loc 1 121 58 is_stmt 0 view .LVU52
- 142 0048 0323     		movs	r3, #3
- 143 004a 0493     		str	r3, [sp, #16]
+ 137              		.loc 1 121 58 is_stmt 0 view .LVU49
+ 138 0046 0323     		movs	r3, #3
+ 139 0048 0493     		str	r3, [sp, #16]
  122:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c **** 
- 144              		.loc 1 122 9 is_stmt 1 view .LVU53
+ 140              		.loc 1 122 9 is_stmt 1 view .LVU50
  122:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c **** 
- 145              		.loc 1 122 23 is_stmt 0 view .LVU54
- 146 004c 01A8     		add	r0, sp, #4
- 147              	.LVL7:
+ 141              		.loc 1 122 23 is_stmt 0 view .LVU51
+ 142 004a 01A8     		add	r0, sp, #4
+ 143              	.LVL7:
  122:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c **** 
- 148              		.loc 1 122 23 view .LVU55
- 149 004e FFF7FEFF 		bl	_ux_host_stack_class_call
- 150              	.LVL8:
- 151 0052 0346     		mov	r3, r0
- 152              	.LVL9:
- 122:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c **** 
- 153              		.loc 1 122 23 view .LVU56
- 154 0054 EEE7     		b	.L2
- 155              	.L4:
+ 144              		.loc 1 122 23 view .LVU52
+ 145 004c FFF7FEFF 		bl	_ux_host_stack_class_call
+ 146              	.LVL8:
+ 128:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c ****     {
+ 147              		.loc 1 128 5 is_stmt 1 view .LVU53
+ 128:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c ****     {
+ 148              		.loc 1 128 8 is_stmt 0 view .LVU54
+ 149 0050 0346     		mov	r3, r0
+ 150 0052 0028     		cmp	r0, #0
+ 151 0054 EED1     		bne	.L2
  151:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c **** }
- 156              		.loc 1 151 11 view .LVU57
- 157 0056 5720     		movs	r0, #87
- 158              	.LVL10:
+ 152              		.loc 1 151 11 view .LVU55
+ 153 0056 5720     		movs	r0, #87
+ 154              	.LVL9:
  151:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_device_scan.c **** }
- 159              		.loc 1 151 11 view .LVU58
- 160 0058 F4E7     		b	.L1
- 161              		.cfi_endproc
- 162              	.LFE11:
- 164              		.text
- 165              	.Letext0:
- 166              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
- 167              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
- 168              		.file 4 "./Middlewares/ST/usbx/common/core/inc/ux_api.h"
- 169              		.file 5 "./Middlewares/ST/usbx/common/core/inc/ux_host_stack.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccyNImln.s 			page 7
+ 155              		.loc 1 151 11 view .LVU56
+ 156 0058 F3E7     		b	.L1
+ 157              		.cfi_endproc
+ 158              	.LFE11:
+ 160              		.text
+ 161              	.Letext0:
+ 162              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
+ 163              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
+ 164              		.file 4 "./Middlewares/ST/usbx/common/core/inc/ux_api.h"
+ 165              		.file 5 "./Middlewares/ST/usbx/common/core/inc/ux_host_stack.h"
+ARM GAS  /tmp/ccexPgCX.s 			page 7
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 ux_host_stack_class_device_scan.c
-C:\Users\Dennis\AppData\Local\Temp\ccyNImln.s:20     .text._ux_host_stack_class_device_scan:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccyNImln.s:26     .text._ux_host_stack_class_device_scan:00000000 _ux_host_stack_class_device_scan
+     /tmp/ccexPgCX.s:21     .text._ux_host_stack_class_device_scan:00000000 $t
+     /tmp/ccexPgCX.s:27     .text._ux_host_stack_class_device_scan:00000000 _ux_host_stack_class_device_scan
 
 UNDEFINED SYMBOLS
 _ux_host_stack_class_call

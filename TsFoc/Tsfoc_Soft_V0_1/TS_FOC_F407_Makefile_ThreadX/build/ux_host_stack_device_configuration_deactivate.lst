@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccNE5AVz.s 			page 1
+ARM GAS  /tmp/ccIiz9ih.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,16 +19,16 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccNE5AVz.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text._ux_host_stack_device_configuration_deactivate,"ax",%progbits
-  20              		.align	1
-  21              		.global	_ux_host_stack_device_configuration_deactivate
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
-  26              	_ux_host_stack_device_configuration_deactivate:
-  27              	.LVL0:
-  28              	.LFB11:
-  29              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_configuration_deactivate.c"
+  19              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_configuration_deactivate.c"
+  20              		.section	.text._ux_host_stack_device_configuration_deactivate,"ax",%progbits
+  21              		.align	1
+  22              		.global	_ux_host_stack_device_configuration_deactivate
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	_ux_host_stack_device_configuration_deactivate:
+  28              	.LVL0:
+  29              	.LFB11:
    1:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_configuration_deactivate.c **** /**************************************************************************/
    2:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_configuration_deactivate.c **** /*                                                                        */
    3:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_configuration_deactivate.c **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccNE5AVz.s 			page 1
   27:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_configuration_deactivate.c **** 
   28:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_configuration_deactivate.c **** #include "ux_api.h"
   29:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_configuration_deactivate.c **** #include "ux_host_stack.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccNE5AVz.s 			page 2
+ARM GAS  /tmp/ccIiz9ih.s 			page 2
 
 
   30:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_configuration_deactivate.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccNE5AVz.s 			page 1
   33              		@ frame_needed = 0, uses_anonymous_args = 0
   34              		.loc 1 80 1 is_stmt 0 view .LVU1
   35 0000 70B5     		push	{r4, r5, r6, lr}
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccNE5AVz.s 			page 3
+ARM GAS  /tmp/ccIiz9ih.s 			page 3
 
 
   36              	.LCFI0:
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccNE5AVz.s 			page 1
  113:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_configuration_deactivate.c ****     UX_DISABLE
  114:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_configuration_deactivate.c ****     if (device -> ux_device_flags & UX_DEVICE_FLAG_LOCK)
  115:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_configuration_deactivate.c ****     {
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccNE5AVz.s 			page 4
+ARM GAS  /tmp/ccIiz9ih.s 			page 4
 
 
  116:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_configuration_deactivate.c ****         UX_RESTORE
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccNE5AVz.s 			page 1
  151:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_configuration_deactivate.c **** 
  152:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_configuration_deactivate.c ****     /* Deactivate classes by command.  */
  153:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_configuration_deactivate.c ****     command.ux_host_class_command_request =  UX_HOST_CLASS_COMMAND_DEACTIVATE;
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccNE5AVz.s 			page 5
+ARM GAS  /tmp/ccIiz9ih.s 			page 5
 
 
   77              		.loc 1 153 5 is_stmt 1 view .LVU18
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccNE5AVz.s 			page 1
  114 0042 FFF7FEFF 		bl	_ux_system_error_handler
  115              	.LVL11:
  137:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_configuration_deactivate.c ****     }
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccNE5AVz.s 			page 6
+ARM GAS  /tmp/ccIiz9ih.s 			page 6
 
 
  116              		.loc 1 137 9 is_stmt 1 view .LVU32
@@ -358,12 +358,12 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccNE5AVz.s 			page 1
  149              		.loc 1 179 19 is_stmt 0 view .LVU46
  150 005c E46B     		ldr	r4, [r4, #60]
  151              	.LVL18:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccNE5AVz.s 			page 7
+ARM GAS  /tmp/ccIiz9ih.s 			page 7
 
 
  152              	.L6:
  164:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_configuration_deactivate.c ****     {
- 153              		.loc 1 164 11 is_stmt 1 view .LVU47
+ 153              		.loc 1 164 22 is_stmt 1 view .LVU47
  154 005e 1CB1     		cbz	r4, .L13
  168:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_configuration_deactivate.c ****         {
  155              		.loc 1 168 9 view .LVU48
@@ -411,15 +411,15 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccNE5AVz.s 			page 1
  184              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
  185              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
  186              		.file 4 "./Middlewares/ST/usbx/common/core/inc/ux_api.h"
- 187              		.file 5 "./Middlewares/ST/usbx/common/core/inc/ux_utility.h"
- 188              		.file 6 "./Middlewares/ST/usbx/common/core/inc/ux_host_stack.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccNE5AVz.s 			page 8
+ 187              		.file 5 "./Middlewares/ST/usbx/common/core/inc/ux_host_stack.h"
+ 188              		.file 6 "./Middlewares/ST/usbx/common/core/inc/ux_utility.h"
+ARM GAS  /tmp/ccIiz9ih.s 			page 8
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 ux_host_stack_device_configuration_deactivate.c
-C:\Users\Dennis\AppData\Local\Temp\ccNE5AVz.s:20     .text._ux_host_stack_device_configuration_deactivate:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccNE5AVz.s:26     .text._ux_host_stack_device_configuration_deactivate:00000000 _ux_host_stack_device_configuration_deactivate
+     /tmp/ccIiz9ih.s:21     .text._ux_host_stack_device_configuration_deactivate:00000000 $t
+     /tmp/ccIiz9ih.s:27     .text._ux_host_stack_device_configuration_deactivate:00000000 _ux_host_stack_device_configuration_deactivate
 
 UNDEFINED SYMBOLS
 _ux_utility_semaphore_get

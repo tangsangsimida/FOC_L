@@ -46,7 +46,7 @@ C_SOURCES =  \
 ./app/algorithm/src/ts_foc.c \
 ./app/peripheral/src/as5600.c \
 ./app/peripheral/src/inlinecurrent.c \
-./app/threads/Thread_Motor_Control/Thread_Motor_Control.c \
+./app/Threads/Thread_Motor_Control/Thread_Motor_Control.c \
 ./app/Threads/Thread_cmd/Thread_cmd.c \
 ./app/Threads/Thread_template/Thread_template.c \
 ./Core/Src/main.c \

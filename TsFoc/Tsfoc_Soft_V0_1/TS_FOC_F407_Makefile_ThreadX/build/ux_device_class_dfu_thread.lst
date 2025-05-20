@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc1YVIJa.s 			page 1
+ARM GAS  /tmp/ccaMzy0b.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,16 +19,16 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc1YVIJa.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text._ux_device_class_dfu_thread,"ax",%progbits
-  20              		.align	1
-  21              		.global	_ux_device_class_dfu_thread
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
-  26              	_ux_device_class_dfu_thread:
-  27              	.LVL0:
-  28              	.LFB11:
-  29              		.file 1 "./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_thread.c"
+  19              		.file 1 "./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_thread.c"
+  20              		.section	.text._ux_device_class_dfu_thread,"ax",%progbits
+  21              		.align	1
+  22              		.global	_ux_device_class_dfu_thread
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	_ux_device_class_dfu_thread:
+  28              	.LVL0:
+  29              	.LFB11:
    1:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_thread.c **** /**************************************************************************/
    2:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_thread.c **** /*                                                                        */
    3:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_thread.c **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc1YVIJa.s 			page 1
   27:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_thread.c **** #include "ux_api.h"
   28:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_thread.c **** #include "ux_device_class_dfu.h"
   29:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_thread.c **** #include "ux_device_stack.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc1YVIJa.s 			page 2
+ARM GAS  /tmp/ccaMzy0b.s 			page 2
 
 
   30:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_thread.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc1YVIJa.s 			page 1
   84:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_thread.c **** {
   30              		.loc 1 84 1 view -0
   31              		.cfi_startproc
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc1YVIJa.s 			page 3
+ARM GAS  /tmp/ccaMzy0b.s 			page 3
 
 
   32              		@ args = 0, pretend = 0, frame = 8
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc1YVIJa.s 			page 1
  112:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_thread.c ****             /* Check the source of event.  */
  113:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_thread.c ****             if (actual_flags & UX_DEVICE_CLASS_DFU_THREAD_EVENT_DISCONNECT)
  114:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_thread.c ****             {
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc1YVIJa.s 			page 4
+ARM GAS  /tmp/ccaMzy0b.s 			page 4
 
 
  115:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_thread.c ****             
@@ -200,123 +200,125 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc1YVIJa.s 			page 1
   61 0008 039B     		ldr	r3, [sp, #12]
   62 000a 13F0020F 		tst	r3, #2
   63 000e 19D1     		bne	.L8
-  64              	.L2:
+  64              	.LVL4:
+  65              	.L2:
   99:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_thread.c ****     {
-  65              		.loc 1 99 5 is_stmt 1 view .LVU13
+  66              		.loc 1 99 5 is_stmt 1 view .LVU13
  104:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_thread.c ****                                                                                         UX_DEVICE_C
-  66              		.loc 1 104 9 view .LVU14
+  67              		.loc 1 104 9 view .LVU14
  104:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_thread.c ****                                                                                         UX_DEVICE_C
-  67              		.loc 1 104 19 is_stmt 0 view .LVU15
-  68 0010 4FF0FF33 		mov	r3, #-1
-  69 0014 0093     		str	r3, [sp]
-  70 0016 03AB     		add	r3, sp, #12
-  71 0018 0122     		movs	r2, #1
-  72 001a 0321     		movs	r1, #3
-  73 001c 04F1D400 		add	r0, r4, #212
-  74 0020 FFF7FEFF 		bl	_ux_utility_event_flags_get
-  75              	.LVL4:
+  68              		.loc 1 104 19 is_stmt 0 view .LVU15
+  69 0010 4FF0FF33 		mov	r3, #-1
+  70 0014 0093     		str	r3, [sp]
+  71 0016 03AB     		add	r3, sp, #12
+  72 0018 0122     		movs	r2, #1
+  73 001a 0321     		movs	r1, #3
+  74 001c 04F1D400 		add	r0, r4, #212
+  75 0020 FFF7FEFF 		bl	_ux_utility_event_flags_get
+  76              	.LVL5:
  109:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_thread.c ****         {
-  76              		.loc 1 109 9 is_stmt 1 view .LVU16
+  77              		.loc 1 109 9 is_stmt 1 view .LVU16
  109:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_thread.c ****         {
-  77              		.loc 1 109 12 is_stmt 0 view .LVU17
-  78 0024 0028     		cmp	r0, #0
-  79 0026 F3D1     		bne	.L2
+  78              		.loc 1 109 12 is_stmt 0 view .LVU17
+  79 0024 0028     		cmp	r0, #0
+  80 0026 F3D1     		bne	.L2
  113:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_thread.c ****             {
-  80              		.loc 1 113 13 is_stmt 1 view .LVU18
+  81              		.loc 1 113 13 is_stmt 1 view .LVU18
  113:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_thread.c ****             {
-  81              		.loc 1 113 16 is_stmt 0 view .LVU19
-  82 0028 039B     		ldr	r3, [sp, #12]
-  83 002a 13F0010F 		tst	r3, #1
-  84 002e EBD0     		beq	.L3
+  82              		.loc 1 113 16 is_stmt 0 view .LVU19
+  83 0028 039B     		ldr	r3, [sp, #12]
+  84 002a 13F0010F 		tst	r3, #1
+  85 002e EBD0     		beq	.L3
  117:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_thread.c **** 
-  85              		.loc 1 117 17 is_stmt 1 view .LVU20
-  86 0030 0220     		movs	r0, #2
-  87              	.LVL5:
+  86              		.loc 1 117 17 is_stmt 1 view .LVU20
+  87 0030 0220     		movs	r0, #2
+  88              	.LVL6:
  117:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_thread.c **** 
-  88              		.loc 1 117 17 is_stmt 0 view .LVU21
-  89 0032 FFF7FEFF 		bl	_ux_utility_delay_ms
-  90              	.LVL6:
+  89              		.loc 1 117 17 is_stmt 0 view .LVU21
+  90 0032 FFF7FEFF 		bl	_ux_utility_delay_ms
+  91              	.LVL7:
  120:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_thread.c **** 
-  91              		.loc 1 120 17 is_stmt 1 view .LVU22
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc1YVIJa.s 			page 5
+ARM GAS  /tmp/ccaMzy0b.s 			page 5
 
 
+  92              		.loc 1 120 17 is_stmt 1 view .LVU22
  120:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_thread.c **** 
-  92              		.loc 1 120 42 is_stmt 0 view .LVU23
-  93 0036 0B4B     		ldr	r3, .L9
-  94 0038 1868     		ldr	r0, [r3]
-  95              	.LVL7:
+  93              		.loc 1 120 42 is_stmt 0 view .LVU23
+  94 0036 0B4B     		ldr	r3, .L9
+  95 0038 1868     		ldr	r0, [r3]
+  96              	.LVL8:
  123:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_thread.c ****                 
-  96              		.loc 1 123 17 is_stmt 1 view .LVU24
+  97              		.loc 1 123 17 is_stmt 1 view .LVU24
  123:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_thread.c ****                 
-  97              		.loc 1 123 21 is_stmt 0 view .LVU25
-  98 003a 8369     		ldr	r3, [r0, #24]
+  98              		.loc 1 123 21 is_stmt 0 view .LVU25
+  99 003a 8369     		ldr	r3, [r0, #24]
  123:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_thread.c ****                 
-  99              		.loc 1 123 17 view .LVU26
- 100 003c 0B22     		movs	r2, #11
- 101 003e 1321     		movs	r1, #19
- 102 0040 9847     		blx	r3
- 103              	.LVL8:
+ 100              		.loc 1 123 17 view .LVU26
+ 101 003c 0B22     		movs	r2, #11
+ 102 003e 1321     		movs	r1, #19
+ 103 0040 9847     		blx	r3
+ 104              	.LVL9:
  123:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_thread.c ****                 
- 104              		.loc 1 123 17 view .LVU27
- 105 0042 E1E7     		b	.L3
- 106              	.L8:
+ 105              		.loc 1 123 17 view .LVU27
+ 106 0042 E1E7     		b	.L3
+ 107              	.LVL10:
+ 108              	.L8:
  129:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_thread.c ****             {
  130:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_thread.c ****             
  131:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_thread.c ****                 /* We need to wait for reset.  Arm a timer.  The timeout value is indicated in ms f
  132:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_thread.c ****                    the device framework.  */
  133:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_thread.c ****                 _ux_utility_delay_ms(_ux_system_slave -> ux_system_slave_device_dfu_detach_timeout)
- 107              		.loc 1 133 17 is_stmt 1 view .LVU28
- 108              		.loc 1 133 55 is_stmt 0 view .LVU29
- 109 0044 074D     		ldr	r5, .L9
- 110 0046 2B68     		ldr	r3, [r5]
- 111              		.loc 1 133 17 view .LVU30
- 112 0048 D3F8B001 		ldr	r0, [r3, #432]
- 113 004c FFF7FEFF 		bl	_ux_utility_delay_ms
- 114              	.LVL9:
+ 109              		.loc 1 133 17 is_stmt 1 view .LVU28
+ 110              		.loc 1 133 55 is_stmt 0 view .LVU29
+ 111 0044 074D     		ldr	r5, .L9
+ 112 0046 2B68     		ldr	r3, [r5]
+ 113              		.loc 1 133 17 view .LVU30
+ 114 0048 D3F8B001 		ldr	r0, [r3, #432]
+ 115 004c FFF7FEFF 		bl	_ux_utility_delay_ms
+ 116              	.LVL11:
  134:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_thread.c **** 
  135:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_thread.c ****                 /* Check the mode.  */
  136:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_thread.c ****                 if (_ux_system_slave -> ux_system_slave_device_dfu_mode ==  UX_DEVICE_CLASS_DFU_MOD
- 115              		.loc 1 136 17 is_stmt 1 view .LVU31
- 116              		.loc 1 136 38 is_stmt 0 view .LVU32
- 117 0050 2B68     		ldr	r3, [r5]
- 118 0052 D3F8BC21 		ldr	r2, [r3, #444]
- 119              		.loc 1 136 20 view .LVU33
- 120 0056 012A     		cmp	r2, #1
- 121 0058 DAD1     		bne	.L2
+ 117              		.loc 1 136 17 is_stmt 1 view .LVU31
+ 118              		.loc 1 136 38 is_stmt 0 view .LVU32
+ 119 0050 2B68     		ldr	r3, [r5]
+ 120 0052 D3F8BC21 		ldr	r2, [r3, #444]
+ 121              		.loc 1 136 20 view .LVU33
+ 122 0056 012A     		cmp	r2, #1
+ 123 0058 DAD1     		bne	.L2
  137:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_thread.c ****                 
  138:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_thread.c ****                     /* We are still in RunTime mode. The host never reset. Revert to AppIdle state.
  139:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_dfu_thread.c ****                     _ux_system_slave -> ux_system_slave_device_dfu_state_machine = UX_SYSTEM_DFU_ST
- 122              		.loc 1 139 21 is_stmt 1 view .LVU34
- 123              		.loc 1 139 82 is_stmt 0 view .LVU35
- 124 005a 0022     		movs	r2, #0
- 125 005c C3F8B821 		str	r2, [r3, #440]
- 126 0060 D6E7     		b	.L2
- 127              	.L10:
- 128 0062 00BF     		.align	2
- 129              	.L9:
- 130 0064 00000000 		.word	_ux_system_slave
- 131              		.cfi_endproc
- 132              	.LFE11:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc1YVIJa.s 			page 6
+ 124              		.loc 1 139 21 is_stmt 1 view .LVU34
+ 125              		.loc 1 139 82 is_stmt 0 view .LVU35
+ 126 005a 0022     		movs	r2, #0
+ 127 005c C3F8B821 		str	r2, [r3, #440]
+ 128 0060 D6E7     		b	.L2
+ 129              	.L10:
+ 130 0062 00BF     		.align	2
+ 131              	.L9:
+ 132 0064 00000000 		.word	_ux_system_slave
+ARM GAS  /tmp/ccaMzy0b.s 			page 6
 
 
- 134              		.text
- 135              	.Letext0:
- 136              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
- 137              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
- 138              		.file 4 "./Middlewares/ST/usbx/common/core/inc/ux_api.h"
- 139              		.file 5 "./Middlewares/ST/usbx/common/usbx_device_classes/inc/ux_device_class_dfu.h"
- 140              		.file 6 "./Middlewares/ST/usbx/common/core/inc/ux_system.h"
- 141              		.file 7 "./Middlewares/ST/usbx/common/core/inc/ux_utility.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc1YVIJa.s 			page 7
+ 133              		.cfi_endproc
+ 134              	.LFE11:
+ 136              		.text
+ 137              	.Letext0:
+ 138              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
+ 139              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
+ 140              		.file 4 "./Middlewares/ST/usbx/common/core/inc/ux_api.h"
+ 141              		.file 5 "./Middlewares/ST/usbx/common/usbx_device_classes/inc/ux_device_class_dfu.h"
+ 142              		.file 6 "./Middlewares/ST/usbx/common/core/inc/ux_system.h"
+ 143              		.file 7 "./Middlewares/ST/usbx/common/core/inc/ux_utility.h"
+ARM GAS  /tmp/ccaMzy0b.s 			page 7
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 ux_device_class_dfu_thread.c
-C:\Users\Dennis\AppData\Local\Temp\cc1YVIJa.s:20     .text._ux_device_class_dfu_thread:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\cc1YVIJa.s:26     .text._ux_device_class_dfu_thread:00000000 _ux_device_class_dfu_thread
-C:\Users\Dennis\AppData\Local\Temp\cc1YVIJa.s:130    .text._ux_device_class_dfu_thread:00000064 $d
+     /tmp/ccaMzy0b.s:21     .text._ux_device_class_dfu_thread:00000000 $t
+     /tmp/ccaMzy0b.s:27     .text._ux_device_class_dfu_thread:00000000 _ux_device_class_dfu_thread
+     /tmp/ccaMzy0b.s:132    .text._ux_device_class_dfu_thread:00000064 $d
 
 UNDEFINED SYMBOLS
 _ux_utility_event_flags_get

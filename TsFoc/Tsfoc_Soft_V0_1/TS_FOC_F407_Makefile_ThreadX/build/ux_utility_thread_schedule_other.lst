@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccEjjp1z.s 			page 1
+ARM GAS  /tmp/cc1HnyW2.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,16 +19,16 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccEjjp1z.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text._ux_utility_thread_schedule_other,"ax",%progbits
-  20              		.align	1
-  21              		.global	_ux_utility_thread_schedule_other
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
-  26              	_ux_utility_thread_schedule_other:
-  27              	.LVL0:
-  28              	.LFB11:
-  29              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_utility_thread_schedule_other.c"
+  19              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_utility_thread_schedule_other.c"
+  20              		.section	.text._ux_utility_thread_schedule_other,"ax",%progbits
+  21              		.align	1
+  22              		.global	_ux_utility_thread_schedule_other
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	_ux_utility_thread_schedule_other:
+  28              	.LVL0:
+  29              	.LFB11:
    1:./Middlewares/ST/usbx/common/core/src/ux_utility_thread_schedule_other.c **** /**************************************************************************/
    2:./Middlewares/ST/usbx/common/core/src/ux_utility_thread_schedule_other.c **** /*                                                                        */
    3:./Middlewares/ST/usbx/common/core/src/ux_utility_thread_schedule_other.c **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccEjjp1z.s 			page 1
   27:./Middlewares/ST/usbx/common/core/src/ux_utility_thread_schedule_other.c **** 
   28:./Middlewares/ST/usbx/common/core/src/ux_utility_thread_schedule_other.c **** #include "ux_api.h"
   29:./Middlewares/ST/usbx/common/core/src/ux_utility_thread_schedule_other.c **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccEjjp1z.s 			page 2
+ARM GAS  /tmp/cc1HnyW2.s 			page 2
 
 
   30:./Middlewares/ST/usbx/common/core/src/ux_utility_thread_schedule_other.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccEjjp1z.s 			page 1
   37              		.cfi_def_cfa_offset 8
   38              		.cfi_offset 4, -8
   39              		.cfi_offset 14, -4
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccEjjp1z.s 			page 3
+ARM GAS  /tmp/cc1HnyW2.s 			page 3
 
 
   40 0002 82B0     		sub	sp, sp, #8
@@ -162,7 +162,8 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccEjjp1z.s 			page 1
   63              		.loc 1 91 5 is_stmt 1 view .LVU12
   64              		.loc 1 91 8 is_stmt 0 view .LVU13
   65 0016 08B1     		cbz	r0, .L4
-  66              	.L1:
+  66              	.LVL4:
+  67              	.L1:
   92:./Middlewares/ST/usbx/common/core/src/ux_utility_thread_schedule_other.c ****     {
   93:./Middlewares/ST/usbx/common/core/src/ux_utility_thread_schedule_other.c ****     
   94:./Middlewares/ST/usbx/common/core/src/ux_utility_thread_schedule_other.c ****         /* Wait until all other threads passed into the scheduler. */
@@ -176,59 +177,59 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccEjjp1z.s 			page 1
  102:./Middlewares/ST/usbx/common/core/src/ux_utility_thread_schedule_other.c ****     /* Return completion status.  */
  103:./Middlewares/ST/usbx/common/core/src/ux_utility_thread_schedule_other.c ****     return(status);
  104:./Middlewares/ST/usbx/common/core/src/ux_utility_thread_schedule_other.c **** }
-  67              		.loc 1 104 1 view .LVU14
-  68 0018 02B0     		add	sp, sp, #8
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccEjjp1z.s 			page 4
+  68              		.loc 1 104 1 view .LVU14
+ARM GAS  /tmp/cc1HnyW2.s 			page 4
 
 
-  69              	.LCFI2:
-  70              		.cfi_remember_state
-  71              		.cfi_def_cfa_offset 8
-  72              		@ sp needed
-  73 001a 10BD     		pop	{r4, pc}
-  74              	.LVL4:
-  75              	.L4:
-  76              	.LCFI3:
-  77              		.cfi_restore_state
+  69 0018 02B0     		add	sp, sp, #8
+  70              	.LCFI2:
+  71              		.cfi_remember_state
+  72              		.cfi_def_cfa_offset 8
+  73              		@ sp needed
+  74 001a 10BD     		pop	{r4, pc}
+  75              	.LVL5:
+  76              	.L4:
+  77              	.LCFI3:
+  78              		.cfi_restore_state
   95:./Middlewares/ST/usbx/common/core/src/ux_utility_thread_schedule_other.c ****     
-  78              		.loc 1 95 9 is_stmt 1 view .LVU15
-  79 001c FFF7FEFF 		bl	_ux_utility_thread_relinquish
-  80              	.LVL5:
+  79              		.loc 1 95 9 is_stmt 1 view .LVU15
+  80 001c FFF7FEFF 		bl	_ux_utility_thread_relinquish
+  81              	.LVL6:
   98:./Middlewares/ST/usbx/common/core/src/ux_utility_thread_schedule_other.c ****         
-  81              		.loc 1 98 9 view .LVU16
+  82              		.loc 1 98 9 view .LVU16
   98:./Middlewares/ST/usbx/common/core/src/ux_utility_thread_schedule_other.c ****         
-  82              		.loc 1 98 19 is_stmt 0 view .LVU17
-  83 0020 01AA     		add	r2, sp, #4
-  84 0022 0199     		ldr	r1, [sp, #4]
-  85 0024 2046     		mov	r0, r4
-  86 0026 FFF7FEFF 		bl	_txe_thread_priority_change
-  87              	.LVL6:
+  83              		.loc 1 98 19 is_stmt 0 view .LVU17
+  84 0020 01AA     		add	r2, sp, #4
+  85 0022 0199     		ldr	r1, [sp, #4]
+  86 0024 2046     		mov	r0, r4
+  87 0026 FFF7FEFF 		bl	_txe_thread_priority_change
+  88              	.LVL7:
  103:./Middlewares/ST/usbx/common/core/src/ux_utility_thread_schedule_other.c **** }
-  88              		.loc 1 103 5 is_stmt 1 view .LVU18
+  89              		.loc 1 103 5 is_stmt 1 view .LVU18
  103:./Middlewares/ST/usbx/common/core/src/ux_utility_thread_schedule_other.c **** }
-  89              		.loc 1 103 11 is_stmt 0 view .LVU19
-  90 002a F5E7     		b	.L1
-  91              	.L6:
-  92              		.align	2
-  93              	.L5:
-  94 002c 00000000 		.word	_ux_system
-  95              		.cfi_endproc
-  96              	.LFE11:
-  98              		.text
-  99              	.Letext0:
- 100              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
- 101              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
- 102              		.file 4 "./Middlewares/ST/usbx/common/core/inc/ux_api.h"
- 103              		.file 5 "./Middlewares/ST/usbx/common/core/inc/ux_system.h"
- 104              		.file 6 "./Middlewares/ST/usbx/common/core/inc/ux_utility.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccEjjp1z.s 			page 5
+  90              		.loc 1 103 11 is_stmt 0 view .LVU19
+  91 002a F5E7     		b	.L1
+  92              	.L6:
+  93              		.align	2
+  94              	.L5:
+  95 002c 00000000 		.word	_ux_system
+  96              		.cfi_endproc
+  97              	.LFE11:
+  99              		.text
+ 100              	.Letext0:
+ 101              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
+ 102              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
+ 103              		.file 4 "./Middlewares/ST/usbx/common/core/inc/ux_api.h"
+ 104              		.file 5 "./Middlewares/ST/usbx/common/core/inc/ux_system.h"
+ 105              		.file 6 "./Middlewares/ST/usbx/common/core/inc/ux_utility.h"
+ARM GAS  /tmp/cc1HnyW2.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 ux_utility_thread_schedule_other.c
-C:\Users\Dennis\AppData\Local\Temp\ccEjjp1z.s:20     .text._ux_utility_thread_schedule_other:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccEjjp1z.s:26     .text._ux_utility_thread_schedule_other:00000000 _ux_utility_thread_schedule_other
-C:\Users\Dennis\AppData\Local\Temp\ccEjjp1z.s:94     .text._ux_utility_thread_schedule_other:0000002c $d
+     /tmp/cc1HnyW2.s:21     .text._ux_utility_thread_schedule_other:00000000 $t
+     /tmp/cc1HnyW2.s:27     .text._ux_utility_thread_schedule_other:00000000 _ux_utility_thread_schedule_other
+     /tmp/cc1HnyW2.s:95     .text._ux_utility_thread_schedule_other:0000002c $d
 
 UNDEFINED SYMBOLS
 _tx_thread_identify

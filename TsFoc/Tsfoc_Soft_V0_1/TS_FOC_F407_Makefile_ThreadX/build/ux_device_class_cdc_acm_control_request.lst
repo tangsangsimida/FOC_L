@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cclVY63c.s 			page 1
+ARM GAS  /tmp/ccUfRMkf.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,16 +19,16 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cclVY63c.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text._ux_device_class_cdc_acm_control_request,"ax",%progbits
-  20              		.align	1
-  21              		.global	_ux_device_class_cdc_acm_control_request
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
-  26              	_ux_device_class_cdc_acm_control_request:
-  27              	.LVL0:
-  28              	.LFB11:
-  29              		.file 1 "./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_requ
+  19              		.file 1 "./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_requ
+  20              		.section	.text._ux_device_class_cdc_acm_control_request,"ax",%progbits
+  21              		.align	1
+  22              		.global	_ux_device_class_cdc_acm_control_request
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	_ux_device_class_cdc_acm_control_request:
+  28              	.LVL0:
+  29              	.LFB11:
    1:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c **** /**************************************************************************/
    2:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c **** /*                                                                        */
    3:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cclVY63c.s 			page 1
   27:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c **** #include "ux_api.h"
   28:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c **** #include "ux_device_class_cdc_acm.h"
   29:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c **** #include "ux_device_stack.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cclVY63c.s 			page 2
+ARM GAS  /tmp/ccUfRMkf.s 			page 2
 
 
   30:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cclVY63c.s 			page 1
   40              		.cfi_offset 5, -24
   41              		.cfi_offset 6, -20
   42              		.cfi_offset 7, -16
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cclVY63c.s 			page 3
+ARM GAS  /tmp/ccUfRMkf.s 			page 3
 
 
   43              		.cfi_offset 8, -12
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cclVY63c.s 			page 1
   97:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c **** 
   98:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****     /* Extract all necessary fields of the value.  */
   99:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****     value =  _ux_utility_short_get(transfer_request -> ux_slave_transfer_request_setup + UX_SETUP_V
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cclVY63c.s 			page 4
+ARM GAS  /tmp/ccUfRMkf.s 			page 4
 
 
   74              		.loc 1 99 5 is_stmt 1 view .LVU20
@@ -209,39 +209,79 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cclVY63c.s 			page 1
  107:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****     switch (request)
   92              		.loc 1 107 5 view .LVU28
   93 0022 212E     		cmp	r6, #33
-  94 0024 1ED0     		beq	.L2
+  94 0024 1DD0     		beq	.L2
   95 0026 222E     		cmp	r6, #34
-  96 0028 04D0     		beq	.L3
+  96 0028 03D0     		beq	.L3
   97 002a 202E     		cmp	r6, #32
   98 002c 40D0     		beq	.L4
   99 002e FF20     		movs	r0, #255
  100              	.LVL11:
- 101              	.L1:
+ 101              		.loc 1 107 5 is_stmt 0 view .LVU29
+ 102 0030 3AE0     		b	.L1
+ 103              	.LVL12:
+ 104              	.L3:
  108:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****     {
  109:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c **** 
  110:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****         case UX_SLAVE_CLASS_CDC_ACM_SET_CONTROL_LINE_STATE:
  111:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c **** 
  112:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             /* Reset current line state values. */
  113:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             cdc_acm -> ux_slave_class_cdc_acm_data_dtr_state = 0;
+ 105              		.loc 1 113 13 is_stmt 1 view .LVU30
+ 106              		.loc 1 113 62 is_stmt 0 view .LVU31
+ 107 0032 0023     		movs	r3, #0
+ 108 0034 85F87F30 		strb	r3, [r5, #127]
  114:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             cdc_acm -> ux_slave_class_cdc_acm_data_rts_state = 0;
+ 109              		.loc 1 114 13 is_stmt 1 view .LVU32
+ 110              		.loc 1 114 62 is_stmt 0 view .LVU33
+ 111 0038 85F88030 		strb	r3, [r5, #128]
  115:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c **** 
  116:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             /* Get the line state parameters from the host.  DTR signal. */
  117:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             if (value & UX_SLAVE_CLASS_CDC_ACM_LINE_STATE_DTR)
+ 112              		.loc 1 117 13 is_stmt 1 view .LVU34
+ARM GAS  /tmp/ccUfRMkf.s 			page 5
+
+
+ 113              		.loc 1 117 16 is_stmt 0 view .LVU35
+ 114 003c 18F0010F 		tst	r8, #1
+ 115 0040 02D0     		beq	.L6
  118:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****                 cdc_acm -> ux_slave_class_cdc_acm_data_dtr_state = UX_TRUE;               
+ 116              		.loc 1 118 17 is_stmt 1 view .LVU36
+ 117              		.loc 1 118 66 is_stmt 0 view .LVU37
+ 118 0042 0123     		movs	r3, #1
+ 119 0044 85F87F30 		strb	r3, [r5, #127]
+ 120              	.L6:
  119:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c **** 
  120:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             /* Get the line state parameters from the host.  RTS signal. */
  121:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             if (value & UX_SLAVE_CLASS_CDC_ACM_LINE_STATE_RTS)
+ 121              		.loc 1 121 13 is_stmt 1 view .LVU38
+ 122              		.loc 1 121 16 is_stmt 0 view .LVU39
+ 123 0048 18F0020F 		tst	r8, #2
+ 124 004c 02D0     		beq	.L7
  122:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****                 cdc_acm -> ux_slave_class_cdc_acm_data_rts_state = UX_TRUE;               
+ 125              		.loc 1 122 17 is_stmt 1 view .LVU40
+ 126              		.loc 1 122 66 is_stmt 0 view .LVU41
+ 127 004e 0123     		movs	r3, #1
+ 128 0050 85F88030 		strb	r3, [r5, #128]
+ 129              	.L7:
  123:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****                 
  124:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             /* If there is a parameter change function call it.  */
  125:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             if (cdc_acm -> ux_slave_class_cdc_acm_parameter.ux_slave_class_cdc_acm_parameter_change
+ 130              		.loc 1 125 13 is_stmt 1 view .LVU42
+ 131              		.loc 1 125 60 is_stmt 0 view .LVU43
+ 132 0054 EB68     		ldr	r3, [r5, #12]
+ 133              		.loc 1 125 16 view .LVU44
+ 134 0056 002B     		cmp	r3, #0
+ 135 0058 44D0     		beq	.L9
  126:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             {        
  127:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****         
  128:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****                 /* Invoke the application.  */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cclVY63c.s 			page 5
-
-
  129:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****                 cdc_acm -> ux_slave_class_cdc_acm_parameter.ux_slave_class_cdc_acm_parameter_change
+ 136              		.loc 1 129 17 is_stmt 1 view .LVU45
+ 137 005a 2846     		mov	r0, r5
+ 138              	.LVL13:
+ 139              		.loc 1 129 17 is_stmt 0 view .LVU46
+ 140 005c 9847     		blx	r3
+ 141              	.LVL14:
  130:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             }
  131:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c **** 
  132:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             break ;
@@ -258,6 +298,9 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cclVY63c.s 			page 1
  143:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             *(transfer_request -> ux_slave_transfer_request_data_pointer + UX_SLAVE_CLASS_CDC_ACM_L
  144:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             *(transfer_request -> ux_slave_transfer_request_data_pointer + UX_SLAVE_CLASS_CDC_ACM_L
  145:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             *(transfer_request -> ux_slave_transfer_request_data_pointer + UX_SLAVE_CLASS_CDC_ACM_L
+ARM GAS  /tmp/ccUfRMkf.s 			page 6
+
+
  146:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c **** 
  147:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             /* Set the phase of the transfer to data out.  */
  148:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             transfer_request -> ux_slave_transfer_request_phase =  UX_TRANSFER_PHASE_DATA_OUT;
@@ -292,269 +335,203 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cclVY63c.s 			page 1
  177:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c **** 
  178:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****     /* It's handled.  */
  179:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****     return(UX_SUCCESS);
- 180:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c **** }
- 102              		.loc 1 180 1 is_stmt 0 view .LVU29
- 103 0030 BDE8F883 		pop	{r3, r4, r5, r6, r7, r8, r9, pc}
- 104              	.LVL12:
- 105              	.L3:
- 113:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             cdc_acm -> ux_slave_class_cdc_acm_data_rts_state = 0;
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cclVY63c.s 			page 6
-
-
- 106              		.loc 1 113 13 is_stmt 1 view .LVU30
- 113:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             cdc_acm -> ux_slave_class_cdc_acm_data_rts_state = 0;
- 107              		.loc 1 113 62 is_stmt 0 view .LVU31
- 108 0034 0023     		movs	r3, #0
- 109 0036 85F87F30 		strb	r3, [r5, #127]
- 114:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c **** 
- 110              		.loc 1 114 13 is_stmt 1 view .LVU32
- 114:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c **** 
- 111              		.loc 1 114 62 is_stmt 0 view .LVU33
- 112 003a 85F88030 		strb	r3, [r5, #128]
- 117:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****                 cdc_acm -> ux_slave_class_cdc_acm_data_dtr_state = UX_TRUE;               
- 113              		.loc 1 117 13 is_stmt 1 view .LVU34
- 117:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****                 cdc_acm -> ux_slave_class_cdc_acm_data_dtr_state = UX_TRUE;               
- 114              		.loc 1 117 16 is_stmt 0 view .LVU35
- 115 003e 18F0010F 		tst	r8, #1
- 116 0042 02D0     		beq	.L6
- 118:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c **** 
- 117              		.loc 1 118 17 is_stmt 1 view .LVU36
- 118:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c **** 
- 118              		.loc 1 118 66 is_stmt 0 view .LVU37
- 119 0044 0123     		movs	r3, #1
- 120 0046 85F87F30 		strb	r3, [r5, #127]
- 121              	.L6:
- 121:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****                 cdc_acm -> ux_slave_class_cdc_acm_data_rts_state = UX_TRUE;               
- 122              		.loc 1 121 13 is_stmt 1 view .LVU38
- 121:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****                 cdc_acm -> ux_slave_class_cdc_acm_data_rts_state = UX_TRUE;               
- 123              		.loc 1 121 16 is_stmt 0 view .LVU39
- 124 004a 18F0020F 		tst	r8, #2
- 125 004e 02D0     		beq	.L7
- 122:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****                 
- 126              		.loc 1 122 17 is_stmt 1 view .LVU40
- 122:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****                 
- 127              		.loc 1 122 66 is_stmt 0 view .LVU41
- 128 0050 0123     		movs	r3, #1
- 129 0052 85F88030 		strb	r3, [r5, #128]
- 130              	.L7:
- 125:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             {        
- 131              		.loc 1 125 13 is_stmt 1 view .LVU42
- 125:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             {        
- 132              		.loc 1 125 60 is_stmt 0 view .LVU43
- 133 0056 EB68     		ldr	r3, [r5, #12]
- 125:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             {        
- 134              		.loc 1 125 16 view .LVU44
- 135 0058 002B     		cmp	r3, #0
- 136 005a 43D0     		beq	.L9
- 129:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             }
- 137              		.loc 1 129 17 is_stmt 1 view .LVU45
- 138 005c 2846     		mov	r0, r5
- 139              	.LVL13:
- 129:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             }
- 140              		.loc 1 129 17 is_stmt 0 view .LVU46
- 141 005e 9847     		blx	r3
- 142              	.LVL14:
- 179:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c **** }
- 143              		.loc 1 179 11 view .LVU47
- 144 0060 0020     		movs	r0, #0
- 145 0062 E5E7     		b	.L1
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cclVY63c.s 			page 7
-
-
- 146              	.LVL15:
- 147              	.L2:
- 179:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c **** }
- 148              		.loc 1 179 11 view .LVU48
- 149 0064 04F18C09 		add	r9, r4, #140
- 150 0068 0746     		mov	r7, r0
+ 142              		.loc 1 179 11 view .LVU47
+ 143 005e 0020     		movs	r0, #0
+ 144 0060 22E0     		b	.L1
+ 145              	.LVL15:
+ 146              	.L2:
+ 147              		.loc 1 179 11 view .LVU48
+ 148 0062 04F18C09 		add	r9, r4, #140
+ 149 0066 0746     		mov	r7, r0
  137:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****                 transmit_length = UX_SLAVE_CLASS_CDC_ACM_LINE_CODING_RESPONSE_SIZE;
- 151              		.loc 1 137 13 is_stmt 1 view .LVU49
+ 150              		.loc 1 137 13 is_stmt 1 view .LVU49
  137:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****                 transmit_length = UX_SLAVE_CLASS_CDC_ACM_LINE_CODING_RESPONSE_SIZE;
- 152              		.loc 1 137 16 is_stmt 0 view .LVU50
- 153 006a 0728     		cmp	r0, #7
- 154 006c 1ED8     		bhi	.L10
+ 151              		.loc 1 137 16 is_stmt 0 view .LVU50
+ 152 0068 0728     		cmp	r0, #7
+ 153 006a 1FD8     		bhi	.L10
  104:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****     
- 155              		.loc 1 104 21 view .LVU51
- 156 006e 0646     		mov	r6, r0
- 157              	.LVL16:
- 158              	.L8:
+ 154              		.loc 1 104 21 view .LVU51
+ 155 006c 0646     		mov	r6, r0
+ 156              	.LVL16:
+ 157              	.L8:
  141:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****                                     cdc_acm -> ux_slave_class_cdc_acm_baudrate);
- 159              		.loc 1 141 13 is_stmt 1 view .LVU52
- 160 0070 A96F     		ldr	r1, [r5, #120]
- 161 0072 D4F89800 		ldr	r0, [r4, #152]
- 162              	.LVL17:
- 141:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****                                     cdc_acm -> ux_slave_class_cdc_acm_baudrate);
- 163              		.loc 1 141 13 is_stmt 0 view .LVU53
- 164 0076 FFF7FEFF 		bl	_ux_utility_long_put
- 165              	.LVL18:
- 143:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             *(transfer_request -> ux_slave_transfer_request_data_pointer + UX_SLAVE_CLASS_CDC_ACM_L
- 166              		.loc 1 143 13 is_stmt 1 view .LVU54
- 143:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             *(transfer_request -> ux_slave_transfer_request_data_pointer + UX_SLAVE_CLASS_CDC_ACM_L
- 167              		.loc 1 143 32 is_stmt 0 view .LVU55
- 168 007a D4F89830 		ldr	r3, [r4, #152]
- 143:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             *(transfer_request -> ux_slave_transfer_request_data_pointer + UX_SLAVE_CLASS_CDC_ACM_L
- 169              		.loc 1 143 138 view .LVU56
- 170 007e 95F87C20 		ldrb	r2, [r5, #124]	@ zero_extendqisi2
- 143:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             *(transfer_request -> ux_slave_transfer_request_data_pointer + UX_SLAVE_CLASS_CDC_ACM_L
- 171              		.loc 1 143 128 view .LVU57
- 172 0082 1A71     		strb	r2, [r3, #4]
- 144:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             *(transfer_request -> ux_slave_transfer_request_data_pointer + UX_SLAVE_CLASS_CDC_ACM_L
- 173              		.loc 1 144 13 is_stmt 1 view .LVU58
- 144:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             *(transfer_request -> ux_slave_transfer_request_data_pointer + UX_SLAVE_CLASS_CDC_ACM_L
- 174              		.loc 1 144 32 is_stmt 0 view .LVU59
- 175 0084 D4F89830 		ldr	r3, [r4, #152]
- 144:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             *(transfer_request -> ux_slave_transfer_request_data_pointer + UX_SLAVE_CLASS_CDC_ACM_L
- 176              		.loc 1 144 138 view .LVU60
- 177 0088 95F87D20 		ldrb	r2, [r5, #125]	@ zero_extendqisi2
- 144:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             *(transfer_request -> ux_slave_transfer_request_data_pointer + UX_SLAVE_CLASS_CDC_ACM_L
- 178              		.loc 1 144 128 view .LVU61
- 179 008c 5A71     		strb	r2, [r3, #5]
- 145:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c **** 
- 180              		.loc 1 145 13 is_stmt 1 view .LVU62
- 145:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c **** 
- 181              		.loc 1 145 32 is_stmt 0 view .LVU63
- 182 008e D4F89830 		ldr	r3, [r4, #152]
- 145:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c **** 
- 183              		.loc 1 145 138 view .LVU64
- 184 0092 95F87E20 		ldrb	r2, [r5, #126]	@ zero_extendqisi2
- 145:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cclVY63c.s 			page 8
+ 158              		.loc 1 141 13 is_stmt 1 view .LVU52
+ 159 006e A96F     		ldr	r1, [r5, #120]
+ 160 0070 D4F89800 		ldr	r0, [r4, #152]
+ARM GAS  /tmp/ccUfRMkf.s 			page 7
 
 
- 185              		.loc 1 145 128 view .LVU65
- 186 0096 9A71     		strb	r2, [r3, #6]
+ 161              	.LVL17:
+ 141:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****                                     cdc_acm -> ux_slave_class_cdc_acm_baudrate);
+ 162              		.loc 1 141 13 is_stmt 0 view .LVU53
+ 163 0074 FFF7FEFF 		bl	_ux_utility_long_put
+ 164              	.LVL18:
+ 143:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             *(transfer_request -> ux_slave_transfer_request_data_pointer + UX_SLAVE_CLASS_CDC_ACM_L
+ 165              		.loc 1 143 13 is_stmt 1 view .LVU54
+ 143:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             *(transfer_request -> ux_slave_transfer_request_data_pointer + UX_SLAVE_CLASS_CDC_ACM_L
+ 166              		.loc 1 143 32 is_stmt 0 view .LVU55
+ 167 0078 D4F89830 		ldr	r3, [r4, #152]
+ 143:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             *(transfer_request -> ux_slave_transfer_request_data_pointer + UX_SLAVE_CLASS_CDC_ACM_L
+ 168              		.loc 1 143 138 view .LVU56
+ 169 007c 95F87C20 		ldrb	r2, [r5, #124]	@ zero_extendqisi2
+ 143:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             *(transfer_request -> ux_slave_transfer_request_data_pointer + UX_SLAVE_CLASS_CDC_ACM_L
+ 170              		.loc 1 143 128 view .LVU57
+ 171 0080 1A71     		strb	r2, [r3, #4]
+ 144:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             *(transfer_request -> ux_slave_transfer_request_data_pointer + UX_SLAVE_CLASS_CDC_ACM_L
+ 172              		.loc 1 144 13 is_stmt 1 view .LVU58
+ 144:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             *(transfer_request -> ux_slave_transfer_request_data_pointer + UX_SLAVE_CLASS_CDC_ACM_L
+ 173              		.loc 1 144 32 is_stmt 0 view .LVU59
+ 174 0082 D4F89830 		ldr	r3, [r4, #152]
+ 144:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             *(transfer_request -> ux_slave_transfer_request_data_pointer + UX_SLAVE_CLASS_CDC_ACM_L
+ 175              		.loc 1 144 138 view .LVU60
+ 176 0086 95F87D20 		ldrb	r2, [r5, #125]	@ zero_extendqisi2
+ 144:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             *(transfer_request -> ux_slave_transfer_request_data_pointer + UX_SLAVE_CLASS_CDC_ACM_L
+ 177              		.loc 1 144 128 view .LVU61
+ 178 008a 5A71     		strb	r2, [r3, #5]
+ 145:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c **** 
+ 179              		.loc 1 145 13 is_stmt 1 view .LVU62
+ 145:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c **** 
+ 180              		.loc 1 145 32 is_stmt 0 view .LVU63
+ 181 008c D4F89830 		ldr	r3, [r4, #152]
+ 145:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c **** 
+ 182              		.loc 1 145 138 view .LVU64
+ 183 0090 95F87E20 		ldrb	r2, [r5, #126]	@ zero_extendqisi2
+ 145:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c **** 
+ 184              		.loc 1 145 128 view .LVU65
+ 185 0094 9A71     		strb	r2, [r3, #6]
  148:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             
- 187              		.loc 1 148 13 is_stmt 1 view .LVU66
+ 186              		.loc 1 148 13 is_stmt 1 view .LVU66
  148:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             
- 188              		.loc 1 148 65 is_stmt 0 view .LVU67
- 189 0098 0323     		movs	r3, #3
- 190 009a C4F8B430 		str	r3, [r4, #180]
+ 187              		.loc 1 148 65 is_stmt 0 view .LVU67
+ 188 0096 0323     		movs	r3, #3
+ 189 0098 C4F8B430 		str	r3, [r4, #180]
  151:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             break; 
- 191              		.loc 1 151 13 is_stmt 1 view .LVU68
- 192 009e 3A46     		mov	r2, r7
- 193 00a0 3146     		mov	r1, r6
- 194 00a2 4846     		mov	r0, r9
- 195 00a4 FFF7FEFF 		bl	_ux_device_stack_transfer_request
- 196              	.LVL19:
+ 190              		.loc 1 151 13 is_stmt 1 view .LVU68
+ 191 009c 3A46     		mov	r2, r7
+ 192 009e 3146     		mov	r1, r6
+ 193 00a0 4846     		mov	r0, r9
+ 194 00a2 FFF7FEFF 		bl	_ux_device_stack_transfer_request
+ 195              	.LVL19:
  152:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             
- 197              		.loc 1 152 13 view .LVU69
- 179:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c **** }
- 198              		.loc 1 179 11 is_stmt 0 view .LVU70
- 199 00a8 0020     		movs	r0, #0
- 152:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             
- 200              		.loc 1 152 13 view .LVU71
- 201 00aa C1E7     		b	.L1
- 202              	.LVL20:
- 203              	.L10:
- 138:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****     
- 204              		.loc 1 138 33 view .LVU72
- 205 00ac 0726     		movs	r6, #7
- 206              	.LVL21:
- 138:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****     
- 207              		.loc 1 138 33 view .LVU73
- 208 00ae DFE7     		b	.L8
- 209              	.LVL22:
- 210              	.L4:
- 157:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             cdc_acm -> ux_slave_class_cdc_acm_stop_bit  = *(transfer_request -> ux_slave_transfer_r
- 211              		.loc 1 157 13 is_stmt 1 view .LVU74
- 157:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             cdc_acm -> ux_slave_class_cdc_acm_stop_bit  = *(transfer_request -> ux_slave_transfer_r
- 212              		.loc 1 157 59 is_stmt 0 view .LVU75
- 213 00b0 D4F89800 		ldr	r0, [r4, #152]
- 214              	.LVL23:
- 157:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             cdc_acm -> ux_slave_class_cdc_acm_stop_bit  = *(transfer_request -> ux_slave_transfer_r
- 215              		.loc 1 157 59 view .LVU76
- 216 00b4 FFF7FEFF 		bl	_ux_utility_long_get
- 217              	.LVL24:
- 157:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             cdc_acm -> ux_slave_class_cdc_acm_stop_bit  = *(transfer_request -> ux_slave_transfer_r
- 218              		.loc 1 157 57 view .LVU77
- 219 00b8 A867     		str	r0, [r5, #120]
- 158:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             cdc_acm -> ux_slave_class_cdc_acm_parity    = *(transfer_request -> ux_slave_transfer_r
- 220              		.loc 1 158 13 is_stmt 1 view .LVU78
- 158:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             cdc_acm -> ux_slave_class_cdc_acm_parity    = *(transfer_request -> ux_slave_transfer_r
- 221              		.loc 1 158 78 is_stmt 0 view .LVU79
- 222 00ba D4F89830 		ldr	r3, [r4, #152]
- 158:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             cdc_acm -> ux_slave_class_cdc_acm_parity    = *(transfer_request -> ux_slave_transfer_r
- 223              		.loc 1 158 57 view .LVU80
- 224 00be 1B79     		ldrb	r3, [r3, #4]	@ zero_extendqisi2
- 225 00c0 85F87C30 		strb	r3, [r5, #124]
- 159:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             cdc_acm -> ux_slave_class_cdc_acm_data_bit  = *(transfer_request -> ux_slave_transfer_r
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cclVY63c.s 			page 9
+ 196              		.loc 1 152 13 view .LVU69
+ 197              		.loc 1 179 11 is_stmt 0 view .LVU70
+ 198 00a6 0020     		movs	r0, #0
+ 199              	.LVL20:
+ 200              	.L1:
+ARM GAS  /tmp/ccUfRMkf.s 			page 8
 
 
- 226              		.loc 1 159 13 is_stmt 1 view .LVU81
+ 180:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c **** }
+ 201              		.loc 1 180 1 view .LVU71
+ 202 00a8 BDE8F883 		pop	{r3, r4, r5, r6, r7, r8, r9, pc}
+ 203              	.LVL21:
+ 204              	.L10:
+ 138:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****     
+ 205              		.loc 1 138 33 view .LVU72
+ 206 00ac 0726     		movs	r6, #7
+ 207              	.LVL22:
+ 138:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****     
+ 208              		.loc 1 138 33 view .LVU73
+ 209 00ae DEE7     		b	.L8
+ 210              	.LVL23:
+ 211              	.L4:
+ 157:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             cdc_acm -> ux_slave_class_cdc_acm_stop_bit  = *(transfer_request -> ux_slave_transfer_r
+ 212              		.loc 1 157 13 is_stmt 1 view .LVU74
+ 157:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             cdc_acm -> ux_slave_class_cdc_acm_stop_bit  = *(transfer_request -> ux_slave_transfer_r
+ 213              		.loc 1 157 59 is_stmt 0 view .LVU75
+ 214 00b0 D4F89800 		ldr	r0, [r4, #152]
+ 215              	.LVL24:
+ 157:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             cdc_acm -> ux_slave_class_cdc_acm_stop_bit  = *(transfer_request -> ux_slave_transfer_r
+ 216              		.loc 1 157 59 view .LVU76
+ 217 00b4 FFF7FEFF 		bl	_ux_utility_long_get
+ 218              	.LVL25:
+ 157:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             cdc_acm -> ux_slave_class_cdc_acm_stop_bit  = *(transfer_request -> ux_slave_transfer_r
+ 219              		.loc 1 157 57 discriminator 1 view .LVU77
+ 220 00b8 A867     		str	r0, [r5, #120]
+ 158:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             cdc_acm -> ux_slave_class_cdc_acm_parity    = *(transfer_request -> ux_slave_transfer_r
+ 221              		.loc 1 158 13 is_stmt 1 view .LVU78
+ 158:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             cdc_acm -> ux_slave_class_cdc_acm_parity    = *(transfer_request -> ux_slave_transfer_r
+ 222              		.loc 1 158 78 is_stmt 0 view .LVU79
+ 223 00ba D4F89830 		ldr	r3, [r4, #152]
+ 158:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             cdc_acm -> ux_slave_class_cdc_acm_parity    = *(transfer_request -> ux_slave_transfer_r
+ 224              		.loc 1 158 57 view .LVU80
+ 225 00be 1B79     		ldrb	r3, [r3, #4]	@ zero_extendqisi2
+ 226 00c0 85F87C30 		strb	r3, [r5, #124]
  159:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             cdc_acm -> ux_slave_class_cdc_acm_data_bit  = *(transfer_request -> ux_slave_transfer_r
- 227              		.loc 1 159 78 is_stmt 0 view .LVU82
- 228 00c4 D4F89830 		ldr	r3, [r4, #152]
+ 227              		.loc 1 159 13 is_stmt 1 view .LVU81
  159:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             cdc_acm -> ux_slave_class_cdc_acm_data_bit  = *(transfer_request -> ux_slave_transfer_r
- 229              		.loc 1 159 57 view .LVU83
- 230 00c8 5B79     		ldrb	r3, [r3, #5]	@ zero_extendqisi2
- 231 00ca 85F87D30 		strb	r3, [r5, #125]
+ 228              		.loc 1 159 78 is_stmt 0 view .LVU82
+ 229 00c4 D4F89830 		ldr	r3, [r4, #152]
+ 159:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             cdc_acm -> ux_slave_class_cdc_acm_data_bit  = *(transfer_request -> ux_slave_transfer_r
+ 230              		.loc 1 159 57 view .LVU83
+ 231 00c8 5B79     		ldrb	r3, [r3, #5]	@ zero_extendqisi2
+ 232 00ca 85F87D30 		strb	r3, [r5, #125]
  160:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c **** 
- 232              		.loc 1 160 13 is_stmt 1 view .LVU84
+ 233              		.loc 1 160 13 is_stmt 1 view .LVU84
  160:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c **** 
- 233              		.loc 1 160 78 is_stmt 0 view .LVU85
- 234 00ce D4F89830 		ldr	r3, [r4, #152]
+ 234              		.loc 1 160 78 is_stmt 0 view .LVU85
+ 235 00ce D4F89830 		ldr	r3, [r4, #152]
  160:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c **** 
- 235              		.loc 1 160 57 view .LVU86
- 236 00d2 9B79     		ldrb	r3, [r3, #6]	@ zero_extendqisi2
- 237 00d4 85F87E30 		strb	r3, [r5, #126]
+ 236              		.loc 1 160 57 view .LVU86
+ 237 00d2 9B79     		ldrb	r3, [r3, #6]	@ zero_extendqisi2
+ 238 00d4 85F87E30 		strb	r3, [r5, #126]
  163:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             {        
- 238              		.loc 1 163 13 is_stmt 1 view .LVU87
+ 239              		.loc 1 163 13 is_stmt 1 view .LVU87
  163:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             {        
- 239              		.loc 1 163 60 is_stmt 0 view .LVU88
- 240 00d8 EB68     		ldr	r3, [r5, #12]
+ARM GAS  /tmp/ccUfRMkf.s 			page 9
+
+
+ 240              		.loc 1 163 60 is_stmt 0 view .LVU88
+ 241 00d8 EB68     		ldr	r3, [r5, #12]
  163:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             {        
- 241              		.loc 1 163 16 view .LVU89
- 242 00da 2BB1     		cbz	r3, .L11
+ 242              		.loc 1 163 16 view .LVU89
+ 243 00da 2BB1     		cbz	r3, .L11
  167:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c ****             }
- 243              		.loc 1 167 17 is_stmt 1 view .LVU90
- 244 00dc 2846     		mov	r0, r5
- 245 00de 9847     		blx	r3
- 246              	.LVL25:
+ 244              		.loc 1 167 17 is_stmt 1 view .LVU90
+ 245 00dc 2846     		mov	r0, r5
+ 246 00de 9847     		blx	r3
+ 247              	.LVL26:
  179:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c **** }
- 247              		.loc 1 179 11 is_stmt 0 view .LVU91
- 248 00e0 0020     		movs	r0, #0
- 249 00e2 A5E7     		b	.L1
- 250              	.LVL26:
- 251              	.L9:
+ 248              		.loc 1 179 11 is_stmt 0 view .LVU91
+ 249 00e0 0020     		movs	r0, #0
+ 250 00e2 E1E7     		b	.L1
+ 251              	.LVL27:
+ 252              	.L9:
  179:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c **** }
- 252              		.loc 1 179 11 view .LVU92
- 253 00e4 0020     		movs	r0, #0
- 254              	.LVL27:
+ 253              		.loc 1 179 11 view .LVU92
+ 254 00e4 0020     		movs	r0, #0
+ 255              	.LVL28:
  179:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c **** }
- 255              		.loc 1 179 11 view .LVU93
- 256 00e6 A3E7     		b	.L1
- 257              	.L11:
+ 256              		.loc 1 179 11 view .LVU93
+ 257 00e6 DFE7     		b	.L1
+ 258              	.L11:
  179:./Middlewares/ST/usbx/common/usbx_device_classes/src/ux_device_class_cdc_acm_control_request.c **** }
- 258              		.loc 1 179 11 view .LVU94
- 259 00e8 0020     		movs	r0, #0
- 260 00ea A1E7     		b	.L1
- 261              	.L14:
- 262              		.align	2
- 263              	.L13:
- 264 00ec 00000000 		.word	_ux_system_slave
- 265              		.cfi_endproc
- 266              	.LFE11:
- 268              		.text
- 269              	.Letext0:
- 270              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cclVY63c.s 			page 10
-
-
- 271              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
- 272              		.file 4 "./Middlewares/ST/usbx/common/core/inc/ux_api.h"
- 273              		.file 5 "./Middlewares/ST/usbx/common/usbx_device_classes/inc/ux_device_class_cdc_acm.h"
- 274              		.file 6 "./Middlewares/ST/usbx/common/core/inc/ux_system.h"
- 275              		.file 7 "./Middlewares/ST/usbx/common/core/inc/ux_utility.h"
- 276              		.file 8 "./Middlewares/ST/usbx/common/core/inc/ux_device_stack.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cclVY63c.s 			page 11
+ 259              		.loc 1 179 11 view .LVU94
+ 260 00e8 0020     		movs	r0, #0
+ 261 00ea DDE7     		b	.L1
+ 262              	.L14:
+ 263              		.align	2
+ 264              	.L13:
+ 265 00ec 00000000 		.word	_ux_system_slave
+ 266              		.cfi_endproc
+ 267              	.LFE11:
+ 269              		.text
+ 270              	.Letext0:
+ 271              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
+ 272              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
+ 273              		.file 4 "./Middlewares/ST/usbx/common/core/inc/ux_api.h"
+ 274              		.file 5 "./Middlewares/ST/usbx/common/usbx_device_classes/inc/ux_device_class_cdc_acm.h"
+ 275              		.file 6 "./Middlewares/ST/usbx/common/core/inc/ux_utility.h"
+ 276              		.file 7 "./Middlewares/ST/usbx/common/core/inc/ux_device_stack.h"
+ 277              		.file 8 "./Middlewares/ST/usbx/common/core/inc/ux_system.h"
+ARM GAS  /tmp/ccUfRMkf.s 			page 10
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 ux_device_class_cdc_acm_control_request.c
-C:\Users\Dennis\AppData\Local\Temp\cclVY63c.s:20     .text._ux_device_class_cdc_acm_control_request:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\cclVY63c.s:26     .text._ux_device_class_cdc_acm_control_request:00000000 _ux_device_class_cdc_acm_control_request
-C:\Users\Dennis\AppData\Local\Temp\cclVY63c.s:264    .text._ux_device_class_cdc_acm_control_request:000000ec $d
+     /tmp/ccUfRMkf.s:21     .text._ux_device_class_cdc_acm_control_request:00000000 $t
+     /tmp/ccUfRMkf.s:27     .text._ux_device_class_cdc_acm_control_request:00000000 _ux_device_class_cdc_acm_control_request
+     /tmp/ccUfRMkf.s:265    .text._ux_device_class_cdc_acm_control_request:000000ec $d
 
 UNDEFINED SYMBOLS
 _ux_utility_short_get

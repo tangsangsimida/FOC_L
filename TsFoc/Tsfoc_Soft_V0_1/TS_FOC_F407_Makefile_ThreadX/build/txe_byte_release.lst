@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJSyODQ.s 			page 1
+ARM GAS  /tmp/ccjfN1be.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,16 +19,16 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJSyODQ.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text._txe_byte_release,"ax",%progbits
-  20              		.align	1
-  21              		.global	_txe_byte_release
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
-  26              	_txe_byte_release:
-  27              	.LVL0:
-  28              	.LFB8:
-  29              		.file 1 "./Middlewares/ST/threadx/common/src/txe_byte_release.c"
+  19              		.file 1 "./Middlewares/ST/threadx/common/src/txe_byte_release.c"
+  20              		.section	.text._txe_byte_release,"ax",%progbits
+  21              		.align	1
+  22              		.global	_txe_byte_release
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	_txe_byte_release:
+  28              	.LVL0:
+  29              	.LFB8:
    1:./Middlewares/ST/threadx/common/src/txe_byte_release.c **** /**************************************************************************/
    2:./Middlewares/ST/threadx/common/src/txe_byte_release.c **** /*                                                                        */
    3:./Middlewares/ST/threadx/common/src/txe_byte_release.c **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJSyODQ.s 			page 1
   27:./Middlewares/ST/threadx/common/src/txe_byte_release.c **** 
   28:./Middlewares/ST/threadx/common/src/txe_byte_release.c **** #include "tx_api.h"
   29:./Middlewares/ST/threadx/common/src/txe_byte_release.c **** #include "tx_initialize.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJSyODQ.s 			page 2
+ARM GAS  /tmp/ccjfN1be.s 			page 2
 
 
   30:./Middlewares/ST/threadx/common/src/txe_byte_release.c **** #include "tx_thread.h"
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJSyODQ.s 			page 1
   34              		.loc 1 79 1 view .LVU1
   80:./Middlewares/ST/threadx/common/src/txe_byte_release.c **** #ifndef TX_TIMER_PROCESS_IN_ISR
   81:./Middlewares/ST/threadx/common/src/txe_byte_release.c **** TX_THREAD       *thread_ptr;
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJSyODQ.s 			page 3
+ARM GAS  /tmp/ccjfN1be.s 			page 3
 
 
   35              		.loc 1 81 1 view .LVU2
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJSyODQ.s 			page 1
  109:./Middlewares/ST/threadx/common/src/txe_byte_release.c ****         }
  110:./Middlewares/ST/threadx/common/src/txe_byte_release.c **** #endif
  111:./Middlewares/ST/threadx/common/src/txe_byte_release.c **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJSyODQ.s 			page 4
+ARM GAS  /tmp/ccjfN1be.s 			page 4
 
 
  112:./Middlewares/ST/threadx/common/src/txe_byte_release.c ****         /* Check for interrupt call.  */
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJSyODQ.s 			page 1
   49:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*  RELEASE HISTORY                                                       */
   50:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*                                                                        */
   51:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*    DATE              NAME                      DESCRIPTION             */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJSyODQ.s 			page 5
+ARM GAS  /tmp/ccjfN1be.s 			page 5
 
 
   52:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*                                                                        */
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJSyODQ.s 			page 1
  106:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  107:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define VOID                                    void
  108:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** typedef char                                    CHAR;
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJSyODQ.s 			page 6
+ARM GAS  /tmp/ccjfN1be.s 			page 6
 
 
  109:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** typedef unsigned char                           UCHAR;
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJSyODQ.s 			page 1
  163:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifndef TX_TRACE_TIME_SOURCE
  164:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_TRACE_TIME_SOURCE                    *((ULONG *) 0xE0001004)
  165:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJSyODQ.s 			page 7
+ARM GAS  /tmp/ccjfN1be.s 			page 7
 
 
  166:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #else
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJSyODQ.s 			page 1
  220:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /* Define the TX_THREAD control block extensions for this port. The main reason
  221:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****    for the multiple macros is so that backward compatibility can be maintained with
  222:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****    existing ThreadX kernel awareness modules.  */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJSyODQ.s 			page 8
+ARM GAS  /tmp/ccjfN1be.s 			page 8
 
 
  223:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJSyODQ.s 			page 1
  277:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                                         thread_ptr -> tx_thread_iar
  278:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_PORT_SPECIFIC_PRE_SCHEDULER_INITIALIZATION               do {__iar_Initlocks();} while(0
  279:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJSyODQ.s 			page 9
+ARM GAS  /tmp/ccjfN1be.s 			page 9
 
 
  280:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #else
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJSyODQ.s 			page 1
  334:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif  /* Helper functions for different compilers */
  335:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  336:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif  /* TX_MISRA_ENABLE */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJSyODQ.s 			page 10
+ARM GAS  /tmp/ccjfN1be.s 			page 10
 
 
  337:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJSyODQ.s 			page 1
  391:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                                     _tx_vfp_state =  __get_control_
  392:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                                     _tx_vfp_state =  _tx_vfp_state 
  393:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                                     __set_control_value(_tx_vfp_sta
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJSyODQ.s 			page 11
+ARM GAS  /tmp/ccjfN1be.s 			page 11
 
 
  394:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                                 }                                  
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJSyODQ.s 			page 1
  448:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_TIMER_CREATE_EXTENSION(timer_ptr)
  449:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  450:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJSyODQ.s 			page 12
+ARM GAS  /tmp/ccjfN1be.s 			page 12
 
 
  451:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /* Define the ThreadX object deletion extensions for the remaining objects.  */
@@ -694,7 +694,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJSyODQ.s 			page 1
   67              		.loc 2 477 5 view .LVU14
   68              		.syntax unified
   69              	@ 477 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
-  70 0012 EFF30583 		 MRS  r3,IPSR 
+  70 0012 EFF30582 		 MRS  r2,IPSR 
   71              	@ 0 "" 2
   72              	.LVL3:
  478:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     return(ipsr_value);
@@ -704,50 +704,48 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJSyODQ.s 			page 1
   76              		.syntax unified
   77              	.LBE7:
   78              	.LBE6:
-  79              		.loc 1 113 13 view .LVU17
-  80 0016 0E4A     		ldr	r2, .L13+8
-  81              	.LVL4:
-  82              		.loc 1 113 13 view .LVU18
-  83 0018 1268     		ldr	r2, [r2]
-  84              		.loc 1 113 12 view .LVU19
-  85 001a 1343     		orrs	r3, r2, r3
-  86 001c 07D0     		beq	.L4
+  79              		.loc 1 113 13 discriminator 1 view .LVU17
+  80 0016 0E4B     		ldr	r3, .L13+8
+  81 0018 1B68     		ldr	r3, [r3]
+  82              		.loc 1 113 12 discriminator 1 view .LVU18
+  83 001a 1343     		orrs	r3, r3, r2
+  84 001c 07D0     		beq	.L4
  114:./Middlewares/ST/threadx/common/src/txe_byte_release.c ****         {
  115:./Middlewares/ST/threadx/common/src/txe_byte_release.c **** 
  116:./Middlewares/ST/threadx/common/src/txe_byte_release.c ****             /* Now, make sure the call is from an interrupt and not initialization.  */
  117:./Middlewares/ST/threadx/common/src/txe_byte_release.c ****             if (TX_THREAD_GET_SYSTEM_STATE() < TX_INITIALIZE_IN_PROGRESS)
-  87              		.loc 1 117 13 is_stmt 1 view .LVU20
-  88              	.LBB8:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJSyODQ.s 			page 13
-
-
-  89              	.LBI8:
+  85              		.loc 1 117 13 is_stmt 1 view .LVU19
+  86              	.LBB8:
+  87              	.LBI8:
  474:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
-  90              		.loc 2 474 63 view .LVU21
-  91              	.LBB9:
+ARM GAS  /tmp/ccjfN1be.s 			page 13
+
+
+  88              		.loc 2 474 63 view .LVU20
+  89              	.LBB9:
  476:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     __asm__ volatile (" MRS  %0,IPSR ": "=r" (ipsr_value) );
-  92              		.loc 2 476 1 view .LVU22
+  90              		.loc 2 476 1 view .LVU21
  477:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     return(ipsr_value);
-  93              		.loc 2 477 5 view .LVU23
-  94              		.syntax unified
-  95              	@ 477 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
-  96 001e EFF30582 		 MRS  r2,IPSR 
-  97              	@ 0 "" 2
-  98              	.LVL5:
-  99              		.loc 2 478 5 view .LVU24
- 100              		.loc 2 478 5 is_stmt 0 view .LVU25
- 101              		.thumb
- 102              		.syntax unified
- 103              	.LBE9:
- 104              	.LBE8:
- 105              		.loc 1 117 17 view .LVU26
- 106 0022 0B4B     		ldr	r3, .L13+8
- 107 0024 1B68     		ldr	r3, [r3]
- 108 0026 1343     		orrs	r3, r3, r2
- 109              		.loc 1 117 16 view .LVU27
- 110 0028 B3F1F03F 		cmp	r3, #-252645136
- 111 002c 09D3     		bcc	.L7
- 112              	.L4:
+  91              		.loc 2 477 5 view .LVU22
+  92              		.syntax unified
+  93              	@ 477 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+  94 001e EFF30582 		 MRS  r2,IPSR 
+  95              	@ 0 "" 2
+  96              	.LVL4:
+  97              		.loc 2 478 5 view .LVU23
+  98              		.loc 2 478 5 is_stmt 0 view .LVU24
+  99              		.thumb
+ 100              		.syntax unified
+ 101              	.LBE9:
+ 102              	.LBE8:
+ 103              		.loc 1 117 17 discriminator 1 view .LVU25
+ 104 0022 0B4B     		ldr	r3, .L13+8
+ 105 0024 1B68     		ldr	r3, [r3]
+ 106 0026 1343     		orrs	r3, r3, r2
+ 107              		.loc 1 117 16 discriminator 1 view .LVU26
+ 108 0028 B3F1F03F 		cmp	r3, #-252645136
+ 109 002c 09D3     		bcc	.L7
+ 110              	.L4:
  118:./Middlewares/ST/threadx/common/src/txe_byte_release.c ****             {
  119:./Middlewares/ST/threadx/common/src/txe_byte_release.c **** 
  120:./Middlewares/ST/threadx/common/src/txe_byte_release.c ****                 /* Invalid caller of this function, return appropriate error code.  */
@@ -758,11 +756,11 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJSyODQ.s 			page 1
  125:./Middlewares/ST/threadx/common/src/txe_byte_release.c **** 
  126:./Middlewares/ST/threadx/common/src/txe_byte_release.c ****     /* Determine if everything is okay.  */
  127:./Middlewares/ST/threadx/common/src/txe_byte_release.c ****     if (status == TX_SUCCESS)
- 113              		.loc 1 127 5 is_stmt 1 view .LVU28
- 114              		.loc 1 127 8 is_stmt 0 view .LVU29
- 115 002e 10B1     		cbz	r0, .L12
- 116              	.LVL6:
- 117              	.L1:
+ 111              		.loc 1 127 5 is_stmt 1 view .LVU27
+ 112              		.loc 1 127 8 is_stmt 0 view .LVU28
+ 113 002e 10B1     		cbz	r0, .L12
+ 114              	.LVL5:
+ 115              	.L1:
  128:./Middlewares/ST/threadx/common/src/txe_byte_release.c ****     {
  129:./Middlewares/ST/threadx/common/src/txe_byte_release.c **** 
  130:./Middlewares/ST/threadx/common/src/txe_byte_release.c ****         /* Call actual byte release function.  */
@@ -772,86 +770,86 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJSyODQ.s 			page 1
  134:./Middlewares/ST/threadx/common/src/txe_byte_release.c ****     /* Return completion status.  */
  135:./Middlewares/ST/threadx/common/src/txe_byte_release.c ****     return(status);
  136:./Middlewares/ST/threadx/common/src/txe_byte_release.c **** }
- 118              		.loc 1 136 1 view .LVU30
- 119 0030 08BD     		pop	{r3, pc}
- 120              	.LVL7:
- 121              	.L6:
+ 116              		.loc 1 136 1 view .LVU29
+ 117 0030 08BD     		pop	{r3, pc}
+ 118              	.LVL6:
+ 119              	.L6:
  108:./Middlewares/ST/threadx/common/src/txe_byte_release.c ****         }
- 122              		.loc 1 108 20 view .LVU31
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJSyODQ.s 			page 14
+ 120              		.loc 1 108 20 view .LVU30
+ 121 0032 1320     		movs	r0, #19
+ 122              	.LVL7:
+ARM GAS  /tmp/ccjfN1be.s 			page 14
 
 
- 123 0032 1320     		movs	r0, #19
- 124              	.LVL8:
  108:./Middlewares/ST/threadx/common/src/txe_byte_release.c ****         }
- 125              		.loc 1 108 20 view .LVU32
- 126 0034 EDE7     		b	.L3
- 127              	.LVL9:
- 128              	.L12:
+ 123              		.loc 1 108 20 view .LVU31
+ 124 0034 EDE7     		b	.L3
+ 125              	.LVL8:
+ 126              	.L12:
  131:./Middlewares/ST/threadx/common/src/txe_byte_release.c ****     }
- 129              		.loc 1 131 9 is_stmt 1 view .LVU33
+ 127              		.loc 1 131 9 is_stmt 1 view .LVU32
  131:./Middlewares/ST/threadx/common/src/txe_byte_release.c ****     }
- 130              		.loc 1 131 19 is_stmt 0 view .LVU34
- 131 0036 0846     		mov	r0, r1
- 132              	.LVL10:
+ 128              		.loc 1 131 19 is_stmt 0 view .LVU33
+ 129 0036 0846     		mov	r0, r1
+ 130              	.LVL9:
  131:./Middlewares/ST/threadx/common/src/txe_byte_release.c ****     }
- 133              		.loc 1 131 19 view .LVU35
- 134 0038 FFF7FEFF 		bl	_tx_byte_release
- 135              	.LVL11:
+ 131              		.loc 1 131 19 view .LVU34
+ 132 0038 FFF7FEFF 		bl	_tx_byte_release
+ 133              	.LVL10:
  131:./Middlewares/ST/threadx/common/src/txe_byte_release.c ****     }
- 136              		.loc 1 131 19 view .LVU36
- 137 003c F8E7     		b	.L1
- 138              	.LVL12:
- 139              	.L5:
- 140              	.LCFI1:
- 141              		.cfi_def_cfa_offset 0
- 142              		.cfi_restore 3
- 143              		.cfi_restore 14
+ 134              		.loc 1 131 19 view .LVU35
+ 135 003c F8E7     		b	.L1
+ 136              	.LVL11:
+ 137              	.L5:
+ 138              	.LCFI1:
+ 139              		.cfi_def_cfa_offset 0
+ 140              		.cfi_restore 3
+ 141              		.cfi_restore 14
   93:./Middlewares/ST/threadx/common/src/txe_byte_release.c ****     }
- 144              		.loc 1 93 16 view .LVU37
- 145 003e 0320     		movs	r0, #3
- 146              	.LVL13:
- 147              		.loc 1 136 1 view .LVU38
- 148 0040 7047     		bx	lr
- 149              	.LVL14:
- 150              	.L7:
- 151              	.LCFI2:
- 152              		.cfi_def_cfa_offset 8
- 153              		.cfi_offset 3, -8
- 154              		.cfi_offset 14, -4
+ 142              		.loc 1 93 16 view .LVU36
+ 143 003e 0320     		movs	r0, #3
+ 144              	.LVL12:
+ 145              		.loc 1 136 1 view .LVU37
+ 146 0040 7047     		bx	lr
+ 147              	.LVL13:
+ 148              	.L7:
+ 149              	.LCFI2:
+ 150              		.cfi_def_cfa_offset 8
+ 151              		.cfi_offset 3, -8
+ 152              		.cfi_offset 14, -4
  121:./Middlewares/ST/threadx/common/src/txe_byte_release.c ****             }
- 155              		.loc 1 121 24 view .LVU39
- 156 0042 1320     		movs	r0, #19
- 157              	.LVL15:
+ 153              		.loc 1 121 24 view .LVU38
+ 154 0042 1320     		movs	r0, #19
+ 155              	.LVL14:
  135:./Middlewares/ST/threadx/common/src/txe_byte_release.c **** }
- 158              		.loc 1 135 5 is_stmt 1 view .LVU40
+ 156              		.loc 1 135 5 is_stmt 1 view .LVU39
  135:./Middlewares/ST/threadx/common/src/txe_byte_release.c **** }
- 159              		.loc 1 135 11 is_stmt 0 view .LVU41
- 160 0044 F4E7     		b	.L1
- 161              	.L14:
- 162 0046 00BF     		.align	2
- 163              	.L13:
- 164 0048 00000000 		.word	_tx_thread_current_ptr
- 165 004c 00000000 		.word	_tx_timer_thread
- 166 0050 00000000 		.word	_tx_thread_system_state
- 167              		.cfi_endproc
- 168              	.LFE8:
- 170              		.text
- 171              	.Letext0:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJSyODQ.s 			page 15
+ 157              		.loc 1 135 11 is_stmt 0 view .LVU40
+ 158 0044 F4E7     		b	.L1
+ 159              	.L14:
+ 160 0046 00BF     		.align	2
+ 161              	.L13:
+ 162 0048 00000000 		.word	_tx_thread_current_ptr
+ 163 004c 00000000 		.word	_tx_timer_thread
+ 164 0050 00000000 		.word	_tx_thread_system_state
+ 165              		.cfi_endproc
+ 166              	.LFE8:
+ 168              		.text
+ 169              	.Letext0:
+ 170              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
+ 171              		.file 4 "./Middlewares/ST/threadx/common/inc/tx_thread.h"
+ARM GAS  /tmp/ccjfN1be.s 			page 15
 
 
- 172              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
- 173              		.file 4 "./Middlewares/ST/threadx/common/inc/tx_thread.h"
- 174              		.file 5 "./Middlewares/ST/threadx/common/inc/tx_timer.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJSyODQ.s 			page 16
+ 172              		.file 5 "./Middlewares/ST/threadx/common/inc/tx_timer.h"
+ARM GAS  /tmp/ccjfN1be.s 			page 16
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 txe_byte_release.c
-C:\Users\Dennis\AppData\Local\Temp\ccJSyODQ.s:20     .text._txe_byte_release:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccJSyODQ.s:26     .text._txe_byte_release:00000000 _txe_byte_release
-C:\Users\Dennis\AppData\Local\Temp\ccJSyODQ.s:164    .text._txe_byte_release:00000048 $d
+     /tmp/ccjfN1be.s:21     .text._txe_byte_release:00000000 $t
+     /tmp/ccjfN1be.s:27     .text._txe_byte_release:00000000 _txe_byte_release
+     /tmp/ccjfN1be.s:162    .text._txe_byte_release:00000048 $d
 
 UNDEFINED SYMBOLS
 _tx_byte_release

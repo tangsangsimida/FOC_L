@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s 			page 1
+ARM GAS  /tmp/ccyGUgi7.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,15 +19,15 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text.MX_CAN1_Init,"ax",%progbits
-  20              		.align	1
-  21              		.global	MX_CAN1_Init
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
-  26              	MX_CAN1_Init:
-  27              	.LFB239:
-  28              		.file 1 "./Core/Src/can.c"
+  19              		.file 1 "./Core/Src/can.c"
+  20              		.section	.text.MX_CAN1_Init,"ax",%progbits
+  21              		.align	1
+  22              		.global	MX_CAN1_Init
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	MX_CAN1_Init:
+  28              	.LFB239:
    1:./Core/Src/can.c **** /* USER CODE BEGIN Header */
    2:./Core/Src/can.c **** /**
    3:./Core/Src/can.c ****   ******************************************************************************
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s 			page 1
   28:./Core/Src/can.c **** CAN_HandleTypeDef hcan2;
   29:./Core/Src/can.c **** 
   30:./Core/Src/can.c **** /* CAN1 init function */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s 			page 2
+ARM GAS  /tmp/ccyGUgi7.s 			page 2
 
 
   31:./Core/Src/can.c **** void MX_CAN1_Init(void)
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s 			page 1
   65              		.loc 1 48 3 is_stmt 1 view .LVU15
   66              		.loc 1 48 25 is_stmt 0 view .LVU16
   67 0020 4376     		strb	r3, [r0, #25]
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s 			page 3
+ARM GAS  /tmp/ccyGUgi7.s 			page 3
 
 
   49:./Core/Src/can.c ****   hcan1.Init.AutoWakeUp = DISABLE;
@@ -142,7 +142,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s 			page 1
   81              		.loc 1 53 7 is_stmt 0 view .LVU26
   82 002a FFF7FEFF 		bl	HAL_CAN_Init
   83              	.LVL0:
-  84              		.loc 1 53 6 view .LVU27
+  84              		.loc 1 53 6 discriminator 1 view .LVU27
   85 002e 00B9     		cbnz	r0, .L4
   86              	.L1:
   54:./Core/Src/can.c ****   {
@@ -165,7 +165,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s 			page 1
   95              	.L6:
   96              		.align	2
   97              	.L5:
-  98 0038 00000000 		.word	.LANCHOR0
+  98 0038 00000000 		.word	hcan1
   99 003c 00640040 		.word	1073767424
  100              		.cfi_endproc
  101              	.LFE239:
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s 			page 1
  110              	MX_CAN2_Init:
  111              	.LFB240:
   62:./Core/Src/can.c **** /* CAN2 init function */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s 			page 4
+ARM GAS  /tmp/ccyGUgi7.s 			page 4
 
 
   63:./Core/Src/can.c **** void MX_CAN2_Init(void)
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s 			page 1
  148              		.loc 1 80 3 is_stmt 1 view .LVU46
  149              		.loc 1 80 25 is_stmt 0 view .LVU47
  150 0020 4376     		strb	r3, [r0, #25]
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s 			page 5
+ARM GAS  /tmp/ccyGUgi7.s 			page 5
 
 
   81:./Core/Src/can.c ****   hcan2.Init.AutoWakeUp = DISABLE;
@@ -262,7 +262,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s 			page 1
  164              		.loc 1 85 7 is_stmt 0 view .LVU57
  165 002a FFF7FEFF 		bl	HAL_CAN_Init
  166              	.LVL2:
- 167              		.loc 1 85 6 view .LVU58
+ 167              		.loc 1 85 6 discriminator 1 view .LVU58
  168 002e 00B9     		cbnz	r0, .L10
  169              	.L7:
   86:./Core/Src/can.c ****   {
@@ -285,7 +285,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s 			page 1
  178              	.L12:
  179              		.align	2
  180              	.L11:
- 181 0038 00000000 		.word	.LANCHOR1
+ 181 0038 00000000 		.word	hcan2
  182 003c 00680040 		.word	1073768448
  183              		.cfi_endproc
  184              	.LFE240:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s 			page 1
  193              	HAL_CAN_MspInit:
  194              	.LVL4:
  195              	.LFB241:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s 			page 6
+ARM GAS  /tmp/ccyGUgi7.s 			page 6
 
 
   94:./Core/Src/can.c **** 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s 			page 1
  120:./Core/Src/can.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
  121:./Core/Src/can.c ****     GPIO_InitStruct.Alternate = GPIO_AF9_CAN1;
  122:./Core/Src/can.c ****     HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s 			page 7
+ARM GAS  /tmp/ccyGUgi7.s 			page 7
 
 
  123:./Core/Src/can.c **** 
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s 			page 1
  170:./Core/Src/can.c ****   /* USER CODE BEGIN CAN2_MspInit 1 */
  171:./Core/Src/can.c **** 
  172:./Core/Src/can.c ****   /* USER CODE END CAN2_MspInit 1 */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s 			page 8
+ARM GAS  /tmp/ccyGUgi7.s 			page 8
 
 
  173:./Core/Src/can.c ****   }
@@ -452,93 +452,93 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s 			page 1
  109:./Core/Src/can.c ****     }
  253              		.loc 1 109 7 is_stmt 1 discriminator 1 view .LVU76
  112:./Core/Src/can.c ****     /**CAN1 GPIO Configuration
- 254              		.loc 1 112 5 discriminator 1 view .LVU77
+ 254              		.loc 1 112 5 view .LVU77
  255              	.LBB2:
  112:./Core/Src/can.c ****     /**CAN1 GPIO Configuration
- 256              		.loc 1 112 5 discriminator 1 view .LVU78
+ 256              		.loc 1 112 5 view .LVU78
  257 002e 0024     		movs	r4, #0
  258 0030 0194     		str	r4, [sp, #4]
  112:./Core/Src/can.c ****     /**CAN1 GPIO Configuration
- 259              		.loc 1 112 5 discriminator 1 view .LVU79
+ 259              		.loc 1 112 5 view .LVU79
  260 0032 504B     		ldr	r3, .L23+12
  261 0034 1A6B     		ldr	r2, [r3, #48]
  262 0036 42F00802 		orr	r2, r2, #8
  263 003a 1A63     		str	r2, [r3, #48]
  112:./Core/Src/can.c ****     /**CAN1 GPIO Configuration
- 264              		.loc 1 112 5 discriminator 1 view .LVU80
+ 264              		.loc 1 112 5 view .LVU80
  265 003c 1B6B     		ldr	r3, [r3, #48]
  266 003e 03F00803 		and	r3, r3, #8
  267 0042 0193     		str	r3, [sp, #4]
  112:./Core/Src/can.c ****     /**CAN1 GPIO Configuration
- 268              		.loc 1 112 5 discriminator 1 view .LVU81
+ 268              		.loc 1 112 5 view .LVU81
  269 0044 019B     		ldr	r3, [sp, #4]
  270              	.LBE2:
  112:./Core/Src/can.c ****     /**CAN1 GPIO Configuration
- 271              		.loc 1 112 5 discriminator 1 view .LVU82
+ 271              		.loc 1 112 5 view .LVU82
  117:./Core/Src/can.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
- 272              		.loc 1 117 5 discriminator 1 view .LVU83
+ 272              		.loc 1 117 5 view .LVU83
  117:./Core/Src/can.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s 			page 9
+ARM GAS  /tmp/ccyGUgi7.s 			page 9
 
 
- 273              		.loc 1 117 25 is_stmt 0 discriminator 1 view .LVU84
+ 273              		.loc 1 117 25 is_stmt 0 view .LVU84
  274 0046 0323     		movs	r3, #3
  275 0048 0593     		str	r3, [sp, #20]
  118:./Core/Src/can.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
- 276              		.loc 1 118 5 is_stmt 1 discriminator 1 view .LVU85
+ 276              		.loc 1 118 5 is_stmt 1 view .LVU85
  118:./Core/Src/can.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
- 277              		.loc 1 118 26 is_stmt 0 discriminator 1 view .LVU86
+ 277              		.loc 1 118 26 is_stmt 0 view .LVU86
  278 004a 0222     		movs	r2, #2
  279 004c 0692     		str	r2, [sp, #24]
  119:./Core/Src/can.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
- 280              		.loc 1 119 5 is_stmt 1 discriminator 1 view .LVU87
+ 280              		.loc 1 119 5 is_stmt 1 view .LVU87
  120:./Core/Src/can.c ****     GPIO_InitStruct.Alternate = GPIO_AF9_CAN1;
- 281              		.loc 1 120 5 discriminator 1 view .LVU88
+ 281              		.loc 1 120 5 view .LVU88
  120:./Core/Src/can.c ****     GPIO_InitStruct.Alternate = GPIO_AF9_CAN1;
- 282              		.loc 1 120 27 is_stmt 0 discriminator 1 view .LVU89
+ 282              		.loc 1 120 27 is_stmt 0 view .LVU89
  283 004e 0893     		str	r3, [sp, #32]
  121:./Core/Src/can.c ****     HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
- 284              		.loc 1 121 5 is_stmt 1 discriminator 1 view .LVU90
+ 284              		.loc 1 121 5 is_stmt 1 view .LVU90
  121:./Core/Src/can.c ****     HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
- 285              		.loc 1 121 31 is_stmt 0 discriminator 1 view .LVU91
+ 285              		.loc 1 121 31 is_stmt 0 view .LVU91
  286 0050 0923     		movs	r3, #9
  287 0052 0993     		str	r3, [sp, #36]
  122:./Core/Src/can.c **** 
- 288              		.loc 1 122 5 is_stmt 1 discriminator 1 view .LVU92
+ 288              		.loc 1 122 5 is_stmt 1 view .LVU92
  289 0054 05A9     		add	r1, sp, #20
  290 0056 4848     		ldr	r0, .L23+16
  291              	.LVL7:
  122:./Core/Src/can.c **** 
- 292              		.loc 1 122 5 is_stmt 0 discriminator 1 view .LVU93
+ 292              		.loc 1 122 5 is_stmt 0 view .LVU93
  293 0058 FFF7FEFF 		bl	HAL_GPIO_Init
  294              	.LVL8:
  125:./Core/Src/can.c ****     HAL_NVIC_EnableIRQ(CAN1_TX_IRQn);
- 295              		.loc 1 125 5 is_stmt 1 discriminator 1 view .LVU94
+ 295              		.loc 1 125 5 is_stmt 1 view .LVU94
  296 005c 2246     		mov	r2, r4
  297 005e 2146     		mov	r1, r4
  298 0060 1320     		movs	r0, #19
  299 0062 FFF7FEFF 		bl	HAL_NVIC_SetPriority
  300              	.LVL9:
  126:./Core/Src/can.c ****     HAL_NVIC_SetPriority(CAN1_RX0_IRQn, 0, 0);
- 301              		.loc 1 126 5 discriminator 1 view .LVU95
+ 301              		.loc 1 126 5 view .LVU95
  302 0066 1320     		movs	r0, #19
  303 0068 FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
  304              	.LVL10:
  127:./Core/Src/can.c ****     HAL_NVIC_EnableIRQ(CAN1_RX0_IRQn);
- 305              		.loc 1 127 5 discriminator 1 view .LVU96
+ 305              		.loc 1 127 5 view .LVU96
  306 006c 2246     		mov	r2, r4
  307 006e 2146     		mov	r1, r4
  308 0070 1420     		movs	r0, #20
  309 0072 FFF7FEFF 		bl	HAL_NVIC_SetPriority
  310              	.LVL11:
  128:./Core/Src/can.c ****     HAL_NVIC_SetPriority(CAN1_RX1_IRQn, 0, 0);
- 311              		.loc 1 128 5 discriminator 1 view .LVU97
+ 311              		.loc 1 128 5 view .LVU97
  312 0076 1420     		movs	r0, #20
  313 0078 FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
  314              	.LVL12:
  129:./Core/Src/can.c ****     HAL_NVIC_EnableIRQ(CAN1_RX1_IRQn);
- 315              		.loc 1 129 5 discriminator 1 view .LVU98
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s 			page 10
+ 315              		.loc 1 129 5 view .LVU98
+ARM GAS  /tmp/ccyGUgi7.s 			page 10
 
 
  316 007c 2246     		mov	r2, r4
@@ -547,19 +547,19 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s 			page 1
  319 0082 FFF7FEFF 		bl	HAL_NVIC_SetPriority
  320              	.LVL13:
  130:./Core/Src/can.c ****     HAL_NVIC_SetPriority(CAN1_SCE_IRQn, 0, 0);
- 321              		.loc 1 130 5 discriminator 1 view .LVU99
+ 321              		.loc 1 130 5 view .LVU99
  322 0086 1520     		movs	r0, #21
  323 0088 FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
  324              	.LVL14:
  131:./Core/Src/can.c ****     HAL_NVIC_EnableIRQ(CAN1_SCE_IRQn);
- 325              		.loc 1 131 5 discriminator 1 view .LVU100
+ 325              		.loc 1 131 5 view .LVU100
  326 008c 2246     		mov	r2, r4
  327 008e 2146     		mov	r1, r4
  328 0090 1620     		movs	r0, #22
  329 0092 FFF7FEFF 		bl	HAL_NVIC_SetPriority
  330              	.LVL15:
  132:./Core/Src/can.c ****   /* USER CODE BEGIN CAN1_MspInit 1 */
- 331              		.loc 1 132 5 discriminator 1 view .LVU101
+ 331              		.loc 1 132 5 view .LVU101
  332 0096 1620     		movs	r0, #22
  333 0098 FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
  334              	.LVL16:
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s 			page 1
  360 00b8 0023     		movs	r3, #0
  361 00ba 0293     		str	r3, [sp, #8]
  143:./Core/Src/can.c ****     HAL_RCC_CAN1_CLK_ENABLED++;
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s 			page 11
+ARM GAS  /tmp/ccyGUgi7.s 			page 11
 
 
  362              		.loc 1 143 5 view .LVU109
@@ -635,119 +635,119 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s 			page 1
  146:./Core/Src/can.c ****     }
  386              		.loc 1 146 7 is_stmt 1 discriminator 1 view .LVU117
  149:./Core/Src/can.c ****     /**CAN2 GPIO Configuration
- 387              		.loc 1 149 5 discriminator 1 view .LVU118
+ 387              		.loc 1 149 5 view .LVU118
  388              	.LBB5:
  149:./Core/Src/can.c ****     /**CAN2 GPIO Configuration
- 389              		.loc 1 149 5 discriminator 1 view .LVU119
+ 389              		.loc 1 149 5 view .LVU119
  390 00dc 0024     		movs	r4, #0
  391 00de 0494     		str	r4, [sp, #16]
  149:./Core/Src/can.c ****     /**CAN2 GPIO Configuration
- 392              		.loc 1 149 5 discriminator 1 view .LVU120
+ 392              		.loc 1 149 5 view .LVU120
  393 00e0 244B     		ldr	r3, .L23+12
  394 00e2 1A6B     		ldr	r2, [r3, #48]
  395 00e4 42F00202 		orr	r2, r2, #2
  396 00e8 1A63     		str	r2, [r3, #48]
  149:./Core/Src/can.c ****     /**CAN2 GPIO Configuration
- 397              		.loc 1 149 5 discriminator 1 view .LVU121
+ 397              		.loc 1 149 5 view .LVU121
  398 00ea 1B6B     		ldr	r3, [r3, #48]
  399 00ec 03F00203 		and	r3, r3, #2
  400 00f0 0493     		str	r3, [sp, #16]
  149:./Core/Src/can.c ****     /**CAN2 GPIO Configuration
- 401              		.loc 1 149 5 discriminator 1 view .LVU122
+ 401              		.loc 1 149 5 view .LVU122
  402 00f2 049B     		ldr	r3, [sp, #16]
  403              	.LBE5:
  149:./Core/Src/can.c ****     /**CAN2 GPIO Configuration
- 404              		.loc 1 149 5 discriminator 1 view .LVU123
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s 			page 12
+ 404              		.loc 1 149 5 view .LVU123
+ARM GAS  /tmp/ccyGUgi7.s 			page 12
 
 
  154:./Core/Src/can.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
- 405              		.loc 1 154 5 discriminator 1 view .LVU124
+ 405              		.loc 1 154 5 view .LVU124
  154:./Core/Src/can.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
- 406              		.loc 1 154 25 is_stmt 0 discriminator 1 view .LVU125
+ 406              		.loc 1 154 25 is_stmt 0 view .LVU125
  407 00f4 6023     		movs	r3, #96
  408 00f6 0593     		str	r3, [sp, #20]
  155:./Core/Src/can.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
- 409              		.loc 1 155 5 is_stmt 1 discriminator 1 view .LVU126
+ 409              		.loc 1 155 5 is_stmt 1 view .LVU126
  155:./Core/Src/can.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
- 410              		.loc 1 155 26 is_stmt 0 discriminator 1 view .LVU127
+ 410              		.loc 1 155 26 is_stmt 0 view .LVU127
  411 00f8 0223     		movs	r3, #2
  412 00fa 0693     		str	r3, [sp, #24]
  156:./Core/Src/can.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
- 413              		.loc 1 156 5 is_stmt 1 discriminator 1 view .LVU128
+ 413              		.loc 1 156 5 is_stmt 1 view .LVU128
  157:./Core/Src/can.c ****     GPIO_InitStruct.Alternate = GPIO_AF9_CAN2;
- 414              		.loc 1 157 5 discriminator 1 view .LVU129
+ 414              		.loc 1 157 5 view .LVU129
  157:./Core/Src/can.c ****     GPIO_InitStruct.Alternate = GPIO_AF9_CAN2;
- 415              		.loc 1 157 27 is_stmt 0 discriminator 1 view .LVU130
+ 415              		.loc 1 157 27 is_stmt 0 view .LVU130
  416 00fc 0323     		movs	r3, #3
  417 00fe 0893     		str	r3, [sp, #32]
  158:./Core/Src/can.c ****     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
- 418              		.loc 1 158 5 is_stmt 1 discriminator 1 view .LVU131
+ 418              		.loc 1 158 5 is_stmt 1 view .LVU131
  158:./Core/Src/can.c ****     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
- 419              		.loc 1 158 31 is_stmt 0 discriminator 1 view .LVU132
+ 419              		.loc 1 158 31 is_stmt 0 view .LVU132
  420 0100 0923     		movs	r3, #9
  421 0102 0993     		str	r3, [sp, #36]
  159:./Core/Src/can.c **** 
- 422              		.loc 1 159 5 is_stmt 1 discriminator 1 view .LVU133
+ 422              		.loc 1 159 5 is_stmt 1 view .LVU133
  423 0104 05A9     		add	r1, sp, #20
  424 0106 1D48     		ldr	r0, .L23+20
  425              	.LVL18:
  159:./Core/Src/can.c **** 
- 426              		.loc 1 159 5 is_stmt 0 discriminator 1 view .LVU134
+ 426              		.loc 1 159 5 is_stmt 0 view .LVU134
  427 0108 FFF7FEFF 		bl	HAL_GPIO_Init
  428              	.LVL19:
  162:./Core/Src/can.c ****     HAL_NVIC_EnableIRQ(CAN2_TX_IRQn);
- 429              		.loc 1 162 5 is_stmt 1 discriminator 1 view .LVU135
+ 429              		.loc 1 162 5 is_stmt 1 view .LVU135
  430 010c 2246     		mov	r2, r4
  431 010e 2146     		mov	r1, r4
  432 0110 3F20     		movs	r0, #63
  433 0112 FFF7FEFF 		bl	HAL_NVIC_SetPriority
  434              	.LVL20:
  163:./Core/Src/can.c ****     HAL_NVIC_SetPriority(CAN2_RX0_IRQn, 0, 0);
- 435              		.loc 1 163 5 discriminator 1 view .LVU136
+ 435              		.loc 1 163 5 view .LVU136
  436 0116 3F20     		movs	r0, #63
  437 0118 FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
  438              	.LVL21:
  164:./Core/Src/can.c ****     HAL_NVIC_EnableIRQ(CAN2_RX0_IRQn);
- 439              		.loc 1 164 5 discriminator 1 view .LVU137
+ 439              		.loc 1 164 5 view .LVU137
  440 011c 2246     		mov	r2, r4
  441 011e 2146     		mov	r1, r4
  442 0120 4020     		movs	r0, #64
  443 0122 FFF7FEFF 		bl	HAL_NVIC_SetPriority
  444              	.LVL22:
  165:./Core/Src/can.c ****     HAL_NVIC_SetPriority(CAN2_RX1_IRQn, 0, 0);
- 445              		.loc 1 165 5 discriminator 1 view .LVU138
+ 445              		.loc 1 165 5 view .LVU138
  446 0126 4020     		movs	r0, #64
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s 			page 13
+ARM GAS  /tmp/ccyGUgi7.s 			page 13
 
 
  447 0128 FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
  448              	.LVL23:
  166:./Core/Src/can.c ****     HAL_NVIC_EnableIRQ(CAN2_RX1_IRQn);
- 449              		.loc 1 166 5 discriminator 1 view .LVU139
+ 449              		.loc 1 166 5 view .LVU139
  450 012c 2246     		mov	r2, r4
  451 012e 2146     		mov	r1, r4
  452 0130 4120     		movs	r0, #65
  453 0132 FFF7FEFF 		bl	HAL_NVIC_SetPriority
  454              	.LVL24:
  167:./Core/Src/can.c ****     HAL_NVIC_SetPriority(CAN2_SCE_IRQn, 0, 0);
- 455              		.loc 1 167 5 discriminator 1 view .LVU140
+ 455              		.loc 1 167 5 view .LVU140
  456 0136 4120     		movs	r0, #65
  457 0138 FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
  458              	.LVL25:
  168:./Core/Src/can.c ****     HAL_NVIC_EnableIRQ(CAN2_SCE_IRQn);
- 459              		.loc 1 168 5 discriminator 1 view .LVU141
+ 459              		.loc 1 168 5 view .LVU141
  460 013c 2246     		mov	r2, r4
  461 013e 2146     		mov	r1, r4
  462 0140 4220     		movs	r0, #66
  463 0142 FFF7FEFF 		bl	HAL_NVIC_SetPriority
  464              	.LVL26:
  169:./Core/Src/can.c ****   /* USER CODE BEGIN CAN2_MspInit 1 */
- 465              		.loc 1 169 5 discriminator 1 view .LVU142
+ 465              		.loc 1 169 5 view .LVU142
  466 0146 4220     		movs	r0, #66
  467 0148 FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
  468              	.LVL27:
- 469              		.loc 1 174 1 is_stmt 0 discriminator 1 view .LVU143
+ 469              		.loc 1 174 1 is_stmt 0 view .LVU143
  470 014c 67E7     		b	.L13
  471              	.LVL28:
  472              	.L22:
@@ -778,10 +778,10 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s 			page 1
  492              	.L23:
  493 0168 00640040 		.word	1073767424
  494 016c 00680040 		.word	1073768448
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s 			page 14
+ARM GAS  /tmp/ccyGUgi7.s 			page 14
 
 
- 495 0170 00000000 		.word	.LANCHOR2
+ 495 0170 00000000 		.word	HAL_RCC_CAN1_CLK_ENABLED
  496 0174 00380240 		.word	1073887232
  497 0178 000C0240 		.word	1073875968
  498 017c 00040240 		.word	1073873920
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s 			page 1
  196:./Core/Src/can.c ****     /* CAN1 interrupt Deinit */
  197:./Core/Src/can.c ****     HAL_NVIC_DisableIRQ(CAN1_TX_IRQn);
  198:./Core/Src/can.c ****     HAL_NVIC_DisableIRQ(CAN1_RX0_IRQn);
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s 			page 15
+ARM GAS  /tmp/ccyGUgi7.s 			page 15
 
 
  199:./Core/Src/can.c ****     HAL_NVIC_DisableIRQ(CAN1_RX1_IRQn);
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s 			page 1
  547              		.loc 1 186 5 is_stmt 1 view .LVU159
  186:./Core/Src/can.c ****       __HAL_RCC_CAN1_CLK_DISABLE();
  548              		.loc 1 186 7 is_stmt 0 view .LVU160
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s 			page 16
+ARM GAS  /tmp/ccyGUgi7.s 			page 16
 
 
  549 001a 23B9     		cbnz	r3, .L27
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s 			page 1
  213:./Core/Src/can.c ****       __HAL_RCC_CAN1_CLK_DISABLE();
  593              		.loc 1 213 5 is_stmt 1 view .LVU171
  213:./Core/Src/can.c ****       __HAL_RCC_CAN1_CLK_DISABLE();
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s 			page 17
+ARM GAS  /tmp/ccyGUgi7.s 			page 17
 
 
  594              		.loc 1 213 7 is_stmt 0 view .LVU172
@@ -1006,75 +1006,71 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s 			page 1
  629              	.L33:
  630 008c 00640040 		.word	1073767424
  631 0090 00680040 		.word	1073768448
- 632 0094 00000000 		.word	.LANCHOR2
+ 632 0094 00000000 		.word	HAL_RCC_CAN1_CLK_ENABLED
  633 0098 00380240 		.word	1073887232
  634 009c 000C0240 		.word	1073875968
  635 00a0 00040240 		.word	1073873920
  636              		.cfi_endproc
  637              	.LFE242:
- 639              		.global	hcan2
- 640              		.global	hcan1
- 641              		.section	.bss.HAL_RCC_CAN1_CLK_ENABLED,"aw",%nobits
- 642              		.align	2
- 643              		.set	.LANCHOR2,. + 0
- 646              	HAL_RCC_CAN1_CLK_ENABLED:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s 			page 18
+ 639              		.section	.bss.HAL_RCC_CAN1_CLK_ENABLED,"aw",%nobits
+ 640              		.align	2
+ 643              	HAL_RCC_CAN1_CLK_ENABLED:
+ 644 0000 00000000 		.space	4
+ 645              		.global	hcan2
+ 646              		.section	.bss.hcan2,"aw",%nobits
+ARM GAS  /tmp/ccyGUgi7.s 			page 18
 
 
- 647 0000 00000000 		.space	4
- 648              		.section	.bss.hcan1,"aw",%nobits
- 649              		.align	2
- 650              		.set	.LANCHOR0,. + 0
- 653              	hcan1:
- 654 0000 00000000 		.space	40
- 654      00000000 
- 654      00000000 
- 654      00000000 
- 654      00000000 
- 655              		.section	.bss.hcan2,"aw",%nobits
- 656              		.align	2
- 657              		.set	.LANCHOR1,. + 0
- 660              	hcan2:
- 661 0000 00000000 		.space	40
- 661      00000000 
- 661      00000000 
- 661      00000000 
- 661      00000000 
- 662              		.text
- 663              	.Letext0:
- 664              		.file 2 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\machine\\_default_types.h"
- 665              		.file 3 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\sys\\_stdint.h"
- 666              		.file 4 "./Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h"
- 667              		.file 5 "./Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h"
- 668              		.file 6 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
- 669              		.file 7 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h"
- 670              		.file 8 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h"
- 671              		.file 9 "./Core/Inc/can.h"
- 672              		.file 10 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h"
- 673              		.file 11 "./Core/Inc/main.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s 			page 19
+ 647              		.align	2
+ 650              	hcan2:
+ 651 0000 00000000 		.space	40
+ 651      00000000 
+ 651      00000000 
+ 651      00000000 
+ 651      00000000 
+ 652              		.global	hcan1
+ 653              		.section	.bss.hcan1,"aw",%nobits
+ 654              		.align	2
+ 657              	hcan1:
+ 658 0000 00000000 		.space	40
+ 658      00000000 
+ 658      00000000 
+ 658      00000000 
+ 658      00000000 
+ 659              		.text
+ 660              	.Letext0:
+ 661              		.file 2 "./Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h"
+ 662              		.file 3 "/usr/lib/gcc/arm-none-eabi/13.2.1/include/stdint.h"
+ 663              		.file 4 "./Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h"
+ 664              		.file 5 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
+ 665              		.file 6 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h"
+ 666              		.file 7 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h"
+ 667              		.file 8 "./Core/Inc/can.h"
+ 668              		.file 9 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h"
+ 669              		.file 10 "./Core/Inc/main.h"
+ARM GAS  /tmp/ccyGUgi7.s 			page 19
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 can.c
-C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s:20     .text.MX_CAN1_Init:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s:26     .text.MX_CAN1_Init:00000000 MX_CAN1_Init
-C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s:98     .text.MX_CAN1_Init:00000038 $d
-C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s:104    .text.MX_CAN2_Init:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s:110    .text.MX_CAN2_Init:00000000 MX_CAN2_Init
-C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s:181    .text.MX_CAN2_Init:00000038 $d
-C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s:187    .text.HAL_CAN_MspInit:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s:193    .text.HAL_CAN_MspInit:00000000 HAL_CAN_MspInit
-C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s:493    .text.HAL_CAN_MspInit:00000168 $d
-C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s:504    .text.HAL_CAN_MspDeInit:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s:510    .text.HAL_CAN_MspDeInit:00000000 HAL_CAN_MspDeInit
-C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s:630    .text.HAL_CAN_MspDeInit:0000008c $d
-C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s:660    .bss.hcan2:00000000 hcan2
-C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s:653    .bss.hcan1:00000000 hcan1
-C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s:642    .bss.HAL_RCC_CAN1_CLK_ENABLED:00000000 $d
-C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s:646    .bss.HAL_RCC_CAN1_CLK_ENABLED:00000000 HAL_RCC_CAN1_CLK_ENABLED
-C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s:649    .bss.hcan1:00000000 $d
-C:\Users\Dennis\AppData\Local\Temp\ccJpIuvd.s:656    .bss.hcan2:00000000 $d
+     /tmp/ccyGUgi7.s:21     .text.MX_CAN1_Init:00000000 $t
+     /tmp/ccyGUgi7.s:27     .text.MX_CAN1_Init:00000000 MX_CAN1_Init
+     /tmp/ccyGUgi7.s:98     .text.MX_CAN1_Init:00000038 $d
+     /tmp/ccyGUgi7.s:657    .bss.hcan1:00000000 hcan1
+     /tmp/ccyGUgi7.s:104    .text.MX_CAN2_Init:00000000 $t
+     /tmp/ccyGUgi7.s:110    .text.MX_CAN2_Init:00000000 MX_CAN2_Init
+     /tmp/ccyGUgi7.s:181    .text.MX_CAN2_Init:00000038 $d
+     /tmp/ccyGUgi7.s:650    .bss.hcan2:00000000 hcan2
+     /tmp/ccyGUgi7.s:187    .text.HAL_CAN_MspInit:00000000 $t
+     /tmp/ccyGUgi7.s:193    .text.HAL_CAN_MspInit:00000000 HAL_CAN_MspInit
+     /tmp/ccyGUgi7.s:493    .text.HAL_CAN_MspInit:00000168 $d
+     /tmp/ccyGUgi7.s:643    .bss.HAL_RCC_CAN1_CLK_ENABLED:00000000 HAL_RCC_CAN1_CLK_ENABLED
+     /tmp/ccyGUgi7.s:504    .text.HAL_CAN_MspDeInit:00000000 $t
+     /tmp/ccyGUgi7.s:510    .text.HAL_CAN_MspDeInit:00000000 HAL_CAN_MspDeInit
+     /tmp/ccyGUgi7.s:630    .text.HAL_CAN_MspDeInit:0000008c $d
+     /tmp/ccyGUgi7.s:640    .bss.HAL_RCC_CAN1_CLK_ENABLED:00000000 $d
+     /tmp/ccyGUgi7.s:647    .bss.hcan2:00000000 $d
+     /tmp/ccyGUgi7.s:654    .bss.hcan1:00000000 $d
 
 UNDEFINED SYMBOLS
 HAL_CAN_Init

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccpK462p.s 			page 1
+ARM GAS  /tmp/ccyJ8D9q.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,16 +19,16 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccpK462p.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text._ux_host_stack_device_address_set,"ax",%progbits
-  20              		.align	1
-  21              		.global	_ux_host_stack_device_address_set
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
-  26              	_ux_host_stack_device_address_set:
-  27              	.LVL0:
-  28              	.LFB11:
-  29              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_address_set.c"
+  19              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_address_set.c"
+  20              		.section	.text._ux_host_stack_device_address_set,"ax",%progbits
+  21              		.align	1
+  22              		.global	_ux_host_stack_device_address_set
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	_ux_host_stack_device_address_set:
+  28              	.LVL0:
+  29              	.LFB11:
    1:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_address_set.c **** /**************************************************************************/
    2:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_address_set.c **** /*                                                                        */
    3:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_address_set.c **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccpK462p.s 			page 1
   27:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_address_set.c **** 
   28:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_address_set.c **** #include "ux_api.h"
   29:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_address_set.c **** #include "ux_host_stack.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccpK462p.s 			page 2
+ARM GAS  /tmp/ccyJ8D9q.s 			page 2
 
 
   30:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_address_set.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccpK462p.s 			page 1
   35 0000 70B5     		push	{r4, r5, r6, lr}
   36              	.LCFI0:
   37              		.cfi_def_cfa_offset 16
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccpK462p.s 			page 3
+ARM GAS  /tmp/ccyJ8D9q.s 			page 3
 
 
   38              		.cfi_offset 4, -16
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccpK462p.s 			page 1
   63              		.loc 1 107 29 is_stmt 0 view .LVU17
   64 000a 4FF0000C 		mov	ip, #0
   99:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_address_set.c **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccpK462p.s 			page 4
+ARM GAS  /tmp/ccyJ8D9q.s 			page 4
 
 
   65              		.loc 1 99 20 view .LVU18
@@ -209,7 +209,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccpK462p.s 			page 1
   76              		.loc 1 121 76 view .LVU22
   77 0018 DBB2     		uxtb	r3, r3
   78              		.loc 1 121 37 view .LVU23
-  79 001a 1943     		orrs	r1, r1, r3
+  79 001a 0B43     		orrs	r3, r3, r1
   80              	.LVL6:
  122:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_address_set.c **** 
  123:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_address_set.c ****                 /* Store the address mask byte.  */
@@ -219,7 +219,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccpK462p.s 			page 1
   83 001c 6644     		add	r6, r6, ip
   84              	.LVL7:
   85              		.loc 1 124 59 view .LVU26
-  86 001e 86F87810 		strb	r1, [r6, #120]
+  86 001e 86F87830 		strb	r3, [r6, #120]
   87              	.LVL8:
  125:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_address_set.c **** 
  126:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_address_set.c ****                 /* OK, apply address.  */
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccpK462p.s 			page 1
   90              		.loc 1 136 9 view .LVU29
  127:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_address_set.c ****                 break;
   91              		.loc 1 127 24 is_stmt 0 view .LVU30
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccpK462p.s 			page 5
+ARM GAS  /tmp/ccyJ8D9q.s 			page 5
 
 
   92 0022 0026     		movs	r6, #0
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccpK462p.s 			page 1
  164:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_address_set.c ****     /* Send request to HCD layer.  */
  165:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_address_set.c ****     status =  _ux_host_stack_transfer_request(transfer_request);
  119              		.loc 1 165 5 is_stmt 1 view .LVU45
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccpK462p.s 			page 6
+ARM GAS  /tmp/ccyJ8D9q.s 			page 6
 
 
  120              		.loc 1 165 15 is_stmt 0 view .LVU46
@@ -347,120 +347,112 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccpK462p.s 			page 1
  135              	.LVL12:
  136              	.L12:
  136:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_address_set.c ****         {
- 137              		.loc 1 136 9 is_stmt 1 discriminator 2 view .LVU52
+ 137              		.loc 1 136 9 is_stmt 1 view .LVU52
  107:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_address_set.c ****     {
- 138              		.loc 1 107 59 discriminator 2 view .LVU53
+ 138              		.loc 1 107 77 discriminator 2 view .LVU53
+ 139 0052 0CF1010C 		add	ip, ip, #1
+ 140              	.LVL13:
+ 141              	.L2:
  107:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_address_set.c ****     {
- 139              		.loc 1 107 77 is_stmt 0 discriminator 2 view .LVU54
- 140 0052 0CF1010C 		add	ip, ip, #1
- 141              	.LVL13:
- 142              	.L2:
- 107:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_address_set.c ****     {
- 143              		.loc 1 107 34 is_stmt 1 discriminator 1 view .LVU55
- 107:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_address_set.c ****     {
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccpK462p.s 			page 7
-
-
- 144              		.loc 1 107 5 is_stmt 0 discriminator 1 view .LVU56
- 145 0056 BCF10F0F 		cmp	ip, #15
- 146 005a 0FD8     		bhi	.L11
+ 142              		.loc 1 107 53 discriminator 1 view .LVU54
+ 143 0056 BCF10F0F 		cmp	ip, #15
+ 144 005a 0FD8     		bhi	.L11
  111:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_address_set.c **** 
- 147              		.loc 1 111 9 is_stmt 1 view .LVU57
+ARM GAS  /tmp/ccyJ8D9q.s 			page 7
+
+
+ 145              		.loc 1 111 9 view .LVU55
  111:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_address_set.c **** 
- 148              		.loc 1 111 29 is_stmt 0 view .LVU58
- 149 005c 06EB0C03 		add	r3, r6, ip
- 150 0060 93F87810 		ldrb	r1, [r3, #120]	@ zero_extendqisi2
- 151              	.LVL14:
+ 146              		.loc 1 111 29 is_stmt 0 view .LVU56
+ 147 005c 06EB0C03 		add	r3, r6, ip
+ 148 0060 93F87810 		ldrb	r1, [r3, #120]	@ zero_extendqisi2
+ 149              	.LVL14:
  114:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_address_set.c ****         {
- 152              		.loc 1 114 9 is_stmt 1 view .LVU59
+ 150              		.loc 1 114 9 is_stmt 1 view .LVU57
  114:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_address_set.c ****         {
- 153              		.loc 1 114 32 is_stmt 0 view .LVU60
- 154 0064 0023     		movs	r3, #0
- 155              	.LVL15:
- 156              	.L3:
+ 151              		.loc 1 114 32 is_stmt 0 view .LVU58
+ 152 0064 0023     		movs	r3, #0
+ 153              	.LVL15:
+ 154              	.L3:
  114:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_address_set.c ****         {
- 157              		.loc 1 114 37 is_stmt 1 discriminator 1 view .LVU61
- 114:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_address_set.c ****         {
- 158              		.loc 1 114 9 is_stmt 0 discriminator 1 view .LVU62
- 159 0066 072B     		cmp	r3, #7
- 160 0068 F3D8     		bhi	.L12
+ 155              		.loc 1 114 55 is_stmt 1 discriminator 1 view .LVU59
+ 156 0066 072B     		cmp	r3, #7
+ 157 0068 F3D8     		bhi	.L12
  117:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_address_set.c ****             {
- 161              		.loc 1 117 13 is_stmt 1 view .LVU63
+ 158              		.loc 1 117 13 view .LVU60
  117:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_address_set.c ****             {
- 162              		.loc 1 117 66 is_stmt 0 view .LVU64
- 163 006a 41FA03F2 		asr	r2, r1, r3
+ 159              		.loc 1 117 66 is_stmt 0 view .LVU61
+ 160 006a 41FA03F2 		asr	r2, r1, r3
  117:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_address_set.c ****             {
- 164              		.loc 1 117 16 view .LVU65
- 165 006e 12F0010F 		tst	r2, #1
- 166 0072 CED0     		beq	.L13
+ 161              		.loc 1 117 16 view .LVU62
+ 162 006e 12F0010F 		tst	r2, #1
+ 163 0072 CED0     		beq	.L13
  132:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_address_set.c ****         }
- 167              		.loc 1 132 13 is_stmt 1 discriminator 2 view .LVU66
+ 164              		.loc 1 132 13 is_stmt 1 view .LVU63
  132:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_address_set.c ****         }
- 168              		.loc 1 132 27 is_stmt 0 discriminator 2 view .LVU67
- 169 0074 0134     		adds	r4, r4, #1
- 170              	.LVL16:
+ 165              		.loc 1 132 27 is_stmt 0 view .LVU64
+ 166 0074 0134     		adds	r4, r4, #1
+ 167              	.LVL16:
  132:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_address_set.c ****         }
- 171              		.loc 1 132 27 discriminator 2 view .LVU68
- 172 0076 A4B2     		uxth	r4, r4
- 173              	.LVL17:
+ 168              		.loc 1 132 27 view .LVU65
+ 169 0076 A4B2     		uxth	r4, r4
+ 170              	.LVL17:
  114:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_address_set.c ****         {
- 174              		.loc 1 114 60 is_stmt 1 discriminator 2 view .LVU69
+ 171              		.loc 1 114 77 is_stmt 1 discriminator 2 view .LVU66
+ 172 0078 0133     		adds	r3, r3, #1
+ 173              	.LVL18:
  114:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_address_set.c ****         {
- 175              		.loc 1 114 77 is_stmt 0 discriminator 2 view .LVU70
- 176 0078 0133     		adds	r3, r3, #1
- 177              	.LVL18:
+ 174              		.loc 1 114 77 is_stmt 0 discriminator 2 view .LVU67
+ 175 007a F4E7     		b	.L3
+ 176              	.LVL19:
+ 177              	.L11:
  114:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_address_set.c ****         {
- 178              		.loc 1 114 77 discriminator 2 view .LVU71
- 179 007a F4E7     		b	.L3
- 180              	.LVL19:
- 181              	.L11:
+ 178              		.loc 1 114 77 discriminator 2 view .LVU68
+ 179 007c FF26     		movs	r6, #255
+ 180              	.LVL20:
  114:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_address_set.c ****         {
- 182              		.loc 1 114 77 discriminator 2 view .LVU72
- 183 007c FF26     		movs	r6, #255
- 184              	.LVL20:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccpK462p.s 			page 8
+ 181              		.loc 1 114 77 discriminator 2 view .LVU69
+ 182 007e D1E7     		b	.L5
+ 183              	.LVL21:
+ 184              	.L10:
+ 176:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_address_set.c **** 
+ 185              		.loc 1 176 9 is_stmt 1 view .LVU70
+ 176:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_address_set.c **** 
+ARM GAS  /tmp/ccyJ8D9q.s 			page 8
 
 
- 114:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_address_set.c ****         {
- 185              		.loc 1 114 77 discriminator 2 view .LVU73
- 186 007e D1E7     		b	.L5
- 187              	.LVL21:
- 188              	.L10:
- 176:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_address_set.c **** 
- 189              		.loc 1 176 9 is_stmt 1 view .LVU74
- 176:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_address_set.c **** 
- 190              		.loc 1 176 35 is_stmt 0 view .LVU75
- 191 0080 0223     		movs	r3, #2
- 192 0082 AB60     		str	r3, [r5, #8]
+ 186              		.loc 1 176 35 is_stmt 0 view .LVU71
+ 187 0080 0223     		movs	r3, #2
+ 188 0082 AB60     		str	r3, [r5, #8]
  179:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_address_set.c **** 
- 193              		.loc 1 179 9 is_stmt 1 view .LVU76
- 194 0084 3220     		movs	r0, #50
- 195              	.LVL22:
+ 189              		.loc 1 179 9 is_stmt 1 view .LVU72
+ 190 0084 3220     		movs	r0, #50
+ 191              	.LVL22:
  179:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_address_set.c **** 
- 196              		.loc 1 179 9 is_stmt 0 view .LVU77
- 197 0086 FFF7FEFF 		bl	_ux_utility_delay_ms
- 198              	.LVL23:
+ 192              		.loc 1 179 9 is_stmt 0 view .LVU73
+ 193 0086 FFF7FEFF 		bl	_ux_utility_delay_ms
+ 194              	.LVL23:
  182:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_address_set.c ****     }
- 199              		.loc 1 182 9 is_stmt 1 view .LVU78
+ 195              		.loc 1 182 9 is_stmt 1 view .LVU74
  182:./Middlewares/ST/usbx/common/core/src/ux_host_stack_device_address_set.c ****     }
- 200              		.loc 1 182 15 is_stmt 0 view .LVU79
- 201 008a E0E7     		b	.L1
- 202              		.cfi_endproc
- 203              	.LFE11:
- 205              		.text
- 206              	.Letext0:
- 207              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
- 208              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
- 209              		.file 4 "./Middlewares/ST/usbx/common/core/inc/ux_api.h"
- 210              		.file 5 "./Middlewares/ST/usbx/common/core/inc/ux_host_stack.h"
- 211              		.file 6 "./Middlewares/ST/usbx/common/core/inc/ux_utility.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccpK462p.s 			page 9
+ 196              		.loc 1 182 15 is_stmt 0 view .LVU75
+ 197 008a E0E7     		b	.L1
+ 198              		.cfi_endproc
+ 199              	.LFE11:
+ 201              		.text
+ 202              	.Letext0:
+ 203              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
+ 204              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
+ 205              		.file 4 "./Middlewares/ST/usbx/common/core/inc/ux_api.h"
+ 206              		.file 5 "./Middlewares/ST/usbx/common/core/inc/ux_utility.h"
+ 207              		.file 6 "./Middlewares/ST/usbx/common/core/inc/ux_host_stack.h"
+ARM GAS  /tmp/ccyJ8D9q.s 			page 9
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 ux_host_stack_device_address_set.c
-C:\Users\Dennis\AppData\Local\Temp\ccpK462p.s:20     .text._ux_host_stack_device_address_set:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccpK462p.s:26     .text._ux_host_stack_device_address_set:00000000 _ux_host_stack_device_address_set
+     /tmp/ccyJ8D9q.s:21     .text._ux_host_stack_device_address_set:00000000 $t
+     /tmp/ccyJ8D9q.s:27     .text._ux_host_stack_device_address_set:00000000 _ux_host_stack_device_address_set
 
 UNDEFINED SYMBOLS
 _ux_host_stack_transfer_request

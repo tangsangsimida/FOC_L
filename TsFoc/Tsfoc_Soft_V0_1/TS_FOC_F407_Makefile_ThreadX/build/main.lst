@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 1
+ARM GAS  /tmp/cczH88In.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,16 +19,16 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text.__io_putchar,"ax",%progbits
-  20              		.align	1
-  21              		.global	__io_putchar
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
-  26              	__io_putchar:
-  27              	.LVL0:
-  28              	.LFB250:
-  29              		.file 1 "./Core/Src/main.c"
+  19              		.file 1 "./Core/Src/main.c"
+  20              		.section	.text.__io_putchar,"ax",%progbits
+  21              		.align	1
+  22              		.global	__io_putchar
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	__io_putchar:
+  28              	.LVL0:
+  29              	.LFB250:
    1:./Core/Src/main.c **** /* USER CODE BEGIN Header */
    2:./Core/Src/main.c **** /**
    3:./Core/Src/main.c ****   ******************************************************************************
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 1
   27:./Core/Src/main.c **** #include "rng.h"
   28:./Core/Src/main.c **** #include "spi.h"
   29:./Core/Src/main.c **** #include "tim.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 2
+ARM GAS  /tmp/cczH88In.s 			page 2
 
 
   30:./Core/Src/main.c **** #include "usart.h"
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 1
   55 0016 03B0     		add	sp, sp, #12
   56              	.LCFI2:
   57              		.cfi_def_cfa_offset 4
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 3
+ARM GAS  /tmp/cczH88In.s 			page 3
 
 
   58              		@ sp needed
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 1
  106              	.L7:
  107 0014 00000000 		.word	huart1
  108              		.cfi_endproc
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 4
+ARM GAS  /tmp/cczH88In.s 			page 4
 
 
  109              	.LFE251:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 1
  111:./Core/Src/main.c **** 
  112:./Core/Src/main.c ****   /* USER CODE END Init */
  113:./Core/Src/main.c **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 5
+ARM GAS  /tmp/cczH88In.s 			page 5
 
 
  114:./Core/Src/main.c ****   /* Configure the system clock */
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 1
  168:./Core/Src/main.c ****   motor1->Inlinecurrent->B = 3;
  169:./Core/Src/main.c ****   motor1->Inlinecurrent->I_a = 0;
  170:./Core/Src/main.c ****   motor1->Inlinecurrent->I_b = 0;
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 6
+ARM GAS  /tmp/cczH88In.s 			page 6
 
 
  171:./Core/Src/main.c ****   CurrSense_Init(motor1->Inlinecurrent);
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 1
  225:./Core/Src/main.c ****   __HAL_RCC_PWR_CLK_ENABLE();
  226:./Core/Src/main.c ****   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
  227:./Core/Src/main.c **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 7
+ARM GAS  /tmp/cczH88In.s 			page 7
 
 
  228:./Core/Src/main.c ****   /** Initializes the RCC Oscillators according to the specified parameters
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 1
  130              		.cfi_offset 14, -4
  273:./Core/Src/main.c ****   /* USER CODE BEGIN Callback 0 */
  274:./Core/Src/main.c **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 8
+ARM GAS  /tmp/cczH88In.s 			page 8
 
 
  275:./Core/Src/main.c ****   /* USER CODE END Callback 0 */
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 1
  170              		@ link register save eliminated.
  291:./Core/Src/main.c ****   /* USER CODE BEGIN Error_Handler_Debug */
  292:./Core/Src/main.c ****   /* User can add his own implementation to report the HAL error return state */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 9
+ARM GAS  /tmp/cczH88In.s 			page 9
 
 
  293:./Core/Src/main.c ****   __disable_irq();
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 1
   50:./Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __STATIC_FORCEINLINE                   __attribute__((always_inline)) static inline
   51:./Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
   52:./Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __NO_RETURN
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 10
+ARM GAS  /tmp/cczH88In.s 			page 10
 
 
   53:./Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __NO_RETURN                            __attribute__((__noreturn__))
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 1
  107:./Drivers/CMSIS/Include/cmsis_gcc.h ****   #pragma GCC diagnostic pop
  108:./Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __UNALIGNED_UINT32_READ(addr)          (((const struct T_UINT32_READ *)(const void *)(add
  109:./Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 11
+ARM GAS  /tmp/cczH88In.s 			page 11
 
 
  110:./Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __ALIGNED
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 1
  164:./Drivers/CMSIS/Include/cmsis_gcc.h **** }
  165:./Drivers/CMSIS/Include/cmsis_gcc.h **** 
  166:./Drivers/CMSIS/Include/cmsis_gcc.h **** #define __PROGRAM_START           __cmsis_start
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 12
+ARM GAS  /tmp/cczH88In.s 			page 12
 
 
  167:./Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 1
  221:./Drivers/CMSIS/Include/cmsis_gcc.h **** #define __CMSIS_GCC_USE_REG(r) "r" (r)
  222:./Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
  223:./Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 13
+ARM GAS  /tmp/cczH88In.s 			page 13
 
 
  224:./Drivers/CMSIS/Include/cmsis_gcc.h **** /**
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 1
  278:./Drivers/CMSIS/Include/cmsis_gcc.h ****            and after the instruction, without ensuring their completion.
  279:./Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  280:./Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __DMB(void)
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 14
+ARM GAS  /tmp/cczH88In.s 			page 14
 
 
  281:./Drivers/CMSIS/Include/cmsis_gcc.h **** {
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 1
  335:./Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
  336:./Drivers/CMSIS/Include/cmsis_gcc.h **** }
  337:./Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 15
+ARM GAS  /tmp/cczH88In.s 			page 15
 
 
  338:./Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 1
  392:./Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
  393:./Drivers/CMSIS/Include/cmsis_gcc.h ****   return result;
  394:./Drivers/CMSIS/Include/cmsis_gcc.h **** }
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 16
+ARM GAS  /tmp/cczH88In.s 			page 16
 
 
  395:./Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 1
  449:./Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   LDR Exclusive (16 bit)
  450:./Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Executes a exclusive LDR instruction for 16 bit values.
  451:./Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    ptr  Pointer to data
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 17
+ARM GAS  /tmp/cczH88In.s 			page 17
 
 
  452:./Drivers/CMSIS/Include/cmsis_gcc.h ****   \return        value of type uint16_t at (*ptr)
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 1
  506:./Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    ptr  Pointer to location
  507:./Drivers/CMSIS/Include/cmsis_gcc.h ****   \return          0  Function succeeded
  508:./Drivers/CMSIS/Include/cmsis_gcc.h ****   \return          1  Function failed
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 18
+ARM GAS  /tmp/cczH88In.s 			page 18
 
 
  509:./Drivers/CMSIS/Include/cmsis_gcc.h ****  */
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 1
  563:./Drivers/CMSIS/Include/cmsis_gcc.h **** ({                          \
  564:./Drivers/CMSIS/Include/cmsis_gcc.h ****   int32_t __RES, __ARG1 = (ARG1); \
  565:./Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("ssat %0, %1, %2" : "=r" (__RES) :  "I" (ARG2), "r" (__ARG1) : "cc" ); \
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 19
+ARM GAS  /tmp/cczH88In.s 			page 19
 
 
  566:./Drivers/CMSIS/Include/cmsis_gcc.h ****   __RES; \
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 1
  620:./Drivers/CMSIS/Include/cmsis_gcc.h ****    return ((uint8_t) result);    /* Add explicit type cast here */
  621:./Drivers/CMSIS/Include/cmsis_gcc.h **** }
  622:./Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 20
+ARM GAS  /tmp/cczH88In.s 			page 20
 
 
  623:./Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 1
  677:./Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    ptr  Pointer to location
  678:./Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  679:./Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __STRHT(uint16_t value, volatile uint16_t *ptr)
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 21
+ARM GAS  /tmp/cczH88In.s 			page 21
 
 
  680:./Drivers/CMSIS/Include/cmsis_gcc.h **** {
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 1
  734:./Drivers/CMSIS/Include/cmsis_gcc.h ****   if (sat <= 31U)
  735:./Drivers/CMSIS/Include/cmsis_gcc.h ****   {
  736:./Drivers/CMSIS/Include/cmsis_gcc.h ****     const uint32_t max = ((1U << sat) - 1U);
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 22
+ARM GAS  /tmp/cczH88In.s 			page 22
 
 
  737:./Drivers/CMSIS/Include/cmsis_gcc.h ****     if (val > (int32_t)max)
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 1
  791:./Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  792:./Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __LDA(volatile uint32_t *ptr)
  793:./Drivers/CMSIS/Include/cmsis_gcc.h **** {
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 23
+ARM GAS  /tmp/cczH88In.s 			page 23
 
 
  794:./Drivers/CMSIS/Include/cmsis_gcc.h ****     uint32_t result;
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 1
  848:./Drivers/CMSIS/Include/cmsis_gcc.h ****    return ((uint8_t) result);
  849:./Drivers/CMSIS/Include/cmsis_gcc.h **** }
  850:./Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 24
+ARM GAS  /tmp/cczH88In.s 			page 24
 
 
  851:./Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 1
  905:./Drivers/CMSIS/Include/cmsis_gcc.h ****   \return          1  Function failed
  906:./Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  907:./Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE uint32_t __STLEXH(uint16_t value, volatile uint16_t *ptr)
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 25
+ARM GAS  /tmp/cczH88In.s 			page 25
 
 
  908:./Drivers/CMSIS/Include/cmsis_gcc.h **** {
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 1
  176              	.LBB5:
  961:./Drivers/CMSIS/Include/cmsis_gcc.h **** {
  962:./Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("cpsid i" : : : "memory");
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 26
+ARM GAS  /tmp/cczH88In.s 			page 26
 
 
  177              		.loc 2 962 3 view .LVU25
@@ -1512,12 +1512,12 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 1
  185              	.LBE5:
  186              	.LBE4:
  294:./Core/Src/main.c ****   while (1)
- 187              		.loc 1 294 3 discriminator 1 view .LVU26
+ 187              		.loc 1 294 3 view .LVU26
  295:./Core/Src/main.c ****   {
  296:./Core/Src/main.c ****   }
- 188              		.loc 1 296 3 discriminator 1 view .LVU27
+ 188              		.loc 1 296 3 view .LVU27
  294:./Core/Src/main.c ****   while (1)
- 189              		.loc 1 294 9 discriminator 1 view .LVU28
+ 189              		.loc 1 294 9 view .LVU28
  190 0002 FEE7     		b	.L16
  191              		.cfi_endproc
  192              	.LFE255:
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 1
  224 0010 0393     		str	r3, [sp, #12]
  225 0012 0493     		str	r3, [sp, #16]
  226 0014 0593     		str	r3, [sp, #20]
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 27
+ARM GAS  /tmp/cczH88In.s 			page 27
 
 
  227 0016 0693     		str	r3, [sp, #24]
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 1
  232:./Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
  267              		.loc 1 232 3 is_stmt 1 view .LVU48
  232:./Core/Src/main.c ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 28
+ARM GAS  /tmp/cczH88In.s 			page 28
 
 
  268              		.loc 1 232 30 is_stmt 0 view .LVU49
@@ -1667,7 +1667,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 1
  297 006a FFF7FEFF 		bl	HAL_RCC_OscConfig
  298              	.LVL13:
  239:./Core/Src/main.c ****   {
- 299              		.loc 1 239 6 view .LVU64
+ 299              		.loc 1 239 6 discriminator 1 view .LVU64
  300 006e 98B9     		cbnz	r0, .L21
  246:./Core/Src/main.c ****                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
  301              		.loc 1 246 3 is_stmt 1 view .LVU65
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 1
  248:./Core/Src/main.c ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
  305              		.loc 1 248 3 is_stmt 1 view .LVU67
  248:./Core/Src/main.c ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 29
+ARM GAS  /tmp/cczH88In.s 			page 29
 
 
  306              		.loc 1 248 34 is_stmt 0 view .LVU68
@@ -1711,7 +1711,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 1
  325 008c FFF7FEFF 		bl	HAL_RCC_ClockConfig
  326              	.LVL14:
  253:./Core/Src/main.c ****   {
- 327              		.loc 1 253 6 view .LVU77
+ 327              		.loc 1 253 6 discriminator 1 view .LVU77
  328 0090 20B9     		cbnz	r0, .L22
  257:./Core/Src/main.c **** 
  329              		.loc 1 257 1 view .LVU78
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 1
  348              	.L23:
  349 00a0 00380240 		.word	1073887232
  350 00a4 00700040 		.word	1073770496
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 30
+ARM GAS  /tmp/cczH88In.s 			page 30
 
 
  351              		.cfi_endproc
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 1
  397              		.loc 1 128 3 view .LVU90
  398 0022 FFF7FEFF 		bl	MX_I2C2_Init
  399              	.LVL25:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 31
+ARM GAS  /tmp/cczH88In.s 			page 31
 
 
  129:./Core/Src/main.c ****   MX_SPI2_Init();
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 1
  440 005a 0422     		movs	r2, #4
  441 005c 5649     		ldr	r1, .L28
  442 005e 5748     		ldr	r0, .L28+4
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 32
+ARM GAS  /tmp/cczH88In.s 			page 32
 
 
  443 0060 FFF7FEFF 		bl	HAL_ADC_Start_DMA
@@ -1891,12 +1891,12 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 1
  465              		.loc 1 152 3 view .LVU109
  152:./Core/Src/main.c ****   // 电机参数配置
  466              		.loc 1 152 21 is_stmt 0 view .LVU110
- 467 0086 5020     		movs	r0, #80
+ 467 0086 5420     		movs	r0, #84
  468 0088 FFF7FEFF 		bl	malloc
  469              	.LVL44:
  470 008c 0446     		mov	r4, r0
  152:./Core/Src/main.c ****   // 电机参数配置
- 471              		.loc 1 152 10 view .LVU111
+ 471              		.loc 1 152 10 discriminator 1 view .LVU111
  472 008e 4E4D     		ldr	r5, .L28+16
  473 0090 2860     		str	r0, [r5]
  154:./Core/Src/main.c ****   motor1->Motor_ID = 0;
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 1
  484 009a 0723     		movs	r3, #7
  485 009c 4360     		str	r3, [r0, #4]
  157:./Core/Src/main.c ****   motor1->voltage_power_supply = 12.0;
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 33
+ARM GAS  /tmp/cczH88In.s 			page 33
 
 
  486              		.loc 1 157 3 is_stmt 1 view .LVU118
@@ -1946,7 +1946,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 1
  501 00b0 FFF7FEFF 		bl	malloc
  502              	.LVL45:
  161:./Core/Src/main.c ****   motor1->As5600_Sensor->Rotations = 0;
- 503              		.loc 1 161 25 view .LVU126
+ 503              		.loc 1 161 25 discriminator 1 view .LVU126
  504 00b4 A062     		str	r0, [r4, #40]
  162:./Core/Src/main.c ****   motor1->As5600_Sensor->i2c_handle = &hi2c1;
  505              		.loc 1 162 3 is_stmt 1 view .LVU127
@@ -1974,11 +1974,11 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 1
  520 00c4 FFF7FEFF 		bl	malloc
  521              	.LVL47:
  166:./Core/Src/main.c ****   motor1->Inlinecurrent->A = 2;
- 522              		.loc 1 166 25 view .LVU135
+ 522              		.loc 1 166 25 discriminator 1 view .LVU135
  523 00c8 2064     		str	r0, [r4, #64]
  167:./Core/Src/main.c ****   motor1->Inlinecurrent->B = 3;
  524              		.loc 1 167 3 is_stmt 1 view .LVU136
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 34
+ARM GAS  /tmp/cczH88In.s 			page 34
 
 
  167:./Core/Src/main.c ****   motor1->Inlinecurrent->B = 3;
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 1
  561 00fa 84ED058A 		vstr.32	s16, [r4, #20]
  174:./Core/Src/main.c ****   Pid_Ang_Init(motor1->Pid_Ang, 0.5, 0, 0, 100000, 32);
  562              		.loc 1 174 3 is_stmt 1 view .LVU155
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 35
+ARM GAS  /tmp/cczH88In.s 			page 35
 
 
  174:./Core/Src/main.c ****   Pid_Ang_Init(motor1->Pid_Ang, 0.5, 0, 0, 100000, 32);
@@ -2047,7 +2047,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 1
  565 0100 FFF7FEFF 		bl	malloc
  566              	.LVL49:
  174:./Core/Src/main.c ****   Pid_Ang_Init(motor1->Pid_Ang, 0.5, 0, 0, 100000, 32);
- 567              		.loc 1 174 19 view .LVU157
+ 567              		.loc 1 174 19 discriminator 1 view .LVU157
  568 0104 2063     		str	r0, [r4, #48]
  175:./Core/Src/main.c ****   motor1->Pid_Vel = (Pid_Typedef *)malloc(sizeof(Pid_Typedef) * 1);
  569              		.loc 1 175 3 is_stmt 1 view .LVU158
@@ -2070,7 +2070,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 1
  583 0126 FFF7FEFF 		bl	malloc
  584              	.LVL51:
  176:./Core/Src/main.c ****   Pid_Vel_Init(motor1->Pid_Vel,0.001,0.01,0,10000,motor1->voltage_power_supply/2);
- 585              		.loc 1 176 19 view .LVU162
+ 585              		.loc 1 176 19 discriminator 1 view .LVU162
  586 012a E062     		str	r0, [r4, #44]
  177:./Core/Src/main.c ****   motor1->Pid_Curr = (Pid_Typedef *)malloc(sizeof(Pid_Typedef) * 1);
  587              		.loc 1 177 3 is_stmt 1 view .LVU163
@@ -2098,11 +2098,11 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 1
  604 0152 2420     		movs	r0, #36
  605 0154 FFF7FEFF 		bl	malloc
  606              	.LVL53:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 36
+ARM GAS  /tmp/cczH88In.s 			page 36
 
 
  178:./Core/Src/main.c ****   Pid_Curr_Init(motor1->Pid_Curr, 2, 200, 0, 100000, 100000);
- 607              		.loc 1 178 20 view .LVU169
+ 607              		.loc 1 178 20 discriminator 1 view .LVU169
  608 0158 6063     		str	r0, [r4, #52]
  179:./Core/Src/main.c ****   // lowpass滤波器配置
  609              		.loc 1 179 3 is_stmt 1 view .LVU170
@@ -2125,7 +2125,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 1
  623              	.LVL55:
  624 017a 0446     		mov	r4, r0
  181:./Core/Src/main.c ****   motor1->Lowpass_Filter_Curr = (Lowpass_Filter_Typedef *)malloc(sizeof(Lowpass_Filter_Typedef) * 1
- 625              		.loc 1 181 30 view .LVU174
+ 625              		.loc 1 181 30 discriminator 1 view .LVU174
  626 017c B063     		str	r0, [r6, #56]
  182:./Core/Src/main.c ****   Lowpass_Filter_Init(motor1->Lowpass_Filter_Vel, 0.01);
  627              		.loc 1 182 3 is_stmt 1 view .LVU175
@@ -2135,7 +2135,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 1
  630 0180 FFF7FEFF 		bl	malloc
  631              	.LVL56:
  182:./Core/Src/main.c ****   Lowpass_Filter_Init(motor1->Lowpass_Filter_Vel, 0.01);
- 632              		.loc 1 182 31 view .LVU177
+ 632              		.loc 1 182 31 discriminator 1 view .LVU177
  633 0184 F063     		str	r0, [r6, #60]
  183:./Core/Src/main.c ****   Lowpass_Filter_Init(motor1->Lowpass_Filter_Curr, 0.01);
  634              		.loc 1 183 3 is_stmt 1 view .LVU178
@@ -2158,26 +2158,26 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 1
  647              		.loc 1 186 3 is_stmt 1 view .LVU182
  186:./Core/Src/main.c ****   motor1->Motor_Set_Compare2 = Motor1_Set_Compare2;
  648              		.loc 1 186 9 is_stmt 0 view .LVU183
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 37
+ARM GAS  /tmp/cczH88In.s 			page 37
 
 
  649 019c 2B68     		ldr	r3, [r5]
  186:./Core/Src/main.c ****   motor1->Motor_Set_Compare2 = Motor1_Set_Compare2;
  650              		.loc 1 186 30 view .LVU184
  651 019e 154A     		ldr	r2, .L28+60
- 652 01a0 5A64     		str	r2, [r3, #68]
+ 652 01a0 9A64     		str	r2, [r3, #72]
  187:./Core/Src/main.c ****   motor1->Motor_Set_Compare3 = Motor1_Set_Compare3;
  653              		.loc 1 187 3 is_stmt 1 view .LVU185
  187:./Core/Src/main.c ****   motor1->Motor_Set_Compare3 = Motor1_Set_Compare3;
  654              		.loc 1 187 30 is_stmt 0 view .LVU186
  655 01a2 154A     		ldr	r2, .L28+64
- 656 01a4 9A64     		str	r2, [r3, #72]
+ 656 01a4 DA64     		str	r2, [r3, #76]
  188:./Core/Src/main.c ****   // 更新一次电机角度
  657              		.loc 1 188 3 is_stmt 1 view .LVU187
  188:./Core/Src/main.c ****   // 更新一次电机角度
  658              		.loc 1 188 30 is_stmt 0 view .LVU188
  659 01a6 154A     		ldr	r2, .L28+68
- 660 01a8 DA64     		str	r2, [r3, #76]
+ 660 01a8 1A65     		str	r2, [r3, #80]
  190:./Core/Src/main.c **** 
  661              		.loc 1 190 3 is_stmt 1 view .LVU189
  662 01aa 986A     		ldr	r0, [r3, #40]
@@ -2189,11 +2189,11 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 1
  667              	.LVL60:
  668              	.L26:
  205:./Core/Src/main.c ****   {
- 669              		.loc 1 205 3 discriminator 1 view .LVU191
+ 669              		.loc 1 205 3 view .LVU191
  210:./Core/Src/main.c ****   /* USER CODE END 3 */
- 670              		.loc 1 210 3 discriminator 1 view .LVU192
+ 670              		.loc 1 210 3 view .LVU192
  205:./Core/Src/main.c ****   {
- 671              		.loc 1 205 9 discriminator 1 view .LVU193
+ 671              		.loc 1 205 9 view .LVU193
  672 01b4 FEE7     		b	.L26
  673              	.L29:
  674 01b6 00BF     		.align	2
@@ -2202,7 +2202,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 1
  677 01bc 00000000 		.word	hadc1
  678 01c0 00000000 		.word	htim4
  679 01c4 00000000 		.word	htim8
- 680 01c8 00000000 		.word	.LANCHOR0
+ 680 01c8 00000000 		.word	motor1
  681 01cc 00000000 		.word	Thread_Motor_Control_parama1
  682 01d0 00004041 		.word	1094713344
  683 01d4 00000000 		.word	0
@@ -2218,76 +2218,75 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 1
  693 01fc 00000000 		.word	Motor1_Set_Compare3
  694              		.cfi_endproc
  695              	.LFE252:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 38
+ARM GAS  /tmp/cczH88In.s 			page 38
 
 
  697              		.global	motor1
  698              		.section	.bss.motor1,"aw",%nobits
  699              		.align	2
- 700              		.set	.LANCHOR0,. + 0
- 703              	motor1:
- 704 0000 00000000 		.space	4
- 705              		.text
- 706              	.Letext0:
- 707              		.file 3 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\machine\\_default_types.h"
- 708              		.file 4 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
- 709              		.file 5 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\sys\\_stdint.h"
- 710              		.file 6 "./Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h"
- 711              		.file 7 "./Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h"
- 712              		.file 8 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
- 713              		.file 9 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h"
- 714              		.file 10 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h"
- 715              		.file 11 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
- 716              		.file 12 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h"
- 717              		.file 13 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h"
- 718              		.file 14 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h"
- 719              		.file 15 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h"
- 720              		.file 16 "./Core/Inc/usart.h"
- 721              		.file 17 "./Core/Inc/i2c.h"
- 722              		.file 18 "./app/peripheral/inc/as5600.h"
- 723              		.file 19 "./app/algorithm/inc/pid.h"
- 724              		.file 20 "./app/algorithm/inc/lowpass_filter.h"
- 725              		.file 21 "./app/peripheral/inc/inlinecurrent.h"
- 726              		.file 22 "./Core/Inc/tim.h"
- 727              		.file 23 "./app/algorithm/inc/ts_foc.h"
- 728              		.file 24 "./app/Threads/Thread_Motor_Control/Thread_Motor_Control.h"
- 729              		.file 25 "./app/peripheral/inc/OLED_Front.h"
- 730              		.file 26 "./Core/Inc/adc.h"
- 731              		.file 27 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
- 732              		.file 28 "./Core/Inc/gpio.h"
- 733              		.file 29 "./Core/Inc/dma.h"
- 734              		.file 30 "./Core/Inc/can.h"
- 735              		.file 31 "./Core/Inc/spi.h"
- 736              		.file 32 "./Core/Inc/usb_otg.h"
- 737              		.file 33 "./Core/Inc/crc.h"
- 738              		.file 34 "./Core/Inc/rng.h"
- 739              		.file 35 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\stdlib.h"
- 740              		.file 36 "./Core/Inc/app_threadx.h"
- 741              		.file 37 "<built-in>"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 39
+ 702              	motor1:
+ 703 0000 00000000 		.space	4
+ 704              		.text
+ 705              	.Letext0:
+ 706              		.file 3 "/usr/lib/gcc/arm-none-eabi/13.2.1/include/stddef.h"
+ 707              		.file 4 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
+ 708              		.file 5 "/usr/lib/gcc/arm-none-eabi/13.2.1/include/stdint.h"
+ 709              		.file 6 "./Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h"
+ 710              		.file 7 "./Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h"
+ 711              		.file 8 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
+ 712              		.file 9 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h"
+ 713              		.file 10 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h"
+ 714              		.file 11 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
+ 715              		.file 12 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h"
+ 716              		.file 13 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h"
+ 717              		.file 14 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h"
+ 718              		.file 15 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h"
+ 719              		.file 16 "./Core/Inc/usart.h"
+ 720              		.file 17 "./Core/Inc/i2c.h"
+ 721              		.file 18 "./app/peripheral/inc/as5600.h"
+ 722              		.file 19 "./app/algorithm/inc/pid.h"
+ 723              		.file 20 "./app/algorithm/inc/lowpass_filter.h"
+ 724              		.file 21 "./app/peripheral/inc/inlinecurrent.h"
+ 725              		.file 22 "./Core/Inc/tim.h"
+ 726              		.file 23 "./app/algorithm/inc/ts_foc.h"
+ 727              		.file 24 "./app/Threads/Thread_Motor_Control/Thread_Motor_Control.h"
+ 728              		.file 25 "./app/peripheral/inc/OLED_Front.h"
+ 729              		.file 26 "./Core/Inc/adc.h"
+ 730              		.file 27 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
+ 731              		.file 28 "./Core/Inc/app_threadx.h"
+ 732              		.file 29 "/usr/include/newlib/stdlib.h"
+ 733              		.file 30 "./Core/Inc/spi.h"
+ 734              		.file 31 "./Core/Inc/rng.h"
+ 735              		.file 32 "./Core/Inc/crc.h"
+ 736              		.file 33 "./Core/Inc/usb_otg.h"
+ 737              		.file 34 "./Core/Inc/can.h"
+ 738              		.file 35 "./Core/Inc/dma.h"
+ 739              		.file 36 "./Core/Inc/gpio.h"
+ 740              		.file 37 "<built-in>"
+ARM GAS  /tmp/cczH88In.s 			page 39
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 main.c
-C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s:20     .text.__io_putchar:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s:26     .text.__io_putchar:00000000 __io_putchar
-C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s:63     .text.__io_putchar:0000001c $d
-C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s:68     .text._write:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s:74     .text._write:00000000 _write
-C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s:107    .text._write:00000014 $d
-C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s:112    .text.HAL_TIM_PeriodElapsedCallback:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s:118    .text.HAL_TIM_PeriodElapsedCallback:00000000 HAL_TIM_PeriodElapsedCallback
-C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s:152    .text.HAL_TIM_PeriodElapsedCallback:00000014 $d
-C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s:157    .text.Error_Handler:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s:163    .text.Error_Handler:00000000 Error_Handler
-C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s:195    .text.SystemClock_Config:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s:201    .text.SystemClock_Config:00000000 SystemClock_Config
-C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s:349    .text.SystemClock_Config:000000a0 $d
-C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s:355    .text.main:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s:361    .text.main:00000000 main
-C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s:676    .text.main:000001b8 $d
-C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s:703    .bss.motor1:00000000 motor1
-C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s:699    .bss.motor1:00000000 $d
+     /tmp/cczH88In.s:21     .text.__io_putchar:00000000 $t
+     /tmp/cczH88In.s:27     .text.__io_putchar:00000000 __io_putchar
+     /tmp/cczH88In.s:63     .text.__io_putchar:0000001c $d
+     /tmp/cczH88In.s:68     .text._write:00000000 $t
+     /tmp/cczH88In.s:74     .text._write:00000000 _write
+     /tmp/cczH88In.s:107    .text._write:00000014 $d
+     /tmp/cczH88In.s:112    .text.HAL_TIM_PeriodElapsedCallback:00000000 $t
+     /tmp/cczH88In.s:118    .text.HAL_TIM_PeriodElapsedCallback:00000000 HAL_TIM_PeriodElapsedCallback
+     /tmp/cczH88In.s:152    .text.HAL_TIM_PeriodElapsedCallback:00000014 $d
+     /tmp/cczH88In.s:157    .text.Error_Handler:00000000 $t
+     /tmp/cczH88In.s:163    .text.Error_Handler:00000000 Error_Handler
+     /tmp/cczH88In.s:195    .text.SystemClock_Config:00000000 $t
+     /tmp/cczH88In.s:201    .text.SystemClock_Config:00000000 SystemClock_Config
+     /tmp/cczH88In.s:349    .text.SystemClock_Config:000000a0 $d
+     /tmp/cczH88In.s:355    .text.main:00000000 $t
+     /tmp/cczH88In.s:361    .text.main:00000000 main
+     /tmp/cczH88In.s:676    .text.main:000001b8 $d
+     /tmp/cczH88In.s:702    .bss.motor1:00000000 motor1
+     /tmp/cczH88In.s:699    .bss.motor1:00000000 $d
 
 UNDEFINED SYMBOLS
 HAL_UART_Transmit
@@ -2324,7 +2323,7 @@ malloc
 Read_AS5600_Angle
 CurrSense_Init
 Pid_Ang_Init
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccM8cGwO.s 			page 40
+ARM GAS  /tmp/cczH88In.s 			page 40
 
 
 Pid_Vel_Init

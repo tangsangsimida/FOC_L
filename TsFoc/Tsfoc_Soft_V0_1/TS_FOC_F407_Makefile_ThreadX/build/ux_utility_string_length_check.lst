@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccfxBdwe.s 			page 1
+ARM GAS  /tmp/ccNPZFK4.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,16 +19,16 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccfxBdwe.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text._ux_utility_string_length_check,"ax",%progbits
-  20              		.align	1
-  21              		.global	_ux_utility_string_length_check
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
-  26              	_ux_utility_string_length_check:
-  27              	.LVL0:
-  28              	.LFB11:
-  29              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_utility_string_length_check.c"
+  19              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_utility_string_length_check.c"
+  20              		.section	.text._ux_utility_string_length_check,"ax",%progbits
+  21              		.align	1
+  22              		.global	_ux_utility_string_length_check
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	_ux_utility_string_length_check:
+  28              	.LVL0:
+  29              	.LFB11:
    1:./Middlewares/ST/usbx/common/core/src/ux_utility_string_length_check.c **** /**************************************************************************/
    2:./Middlewares/ST/usbx/common/core/src/ux_utility_string_length_check.c **** /*                                                                        */
    3:./Middlewares/ST/usbx/common/core/src/ux_utility_string_length_check.c **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccfxBdwe.s 			page 1
   27:./Middlewares/ST/usbx/common/core/src/ux_utility_string_length_check.c **** 
   28:./Middlewares/ST/usbx/common/core/src/ux_utility_string_length_check.c **** #include "ux_api.h"
   29:./Middlewares/ST/usbx/common/core/src/ux_utility_string_length_check.c **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccfxBdwe.s 			page 2
+ARM GAS  /tmp/ccNPZFK4.s 			page 2
 
 
   30:./Middlewares/ST/usbx/common/core/src/ux_utility_string_length_check.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccfxBdwe.s 			page 1
   33              		@ frame_needed = 0, uses_anonymous_args = 0
   81:./Middlewares/ST/usbx/common/core/src/ux_utility_string_length_check.c **** 
   82:./Middlewares/ST/usbx/common/core/src/ux_utility_string_length_check.c **** UINT    string_length;
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccfxBdwe.s 			page 3
+ARM GAS  /tmp/ccNPZFK4.s 			page 3
 
 
   34              		.loc 1 82 1 view .LVU1
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccfxBdwe.s 			page 1
   68              	.LVL4:
   69              		.loc 1 101 13 view .LVU16
   70 0018 0220     		movs	r0, #2
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccfxBdwe.s 			page 4
+ARM GAS  /tmp/ccNPZFK4.s 			page 4
 
 
   71 001a FFF7FEFF 		bl	_ux_system_error_handler
@@ -188,7 +188,8 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccfxBdwe.s 			page 1
   73              		.loc 1 103 13 is_stmt 1 view .LVU17
   74              		.loc 1 103 19 is_stmt 0 view .LVU18
   75 001e FF20     		movs	r0, #255
-  76              	.L1:
+  76              	.LVL6:
+  77              	.L1:
  104:./Middlewares/ST/usbx/common/core/src/ux_utility_string_length_check.c ****         }
  105:./Middlewares/ST/usbx/common/core/src/ux_utility_string_length_check.c ****     }
  106:./Middlewares/ST/usbx/common/core/src/ux_utility_string_length_check.c **** 
@@ -197,62 +198,62 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccfxBdwe.s 			page 1
  109:./Middlewares/ST/usbx/common/core/src/ux_utility_string_length_check.c **** 
  110:./Middlewares/ST/usbx/common/core/src/ux_utility_string_length_check.c ****     return(UX_SUCCESS); 
  111:./Middlewares/ST/usbx/common/core/src/ux_utility_string_length_check.c **** }
-  77              		.loc 1 111 1 view .LVU19
-  78 0020 08BD     		pop	{r3, pc}
-  79              	.LVL6:
-  80              	.L3:
+  78              		.loc 1 111 1 view .LVU19
+  79 0020 08BD     		pop	{r3, pc}
+  80              	.LVL7:
+  81              	.L3:
  107:./Middlewares/ST/usbx/common/core/src/ux_utility_string_length_check.c ****         *string_length_ptr = string_length;
-  81              		.loc 1 107 5 is_stmt 1 view .LVU20
+  82              		.loc 1 107 5 is_stmt 1 view .LVU20
  107:./Middlewares/ST/usbx/common/core/src/ux_utility_string_length_check.c ****         *string_length_ptr = string_length;
-  82              		.loc 1 107 8 is_stmt 0 view .LVU21
-  83 0022 21B1     		cbz	r1, .L6
+  83              		.loc 1 107 8 is_stmt 0 view .LVU21
+  84 0022 21B1     		cbz	r1, .L6
  108:./Middlewares/ST/usbx/common/core/src/ux_utility_string_length_check.c **** 
-  84              		.loc 1 108 9 is_stmt 1 view .LVU22
+  85              		.loc 1 108 9 is_stmt 1 view .LVU22
  108:./Middlewares/ST/usbx/common/core/src/ux_utility_string_length_check.c **** 
-  85              		.loc 1 108 28 is_stmt 0 view .LVU23
-  86 0024 0B60     		str	r3, [r1]
+  86              		.loc 1 108 28 is_stmt 0 view .LVU23
+  87 0024 0B60     		str	r3, [r1]
  110:./Middlewares/ST/usbx/common/core/src/ux_utility_string_length_check.c **** }
-  87              		.loc 1 110 11 view .LVU24
-  88 0026 0020     		movs	r0, #0
-  89 0028 FAE7     		b	.L1
-  90              	.LVL7:
-  91              	.L5:
-  92              	.LCFI1:
-  93              		.cfi_def_cfa_offset 0
-  94              		.cfi_restore 3
-  95              		.cfi_restore 14
+  88              		.loc 1 110 11 view .LVU24
+  89 0026 0020     		movs	r0, #0
+  90 0028 FAE7     		b	.L1
+  91              	.LVL8:
+  92              	.L5:
+  93              	.LCFI1:
+  94              		.cfi_def_cfa_offset 0
+  95              		.cfi_restore 3
+  96              		.cfi_restore 14
   86:./Middlewares/ST/usbx/common/core/src/ux_utility_string_length_check.c **** 
-  96              		.loc 1 86 15 view .LVU25
-  97 002a FF20     		movs	r0, #255
-  98              	.LVL8:
-  99              		.loc 1 111 1 view .LVU26
- 100 002c 7047     		bx	lr
- 101              	.LVL9:
- 102              	.L6:
- 103              	.LCFI2:
- 104              		.cfi_def_cfa_offset 8
- 105              		.cfi_offset 3, -8
- 106              		.cfi_offset 14, -4
+  97              		.loc 1 86 15 view .LVU25
+  98 002a FF20     		movs	r0, #255
+  99              	.LVL9:
+ 100              		.loc 1 111 1 view .LVU26
+ 101 002c 7047     		bx	lr
+ 102              	.LVL10:
+ 103              	.L6:
+ 104              	.LCFI2:
+ 105              		.cfi_def_cfa_offset 8
+ 106              		.cfi_offset 3, -8
+ 107              		.cfi_offset 14, -4
  110:./Middlewares/ST/usbx/common/core/src/ux_utility_string_length_check.c **** }
- 107              		.loc 1 110 11 view .LVU27
- 108 002e 0020     		movs	r0, #0
- 109 0030 F6E7     		b	.L1
- 110              		.cfi_endproc
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccfxBdwe.s 			page 5
+ 108              		.loc 1 110 11 view .LVU27
+ 109 002e 0020     		movs	r0, #0
+ 110 0030 F6E7     		b	.L1
+ARM GAS  /tmp/ccNPZFK4.s 			page 5
 
 
- 111              	.LFE11:
- 113              		.text
- 114              	.Letext0:
- 115              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
- 116              		.file 3 "./Middlewares/ST/usbx/common/core/inc/ux_utility.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccfxBdwe.s 			page 6
+ 111              		.cfi_endproc
+ 112              	.LFE11:
+ 114              		.text
+ 115              	.Letext0:
+ 116              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
+ 117              		.file 3 "./Middlewares/ST/usbx/common/core/inc/ux_utility.h"
+ARM GAS  /tmp/ccNPZFK4.s 			page 6
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 ux_utility_string_length_check.c
-C:\Users\Dennis\AppData\Local\Temp\ccfxBdwe.s:20     .text._ux_utility_string_length_check:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccfxBdwe.s:26     .text._ux_utility_string_length_check:00000000 _ux_utility_string_length_check
+     /tmp/ccNPZFK4.s:21     .text._ux_utility_string_length_check:00000000 $t
+     /tmp/ccNPZFK4.s:27     .text._ux_utility_string_length_check:00000000 _ux_utility_string_length_check
 
 UNDEFINED SYMBOLS
 _ux_system_error_handler

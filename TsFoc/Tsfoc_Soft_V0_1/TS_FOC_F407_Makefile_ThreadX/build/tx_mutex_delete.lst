@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGsa0Da.s 			page 1
+ARM GAS  /tmp/ccltY1fF.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,16 +19,16 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGsa0Da.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text._tx_mutex_delete,"ax",%progbits
-  20              		.align	1
-  21              		.global	_tx_mutex_delete
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
-  26              	_tx_mutex_delete:
-  27              	.LVL0:
-  28              	.LFB8:
-  29              		.file 1 "./Middlewares/ST/threadx/common/src/tx_mutex_delete.c"
+  19              		.file 1 "./Middlewares/ST/threadx/common/src/tx_mutex_delete.c"
+  20              		.section	.text._tx_mutex_delete,"ax",%progbits
+  21              		.align	1
+  22              		.global	_tx_mutex_delete
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	_tx_mutex_delete:
+  28              	.LVL0:
+  29              	.LFB8:
    1:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c **** /**************************************************************************/
    2:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c **** /*                                                                        */
    3:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGsa0Da.s 			page 1
   27:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c **** 
   28:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c **** #include "tx_api.h"
   29:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c **** #include "tx_trace.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGsa0Da.s 			page 2
+ARM GAS  /tmp/ccltY1fF.s 			page 2
 
 
   30:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c **** #include "tx_thread.h"
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGsa0Da.s 			page 1
   34              		.loc 1 79 1 is_stmt 0 view .LVU1
   35 0000 70B5     		push	{r4, r5, r6, lr}
   36              	.LCFI0:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGsa0Da.s 			page 3
+ARM GAS  /tmp/ccltY1fF.s 			page 3
 
 
   37              		.cfi_def_cfa_offset 16
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGsa0Da.s 			page 1
   24:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /**************************************************************************/
   25:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*                                                                        */
   26:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*  PORT SPECIFIC C INFORMATION                            RELEASE        */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGsa0Da.s 			page 4
+ARM GAS  /tmp/ccltY1fF.s 			page 4
 
 
   27:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*                                                                        */
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGsa0Da.s 			page 1
   81:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
   82:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifdef __ICCARM__
   83:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #include <intrinsics.h>                     /* IAR Intrinsics */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGsa0Da.s 			page 5
+ARM GAS  /tmp/ccltY1fF.s 			page 5
 
 
   84:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define __asm__ __asm                       /* Define to make all inline asm look similar */
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGsa0Da.s 			page 1
  138:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifndef TX_TIMER_THREAD_STACK_SIZE
  139:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_TIMER_THREAD_STACK_SIZE              1024        /* Default timer thread stack size  */
  140:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGsa0Da.s 			page 6
+ARM GAS  /tmp/ccltY1fF.s 			page 6
 
 
  141:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGsa0Da.s 			page 1
  195:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  196:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /* Define the in-line initialization constant so that modules with in-line
  197:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****    initialization capabilities can prevent their initialization from being
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGsa0Da.s 			page 7
+ARM GAS  /tmp/ccltY1fF.s 			page 7
 
 
  198:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****    a function call.  */
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGsa0Da.s 			page 1
  252:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /* Define the user extension field of the thread control block.  Nothing
  253:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****    additional is needed for this port so it is defined as white space.  */
  254:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGsa0Da.s 			page 8
+ARM GAS  /tmp/ccltY1fF.s 			page 8
 
 
  255:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifndef TX_THREAD_USER_EXTENSION
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGsa0Da.s 			page 1
  309:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     __asm__ volatile (" MSR  CONTROL,%0": : "r" (control_value): "memory" );
  310:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
  311:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGsa0Da.s 			page 9
+ARM GAS  /tmp/ccltY1fF.s 			page 9
 
 
  312:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_VFP_TOUCH()  __asm__ volatile ("VMOV.F32 s0, s0");
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGsa0Da.s 			page 1
  366:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifndef TX_MISRA_ENABLE
  367:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  368:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_THREAD_TERMINATED_EXTENSION(thread_ptr)  {                                              
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGsa0Da.s 			page 10
+ARM GAS  /tmp/ccltY1fF.s 			page 10
 
 
  369:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                     ULONG  _tx_system_state;                       
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGsa0Da.s 			page 1
  423:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                                     _tx_vfp_state =  _tx_misra_cont
  424:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                                     _tx_vfp_state =  _tx_vfp_state 
  425:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                                     _tx_misra_control_set(_tx_vfp_s
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGsa0Da.s 			page 11
+ARM GAS  /tmp/ccltY1fF.s 			page 11
 
 
  426:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                                 }                                  
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGsa0Da.s 			page 1
  480:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  481:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_THREAD_GET_SYSTEM_STATE()        (_tx_thread_system_state | __get_ipsr_value())
  482:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGsa0Da.s 			page 12
+ARM GAS  /tmp/ccltY1fF.s 			page 12
 
 
  483:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #elif defined(__ICCARM__)   /* IAR */
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGsa0Da.s 			page 1
  537:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     __asm__ volatile ("MRS  %0, BASEPRI ": "=r" (posture));
  538:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #else
  539:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     __asm__ volatile ("MRS  %0, PRIMASK ": "=r" (posture));
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGsa0Da.s 			page 13
+ARM GAS  /tmp/ccltY1fF.s 			page 13
 
 
  540:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGsa0Da.s 			page 1
   71              		.syntax unified
   72              	.LBE31:
   73              	.LBE30:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGsa0Da.s 			page 14
+ARM GAS  /tmp/ccltY1fF.s 			page 14
 
 
  571:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGsa0Da.s 			page 1
  117:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c **** 
  118:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****         /* Only created mutex, just set the created list to NULL.  */
  119:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****         _tx_mutex_created_ptr =  TX_NULL;
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGsa0Da.s 			page 15
+ARM GAS  /tmp/ccltY1fF.s 			page 15
 
 
   99              		.loc 1 119 9 is_stmt 1 view .LVU27
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGsa0Da.s 			page 1
  147:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c **** 
  148:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c **** 
  149:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****     /* Determine if the mutex is currently on a thread's ownership list.  */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGsa0Da.s 			page 16
+ARM GAS  /tmp/ccltY1fF.s 			page 16
 
 
  150:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c **** 
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGsa0Da.s 			page 1
  171:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****         } while (status != TX_SUCCESS);
  172:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c **** #else
  173:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****         _tx_mutex_put(mutex_ptr);
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGsa0Da.s 			page 17
+ARM GAS  /tmp/ccltY1fF.s 			page 17
 
 
  156              		.loc 1 173 9 is_stmt 1 view .LVU50
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGsa0Da.s 			page 1
  179:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c **** 
  180:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****     /* Restore interrupts.  */
  181:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****     TX_RESTORE
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGsa0Da.s 			page 18
+ARM GAS  /tmp/ccltY1fF.s 			page 18
 
 
  196              		.loc 1 181 5 is_stmt 1 view .LVU63
@@ -1033,149 +1033,157 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGsa0Da.s 			page 1
  203              	@ 562 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
  204 0044 82F31088 		MSR  PRIMASK,r2
  205              	@ 0 "" 2
- 564:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
- 206              		.loc 2 564 1 is_stmt 0 view .LVU66
- 207              		.thumb
- 208              		.syntax unified
- 209 0048 1EE0     		b	.L5
- 210              	.LVL12:
- 211              	.L2:
- 564:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
- 212              		.loc 2 564 1 view .LVU67
- 213              	.LBE39:
- 214              	.LBE38:
- 125:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****         previous_mutex =                           mutex_ptr -> tx_mutex_created_previous;
- 215              		.loc 1 125 9 is_stmt 1 view .LVU68
- 125:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****         previous_mutex =                           mutex_ptr -> tx_mutex_created_previous;
- 216              		.loc 1 125 20 is_stmt 0 view .LVU69
- 217 004a 036A     		ldr	r3, [r0, #32]
- 218              	.LVL13:
- 126:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****         next_mutex -> tx_mutex_created_previous =  previous_mutex;
- 219              		.loc 1 126 9 is_stmt 1 view .LVU70
- 126:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****         next_mutex -> tx_mutex_created_previous =  previous_mutex;
- 220              		.loc 1 126 24 is_stmt 0 view .LVU71
- 221 004c 416A     		ldr	r1, [r0, #36]
- 222              	.LVL14:
- 127:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****         previous_mutex -> tx_mutex_created_next =  next_mutex;
- 223              		.loc 1 127 9 is_stmt 1 view .LVU72
- 127:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****         previous_mutex -> tx_mutex_created_next =  next_mutex;
- 224              		.loc 1 127 49 is_stmt 0 view .LVU73
- 225 004e 5962     		str	r1, [r3, #36]
- 128:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c **** 
- 226              		.loc 1 128 9 is_stmt 1 view .LVU74
- 128:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c **** 
- 227              		.loc 1 128 49 is_stmt 0 view .LVU75
- 228 0050 0B62     		str	r3, [r1, #32]
- 131:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****         {
- 229              		.loc 1 131 9 is_stmt 1 view .LVU76
- 131:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****         {
- 230              		.loc 1 131 35 is_stmt 0 view .LVU77
- 231 0052 1649     		ldr	r1, .L8+4
- 232              	.LVL15:
- 131:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****         {
- 233              		.loc 1 131 35 view .LVU78
- 234 0054 0968     		ldr	r1, [r1]
- 131:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****         {
- 235              		.loc 1 131 12 view .LVU79
- 236 0056 8142     		cmp	r1, r0
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGsa0Da.s 			page 19
-
-
- 237 0058 E0D1     		bne	.L3
- 135:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****         }
- 238              		.loc 1 135 13 is_stmt 1 view .LVU80
- 135:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****         }
- 239              		.loc 1 135 35 is_stmt 0 view .LVU81
- 240 005a 1449     		ldr	r1, .L8+4
- 241 005c 0B60     		str	r3, [r1]
- 242 005e DDE7     		b	.L3
- 243              	.LVL16:
- 244              	.L6:
+ 206              	.LVL12:
+ 562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
+ 207              		.loc 2 562 5 is_stmt 0 view .LVU66
+ 208              		.thumb
+ 209              		.syntax unified
+ 210              	.LBE39:
+ 211              	.LBE38:
  182:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c **** 
  183:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****     /* Walk through the mutex list to resume any and all threads suspended
  184:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****        on this mutex.  */
  185:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****     while (suspended_count != ((ULONG) 0))
+ 212              		.loc 1 185 5 is_stmt 1 view .LVU67
+ 213              	.LBB41:
+ 214              	.LBB40:
+ 564:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
+ 215              		.loc 2 564 1 is_stmt 0 view .LVU68
+ 216 0048 1EE0     		b	.L5
+ 217              	.LVL13:
+ 218              	.L2:
+ 564:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
+ 219              		.loc 2 564 1 view .LVU69
+ 220              	.LBE40:
+ 221              	.LBE41:
+ 125:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****         previous_mutex =                           mutex_ptr -> tx_mutex_created_previous;
+ 222              		.loc 1 125 9 is_stmt 1 view .LVU70
+ 125:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****         previous_mutex =                           mutex_ptr -> tx_mutex_created_previous;
+ 223              		.loc 1 125 20 is_stmt 0 view .LVU71
+ 224 004a 036A     		ldr	r3, [r0, #32]
+ 225              	.LVL14:
+ 126:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****         next_mutex -> tx_mutex_created_previous =  previous_mutex;
+ 226              		.loc 1 126 9 is_stmt 1 view .LVU72
+ 126:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****         next_mutex -> tx_mutex_created_previous =  previous_mutex;
+ 227              		.loc 1 126 24 is_stmt 0 view .LVU73
+ 228 004c 416A     		ldr	r1, [r0, #36]
+ 229              	.LVL15:
+ 127:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****         previous_mutex -> tx_mutex_created_next =  next_mutex;
+ 230              		.loc 1 127 9 is_stmt 1 view .LVU74
+ 127:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****         previous_mutex -> tx_mutex_created_next =  next_mutex;
+ 231              		.loc 1 127 49 is_stmt 0 view .LVU75
+ 232 004e 5962     		str	r1, [r3, #36]
+ 128:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c **** 
+ 233              		.loc 1 128 9 is_stmt 1 view .LVU76
+ 128:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c **** 
+ 234              		.loc 1 128 49 is_stmt 0 view .LVU77
+ 235 0050 0B62     		str	r3, [r1, #32]
+ARM GAS  /tmp/ccltY1fF.s 			page 19
+
+
+ 131:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****         {
+ 236              		.loc 1 131 9 is_stmt 1 view .LVU78
+ 131:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****         {
+ 237              		.loc 1 131 35 is_stmt 0 view .LVU79
+ 238 0052 1649     		ldr	r1, .L8+4
+ 239              	.LVL16:
+ 131:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****         {
+ 240              		.loc 1 131 35 view .LVU80
+ 241 0054 0968     		ldr	r1, [r1]
+ 131:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****         {
+ 242              		.loc 1 131 12 view .LVU81
+ 243 0056 8142     		cmp	r1, r0
+ 244 0058 E0D1     		bne	.L3
+ 135:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****         }
+ 245              		.loc 1 135 13 is_stmt 1 view .LVU82
+ 135:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****         }
+ 246              		.loc 1 135 35 is_stmt 0 view .LVU83
+ 247 005a 1449     		ldr	r1, .L8+4
+ 248 005c 0B60     		str	r3, [r1]
+ 249 005e DDE7     		b	.L3
+ 250              	.LVL17:
+ 251              	.L6:
  186:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****     {
  187:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c **** 
  188:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****         /* Decrement the suspension count.  */
  189:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****         suspended_count--;
- 245              		.loc 1 189 9 is_stmt 1 view .LVU82
- 246              		.loc 1 189 24 is_stmt 0 view .LVU83
- 247 0060 013D     		subs	r5, r5, #1
- 248              	.LVL17:
+ 252              		.loc 1 189 9 is_stmt 1 view .LVU84
+ 253              		.loc 1 189 24 is_stmt 0 view .LVU85
+ 254 0060 013D     		subs	r5, r5, #1
+ 255              	.LVL18:
  190:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c **** 
  191:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****         /* Lockout interrupts.  */
  192:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****         TX_DISABLE
- 249              		.loc 1 192 9 is_stmt 1 view .LVU84
- 250              	.LBB40:
- 251              	.LBI40:
+ 256              		.loc 1 192 9 is_stmt 1 view .LVU86
+ 257              	.LBB42:
+ 258              	.LBI42:
  566:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 252              		.loc 2 566 63 view .LVU85
- 253              	.LBB41:
+ 259              		.loc 2 566 63 view .LVU87
+ 260              	.LBB43:
  568:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
- 254              		.loc 2 568 1 view .LVU86
+ 261              		.loc 2 568 1 view .LVU88
  570:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
- 255              		.loc 2 570 5 view .LVU87
- 256              	.LBB42:
- 257              	.LBI42:
+ 262              		.loc 2 570 5 view .LVU89
+ 263              	.LBB44:
+ 264              	.LBI44:
  533:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 258              		.loc 2 533 63 view .LVU88
- 259              	.LBB43:
+ 265              		.loc 2 533 63 view .LVU90
+ 266              	.LBB45:
  535:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifdef TX_PORT_USE_BASEPRI
- 260              		.loc 2 535 1 view .LVU89
+ 267              		.loc 2 535 1 view .LVU91
  539:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 261              		.loc 2 539 5 view .LVU90
- 262              		.syntax unified
- 263              	@ 539 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
- 264 0062 EFF31081 		MRS  r1, PRIMASK 
- 265              	@ 0 "" 2
- 266              	.LVL18:
- 541:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
- 267              		.loc 2 541 5 view .LVU91
- 541:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
- 268              		.loc 2 541 5 is_stmt 0 view .LVU92
- 269              		.thumb
- 270              		.syntax unified
- 271              	.LBE43:
- 272              	.LBE42:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGsa0Da.s 			page 20
+ 268              		.loc 2 539 5 view .LVU92
+ 269              		.syntax unified
+ 270              	@ 539 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+ 271 0062 EFF31081 		MRS  r1, PRIMASK 
+ 272              	@ 0 "" 2
+ 273              	.LVL19:
+ARM GAS  /tmp/ccltY1fF.s 			page 20
 
 
+ 541:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
+ 274              		.loc 2 541 5 view .LVU93
+ 541:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
+ 275              		.loc 2 541 5 is_stmt 0 view .LVU94
+ 276              		.thumb
+ 277              		.syntax unified
+ 278              	.LBE45:
+ 279              	.LBE44:
  575:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 273              		.loc 2 575 5 is_stmt 1 view .LVU93
- 274              		.syntax unified
- 275              	@ 575 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
- 276 0066 72B6     		CPSID i
- 277              	@ 0 "" 2
- 278              		.loc 2 577 5 view .LVU94
- 279              	.LVL19:
- 280              		.loc 2 577 5 is_stmt 0 view .LVU95
- 281              		.thumb
- 282              		.syntax unified
- 283              	.LBE41:
- 284              	.LBE40:
+ 280              		.loc 2 575 5 is_stmt 1 view .LVU95
+ 281              		.syntax unified
+ 282              	@ 575 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+ 283 0066 72B6     		CPSID i
+ 284              	@ 0 "" 2
+ 285              		.loc 2 577 5 view .LVU96
+ 286              	.LVL20:
+ 287              		.loc 2 577 5 is_stmt 0 view .LVU97
+ 288              		.thumb
+ 289              		.syntax unified
+ 290              	.LBE43:
+ 291              	.LBE42:
  193:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c **** 
  194:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****         /* Clear the cleanup pointer, this prevents the timeout from doing
  195:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****            anything.  */
  196:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****         thread_ptr -> tx_thread_suspend_cleanup =  TX_NULL;
- 285              		.loc 1 196 9 is_stmt 1 view .LVU96
- 286              		.loc 1 196 49 is_stmt 0 view .LVU97
- 287 0068 0023     		movs	r3, #0
- 288 006a A366     		str	r3, [r4, #104]
+ 292              		.loc 1 196 9 is_stmt 1 view .LVU98
+ 293              		.loc 1 196 49 is_stmt 0 view .LVU99
+ 294 0068 0023     		movs	r3, #0
+ 295 006a A366     		str	r3, [r4, #104]
  197:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c **** 
  198:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****         /* Set the return status in the thread to TX_DELETED.  */
  199:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****         thread_ptr -> tx_thread_suspend_status =  TX_DELETED;
- 289              		.loc 1 199 9 is_stmt 1 view .LVU98
- 290              		.loc 1 199 48 is_stmt 0 view .LVU99
- 291 006c 0123     		movs	r3, #1
- 292 006e C4F88430 		str	r3, [r4, #132]
+ 296              		.loc 1 199 9 is_stmt 1 view .LVU100
+ 297              		.loc 1 199 48 is_stmt 0 view .LVU101
+ 298 006c 0123     		movs	r3, #1
+ 299 006e C4F88430 		str	r3, [r4, #132]
  200:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c **** 
  201:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****         /* Move the thread pointer ahead.  */
  202:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****         next_thread =  thread_ptr -> tx_thread_suspended_next;
- 293              		.loc 1 202 9 is_stmt 1 view .LVU100
- 294              		.loc 1 202 21 is_stmt 0 view .LVU101
- 295 0072 266F     		ldr	r6, [r4, #112]
- 296              	.LVL20:
+ 300              		.loc 1 202 9 is_stmt 1 view .LVU102
+ 301              		.loc 1 202 21 is_stmt 0 view .LVU103
+ 302 0072 266F     		ldr	r6, [r4, #112]
+ 303              	.LVL21:
  203:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c **** 
  204:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c **** #ifdef TX_NOT_INTERRUPTABLE
  205:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c **** 
@@ -1188,58 +1196,58 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGsa0Da.s 			page 1
  212:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c **** 
  213:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****         /* Temporarily disable preemption again.  */
  214:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****         _tx_thread_preempt_disable++;
- 297              		.loc 1 214 9 is_stmt 1 view .LVU102
- 298              		.loc 1 214 35 is_stmt 0 view .LVU103
- 299 0074 0E4A     		ldr	r2, .L8+8
- 300 0076 1368     		ldr	r3, [r2]
- 301 0078 0133     		adds	r3, r3, #1
- 302 007a 1360     		str	r3, [r2]
+ 304              		.loc 1 214 9 is_stmt 1 view .LVU104
+ 305              		.loc 1 214 35 is_stmt 0 view .LVU105
+ARM GAS  /tmp/ccltY1fF.s 			page 21
+
+
+ 306 0074 0E4A     		ldr	r2, .L8+8
+ 307 0076 1368     		ldr	r3, [r2]
+ 308 0078 0133     		adds	r3, r3, #1
+ 309 007a 1360     		str	r3, [r2]
  215:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c **** 
  216:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****         /* Restore interrupts.  */
  217:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****         TX_RESTORE
- 303              		.loc 1 217 9 is_stmt 1 view .LVU104
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGsa0Da.s 			page 21
-
-
- 304              	.LVL21:
- 305              	.LBB44:
- 306              	.LBI44:
+ 310              		.loc 1 217 9 is_stmt 1 view .LVU106
+ 311              	.LVL22:
+ 312              	.LBB46:
+ 313              	.LBI46:
  556:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 307              		.loc 2 556 55 view .LVU105
- 308              	.LBB45:
+ 314              		.loc 2 556 55 view .LVU107
+ 315              	.LBB47:
  562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 309              		.loc 2 562 5 view .LVU106
- 310              		.syntax unified
- 311              	@ 562 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
- 312 007c 81F31088 		MSR  PRIMASK,r1
- 313              	@ 0 "" 2
- 314              	.LVL22:
- 562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 315              		.loc 2 562 5 is_stmt 0 view .LVU107
- 316              		.thumb
+ 316              		.loc 2 562 5 view .LVU108
  317              		.syntax unified
- 318              	.LBE45:
- 319              	.LBE44:
+ 318              	@ 562 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+ 319 007c 81F31088 		MSR  PRIMASK,r1
+ 320              	@ 0 "" 2
+ 321              	.LVL23:
+ 562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
+ 322              		.loc 2 562 5 is_stmt 0 view .LVU109
+ 323              		.thumb
+ 324              		.syntax unified
+ 325              	.LBE47:
+ 326              	.LBE46:
  218:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c **** 
  219:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****         /* Resume the thread.  */
  220:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****         _tx_thread_system_resume(thread_ptr);
- 320              		.loc 1 220 9 is_stmt 1 view .LVU108
- 321 0080 2046     		mov	r0, r4
- 322 0082 FFF7FEFF 		bl	_tx_thread_system_resume
- 323              	.LVL23:
+ 327              		.loc 1 220 9 is_stmt 1 view .LVU110
+ 328 0080 2046     		mov	r0, r4
+ 329 0082 FFF7FEFF 		bl	_tx_thread_system_resume
+ 330              	.LVL24:
  221:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c **** #endif
  222:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c **** 
  223:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****         /* Move to next thread.  */
  224:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****         thread_ptr =  next_thread;
- 324              		.loc 1 224 9 view .LVU109
- 325              		.loc 1 224 20 is_stmt 0 view .LVU110
- 326 0086 3446     		mov	r4, r6
- 327              	.LVL24:
- 328              	.L5:
+ 331              		.loc 1 224 9 view .LVU111
+ 332              		.loc 1 224 20 is_stmt 0 view .LVU112
+ 333 0086 3446     		mov	r4, r6
+ 334              	.LVL25:
+ 335              	.L5:
  185:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****     {
- 329              		.loc 1 185 11 is_stmt 1 view .LVU111
- 330 0088 002D     		cmp	r5, #0
- 331 008a E9D1     		bne	.L6
+ 336              		.loc 1 185 28 is_stmt 1 view .LVU113
+ 337 0088 002D     		cmp	r5, #0
+ 338 008a E9D1     		bne	.L6
  225:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****     }
  226:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c **** 
  227:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****     /* Execute Port-Specific completion processing. If needed, it is typically defined in tx_port.h
@@ -1247,126 +1255,126 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGsa0Da.s 			page 1
  229:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c **** 
  230:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****     /* Disable interrupts.  */
  231:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****     TX_DISABLE
- 332              		.loc 1 231 5 view .LVU112
- 333              	.LBB46:
- 334              	.LBI46:
+ 339              		.loc 1 231 5 view .LVU114
+ 340              	.LBB48:
+ 341              	.LBI48:
+ARM GAS  /tmp/ccltY1fF.s 			page 22
+
+
  566:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 335              		.loc 2 566 63 view .LVU113
- 336              	.LBB47:
+ 342              		.loc 2 566 63 view .LVU115
+ 343              	.LBB49:
  568:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
- 337              		.loc 2 568 1 view .LVU114
+ 344              		.loc 2 568 1 view .LVU116
  570:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
- 338              		.loc 2 570 5 view .LVU115
- 339              	.LBB48:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGsa0Da.s 			page 22
-
-
- 340              	.LBI48:
+ 345              		.loc 2 570 5 view .LVU117
+ 346              	.LBB50:
+ 347              	.LBI50:
  533:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 341              		.loc 2 533 63 view .LVU116
- 342              	.LBB49:
+ 348              		.loc 2 533 63 view .LVU118
+ 349              	.LBB51:
  535:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifdef TX_PORT_USE_BASEPRI
- 343              		.loc 2 535 1 view .LVU117
+ 350              		.loc 2 535 1 view .LVU119
  539:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 344              		.loc 2 539 5 view .LVU118
- 345              		.syntax unified
- 346              	@ 539 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
- 347 008c EFF31081 		MRS  r1, PRIMASK 
- 348              	@ 0 "" 2
- 349              	.LVL25:
+ 351              		.loc 2 539 5 view .LVU120
+ 352              		.syntax unified
+ 353              	@ 539 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+ 354 008c EFF31081 		MRS  r1, PRIMASK 
+ 355              	@ 0 "" 2
+ 356              	.LVL26:
  541:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
- 350              		.loc 2 541 5 view .LVU119
+ 357              		.loc 2 541 5 view .LVU121
  541:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
- 351              		.loc 2 541 5 is_stmt 0 view .LVU120
- 352              		.thumb
- 353              		.syntax unified
- 354              	.LBE49:
- 355              	.LBE48:
+ 358              		.loc 2 541 5 is_stmt 0 view .LVU122
+ 359              		.thumb
+ 360              		.syntax unified
+ 361              	.LBE51:
+ 362              	.LBE50:
  575:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 356              		.loc 2 575 5 is_stmt 1 view .LVU121
- 357              		.syntax unified
- 358              	@ 575 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
- 359 0090 72B6     		CPSID i
- 360              	@ 0 "" 2
- 361              		.loc 2 577 5 view .LVU122
- 362              	.LVL26:
- 363              		.loc 2 577 5 is_stmt 0 view .LVU123
- 364              		.thumb
- 365              		.syntax unified
- 366              	.LBE47:
- 367              	.LBE46:
+ 363              		.loc 2 575 5 is_stmt 1 view .LVU123
+ 364              		.syntax unified
+ 365              	@ 575 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+ 366 0090 72B6     		CPSID i
+ 367              	@ 0 "" 2
+ 368              		.loc 2 577 5 view .LVU124
+ 369              	.LVL27:
+ 370              		.loc 2 577 5 is_stmt 0 view .LVU125
+ 371              		.thumb
+ 372              		.syntax unified
+ 373              	.LBE49:
+ 374              	.LBE48:
  232:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c **** 
  233:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****     /* Release previous preempt disable.  */
  234:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****     _tx_thread_preempt_disable--;
- 368              		.loc 1 234 5 is_stmt 1 view .LVU124
- 369              		.loc 1 234 31 is_stmt 0 view .LVU125
- 370 0092 074A     		ldr	r2, .L8+8
- 371 0094 1368     		ldr	r3, [r2]
- 372 0096 013B     		subs	r3, r3, #1
- 373 0098 1360     		str	r3, [r2]
+ 375              		.loc 1 234 5 is_stmt 1 view .LVU126
+ 376              		.loc 1 234 31 is_stmt 0 view .LVU127
+ 377 0092 074A     		ldr	r2, .L8+8
+ 378 0094 1368     		ldr	r3, [r2]
+ 379 0096 013B     		subs	r3, r3, #1
+ 380 0098 1360     		str	r3, [r2]
  235:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c **** 
  236:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****     /* Restore interrupts.  */
  237:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****     TX_RESTORE
- 374              		.loc 1 237 5 is_stmt 1 view .LVU126
- 375              	.LVL27:
- 376              	.LBB50:
- 377              	.LBI50:
+ 381              		.loc 1 237 5 is_stmt 1 view .LVU128
+ 382              	.LVL28:
+ 383              	.LBB52:
+ARM GAS  /tmp/ccltY1fF.s 			page 23
+
+
+ 384              	.LBI52:
  556:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 378              		.loc 2 556 55 view .LVU127
- 379              	.LBB51:
+ 385              		.loc 2 556 55 view .LVU129
+ 386              	.LBB53:
  562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 380              		.loc 2 562 5 view .LVU128
- 381              		.syntax unified
- 382              	@ 562 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGsa0Da.s 			page 23
-
-
- 383 009a 81F31088 		MSR  PRIMASK,r1
- 384              	@ 0 "" 2
- 385              	.LVL28:
- 562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 386              		.loc 2 562 5 is_stmt 0 view .LVU129
- 387              		.thumb
+ 387              		.loc 2 562 5 view .LVU130
  388              		.syntax unified
- 389              	.LBE51:
- 390              	.LBE50:
+ 389              	@ 562 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
+ 390 009a 81F31088 		MSR  PRIMASK,r1
+ 391              	@ 0 "" 2
+ 392              	.LVL29:
+ 562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
+ 393              		.loc 2 562 5 is_stmt 0 view .LVU131
+ 394              		.thumb
+ 395              		.syntax unified
+ 396              	.LBE53:
+ 397              	.LBE52:
  238:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c **** 
  239:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****     /* Check for preemption.  */
  240:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****     _tx_thread_system_preempt_check();
- 391              		.loc 1 240 5 is_stmt 1 view .LVU130
- 392 009e FFF7FEFF 		bl	_tx_thread_system_preempt_check
- 393              	.LVL29:
+ 398              		.loc 1 240 5 is_stmt 1 view .LVU132
+ 399 009e FFF7FEFF 		bl	_tx_thread_system_preempt_check
+ 400              	.LVL30:
  241:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c **** 
  242:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****     /* Return TX_SUCCESS.  */
  243:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c ****     return(TX_SUCCESS);
- 394              		.loc 1 243 5 view .LVU131
+ 401              		.loc 1 243 5 view .LVU133
  244:./Middlewares/ST/threadx/common/src/tx_mutex_delete.c **** }
- 395              		.loc 1 244 1 is_stmt 0 view .LVU132
- 396 00a2 0020     		movs	r0, #0
- 397 00a4 70BD     		pop	{r4, r5, r6, pc}
- 398              	.LVL30:
- 399              	.L9:
- 400              		.loc 1 244 1 view .LVU133
- 401 00a6 00BF     		.align	2
- 402              	.L8:
- 403 00a8 00000000 		.word	_tx_mutex_created_count
- 404 00ac 00000000 		.word	_tx_mutex_created_ptr
- 405 00b0 00000000 		.word	_tx_thread_preempt_disable
- 406              		.cfi_endproc
- 407              	.LFE8:
- 409              		.text
- 410              	.Letext0:
- 411              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
- 412              		.file 4 "./Middlewares/ST/threadx/common/inc/tx_thread.h"
- 413              		.file 5 "./Middlewares/ST/threadx/common/inc/tx_mutex.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccGsa0Da.s 			page 24
+ 402              		.loc 1 244 1 is_stmt 0 view .LVU134
+ 403 00a2 0020     		movs	r0, #0
+ 404 00a4 70BD     		pop	{r4, r5, r6, pc}
+ 405              	.LVL31:
+ 406              	.L9:
+ 407              		.loc 1 244 1 view .LVU135
+ 408 00a6 00BF     		.align	2
+ 409              	.L8:
+ 410 00a8 00000000 		.word	_tx_mutex_created_count
+ 411 00ac 00000000 		.word	_tx_mutex_created_ptr
+ 412 00b0 00000000 		.word	_tx_thread_preempt_disable
+ 413              		.cfi_endproc
+ 414              	.LFE8:
+ 416              		.text
+ 417              	.Letext0:
+ 418              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
+ 419              		.file 4 "./Middlewares/ST/threadx/common/inc/tx_thread.h"
+ 420              		.file 5 "./Middlewares/ST/threadx/common/inc/tx_mutex.h"
+ARM GAS  /tmp/ccltY1fF.s 			page 24
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 tx_mutex_delete.c
-C:\Users\Dennis\AppData\Local\Temp\ccGsa0Da.s:20     .text._tx_mutex_delete:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccGsa0Da.s:26     .text._tx_mutex_delete:00000000 _tx_mutex_delete
-C:\Users\Dennis\AppData\Local\Temp\ccGsa0Da.s:403    .text._tx_mutex_delete:000000a8 $d
+     /tmp/ccltY1fF.s:21     .text._tx_mutex_delete:00000000 $t
+     /tmp/ccltY1fF.s:27     .text._tx_mutex_delete:00000000 _tx_mutex_delete
+     /tmp/ccltY1fF.s:410    .text._tx_mutex_delete:000000a8 $d
 
 UNDEFINED SYMBOLS
 _tx_mutex_put

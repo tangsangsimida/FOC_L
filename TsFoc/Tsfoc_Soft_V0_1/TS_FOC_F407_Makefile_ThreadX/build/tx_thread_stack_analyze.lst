@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccgQxr6r.s 			page 1
+ARM GAS  /tmp/ccDgnMp9.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,16 +19,16 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccgQxr6r.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text._tx_thread_stack_analyze,"ax",%progbits
-  20              		.align	1
-  21              		.global	_tx_thread_stack_analyze
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
-  26              	_tx_thread_stack_analyze:
-  27              	.LVL0:
-  28              	.LFB8:
-  29              		.file 1 "./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c"
+  19              		.file 1 "./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c"
+  20              		.section	.text._tx_thread_stack_analyze,"ax",%progbits
+  21              		.align	1
+  22              		.global	_tx_thread_stack_analyze
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	_tx_thread_stack_analyze:
+  28              	.LVL0:
+  29              	.LFB8:
    1:./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c **** /**************************************************************************/
    2:./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c **** /*                                                                        */
    3:./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccgQxr6r.s 			page 1
   27:./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c **** 
   28:./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c **** #include "tx_api.h"
   29:./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c **** #include "tx_thread.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccgQxr6r.s 			page 2
+ARM GAS  /tmp/ccDgnMp9.s 			page 2
 
 
   30:./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccgQxr6r.s 			page 1
   78:./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c **** ULONG       *stack_ptr;
   36              		.loc 1 78 1 view .LVU2
   79:./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c **** ULONG       *stack_lowest;
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccgQxr6r.s 			page 3
+ARM GAS  /tmp/ccDgnMp9.s 			page 3
 
 
   37              		.loc 1 79 1 view .LVU3
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccgQxr6r.s 			page 1
   42:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*    directly use native C data types.  Instead, ThreadX creates its     */
   43:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*    own special types that can be mapped to actual data types by this   */
   44:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*    file to guarantee consistency in the interface and functionality.   */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccgQxr6r.s 			page 4
+ARM GAS  /tmp/ccDgnMp9.s 			page 4
 
 
   45:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*                                                                        */
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccgQxr6r.s 			page 1
   99:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
  100:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  101:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifndef __GNUC__
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccgQxr6r.s 			page 5
+ARM GAS  /tmp/ccDgnMp9.s 			page 5
 
 
  102:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define __get_ipsr_value __get_IPSR
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccgQxr6r.s 			page 1
  156:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  157:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_TRACE_TIME_SOURCE                    *((ULONG *) 0x0a800024)
  158:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_TRACE_TIME_MASK                      0x0000FFFFUL
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccgQxr6r.s 			page 6
+ARM GAS  /tmp/ccDgnMp9.s 			page 6
 
 
  159:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccgQxr6r.s 			page 1
  213:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifndef TX_MISRA_ENABLE
  214:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifdef TX_ENABLE_STACK_CHECKING
  215:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #undef TX_DISABLE_STACK_FILLING
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccgQxr6r.s 			page 7
+ARM GAS  /tmp/ccDgnMp9.s 			page 7
 
 
  216:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccgQxr6r.s 			page 1
  270:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #else
  271:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** void    *_tx_iar_create_per_thread_tls_area(void);
  272:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** void    _tx_iar_destroy_per_thread_tls_area(void *tls_ptr);
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccgQxr6r.s 			page 8
+ARM GAS  /tmp/ccDgnMp9.s 			page 8
 
 
  273:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** void    __iar_Initlocks(void);
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccgQxr6r.s 			page 1
  327:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
  328:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /* Can't access VFP registers with inline asm, so define this in tx_thread_schedule.  */
  329:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** void _tx_vfp_access(void);
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccgQxr6r.s 			page 9
+ARM GAS  /tmp/ccDgnMp9.s 			page 9
 
 
  330:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_VFP_TOUCH()  _tx_vfp_access();
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccgQxr6r.s 			page 1
  384:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                             {                                      
  385:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                             ULONG _tx_vfp_state;                   
  386:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                                 _tx_vfp_state = __get_control_value
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccgQxr6r.s 			page 10
+ARM GAS  /tmp/ccDgnMp9.s 			page 10
 
 
  387:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                                 _tx_vfp_state =  _tx_vfp_state & ((
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccgQxr6r.s 			page 1
  441:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  442:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_BLOCK_POOL_CREATE_EXTENSION(pool_ptr)
  443:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_BYTE_POOL_CREATE_EXTENSION(pool_ptr)
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccgQxr6r.s 			page 11
+ARM GAS  /tmp/ccDgnMp9.s 			page 11
 
 
  444:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_EVENT_FLAGS_GROUP_CREATE_EXTENSION(group_ptr)
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccgQxr6r.s 			page 1
  498:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****    for Cortex-M since so we don't waste time checking the _tx_thread_system_state variable that is 
  499:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****    zero after initialization for Cortex-M ports. */
  500:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccgQxr6r.s 			page 12
+ARM GAS  /tmp/ccDgnMp9.s 			page 12
 
 
  501:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifndef TX_THREAD_SYSTEM_RETURN_CHECK
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccgQxr6r.s 			page 1
  555:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  556:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** __attribute__( ( always_inline ) ) static inline void __restore_interrupt(unsigned int int_posture)
  557:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccgQxr6r.s 			page 13
+ARM GAS  /tmp/ccDgnMp9.s 			page 13
 
 
  558:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifdef TX_PORT_USE_BASEPRI
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccgQxr6r.s 			page 1
   73              		.thumb
   74              		.syntax unified
   75              	.LBE17:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccgQxr6r.s 			page 14
+ARM GAS  /tmp/ccDgnMp9.s 			page 14
 
 
   76              	.LBE16:
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccgQxr6r.s 			page 1
  128:./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c ****                         else
  129:./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c ****                         {
  130:./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccgQxr6r.s 			page 15
+ARM GAS  /tmp/ccDgnMp9.s 			page 15
 
 
  131:./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c ****                             /* Update the stack lowest, since we need to look in the lower half now
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccgQxr6r.s 			page 1
   91              	.LBI20:
  556:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
   92              		.loc 2 556 55 view .LVU24
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccgQxr6r.s 			page 16
+ARM GAS  /tmp/ccDgnMp9.s 			page 16
 
 
   93              	.LBB21:
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccgQxr6r.s 			page 1
  133              		.loc 2 556 55 view .LVU38
  134              	.LBB24:
  562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccgQxr6r.s 			page 17
+ARM GAS  /tmp/ccDgnMp9.s 			page 17
 
 
  135              		.loc 2 562 5 view .LVU39
@@ -966,216 +966,215 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccgQxr6r.s 			page 1
  137              	@ 562 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
  138 0024 83F31088 		MSR  PRIMASK,r3
  139              	@ 0 "" 2
+ 140              	.LVL8:
  564:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
- 140              		.loc 2 564 1 is_stmt 0 view .LVU40
- 141              		.thumb
- 142              		.syntax unified
- 143 0028 02E0     		b	.L4
- 144              	.LVL8:
- 145              	.L7:
+ 141              		.loc 2 564 1 is_stmt 0 view .LVU40
+ 142              		.thumb
+ 143              		.syntax unified
+ 144 0028 02E0     		b	.L4
+ 145              	.LVL9:
+ 146              	.L7:
  564:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
- 146              		.loc 2 564 1 view .LVU41
- 147              	.LBE24:
- 148              	.LBE23:
+ 147              		.loc 2 564 1 view .LVU41
+ 148              	.LBE24:
+ 149              	.LBE23:
  132:./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c ****                         }
- 149              		.loc 1 132 42 view .LVU42
- 150 002a 1146     		mov	r1, r2
- 151              	.LVL9:
- 152              	.L3:
+ 150              		.loc 1 132 42 view .LVU42
+ 151 002a 1146     		mov	r1, r2
+ 152              	.LVL10:
+ 153              	.L3:
  135:./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c **** 
- 153              		.loc 1 135 28 is_stmt 1 view .LVU43
- 135:./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c **** 
- 154              		.loc 1 135 21 is_stmt 0 view .LVU44
+ 154              		.loc 1 135 34 is_stmt 1 view .LVU43
  155 002c 032B     		cmp	r3, #3
  156 002e 0DD9     		bls	.L5
- 157              	.LVL10:
+ 157              	.LVL11:
  158              	.L4:
  114:./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c ****                     {
- 159              		.loc 1 114 21 is_stmt 1 view .LVU45
+ 159              		.loc 1 114 21 view .LVU44
  118:./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c ****                         stack_ptr =  TX_ULONG_POINTER_ADD(stack_lowest, size);
- 160              		.loc 1 118 25 view .LVU46
+ 160              		.loc 1 118 25 view .LVU45
  118:./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c ****                         stack_ptr =  TX_ULONG_POINTER_ADD(stack_lowest, size);
- 161              		.loc 1 118 42 is_stmt 0 view .LVU47
+ 161              		.loc 1 118 42 is_stmt 0 view .LVU46
  162 0030 6B1A     		subs	r3, r5, r1
  163 0032 9B10     		asrs	r3, r3, #2
  118:./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c ****                         stack_ptr =  TX_ULONG_POINTER_ADD(stack_lowest, size);
- 164              		.loc 1 118 30 view .LVU48
+ 164              		.loc 1 118 30 view .LVU47
  165 0034 4FEA530C 		lsr	ip, r3, #1
- 166              	.LVL11:
+ 166              	.LVL12:
  119:./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c **** 
- 167              		.loc 1 119 25 is_stmt 1 view .LVU49
+ 167              		.loc 1 119 25 is_stmt 1 view .LVU48
  119:./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c **** 
- 168              		.loc 1 119 35 is_stmt 0 view .LVU50
+ 168              		.loc 1 119 35 is_stmt 0 view .LVU49
  169 0038 01EB8C02 		add	r2, r1, ip, lsl #2
- 170              	.LVL12:
+ 170              	.LVL13:
  122:./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c ****                         {
- 171              		.loc 1 122 25 is_stmt 1 view .LVU51
+ 171              		.loc 1 122 25 is_stmt 1 view .LVU50
  122:./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c ****                         {
- 172              		.loc 1 122 29 is_stmt 0 view .LVU52
+ 172              		.loc 1 122 29 is_stmt 0 view .LVU51
  173 003c 51F82C40 		ldr	r4, [r1, ip, lsl #2]
  122:./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c ****                         {
- 174              		.loc 1 122 28 view .LVU53
+ 174              		.loc 1 122 28 view .LVU52
  175 0040 B4F1EF3F 		cmp	r4, #-269488145
  176 0044 F1D0     		beq	.L7
  126:./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c ****                         }
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccgQxr6r.s 			page 18
+ 177              		.loc 1 126 43 view .LVU53
+ARM GAS  /tmp/ccDgnMp9.s 			page 18
 
 
- 177              		.loc 1 126 43 view .LVU54
  178 0046 1546     		mov	r5, r2
- 179              	.LVL13:
+ 179              	.LVL14:
  126:./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c ****                         }
- 180              		.loc 1 126 43 view .LVU55
+ 180              		.loc 1 126 43 view .LVU54
  181 0048 F0E7     		b	.L3
- 182              	.LVL14:
+ 182              	.LVL15:
  183              	.L6:
  142:./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c ****                     }
- 184              		.loc 1 142 25 is_stmt 1 view .LVU56
+ 184              		.loc 1 142 25 is_stmt 1 view .LVU55
  142:./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c ****                     }
- 185              		.loc 1 142 35 is_stmt 0 view .LVU57
+ 185              		.loc 1 142 35 is_stmt 0 view .LVU56
  186 004a 0432     		adds	r2, r2, #4
- 187              	.LVL15:
+ 187              	.LVL16:
  188              	.L5:
  138:./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c ****                     {
- 189              		.loc 1 138 27 is_stmt 1 view .LVU58
+ 189              		.loc 1 138 39 is_stmt 1 view .LVU57
  138:./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c ****                     {
- 190              		.loc 1 138 28 is_stmt 0 view .LVU59
+ 190              		.loc 1 138 28 is_stmt 0 view .LVU58
  191 004c 1368     		ldr	r3, [r2]
  138:./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c ****                     {
- 192              		.loc 1 138 27 view .LVU60
+ 192              		.loc 1 138 39 view .LVU59
  193 004e B3F1EF3F 		cmp	r3, #-269488145
  194 0052 FAD0     		beq	.L6
  149:./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c **** 
- 195              		.loc 1 149 21 is_stmt 1 view .LVU61
+ 195              		.loc 1 149 21 is_stmt 1 view .LVU60
  196              	.LBB25:
  197              	.LBI25:
  566:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 198              		.loc 2 566 63 view .LVU62
+ 198              		.loc 2 566 63 view .LVU61
  199              	.LBB26:
  568:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
- 200              		.loc 2 568 1 view .LVU63
+ 200              		.loc 2 568 1 view .LVU62
  570:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
- 201              		.loc 2 570 5 view .LVU64
+ 201              		.loc 2 570 5 view .LVU63
  202              	.LBB27:
  203              	.LBI27:
  533:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 204              		.loc 2 533 63 view .LVU65
+ 204              		.loc 2 533 63 view .LVU64
  205              	.LBB28:
  535:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifdef TX_PORT_USE_BASEPRI
- 206              		.loc 2 535 1 view .LVU66
+ 206              		.loc 2 535 1 view .LVU65
  539:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 207              		.loc 2 539 5 view .LVU67
+ 207              		.loc 2 539 5 view .LVU66
  208              		.syntax unified
  209              	@ 539 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
  210 0054 EFF31083 		MRS  r3, PRIMASK 
  211              	@ 0 "" 2
- 212              	.LVL16:
+ 212              	.LVL17:
  541:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
- 213              		.loc 2 541 5 view .LVU68
+ 213              		.loc 2 541 5 view .LVU67
  541:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** }
- 214              		.loc 2 541 5 is_stmt 0 view .LVU69
+ 214              		.loc 2 541 5 is_stmt 0 view .LVU68
  215              		.thumb
  216              		.syntax unified
  217              	.LBE28:
  218              	.LBE27:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccgQxr6r.s 			page 19
-
-
  575:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 219              		.loc 2 575 5 is_stmt 1 view .LVU70
+ARM GAS  /tmp/ccDgnMp9.s 			page 19
+
+
+ 219              		.loc 2 575 5 is_stmt 1 view .LVU69
  220              		.syntax unified
  221              	@ 575 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
  222 0058 72B6     		CPSID i
  223              	@ 0 "" 2
- 224              		.loc 2 577 5 view .LVU71
- 225              	.LVL17:
- 226              		.loc 2 577 5 is_stmt 0 view .LVU72
+ 224              		.loc 2 577 5 view .LVU70
+ 225              	.LVL18:
+ 226              		.loc 2 577 5 is_stmt 0 view .LVU71
  227              		.thumb
  228              		.syntax unified
  229              	.LBE26:
  230              	.LBE25:
  152:./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c ****                     {
- 231              		.loc 1 152 21 is_stmt 1 view .LVU73
+ 231              		.loc 1 152 21 is_stmt 1 view .LVU72
  152:./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c ****                     {
- 232              		.loc 1 152 36 is_stmt 0 view .LVU74
+ 232              		.loc 1 152 36 is_stmt 0 view .LVU73
  233 005a 0468     		ldr	r4, [r0]
  152:./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c ****                     {
- 234              		.loc 1 152 24 view .LVU75
+ 234              		.loc 1 152 24 view .LVU74
  235 005c 0A49     		ldr	r1, .L14
- 236              	.LVL18:
+ 236              	.LVL19:
  152:./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c ****                     {
- 237              		.loc 1 152 24 view .LVU76
+ 237              		.loc 1 152 24 view .LVU75
  238 005e 8C42     		cmp	r4, r1
  239 0060 03D0     		beq	.L13
- 240              	.LVL19:
+ 240              	.LVL20:
  241              	.L2:
- 242              		.loc 1 181 5 is_stmt 1 view .LVU77
+ 242              		.loc 1 181 5 is_stmt 1 view .LVU76
  243              	.LBB29:
  556:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** {
- 244              		.loc 2 556 55 view .LVU78
+ 244              		.loc 2 556 55 view .LVU77
  245              	.LBB22:
  562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 246              		.loc 2 562 5 view .LVU79
+ 246              		.loc 2 562 5 view .LVU78
  247              		.syntax unified
  248              	@ 562 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
  249 0062 83F31088 		MSR  PRIMASK,r3
  250              	@ 0 "" 2
- 251              	.LVL20:
+ 251              	.LVL21:
  562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
- 252              		.loc 2 562 5 is_stmt 0 view .LVU80
+ 252              		.loc 2 562 5 is_stmt 0 view .LVU79
  253              		.thumb
  254              		.syntax unified
  255              	.LBE22:
  256              	.LBE29:
  182:./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c **** }
- 257              		.loc 1 182 1 view .LVU81
+ 257              		.loc 1 182 1 view .LVU80
  258 0066 30BC     		pop	{r4, r5}
  259              	.LCFI1:
  260              		.cfi_remember_state
  261              		.cfi_restore 5
  262              		.cfi_restore 4
  263              		.cfi_def_cfa_offset 0
- 264              	.LVL21:
- 265              		.loc 1 182 1 view .LVU82
+ 264              	.LVL22:
+ 265              		.loc 1 182 1 view .LVU81
  266 0068 7047     		bx	lr
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccgQxr6r.s 			page 20
+ 267              	.LVL23:
+ARM GAS  /tmp/ccDgnMp9.s 			page 20
 
 
- 267              	.LVL22:
  268              	.L13:
  269              	.LCFI2:
  270              		.cfi_restore_state
  158:./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c ****                         {
- 271              		.loc 1 158 25 is_stmt 1 view .LVU83
+ 271              		.loc 1 158 25 is_stmt 1 view .LVU82
  158:./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c ****                         {
- 272              		.loc 1 158 42 is_stmt 0 view .LVU84
+ 272              		.loc 1 158 42 is_stmt 0 view .LVU83
  273 006a C168     		ldr	r1, [r0, #12]
  158:./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c ****                         {
- 274              		.loc 1 158 28 view .LVU85
+ 274              		.loc 1 158 28 view .LVU84
  275 006c 9142     		cmp	r1, r2
  276 006e F8D2     		bcs	.L2
  162:./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c ****                             {
- 277              		.loc 1 162 29 is_stmt 1 view .LVU86
+ 277              		.loc 1 162 29 is_stmt 1 view .LVU85
  162:./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c ****                             {
- 278              		.loc 1 162 46 is_stmt 0 view .LVU87
+ 278              		.loc 1 162 46 is_stmt 0 view .LVU86
  279 0070 D0F8A810 		ldr	r1, [r0, #168]
  162:./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c ****                             {
- 280              		.loc 1 162 32 view .LVU88
+ 280              		.loc 1 162 32 view .LVU87
  281 0074 9142     		cmp	r1, r2
  282 0076 F4D9     		bls	.L2
  166:./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c ****                                 {
- 283              		.loc 1 166 33 is_stmt 1 view .LVU89
+ 283              		.loc 1 166 33 is_stmt 1 view .LVU88
  166:./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c ****                                 {
- 284              		.loc 1 166 37 is_stmt 0 view .LVU90
+ 284              		.loc 1 166 37 is_stmt 0 view .LVU89
  285 0078 1168     		ldr	r1, [r2]
  166:./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c ****                                 {
- 286              		.loc 1 166 36 view .LVU91
+ 286              		.loc 1 166 36 view .LVU90
  287 007a B1F1EF3F 		cmp	r1, #-269488145
  288 007e F0D0     		beq	.L2
  170:./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c ****                                 }
- 289              		.loc 1 170 37 is_stmt 1 view .LVU92
+ 289              		.loc 1 170 37 is_stmt 1 view .LVU91
  170:./Middlewares/ST/threadx/common/src/tx_thread_stack_analyze.c ****                                 }
- 290              		.loc 1 170 79 is_stmt 0 view .LVU93
+ 290              		.loc 1 170 79 is_stmt 0 view .LVU92
  291 0080 C0F8A820 		str	r2, [r0, #168]
  292 0084 EDE7     		b	.L2
  293              	.L15:
@@ -1187,13 +1186,13 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccgQxr6r.s 			page 1
  300              		.text
  301              	.Letext0:
  302              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccgQxr6r.s 			page 21
+ARM GAS  /tmp/ccDgnMp9.s 			page 21
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 tx_thread_stack_analyze.c
-C:\Users\Dennis\AppData\Local\Temp\ccgQxr6r.s:20     .text._tx_thread_stack_analyze:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccgQxr6r.s:26     .text._tx_thread_stack_analyze:00000000 _tx_thread_stack_analyze
-C:\Users\Dennis\AppData\Local\Temp\ccgQxr6r.s:296    .text._tx_thread_stack_analyze:00000088 $d
+     /tmp/ccDgnMp9.s:21     .text._tx_thread_stack_analyze:00000000 $t
+     /tmp/ccDgnMp9.s:27     .text._tx_thread_stack_analyze:00000000 _tx_thread_stack_analyze
+     /tmp/ccDgnMp9.s:296    .text._tx_thread_stack_analyze:00000088 $d
 
 NO UNDEFINED SYMBOLS

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccvKpj8e.s 			page 1
+ARM GAS  /tmp/ccGc9xRT.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,16 +19,16 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccvKpj8e.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text._ux_utility_descriptor_parse,"ax",%progbits
-  20              		.align	1
-  21              		.global	_ux_utility_descriptor_parse
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
-  26              	_ux_utility_descriptor_parse:
-  27              	.LVL0:
-  28              	.LFB11:
-  29              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c"
+  19              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c"
+  20              		.section	.text._ux_utility_descriptor_parse,"ax",%progbits
+  21              		.align	1
+  22              		.global	_ux_utility_descriptor_parse
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	_ux_utility_descriptor_parse:
+  28              	.LVL0:
+  29              	.LFB11:
    1:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c **** /**************************************************************************/
    2:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c **** /*                                                                        */
    3:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccvKpj8e.s 			page 1
   27:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c **** 
   28:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c **** #include "ux_api.h"
   29:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccvKpj8e.s 			page 2
+ARM GAS  /tmp/ccGc9xRT.s 			page 2
 
 
   30:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccvKpj8e.s 			page 1
   34              		.loc 1 79 1 is_stmt 0 view .LVU1
   35 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
   36              	.LCFI0:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccvKpj8e.s 			page 3
+ARM GAS  /tmp/ccGc9xRT.s 			page 3
 
 
   37              		.cfi_def_cfa_offset 24
@@ -138,7 +138,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccvKpj8e.s 			page 1
   48              		.loc 1 82 10 is_stmt 0 view .LVU3
   49 0008 06E0     		b	.L2
   50              	.LVL1:
-  51              	.L3:
+  51              	.L9:
   83:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c ****     {
   84:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c **** 
   85:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c ****         /* Get the length of that component.  */
@@ -150,27 +150,27 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccvKpj8e.s 			page 1
   91:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c ****         case 4:
   92:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c **** 
   93:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c ****             *((ULONG *) descriptor) =  _ux_utility_long_get(raw_descriptor);
+  52              		.loc 1 93 13 is_stmt 1 view .LVU4
+  53              		.loc 1 93 40 is_stmt 0 view .LVU5
+  54 000a 3046     		mov	r0, r6
+  55 000c FFF7FEFF 		bl	_ux_utility_long_get
+  56              	.LVL2:
+  57              		.loc 1 93 37 discriminator 1 view .LVU6
+  58 0010 2860     		str	r0, [r5]
   94:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c ****             raw_descriptor +=  4;
+  59              		.loc 1 94 13 is_stmt 1 view .LVU7
+  60              		.loc 1 94 28 is_stmt 0 view .LVU8
+  61 0012 0436     		adds	r6, r6, #4
+  62              	.LVL3:
   95:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c ****             break;                   
+  63              		.loc 1 95 13 is_stmt 1 view .LVU9
+  64              	.L5:
   96:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c **** 
   97:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c ****         case 2:
   98:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c **** 
   99:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c ****             *((ULONG *) descriptor) = (ULONG) _ux_utility_short_get(raw_descriptor);
-  52              		.loc 1 99 13 is_stmt 1 view .LVU4
-  53              		.loc 1 99 47 is_stmt 0 view .LVU5
-  54 000a 3046     		mov	r0, r6
-  55 000c FFF7FEFF 		bl	_ux_utility_short_get
-  56              	.LVL2:
-  57              		.loc 1 99 37 view .LVU6
-  58 0010 2860     		str	r0, [r5]
  100:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c ****             raw_descriptor += 2;
-  59              		.loc 1 100 13 is_stmt 1 view .LVU7
-  60              		.loc 1 100 28 is_stmt 0 view .LVU8
-  61 0012 0236     		adds	r6, r6, #2
-  62              	.LVL3:
  101:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c ****             break;                   
-  63              		.loc 1 101 13 is_stmt 1 view .LVU9
-  64              	.L5:
  102:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c **** 
  103:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c ****         default:
  104:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c **** 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccvKpj8e.s 			page 1
  106:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c ****             raw_descriptor++;
  107:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c ****         }
  108:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccvKpj8e.s 			page 4
+ARM GAS  /tmp/ccGc9xRT.s 			page 4
 
 
  109:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c ****         /* Add the size of the component to the destination.  */
@@ -193,13 +193,13 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccvKpj8e.s 			page 1
   71              	.LVL5:
   72              	.L2:
   82:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c ****     {
-  73              		.loc 1 82 10 is_stmt 1 view .LVU13
+  73              		.loc 1 82 11 is_stmt 1 view .LVU13
   82:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c ****     {
   74              		.loc 1 82 29 is_stmt 0 view .LVU14
   75 0018 571E     		subs	r7, r2, #1
   76              	.LVL6:
   82:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c ****     {
-  77              		.loc 1 82 10 view .LVU15
+  77              		.loc 1 82 11 view .LVU15
   78 001a 7AB1     		cbz	r2, .L8
   86:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c ****         {
   79              		.loc 1 86 9 is_stmt 1 view .LVU16
@@ -211,46 +211,46 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccvKpj8e.s 			page 1
   86:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c ****         {
   84              		.loc 1 86 9 view .LVU18
   85 0020 022B     		cmp	r3, #2
-  86 0022 F2D0     		beq	.L3
+  86 0022 05D0     		beq	.L3
   87 0024 042B     		cmp	r3, #4
-  88 0026 05D1     		bne	.L4
-  93:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c ****             raw_descriptor +=  4;
-  89              		.loc 1 93 13 is_stmt 1 view .LVU19
-  93:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c ****             raw_descriptor +=  4;
-  90              		.loc 1 93 40 is_stmt 0 view .LVU20
-  91 0028 3046     		mov	r0, r6
-  92 002a FFF7FEFF 		bl	_ux_utility_long_get
-  93              	.LVL9:
-  93:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c ****             raw_descriptor +=  4;
-  94              		.loc 1 93 37 view .LVU21
-  95 002e 2860     		str	r0, [r5]
-  94:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c ****             break;                   
-  96              		.loc 1 94 13 is_stmt 1 view .LVU22
-  94:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c ****             break;                   
-  97              		.loc 1 94 28 is_stmt 0 view .LVU23
-  98 0030 0436     		adds	r6, r6, #4
-  99              	.LVL10:
-  95:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c **** 
- 100              		.loc 1 95 13 is_stmt 1 view .LVU24
- 101 0032 EFE7     		b	.L5
- 102              	.L4:
+  88 0026 F0D0     		beq	.L9
  105:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c ****             raw_descriptor++;
- 103              		.loc 1 105 13 view .LVU25
+  89              		.loc 1 105 13 is_stmt 1 view .LVU19
  105:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c ****             raw_descriptor++;
- 104              		.loc 1 105 48 is_stmt 0 view .LVU26
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccvKpj8e.s 			page 5
-
-
- 105 0034 16F8013B 		ldrb	r3, [r6], #1	@ zero_extendqisi2
- 106              	.LVL11:
+  90              		.loc 1 105 48 is_stmt 0 view .LVU20
+  91 0028 16F8013B 		ldrb	r3, [r6], #1	@ zero_extendqisi2
+  92              	.LVL9:
  105:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c ****             raw_descriptor++;
- 107              		.loc 1 105 37 view .LVU27
- 108 0038 2B60     		str	r3, [r5]
+  93              		.loc 1 105 37 view .LVU21
+  94 002c 2B60     		str	r3, [r5]
  106:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c ****         }
- 109              		.loc 1 106 13 is_stmt 1 view .LVU28
+  95              		.loc 1 106 13 is_stmt 1 view .LVU22
+  96              	.LVL10:
+ 106:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c ****         }
+  97              		.loc 1 106 13 is_stmt 0 view .LVU23
+  98 002e F1E7     		b	.L5
+  99              	.L3:
+  99:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c ****             raw_descriptor += 2;
+ 100              		.loc 1 99 13 is_stmt 1 view .LVU24
+  99:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c ****             raw_descriptor += 2;
+ 101              		.loc 1 99 47 is_stmt 0 view .LVU25
+ 102 0030 3046     		mov	r0, r6
+ 103 0032 FFF7FEFF 		bl	_ux_utility_short_get
+ 104              	.LVL11:
+  99:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c ****             raw_descriptor += 2;
+ARM GAS  /tmp/ccGc9xRT.s 			page 5
+
+
+ 105              		.loc 1 99 37 discriminator 1 view .LVU26
+ 106 0036 2860     		str	r0, [r5]
+ 100:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c ****             break;                   
+ 107              		.loc 1 100 13 is_stmt 1 view .LVU27
+ 100:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c ****             break;                   
+ 108              		.loc 1 100 28 is_stmt 0 view .LVU28
+ 109 0038 0236     		adds	r6, r6, #2
  110              	.LVL12:
- 106:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c ****         }
- 111              		.loc 1 106 13 is_stmt 0 view .LVU29
+ 101:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c **** 
+ 111              		.loc 1 101 13 is_stmt 1 view .LVU29
  112 003a EBE7     		b	.L5
  113              	.L8:
  111:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c ****     }
@@ -258,7 +258,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccvKpj8e.s 			page 1
  113:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c ****     /* Return to caller.  */
  114:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c ****     return;
  115:./Middlewares/ST/usbx/common/core/src/ux_utility_descriptor_parse.c **** }
- 114              		.loc 1 115 1 view .LVU30
+ 114              		.loc 1 115 1 is_stmt 0 view .LVU30
  115 003c F8BD     		pop	{r3, r4, r5, r6, r7, pc}
  116              		.loc 1 115 1 view .LVU31
  117              		.cfi_endproc
@@ -267,14 +267,14 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccvKpj8e.s 			page 1
  121              	.Letext0:
  122              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
  123              		.file 3 "./Middlewares/ST/usbx/common/core/inc/ux_utility.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccvKpj8e.s 			page 6
+ARM GAS  /tmp/ccGc9xRT.s 			page 6
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 ux_utility_descriptor_parse.c
-C:\Users\Dennis\AppData\Local\Temp\ccvKpj8e.s:20     .text._ux_utility_descriptor_parse:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccvKpj8e.s:26     .text._ux_utility_descriptor_parse:00000000 _ux_utility_descriptor_parse
+     /tmp/ccGc9xRT.s:21     .text._ux_utility_descriptor_parse:00000000 $t
+     /tmp/ccGc9xRT.s:27     .text._ux_utility_descriptor_parse:00000000 _ux_utility_descriptor_parse
 
 UNDEFINED SYMBOLS
-_ux_utility_short_get
 _ux_utility_long_get
+_ux_utility_short_get

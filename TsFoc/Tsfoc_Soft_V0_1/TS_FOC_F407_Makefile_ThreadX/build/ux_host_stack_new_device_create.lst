@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccl1i3xe.s 			page 1
+ARM GAS  /tmp/ccIFGwf3.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,31 +19,31 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccl1i3xe.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.rodata._ux_host_stack_new_device_create.str1.4,"aMS",%progbits,1
-  20              		.align	2
-  21              	.LC0:
-  22 0000 75785F68 		.ascii	"ux_host_endpoint0_semaphore\000"
-  22      6F73745F 
-  22      656E6470 
-  22      6F696E74 
-  22      305F7365 
-  23              		.align	2
-  24              	.LC1:
-  25 001c 75785F68 		.ascii	"ux_host_transfer_request_semaphore\000"
-  25      6F73745F 
-  25      7472616E 
-  25      73666572 
-  25      5F726571 
-  26              		.section	.text._ux_host_stack_new_device_create,"ax",%progbits
-  27              		.align	1
-  28              		.global	_ux_host_stack_new_device_create
-  29              		.syntax unified
-  30              		.thumb
-  31              		.thumb_func
-  33              	_ux_host_stack_new_device_create:
-  34              	.LVL0:
-  35              	.LFB11:
-  36              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c"
+  19              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c"
+  20              		.section	.rodata._ux_host_stack_new_device_create.str1.4,"aMS",%progbits,1
+  21              		.align	2
+  22              	.LC0:
+  23 0000 75785F68 		.ascii	"ux_host_endpoint0_semaphore\000"
+  23      6F73745F 
+  23      656E6470 
+  23      6F696E74 
+  23      305F7365 
+  24              		.align	2
+  25              	.LC1:
+  26 001c 75785F68 		.ascii	"ux_host_transfer_request_semaphore\000"
+  26      6F73745F 
+  26      7472616E 
+  26      73666572 
+  26      5F726571 
+  27              		.section	.text._ux_host_stack_new_device_create,"ax",%progbits
+  28              		.align	1
+  29              		.global	_ux_host_stack_new_device_create
+  30              		.syntax unified
+  31              		.thumb
+  32              		.thumb_func
+  34              	_ux_host_stack_new_device_create:
+  35              	.LVL0:
+  36              	.LFB11:
    1:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c **** /**************************************************************************/
    2:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c **** /*                                                                        */
    3:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccl1i3xe.s 			page 1
   12:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c **** 
   13:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c **** /**************************************************************************/
   14:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c **** /**************************************************************************/
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccl1i3xe.s 			page 2
+ARM GAS  /tmp/ccIFGwf3.s 			page 2
 
 
   15:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c **** /**                                                                       */
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccl1i3xe.s 			page 1
   69:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c **** /*    An Error code could be an indication that the device could not be   */
   70:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c **** /*    created in which case the error is fatal to the enumeration and     */
   71:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c **** /*    will not be retried. The error code can also indicate a failure     */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccl1i3xe.s 			page 3
+ARM GAS  /tmp/ccIFGwf3.s 			page 3
 
 
   72:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c **** /*    for the device to respond to the GET_DEVICE_DESCRIPTOR. This error  */
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccl1i3xe.s 			page 1
   47              		.cfi_offset 6, -16
   48              		.cfi_offset 7, -12
   49              		.cfi_offset 8, -8
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccl1i3xe.s 			page 4
+ARM GAS  /tmp/ccIFGwf3.s 			page 4
 
 
   50              		.cfi_offset 14, -4
@@ -202,7 +202,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccl1i3xe.s 			page 1
   58              	.LVL1:
   59              		.loc 1 125 8 view .LVU7
   60 0008 7F2B     		cmp	r3, #127
-  61 000a 4AD8     		bhi	.L11
+  61 000a 57D8     		bhi	.L10
   62 000c 0546     		mov	r5, r0
   63 000e 8846     		mov	r8, r1
   64 0010 1746     		mov	r7, r2
@@ -229,7 +229,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccl1i3xe.s 			page 1
   70              		.loc 1 140 8 is_stmt 0 view .LVU11
   71 0016 0446     		mov	r4, r0
   72 0018 0028     		cmp	r0, #0
-  73 001a 49D0     		beq	.L12
+  73 001a 56D0     		beq	.L11
  141:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****     {
  142:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c **** 
  143:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****         /* Error trap. */
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccl1i3xe.s 			page 1
  146:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****         /* If trace is enabled, insert this event into the trace buffer.  */
  147:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****         UX_TRACE_IN_LINE_INSERT(UX_TRACE_ERROR, UX_TOO_MANY_DEVICES, 0, 0, 0, UX_TRACE_ERRORS, 0, 0
  148:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccl1i3xe.s 			page 5
+ARM GAS  /tmp/ccIFGwf3.s 			page 5
 
 
  149:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****         return(UX_TOO_MANY_DEVICES);
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccl1i3xe.s 			page 1
  170:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****     UX_DEVICE_HCD_SET(device, hcd);
  107              		.loc 1 170 5 view .LVU31
  108              		.loc 1 170 5 view .LVU32
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccl1i3xe.s 			page 6
+ARM GAS  /tmp/ccIFGwf3.s 			page 6
 
 
  109 003c C0F81451 		str	r5, [r0, #276]
@@ -318,7 +318,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccl1i3xe.s 			page 1
  176:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****     status =  _ux_host_semaphore_create(&device -> ux_device_protection_semaphore, "ux_host_endpoin
  118              		.loc 1 176 5 is_stmt 1 view .LVU39
  119              		.loc 1 176 15 is_stmt 0 view .LVU40
- 120 0046 2B49     		ldr	r1, .L15
+ 120 0046 2949     		ldr	r1, .L13
  121 0048 1C30     		adds	r0, r0, #28
  122              	.LVL3:
  123              		.loc 1 176 15 view .LVU41
@@ -330,7 +330,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccl1i3xe.s 			page 1
  126              		.loc 1 179 5 is_stmt 1 view .LVU42
  127              		.loc 1 179 8 is_stmt 0 view .LVU43
  128 004e 0028     		cmp	r0, #0
- 129 0050 4AD1     		bne	.L8
+ 129 0050 46D1     		bne	.L7
  180:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****     {
  181:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c **** 
  182:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****         /* Return error. Device resources that have been allocated until this
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccl1i3xe.s 			page 1
  141              		.loc 1 192 5 is_stmt 1 view .LVU50
  142              		.loc 1 192 47 is_stmt 0 view .LVU51
  143 005e C4F8A420 		str	r2, [r4, #164]
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccl1i3xe.s 			page 7
+ARM GAS  /tmp/ccIFGwf3.s 			page 7
 
 
  193:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****     control_endpoint -> ux_endpoint_device =         device;
@@ -374,7 +374,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccl1i3xe.s 			page 1
  197:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****     status =  _ux_host_semaphore_create(&control_endpoint -> ux_endpoint_transfer_request.ux_transf
  150              		.loc 1 197 5 is_stmt 1 view .LVU56
  151              		.loc 1 197 15 is_stmt 0 view .LVU57
- 152 006a 2349     		ldr	r1, .L15+4
+ 152 006a 2149     		ldr	r1, .L13+4
  153 006c 04F1F000 		add	r0, r4, #240
  154              	.LVL6:
  155              		.loc 1 197 15 view .LVU58
@@ -385,8 +385,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccl1i3xe.s 			page 1
  200:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****     if (status != UX_SUCCESS)
  158              		.loc 1 200 5 is_stmt 1 view .LVU59
  159              		.loc 1 200 8 is_stmt 0 view .LVU60
- 160 0074 0028     		cmp	r0, #0
- 161 0076 3AD1     		bne	.L9
+ 160 0074 B8BB     		cbnz	r0, .L8
  201:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****     {
  202:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c **** 
  203:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****         /* Return error. Device resources that have been allocated until this
@@ -397,35 +396,35 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccl1i3xe.s 			page 1
  208:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****     /* If the device is running in high speed the default max packet size for the control endpoint 
  209:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****        All other speeds the size is 8.  */
  210:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****     if (device_speed == UX_HIGH_SPEED_DEVICE)
- 162              		.loc 1 210 5 is_stmt 1 view .LVU61
- 163              		.loc 1 210 8 is_stmt 0 view .LVU62
- 164 0078 022E     		cmp	r6, #2
- 165 007a 20D0     		beq	.L13
+ 161              		.loc 1 210 5 is_stmt 1 view .LVU61
+ 162              		.loc 1 210 8 is_stmt 0 view .LVU62
+ 163 0076 022E     		cmp	r6, #2
+ 164 0078 2ED0     		beq	.L12
  211:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****         control_endpoint -> ux_endpoint_descriptor.wMaxPacketSize =  UX_DEFAULT_HS_MPS;
  212:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****     else
  213:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****         control_endpoint -> ux_endpoint_descriptor.wMaxPacketSize =  UX_DEFAULT_MPS;
- 166              		.loc 1 213 9 is_stmt 1 view .LVU63
- 167              		.loc 1 213 67 is_stmt 0 view .LVU64
- 168 007c 0823     		movs	r3, #8
- 169 007e C4F89830 		str	r3, [r4, #152]
- 170              	.L6:
+ 165              		.loc 1 213 9 is_stmt 1 view .LVU63
+ 166              		.loc 1 213 67 is_stmt 0 view .LVU64
+ 167 007a 0823     		movs	r3, #8
+ 168 007c C4F89830 		str	r3, [r4, #152]
+ 169              	.L6:
  214:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c **** 
  215:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****     /* Create the default control endpoint at the HCD level.  */
  216:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****     status =  hcd -> ux_hcd_entry_function(hcd, UX_HCD_CREATE_ENDPOINT, (VOID *) control_endpoint);
- 171              		.loc 1 216 5 is_stmt 1 view .LVU65
- 172              		.loc 1 216 19 is_stmt 0 view .LVU66
- 173 0082 2B6F     		ldr	r3, [r5, #112]
- 174              		.loc 1 216 15 view .LVU67
- 175 0084 3A46     		mov	r2, r7
- 176 0086 0E21     		movs	r1, #14
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccl1i3xe.s 			page 8
+ 170              		.loc 1 216 5 is_stmt 1 view .LVU65
+ 171              		.loc 1 216 19 is_stmt 0 view .LVU66
+ 172 0080 2B6F     		ldr	r3, [r5, #112]
+ 173              		.loc 1 216 15 view .LVU67
+ 174 0082 3A46     		mov	r2, r7
+ 175 0084 0E21     		movs	r1, #14
+ 176 0086 2846     		mov	r0, r5
+ARM GAS  /tmp/ccIFGwf3.s 			page 8
 
 
- 177 0088 2846     		mov	r0, r5
- 178              	.LVL8:
- 179              		.loc 1 216 15 view .LVU68
- 180 008a 9847     		blx	r3
- 181              	.LVL9:
+ 177              	.LVL8:
+ 178              		.loc 1 216 15 view .LVU68
+ 179 0088 9847     		blx	r3
+ 180              	.LVL9:
  217:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c **** 
  218:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c **** #if defined(UX_HOST_STANDALONE)
  219:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****     if (status == UX_SUCCESS)
@@ -449,44 +448,74 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccl1i3xe.s 			page 1
  237:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c **** 
  238:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****     /* Going on to do enumeration (requests).  */
  239:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****     if (status == UX_SUCCESS)
- 182              		.loc 1 239 5 is_stmt 1 view .LVU69
- 183              		.loc 1 239 8 is_stmt 0 view .LVU70
- 184 008c D8B1     		cbz	r0, .L14
- 185              	.L7:
+ 181              		.loc 1 239 5 is_stmt 1 view .LVU69
+ 182              		.loc 1 239 8 is_stmt 0 view .LVU70
+ 183 008a 50BB     		cbnz	r0, .L1
  240:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****     {
  241:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c **** 
  242:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****         /* Now control endpoint is ready, set state to running. */
  243:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****         control_endpoint -> ux_endpoint_state =          UX_ENDPOINT_RUNNING;
+ 184              		.loc 1 243 9 is_stmt 1 view .LVU71
+ 185              		.loc 1 243 47 is_stmt 0 view .LVU72
+ 186 008c 0123     		movs	r3, #1
+ 187 008e C4F88030 		str	r3, [r4, #128]
  244:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c **** 
  245:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****         /* Set the address of the device. The first time a USB device is
  246:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****            accessed, it responds to the address 0. We need to change the address
  247:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****            to a free device address between 1 and 127 ASAP.  */
  248:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****         status =  _ux_host_stack_device_address_set(device);
+ 188              		.loc 1 248 9 is_stmt 1 view .LVU73
+ 189              		.loc 1 248 19 is_stmt 0 view .LVU74
+ 190 0092 2046     		mov	r0, r4
+ 191              	.LVL10:
+ 192              		.loc 1 248 19 view .LVU75
+ 193 0094 FFF7FEFF 		bl	_ux_host_stack_device_address_set
+ 194              	.LVL11:
  249:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****         if (status == UX_SUCCESS)
+ 195              		.loc 1 249 9 is_stmt 1 view .LVU76
+ 196              		.loc 1 249 12 is_stmt 0 view .LVU77
+ 197 0098 18BB     		cbnz	r0, .L1
  250:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****         {
  251:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c **** 
  252:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****             /* Get the device descriptor.  */
+ARM GAS  /tmp/ccIFGwf3.s 			page 9
+
+
  253:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****             status =  _ux_host_stack_device_descriptor_read(device);
+ 198              		.loc 1 253 13 is_stmt 1 view .LVU78
+ 199              		.loc 1 253 23 is_stmt 0 view .LVU79
+ 200 009a 2046     		mov	r0, r4
+ 201              	.LVL12:
+ 202              		.loc 1 253 23 view .LVU80
+ 203 009c FFF7FEFF 		bl	_ux_host_stack_device_descriptor_read
+ 204              	.LVL13:
  254:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****             if (status == UX_SUCCESS)
+ 205              		.loc 1 254 13 is_stmt 1 view .LVU81
+ 206              		.loc 1 254 16 is_stmt 0 view .LVU82
+ 207 00a0 F8B9     		cbnz	r0, .L1
  255:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****             {
  256:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c **** 
  257:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****                 /* Get the configuration descriptor(s) for the device
  258:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****                    and parse all the configuration, interface, endpoints...  */
  259:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****                 status =  _ux_host_stack_configuration_enumerate(device);
+ 208              		.loc 1 259 17 is_stmt 1 view .LVU83
+ 209              		.loc 1 259 27 is_stmt 0 view .LVU84
+ 210 00a2 2046     		mov	r0, r4
+ 211              	.LVL14:
+ 212              		.loc 1 259 27 view .LVU85
+ 213 00a4 FFF7FEFF 		bl	_ux_host_stack_configuration_enumerate
+ 214              	.LVL15:
  260:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****             }
  261:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****         }
  262:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****     }
  263:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c **** 
  264:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****     /* Check the status of the previous operations. If there was an
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccl1i3xe.s 			page 9
-
-
  265:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****        error during any of the phases, the device resources must be
  266:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****        freed based on if we want to retry.  */
  267:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****     if (status == UX_SUCCESS)
- 186              		.loc 1 267 5 is_stmt 1 view .LVU71
- 187              		.loc 1 267 8 is_stmt 0 view .LVU72
- 188 008e 60BB     		cbnz	r0, .L1
+ 215              		.loc 1 267 5 is_stmt 1 view .LVU86
+ 216              		.loc 1 267 8 is_stmt 0 view .LVU87
+ 217 00a8 D8B9     		cbnz	r0, .L1
  268:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****     {
  269:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c **** 
  270:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****         /* The device, configuration(s), interface(s), endpoint(s) are
@@ -494,146 +523,94 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccl1i3xe.s 			page 1
  272:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****            yet. First we need to find a class driver that wants to own
  273:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****            it. There is no need to have an orphan device in a configured state.   */
  274:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****         status =  _ux_host_stack_class_device_scan(device);
- 189              		.loc 1 274 9 is_stmt 1 view .LVU73
- 190              		.loc 1 274 19 is_stmt 0 view .LVU74
- 191 0090 2046     		mov	r0, r4
- 192              	.LVL10:
- 193              		.loc 1 274 19 view .LVU75
- 194 0092 FFF7FEFF 		bl	_ux_host_stack_class_device_scan
- 195              	.LVL11:
+ 218              		.loc 1 274 9 is_stmt 1 view .LVU88
+ 219              		.loc 1 274 19 is_stmt 0 view .LVU89
+ 220 00aa 2046     		mov	r0, r4
+ 221              	.LVL16:
+ 222              		.loc 1 274 19 view .LVU90
+ 223 00ac FFF7FEFF 		bl	_ux_host_stack_class_device_scan
+ 224              	.LVL17:
  275:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****         if (status == UX_NO_CLASS_MATCH)
- 196              		.loc 1 275 9 is_stmt 1 view .LVU76
- 197              		.loc 1 275 12 is_stmt 0 view .LVU77
- 198 0096 5728     		cmp	r0, #87
- 199 0098 27D1     		bne	.L1
+ 225              		.loc 1 275 9 is_stmt 1 view .LVU91
+ 226              		.loc 1 275 12 is_stmt 0 view .LVU92
+ 227 00b0 5728     		cmp	r0, #87
+ 228 00b2 16D1     		bne	.L1
  276:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****         {
  277:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c **** 
  278:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****             status =  _ux_host_stack_class_interface_scan(device);
- 200              		.loc 1 278 13 is_stmt 1 view .LVU78
- 201              		.loc 1 278 23 is_stmt 0 view .LVU79
- 202 009a 2046     		mov	r0, r4
- 203              	.LVL12:
- 204              		.loc 1 278 23 view .LVU80
- 205 009c FFF7FEFF 		bl	_ux_host_stack_class_interface_scan
- 206              	.LVL13:
- 207              		.loc 1 278 23 view .LVU81
- 208 00a0 23E0     		b	.L1
- 209              	.LVL14:
- 210              	.L11:
+ARM GAS  /tmp/ccIFGwf3.s 			page 10
+
+
+ 229              		.loc 1 278 13 is_stmt 1 view .LVU93
+ 230              		.loc 1 278 23 is_stmt 0 view .LVU94
+ 231 00b4 2046     		mov	r0, r4
+ 232              	.LVL18:
+ 233              		.loc 1 278 23 view .LVU95
+ 234 00b6 FFF7FEFF 		bl	_ux_host_stack_class_interface_scan
+ 235              	.LVL19:
+ 236              		.loc 1 278 23 view .LVU96
+ 237 00ba 12E0     		b	.L1
+ 238              	.LVL20:
+ 239              	.L10:
  129:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c **** 
- 211              		.loc 1 129 9 is_stmt 1 view .LVU82
- 212 00a2 1122     		movs	r2, #17
- 213              	.LVL15:
+ 240              		.loc 1 129 9 is_stmt 1 view .LVU97
+ 241 00bc 1122     		movs	r2, #17
+ 242              	.LVL21:
  129:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c **** 
- 214              		.loc 1 129 9 is_stmt 0 view .LVU83
- 215 00a4 0421     		movs	r1, #4
- 216              	.LVL16:
+ 243              		.loc 1 129 9 is_stmt 0 view .LVU98
+ 244 00be 0421     		movs	r1, #4
+ 245              	.LVL22:
  129:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c **** 
- 217              		.loc 1 129 9 view .LVU84
- 218 00a6 0220     		movs	r0, #2
- 219              	.LVL17:
+ 246              		.loc 1 129 9 view .LVU99
+ 247 00c0 0220     		movs	r0, #2
+ 248              	.LVL23:
  129:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c **** 
- 220              		.loc 1 129 9 view .LVU85
- 221 00a8 FFF7FEFF 		bl	_ux_system_error_handler
- 222              	.LVL18:
+ 249              		.loc 1 129 9 view .LVU100
+ 250 00c2 FFF7FEFF 		bl	_ux_system_error_handler
+ 251              	.LVL24:
  134:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****     }
- 223              		.loc 1 134 9 is_stmt 1 view .LVU86
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccl1i3xe.s 			page 10
-
-
+ 252              		.loc 1 134 9 is_stmt 1 view .LVU101
  134:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****     }
- 224              		.loc 1 134 15 is_stmt 0 view .LVU87
- 225 00ac 1120     		movs	r0, #17
- 226 00ae 1CE0     		b	.L1
- 227              	.LVL19:
- 228              	.L12:
+ 253              		.loc 1 134 15 is_stmt 0 view .LVU102
+ 254 00c6 1120     		movs	r0, #17
+ 255 00c8 0BE0     		b	.L1
+ 256              	.LVL25:
+ 257              	.L11:
  144:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c **** 
- 229              		.loc 1 144 9 is_stmt 1 view .LVU88
- 230 00b0 1122     		movs	r2, #17
- 231 00b2 0421     		movs	r1, #4
- 232 00b4 0220     		movs	r0, #2
- 233              	.LVL20:
+ 258              		.loc 1 144 9 is_stmt 1 view .LVU103
+ 259 00ca 1122     		movs	r2, #17
+ 260 00cc 0421     		movs	r1, #4
+ 261 00ce 0220     		movs	r0, #2
+ 262              	.LVL26:
  144:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c **** 
- 234              		.loc 1 144 9 is_stmt 0 view .LVU89
- 235 00b6 FFF7FEFF 		bl	_ux_system_error_handler
- 236              	.LVL21:
+ 263              		.loc 1 144 9 is_stmt 0 view .LVU104
+ 264 00d0 FFF7FEFF 		bl	_ux_system_error_handler
+ 265              	.LVL27:
  149:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****     }
- 237              		.loc 1 149 9 is_stmt 1 view .LVU90
+ 266              		.loc 1 149 9 is_stmt 1 view .LVU105
  149:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****     }
- 238              		.loc 1 149 15 is_stmt 0 view .LVU91
- 239 00ba 1120     		movs	r0, #17
- 240 00bc 15E0     		b	.L1
- 241              	.LVL22:
- 242              	.L13:
+ 267              		.loc 1 149 15 is_stmt 0 view .LVU106
+ 268 00d4 1120     		movs	r0, #17
+ 269 00d6 04E0     		b	.L1
+ 270              	.LVL28:
+ 271              	.L12:
  211:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****     else
- 243              		.loc 1 211 9 is_stmt 1 view .LVU92
+ 272              		.loc 1 211 9 is_stmt 1 view .LVU107
  211:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****     else
- 244              		.loc 1 211 67 is_stmt 0 view .LVU93
- 245 00be 4023     		movs	r3, #64
- 246 00c0 C4F89830 		str	r3, [r4, #152]
- 247 00c4 DDE7     		b	.L6
- 248              	.L14:
- 243:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c **** 
- 249              		.loc 1 243 9 is_stmt 1 view .LVU94
- 243:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c **** 
- 250              		.loc 1 243 47 is_stmt 0 view .LVU95
- 251 00c6 0123     		movs	r3, #1
- 252 00c8 C4F88030 		str	r3, [r4, #128]
- 248:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****         if (status == UX_SUCCESS)
- 253              		.loc 1 248 9 is_stmt 1 view .LVU96
- 248:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****         if (status == UX_SUCCESS)
- 254              		.loc 1 248 19 is_stmt 0 view .LVU97
- 255 00cc 2046     		mov	r0, r4
- 256              	.LVL23:
- 248:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****         if (status == UX_SUCCESS)
- 257              		.loc 1 248 19 view .LVU98
- 258 00ce FFF7FEFF 		bl	_ux_host_stack_device_address_set
- 259              	.LVL24:
- 249:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****         {
- 260              		.loc 1 249 9 is_stmt 1 view .LVU99
- 249:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****         {
- 261              		.loc 1 249 12 is_stmt 0 view .LVU100
- 262 00d2 0028     		cmp	r0, #0
- 263 00d4 DBD1     		bne	.L7
- 253:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****             if (status == UX_SUCCESS)
- 264              		.loc 1 253 13 is_stmt 1 view .LVU101
- 253:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****             if (status == UX_SUCCESS)
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccl1i3xe.s 			page 11
+ 273              		.loc 1 211 67 is_stmt 0 view .LVU108
+ARM GAS  /tmp/ccIFGwf3.s 			page 11
 
 
- 265              		.loc 1 253 23 is_stmt 0 view .LVU102
- 266 00d6 2046     		mov	r0, r4
- 267              	.LVL25:
- 253:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****             if (status == UX_SUCCESS)
- 268              		.loc 1 253 23 view .LVU103
- 269 00d8 FFF7FEFF 		bl	_ux_host_stack_device_descriptor_read
- 270              	.LVL26:
- 254:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****             {
- 271              		.loc 1 254 13 is_stmt 1 view .LVU104
- 254:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****             {
- 272              		.loc 1 254 16 is_stmt 0 view .LVU105
- 273 00dc 0028     		cmp	r0, #0
- 274 00de D6D1     		bne	.L7
- 259:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****             }
- 275              		.loc 1 259 17 is_stmt 1 view .LVU106
- 259:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****             }
- 276              		.loc 1 259 27 is_stmt 0 view .LVU107
- 277 00e0 2046     		mov	r0, r4
- 278              	.LVL27:
- 259:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****             }
- 279              		.loc 1 259 27 view .LVU108
- 280 00e2 FFF7FEFF 		bl	_ux_host_stack_configuration_enumerate
- 281              	.LVL28:
- 259:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****             }
- 282              		.loc 1 259 27 view .LVU109
- 283 00e6 D2E7     		b	.L7
- 284              	.LVL29:
- 285              	.L8:
+ 274 00d8 4023     		movs	r3, #64
+ 275 00da C4F89830 		str	r3, [r4, #152]
+ 276 00de CFE7     		b	.L6
+ 277              	.LVL29:
+ 278              	.L7:
  184:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****     }
- 286              		.loc 1 184 15 view .LVU110
- 287 00e8 1520     		movs	r0, #21
- 288              	.LVL30:
- 289              	.L1:
+ 279              		.loc 1 184 15 view .LVU109
+ 280 00e0 1520     		movs	r0, #21
+ 281              	.LVL30:
+ 282              	.L1:
  279:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****         }
  280:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c **** 
  281:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****         /* If trace is enabled, register this object.  */
@@ -645,50 +622,47 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccl1i3xe.s 			page 1
  287:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****        allocated until this point should be freed by the caller via _ux_host_stack_device_resources
  288:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****     return(status);
  289:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c **** }
- 290              		.loc 1 289 1 view .LVU111
- 291 00ea BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
- 292              	.LVL31:
- 293              	.L9:
+ 283              		.loc 1 289 1 view .LVU110
+ 284 00e2 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 285              	.LVL31:
+ 286              	.L8:
  205:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****     }
- 294              		.loc 1 205 15 view .LVU112
- 295 00ee 1520     		movs	r0, #21
- 296              	.LVL32:
+ 287              		.loc 1 205 15 view .LVU111
+ 288 00e6 1520     		movs	r0, #21
+ 289              	.LVL32:
  205:./Middlewares/ST/usbx/common/core/src/ux_host_stack_new_device_create.c ****     }
- 297              		.loc 1 205 15 view .LVU113
- 298 00f0 FBE7     		b	.L1
- 299              	.L16:
- 300 00f2 00BF     		.align	2
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccl1i3xe.s 			page 12
-
-
- 301              	.L15:
- 302 00f4 00000000 		.word	.LC0
- 303 00f8 1C000000 		.word	.LC1
- 304              		.cfi_endproc
- 305              	.LFE11:
- 307              		.text
- 308              	.Letext0:
- 309              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
- 310              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
- 311              		.file 4 "./Middlewares/ST/usbx/common/core/inc/ux_api.h"
- 312              		.file 5 "./Middlewares/ST/usbx/common/core/inc/ux_host_stack.h"
- 313              		.file 6 "./Middlewares/ST/usbx/common/core/inc/ux_utility.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccl1i3xe.s 			page 13
+ 290              		.loc 1 205 15 view .LVU112
+ 291 00e8 FBE7     		b	.L1
+ 292              	.L14:
+ 293 00ea 00BF     		.align	2
+ 294              	.L13:
+ 295 00ec 00000000 		.word	.LC0
+ 296 00f0 1C000000 		.word	.LC1
+ 297              		.cfi_endproc
+ 298              	.LFE11:
+ 300              		.text
+ 301              	.Letext0:
+ 302              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
+ 303              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
+ 304              		.file 4 "./Middlewares/ST/usbx/common/core/inc/ux_api.h"
+ 305              		.file 5 "./Middlewares/ST/usbx/common/core/inc/ux_host_stack.h"
+ 306              		.file 6 "./Middlewares/ST/usbx/common/core/inc/ux_utility.h"
+ARM GAS  /tmp/ccIFGwf3.s 			page 12
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 ux_host_stack_new_device_create.c
-C:\Users\Dennis\AppData\Local\Temp\ccl1i3xe.s:20     .rodata._ux_host_stack_new_device_create.str1.4:00000000 $d
-C:\Users\Dennis\AppData\Local\Temp\ccl1i3xe.s:27     .text._ux_host_stack_new_device_create:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccl1i3xe.s:33     .text._ux_host_stack_new_device_create:00000000 _ux_host_stack_new_device_create
-C:\Users\Dennis\AppData\Local\Temp\ccl1i3xe.s:302    .text._ux_host_stack_new_device_create:000000f4 $d
+     /tmp/ccIFGwf3.s:21     .rodata._ux_host_stack_new_device_create.str1.4:00000000 $d
+     /tmp/ccIFGwf3.s:28     .text._ux_host_stack_new_device_create:00000000 $t
+     /tmp/ccIFGwf3.s:34     .text._ux_host_stack_new_device_create:00000000 _ux_host_stack_new_device_create
+     /tmp/ccIFGwf3.s:295    .text._ux_host_stack_new_device_create:000000ec $d
 
 UNDEFINED SYMBOLS
 _ux_host_stack_new_device_get
 _ux_utility_semaphore_create
-_ux_host_stack_class_device_scan
-_ux_host_stack_class_interface_scan
-_ux_system_error_handler
 _ux_host_stack_device_address_set
 _ux_host_stack_device_descriptor_read
 _ux_host_stack_configuration_enumerate
+_ux_host_stack_class_device_scan
+_ux_host_stack_class_interface_scan
+_ux_system_error_handler

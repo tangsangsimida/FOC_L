@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccIeojZr.s 			page 1
+ARM GAS  /tmp/ccHBffgZ.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,16 +19,16 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccIeojZr.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text._ux_host_stack_class_get,"ax",%progbits
-  20              		.align	1
-  21              		.global	_ux_host_stack_class_get
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
-  26              	_ux_host_stack_class_get:
-  27              	.LVL0:
-  28              	.LFB11:
-  29              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_get.c"
+  19              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_get.c"
+  20              		.section	.text._ux_host_stack_class_get,"ax",%progbits
+  21              		.align	1
+  22              		.global	_ux_host_stack_class_get
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	_ux_host_stack_class_get:
+  28              	.LVL0:
+  29              	.LFB11:
    1:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_get.c **** /**************************************************************************/
    2:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_get.c **** /*                                                                        */
    3:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_get.c **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccIeojZr.s 			page 1
   27:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_get.c **** 
   28:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_get.c **** #include "ux_api.h"
   29:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_get.c **** #include "ux_host_stack.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccIeojZr.s 			page 2
+ARM GAS  /tmp/ccHBffgZ.s 			page 2
 
 
   30:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_get.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccIeojZr.s 			page 1
   84:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_get.c **** {
   30              		.loc 1 84 1 view -0
   31              		.cfi_startproc
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccIeojZr.s 			page 3
+ARM GAS  /tmp/ccHBffgZ.s 			page 3
 
 
   32              		@ args = 0, pretend = 0, frame = 8
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccIeojZr.s 			page 1
   67              		.loc 1 103 5 is_stmt 1 view .LVU12
   68              		.loc 1 103 34 is_stmt 0 view .LVU13
   69 0018 0E4B     		ldr	r3, .L8
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccIeojZr.s 			page 4
+ARM GAS  /tmp/ccHBffgZ.s 			page 4
 
 
   70 001a 1B68     		ldr	r3, [r3]
@@ -216,70 +216,68 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccIeojZr.s 			page 1
  127:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_get.c **** #if UX_MAX_CLASS_DRIVER > 1
  128:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_get.c ****         /* Move to the next class.  */
  129:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_get.c ****         class_ptr++;
-  79              		.loc 1 129 9 is_stmt 1 discriminator 2 view .LVU17
-  80              		.loc 1 129 18 is_stmt 0 discriminator 2 view .LVU18
+  79              		.loc 1 129 9 is_stmt 1 view .LVU17
+  80              		.loc 1 129 18 is_stmt 0 view .LVU18
   81 0020 5835     		adds	r5, r5, #88
   82              	.LVL5:
  107:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_get.c ****     {
-  83              		.loc 1 107 86 is_stmt 1 discriminator 2 view .LVU19
+  83              		.loc 1 107 97 is_stmt 1 discriminator 2 view .LVU19
+  84 0022 0134     		adds	r4, r4, #1
+  85              	.LVL6:
+  86              	.L3:
  107:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_get.c ****     {
-  84              		.loc 1 107 97 is_stmt 0 discriminator 2 view .LVU20
-  85 0022 0134     		adds	r4, r4, #1
-  86              	.LVL6:
-  87              	.L3:
+  87              		.loc 1 107 39 discriminator 1 view .LVU20
  107:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_get.c ****     {
-  88              		.loc 1 107 27 is_stmt 1 discriminator 1 view .LVU21
+  88              		.loc 1 107 57 is_stmt 0 discriminator 1 view .LVU21
+  89 0024 0B4B     		ldr	r3, .L8
+  90 0026 1B68     		ldr	r3, [r3]
+  91 0028 1B68     		ldr	r3, [r3]
  107:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_get.c ****     {
-  89              		.loc 1 107 57 is_stmt 0 discriminator 1 view .LVU22
-  90 0024 0B4B     		ldr	r3, .L8
-  91 0026 1B68     		ldr	r3, [r3]
-  92 0028 1B68     		ldr	r3, [r3]
- 107:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_get.c ****     {
-  93              		.loc 1 107 5 discriminator 1 view .LVU23
-  94 002a A342     		cmp	r3, r4
-  95 002c 0DD9     		bls	.L7
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccIeojZr.s 			page 5
+  92              		.loc 1 107 39 discriminator 1 view .LVU22
+  93 002a A342     		cmp	r3, r4
+  94 002c 0DD9     		bls	.L7
+ 112:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_get.c ****         {
+  95              		.loc 1 112 9 is_stmt 1 view .LVU23
+ARM GAS  /tmp/ccHBffgZ.s 			page 5
 
 
  112:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_get.c ****         {
-  96              		.loc 1 112 9 is_stmt 1 view .LVU24
+  96              		.loc 1 112 23 is_stmt 0 view .LVU24
+  97 002e 2B6C     		ldr	r3, [r5, #64]
  112:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_get.c ****         {
-  97              		.loc 1 112 23 is_stmt 0 view .LVU25
-  98 002e 2B6C     		ldr	r3, [r5, #64]
- 112:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_get.c ****         {
-  99              		.loc 1 112 12 view .LVU26
- 100 0030 012B     		cmp	r3, #1
- 101 0032 F5D1     		bne	.L4
+  98              		.loc 1 112 12 view .LVU25
+  99 0030 012B     		cmp	r3, #1
+ 100 0032 F5D1     		bne	.L4
  116:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_get.c ****             {           
- 102              		.loc 1 116 13 is_stmt 1 view .LVU27
+ 101              		.loc 1 116 13 is_stmt 1 view .LVU26
  116:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_get.c ****             {           
- 103              		.loc 1 116 17 is_stmt 0 view .LVU28
- 104 0034 019A     		ldr	r2, [sp, #4]
- 105 0036 0132     		adds	r2, r2, #1
- 106 0038 3146     		mov	r1, r6
- 107 003a 2846     		mov	r0, r5
- 108 003c FFF7FEFF 		bl	_ux_utility_memory_compare
- 109              	.LVL7:
+ 102              		.loc 1 116 17 is_stmt 0 view .LVU27
+ 103 0034 019A     		ldr	r2, [sp, #4]
+ 104 0036 0132     		adds	r2, r2, #1
+ 105 0038 3146     		mov	r1, r6
+ 106 003a 2846     		mov	r0, r5
+ 107 003c FFF7FEFF 		bl	_ux_utility_memory_compare
+ 108              	.LVL7:
  116:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_get.c ****             {           
- 110              		.loc 1 116 16 view .LVU29
- 111 0040 0028     		cmp	r0, #0
- 112 0042 EDD1     		bne	.L4
+ 109              		.loc 1 116 16 discriminator 1 view .LVU28
+ 110 0040 0028     		cmp	r0, #0
+ 111 0042 EDD1     		bne	.L4
  120:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_get.c **** 
- 113              		.loc 1 120 17 is_stmt 1 view .LVU30
+ 112              		.loc 1 120 17 is_stmt 1 view .LVU29
  120:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_get.c **** 
- 114              		.loc 1 120 29 is_stmt 0 view .LVU31
- 115 0044 3D60     		str	r5, [r7]
+ 113              		.loc 1 120 29 is_stmt 0 view .LVU30
+ 114 0044 3D60     		str	r5, [r7]
  123:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_get.c ****             }
- 116              		.loc 1 123 17 is_stmt 1 view .LVU32
+ 115              		.loc 1 123 17 is_stmt 1 view .LVU31
  123:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_get.c ****             }
- 117              		.loc 1 123 23 is_stmt 0 view .LVU33
- 118 0046 0446     		mov	r4, r0
- 119              	.LVL8:
+ 116              		.loc 1 123 23 is_stmt 0 view .LVU32
+ 117 0046 0446     		mov	r4, r0
+ 118              	.LVL8:
  123:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_get.c ****             }
- 120              		.loc 1 123 23 view .LVU34
- 121 0048 00E0     		b	.L1
- 122              	.LVL9:
- 123              	.L7:
+ 119              		.loc 1 123 23 view .LVU33
+ 120 0048 00E0     		b	.L1
+ 121              	.LVL9:
+ 122              	.L7:
  130:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_get.c ****     }
  131:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_get.c **** #endif
  132:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_get.c **** 
@@ -288,44 +286,44 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccIeojZr.s 			page 1
  135:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_get.c **** 
  136:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_get.c ****     /* This class does not exist, return an error.  */    
  137:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_get.c ****     return(UX_HOST_CLASS_UNKNOWN);
- 124              		.loc 1 137 11 view .LVU35
- 125 004a 5924     		movs	r4, #89
- 126              	.LVL10:
- 127              	.L1:
+ 123              		.loc 1 137 11 view .LVU34
+ 124 004a 5924     		movs	r4, #89
+ 125              	.LVL10:
+ 126              	.L1:
  138:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_get.c **** }
- 128              		.loc 1 138 1 view .LVU36
- 129 004c 2046     		mov	r0, r4
- 130 004e 03B0     		add	sp, sp, #12
- 131              	.LCFI2:
- 132              		.cfi_def_cfa_offset 20
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccIeojZr.s 			page 6
+ 127              		.loc 1 138 1 view .LVU35
+ 128 004c 2046     		mov	r0, r4
+ 129 004e 03B0     		add	sp, sp, #12
+ 130              	.LCFI2:
+ 131              		.cfi_def_cfa_offset 20
+ 132              		@ sp needed
+ 133 0050 F0BD     		pop	{r4, r5, r6, r7, pc}
+ARM GAS  /tmp/ccHBffgZ.s 			page 6
 
 
- 133              		@ sp needed
- 134 0050 F0BD     		pop	{r4, r5, r6, r7, pc}
- 135              	.LVL11:
- 136              	.L9:
- 137              		.loc 1 138 1 view .LVU37
- 138 0052 00BF     		.align	2
- 139              	.L8:
- 140 0054 00000000 		.word	_ux_system_host
- 141              		.cfi_endproc
- 142              	.LFE11:
- 144              		.text
- 145              	.Letext0:
- 146              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
- 147              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
- 148              		.file 4 "./Middlewares/ST/usbx/common/core/inc/ux_api.h"
- 149              		.file 5 "./Middlewares/ST/usbx/common/core/inc/ux_system.h"
- 150              		.file 6 "./Middlewares/ST/usbx/common/core/inc/ux_utility.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccIeojZr.s 			page 7
+ 134              	.LVL11:
+ 135              	.L9:
+ 136              		.loc 1 138 1 view .LVU36
+ 137 0052 00BF     		.align	2
+ 138              	.L8:
+ 139 0054 00000000 		.word	_ux_system_host
+ 140              		.cfi_endproc
+ 141              	.LFE11:
+ 143              		.text
+ 144              	.Letext0:
+ 145              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
+ 146              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
+ 147              		.file 4 "./Middlewares/ST/usbx/common/core/inc/ux_api.h"
+ 148              		.file 5 "./Middlewares/ST/usbx/common/core/inc/ux_utility.h"
+ 149              		.file 6 "./Middlewares/ST/usbx/common/core/inc/ux_system.h"
+ARM GAS  /tmp/ccHBffgZ.s 			page 7
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 ux_host_stack_class_get.c
-C:\Users\Dennis\AppData\Local\Temp\ccIeojZr.s:20     .text._ux_host_stack_class_get:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccIeojZr.s:26     .text._ux_host_stack_class_get:00000000 _ux_host_stack_class_get
-C:\Users\Dennis\AppData\Local\Temp\ccIeojZr.s:140    .text._ux_host_stack_class_get:00000054 $d
+     /tmp/ccHBffgZ.s:21     .text._ux_host_stack_class_get:00000000 $t
+     /tmp/ccHBffgZ.s:27     .text._ux_host_stack_class_get:00000000 _ux_host_stack_class_get
+     /tmp/ccHBffgZ.s:139    .text._ux_host_stack_class_get:00000054 $d
 
 UNDEFINED SYMBOLS
 _ux_utility_string_length_check

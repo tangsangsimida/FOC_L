@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjMqaeK.s 			page 1
+ARM GAS  /tmp/ccBaTziN.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,15 +19,15 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjMqaeK.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text.MX_USB_OTG_FS_PCD_Init,"ax",%progbits
-  20              		.align	1
-  21              		.global	MX_USB_OTG_FS_PCD_Init
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
-  26              	MX_USB_OTG_FS_PCD_Init:
-  27              	.LFB239:
-  28              		.file 1 "./Core/Src/usb_otg.c"
+  19              		.file 1 "./Core/Src/usb_otg.c"
+  20              		.section	.text.MX_USB_OTG_FS_PCD_Init,"ax",%progbits
+  21              		.align	1
+  22              		.global	MX_USB_OTG_FS_PCD_Init
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	MX_USB_OTG_FS_PCD_Init:
+  28              	.LFB239:
    1:./Core/Src/usb_otg.c **** /* USER CODE BEGIN Header */
    2:./Core/Src/usb_otg.c **** /**
    3:./Core/Src/usb_otg.c ****   ******************************************************************************
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjMqaeK.s 			page 1
   28:./Core/Src/usb_otg.c **** 
   29:./Core/Src/usb_otg.c **** /* USB_OTG_FS init function */
   30:./Core/Src/usb_otg.c **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjMqaeK.s 			page 2
+ARM GAS  /tmp/ccBaTziN.s 			page 2
 
 
   31:./Core/Src/usb_otg.c **** void MX_USB_OTG_FS_PCD_Init(void)
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjMqaeK.s 			page 1
   65              		.loc 1 48 35 is_stmt 0 view .LVU16
   66 001c 0373     		strb	r3, [r0, #12]
   49:./Core/Src/usb_otg.c ****   hpcd_USB_OTG_FS.Init.vbus_sensing_enable = DISABLE;
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjMqaeK.s 			page 3
+ARM GAS  /tmp/ccBaTziN.s 			page 3
 
 
   67              		.loc 1 49 3 is_stmt 1 view .LVU17
@@ -133,7 +133,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjMqaeK.s 			page 1
   74              		.loc 1 51 7 is_stmt 0 view .LVU22
   75 0022 FFF7FEFF 		bl	HAL_PCD_Init
   76              	.LVL0:
-  77              		.loc 1 51 6 view .LVU23
+  77              		.loc 1 51 6 discriminator 1 view .LVU23
   78 0026 00B9     		cbnz	r0, .L4
   79              	.L1:
   52:./Core/Src/usb_otg.c ****   {
@@ -156,7 +156,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjMqaeK.s 			page 1
   88              	.L6:
   89              		.align	2
   90              	.L5:
-  91 0030 00000000 		.word	.LANCHOR0
+  91 0030 00000000 		.word	hpcd_USB_OTG_FS
   92              		.cfi_endproc
   93              	.LFE239:
   95              		.section	.text.HAL_PCD_MspInit,"ax",%progbits
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjMqaeK.s 			page 1
  109              		.loc 1 62 1 is_stmt 0 view .LVU28
  110 0000 30B5     		push	{r4, r5, lr}
  111              	.LCFI1:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjMqaeK.s 			page 4
+ARM GAS  /tmp/ccBaTziN.s 			page 4
 
 
  112              		.cfi_def_cfa_offset 12
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjMqaeK.s 			page 1
  135              		.loc 1 93 1 view .LVU34
  136 0018 09B0     		add	sp, sp, #36
  137              	.LCFI3:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjMqaeK.s 			page 5
+ARM GAS  /tmp/ccBaTziN.s 			page 5
 
 
  138              		.cfi_remember_state
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjMqaeK.s 			page 1
   80:./Core/Src/usb_otg.c ****     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
  178              		.loc 1 80 31 is_stmt 0 view .LVU49
  179 0042 0A23     		movs	r3, #10
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjMqaeK.s 			page 6
+ARM GAS  /tmp/ccBaTziN.s 			page 6
 
 
  180 0044 0793     		str	r3, [sp, #28]
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjMqaeK.s 			page 1
  221 007a CDE7     		b	.L7
  222              	.L12:
  223              		.align	2
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjMqaeK.s 			page 7
+ARM GAS  /tmp/ccBaTziN.s 			page 7
 
 
  224              	.L11:
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjMqaeK.s 			page 1
  116:./Core/Src/usb_otg.c ****   /* USER CODE END USB_OTG_FS_MspDeInit 1 */
  117:./Core/Src/usb_otg.c ****   }
  118:./Core/Src/usb_otg.c **** }
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjMqaeK.s 			page 8
+ARM GAS  /tmp/ccBaTziN.s 			page 8
 
 
  258              		.loc 1 118 1 view .LVU69
@@ -457,42 +457,40 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjMqaeK.s 			page 1
  288              		.global	hpcd_USB_OTG_FS
  289              		.section	.bss.hpcd_USB_OTG_FS,"aw",%nobits
  290              		.align	2
- 291              		.set	.LANCHOR0,. + 0
- 294              	hpcd_USB_OTG_FS:
- 295 0000 00000000 		.space	1252
- 295      00000000 
- 295      00000000 
- 295      00000000 
- 295      00000000 
- 296              		.text
- 297              	.Letext0:
- 298              		.file 2 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\machine\\_default_types.h"
- 299              		.file 3 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\sys\\_stdint.h"
- 300              		.file 4 "./Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h"
- 301              		.file 5 "./Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h"
- 302              		.file 6 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
- 303              		.file 7 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h"
- 304              		.file 8 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h"
- 305              		.file 9 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h"
- 306              		.file 10 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h"
- 307              		.file 11 "./Core/Inc/main.h"
- 308              		.file 12 "./Core/Inc/usb_otg.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccjMqaeK.s 			page 9
+ 293              	hpcd_USB_OTG_FS:
+ 294 0000 00000000 		.space	1252
+ 294      00000000 
+ 294      00000000 
+ 294      00000000 
+ 294      00000000 
+ 295              		.text
+ 296              	.Letext0:
+ 297              		.file 2 "./Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h"
+ 298              		.file 3 "/usr/lib/gcc/arm-none-eabi/13.2.1/include/stdint.h"
+ 299              		.file 4 "./Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h"
+ 300              		.file 5 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
+ 301              		.file 6 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h"
+ 302              		.file 7 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h"
+ 303              		.file 8 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h"
+ 304              		.file 9 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h"
+ 305              		.file 10 "./Core/Inc/usb_otg.h"
+ 306              		.file 11 "./Core/Inc/main.h"
+ARM GAS  /tmp/ccBaTziN.s 			page 9
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 usb_otg.c
-C:\Users\Dennis\AppData\Local\Temp\ccjMqaeK.s:20     .text.MX_USB_OTG_FS_PCD_Init:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccjMqaeK.s:26     .text.MX_USB_OTG_FS_PCD_Init:00000000 MX_USB_OTG_FS_PCD_Init
-C:\Users\Dennis\AppData\Local\Temp\ccjMqaeK.s:91     .text.MX_USB_OTG_FS_PCD_Init:00000030 $d
-C:\Users\Dennis\AppData\Local\Temp\ccjMqaeK.s:96     .text.HAL_PCD_MspInit:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccjMqaeK.s:102    .text.HAL_PCD_MspInit:00000000 HAL_PCD_MspInit
-C:\Users\Dennis\AppData\Local\Temp\ccjMqaeK.s:225    .text.HAL_PCD_MspInit:0000007c $d
-C:\Users\Dennis\AppData\Local\Temp\ccjMqaeK.s:231    .text.HAL_PCD_MspDeInit:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccjMqaeK.s:237    .text.HAL_PCD_MspDeInit:00000000 HAL_PCD_MspDeInit
-C:\Users\Dennis\AppData\Local\Temp\ccjMqaeK.s:283    .text.HAL_PCD_MspDeInit:00000028 $d
-C:\Users\Dennis\AppData\Local\Temp\ccjMqaeK.s:294    .bss.hpcd_USB_OTG_FS:00000000 hpcd_USB_OTG_FS
-C:\Users\Dennis\AppData\Local\Temp\ccjMqaeK.s:290    .bss.hpcd_USB_OTG_FS:00000000 $d
+     /tmp/ccBaTziN.s:21     .text.MX_USB_OTG_FS_PCD_Init:00000000 $t
+     /tmp/ccBaTziN.s:27     .text.MX_USB_OTG_FS_PCD_Init:00000000 MX_USB_OTG_FS_PCD_Init
+     /tmp/ccBaTziN.s:91     .text.MX_USB_OTG_FS_PCD_Init:00000030 $d
+     /tmp/ccBaTziN.s:293    .bss.hpcd_USB_OTG_FS:00000000 hpcd_USB_OTG_FS
+     /tmp/ccBaTziN.s:96     .text.HAL_PCD_MspInit:00000000 $t
+     /tmp/ccBaTziN.s:102    .text.HAL_PCD_MspInit:00000000 HAL_PCD_MspInit
+     /tmp/ccBaTziN.s:225    .text.HAL_PCD_MspInit:0000007c $d
+     /tmp/ccBaTziN.s:231    .text.HAL_PCD_MspDeInit:00000000 $t
+     /tmp/ccBaTziN.s:237    .text.HAL_PCD_MspDeInit:00000000 HAL_PCD_MspDeInit
+     /tmp/ccBaTziN.s:283    .text.HAL_PCD_MspDeInit:00000028 $d
+     /tmp/ccBaTziN.s:290    .bss.hpcd_USB_OTG_FS:00000000 $d
 
 UNDEFINED SYMBOLS
 HAL_PCD_Init

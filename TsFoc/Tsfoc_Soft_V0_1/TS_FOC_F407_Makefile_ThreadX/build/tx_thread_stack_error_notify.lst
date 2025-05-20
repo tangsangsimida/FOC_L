@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccmFtvFx.s 			page 1
+ARM GAS  /tmp/ccTWKCS8.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,16 +19,16 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccmFtvFx.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text._tx_thread_stack_error_notify,"ax",%progbits
-  20              		.align	1
-  21              		.global	_tx_thread_stack_error_notify
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
-  26              	_tx_thread_stack_error_notify:
-  27              	.LVL0:
-  28              	.LFB8:
-  29              		.file 1 "./Middlewares/ST/threadx/common/src/tx_thread_stack_error_notify.c"
+  19              		.file 1 "./Middlewares/ST/threadx/common/src/tx_thread_stack_error_notify.c"
+  20              		.section	.text._tx_thread_stack_error_notify,"ax",%progbits
+  21              		.align	1
+  22              		.global	_tx_thread_stack_error_notify
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	_tx_thread_stack_error_notify:
+  28              	.LVL0:
+  29              	.LFB8:
    1:./Middlewares/ST/threadx/common/src/tx_thread_stack_error_notify.c **** /**************************************************************************/
    2:./Middlewares/ST/threadx/common/src/tx_thread_stack_error_notify.c **** /*                                                                        */
    3:./Middlewares/ST/threadx/common/src/tx_thread_stack_error_notify.c **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccmFtvFx.s 			page 1
   27:./Middlewares/ST/threadx/common/src/tx_thread_stack_error_notify.c **** 
   28:./Middlewares/ST/threadx/common/src/tx_thread_stack_error_notify.c **** #include "tx_api.h"
   29:./Middlewares/ST/threadx/common/src/tx_thread_stack_error_notify.c **** #include "tx_thread.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccmFtvFx.s 			page 2
+ARM GAS  /tmp/ccTWKCS8.s 			page 2
 
 
   30:./Middlewares/ST/threadx/common/src/tx_thread_stack_error_notify.c **** #if defined(TX_ENABLE_STACK_CHECKING) || defined(TX_PORT_THREAD_STACK_ERROR_HANDLING)
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccmFtvFx.s 			page 1
   84:./Middlewares/ST/threadx/common/src/tx_thread_stack_error_notify.c **** /*                                                                        */
   85:./Middlewares/ST/threadx/common/src/tx_thread_stack_error_notify.c **** /**************************************************************************/
   86:./Middlewares/ST/threadx/common/src/tx_thread_stack_error_notify.c **** UINT  _tx_thread_stack_error_notify(VOID (*stack_error_handler)(TX_THREAD *thread_ptr))
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccmFtvFx.s 			page 3
+ARM GAS  /tmp/ccTWKCS8.s 			page 3
 
 
   87:./Middlewares/ST/threadx/common/src/tx_thread_stack_error_notify.c **** {
@@ -147,11 +147,12 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccmFtvFx.s 			page 1
  103:./Middlewares/ST/threadx/common/src/tx_thread_stack_error_notify.c **** 
  104:./Middlewares/ST/threadx/common/src/tx_thread_stack_error_notify.c ****         /* Stack checking is not enabled, just return an error.  */
  105:./Middlewares/ST/threadx/common/src/tx_thread_stack_error_notify.c ****         status =  TX_FEATURE_NOT_ENABLED;
+  37              		.loc 1 105 9 view .LVU3
  106:./Middlewares/ST/threadx/common/src/tx_thread_stack_error_notify.c ****     }
  107:./Middlewares/ST/threadx/common/src/tx_thread_stack_error_notify.c **** 
  108:./Middlewares/ST/threadx/common/src/tx_thread_stack_error_notify.c ****     /* Return completion status.  */
  109:./Middlewares/ST/threadx/common/src/tx_thread_stack_error_notify.c ****     return(status);
-  37              		.loc 1 109 5 view .LVU3
+  38              		.loc 1 109 5 view .LVU4
  110:./Middlewares/ST/threadx/common/src/tx_thread_stack_error_notify.c **** 
  111:./Middlewares/ST/threadx/common/src/tx_thread_stack_error_notify.c **** #else
  112:./Middlewares/ST/threadx/common/src/tx_thread_stack_error_notify.c **** 
@@ -177,26 +178,26 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccmFtvFx.s 			page 1
  132:./Middlewares/ST/threadx/common/src/tx_thread_stack_error_notify.c ****     return(TX_SUCCESS);
  133:./Middlewares/ST/threadx/common/src/tx_thread_stack_error_notify.c **** #endif
  134:./Middlewares/ST/threadx/common/src/tx_thread_stack_error_notify.c **** }
-  38              		.loc 1 134 1 is_stmt 0 view .LVU4
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccmFtvFx.s 			page 4
+ARM GAS  /tmp/ccTWKCS8.s 			page 4
 
 
-  39 0000 FF20     		movs	r0, #255
-  40              	.LVL1:
-  41              		.loc 1 134 1 view .LVU5
-  42 0002 7047     		bx	lr
-  43              		.cfi_endproc
-  44              	.LFE8:
-  46              		.text
-  47              	.Letext0:
-  48              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
-  49              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccmFtvFx.s 			page 5
+  39              		.loc 1 134 1 is_stmt 0 view .LVU5
+  40 0000 FF20     		movs	r0, #255
+  41              	.LVL1:
+  42              		.loc 1 134 1 view .LVU6
+  43 0002 7047     		bx	lr
+  44              		.cfi_endproc
+  45              	.LFE8:
+  47              		.text
+  48              	.Letext0:
+  49              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
+  50              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
+ARM GAS  /tmp/ccTWKCS8.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 tx_thread_stack_error_notify.c
-C:\Users\Dennis\AppData\Local\Temp\ccmFtvFx.s:20     .text._tx_thread_stack_error_notify:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccmFtvFx.s:26     .text._tx_thread_stack_error_notify:00000000 _tx_thread_stack_error_notify
+     /tmp/ccTWKCS8.s:21     .text._tx_thread_stack_error_notify:00000000 $t
+     /tmp/ccTWKCS8.s:27     .text._tx_thread_stack_error_notify:00000000 _tx_thread_stack_error_notify
 
 NO UNDEFINED SYMBOLS

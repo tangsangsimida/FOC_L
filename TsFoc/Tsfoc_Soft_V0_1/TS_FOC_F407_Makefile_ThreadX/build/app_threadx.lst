@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cce6KUii.s 			page 1
+ARM GAS  /tmp/ccaOLg2w.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,46 +19,46 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cce6KUii.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.rodata.App_ThreadX_Init.str1.4,"aMS",%progbits,1
-  20              		.align	2
-  21              	.LC0:
-  22 0000 54687265 		.ascii	"Thread_Template\000"
-  22      61645F54 
-  22      656D706C 
-  22      61746500 
-  23              		.align	2
-  24              	.LC1:
-  25 0010 54687265 		.ascii	"Thread_Cmd\000"
-  25      61645F43 
-  25      6D6400
-  26 001b 00       		.align	2
-  27              	.LC2:
-  28 001c 54687265 		.ascii	"Thread_Motor_Control\000"
-  28      61645F4D 
-  28      6F746F72 
-  28      5F436F6E 
-  28      74726F6C 
-  29 0031 000000   		.align	2
-  30              	.LC3:
-  31 0034 54687265 		.ascii	"Thread_oled\000"
-  31      61645F6F 
-  31      6C656400 
-  32              		.align	2
-  33              	.LC4:
-  34 0040 54687265 		.ascii	"Thread_led\000"
-  34      61645F6C 
-  34      656400
-  35              		.section	.text.App_ThreadX_Init,"ax",%progbits
-  36              		.align	1
-  37              		.global	App_ThreadX_Init
-  38              		.syntax unified
-  39              		.thumb
-  40              		.thumb_func
-  42              	App_ThreadX_Init:
-  43              	.LVL0:
-  44              	.LFB250:
-  45              		.file 1 "./Core/Src/app_threadx.c"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cce6KUii.s 			page 2
+  19              		.file 1 "./Core/Src/app_threadx.c"
+  20              		.section	.rodata.App_ThreadX_Init.str1.4,"aMS",%progbits,1
+  21              		.align	2
+  22              	.LC0:
+  23 0000 54687265 		.ascii	"Thread_Template\000"
+  23      61645F54 
+  23      656D706C 
+  23      61746500 
+  24              		.align	2
+  25              	.LC1:
+  26 0010 54687265 		.ascii	"Thread_Cmd\000"
+  26      61645F43 
+  26      6D6400
+  27 001b 00       		.align	2
+  28              	.LC2:
+  29 001c 54687265 		.ascii	"Thread_Motor_Control\000"
+  29      61645F4D 
+  29      6F746F72 
+  29      5F436F6E 
+  29      74726F6C 
+  30 0031 000000   		.align	2
+  31              	.LC3:
+  32 0034 54687265 		.ascii	"Thread_oled\000"
+  32      61645F6F 
+  32      6C656400 
+  33              		.align	2
+  34              	.LC4:
+  35 0040 54687265 		.ascii	"Thread_led\000"
+  35      61645F6C 
+  35      656400
+  36              		.section	.text.App_ThreadX_Init,"ax",%progbits
+  37              		.align	1
+  38              		.global	App_ThreadX_Init
+  39              		.syntax unified
+  40              		.thumb
+  41              		.thumb_func
+  43              	App_ThreadX_Init:
+  44              	.LVL0:
+  45              	.LFB250:
+ARM GAS  /tmp/ccaOLg2w.s 			page 2
 
 
    1:./Core/Src/app_threadx.c **** /* USER CODE BEGIN Header */
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cce6KUii.s 			page 1
   55:./Core/Src/app_threadx.c ****   * @brief  Application ThreadX Initialization.
   56:./Core/Src/app_threadx.c ****   * @param memory_ptr: memory pointer
   57:./Core/Src/app_threadx.c ****   * @retval int
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cce6KUii.s 			page 3
+ARM GAS  /tmp/ccaOLg2w.s 			page 3
 
 
   58:./Core/Src/app_threadx.c ****   */
@@ -162,7 +162,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cce6KUii.s 			page 1
   70 000c 09A9     		add	r1, sp, #36
   71 000e FFF7FEFF 		bl	_txe_byte_allocate
   72              	.LVL2:
-  73              		.loc 1 71 6 view .LVU8
+  73              		.loc 1 71 6 discriminator 1 view .LVU8
   74 0012 0546     		mov	r5, r0
   75 0014 00B1     		cbz	r0, .L2
   72:./Core/Src/app_threadx.c ****                       Thread_Template_Size, TX_NO_WAIT) != TX_SUCCESS)    ret = TX_POOL_ERROR;
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cce6KUii.s 			page 1
   84 001c 0123     		movs	r3, #1
   85 001e 0593     		str	r3, [sp, #20]
   86 0020 0023     		movs	r3, #0
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cce6KUii.s 			page 4
+ARM GAS  /tmp/ccaOLg2w.s 			page 4
 
 
   87 0022 0493     		str	r3, [sp, #16]
@@ -195,7 +195,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cce6KUii.s 			page 1
   98 003a 4548     		ldr	r0, .L24+12
   99 003c FFF7FEFF 		bl	_txe_thread_create
  100              	.LVL4:
- 101              		.loc 1 73 5 view .LVU12
+ 101              		.loc 1 73 5 discriminator 1 view .LVU12
  102 0040 00B1     		cbz	r0, .L3
   74:./Core/Src/app_threadx.c ****                       Thread_Template_Entry, (ULONG)&Thread_Template_parama1, pointer, Thread_Templ
   75:./Core/Src/app_threadx.c ****                       Thread_Template_PRIO, Thread_Template_threshold,
@@ -215,7 +215,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cce6KUii.s 			page 1
  112 004c 2046     		mov	r0, r4
  113 004e FFF7FEFF 		bl	_txe_byte_allocate
  114              	.LVL6:
- 115              		.loc 1 79 6 view .LVU16
+ 115              		.loc 1 79 6 discriminator 1 view .LVU16
  116 0052 00B1     		cbz	r0, .L4
   80:./Core/Src/app_threadx.c ****                       Thread_Cmd_Size, TX_NO_WAIT) != TX_SUCCESS)    ret = TX_POOL_ERROR;
  117              		.loc 1 80 74 view .LVU17
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cce6KUii.s 			page 1
  133 006c 0193     		str	r3, [sp, #4]
  134 006e 099B     		ldr	r3, [sp, #36]
  135 0070 0093     		str	r3, [sp]
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cce6KUii.s 			page 5
+ARM GAS  /tmp/ccaOLg2w.s 			page 5
 
 
  136 0072 384B     		ldr	r3, .L24+16
@@ -247,7 +247,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cce6KUii.s 			page 1
  139 0078 3948     		ldr	r0, .L24+28
  140 007a FFF7FEFF 		bl	_txe_thread_create
  141              	.LVL8:
- 142              		.loc 1 81 5 view .LVU20
+ 142              		.loc 1 81 5 discriminator 1 view .LVU20
  143 007e 00B1     		cbz	r0, .L5
   82:./Core/Src/app_threadx.c ****                       Thread_Cmd_Entry, (ULONG)&Thread_Cmd_parama1, pointer, Thread_Cmd_Size,
   83:./Core/Src/app_threadx.c ****                       Thread_Cmd_PRIO, Thread_Cmd_threshold,
@@ -267,7 +267,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cce6KUii.s 			page 1
  153 008a 2046     		mov	r0, r4
  154 008c FFF7FEFF 		bl	_txe_byte_allocate
  155              	.LVL10:
- 156              		.loc 1 87 4 view .LVU24
+ 156              		.loc 1 87 4 discriminator 1 view .LVU24
  157 0090 00B1     		cbz	r0, .L6
   88:./Core/Src/app_threadx.c ****                       Thread_Motor_Control_Size, TX_NO_WAIT) != TX_SUCCESS)    ret = TX_POOL_ERROR;
  158              		.loc 1 88 84 view .LVU25
@@ -296,9 +296,9 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cce6KUii.s 			page 1
  180 00b6 2E48     		ldr	r0, .L24+44
  181 00b8 FFF7FEFF 		bl	_txe_thread_create
  182              	.LVL12:
- 183              		.loc 1 89 3 view .LVU28
+ 183              		.loc 1 89 3 discriminator 1 view .LVU28
  184 00bc 00B1     		cbz	r0, .L7
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cce6KUii.s 			page 6
+ARM GAS  /tmp/ccaOLg2w.s 			page 6
 
 
   90:./Core/Src/app_threadx.c ****                       Thread_Motor_Control_Entry, (ULONG)&Thread_Motor_Control_parama1, pointer, Th
@@ -319,7 +319,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cce6KUii.s 			page 1
  194 00c8 2046     		mov	r0, r4
  195 00ca FFF7FEFF 		bl	_txe_byte_allocate
  196              	.LVL14:
- 197              		.loc 1 95 4 view .LVU32
+ 197              		.loc 1 95 4 discriminator 1 view .LVU32
  198 00ce 00B1     		cbz	r0, .L8
   96:./Core/Src/app_threadx.c ****                       Thread_oled_Size, TX_NO_WAIT) != TX_SUCCESS)    ret = TX_POOL_ERROR;
  199              		.loc 1 96 75 view .LVU33
@@ -348,7 +348,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cce6KUii.s 			page 1
  221 00f4 2248     		ldr	r0, .L24+60
  222 00f6 FFF7FEFF 		bl	_txe_thread_create
  223              	.LVL16:
- 224              		.loc 1 97 3 view .LVU36
+ 224              		.loc 1 97 3 discriminator 1 view .LVU36
  225 00fa 00B1     		cbz	r0, .L9
   98:./Core/Src/app_threadx.c ****                       Thread_oled_Entry, (ULONG)&Thread_oled_parama1, pointer, Thread_oled_Size,
   99:./Core/Src/app_threadx.c ****                       Thread_oled_PRIO, Thread_oled_threshold,
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cce6KUii.s 			page 1
  228              	.LVL17:
  229              	.L9:
  101:./Core/Src/app_threadx.c **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cce6KUii.s 			page 7
+ARM GAS  /tmp/ccaOLg2w.s 			page 7
 
 
  102:./Core/Src/app_threadx.c **** //************************************************led线程****************************************
@@ -371,7 +371,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cce6KUii.s 			page 1
  235 0106 2046     		mov	r0, r4
  236 0108 FFF7FEFF 		bl	_txe_byte_allocate
  237              	.LVL18:
- 238              		.loc 1 103 4 view .LVU40
+ 238              		.loc 1 103 4 discriminator 1 view .LVU40
  239 010c 00B1     		cbz	r0, .L10
  104:./Core/Src/app_threadx.c ****                       Thread_led_Size, TX_NO_WAIT) != TX_SUCCESS)    ret = TX_POOL_ERROR;
  240              		.loc 1 104 74 view .LVU41
@@ -400,7 +400,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cce6KUii.s 			page 1
  262 0132 1748     		ldr	r0, .L24+76
  263 0134 FFF7FEFF 		bl	_txe_thread_create
  264              	.LVL20:
- 265              		.loc 1 105 3 view .LVU44
+ 265              		.loc 1 105 3 discriminator 1 view .LVU44
  266 0138 10B9     		cbnz	r0, .L23
  267              	.LVL21:
  268              	.L1:
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cce6KUii.s 			page 1
  117:./Core/Src/app_threadx.c ****   /* USER CODE END App_ThreadX_Init */
  118:./Core/Src/app_threadx.c **** 
  119:./Core/Src/app_threadx.c ****   return ret;
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cce6KUii.s 			page 8
+ARM GAS  /tmp/ccaOLg2w.s 			page 8
 
 
  120:./Core/Src/app_threadx.c **** }
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cce6KUii.s 			page 1
  321              	.LFB251:
  121:./Core/Src/app_threadx.c **** 
  122:./Core/Src/app_threadx.c **** /**
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cce6KUii.s 			page 9
+ARM GAS  /tmp/ccaOLg2w.s 			page 9
 
 
  123:./Core/Src/app_threadx.c ****   * @brief  MX_ThreadX_Init
@@ -515,27 +515,26 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cce6KUii.s 			page 1
  337              	.LFE251:
  339              		.text
  340              	.Letext0:
- 341              		.file 2 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\machine\\_default_types.h"
- 342              		.file 3 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
- 343              		.file 4 "./Middlewares/ST/threadx/common/inc/tx_api.h"
- 344              		.file 5 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\sys\\_stdint.h"
- 345              		.file 6 "./app/Threads/Thread_template/Thread_template.h"
- 346              		.file 7 "./app/Threads/Thread_cmd/Thread_cmd.h"
- 347              		.file 8 "./app/Threads/Thread_Motor_Control/Thread_Motor_Control.h"
- 348              		.file 9 "./app/peripheral/inc/OLED_Front.h"
- 349              		.file 10 "./app/Threads/Thread_oled/Thread_oled.h"
- 350              		.file 11 "./app/Threads/Thread_led/Thread_led.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cce6KUii.s 			page 10
+ 341              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
+ 342              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
+ 343              		.file 4 "/usr/lib/gcc/arm-none-eabi/13.2.1/include/stdint.h"
+ 344              		.file 5 "./app/Threads/Thread_template/Thread_template.h"
+ 345              		.file 6 "./app/Threads/Thread_cmd/Thread_cmd.h"
+ 346              		.file 7 "./app/Threads/Thread_Motor_Control/Thread_Motor_Control.h"
+ 347              		.file 8 "./app/peripheral/inc/OLED_Front.h"
+ 348              		.file 9 "./app/Threads/Thread_oled/Thread_oled.h"
+ 349              		.file 10 "./app/Threads/Thread_led/Thread_led.h"
+ARM GAS  /tmp/ccaOLg2w.s 			page 10
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 app_threadx.c
-C:\Users\Dennis\AppData\Local\Temp\cce6KUii.s:20     .rodata.App_ThreadX_Init.str1.4:00000000 $d
-C:\Users\Dennis\AppData\Local\Temp\cce6KUii.s:36     .text.App_ThreadX_Init:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\cce6KUii.s:42     .text.App_ThreadX_Init:00000000 App_ThreadX_Init
-C:\Users\Dennis\AppData\Local\Temp\cce6KUii.s:290    .text.App_ThreadX_Init:00000144 $d
-C:\Users\Dennis\AppData\Local\Temp\cce6KUii.s:314    .text.MX_ThreadX_Init:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\cce6KUii.s:320    .text.MX_ThreadX_Init:00000000 MX_ThreadX_Init
+     /tmp/ccaOLg2w.s:21     .rodata.App_ThreadX_Init.str1.4:00000000 $d
+     /tmp/ccaOLg2w.s:37     .text.App_ThreadX_Init:00000000 $t
+     /tmp/ccaOLg2w.s:43     .text.App_ThreadX_Init:00000000 App_ThreadX_Init
+     /tmp/ccaOLg2w.s:290    .text.App_ThreadX_Init:00000144 $d
+     /tmp/ccaOLg2w.s:314    .text.MX_ThreadX_Init:00000000 $t
+     /tmp/ccaOLg2w.s:320    .text.MX_ThreadX_Init:00000000 MX_ThreadX_Init
 
 UNDEFINED SYMBOLS
 _txe_byte_allocate

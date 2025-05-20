@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cceKDxuo.s 			page 1
+ARM GAS  /tmp/ccMTmFo0.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,15 +19,15 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cceKDxuo.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text._ux_utility_thread_identify,"ax",%progbits
-  20              		.align	1
-  21              		.global	_ux_utility_thread_identify
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
-  26              	_ux_utility_thread_identify:
-  27              	.LFB11:
-  28              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_utility_thread_identify.c"
+  19              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_utility_thread_identify.c"
+  20              		.section	.text._ux_utility_thread_identify,"ax",%progbits
+  21              		.align	1
+  22              		.global	_ux_utility_thread_identify
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	_ux_utility_thread_identify:
+  28              	.LFB11:
    1:./Middlewares/ST/usbx/common/core/src/ux_utility_thread_identify.c **** /**************************************************************************/
    2:./Middlewares/ST/usbx/common/core/src/ux_utility_thread_identify.c **** /*                                                                        */
    3:./Middlewares/ST/usbx/common/core/src/ux_utility_thread_identify.c **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cceKDxuo.s 			page 1
   28:./Middlewares/ST/usbx/common/core/src/ux_utility_thread_identify.c **** #include "ux_api.h"
   29:./Middlewares/ST/usbx/common/core/src/ux_utility_thread_identify.c **** #include "tx_thread.h"
   30:./Middlewares/ST/usbx/common/core/src/ux_utility_thread_identify.c **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cceKDxuo.s 			page 2
+ARM GAS  /tmp/ccMTmFo0.s 			page 2
 
 
   31:./Middlewares/ST/usbx/common/core/src/ux_utility_thread_identify.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cceKDxuo.s 			page 1
   76:./Middlewares/ST/usbx/common/core/src/ux_utility_thread_identify.c **** 
   77:./Middlewares/ST/usbx/common/core/src/ux_utility_thread_identify.c **** 
   78:./Middlewares/ST/usbx/common/core/src/ux_utility_thread_identify.c ****     /* If we're under interrupt, the thread returned by tx_thread_identify
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cceKDxuo.s 			page 3
+ARM GAS  /tmp/ccMTmFo0.s 			page 3
 
 
   79:./Middlewares/ST/usbx/common/core/src/ux_utility_thread_identify.c ****         is the thread running prior to the ISR. Instead, we set it to null.  */
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cceKDxuo.s 			page 1
   49:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*  RELEASE HISTORY                                                       */
   50:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*                                                                        */
   51:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*    DATE              NAME                      DESCRIPTION             */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cceKDxuo.s 			page 4
+ARM GAS  /tmp/ccMTmFo0.s 			page 4
 
 
   52:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /*                                                                        */
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cceKDxuo.s 			page 1
  106:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  107:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define VOID                                    void
  108:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** typedef char                                    CHAR;
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cceKDxuo.s 			page 5
+ARM GAS  /tmp/ccMTmFo0.s 			page 5
 
 
  109:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** typedef unsigned char                           UCHAR;
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cceKDxuo.s 			page 1
  163:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifndef TX_TRACE_TIME_SOURCE
  164:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_TRACE_TIME_SOURCE                    *((ULONG *) 0xE0001004)
  165:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cceKDxuo.s 			page 6
+ARM GAS  /tmp/ccMTmFo0.s 			page 6
 
 
  166:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #else
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cceKDxuo.s 			page 1
  220:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /* Define the TX_THREAD control block extensions for this port. The main reason
  221:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****    for the multiple macros is so that backward compatibility can be maintained with
  222:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****    existing ThreadX kernel awareness modules.  */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cceKDxuo.s 			page 7
+ARM GAS  /tmp/ccMTmFo0.s 			page 7
 
 
  223:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cceKDxuo.s 			page 1
  277:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                                         thread_ptr -> tx_thread_iar
  278:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_PORT_SPECIFIC_PRE_SCHEDULER_INITIALIZATION               do {__iar_Initlocks();} while(0
  279:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cceKDxuo.s 			page 8
+ARM GAS  /tmp/ccMTmFo0.s 			page 8
 
 
  280:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #else
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cceKDxuo.s 			page 1
  334:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif  /* Helper functions for different compilers */
  335:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  336:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif  /* TX_MISRA_ENABLE */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cceKDxuo.s 			page 9
+ARM GAS  /tmp/ccMTmFo0.s 			page 9
 
 
  337:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cceKDxuo.s 			page 1
  391:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                                     _tx_vfp_state =  __get_control_
  392:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                                     _tx_vfp_state =  _tx_vfp_state 
  393:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                                     __set_control_value(_tx_vfp_sta
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cceKDxuo.s 			page 10
+ARM GAS  /tmp/ccMTmFo0.s 			page 10
 
 
  394:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                                 }                                  
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cceKDxuo.s 			page 1
  448:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_TIMER_CREATE_EXTENSION(timer_ptr)
  449:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  450:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cceKDxuo.s 			page 11
+ARM GAS  /tmp/ccMTmFo0.s 			page 11
 
 
  451:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /* Define the ThreadX object deletion extensions for the remaining objects.  */
@@ -634,7 +634,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cceKDxuo.s 			page 1
   45              		.loc 2 477 5 view .LVU4
   46              		.syntax unified
   47              	@ 477 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
-  48 0002 EFF30583 		 MRS  r3,IPSR 
+  48 0002 EFF30582 		 MRS  r2,IPSR 
   49              	@ 0 "" 2
   50              	.LVL0:
  478:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****     return(ipsr_value);
@@ -644,11 +644,11 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cceKDxuo.s 			page 1
   54              		.syntax unified
   55              	.LBE5:
   56              	.LBE4:
-  57              		.loc 1 80 12 view .LVU7
-  58 0006 044A     		ldr	r2, .L5
-  59 0008 1268     		ldr	r2, [r2]
-  60              		.loc 1 80 51 view .LVU8
-  61 000a 1343     		orrs	r3, r2, r3
+  57              		.loc 1 80 12 discriminator 1 view .LVU7
+  58 0006 044B     		ldr	r3, .L5
+  59 0008 1B68     		ldr	r3, [r3]
+  60              		.loc 1 80 51 discriminator 1 view .LVU8
+  61 000a 1343     		orrs	r3, r3, r2
   62 000c 02D1     		bne	.L3
   63              		.loc 1 80 53 discriminator 1 view .LVU9
   64 000e FFF7FEFF 		bl	_tx_thread_identify
@@ -658,31 +658,33 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cceKDxuo.s 			page 1
   67              		.loc 1 81 1 view .LVU10
   68 0012 08BD     		pop	{r3, pc}
   69              	.L3:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cceKDxuo.s 			page 12
+ARM GAS  /tmp/ccMTmFo0.s 			page 12
 
 
   80:./Middlewares/ST/usbx/common/core/src/ux_utility_thread_identify.c **** }
-  70              		.loc 1 80 51 view .LVU11
+  70              		.loc 1 80 51 discriminator 2 view .LVU11
   71 0014 0020     		movs	r0, #0
-  72 0016 FCE7     		b	.L1
-  73              	.L6:
-  74              		.align	2
-  75              	.L5:
-  76 0018 00000000 		.word	_tx_thread_system_state
-  77              		.cfi_endproc
-  78              	.LFE11:
-  80              		.text
-  81              	.Letext0:
-  82              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
-  83              		.file 4 "./Middlewares/ST/threadx/common/inc/tx_thread.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cceKDxuo.s 			page 13
+  80:./Middlewares/ST/usbx/common/core/src/ux_utility_thread_identify.c **** }
+  72              		.loc 1 80 51 view .LVU12
+  73 0016 FCE7     		b	.L1
+  74              	.L6:
+  75              		.align	2
+  76              	.L5:
+  77 0018 00000000 		.word	_tx_thread_system_state
+  78              		.cfi_endproc
+  79              	.LFE11:
+  81              		.text
+  82              	.Letext0:
+  83              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
+  84              		.file 4 "./Middlewares/ST/threadx/common/inc/tx_thread.h"
+ARM GAS  /tmp/ccMTmFo0.s 			page 13
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 ux_utility_thread_identify.c
-C:\Users\Dennis\AppData\Local\Temp\cceKDxuo.s:20     .text._ux_utility_thread_identify:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\cceKDxuo.s:26     .text._ux_utility_thread_identify:00000000 _ux_utility_thread_identify
-C:\Users\Dennis\AppData\Local\Temp\cceKDxuo.s:76     .text._ux_utility_thread_identify:00000018 $d
+     /tmp/ccMTmFo0.s:21     .text._ux_utility_thread_identify:00000000 $t
+     /tmp/ccMTmFo0.s:27     .text._ux_utility_thread_identify:00000000 _ux_utility_thread_identify
+     /tmp/ccMTmFo0.s:77     .text._ux_utility_thread_identify:00000018 $d
 
 UNDEFINED SYMBOLS
 _tx_thread_identify

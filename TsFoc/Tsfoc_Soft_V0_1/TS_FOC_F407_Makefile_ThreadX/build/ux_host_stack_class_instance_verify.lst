@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccyz3TLI.s 			page 1
+ARM GAS  /tmp/ccaFlQEk.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,16 +19,16 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccyz3TLI.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text._ux_host_stack_class_instance_verify,"ax",%progbits
-  20              		.align	1
-  21              		.global	_ux_host_stack_class_instance_verify
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
-  26              	_ux_host_stack_class_instance_verify:
-  27              	.LVL0:
-  28              	.LFB11:
-  29              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_verify.c"
+  19              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_verify.c"
+  20              		.section	.text._ux_host_stack_class_instance_verify,"ax",%progbits
+  21              		.align	1
+  22              		.global	_ux_host_stack_class_instance_verify
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	_ux_host_stack_class_instance_verify:
+  28              	.LVL0:
+  29              	.LFB11:
    1:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_verify.c **** /**************************************************************************/
    2:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_verify.c **** /*                                                                        */
    3:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_verify.c **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccyz3TLI.s 			page 1
   27:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_verify.c **** 
   28:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_verify.c **** #include "ux_api.h"
   29:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_verify.c **** #include "ux_host_stack.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccyz3TLI.s 			page 2
+ARM GAS  /tmp/ccaFlQEk.s 			page 2
 
 
   30:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_verify.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccyz3TLI.s 			page 1
   33              		@ frame_needed = 0, uses_anonymous_args = 0
   34              		.loc 1 80 1 is_stmt 0 view .LVU1
   35 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccyz3TLI.s 			page 3
+ARM GAS  /tmp/ccaFlQEk.s 			page 3
 
 
   36              	.LCFI0:
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccyz3TLI.s 			page 1
   70              		.loc 1 100 35 is_stmt 0 view .LVU14
   71 001a 114B     		ldr	r3, .L12
   72 001c 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccyz3TLI.s 			page 4
+ARM GAS  /tmp/ccaFlQEk.s 			page 4
 
 
   73              		.loc 1 100 16 view .LVU15
@@ -225,7 +225,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccyz3TLI.s 			page 1
   84              	.LVL5:
   85              	.L5:
  116:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_verify.c ****             {
-  86              		.loc 1 116 19 is_stmt 1 view .LVU20
+  86              		.loc 1 116 43 is_stmt 1 view .LVU20
   87 0024 5CB1     		cbz	r4, .L4
  121:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_verify.c ****                 {
   88              		.loc 1 121 17 view .LVU21
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccyz3TLI.s 			page 1
  125:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_verify.c ****                         return(UX_SUCCESS);
   93              		.loc 1 125 25 is_stmt 0 view .LVU24
   94 002a 019A     		ldr	r2, [sp, #4]
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccyz3TLI.s 			page 5
+ARM GAS  /tmp/ccaFlQEk.s 			page 5
 
 
   95 002c 0132     		adds	r2, r2, #1
@@ -247,7 +247,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccyz3TLI.s 			page 1
   98 0032 FFF7FEFF 		bl	_ux_utility_memory_compare
   99              	.LVL6:
  125:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_verify.c ****                         return(UX_SUCCESS);
- 100              		.loc 1 125 24 view .LVU25
+ 100              		.loc 1 125 24 discriminator 1 view .LVU25
  101 0036 0028     		cmp	r0, #0
  102 0038 F3D1     		bne	.L6
  126:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_verify.c ****                 }
@@ -265,53 +265,51 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccyz3TLI.s 			page 1
  134:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_verify.c **** 
  135:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_verify.c ****         /* Move to the next class.  */
  136:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_verify.c ****         class_inst ++;
- 110              		.loc 1 136 9 is_stmt 1 discriminator 2 view .LVU28
- 111              		.loc 1 136 20 is_stmt 0 discriminator 2 view .LVU29
+ 110              		.loc 1 136 9 is_stmt 1 view .LVU28
+ 111              		.loc 1 136 20 is_stmt 0 view .LVU29
  112 003e 5835     		adds	r5, r5, #88
  113              	.LVL9:
  104:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_verify.c ****     {
- 114              		.loc 1 104 85 is_stmt 1 discriminator 2 view .LVU30
+ 114              		.loc 1 104 96 is_stmt 1 discriminator 2 view .LVU30
+ 115 0040 0136     		adds	r6, r6, #1
+ 116              	.LVL10:
+ 117              	.L3:
  104:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_verify.c ****     {
- 115              		.loc 1 104 96 is_stmt 0 discriminator 2 view .LVU31
- 116 0040 0136     		adds	r6, r6, #1
- 117              	.LVL10:
- 118              	.L3:
+ 118              		.loc 1 104 38 discriminator 1 view .LVU31
  104:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_verify.c ****     {
- 119              		.loc 1 104 26 is_stmt 1 discriminator 1 view .LVU32
+ 119              		.loc 1 104 56 is_stmt 0 discriminator 1 view .LVU32
+ 120 0042 074B     		ldr	r3, .L12
+ 121 0044 1B68     		ldr	r3, [r3]
+ 122 0046 1B68     		ldr	r3, [r3]
  104:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_verify.c ****     {
- 120              		.loc 1 104 56 is_stmt 0 discriminator 1 view .LVU33
- 121 0042 074B     		ldr	r3, .L12
- 122 0044 1B68     		ldr	r3, [r3]
- 123 0046 1B68     		ldr	r3, [r3]
- 104:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_verify.c ****     {
- 124              		.loc 1 104 5 discriminator 1 view .LVU34
- 125 0048 B342     		cmp	r3, r6
- 126 004a 04D9     		bls	.L11
+ 123              		.loc 1 104 38 discriminator 1 view .LVU33
+ 124 0048 B342     		cmp	r3, r6
+ 125 004a 04D9     		bls	.L11
  109:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_verify.c ****         {
- 127              		.loc 1 109 9 is_stmt 1 view .LVU35
+ 126              		.loc 1 109 9 is_stmt 1 view .LVU34
  109:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_verify.c ****         {
- 128              		.loc 1 109 24 is_stmt 0 view .LVU36
- 129 004c 2B6C     		ldr	r3, [r5, #64]
+ 127              		.loc 1 109 24 is_stmt 0 view .LVU35
+ 128 004c 2B6C     		ldr	r3, [r5, #64]
  109:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_verify.c ****         {
- 130              		.loc 1 109 12 view .LVU37
- 131 004e 012B     		cmp	r3, #1
- 132 0050 F5D1     		bne	.L4
+ 129              		.loc 1 109 12 view .LVU36
+ 130 004e 012B     		cmp	r3, #1
+ 131 0050 F5D1     		bne	.L4
  113:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_verify.c ****     
- 133              		.loc 1 113 13 is_stmt 1 view .LVU38
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccyz3TLI.s 			page 6
+ 132              		.loc 1 113 13 is_stmt 1 view .LVU37
+ 113:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_verify.c ****     
+ 133              		.loc 1 113 36 is_stmt 0 view .LVU38
+ARM GAS  /tmp/ccaFlQEk.s 			page 6
 
 
- 113:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_verify.c ****     
- 134              		.loc 1 113 36 is_stmt 0 view .LVU39
- 135 0052 AC6C     		ldr	r4, [r5, #72]
- 136              	.LVL11:
+ 134 0052 AC6C     		ldr	r4, [r5, #72]
+ 135              	.LVL11:
  116:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_verify.c ****             {
- 137              		.loc 1 116 13 is_stmt 1 view .LVU40
+ 136              		.loc 1 116 13 is_stmt 1 view .LVU39
  116:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_verify.c ****             {
- 138              		.loc 1 116 19 is_stmt 0 view .LVU41
- 139 0054 E6E7     		b	.L5
- 140              	.LVL12:
- 141              	.L11:
+ 137              		.loc 1 116 19 is_stmt 0 view .LVU40
+ 138 0054 E6E7     		b	.L5
+ 139              	.LVL12:
+ 140              	.L11:
  137:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_verify.c ****     }    
  138:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_verify.c **** #endif
  139:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_verify.c ****     
@@ -320,41 +318,41 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccyz3TLI.s 			page 1
  142:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_verify.c **** 
  143:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_verify.c ****     /* This class does not exist.  */    
  144:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_verify.c ****     return(UX_HOST_CLASS_INSTANCE_UNKNOWN);
- 142              		.loc 1 144 11 view .LVU42
- 143 0056 5B26     		movs	r6, #91
- 144              	.LVL13:
- 145              	.L1:
+ 141              		.loc 1 144 11 view .LVU41
+ 142 0056 5B26     		movs	r6, #91
+ 143              	.LVL13:
+ 144              	.L1:
  145:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_verify.c **** }
- 146              		.loc 1 145 1 view .LVU43
- 147 0058 3046     		mov	r0, r6
- 148 005a 02B0     		add	sp, sp, #8
- 149              	.LCFI2:
- 150              		.cfi_def_cfa_offset 24
- 151              		@ sp needed
- 152 005c BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
- 153              	.LVL14:
- 154              	.L13:
- 155              		.loc 1 145 1 view .LVU44
- 156              		.align	2
- 157              	.L12:
- 158 0060 00000000 		.word	_ux_system_host
- 159              		.cfi_endproc
- 160              	.LFE11:
- 162              		.text
- 163              	.Letext0:
- 164              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
- 165              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
- 166              		.file 4 "./Middlewares/ST/usbx/common/core/inc/ux_api.h"
- 167              		.file 5 "./Middlewares/ST/usbx/common/core/inc/ux_system.h"
- 168              		.file 6 "./Middlewares/ST/usbx/common/core/inc/ux_utility.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccyz3TLI.s 			page 7
+ 145              		.loc 1 145 1 view .LVU42
+ 146 0058 3046     		mov	r0, r6
+ 147 005a 02B0     		add	sp, sp, #8
+ 148              	.LCFI2:
+ 149              		.cfi_def_cfa_offset 24
+ 150              		@ sp needed
+ 151 005c BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 152              	.LVL14:
+ 153              	.L13:
+ 154              		.loc 1 145 1 view .LVU43
+ 155              		.align	2
+ 156              	.L12:
+ 157 0060 00000000 		.word	_ux_system_host
+ 158              		.cfi_endproc
+ 159              	.LFE11:
+ 161              		.text
+ 162              	.Letext0:
+ 163              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
+ 164              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
+ 165              		.file 4 "./Middlewares/ST/usbx/common/core/inc/ux_api.h"
+ 166              		.file 5 "./Middlewares/ST/usbx/common/core/inc/ux_utility.h"
+ 167              		.file 6 "./Middlewares/ST/usbx/common/core/inc/ux_system.h"
+ARM GAS  /tmp/ccaFlQEk.s 			page 7
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 ux_host_stack_class_instance_verify.c
-C:\Users\Dennis\AppData\Local\Temp\ccyz3TLI.s:20     .text._ux_host_stack_class_instance_verify:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccyz3TLI.s:26     .text._ux_host_stack_class_instance_verify:00000000 _ux_host_stack_class_instance_verify
-C:\Users\Dennis\AppData\Local\Temp\ccyz3TLI.s:158    .text._ux_host_stack_class_instance_verify:00000060 $d
+     /tmp/ccaFlQEk.s:21     .text._ux_host_stack_class_instance_verify:00000000 $t
+     /tmp/ccaFlQEk.s:27     .text._ux_host_stack_class_instance_verify:00000000 _ux_host_stack_class_instance_verify
+     /tmp/ccaFlQEk.s:157    .text._ux_host_stack_class_instance_verify:00000060 $d
 
 UNDEFINED SYMBOLS
 _ux_utility_string_length_check

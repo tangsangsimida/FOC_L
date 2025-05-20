@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccqKUvPR.s 			page 1
+ARM GAS  /tmp/ccQ1xXUz.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,16 +19,16 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccqKUvPR.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text._ux_device_stack_get_status,"ax",%progbits
-  20              		.align	1
-  21              		.global	_ux_device_stack_get_status
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
-  26              	_ux_device_stack_get_status:
-  27              	.LVL0:
-  28              	.LFB11:
-  29              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c"
+  19              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c"
+  20              		.section	.text._ux_device_stack_get_status,"ax",%progbits
+  21              		.align	1
+  22              		.global	_ux_device_stack_get_status
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	_ux_device_stack_get_status:
+  28              	.LVL0:
+  29              	.LFB11:
    1:./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c **** /**************************************************************************/
    2:./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c **** /*                                                                        */
    3:./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccqKUvPR.s 			page 1
   27:./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c **** 
   28:./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c **** #include "ux_api.h"
   29:./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c **** #include "ux_device_stack.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccqKUvPR.s 			page 2
+ARM GAS  /tmp/ccQ1xXUz.s 			page 2
 
 
   30:./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccqKUvPR.s 			page 1
   34              		.loc 1 79 1 is_stmt 0 view .LVU1
   35 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
   36              	.LCFI0:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccqKUvPR.s 			page 3
+ARM GAS  /tmp/ccQ1xXUz.s 			page 3
 
 
   37              		.cfi_def_cfa_offset 24
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccqKUvPR.s 			page 1
   64 000a D4F89820 		ldr	r2, [r4, #152]
   65              	.LVL3:
   66              		.loc 1 106 65 view .LVU17
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccqKUvPR.s 			page 4
+ARM GAS  /tmp/ccQ1xXUz.s 			page 4
 
 
   67 000e 0023     		movs	r3, #0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccqKUvPR.s 			page 1
  144:./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c ****         
  145:./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c ****         break;
  146:./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c ****             
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccqKUvPR.s 			page 5
+ARM GAS  /tmp/ccQ1xXUz.s 			page 5
 
 
  147:./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c ****     case UX_REQUEST_TARGET_ENDPOINT:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccqKUvPR.s 			page 1
   99 0030 0020     		movs	r0, #0
  100 0032 2CE0     		b	.L1
  101              	.LVL9:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccqKUvPR.s 			page 6
+ARM GAS  /tmp/ccQ1xXUz.s 			page 6
 
 
  102              	.L2:
@@ -336,160 +336,162 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccqKUvPR.s 			page 1
  124              		.loc 1 142 35 is_stmt 0 view .LVU40
  125 0050 D4F89820 		ldr	r2, [r4, #152]
  142:./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c ****         }
- 126              		.loc 1 142 77 view .LVU41
+ 126              		.loc 1 142 17 view .LVU41
  127 0054 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
- 128 0056 43F00203 		orr	r3, r3, #2
- 129 005a 1370     		strb	r3, [r2]
+ 142:./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c ****         }
+ 128              		.loc 1 142 77 view .LVU42
+ 129 0056 43F00203 		orr	r3, r3, #2
+ 130 005a 1370     		strb	r3, [r2]
  110:./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c ****     
- 130              		.loc 1 110 17 view .LVU42
- 131 005c 0225     		movs	r5, #2
- 132 005e 0EE0     		b	.L5
- 133              	.L13:
+ 131              		.loc 1 110 17 view .LVU43
+ 132 005c 0225     		movs	r5, #2
+ 133 005e 0EE0     		b	.L5
+ 134              	.L13:
  137:./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c **** 
- 134              		.loc 1 137 17 is_stmt 1 view .LVU43
+ 135              		.loc 1 137 17 is_stmt 1 view .LVU44
  137:./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c **** 
- 135              		.loc 1 137 35 is_stmt 0 view .LVU44
- 136 0060 D4F89830 		ldr	r3, [r4, #152]
+ 136              		.loc 1 137 35 is_stmt 0 view .LVU45
+ 137 0060 D4F89830 		ldr	r3, [r4, #152]
  137:./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c **** 
- 137              		.loc 1 137 77 view .LVU45
- 138 0064 0122     		movs	r2, #1
- 139 0066 1A70     		strb	r2, [r3]
- 140 0068 EDE7     		b	.L6
- 141              	.LVL10:
- 142              	.L3:
- 153:./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c **** #else
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccqKUvPR.s 			page 7
+ 138              		.loc 1 137 77 view .LVU46
+ 139 0064 0122     		movs	r2, #1
+ 140 0066 1A70     		strb	r2, [r3]
+ 141 0068 EDE7     		b	.L6
+ 142              	.LVL10:
+ARM GAS  /tmp/ccQ1xXUz.s 			page 7
 
 
- 143              		.loc 1 153 9 is_stmt 1 view .LVU46
+ 143              	.L3:
  153:./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c **** #else
- 144              		.loc 1 153 23 is_stmt 0 view .LVU47
- 145 006a A369     		ldr	r3, [r4, #24]
+ 144              		.loc 1 153 9 is_stmt 1 view .LVU47
  153:./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c **** #else
- 146              		.loc 1 153 19 view .LVU48
- 147 006c 21F08002 		bic	r2, r1, #128
- 148 0070 1521     		movs	r1, #21
- 149              	.LVL11:
+ 145              		.loc 1 153 23 is_stmt 0 view .LVU48
+ 146 006a A369     		ldr	r3, [r4, #24]
  153:./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c **** #else
- 150              		.loc 1 153 19 view .LVU49
- 151 0072 2046     		mov	r0, r4
- 152              	.LVL12:
+ 147              		.loc 1 153 19 view .LVU49
+ 148 006c 21F08002 		bic	r2, r1, #128
+ 149 0070 1521     		movs	r1, #21
+ 150              	.LVL11:
  153:./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c **** #else
- 153              		.loc 1 153 19 view .LVU50
- 154 0074 9847     		blx	r3
- 155              	.LVL13:
+ 151              		.loc 1 153 19 view .LVU50
+ 152 0072 2046     		mov	r0, r4
+ 153              	.LVL12:
+ 153:./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c **** #else
+ 154              		.loc 1 153 19 view .LVU51
+ 155 0074 9847     		blx	r3
+ 156              	.LVL13:
  162:./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c ****         {
- 156              		.loc 1 162 9 is_stmt 1 view .LVU51
+ 157              		.loc 1 162 9 is_stmt 1 view .LVU52
  162:./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c ****         {
- 157              		.loc 1 162 12 is_stmt 0 view .LVU52
- 158 0076 FF28     		cmp	r0, #255
- 159 0078 0FD0     		beq	.L7
+ 158              		.loc 1 162 12 is_stmt 0 view .LVU53
+ 159 0076 FF28     		cmp	r0, #255
+ 160 0078 0FD0     		beq	.L7
  165:./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c ****                 *transfer_request -> ux_slave_transfer_request_data_pointer =  1;
- 160              		.loc 1 165 13 is_stmt 1 view .LVU53
+ 161              		.loc 1 165 13 is_stmt 1 view .LVU54
  165:./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c ****                 *transfer_request -> ux_slave_transfer_request_data_pointer =  1;
- 161              		.loc 1 165 16 is_stmt 0 view .LVU54
- 162 007a 0128     		cmp	r0, #1
- 163 007c 08D0     		beq	.L14
- 164              	.LVL14:
- 165              	.L5:
+ 162              		.loc 1 165 16 is_stmt 0 view .LVU55
+ 163 007a 0128     		cmp	r0, #1
+ 164 007c 08D0     		beq	.L14
+ 165              	.LVL14:
+ 166              	.L5:
  186:./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c ****     }
  187:./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c ****     
  188:./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c ****     /* Set the phase of the transfer to data out.  */
  189:./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c ****     transfer_request -> ux_slave_transfer_request_phase =  UX_TRANSFER_PHASE_DATA_OUT;
- 166              		.loc 1 189 5 is_stmt 1 view .LVU55
- 167              		.loc 1 189 57 is_stmt 0 view .LVU56
- 168 007e 0323     		movs	r3, #3
- 169 0080 C4F8B430 		str	r3, [r4, #180]
+ 167              		.loc 1 189 5 is_stmt 1 view .LVU56
+ 168              		.loc 1 189 57 is_stmt 0 view .LVU57
+ 169 007e 0323     		movs	r3, #3
+ 170 0080 C4F8B430 		str	r3, [r4, #180]
  190:./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c **** 
  191:./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c ****     /* Send the descriptor with the appropriate length to the host.  */
  192:./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c ****     status =  _ux_device_stack_transfer_request(transfer_request, data_length, data_length);
- 170              		.loc 1 192 5 is_stmt 1 view .LVU57
- 171              		.loc 1 192 15 is_stmt 0 view .LVU58
- 172 0084 2A46     		mov	r2, r5
- 173 0086 2946     		mov	r1, r5
- 174 0088 3046     		mov	r0, r6
- 175 008a FFF7FEFF 		bl	_ux_device_stack_transfer_request
- 176              	.LVL15:
+ 171              		.loc 1 192 5 is_stmt 1 view .LVU58
+ 172              		.loc 1 192 15 is_stmt 0 view .LVU59
+ 173 0084 2A46     		mov	r2, r5
+ 174 0086 2946     		mov	r1, r5
+ 175 0088 3046     		mov	r0, r6
+ 176 008a FFF7FEFF 		bl	_ux_device_stack_transfer_request
+ 177              	.LVL15:
  193:./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c **** 
  194:./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c ****     /* Return the function status.  */
  195:./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c ****     return(status);
- 177              		.loc 1 195 5 is_stmt 1 view .LVU59
- 178              	.L1:
+ 178              		.loc 1 195 5 is_stmt 1 view .LVU60
+ 179              	.L1:
  196:./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c **** }
- 179              		.loc 1 196 1 is_stmt 0 view .LVU60
- 180 008e F8BD     		pop	{r3, r4, r5, r6, r7, pc}
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccqKUvPR.s 			page 8
+ARM GAS  /tmp/ccQ1xXUz.s 			page 8
 
 
- 181              	.LVL16:
- 182              	.L14:
+ 180              		.loc 1 196 1 is_stmt 0 view .LVU61
+ 181 008e F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 182              	.LVL16:
+ 183              	.L14:
  166:./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c ****         }                        
- 183              		.loc 1 166 17 is_stmt 1 view .LVU61
+ 184              		.loc 1 166 17 is_stmt 1 view .LVU62
  166:./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c ****         }                        
- 184              		.loc 1 166 35 is_stmt 0 view .LVU62
- 185 0090 D4F89830 		ldr	r3, [r4, #152]
+ 185              		.loc 1 166 35 is_stmt 0 view .LVU63
+ 186 0090 D4F89830 		ldr	r3, [r4, #152]
  166:./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c ****         }                        
- 186              		.loc 1 166 77 view .LVU63
- 187 0094 0122     		movs	r2, #1
- 188 0096 1A70     		strb	r2, [r3]
- 189 0098 F1E7     		b	.L5
- 190              	.L7:
+ 187              		.loc 1 166 77 view .LVU64
+ 188 0094 0122     		movs	r2, #1
+ 189 0096 1A70     		strb	r2, [r3]
+ 190 0098 F1E7     		b	.L5
+ 191              	.L7:
  172:./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c ****     
- 191              		.loc 1 172 13 is_stmt 1 view .LVU64
+ 192              		.loc 1 172 13 is_stmt 1 view .LVU65
  172:./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c ****     
- 192              		.loc 1 172 17 is_stmt 0 view .LVU65
- 193 009a A369     		ldr	r3, [r4, #24]
+ 193              		.loc 1 172 17 is_stmt 0 view .LVU66
+ 194 009a A369     		ldr	r3, [r4, #24]
  172:./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c ****     
- 194              		.loc 1 172 13 view .LVU66
- 195 009c 3A46     		mov	r2, r7
- 196 009e 1421     		movs	r1, #20
- 197 00a0 2046     		mov	r0, r4
- 198              	.LVL17:
+ 195              		.loc 1 172 13 view .LVU67
+ 196 009c 3A46     		mov	r2, r7
+ 197 009e 1421     		movs	r1, #20
+ 198 00a0 2046     		mov	r0, r4
+ 199              	.LVL17:
  172:./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c ****     
- 199              		.loc 1 172 13 view .LVU67
- 200 00a2 9847     		blx	r3
- 201              	.LVL18:
+ 200              		.loc 1 172 13 view .LVU68
+ 201 00a2 9847     		blx	r3
+ 202              	.LVL18:
  175:./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c ****         }
- 202              		.loc 1 175 13 is_stmt 1 view .LVU68
+ 203              		.loc 1 175 13 is_stmt 1 view .LVU69
  175:./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c ****         }
- 203              		.loc 1 175 19 is_stmt 0 view .LVU69
- 204 00a4 0020     		movs	r0, #0
- 205 00a6 F2E7     		b	.L1
- 206              	.LVL19:
- 207              	.L9:
+ 204              		.loc 1 175 19 is_stmt 0 view .LVU70
+ 205 00a4 0020     		movs	r0, #0
+ 206 00a6 F2E7     		b	.L1
+ 207              	.LVL19:
+ 208              	.L9:
  124:./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c ****             
- 208              		.loc 1 124 25 view .LVU70
- 209 00a8 0125     		movs	r5, #1
- 210 00aa E8E7     		b	.L5
- 211              	.L10:
+ 209              		.loc 1 124 25 view .LVU71
+ 210 00a8 0125     		movs	r5, #1
+ 211 00aa E8E7     		b	.L5
+ 212              	.L10:
  110:./Middlewares/ST/usbx/common/core/src/ux_device_stack_get_status.c ****     
- 212              		.loc 1 110 17 view .LVU71
- 213 00ac 0225     		movs	r5, #2
- 214 00ae E6E7     		b	.L5
- 215              	.L16:
- 216              		.align	2
- 217              	.L15:
- 218 00b0 00000000 		.word	_ux_system_slave
- 219              		.cfi_endproc
- 220              	.LFE11:
- 222              		.text
- 223              	.Letext0:
- 224              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
- 225              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
- 226              		.file 4 "./Middlewares/ST/usbx/common/core/inc/ux_api.h"
- 227              		.file 5 "./Middlewares/ST/usbx/common/core/inc/ux_system.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccqKUvPR.s 			page 9
+ 213              		.loc 1 110 17 view .LVU72
+ 214 00ac 0225     		movs	r5, #2
+ 215 00ae E6E7     		b	.L5
+ 216              	.L16:
+ 217              		.align	2
+ 218              	.L15:
+ 219 00b0 00000000 		.word	_ux_system_slave
+ 220              		.cfi_endproc
+ 221              	.LFE11:
+ 223              		.text
+ 224              	.Letext0:
+ 225              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
+ 226              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
+ARM GAS  /tmp/ccQ1xXUz.s 			page 9
 
 
- 228              		.file 6 "./Middlewares/ST/usbx/common/core/inc/ux_device_stack.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccqKUvPR.s 			page 10
+ 227              		.file 4 "./Middlewares/ST/usbx/common/core/inc/ux_api.h"
+ 228              		.file 5 "./Middlewares/ST/usbx/common/core/inc/ux_system.h"
+ 229              		.file 6 "./Middlewares/ST/usbx/common/core/inc/ux_device_stack.h"
+ARM GAS  /tmp/ccQ1xXUz.s 			page 10
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 ux_device_stack_get_status.c
-C:\Users\Dennis\AppData\Local\Temp\ccqKUvPR.s:20     .text._ux_device_stack_get_status:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccqKUvPR.s:26     .text._ux_device_stack_get_status:00000000 _ux_device_stack_get_status
-C:\Users\Dennis\AppData\Local\Temp\ccqKUvPR.s:218    .text._ux_device_stack_get_status:000000b0 $d
+     /tmp/ccQ1xXUz.s:21     .text._ux_device_stack_get_status:00000000 $t
+     /tmp/ccQ1xXUz.s:27     .text._ux_device_stack_get_status:00000000 _ux_device_stack_get_status
+     /tmp/ccQ1xXUz.s:219    .text._ux_device_stack_get_status:000000b0 $d
 
 UNDEFINED SYMBOLS
 _ux_device_stack_transfer_request

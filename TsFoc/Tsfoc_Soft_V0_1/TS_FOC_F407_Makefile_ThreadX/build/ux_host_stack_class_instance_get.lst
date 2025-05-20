@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2g1eXD.s 			page 1
+ARM GAS  /tmp/cc3StZco.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,16 +19,16 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2g1eXD.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text._ux_host_stack_class_instance_get,"ax",%progbits
-  20              		.align	1
-  21              		.global	_ux_host_stack_class_instance_get
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
-  26              	_ux_host_stack_class_instance_get:
-  27              	.LVL0:
-  28              	.LFB11:
-  29              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_get.c"
+  19              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_get.c"
+  20              		.section	.text._ux_host_stack_class_instance_get,"ax",%progbits
+  21              		.align	1
+  22              		.global	_ux_host_stack_class_instance_get
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	_ux_host_stack_class_instance_get:
+  28              	.LVL0:
+  29              	.LFB11:
    1:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_get.c **** /**************************************************************************/
    2:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_get.c **** /*                                                                        */
    3:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_get.c **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2g1eXD.s 			page 1
   27:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_get.c **** 
   28:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_get.c **** #include "ux_api.h"
   29:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_get.c **** #include "ux_host_stack.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2g1eXD.s 			page 2
+ARM GAS  /tmp/cc3StZco.s 			page 2
 
 
   30:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_get.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2g1eXD.s 			page 1
   34              		@ link register save eliminated.
   80:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_get.c ****     
   81:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_get.c **** VOID    **current_class_instance;
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2g1eXD.s 			page 3
+ARM GAS  /tmp/cc3StZco.s 			page 3
 
 
   35              		.loc 1 81 1 view .LVU1
@@ -145,12 +145,12 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2g1eXD.s 			page 1
   93:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_get.c **** 
   94:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_get.c ****     /* Traverse the list of the class instances until we found the right one.  */        
   95:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_get.c ****     while (class_index-- != 0)
-  45              		.loc 1 95 11 is_stmt 1 view .LVU6
+  45              		.loc 1 95 26 is_stmt 1 view .LVU6
   46 0004 0846     		mov	r0, r1
   47              		.loc 1 95 23 is_stmt 0 view .LVU7
   48 0006 0139     		subs	r1, r1, #1
   49              	.LVL3:
-  50              		.loc 1 95 11 view .LVU8
+  50              		.loc 1 95 26 view .LVU8
   51 0008 20B1     		cbz	r0, .L8
   96:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_get.c ****     {
   97:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_get.c **** 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2g1eXD.s 			page 1
  109:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_get.c ****     /* Update the class instance pointer from the caller.  */
  110:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_get.c ****     *class_instance =  current_class_instance;
  111:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_get.c ****     
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2g1eXD.s 			page 4
+ARM GAS  /tmp/cc3StZco.s 			page 4
 
 
  112:./Middlewares/ST/usbx/common/core/src/ux_host_stack_class_instance_get.c ****     /* Return successful completion.  */
@@ -212,12 +212,12 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2g1eXD.s 			page 1
   82              	.Letext0:
   83              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
   84              		.file 3 "./Middlewares/ST/usbx/common/core/inc/ux_api.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2g1eXD.s 			page 5
+ARM GAS  /tmp/cc3StZco.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 ux_host_stack_class_instance_get.c
-C:\Users\Dennis\AppData\Local\Temp\cc2g1eXD.s:20     .text._ux_host_stack_class_instance_get:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\cc2g1eXD.s:26     .text._ux_host_stack_class_instance_get:00000000 _ux_host_stack_class_instance_get
+     /tmp/cc3StZco.s:21     .text._ux_host_stack_class_instance_get:00000000 $t
+     /tmp/cc3StZco.s:27     .text._ux_host_stack_class_instance_get:00000000 _ux_host_stack_class_instance_get
 
 NO UNDEFINED SYMBOLS

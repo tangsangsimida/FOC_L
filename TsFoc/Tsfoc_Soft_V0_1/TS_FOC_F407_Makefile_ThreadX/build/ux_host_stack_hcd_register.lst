@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccycAgYo.s 			page 1
+ARM GAS  /tmp/ccufoVKX.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,16 +19,16 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccycAgYo.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text._ux_host_stack_hcd_register,"ax",%progbits
-  20              		.align	1
-  21              		.global	_ux_host_stack_hcd_register
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
-  26              	_ux_host_stack_hcd_register:
-  27              	.LVL0:
-  28              	.LFB11:
-  29              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c"
+  19              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c"
+  20              		.section	.text._ux_host_stack_hcd_register,"ax",%progbits
+  21              		.align	1
+  22              		.global	_ux_host_stack_hcd_register
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	_ux_host_stack_hcd_register:
+  28              	.LVL0:
+  29              	.LFB11:
    1:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c **** /**************************************************************************/
    2:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c **** /*                                                                        */
    3:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccycAgYo.s 			page 1
   27:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c **** 
   28:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c **** #include "ux_api.h"
   29:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c **** #include "ux_host_stack.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccycAgYo.s 			page 2
+ARM GAS  /tmp/ccufoVKX.s 			page 2
 
 
   30:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccycAgYo.s 			page 1
   84:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c **** /*                                                                        */
   85:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c **** /**************************************************************************/
   86:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c **** UINT  _ux_host_stack_hcd_register(UCHAR *hcd_name,
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccycAgYo.s 			page 3
+ARM GAS  /tmp/ccufoVKX.s 			page 3
 
 
   87:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c ****                                     UINT (*hcd_init_function)(struct UX_HCD_STRUCT *), ULONG hcd_pa
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccycAgYo.s 			page 1
   64              		.loc 1 106 15 view .LVU10
   65 0014 01A9     		add	r1, sp, #4
   66              	.LVL3:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccycAgYo.s 			page 4
+ARM GAS  /tmp/ccufoVKX.s 			page 4
 
 
   67              		.loc 1 106 15 view .LVU11
@@ -206,20 +206,19 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccycAgYo.s 			page 1
  116:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c ****     for(hcd_index = 0; hcd_index < _ux_system_host -> ux_system_host_max_hcd; hcd_index++)
   80              		.loc 1 116 5 is_stmt 1 view .LVU17
   81              	.L3:
-  82              		.loc 1 116 24 discriminator 1 view .LVU18
-  83              		.loc 1 116 5 is_stmt 0 discriminator 1 view .LVU19
-  84 0022 9A68     		ldr	r2, [r3, #8]
-  85 0024 8242     		cmp	r2, r0
-  86 0026 16D9     		bls	.L7
+  82              		.loc 1 116 34 discriminator 1 view .LVU18
+  83 0022 9A68     		ldr	r2, [r3, #8]
+  84 0024 8242     		cmp	r2, r0
+  85 0026 16D9     		bls	.L7
  117:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c ****     {
  118:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c **** #endif
  119:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c **** 
  120:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c ****         /* Is this slot available?  */
  121:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c ****         if(hcd -> ux_hcd_status == UX_UNUSED)
-  87              		.loc 1 121 9 is_stmt 1 view .LVU20
-  88              		.loc 1 121 11 is_stmt 0 view .LVU21
-  89 0028 226C     		ldr	r2, [r4, #64]
-  90 002a 12B1     		cbz	r2, .L8
+  86              		.loc 1 121 9 view .LVU19
+  87              		.loc 1 121 11 is_stmt 0 view .LVU20
+  88 0028 226C     		ldr	r2, [r4, #64]
+  89 002a 12B1     		cbz	r2, .L8
  122:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c ****         {
  123:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c **** 
  124:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c ****             /* Yes, setup the new HCD entry.  */
@@ -238,10 +237,10 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccycAgYo.s 			page 1
  137:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c **** 
  138:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c ****             /* This controller is now used */
  139:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c ****             hcd -> ux_hcd_status =  UX_USED;
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccycAgYo.s 			page 5
-
-
  140:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c **** 
+ARM GAS  /tmp/ccufoVKX.s 			page 5
+
+
  141:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c ****             /* And we have one new controller registered.  */
  142:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c ****             _ux_system_host -> ux_system_host_registered_hcd++;
  143:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c **** 
@@ -254,114 +253,112 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccycAgYo.s 			page 1
  150:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c **** #if UX_MAX_HCD > 1
  151:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c ****         /* Try the next HCD structure */
  152:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c ****         hcd++;
-  91              		.loc 1 152 9 is_stmt 1 discriminator 2 view .LVU22
-  92              		.loc 1 152 12 is_stmt 0 discriminator 2 view .LVU23
-  93 002c 9434     		adds	r4, r4, #148
-  94              	.LVL6:
+  90              		.loc 1 152 9 is_stmt 1 view .LVU21
+  91              		.loc 1 152 12 is_stmt 0 view .LVU22
+  92 002c 9434     		adds	r4, r4, #148
+  93              	.LVL6:
  116:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c ****     {
-  95              		.loc 1 116 79 is_stmt 1 discriminator 2 view .LVU24
+  94              		.loc 1 116 88 is_stmt 1 discriminator 2 view .LVU23
+  95 002e 0130     		adds	r0, r0, #1
+  96              	.LVL7:
  116:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c ****     {
-  96              		.loc 1 116 88 is_stmt 0 discriminator 2 view .LVU25
-  97 002e 0130     		adds	r0, r0, #1
-  98              	.LVL7:
- 116:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c ****     {
-  99              		.loc 1 116 88 discriminator 2 view .LVU26
- 100 0030 F7E7     		b	.L3
- 101              	.L8:
+  97              		.loc 1 116 88 is_stmt 0 discriminator 2 view .LVU24
+  98 0030 F7E7     		b	.L3
+  99              	.L8:
  131:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c **** #endif
- 102              		.loc 1 131 13 is_stmt 1 view .LVU27
- 103 0032 019A     		ldr	r2, [sp, #4]
- 104 0034 0132     		adds	r2, r2, #1
- 105 0036 4146     		mov	r1, r8
- 106 0038 2046     		mov	r0, r4
- 107              	.LVL8:
+ 100              		.loc 1 131 13 is_stmt 1 view .LVU25
+ 101 0032 019A     		ldr	r2, [sp, #4]
+ 102 0034 0132     		adds	r2, r2, #1
+ 103 0036 4146     		mov	r1, r8
+ 104 0038 2046     		mov	r0, r4
+ 105              	.LVL8:
  131:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c **** #endif
- 108              		.loc 1 131 13 is_stmt 0 view .LVU28
- 109 003a FFF7FEFF 		bl	_ux_utility_memory_copy
- 110              	.LVL9:
+ 106              		.loc 1 131 13 is_stmt 0 view .LVU26
+ 107 003a FFF7FEFF 		bl	_ux_utility_memory_copy
+ 108              	.LVL9:
  135:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c ****             hcd -> ux_hcd_irq =  hcd_param2;
- 111              		.loc 1 135 13 is_stmt 1 view .LVU29
+ 109              		.loc 1 135 13 is_stmt 1 view .LVU27
  135:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c ****             hcd -> ux_hcd_irq =  hcd_param2;
- 112              		.loc 1 135 30 is_stmt 0 view .LVU30
- 113 003e E766     		str	r7, [r4, #108]
+ 110              		.loc 1 135 30 is_stmt 0 view .LVU28
+ 111 003e E766     		str	r7, [r4, #108]
  136:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c **** 
- 114              		.loc 1 136 13 is_stmt 1 view .LVU31
+ 112              		.loc 1 136 13 is_stmt 1 view .LVU29
  136:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c **** 
- 115              		.loc 1 136 31 is_stmt 0 view .LVU32
- 116 0040 A664     		str	r6, [r4, #72]
+ 113              		.loc 1 136 31 is_stmt 0 view .LVU30
+ 114 0040 A664     		str	r6, [r4, #72]
  139:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c **** 
- 117              		.loc 1 139 13 is_stmt 1 view .LVU33
+ 115              		.loc 1 139 13 is_stmt 1 view .LVU31
  139:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c **** 
- 118              		.loc 1 139 34 is_stmt 0 view .LVU34
- 119 0042 0123     		movs	r3, #1
- 120 0044 2364     		str	r3, [r4, #64]
+ 116              		.loc 1 139 34 is_stmt 0 view .LVU32
+ 117 0042 0123     		movs	r3, #1
+ 118 0044 2364     		str	r3, [r4, #64]
  142:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c **** 
- 121              		.loc 1 142 13 is_stmt 1 view .LVU35
+ 119              		.loc 1 142 13 is_stmt 1 view .LVU33
  142:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccycAgYo.s 			page 6
+ 120              		.loc 1 142 29 is_stmt 0 view .LVU34
+ 121 0046 064B     		ldr	r3, .L9
+ 122 0048 1A68     		ldr	r2, [r3]
+ARM GAS  /tmp/ccufoVKX.s 			page 6
 
 
- 122              		.loc 1 142 29 is_stmt 0 view .LVU36
- 123 0046 064B     		ldr	r3, .L9
- 124 0048 1A68     		ldr	r2, [r3]
- 125 004a D368     		ldr	r3, [r2, #12]
+ 123 004a D368     		ldr	r3, [r2, #12]
  142:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c **** 
- 126              		.loc 1 142 61 view .LVU37
- 127 004c 0133     		adds	r3, r3, #1
- 128 004e D360     		str	r3, [r2, #12]
+ 124              		.loc 1 142 61 view .LVU35
+ 125 004c 0133     		adds	r3, r3, #1
+ 126 004e D360     		str	r3, [r2, #12]
  145:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c **** 
- 129              		.loc 1 145 13 is_stmt 1 view .LVU38
+ 127              		.loc 1 145 13 is_stmt 1 view .LVU36
  145:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c **** 
- 130              		.loc 1 145 23 is_stmt 0 view .LVU39
- 131 0050 2046     		mov	r0, r4
- 132 0052 A847     		blx	r5
- 133              	.LVL10:
+ 128              		.loc 1 145 23 is_stmt 0 view .LVU37
+ 129 0050 2046     		mov	r0, r4
+ 130 0052 A847     		blx	r5
+ 131              	.LVL10:
  148:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c ****         }
- 134              		.loc 1 148 13 is_stmt 1 view .LVU40
+ 132              		.loc 1 148 13 is_stmt 1 view .LVU38
  148:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c ****         }
- 135              		.loc 1 148 19 is_stmt 0 view .LVU41
- 136 0054 00E0     		b	.L1
- 137              	.LVL11:
- 138              	.L7:
+ 133              		.loc 1 148 19 is_stmt 0 view .LVU39
+ 134 0054 00E0     		b	.L1
+ 135              	.LVL11:
+ 136              	.L7:
  153:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c ****     }
  154:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c **** #endif
  155:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c **** 
  156:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c ****     /* We have exhausted the array of the HCDs, return an error.  */
  157:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c ****     return(UX_MEMORY_INSUFFICIENT);
- 139              		.loc 1 157 11 view .LVU42
- 140 0056 1220     		movs	r0, #18
- 141              	.LVL12:
- 142              	.L1:
+ 137              		.loc 1 157 11 view .LVU40
+ 138 0056 1220     		movs	r0, #18
+ 139              	.LVL12:
+ 140              	.L1:
  158:./Middlewares/ST/usbx/common/core/src/ux_host_stack_hcd_register.c **** }
- 143              		.loc 1 158 1 view .LVU43
- 144 0058 02B0     		add	sp, sp, #8
- 145              	.LCFI2:
- 146              		.cfi_def_cfa_offset 24
- 147              		@ sp needed
- 148 005a BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
- 149              	.LVL13:
- 150              	.L10:
- 151              		.loc 1 158 1 view .LVU44
- 152 005e 00BF     		.align	2
- 153              	.L9:
- 154 0060 00000000 		.word	_ux_system_host
- 155              		.cfi_endproc
- 156              	.LFE11:
- 158              		.text
- 159              	.Letext0:
- 160              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
- 161              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
- 162              		.file 4 "./Middlewares/ST/usbx/common/core/inc/ux_api.h"
- 163              		.file 5 "./Middlewares/ST/usbx/common/core/inc/ux_system.h"
- 164              		.file 6 "./Middlewares/ST/usbx/common/core/inc/ux_utility.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccycAgYo.s 			page 7
+ 141              		.loc 1 158 1 view .LVU41
+ 142 0058 02B0     		add	sp, sp, #8
+ 143              	.LCFI2:
+ 144              		.cfi_def_cfa_offset 24
+ 145              		@ sp needed
+ 146 005a BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 147              	.LVL13:
+ 148              	.L10:
+ 149              		.loc 1 158 1 view .LVU42
+ 150 005e 00BF     		.align	2
+ 151              	.L9:
+ 152 0060 00000000 		.word	_ux_system_host
+ 153              		.cfi_endproc
+ 154              	.LFE11:
+ 156              		.text
+ 157              	.Letext0:
+ 158              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
+ 159              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
+ 160              		.file 4 "./Middlewares/ST/usbx/common/core/inc/ux_api.h"
+ 161              		.file 5 "./Middlewares/ST/usbx/common/core/inc/ux_system.h"
+ 162              		.file 6 "./Middlewares/ST/usbx/common/core/inc/ux_utility.h"
+ARM GAS  /tmp/ccufoVKX.s 			page 7
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 ux_host_stack_hcd_register.c
-C:\Users\Dennis\AppData\Local\Temp\ccycAgYo.s:20     .text._ux_host_stack_hcd_register:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccycAgYo.s:26     .text._ux_host_stack_hcd_register:00000000 _ux_host_stack_hcd_register
-C:\Users\Dennis\AppData\Local\Temp\ccycAgYo.s:154    .text._ux_host_stack_hcd_register:00000060 $d
+     /tmp/ccufoVKX.s:21     .text._ux_host_stack_hcd_register:00000000 $t
+     /tmp/ccufoVKX.s:27     .text._ux_host_stack_hcd_register:00000000 _ux_host_stack_hcd_register
+     /tmp/ccufoVKX.s:152    .text._ux_host_stack_hcd_register:00000060 $d
 
 UNDEFINED SYMBOLS
 _ux_utility_string_length_check

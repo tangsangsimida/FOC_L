@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cclr1Gqz.s 			page 1
+ARM GAS  /tmp/ccvErGuZ.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,16 +19,16 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cclr1Gqz.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text._ux_host_stack_rh_device_extraction,"ax",%progbits
-  20              		.align	1
-  21              		.global	_ux_host_stack_rh_device_extraction
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
-  26              	_ux_host_stack_rh_device_extraction:
-  27              	.LVL0:
-  28              	.LFB11:
-  29              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_host_stack_rh_device_extraction.c"
+  19              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_host_stack_rh_device_extraction.c"
+  20              		.section	.text._ux_host_stack_rh_device_extraction,"ax",%progbits
+  21              		.align	1
+  22              		.global	_ux_host_stack_rh_device_extraction
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	_ux_host_stack_rh_device_extraction:
+  28              	.LVL0:
+  29              	.LFB11:
    1:./Middlewares/ST/usbx/common/core/src/ux_host_stack_rh_device_extraction.c **** /**************************************************************************/
    2:./Middlewares/ST/usbx/common/core/src/ux_host_stack_rh_device_extraction.c **** /*                                                                        */
    3:./Middlewares/ST/usbx/common/core/src/ux_host_stack_rh_device_extraction.c **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cclr1Gqz.s 			page 1
   27:./Middlewares/ST/usbx/common/core/src/ux_host_stack_rh_device_extraction.c **** 
   28:./Middlewares/ST/usbx/common/core/src/ux_host_stack_rh_device_extraction.c **** #include "ux_api.h"
   29:./Middlewares/ST/usbx/common/core/src/ux_host_stack_rh_device_extraction.c **** #include "ux_host_stack.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cclr1Gqz.s 			page 2
+ARM GAS  /tmp/ccvErGuZ.s 			page 2
 
 
   30:./Middlewares/ST/usbx/common/core/src/ux_host_stack_rh_device_extraction.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cclr1Gqz.s 			page 1
   39              		.cfi_offset 4, -12
   40              		.cfi_offset 5, -8
   41              		.cfi_offset 14, -4
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cclr1Gqz.s 			page 3
+ARM GAS  /tmp/ccvErGuZ.s 			page 3
 
 
   42 0002 0446     		mov	r4, r0
@@ -140,37 +140,38 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cclr1Gqz.s 			page 1
   82:./Middlewares/ST/usbx/common/core/src/ux_host_stack_rh_device_extraction.c ****     /* The device has been removed, so the port is free again.  */
   83:./Middlewares/ST/usbx/common/core/src/ux_host_stack_rh_device_extraction.c ****     hcd -> ux_hcd_rh_device_connection &= (ULONG)~(1 << port_index);
   51              		.loc 1 83 5 is_stmt 1 view .LVU4
-  52              		.loc 1 83 54 is_stmt 0 view .LVU5
-  53 000e 0123     		movs	r3, #1
-  54 0010 03FA05F5 		lsl	r5, r3, r5
-  55              	.LVL3:
-  56              		.loc 1 83 40 view .LVU6
-  57 0014 A36E     		ldr	r3, [r4, #104]
-  58 0016 23EA0503 		bic	r3, r3, r5
-  59 001a A366     		str	r3, [r4, #104]
+  52              		.loc 1 83 9 is_stmt 0 view .LVU5
+  53 000e A36E     		ldr	r3, [r4, #104]
+  54              		.loc 1 83 54 view .LVU6
+  55 0010 0122     		movs	r2, #1
+  56 0012 AA40     		lsls	r2, r2, r5
+  57              		.loc 1 83 40 view .LVU7
+  58 0014 23EA0203 		bic	r3, r3, r2
+  59 0018 A366     		str	r3, [r4, #104]
   84:./Middlewares/ST/usbx/common/core/src/ux_host_stack_rh_device_extraction.c **** 
   85:./Middlewares/ST/usbx/common/core/src/ux_host_stack_rh_device_extraction.c ****     /* That command should never fail!  */
   86:./Middlewares/ST/usbx/common/core/src/ux_host_stack_rh_device_extraction.c ****     return(UX_SUCCESS);
-  60              		.loc 1 86 5 is_stmt 1 view .LVU7
+  60              		.loc 1 86 5 is_stmt 1 view .LVU8
   87:./Middlewares/ST/usbx/common/core/src/ux_host_stack_rh_device_extraction.c **** }
-  61              		.loc 1 87 1 is_stmt 0 view .LVU8
-  62 001c 0020     		movs	r0, #0
-  63 001e 38BD     		pop	{r3, r4, r5, pc}
-  64              		.loc 1 87 1 view .LVU9
+  61              		.loc 1 87 1 is_stmt 0 view .LVU9
+  62 001a 0020     		movs	r0, #0
+  63 001c 38BD     		pop	{r3, r4, r5, pc}
+  64              		.loc 1 87 1 view .LVU10
   65              		.cfi_endproc
   66              	.LFE11:
   68              		.text
   69              	.Letext0:
   70              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
-  71              		.file 3 "./Middlewares/ST/usbx/common/core/inc/ux_api.h"
-  72              		.file 4 "./Middlewares/ST/usbx/common/core/inc/ux_host_stack.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cclr1Gqz.s 			page 4
+  71              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
+  72              		.file 4 "./Middlewares/ST/usbx/common/core/inc/ux_api.h"
+  73              		.file 5 "./Middlewares/ST/usbx/common/core/inc/ux_host_stack.h"
+ARM GAS  /tmp/ccvErGuZ.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 ux_host_stack_rh_device_extraction.c
-C:\Users\Dennis\AppData\Local\Temp\cclr1Gqz.s:20     .text._ux_host_stack_rh_device_extraction:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\cclr1Gqz.s:26     .text._ux_host_stack_rh_device_extraction:00000000 _ux_host_stack_rh_device_extraction
+     /tmp/ccvErGuZ.s:21     .text._ux_host_stack_rh_device_extraction:00000000 $t
+     /tmp/ccvErGuZ.s:27     .text._ux_host_stack_rh_device_extraction:00000000 _ux_host_stack_rh_device_extraction
 
 UNDEFINED SYMBOLS
 _ux_host_stack_device_remove

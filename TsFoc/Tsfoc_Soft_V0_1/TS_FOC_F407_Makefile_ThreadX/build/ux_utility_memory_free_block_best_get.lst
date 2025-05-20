@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccMYmckd.s 			page 1
+ARM GAS  /tmp/cc1c3Rgi.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,16 +19,16 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccMYmckd.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text._ux_utility_memory_free_block_best_get,"ax",%progbits
-  20              		.align	1
-  21              		.global	_ux_utility_memory_free_block_best_get
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
-  26              	_ux_utility_memory_free_block_best_get:
-  27              	.LVL0:
-  28              	.LFB11:
-  29              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free_block_best_get.c"
+  19              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free_block_best_get.c"
+  20              		.section	.text._ux_utility_memory_free_block_best_get,"ax",%progbits
+  21              		.align	1
+  22              		.global	_ux_utility_memory_free_block_best_get
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	_ux_utility_memory_free_block_best_get:
+  28              	.LVL0:
+  29              	.LFB11:
    1:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free_block_best_get.c **** /**************************************************************************/
    2:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free_block_best_get.c **** /*                                                                        */
    3:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free_block_best_get.c **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccMYmckd.s 			page 1
   27:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free_block_best_get.c **** 
   28:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free_block_best_get.c **** #include "ux_api.h"
   29:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free_block_best_get.c **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccMYmckd.s 			page 2
+ARM GAS  /tmp/cc1c3Rgi.s 			page 2
 
 
   30:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free_block_best_get.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccMYmckd.s 			page 1
   77:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free_block_best_get.c ****     
   78:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free_block_best_get.c **** 
   79:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free_block_best_get.c ****     /* Reset the free memory block.  */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccMYmckd.s 			page 3
+ARM GAS  /tmp/cc1c3Rgi.s 			page 3
 
 
   80:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free_block_best_get.c ****     best_memory_block =  UX_NULL;
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccMYmckd.s 			page 1
  114:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free_block_best_get.c ****                fit the memory requirement.  */
  115:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free_block_best_get.c ****             if (memory_block -> ux_memory_block_size > memory_size_requested)
  116:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free_block_best_get.c ****             {
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccMYmckd.s 			page 4
+ARM GAS  /tmp/cc1c3Rgi.s 			page 4
 
 
  117:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free_block_best_get.c ****                 
@@ -189,10 +189,17 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccMYmckd.s 			page 1
  122:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free_block_best_get.c **** 
  123:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free_block_best_get.c ****                     /* Initialize the best block with the first free one.  */
  124:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free_block_best_get.c ****                     best_memory_block =  memory_block;
-  57              		.loc 1 124 39 is_stmt 0 discriminator 1 view .LVU10
+ 125:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free_block_best_get.c ****                 else
+ 126:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free_block_best_get.c ****                 {
+ 127:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free_block_best_get.c **** 
+ 128:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free_block_best_get.c ****                     if (memory_block -> ux_memory_block_size < best_memory_block -> ux_memory_block
+ 129:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free_block_best_get.c **** 
+ 130:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free_block_best_get.c ****                         /* We have discovered a better fit block.  */
+ 131:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free_block_best_get.c ****                         best_memory_block =  memory_block;
+  57              		.loc 1 131 43 is_stmt 0 view .LVU10
   58 0010 0020     		movs	r0, #0
   59              	.LVL4:
-  60              		.loc 1 124 39 discriminator 1 view .LVU11
+  60              		.loc 1 131 43 view .LVU11
   61 0012 18E0     		b	.L13
   62              	.LVL5:
   63              	.L3:
@@ -214,17 +221,11 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccMYmckd.s 			page 1
   75              	.LCFI0:
   76              		.cfi_def_cfa_offset 4
   77              		.cfi_offset 4, -4
+ 124:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free_block_best_get.c ****                 else
   78              		.loc 1 124 39 is_stmt 0 view .LVU16
   79 001c 1846     		mov	r0, r3
   80              	.LVL8:
   81              	.L7:
- 125:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free_block_best_get.c ****                 else
- 126:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free_block_best_get.c ****                 {
- 127:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free_block_best_get.c **** 
- 128:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free_block_best_get.c ****                     if (memory_block -> ux_memory_block_size < best_memory_block -> ux_memory_block
- 129:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free_block_best_get.c **** 
- 130:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free_block_best_get.c ****                         /* We have discovered a better fit block.  */
- 131:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free_block_best_get.c ****                         best_memory_block =  memory_block;
  132:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free_block_best_get.c ****                 }                    
  133:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free_block_best_get.c ****             }
  134:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free_block_best_get.c ****         }
@@ -236,11 +237,11 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccMYmckd.s 			page 1
   84 001e 9B68     		ldr	r3, [r3, #8]
   85              	.LVL9:
  106:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free_block_best_get.c ****     {
-  86              		.loc 1 106 11 is_stmt 1 view .LVU19
+  86              		.loc 1 106 25 is_stmt 1 view .LVU19
+ARM GAS  /tmp/cc1c3Rgi.s 			page 5
+
+
   87 0020 63B1     		cbz	r3, .L21
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccMYmckd.s 			page 5
-
-
  110:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free_block_best_get.c ****         {
   88              		.loc 1 110 9 view .LVU20
  110:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free_block_best_get.c ****         {
@@ -297,10 +298,10 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccMYmckd.s 			page 1
  124:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free_block_best_get.c ****                 else
  124              		.loc 1 124 39 view .LVU33
  125 0042 1846     		mov	r0, r3
+ARM GAS  /tmp/cc1c3Rgi.s 			page 6
+
+
  126              	.LVL12:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccMYmckd.s 			page 6
-
-
  127              	.L15:
  137:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free_block_best_get.c ****     }
  128              		.loc 1 137 9 is_stmt 1 view .LVU34
@@ -310,7 +311,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccMYmckd.s 			page 1
  131              	.LVL13:
  132              	.L13:
  106:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free_block_best_get.c ****     {
- 133              		.loc 1 106 11 is_stmt 1 view .LVU36
+ 133              		.loc 1 106 25 is_stmt 1 view .LVU36
  134 0046 4BB1     		cbz	r3, .L22
  110:./Middlewares/ST/usbx/common/core/src/ux_utility_memory_free_block_best_get.c ****         {
  135              		.loc 1 110 9 view .LVU37
@@ -357,22 +358,22 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccMYmckd.s 			page 1
  167              		.cfi_endproc
  168              	.LFE11:
  170              		.text
+ARM GAS  /tmp/cc1c3Rgi.s 			page 7
+
+
  171              	.Letext0:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccMYmckd.s 			page 7
-
-
  172              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
  173              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
  174              		.file 4 "./Middlewares/ST/usbx/common/core/inc/ux_api.h"
  175              		.file 5 "./Middlewares/ST/usbx/common/core/inc/ux_system.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccMYmckd.s 			page 8
+ARM GAS  /tmp/cc1c3Rgi.s 			page 8
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 ux_utility_memory_free_block_best_get.c
-C:\Users\Dennis\AppData\Local\Temp\ccMYmckd.s:20     .text._ux_utility_memory_free_block_best_get:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccMYmckd.s:26     .text._ux_utility_memory_free_block_best_get:00000000 _ux_utility_memory_free_block_best_get
-C:\Users\Dennis\AppData\Local\Temp\ccMYmckd.s:166    .text._ux_utility_memory_free_block_best_get:00000060 $d
+     /tmp/cc1c3Rgi.s:21     .text._ux_utility_memory_free_block_best_get:00000000 $t
+     /tmp/cc1c3Rgi.s:27     .text._ux_utility_memory_free_block_best_get:00000000 _ux_utility_memory_free_block_best_get
+     /tmp/cc1c3Rgi.s:166    .text._ux_utility_memory_free_block_best_get:00000060 $d
 
 UNDEFINED SYMBOLS
 _ux_system

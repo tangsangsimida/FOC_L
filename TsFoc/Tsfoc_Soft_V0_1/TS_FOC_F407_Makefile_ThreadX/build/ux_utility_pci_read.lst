@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccHR5mEu.s 			page 1
+ARM GAS  /tmp/ccV7MfYb.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,16 +19,16 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccHR5mEu.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text._ux_utility_pci_read,"ax",%progbits
-  20              		.align	1
-  21              		.global	_ux_utility_pci_read
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
-  26              	_ux_utility_pci_read:
-  27              	.LVL0:
-  28              	.LFB11:
-  29              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_utility_pci_read.c"
+  19              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_utility_pci_read.c"
+  20              		.section	.text._ux_utility_pci_read,"ax",%progbits
+  21              		.align	1
+  22              		.global	_ux_utility_pci_read
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	_ux_utility_pci_read:
+  28              	.LVL0:
+  29              	.LFB11:
    1:./Middlewares/ST/usbx/common/core/src/ux_utility_pci_read.c **** /**************************************************************************/
    2:./Middlewares/ST/usbx/common/core/src/ux_utility_pci_read.c **** /*                                                                        */
    3:./Middlewares/ST/usbx/common/core/src/ux_utility_pci_read.c **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccHR5mEu.s 			page 1
   27:./Middlewares/ST/usbx/common/core/src/ux_utility_pci_read.c **** 
   28:./Middlewares/ST/usbx/common/core/src/ux_utility_pci_read.c **** #include "ux_api.h"
   29:./Middlewares/ST/usbx/common/core/src/ux_utility_pci_read.c **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccHR5mEu.s 			page 2
+ARM GAS  /tmp/ccV7MfYb.s 			page 2
 
 
   30:./Middlewares/ST/usbx/common/core/src/ux_utility_pci_read.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccHR5mEu.s 			page 1
   33              		@ frame_needed = 0, uses_anonymous_args = 0
   34              		@ link register save eliminated.
   35              		.loc 1 80 1 is_stmt 0 view .LVU1
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccHR5mEu.s 			page 3
+ARM GAS  /tmp/ccV7MfYb.s 			page 3
 
 
   36 0000 10B4     		push	{r4}
@@ -175,24 +175,38 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccHR5mEu.s 			page 1
   72 001e 102C     		cmp	r4, #16
   73 0020 0DD0     		beq	.L2
   74 0022 202C     		cmp	r4, #32
-  75 0024 05D0     		beq	.L3
+  75 0024 03D0     		beq	.L3
   76 0026 082C     		cmp	r4, #8
   77 0028 11D0     		beq	.L4
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccHR5mEu.s 			page 4
+ARM GAS  /tmp/ccV7MfYb.s 			page 4
 
 
   78 002a 0020     		movs	r0, #0
   79              	.LVL7:
-  80              	.L1:
+  80              		.loc 1 94 5 is_stmt 0 view .LVU17
+  81 002c 04E0     		b	.L1
+  82              	.LVL8:
+  83              	.L3:
   95:./Middlewares/ST/usbx/common/core/src/ux_utility_pci_read.c ****     {
   96:./Middlewares/ST/usbx/common/core/src/ux_utility_pci_read.c **** 
   97:./Middlewares/ST/usbx/common/core/src/ux_utility_pci_read.c ****     case 32:
   98:./Middlewares/ST/usbx/common/core/src/ux_utility_pci_read.c **** 
   99:./Middlewares/ST/usbx/common/core/src/ux_utility_pci_read.c ****         /* Write the address we need to read from.  */
  100:./Middlewares/ST/usbx/common/core/src/ux_utility_pci_read.c ****         outpl(UX_PCI_CFG_CTRL_ADDRESS, cfg_ctrl);
+  84              		.loc 1 100 9 is_stmt 1 view .LVU18
+  85 002e 0023     		movs	r3, #0
+  86              	.LVL9:
+  87              		.loc 1 100 9 is_stmt 0 view .LVU19
+  88 0030 C3F8F80C 		str	r0, [r3, #3320]
+  89              	.LVL10:
  101:./Middlewares/ST/usbx/common/core/src/ux_utility_pci_read.c **** 
  102:./Middlewares/ST/usbx/common/core/src/ux_utility_pci_read.c ****         /* Return the 32 bit content of this address.  */
  103:./Middlewares/ST/usbx/common/core/src/ux_utility_pci_read.c ****         return(inpl(UX_PCI_CFG_DATA_ADDRESS));
+  90              		.loc 1 103 9 is_stmt 1 view .LVU20
+  91              		.loc 1 103 16 is_stmt 0 view .LVU21
+  92 0034 D3F8FC0C 		ldr	r0, [r3, #3324]
+  93              	.LVL11:
+  94              	.L1:
  104:./Middlewares/ST/usbx/common/core/src/ux_utility_pci_read.c ****     
  105:./Middlewares/ST/usbx/common/core/src/ux_utility_pci_read.c ****     case 16:
  106:./Middlewares/ST/usbx/common/core/src/ux_utility_pci_read.c **** 
@@ -215,39 +229,20 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccHR5mEu.s 			page 1
  123:./Middlewares/ST/usbx/common/core/src/ux_utility_pci_read.c ****         return(0);
  124:./Middlewares/ST/usbx/common/core/src/ux_utility_pci_read.c ****     }
  125:./Middlewares/ST/usbx/common/core/src/ux_utility_pci_read.c **** }
-  81              		.loc 1 125 1 is_stmt 0 view .LVU17
-  82 002c 5DF8044B 		ldr	r4, [sp], #4
-  83              	.LCFI1:
-  84              		.cfi_remember_state
-  85              		.cfi_restore 4
-  86              		.cfi_def_cfa_offset 0
-  87 0030 7047     		bx	lr
-  88              	.LVL8:
-  89              	.L3:
-  90              	.LCFI2:
-  91              		.cfi_restore_state
- 100:./Middlewares/ST/usbx/common/core/src/ux_utility_pci_read.c **** 
-  92              		.loc 1 100 9 is_stmt 1 view .LVU18
-  93 0032 0023     		movs	r3, #0
-  94              	.LVL9:
- 100:./Middlewares/ST/usbx/common/core/src/ux_utility_pci_read.c **** 
-  95              		.loc 1 100 9 is_stmt 0 view .LVU19
-  96 0034 C3F8F80C 		str	r0, [r3, #3320]
-  97              	.LVL10:
- 103:./Middlewares/ST/usbx/common/core/src/ux_utility_pci_read.c ****     
-  98              		.loc 1 103 9 is_stmt 1 view .LVU20
- 103:./Middlewares/ST/usbx/common/core/src/ux_utility_pci_read.c ****     
-  99              		.loc 1 103 16 is_stmt 0 view .LVU21
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccHR5mEu.s 			page 5
+  95              		.loc 1 125 1 view .LVU22
+  96 0038 5DF8044B 		ldr	r4, [sp], #4
+  97              	.LCFI1:
+  98              		.cfi_remember_state
+  99              		.cfi_restore 4
+ 100              		.cfi_def_cfa_offset 0
+ 101 003c 7047     		bx	lr
+ 102              	.LVL12:
+ 103              	.L2:
+ARM GAS  /tmp/ccV7MfYb.s 			page 5
 
 
- 100 0038 D3F8FC0C 		ldr	r0, [r3, #3324]
- 101              	.LVL11:
- 103:./Middlewares/ST/usbx/common/core/src/ux_utility_pci_read.c ****     
- 102              		.loc 1 103 16 view .LVU22
- 103 003c F6E7     		b	.L1
- 104              	.LVL12:
- 105              	.L2:
+ 104              	.LCFI2:
+ 105              		.cfi_restore_state
  108:./Middlewares/ST/usbx/common/core/src/ux_utility_pci_read.c **** 
  106              		.loc 1 108 9 is_stmt 1 view .LVU23
  107 003e 0023     		movs	r3, #0
@@ -265,7 +260,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccHR5mEu.s 			page 1
  116              	.LVL15:
  111:./Middlewares/ST/usbx/common/core/src/ux_utility_pci_read.c **** 
  117              		.loc 1 111 16 view .LVU27
- 118 004c EEE7     		b	.L1
+ 118 004c F4E7     		b	.L1
  119              	.LVL16:
  120              	.L4:
  116:./Middlewares/ST/usbx/common/core/src/ux_utility_pci_read.c **** 
@@ -285,18 +280,18 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccHR5mEu.s 			page 1
  131              	.LVL19:
  119:./Middlewares/ST/usbx/common/core/src/ux_utility_pci_read.c **** 
  132              		.loc 1 119 16 view .LVU32
- 133 005c E6E7     		b	.L1
+ 133 005c ECE7     		b	.L1
  134              		.cfi_endproc
  135              	.LFE11:
  137              		.text
  138              	.Letext0:
  139              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccHR5mEu.s 			page 6
+ARM GAS  /tmp/ccV7MfYb.s 			page 6
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 ux_utility_pci_read.c
-C:\Users\Dennis\AppData\Local\Temp\ccHR5mEu.s:20     .text._ux_utility_pci_read:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccHR5mEu.s:26     .text._ux_utility_pci_read:00000000 _ux_utility_pci_read
+     /tmp/ccV7MfYb.s:21     .text._ux_utility_pci_read:00000000 $t
+     /tmp/ccV7MfYb.s:27     .text._ux_utility_pci_read:00000000 _ux_utility_pci_read
 
 NO UNDEFINED SYMBOLS

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccVpMtrt.s 			page 1
+ARM GAS  /tmp/ccpl79He.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,15 +19,15 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccVpMtrt.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text.MX_RNG_Init,"ax",%progbits
-  20              		.align	1
-  21              		.global	MX_RNG_Init
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
-  26              	MX_RNG_Init:
-  27              	.LFB239:
-  28              		.file 1 "./Core/Src/rng.c"
+  19              		.file 1 "./Core/Src/rng.c"
+  20              		.section	.text.MX_RNG_Init,"ax",%progbits
+  21              		.align	1
+  22              		.global	MX_RNG_Init
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	MX_RNG_Init:
+  28              	.LFB239:
    1:./Core/Src/rng.c **** /* USER CODE BEGIN Header */
    2:./Core/Src/rng.c **** /**
    3:./Core/Src/rng.c ****   ******************************************************************************
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccVpMtrt.s 			page 1
   28:./Core/Src/rng.c **** 
   29:./Core/Src/rng.c **** /* RNG init function */
   30:./Core/Src/rng.c **** void MX_RNG_Init(void)
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccVpMtrt.s 			page 2
+ARM GAS  /tmp/ccpl79He.s 			page 2
 
 
   31:./Core/Src/rng.c **** {
@@ -90,7 +90,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccVpMtrt.s 			page 1
   44              		.loc 1 41 7 is_stmt 0 view .LVU4
   45 0008 FFF7FEFF 		bl	HAL_RNG_Init
   46              	.LVL0:
-  47              		.loc 1 41 6 view .LVU5
+  47              		.loc 1 41 6 discriminator 1 view .LVU5
   48 000c 00B9     		cbnz	r0, .L4
   49              	.L1:
   42:./Core/Src/rng.c ****   {
@@ -113,12 +113,12 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccVpMtrt.s 			page 1
   58              	.L6:
   59 0016 00BF     		.align	2
   60              	.L5:
-  61 0018 00000000 		.word	.LANCHOR0
+  61 0018 00000000 		.word	hrng
   62 001c 00080650 		.word	1342572544
   63              		.cfi_endproc
   64              	.LFE239:
   66              		.section	.text.HAL_RNG_MspInit,"ax",%progbits
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccVpMtrt.s 			page 3
+ARM GAS  /tmp/ccpl79He.s 			page 3
 
 
   67              		.align	1
@@ -176,9 +176,9 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccVpMtrt.s 			page 1
  108              		.loc 1 60 5 view .LVU18
  109 0022 019B     		ldr	r3, [sp, #4]
  110              	.LBE2:
- 111              		.loc 1 60 5 view .LVU19
+ 111              		.loc 1 60 5 discriminator 1 view .LVU19
   61:./Core/Src/rng.c ****   /* USER CODE BEGIN RNG_MspInit 1 */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccVpMtrt.s 			page 4
+ARM GAS  /tmp/ccpl79He.s 			page 4
 
 
   62:./Core/Src/rng.c **** 
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccVpMtrt.s 			page 1
   81:./Core/Src/rng.c **** }
  149              		.loc 1 81 1 view .LVU25
  150 0008 7047     		bx	lr
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccVpMtrt.s 			page 5
+ARM GAS  /tmp/ccpl79He.s 			page 5
 
 
  151              	.L18:
@@ -260,37 +260,35 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccVpMtrt.s 			page 1
  167              		.global	hrng
  168              		.section	.bss.hrng,"aw",%nobits
  169              		.align	2
- 170              		.set	.LANCHOR0,. + 0
- 173              	hrng:
- 174 0000 00000000 		.space	16
- 174      00000000 
- 174      00000000 
- 174      00000000 
- 175              		.text
- 176              	.Letext0:
- 177              		.file 2 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\machine\\_default_types.h"
- 178              		.file 3 "c:\\software_user\\armgcc\\arm-none-eabi\\include\\sys\\_stdint.h"
- 179              		.file 4 "./Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h"
- 180              		.file 5 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
- 181              		.file 6 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rng.h"
- 182              		.file 7 "./Core/Inc/main.h"
- 183              		.file 8 "./Core/Inc/rng.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccVpMtrt.s 			page 6
+ 172              	hrng:
+ 173 0000 00000000 		.space	16
+ 173      00000000 
+ 173      00000000 
+ 173      00000000 
+ 174              		.text
+ 175              	.Letext0:
+ 176              		.file 2 "./Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h"
+ 177              		.file 3 "/usr/lib/gcc/arm-none-eabi/13.2.1/include/stdint.h"
+ 178              		.file 4 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
+ 179              		.file 5 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rng.h"
+ 180              		.file 6 "./Core/Inc/rng.h"
+ 181              		.file 7 "./Core/Inc/main.h"
+ARM GAS  /tmp/ccpl79He.s 			page 6
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 rng.c
-C:\Users\Dennis\AppData\Local\Temp\ccVpMtrt.s:20     .text.MX_RNG_Init:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccVpMtrt.s:26     .text.MX_RNG_Init:00000000 MX_RNG_Init
-C:\Users\Dennis\AppData\Local\Temp\ccVpMtrt.s:61     .text.MX_RNG_Init:00000018 $d
-C:\Users\Dennis\AppData\Local\Temp\ccVpMtrt.s:67     .text.HAL_RNG_MspInit:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccVpMtrt.s:73     .text.HAL_RNG_MspInit:00000000 HAL_RNG_MspInit
-C:\Users\Dennis\AppData\Local\Temp\ccVpMtrt.s:121    .text.HAL_RNG_MspInit:00000028 $d
-C:\Users\Dennis\AppData\Local\Temp\ccVpMtrt.s:127    .text.HAL_RNG_MspDeInit:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccVpMtrt.s:133    .text.HAL_RNG_MspDeInit:00000000 HAL_RNG_MspDeInit
-C:\Users\Dennis\AppData\Local\Temp\ccVpMtrt.s:162    .text.HAL_RNG_MspDeInit:00000018 $d
-C:\Users\Dennis\AppData\Local\Temp\ccVpMtrt.s:173    .bss.hrng:00000000 hrng
-C:\Users\Dennis\AppData\Local\Temp\ccVpMtrt.s:169    .bss.hrng:00000000 $d
+     /tmp/ccpl79He.s:21     .text.MX_RNG_Init:00000000 $t
+     /tmp/ccpl79He.s:27     .text.MX_RNG_Init:00000000 MX_RNG_Init
+     /tmp/ccpl79He.s:61     .text.MX_RNG_Init:00000018 $d
+     /tmp/ccpl79He.s:172    .bss.hrng:00000000 hrng
+     /tmp/ccpl79He.s:67     .text.HAL_RNG_MspInit:00000000 $t
+     /tmp/ccpl79He.s:73     .text.HAL_RNG_MspInit:00000000 HAL_RNG_MspInit
+     /tmp/ccpl79He.s:121    .text.HAL_RNG_MspInit:00000028 $d
+     /tmp/ccpl79He.s:127    .text.HAL_RNG_MspDeInit:00000000 $t
+     /tmp/ccpl79He.s:133    .text.HAL_RNG_MspDeInit:00000000 HAL_RNG_MspDeInit
+     /tmp/ccpl79He.s:162    .text.HAL_RNG_MspDeInit:00000018 $d
+     /tmp/ccpl79He.s:169    .bss.hrng:00000000 $d
 
 UNDEFINED SYMBOLS
 HAL_RNG_Init

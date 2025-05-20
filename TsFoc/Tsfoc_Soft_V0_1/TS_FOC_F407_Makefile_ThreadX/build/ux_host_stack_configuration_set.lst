@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccRywgVg.s 			page 1
+ARM GAS  /tmp/ccJ7PI7X.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,16 +19,16 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccRywgVg.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text._ux_host_stack_configuration_set,"ax",%progbits
-  20              		.align	1
-  21              		.global	_ux_host_stack_configuration_set
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
-  26              	_ux_host_stack_configuration_set:
-  27              	.LVL0:
-  28              	.LFB11:
-  29              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_set.c"
+  19              		.file 1 "./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_set.c"
+  20              		.section	.text._ux_host_stack_configuration_set,"ax",%progbits
+  21              		.align	1
+  22              		.global	_ux_host_stack_configuration_set
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	_ux_host_stack_configuration_set:
+  28              	.LVL0:
+  29              	.LFB11:
    1:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_set.c **** /**************************************************************************/
    2:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_set.c **** /*                                                                        */
    3:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_set.c **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccRywgVg.s 			page 1
   27:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_set.c **** 
   28:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_set.c **** #include "ux_api.h"
   29:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_set.c **** #include "ux_host_stack.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccRywgVg.s 			page 2
+ARM GAS  /tmp/ccJ7PI7X.s 			page 2
 
 
   30:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_set.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccRywgVg.s 			page 1
   84:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_set.c **** /*  01-31-2022     Chaoqiong Xiao           Modified comment(s),          */
   85:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_set.c **** /*                                            added standalone support,   */
   86:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_set.c **** /*                                            set device power source,    */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccRywgVg.s 			page 3
+ARM GAS  /tmp/ccJ7PI7X.s 			page 3
 
 
   87:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_set.c **** /*                                            resulting in version 6.1.10 */
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccRywgVg.s 			page 1
  118:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_set.c ****             /* With the device we have the pointer to the HCD.  */
  119:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_set.c ****             hcd = UX_DEVICE_HCD_GET(device);
  120:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_set.c ****     
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccRywgVg.s 			page 4
+ARM GAS  /tmp/ccJ7PI7X.s 			page 4
 
 
  121:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_set.c ****             /* Check the HCD to ensure we have an OTG host controller.  */
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccRywgVg.s 			page 1
  157:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_set.c **** #if defined(UX_HOST_STANDALONE)
  158:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_set.c ****     if (device -> ux_device_flags &= UX_DEVICE_FLAG_ENUM)
  159:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_set.c ****     {
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccRywgVg.s 			page 5
+ARM GAS  /tmp/ccJ7PI7X.s 			page 5
 
 
  160:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_set.c **** 
@@ -292,44 +292,45 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccRywgVg.s 			page 1
   91              		.loc 1 187 56 view .LVU31
   92 0032 13F0400F 		tst	r3, #64
   93 0036 02D0     		beq	.L4
-  94 0038 0223     		movs	r3, #2
-  95              	.L3:
+  94              		.loc 1 187 56 discriminator 1 view .LVU32
+  95 0038 0223     		movs	r3, #2
+  96              	.L3:
  184:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_set.c ****                                             ux_configuration_descriptor.bmAttributes &
-  96              		.loc 1 184 42 view .LVU32
-  97 003a 6361     		str	r3, [r4, #20]
+  97              		.loc 1 184 42 view .LVU33
+  98 003a 6361     		str	r3, [r4, #20]
+ARM GAS  /tmp/ccJ7PI7X.s 			page 6
+
+
  188:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_set.c ****     }
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccRywgVg.s 			page 6
-
-
  189:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_set.c **** 
  190:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_set.c ****     /* Return status to caller.  */
  191:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_set.c ****     return(status);
-  98              		.loc 1 191 5 is_stmt 1 view .LVU33
-  99              	.L1:
+  99              		.loc 1 191 5 is_stmt 1 view .LVU34
+ 100              	.L1:
  192:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_set.c **** }
- 100              		.loc 1 192 1 is_stmt 0 view .LVU34
- 101 003c 38BD     		pop	{r3, r4, r5, pc}
- 102              	.LVL4:
- 103              	.L4:
+ 101              		.loc 1 192 1 is_stmt 0 view .LVU35
+ 102 003c 38BD     		pop	{r3, r4, r5, pc}
+ 103              	.LVL4:
+ 104              	.L4:
  187:./Middlewares/ST/usbx/common/core/src/ux_host_stack_configuration_set.c ****     }
- 104              		.loc 1 187 56 view .LVU35
- 105 003e 0123     		movs	r3, #1
- 106 0040 FBE7     		b	.L3
- 107              		.cfi_endproc
- 108              	.LFE11:
- 110              		.text
- 111              	.Letext0:
- 112              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
- 113              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
- 114              		.file 4 "./Middlewares/ST/usbx/common/core/inc/ux_api.h"
- 115              		.file 5 "./Middlewares/ST/usbx/common/core/inc/ux_host_stack.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\ccRywgVg.s 			page 7
+ 105              		.loc 1 187 56 discriminator 2 view .LVU36
+ 106 003e 0123     		movs	r3, #1
+ 107 0040 FBE7     		b	.L3
+ 108              		.cfi_endproc
+ 109              	.LFE11:
+ 111              		.text
+ 112              	.Letext0:
+ 113              		.file 2 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h"
+ 114              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
+ 115              		.file 4 "./Middlewares/ST/usbx/common/core/inc/ux_api.h"
+ 116              		.file 5 "./Middlewares/ST/usbx/common/core/inc/ux_host_stack.h"
+ARM GAS  /tmp/ccJ7PI7X.s 			page 7
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 ux_host_stack_configuration_set.c
-C:\Users\Dennis\AppData\Local\Temp\ccRywgVg.s:20     .text._ux_host_stack_configuration_set:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\ccRywgVg.s:26     .text._ux_host_stack_configuration_set:00000000 _ux_host_stack_configuration_set
+     /tmp/ccJ7PI7X.s:21     .text._ux_host_stack_configuration_set:00000000 $t
+     /tmp/ccJ7PI7X.s:27     .text._ux_host_stack_configuration_set:00000000 _ux_host_stack_configuration_set
 
 UNDEFINED SYMBOLS
 _ux_host_stack_transfer_request

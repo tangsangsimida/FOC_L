@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 1
+ARM GAS  /tmp/ccwO6IuW.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -19,16 +19,16 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text._tx_queue_send,"ax",%progbits
-  20              		.align	1
-  21              		.global	_tx_queue_send
-  22              		.syntax unified
-  23              		.thumb
-  24              		.thumb_func
-  26              	_tx_queue_send:
-  27              	.LVL0:
-  28              	.LFB8:
-  29              		.file 1 "./Middlewares/ST/threadx/common/src/tx_queue_send.c"
+  19              		.file 1 "./Middlewares/ST/threadx/common/src/tx_queue_send.c"
+  20              		.section	.text._tx_queue_send,"ax",%progbits
+  21              		.align	1
+  22              		.global	_tx_queue_send
+  23              		.syntax unified
+  24              		.thumb
+  25              		.thumb_func
+  27              	_tx_queue_send:
+  28              	.LVL0:
+  29              	.LFB8:
    1:./Middlewares/ST/threadx/common/src/tx_queue_send.c **** /**************************************************************************/
    2:./Middlewares/ST/threadx/common/src/tx_queue_send.c **** /*                                                                        */
    3:./Middlewares/ST/threadx/common/src/tx_queue_send.c **** /*       Copyright (c) Microsoft Corporation. All rights reserved.        */
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 1
   27:./Middlewares/ST/threadx/common/src/tx_queue_send.c **** 
   28:./Middlewares/ST/threadx/common/src/tx_queue_send.c **** #include "tx_api.h"
   29:./Middlewares/ST/threadx/common/src/tx_queue_send.c **** #include "tx_trace.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 2
+ARM GAS  /tmp/ccwO6IuW.s 			page 2
 
 
   30:./Middlewares/ST/threadx/common/src/tx_queue_send.c **** #include "tx_thread.h"
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 1
   32              		@ args = 0, pretend = 0, frame = 0
   33              		@ frame_needed = 0, uses_anonymous_args = 0
   34              		.loc 1 81 1 is_stmt 0 view .LVU1
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 3
+ARM GAS  /tmp/ccwO6IuW.s 			page 3
 
 
   35 0000 38B5     		push	{r3, r4, r5, lr}
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 1
   11:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
   12:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
   13:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /**************************************************************************/
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 4
+ARM GAS  /tmp/ccwO6IuW.s 			page 4
 
 
   14:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /**************************************************************************/
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 1
   68:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifdef TX_INCLUDE_USER_DEFINE_FILE
   69:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
   70:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /* Yes, include the user defines in tx_user.h. The defines in this file may
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 5
+ARM GAS  /tmp/ccwO6IuW.s 			page 5
 
 
   71:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****    alternately be defined on the command line.  */
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 1
  125:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  126:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  127:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /* Define the minimum stack for a ThreadX thread on this processor. If the size supplied during
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 6
+ARM GAS  /tmp/ccwO6IuW.s 			page 6
 
 
  128:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****    thread creation is less than this value, the thread create call will return an error.  */
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 1
  182:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  183:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /* Define the method of how to get the upper and lower 32-bits of the time stamp. By default, simpl
  184:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****    simulate the time-stamp source with a counter.  */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 7
+ARM GAS  /tmp/ccwO6IuW.s 			page 7
 
 
  185:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 1
  239:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  240:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  241:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /* Define the port extensions of the remaining ThreadX objects.  */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 8
+ARM GAS  /tmp/ccwO6IuW.s 			page 8
 
 
  242:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 1
  296:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /* Define some helper functions (these are intrinsics in some compilers). */
  297:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifdef __GNUC__ /* GCC and ARM Compiler 6 */
  298:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 9
+ARM GAS  /tmp/ccwO6IuW.s 			page 9
 
 
  299:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** __attribute__( ( always_inline ) ) static inline ULONG __get_control_value(void)
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 1
  353:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                     ULONG  _tx_vfp_state;                          
  354:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                         _tx_vfp_state =  _tx_misra_control_get();  
  355:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                         _tx_vfp_state =  _tx_vfp_state & ~((ULONG) 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 10
+ARM GAS  /tmp/ccwO6IuW.s 			page 10
 
 
  356:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                         _tx_misra_control_set(_tx_vfp_state);      
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 1
  410:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                         else                                       
  411:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                         {                                          
  412:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                         ULONG  _tx_fpccr;                          
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 11
+ARM GAS  /tmp/ccwO6IuW.s 			page 11
 
 
  413:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h ****                                                             _tx_fpccr =  _tx_misra_fpccr_get();    
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 1
  467:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #ifdef __CC_ARM /* ARM Compiler 5 */
  468:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  469:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** register unsigned int _ipsr __asm("ipsr");
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 12
+ARM GAS  /tmp/ccwO6IuW.s 			page 12
 
 
  470:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #define TX_THREAD_GET_SYSTEM_STATE()        (_tx_thread_system_state | _ipsr)
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 1
  524:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  525:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
  526:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 13
+ARM GAS  /tmp/ccwO6IuW.s 			page 13
 
 
  527:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** /* Define the interrupt disable/restore macros for each compiler. */
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 1
   66              		.loc 2 535 1 view .LVU17
  539:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
   67              		.loc 2 539 5 view .LVU18
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 14
+ARM GAS  /tmp/ccwO6IuW.s 			page 14
 
 
   68              		.syntax unified
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 1
  121:./Middlewares/ST/threadx/common/src/tx_queue_send.c **** 
  122:./Middlewares/ST/threadx/common/src/tx_queue_send.c ****     /* Determine if there is room in the queue.  */
  123:./Middlewares/ST/threadx/common/src/tx_queue_send.c ****     if (queue_ptr -> tx_queue_available_storage != TX_NO_MESSAGES)
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 15
+ARM GAS  /tmp/ccwO6IuW.s 			page 15
 
 
   95              		.loc 1 123 5 is_stmt 1 view .LVU26
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 1
  125              		.loc 1 147 13 view .LVU42
  126 0022 51F8045B 		ldr	r5, [r1], #4
  127              	.LVL8:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 16
+ARM GAS  /tmp/ccwO6IuW.s 			page 16
 
 
  128              		.loc 1 147 13 view .LVU43
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 1
  167:./Middlewares/ST/threadx/common/src/tx_queue_send.c **** 
  168:./Middlewares/ST/threadx/common/src/tx_queue_send.c ****             /* Restore interrupts.  */
  169:./Middlewares/ST/threadx/common/src/tx_queue_send.c ****             TX_RESTORE
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 17
+ARM GAS  /tmp/ccwO6IuW.s 			page 17
 
 
  163              		.loc 1 169 13 is_stmt 1 view .LVU56
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 1
  203:./Middlewares/ST/threadx/common/src/tx_queue_send.c ****             {
  204:./Middlewares/ST/threadx/common/src/tx_queue_send.c **** 
  205:./Middlewares/ST/threadx/common/src/tx_queue_send.c ****                 /* At least one more thread is on the same expiration list.  */
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 18
+ARM GAS  /tmp/ccwO6IuW.s 			page 18
 
 
  206:./Middlewares/ST/threadx/common/src/tx_queue_send.c **** 
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 1
  260:./Middlewares/ST/threadx/common/src/tx_queue_send.c **** 
  261:./Middlewares/ST/threadx/common/src/tx_queue_send.c ****             /* Resume thread.  */
  262:./Middlewares/ST/threadx/common/src/tx_queue_send.c ****             _tx_thread_system_resume(thread_ptr);
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 19
+ARM GAS  /tmp/ccwO6IuW.s 			page 19
 
 
  263:./Middlewares/ST/threadx/common/src/tx_queue_send.c **** #endif
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 1
  317:./Middlewares/ST/threadx/common/src/tx_queue_send.c **** 
  318:./Middlewares/ST/threadx/common/src/tx_queue_send.c **** #ifndef TX_NOT_INTERRUPTABLE
  319:./Middlewares/ST/threadx/common/src/tx_queue_send.c **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 20
+ARM GAS  /tmp/ccwO6IuW.s 			page 20
 
 
  320:./Middlewares/ST/threadx/common/src/tx_queue_send.c ****             /* Increment the suspension sequence number, which is used to identify
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 1
  374:./Middlewares/ST/threadx/common/src/tx_queue_send.c ****             /* Temporarily disable preemption.  */
  375:./Middlewares/ST/threadx/common/src/tx_queue_send.c ****             _tx_thread_preempt_disable++;
  376:./Middlewares/ST/threadx/common/src/tx_queue_send.c **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 21
+ARM GAS  /tmp/ccwO6IuW.s 			page 21
 
 
  377:./Middlewares/ST/threadx/common/src/tx_queue_send.c ****             /* Restore interrupts.  */
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 1
  184              	.L19:
  154:./Middlewares/ST/threadx/common/src/tx_queue_send.c ****             }
  185              		.loc 1 154 17 is_stmt 1 view .LVU61
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 22
+ARM GAS  /tmp/ccwO6IuW.s 			page 22
 
 
  154:./Middlewares/ST/threadx/common/src/tx_queue_send.c ****             }
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 1
  222 005e A268     		ldr	r2, [r4, #8]
  223              	.LVL24:
  235:./Middlewares/ST/threadx/common/src/tx_queue_send.c **** 
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 23
+ARM GAS  /tmp/ccwO6IuW.s 			page 23
 
 
  224              		.loc 1 235 13 is_stmt 1 view .LVU80
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 1
  235:./Middlewares/ST/threadx/common/src/tx_queue_send.c **** 
  262              		.loc 1 235 13 is_stmt 0 discriminator 3 view .LVU97
  263 007c 51F8044B 		ldr	r4, [r1], #4
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 24
+ARM GAS  /tmp/ccwO6IuW.s 			page 24
 
 
  264              	.LVL32:
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 1
  304              		.syntax unified
  305              	.LBE25:
  306              	.LBE24:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 25
+ARM GAS  /tmp/ccwO6IuW.s 			page 25
 
 
  262:./Middlewares/ST/threadx/common/src/tx_queue_send.c **** #endif
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 1
  344              		.loc 1 322 13 is_stmt 1 view .LVU128
  322:./Middlewares/ST/threadx/common/src/tx_queue_send.c **** #endif
  345              		.loc 1 322 24 is_stmt 0 view .LVU129
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 26
+ARM GAS  /tmp/ccwO6IuW.s 			page 26
 
 
  346 00c0 D5F8AC30 		ldr	r3, [r5, #172]
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 1
  381              		.loc 1 375 13 is_stmt 1 view .LVU148
  375:./Middlewares/ST/threadx/common/src/tx_queue_send.c **** 
  382              		.loc 1 375 39 is_stmt 0 view .LVU149
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 27
+ARM GAS  /tmp/ccwO6IuW.s 			page 27
 
 
  383 00e0 0D4A     		ldr	r2, .L21
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 1
  562:./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h **** #endif
  425              		.loc 2 562 5 view .LVU162
  426              		.syntax unified
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 28
+ARM GAS  /tmp/ccwO6IuW.s 			page 28
 
 
  427              	@ 562 "./Middlewares/ST/threadx/ports/cortex_m4/gnu/inc/tx_port.h" 1
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 1
  465 010c E1E7     		b	.L17
  466              	.LVL57:
  467              	.L14:
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 29
+ARM GAS  /tmp/ccwO6IuW.s 			page 29
 
 
  419:./Middlewares/ST/threadx/common/src/tx_queue_send.c **** 
@@ -1724,14 +1724,15 @@ ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 1
  501              	.Letext0:
  502              		.file 3 "./Middlewares/ST/threadx/common/inc/tx_api.h"
  503              		.file 4 "./Middlewares/ST/threadx/common/inc/tx_thread.h"
-ARM GAS  C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s 			page 30
+ 504              		.file 5 "./Middlewares/ST/threadx/common/inc/tx_queue.h"
+ARM GAS  /tmp/ccwO6IuW.s 			page 30
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 tx_queue_send.c
-C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s:20     .text._tx_queue_send:00000000 $t
-C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s:26     .text._tx_queue_send:00000000 _tx_queue_send
-C:\Users\Dennis\AppData\Local\Temp\cc2FaRLc.s:494    .text._tx_queue_send:00000118 $d
+     /tmp/ccwO6IuW.s:21     .text._tx_queue_send:00000000 $t
+     /tmp/ccwO6IuW.s:27     .text._tx_queue_send:00000000 _tx_queue_send
+     /tmp/ccwO6IuW.s:494    .text._tx_queue_send:00000118 $d
 
 UNDEFINED SYMBOLS
 _tx_thread_system_resume

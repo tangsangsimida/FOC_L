@@ -20,14 +20,15 @@ float _normalizeAngle(float angle) {
 
 /// @brief 计算电机0电角度
 /// @param motor 
-void aligns_Motor_Zero_Angle(Motor* motor)
+int aligns_Motor_Zero_Angle(Motor* motor)
 {
   setTorque(motor,3, _3PI_2);
-  HAL_Delay(2000);
+  tx_thread_sleep(2000);  //在ThreadX中不能使用hal_Delay()
   Read_AS5600_Angle(motor->As5600_Sensor);
   motor->zero_electric_angle = _electricalAngle(motor);
   setTorque(motor,0, _3PI_2);
   printf("%d号电机零电角度:%.2f\r\n",motor->Motor_ID,motor->zero_electric_angle);
+  return 0;
 }
 
 /// @brief 获取电机速度(带有滤波)
@@ -181,7 +182,182 @@ void setTorque(Motor* motor,float Uq,float angle_el)
   setPwm(motor,motor->Ua,motor->Ub,motor->Uc);
 }
 
-
+/// @brief 电机参数自动识别
+/// @param motor 电机对象
+/// @param diagnostic 诊断信息结构体
+/// @return 0:成功, -1:失败
+int auto_identify_motor_params(Motor* motor) 
+{
+    int result = 0;  // 返回值
+    
+    // 参数检查
+    if(motor == NULL || motor->diagnostic == NULL) {
+        result = -1;
+    }
+    else {
+        // 初始化诊断信息
+        memset(motor->diagnostic, 0, sizeof(MotorIdentifyDiagnostic));
+        motor->diagnostic->state = MOTOR_IDENTIFY_RESISTANCE;
+        motor->diagnostic->identify_time = tx_time_get();
+        
+        // 安全限值
+        const float MAX_CURRENT = 5.0f;      // 最大电流限制
+        const float MAX_VOLTAGE = 12.0f;     // 最大电压限制
+        const float MIN_CURRENT = 0.01f;     // 最小有效电流
+        const uint32_t TIMEOUT_MS = 5000;    // 超时时间
+        
+        // 1. 识别电机电阻
+        if(result == 0) 
+        {
+            motor->diagnostic->state = MOTOR_IDENTIFY_RESISTANCE;
+            float voltage = 1.0f;  // 初始测试电压
+            float current = 0.0f;
+            uint32_t start_time = tx_time_get();
+            
+            // 渐进式增加电压，避免电流突变
+            for(float v = 0.5f; v <= voltage && result == 0; v += 0.1f) {
+                setTorque(motor, v, 0.0f);
+                tx_thread_sleep(10);
+                current = Get_Current(motor);
+                
+                // 电流监控
+                if(fabs(current) > MAX_CURRENT) {
+                    motor->diagnostic->error_code = 0x01;  // 电流超限
+                    motor->diagnostic->state = MOTOR_IDENTIFY_ERROR;
+                    result = -1;
+                }
+                
+                // 超时检查
+                if(tx_time_get() - start_time > TIMEOUT_MS) {
+                    motor->diagnostic->error_code = 0x02;  // 识别超时
+                    motor->diagnostic->state = MOTOR_IDENTIFY_ERROR;
+                    result = -1;
+                }
+            }
+            
+            if(result == 0) 
+            {
+                if(fabs(current) < MIN_CURRENT) {
+                    motor->diagnostic->error_code = 0x03;  // 电流太小
+                    motor->diagnostic->state = MOTOR_IDENTIFY_ERROR;
+                    result = -1;
+                }
+                else {
+                    motor->diagnostic->resistance = voltage / current;
+                    motor->diagnostic->max_current = fabs(current);
+                }
+            }
+        }
+        
+        // 2. 识别电机电感
+        if(result == 0) 
+        {
+            motor->diagnostic->state = MOTOR_IDENTIFY_INDUCTANCE;
+            float voltage = 2.0f;
+            float current1 = 0.0f;
+            float current2 = 0.0f;
+            
+            // 多次测量取平均值
+            float inductance_sum = 0.0f;
+            const int MEASURE_COUNT = 5;
+            
+            for(int i = 0; i < MEASURE_COUNT && result == 0; i++) 
+            {
+                setTorque(motor, voltage, 0.0f);
+                current1 = Get_Current(motor);
+                tx_thread_sleep(10);
+                current2 = Get_Current(motor);
+                
+                float di_dt = (current2 - current1) / 0.01f;
+                inductance_sum += voltage / di_dt;
+                
+                // 电流监控
+                if(fabs(current2) > MAX_CURRENT) {
+                    motor->diagnostic->error_code = 0x04;
+                    motor->diagnostic->state = MOTOR_IDENTIFY_ERROR;
+                    result = -1;
+                }
+            }
+            
+            if(result == 0) {
+                motor->diagnostic->inductance = inductance_sum / MEASURE_COUNT;
+            }
+        }
+        
+        // 3. 识别电机极对数
+        if(result == 0) 
+        {
+            motor->diagnostic->state = MOTOR_IDENTIFY_POLE_PAIRS;
+            float voltage = 3.0f;
+            float angle1 = Get_AS5600_Angle(motor->As5600_Sensor);
+            
+            // 渐进式增加电压
+            for(float v = 1.0f; v <= voltage && result == 0; v += 0.5f) 
+            {
+                setTorque(motor, v, 0.0f);
+                tx_thread_sleep(100);
+            }
+            
+            if(result == 0) 
+            {
+                tx_thread_sleep(1000);
+                float angle2 = Get_AS5600_Angle(motor->As5600_Sensor);
+                float angle_diff = fabs(angle2 - angle1);
+                
+                if(angle_diff < 0.1f) 
+                {
+                    motor->diagnostic->error_code = 0x05;  // 角度变化太小
+                    motor->diagnostic->state = MOTOR_IDENTIFY_ERROR;
+                    result = -1;
+                }
+                else {
+                    motor->diagnostic->pole_pairs = (int)(2.0f * PI / angle_diff + 0.5f);
+                }
+            }
+        }
+        
+        // 4. 识别零电角度
+        if(result == 0) 
+        {
+            motor->diagnostic->state = MOTOR_IDENTIFY_ZERO_ANGLE;
+            if(aligns_Motor_Zero_Angle(motor) != 0) {
+                motor->diagnostic->error_code = 0x06;  // 零电角度识别失败
+                motor->diagnostic->state = MOTOR_IDENTIFY_ERROR;
+                result = -1;
+            }
+            else 
+            {
+                motor->diagnostic->zero_angle = motor->zero_electric_angle;
+            }
+        }
+        
+        // 更新电机参数
+        if(result == 0) 
+        {
+            motor->PP = motor->diagnostic->pole_pairs;
+            motor->zero_electric_angle = motor->diagnostic->zero_angle;
+            
+            // 完成识别
+            motor->diagnostic->state = MOTOR_IDENTIFY_COMPLETE;
+            motor->diagnostic->identify_time = tx_time_get() - motor->diagnostic->identify_time;
+            
+            // 输出诊断信息
+            printf("电机参数识别完成\r\n");
+            printf("识别时间: %lu ms\r\n", motor->diagnostic->identify_time);
+            printf("电阻: %.3f Ohm\r\n", motor->diagnostic->resistance);
+            printf("电感: %.3f H\r\n", motor->diagnostic->inductance);
+            printf("极对数: %d\r\n", motor->diagnostic->pole_pairs);
+            printf("零电角度: %.3f rad\r\n", motor->diagnostic->zero_angle);
+            printf("最大电流: %.3f A\r\n", motor->diagnostic->max_current);
+            printf("最大电压: %.3f V\r\n", motor->diagnostic->max_voltage);
+        }
+    }
+    
+    // 确保电机停止
+    setTorque(motor, 0.0f, 0.0f);
+    
+    return result;
+}
 
 
 

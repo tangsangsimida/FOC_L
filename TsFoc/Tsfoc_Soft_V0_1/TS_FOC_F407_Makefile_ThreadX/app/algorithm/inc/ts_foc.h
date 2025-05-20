@@ -1,5 +1,16 @@
+/*
+ * @Author: Dennis 488132230@qq.com
+ * @Date: 2025-05-02 18:16:21
+ * @LastEditors: Dennis 488132230@qq.com
+ * @LastEditTime: 2025-05-19 12:16:28
+ * @FilePath: \TS_FOC_F407_Makefile_ThreadX\app\algorithm\inc\ts_foc.h
+ * @Description: 
+ */
 #ifndef _TS_FOC_H_
 #define _TS_FOC_H_
+
+#include "stdio.h"
+#include "tx_api.h"
 
 #include "user_api.h"
 #include "as5600.h"
@@ -17,9 +28,29 @@
 // {
 // }Motor_Staute_Typedef;
 
+/// @brief 电机参数自动识别状态枚举
+typedef enum {
+    MOTOR_IDENTIFY_IDLE = 0,
+    MOTOR_IDENTIFY_RESISTANCE,
+    MOTOR_IDENTIFY_INDUCTANCE,
+    MOTOR_IDENTIFY_POLE_PAIRS,
+    MOTOR_IDENTIFY_ZERO_ANGLE,
+    MOTOR_IDENTIFY_COMPLETE,
+    MOTOR_IDENTIFY_ERROR
+} MotorIdentifyState;
 
-
-
+/// @brief 电机参数识别诊断结构体
+typedef struct {
+    uint32_t error_code;
+    float resistance;
+    float inductance;
+    int pole_pairs;
+    float zero_angle;
+    float max_current;
+    float max_voltage;
+    uint32_t identify_time;
+    MotorIdentifyState state;
+} MotorIdentifyDiagnostic;
 
 
 //需要配置的参数：
@@ -44,7 +75,7 @@ typedef struct MOTOR
     Lowpass_Filter_Typedef * Lowpass_Filter_Curr;       //电流环
 
     Inlinecurrent_Typedef * Inlinecurrent;      //电流传感器
-
+    MotorIdentifyDiagnostic* diagnostic;        //电机参数
     //void (*Motor_Set_Compare1)(uint32_t compare) = Motor1_Set_Compare1;   //赋值
     //Motor_Set_Compare1(1000);                                             //使用
     void (*Motor_Set_Compare1)(uint32_t compare);      //设置电机1通道PWM接口   
@@ -59,7 +90,7 @@ float _normalizeAngle(float angle);
 float _electricalAngle(Motor* motor);
 void setPwm(Motor* motor, float Ua, float Ub, float Uc);
 void setTorque(Motor* motor,float Uq,float angle_el);
-void aligns_Motor_Zero_Angle(Motor* motor);
+int aligns_Motor_Zero_Angle(Motor* motor);
 float cal_Iq_Id(Inlinecurrent_Typedef *Sensor, float angle_el);
 float Get_Current(Motor* motor);
 void Set_Velocity_Angle(Motor* motor, float target);
@@ -70,6 +101,7 @@ void set_Force_Angle_Curr(Motor* motor, float Target);
 void set_Velocity_Curr(Motor* motor, float Target);
 void set_Velocity_Angle_Curr(Motor* motor, float Target);
 float Get_filter_Velocity(Motor* motor);
+int auto_identify_motor_params(Motor* motor);
 
 
 

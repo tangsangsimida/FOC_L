@@ -1,3 +1,11 @@
+/*
+ * @Author: Dennis 488132230@qq.com
+ * @Date: 2025-05-03 11:43:38
+ * @LastEditors: Dennis 488132230@qq.com
+ * @LastEditTime: 2025-05-19 11:41:41
+ * @FilePath: \TS_FOC_F407_Makefile_ThreadX\app\Threads\Thread_Motor_Control\Thread_Motor_Control.c
+ * @Description: 
+ */
 /**
   ******************************************************************************
   * @file           : Thread_template.c
@@ -35,9 +43,10 @@ void Thread_Motor_Control_Entry(ULONG thread_input)
     Thread_Motor_Control_parama * thread_param = (Thread_Motor_Control_parama *)thread_input;
     Motor* motor1 = (Motor*)thread_param->Motor1_handle;
     Thread_Cmd_parama * thread_cmd_param = (Thread_Cmd_parama *)thread_param->Thread_param1_handle;
-    // 计算电机零角度
-    aligns_Motor_Zero_Angle(motor1);
-    int count = 0;
+    uint16_t count;
+    //电机参数自整定
+
+
 
     while(1)
     {

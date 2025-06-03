@@ -1,0 +1,283 @@
+ARM GAS  /tmp/cciHHLIg.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"lowpass_filter.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.file 1 "./underlying/src/lowpass_filter.c"
+  20              		.global	__aeabi_f2d
+  21              		.section	.rodata.Lowpass_Filter_Init.str1.4,"aMS",%progbits,1
+  22              		.align	2
+  23              	.LC0:
+  24 0000 4C6F7770 		.ascii	"Lowpass_Filter_Init: Tf = %f\015\012\000"
+  24      6173735F 
+  24      46696C74 
+  24      65725F49 
+  24      6E69743A 
+  25              		.section	.text.Lowpass_Filter_Init,"ax",%progbits
+  26              		.align	1
+  27              		.global	Lowpass_Filter_Init
+  28              		.syntax unified
+  29              		.thumb
+  30              		.thumb_func
+  32              	Lowpass_Filter_Init:
+  33              	.LVL0:
+  34              	.LFB242:
+   1:./underlying/src/lowpass_filter.c **** #include "lowpass_filter.h"
+   2:./underlying/src/lowpass_filter.c **** 
+   3:./underlying/src/lowpass_filter.c **** 
+   4:./underlying/src/lowpass_filter.c **** #include "stdio.h"
+   5:./underlying/src/lowpass_filter.c **** 
+   6:./underlying/src/lowpass_filter.c **** 
+   7:./underlying/src/lowpass_filter.c **** /// @brief 初始化低通滤波器
+   8:./underlying/src/lowpass_filter.c **** /// @param flt 
+   9:./underlying/src/lowpass_filter.c **** /// @param Tf 
+  10:./underlying/src/lowpass_filter.c **** void Lowpass_Filter_Init(Lowpass_Filter_Typedef* flt, float Tf)
+  11:./underlying/src/lowpass_filter.c **** {
+  35              		.loc 1 11 1 view -0
+  36              		.cfi_startproc
+  37              		@ args = 0, pretend = 0, frame = 0
+  38              		@ frame_needed = 0, uses_anonymous_args = 0
+  39              		.loc 1 11 1 is_stmt 0 view .LVU1
+  40 0000 38B5     		push	{r3, r4, r5, lr}
+  41              	.LCFI0:
+  42              		.cfi_def_cfa_offset 16
+  43              		.cfi_offset 3, -16
+ARM GAS  /tmp/cciHHLIg.s 			page 2
+
+
+  44              		.cfi_offset 4, -12
+  45              		.cfi_offset 5, -8
+  46              		.cfi_offset 14, -4
+  47 0002 0446     		mov	r4, r0
+  48 0004 10EE105A 		vmov	r5, s0
+  12:./underlying/src/lowpass_filter.c ****     flt->Tf = Tf;
+  49              		.loc 1 12 5 is_stmt 1 view .LVU2
+  50              		.loc 1 12 13 is_stmt 0 view .LVU3
+  51 0008 80ED000A 		vstr.32	s0, [r0]
+  13:./underlying/src/lowpass_filter.c ****     flt->y_prev = 0.0f;
+  52              		.loc 1 13 5 is_stmt 1 view .LVU4
+  53              		.loc 1 13 17 is_stmt 0 view .LVU5
+  54 000c 0023     		movs	r3, #0
+  55 000e 8360     		str	r3, [r0, #8]	@ float
+  14:./underlying/src/lowpass_filter.c ****     flt->timestamp_prev = HAL_GetTick();
+  56              		.loc 1 14 5 is_stmt 1 view .LVU6
+  57              		.loc 1 14 27 is_stmt 0 view .LVU7
+  58 0010 FFF7FEFF 		bl	HAL_GetTick
+  59              	.LVL1:
+  60              		.loc 1 14 25 discriminator 1 view .LVU8
+  61 0014 6060     		str	r0, [r4, #4]
+  15:./underlying/src/lowpass_filter.c ****     printf("Lowpass_Filter_Init: Tf = %f\r\n", Tf);
+  62              		.loc 1 15 5 is_stmt 1 view .LVU9
+  63 0016 2846     		mov	r0, r5	@ float
+  64 0018 FFF7FEFF 		bl	__aeabi_f2d
+  65              	.LVL2:
+  66 001c 0246     		mov	r2, r0
+  67 001e 0B46     		mov	r3, r1
+  68 0020 0148     		ldr	r0, .L3
+  69 0022 FFF7FEFF 		bl	printf
+  70              	.LVL3:
+  16:./underlying/src/lowpass_filter.c **** }
+  71              		.loc 1 16 1 is_stmt 0 view .LVU10
+  72 0026 38BD     		pop	{r3, r4, r5, pc}
+  73              	.LVL4:
+  74              	.L4:
+  75              		.loc 1 16 1 view .LVU11
+  76              		.align	2
+  77              	.L3:
+  78 0028 00000000 		.word	.LC0
+  79              		.cfi_endproc
+  80              	.LFE242:
+  82              		.section	.text.Lowpass_Filter_calc,"ax",%progbits
+  83              		.align	1
+  84              		.global	Lowpass_Filter_calc
+  85              		.syntax unified
+  86              		.thumb
+  87              		.thumb_func
+  89              	Lowpass_Filter_calc:
+  90              	.LVL5:
+  91              	.LFB243:
+  17:./underlying/src/lowpass_filter.c **** 
+  18:./underlying/src/lowpass_filter.c **** 
+  19:./underlying/src/lowpass_filter.c **** 
+  20:./underlying/src/lowpass_filter.c **** 
+  21:./underlying/src/lowpass_filter.c **** 
+  22:./underlying/src/lowpass_filter.c **** /// @brief 低通滤波器
+ARM GAS  /tmp/cciHHLIg.s 			page 3
+
+
+  23:./underlying/src/lowpass_filter.c **** /// @param flt 
+  24:./underlying/src/lowpass_filter.c **** /// @param x 
+  25:./underlying/src/lowpass_filter.c **** /// @return 
+  26:./underlying/src/lowpass_filter.c **** float Lowpass_Filter_calc(Lowpass_Filter_Typedef* flt, float x)
+  27:./underlying/src/lowpass_filter.c **** {
+  92              		.loc 1 27 1 is_stmt 1 view -0
+  93              		.cfi_startproc
+  94              		@ args = 0, pretend = 0, frame = 0
+  95              		@ frame_needed = 0, uses_anonymous_args = 0
+  96              		.loc 1 27 1 is_stmt 0 view .LVU13
+  97 0000 10B5     		push	{r4, lr}
+  98              	.LCFI1:
+  99              		.cfi_def_cfa_offset 8
+ 100              		.cfi_offset 4, -8
+ 101              		.cfi_offset 14, -4
+ 102 0002 2DED028B 		vpush.64	{d8}
+ 103              	.LCFI2:
+ 104              		.cfi_def_cfa_offset 16
+ 105              		.cfi_offset 80, -16
+ 106              		.cfi_offset 81, -12
+ 107 0006 0446     		mov	r4, r0
+ 108 0008 B0EE408A 		vmov.f32	s16, s0
+  28:./underlying/src/lowpass_filter.c ****     unsigned long timestamp = HAL_GetTick();
+ 109              		.loc 1 28 5 is_stmt 1 view .LVU14
+ 110              		.loc 1 28 31 is_stmt 0 view .LVU15
+ 111 000c FFF7FEFF 		bl	HAL_GetTick
+ 112              	.LVL6:
+  29:./underlying/src/lowpass_filter.c ****     float dt = (timestamp - flt->timestamp_prev)*1e-3f;
+ 113              		.loc 1 29 5 is_stmt 1 view .LVU16
+ 114              		.loc 1 29 32 is_stmt 0 view .LVU17
+ 115 0010 6368     		ldr	r3, [r4, #4]
+ 116              		.loc 1 29 27 view .LVU18
+ 117 0012 C31A     		subs	r3, r0, r3
+ 118 0014 07EE903A 		vmov	s15, r3	@ int
+ 119              		.loc 1 29 49 view .LVU19
+ 120 0018 F8EE677A 		vcvt.f32.u32	s15, s15
+ 121              		.loc 1 29 11 view .LVU20
+ 122 001c 9FED147A 		vldr.32	s14, .L13
+ 123 0020 67EE877A 		vmul.f32	s15, s15, s14
+ 124              	.LVL7:
+  30:./underlying/src/lowpass_filter.c ****     if (dt < 0.0f ) dt = 1e-3f;
+ 125              		.loc 1 30 5 is_stmt 1 view .LVU21
+  31:./underlying/src/lowpass_filter.c ****     else if(dt > 0.3f) {
+ 126              		.loc 1 31 10 view .LVU22
+ 127              		.loc 1 31 12 is_stmt 0 view .LVU23
+ 128 0024 9FED137A 		vldr.32	s14, .L13+4
+ 129 0028 F4EEC77A 		vcmpe.f32	s15, s14
+ 130 002c F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 131 0030 17DC     		bgt	.L12
+  32:./underlying/src/lowpass_filter.c ****         flt->y_prev = x;
+  33:./underlying/src/lowpass_filter.c ****         flt->timestamp_prev = timestamp;
+  34:./underlying/src/lowpass_filter.c ****         // printf("Lowpass_Filter_calc: dt too large, dt = %f\r\n", dt);
+  35:./underlying/src/lowpass_filter.c ****         return x;
+  36:./underlying/src/lowpass_filter.c ****     }
+  37:./underlying/src/lowpass_filter.c **** 
+  38:./underlying/src/lowpass_filter.c ****     float alpha = flt->Tf/(flt->Tf + dt);
+ 132              		.loc 1 38 5 is_stmt 1 view .LVU24
+ARM GAS  /tmp/cciHHLIg.s 			page 4
+
+
+ 133              		.loc 1 38 22 is_stmt 0 view .LVU25
+ 134 0032 94ED007A 		vldr.32	s14, [r4]
+ 135              		.loc 1 38 36 view .LVU26
+ 136 0036 77EE277A 		vadd.f32	s15, s14, s15
+ 137              	.LVL8:
+ 138              		.loc 1 38 11 view .LVU27
+ 139 003a C7EE276A 		vdiv.f32	s13, s14, s15
+ 140              	.LVL9:
+  39:./underlying/src/lowpass_filter.c ****     // float alpha = 0.5f;
+  40:./underlying/src/lowpass_filter.c ****     float y = alpha*flt->y_prev + (1.0f - alpha)*x;
+ 141              		.loc 1 40 5 is_stmt 1 view .LVU28
+ 142              		.loc 1 40 24 is_stmt 0 view .LVU29
+ 143 003e 94ED027A 		vldr.32	s14, [r4, #8]
+ 144              		.loc 1 40 20 view .LVU30
+ 145 0042 27EE267A 		vmul.f32	s14, s14, s13
+ 146              		.loc 1 40 41 view .LVU31
+ 147 0046 F7EE007A 		vmov.f32	s15, #1.0e+0
+ 148 004a 77EEE67A 		vsub.f32	s15, s15, s13
+ 149              		.loc 1 40 49 view .LVU32
+ 150 004e 67EE887A 		vmul.f32	s15, s15, s16
+ 151              		.loc 1 40 11 view .LVU33
+ 152 0052 37EE270A 		vadd.f32	s0, s14, s15
+ 153              	.LVL10:
+  41:./underlying/src/lowpass_filter.c ****     flt->y_prev = y;
+ 154              		.loc 1 41 5 is_stmt 1 view .LVU34
+ 155              		.loc 1 41 17 is_stmt 0 view .LVU35
+ 156 0056 84ED020A 		vstr.32	s0, [r4, #8]
+  42:./underlying/src/lowpass_filter.c ****     flt->timestamp_prev = timestamp;
+ 157              		.loc 1 42 5 is_stmt 1 view .LVU36
+ 158              		.loc 1 42 25 is_stmt 0 view .LVU37
+ 159 005a 6060     		str	r0, [r4, #4]
+  43:./underlying/src/lowpass_filter.c ****     // printf("Lowpass_Filter_calc: dt = %f, alpha = %f, y = %f\r\n", dt, alpha, y);
+  44:./underlying/src/lowpass_filter.c ****     return y;
+ 160              		.loc 1 44 5 is_stmt 1 view .LVU38
+ 161              	.LVL11:
+ 162              	.L5:
+  45:./underlying/src/lowpass_filter.c **** }
+ 163              		.loc 1 45 1 is_stmt 0 view .LVU39
+ 164 005c BDEC028B 		vldm	sp!, {d8}
+ 165              	.LCFI3:
+ 166              		.cfi_remember_state
+ 167              		.cfi_restore 80
+ 168              		.cfi_restore 81
+ 169              		.cfi_def_cfa_offset 8
+ 170              	.LVL12:
+ 171              		.loc 1 45 1 view .LVU40
+ 172 0060 10BD     		pop	{r4, pc}
+ 173              	.LVL13:
+ 174              	.L12:
+ 175              	.LCFI4:
+ 176              		.cfi_restore_state
+  32:./underlying/src/lowpass_filter.c ****         flt->timestamp_prev = timestamp;
+ 177              		.loc 1 32 9 is_stmt 1 view .LVU41
+  32:./underlying/src/lowpass_filter.c ****         flt->timestamp_prev = timestamp;
+ 178              		.loc 1 32 21 is_stmt 0 view .LVU42
+ 179 0062 84ED028A 		vstr.32	s16, [r4, #8]
+  33:./underlying/src/lowpass_filter.c ****         // printf("Lowpass_Filter_calc: dt too large, dt = %f\r\n", dt);
+ARM GAS  /tmp/cciHHLIg.s 			page 5
+
+
+ 180              		.loc 1 33 9 is_stmt 1 view .LVU43
+  33:./underlying/src/lowpass_filter.c ****         // printf("Lowpass_Filter_calc: dt too large, dt = %f\r\n", dt);
+ 181              		.loc 1 33 29 is_stmt 0 view .LVU44
+ 182 0066 6060     		str	r0, [r4, #4]
+  35:./underlying/src/lowpass_filter.c ****     }
+ 183              		.loc 1 35 9 is_stmt 1 view .LVU45
+  35:./underlying/src/lowpass_filter.c ****     }
+ 184              		.loc 1 35 16 is_stmt 0 view .LVU46
+ 185 0068 B0EE480A 		vmov.f32	s0, s16
+ 186 006c F6E7     		b	.L5
+ 187              	.L14:
+ 188 006e 00BF     		.align	2
+ 189              	.L13:
+ 190 0070 6F12833A 		.word	981668463
+ 191 0074 9A99993E 		.word	1050253722
+ 192              		.cfi_endproc
+ 193              	.LFE243:
+ 195              		.text
+ 196              	.Letext0:
+ 197              		.file 2 "./underlying/inc/lowpass_filter.h"
+ 198              		.file 3 "/usr/lib/gcc/arm-none-eabi/13.2.1/include/stdint.h"
+ 199              		.file 4 "/usr/include/newlib/stdio.h"
+ 200              		.file 5 "./Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
+ARM GAS  /tmp/cciHHLIg.s 			page 6
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 lowpass_filter.c
+     /tmp/cciHHLIg.s:22     .rodata.Lowpass_Filter_Init.str1.4:00000000 $d
+     /tmp/cciHHLIg.s:26     .text.Lowpass_Filter_Init:00000000 $t
+     /tmp/cciHHLIg.s:32     .text.Lowpass_Filter_Init:00000000 Lowpass_Filter_Init
+     /tmp/cciHHLIg.s:78     .text.Lowpass_Filter_Init:00000028 $d
+     /tmp/cciHHLIg.s:83     .text.Lowpass_Filter_calc:00000000 $t
+     /tmp/cciHHLIg.s:89     .text.Lowpass_Filter_calc:00000000 Lowpass_Filter_calc
+     /tmp/cciHHLIg.s:190    .text.Lowpass_Filter_calc:00000070 $d
+
+UNDEFINED SYMBOLS
+__aeabi_f2d
+HAL_GetTick
+printf
